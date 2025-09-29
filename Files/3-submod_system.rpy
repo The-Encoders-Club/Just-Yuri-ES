@@ -22,31 +22,31 @@ init -999 python:
     }
 
 
-    getting_started_content = """Welcome to the submodding community! - Docs Version 1.0.0
+    getting_started_content = """¡Bienvenido a la comunidad de submodding! - Versión de documentos 1.0.0
 
-If you are seeing this for the first time, these files automatically generate anytime a submod folder is missing a modinfo.json file.
-To create a submod, change any of the information you want in the modinfo.json file, create your first .rpy file and start implementing whatever you can think of.
+Si estás viendo esto por primera vez, estos archivos se generan automáticamente cada vez que a una carpeta de submod le falta un archivo modinfo.json.
+Para crear un submod, cambia cualquier información que desees en el archivo modinfo.json, crea tu primer archivo .rpy y comienza a implementar lo que se te ocurra.
 
-For a brief introduction into renpy, see: https://www.renpy.org/doc/html/quickstart.html#the-ren-py-launcher
-If you intend on creating a more advanced submod, you may need knowledge of python as well. The one good place to learn the basics is: https://www.w3schools.com/python/python_intro.asp
+Para una breve introducción a Ren’Py, consulta: https://www.renpy.org/doc/html/quickstart.html#the-ren-py-launcher  
+Si planeas crear un submod más avanzado, también podrías necesitar conocimientos de Python. Un buen lugar para aprender lo básico es: https://www.w3schools.com/python/python_intro.asp
 
-To add dialogue to the talk menu, you use the add_dialogue method and provide it with your own Dialogue instance:
+Para añadir diálogos al menú de conversación, usa el método add_dialogue y proporciónale tu propia instancia de Dialogue:
 
 label test_label:
     $ show_chr("A-ABGBA-AAAA")
-    y "Hi there!"
+    y "¡Hola!"
 
 init python:
-    add_dialogue(Dialogue("test_label", DialogueAPI.category_talk, name="Greet Yuri", sub_category="Greetings"))
+    add_dialogue(Dialogue("test_label", DialogueAPI.category_talk, name="Saludar a Yuri", sub_category="Saludos"))
 
-You can get the sprite code via the control panel when you enable developer mode.
+Puedes obtener el código de sprite a través del panel de control cuando actives el modo desarrollador.
 
-This mod contains various apis to help speed up development since the Just Yuri source is kinda messy at the moment. We will rectify the mess in time.
-You can find the sources here: https://github.com/DarkskullDawnZenith/JustYuri
+Este mod contiene varias APIs para ayudar a acelerar el desarrollo, ya que la fuente de Just Yuri está algo desordenada en este momento. Rectificaremos ese desorden con el tiempo.  
+Puedes encontrar las fuentes aquí: https://github.com/DarkskullDawnZenith/JustYuri
 
-In the future, this documentation will be more fleshed out and user friendly, but for now this will only cover the bare minimum.
+En el futuro, esta documentación estará más completa y será más amigable para el usuario, pero por ahora solo cubrirá lo mínimo necesario.
 
-You can feel free to delete these documents if you would like to free up space for your mod. If you ever need to regenerate these docs, delete the modinfo.json file and reboot the game. Have fun!
+Puedes eliminar estos documentos si quieres liberar espacio para tu mod. Si alguna vez necesitas regenerarlos, borra el archivo modinfo.json y reinicia el juego. ¡Diviértete!
 """
 
     modinfo_setup_content = """{
@@ -101,7 +101,7 @@ You can feel free to delete these documents if you would like to free up space f
             
             self.icon = Transform(os.path.join(config.gamedir, "images", "default_submod.png"), size=(100,100), fit="contain")
 
-    print("Checking for submods...")
+    print("Comprobando submods...")
     request_dev_access = False
     dev_access = False
 
@@ -116,16 +116,16 @@ You can feel free to delete these documents if you would like to free up space f
 
 
     if not os.path.isdir(submods_dir):
-        print("Creating submods folder...")
+        print("Creando carpeta submods...")
         try:
             os.makedirs(submods_dir, exist_ok=True)
         except Exception as e:
-            print(f"Error creating submods directory at {submods_dir}: {e}")
+            print(f"Error al crear el directorio submods en {submods_dir}: {e}")
 
 
 
     if os.path.isdir(submods_dir) and not os.path.isdir(placeholder_dir):
-        print("Creating placeholder folder...")
+        print("Creando carpeta placeholder...")
         try:
             os.makedirs(placeholder_dir, exist_ok=True)
             
@@ -140,15 +140,15 @@ You can feel free to delete these documents if you would like to free up space f
             
             placeholder_icon_path = os.path.join(placeholder_dir, "icon.png")
             source_icon_path = os.path.join(config.gamedir, "images", "default_submod.png")
-            print(f"Attempting to copy icon from: {source_icon_path} to {placeholder_icon_path}")
+            print(f"Intentando copiar el icono desde: {source_icon_path} to {placeholder_icon_path}")
             try:
                 if os.path.isfile(source_icon_path):
                     copyfile(source_icon_path, placeholder_icon_path)
-                    print("Icon copied successfully!")
+                    print("¡Icono copiado con éxito!")
                 else:
-                    print(f"Error: Source icon file not found at {source_icon_path}")
+                    print(f"Error: Archivo de ícono fuente no encontrado en {source_icon_path}")
             except Exception as e:
-                print(f"An error occurred while copying the placeholder icon: {e}")
+                print(f"Se ha producido un error al copiar el icono del placeholder: {e}")
             
             
             
@@ -157,25 +157,25 @@ You can feel free to delete these documents if you would like to free up space f
                 os.makedirs(placeholder_docs_dir, exist_ok=True)
             
             
-            getting_started_path_placeholder = os.path.join(placeholder_docs_dir, "0 - Getting Started.txt")
-            modinfo_setup_path_placeholder = os.path.join(placeholder_docs_dir, "Setting Up Modinfo.txt")
+            getting_started_path_placeholder = os.path.join(placeholder_docs_dir, "0 - Empezando.txt")
+            modinfo_setup_path_placeholder = os.path.join(placeholder_docs_dir, "Configuración de Modinfo.txt")
             
             try:
-                print("  - Creating placeholder '0 - Getting Started.txt'...")
+                print("  - Creando placeholder '0 - Empezando.txt'...")
                 with open(getting_started_path_placeholder, 'w', encoding='utf-8') as f:
                     f.write(getting_started_content)
             except Exception as e:
-                print(f"  - Failed to create placeholder '0 - Getting Started.txt': {e}")
+                print(f"  - No se pudo crear el placeholder. '0 - Empezando.txt': {e}")
             
             try:
-                print("  - Creating placeholder 'Setting Up Modinfo.txt'...")
+                print("  - Creando placeholder 'Configuración de Modinfo.txt'...")
                 with open(modinfo_setup_path_placeholder, 'w', encoding='utf-8') as f:
                     f.write(modinfo_setup_content)
             except Exception as e:
-                print(f"  - Failed to create placeholder 'Setting Up Modinfo.txt': {e}")
+                print(f"  - No se pudo crear el placeholder 'Configuración de Modinfo.txt': {e}")
         
         except Exception as e:
-            print(f"Error creating placeholder files in {placeholder_dir}: {e}")
+            print(f"Error al crear placeholder en {placeholder_dir}: {e}")
 
 
     if os.path.isdir(submods_dir):
@@ -183,7 +183,7 @@ You can feel free to delete these documents if you would like to free up space f
             if not directory.is_dir() or directory.path == placeholder_dir:
                 continue
             
-            print("Scanning mod: " + directory.name)
+            print("Modo de escaneo: " + directory.name)
             submods.mod_count += 1
             mod_docs_dir = os.path.join(directory.path, "documentation")
             mod_error_path = directory.path 
@@ -198,55 +198,55 @@ You can feel free to delete these documents if you would like to free up space f
             
             
             if not os.path.isfile(mod_info_path):
-                print("  - Mod " + submod.id + " does not contain a modinfo.json file. Creating default files...")
+                print("  - Mod " + submod.id + " no contiene un archivo modinfo.json. Creando archivos predeterminados...")
                 
                 
                 if not os.path.isdir(mod_docs_dir):
-                    print("  - Creating documentation directory...")
+                    print("  - Creación del directorio de documentación...")
                     try:
                         os.makedirs(mod_docs_dir, exist_ok=True)
                     except Exception as e:
-                        print(f"  - Failed to create documentation directory: {e}")
+                        print(f"  - No se pudo crear el directorio de documentación: {e}")
                         
                         print_error(e, path=mod_error_path)
                 
                 
                 if os.path.isdir(mod_docs_dir):
-                    getting_started_path = os.path.join(mod_docs_dir, "0 - Getting Started.txt")
-                    modinfo_setup_path = os.path.join(mod_docs_dir, "Setting Up Modinfo.txt")
+                    getting_started_path = os.path.join(mod_docs_dir, "0 - Empezando.txt")
+                    modinfo_setup_path = os.path.join(mod_docs_dir, "Configuración de Modinfo.txt")
                     
                     
                     try:
-                        print("  - Creating '0 - Getting Started.txt'...")
+                        print("  - Creando '0 - Empezando.txt'...")
                         with open(getting_started_path, 'w', encoding='utf-8') as f:
                             f.write(getting_started_content)
                     except Exception as e:
-                        print(f"  - Failed to create '0 - Getting Started.txt': {e}")
+                        print(f"  - Error al crear '0 - Empezando.txt': {e}")
                         print_error(e, path=mod_error_path) 
                     
                     
                     try:
-                        print("  - Creating 'Setting Up Modinfo.txt'...")
+                        print("  - Creando 'Configuración de Modinfo.txt'...")
                         with open(modinfo_setup_path, 'w', encoding='utf-8') as f:
                             f.write(modinfo_setup_content)
                     except Exception as e:
-                        print(f"  - Failed to create 'Setting Up Modinfo.txt': {e}")
+                        print(f"  - Error al crear 'Configuración de Modinfo.txt': {e}")
                         print_error(e, path=mod_error_path) 
                 else:
-                    print("  - Skipping documentation file creation because directory doesn't exist.")
+                    print("  - Se omite la creación del archivo de documentación porque el directorio no existe.")
                 
                 
                 
-                print("  - Creating modinfo.json...")
+                print("  - Creando modinfo.json...")
                 try:
                     with open(mod_info_path, 'w', encoding='utf-8') as file:
                         modinfo = submods.modinfo_template.copy()
                         modinfo["name"] = submod.name or "" 
                         modinfo["id"] = submod.id or ""     
                         json.dump(modinfo, file, indent=4)
-                    print("  - Finished creating default files!")
+                    print("  - ¡Se ha terminado de crear los archivos predeterminados!")
                 except Exception as e:
-                    print("  - Failed to create modinfo.json")
+                    print("  - Error al crear modinfo.json")
                     print_error(e, path=mod_error_path)
             
             
@@ -269,33 +269,33 @@ You can feel free to delete these documents if you would like to free up space f
                             submod.dependencies = []
                 
                 except json.JSONDecodeError as e:
-                    print(f"  - Failed to load modinfo.json: Invalid JSON format - {e}")
+                    print(f"  - No se pudo cargar modinfo.json: formato JSON no válido - {e}")
                     print_error(e, path=mod_error_path)
                 except Exception as e:
-                    print(f"  - Failed to load modinfo.json: {e}")
+                    print(f"  - No se pudo cargar modinfo.json: {e}")
                     print_error(e, path=mod_error_path)
             
             
             if os.path.isfile(mod_icon_path):
-                print("  - Mod " + submod.id + " has an icon. Loading image...")
+                print("  - Mod " + submod.id + " tiene un icono. Cargando imagen...")
                 try:
                     submod.icon = Transform(mod_icon_path, size=(100, 100), fit="contain")
                 except Exception as e:
-                    print("  - Failed to load icon.png")
+                    print("  - No se pudo cargar icon.png")
                     print_error(e, path=mod_error_path)
             
             
             renpy.image(submod.id + ":icon", submod.icon)
             submods.mods[submod.id] = submod
             print("  - Mod ID: " + submod.id + ", Version: " + submod.version)
-            print("  - Dependencies: " + str(submod.dependencies))
+            print("  - Dependencias: " + str(submod.dependencies))
 
     else:
-        print(f"Warning: Submod directory {submods_dir} does not exist or is not accessible. Skipping submod loading.")
+        print(f"Advertencia: El directorio de submods {submods_dir} no existe o no es accesible. Se omite la carga de submods.")
 
 
 
-    print("Checking loaded submods for missing dependencies...")
+    print("Comprobando si hay dependencias que faltan en los submods cargados...")
     should_continue = True
     missing_dependency_errors = []
 
@@ -304,7 +304,7 @@ You can feel free to delete these documents if you would like to free up space f
             for dependency in submod.dependencies:
                 parsed_dependency_id = parse_mod_id(dependency)
                 if parsed_dependency_id not in submods.mods:
-                    error_message = f"Submod '{submod.id}' is missing dependency '{parsed_dependency_id}'"
+                    error_message = f"El submod '{submod.id}' carece de dependencia '{parsed_dependency_id}'"
                     print(f"  - {error_message}")
                     missing_dependency_errors.append({
                         "submod_id": submod.id,
@@ -315,13 +315,13 @@ You can feel free to delete these documents if you would like to free up space f
                     should_continue = False
 
     if not should_continue:
-        print_fatal(KeyError("One or more submods are missing dependencies. Check error.log or console output for details."))
+        print_fatal(KeyError("Uno o más submods carecen de dependencias. Consulte el archivo error.log o la salida de la consola para obtener más detalles."))
 
 
     if request_dev_access:
-        print("One or more mods have requested developer mode. Enabling developer mode...")
+        print("Uno o más mods han solicitado el modo desarrollador. Activando el modo desarrollador...")
         config.developer = True 
         dev_access = True 
 
-    print("Mod loading complete! Loaded " + str(submods.mod_count) + " mod(s)")
+    print("¡Carga de mods completada! Se han cargado " + str(submods.mod_count) + " mod(s)")
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
