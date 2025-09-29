@@ -6,7 +6,7 @@ init -998 python:
         @staticmethod
         def process_config(config : Config):
             if type(config.id) != str:
-                print_fatal("Tried to register a configuration with an invalid id. Should be a string")
+                print_fatal("Se ha intentado registrar una configuración con un id no válido. Debe ser una string.")
             if type(config.name) != str:
                 config.name = config.id
             final_options = []
@@ -15,7 +15,7 @@ init -998 python:
             for option in options:
                 option_type = type(option)
                 if not isinstance(option, Option):
-                    print("  - Failed to add option " + type_str(option) + " as it is not a valid option type")
+                    print("  - No se pudo añadir la option " + type_str(option) + " ya que no es un tipo option válida")
                     continue
                 
                 if option_type == OptionSeparator:
@@ -23,31 +23,31 @@ init -998 python:
                 elif option_type == OptionTitle:
                     option_label_type = type(option.title)
                     if option_label_type != str and not is_callable(option.title):
-                        print_error("  - Failed to add option " + type_str(option) + " as the title is not a valid type")
+                        print_error("  - No se pudo añadir la option " + type_str(option) + " ya que no es un tipo título válido")
                 elif option_type == OptionBar:
                     option_label_type = type(option.labels)
                     if option_label_type != str and option_label_type != tuple and not is_callable(option.labels):
-                        print_error("  - Failed to add option " + type_str(option) + " as the label is not a valid type")
+                        print_error("  - No se pudo añadir la option " + type_str(option) + " ya que no es un tipo label válido")
                 elif option_type == OptionButton:
                     option_label_type = type(option.labels)
                     if option_label_type != tuple:
-                        print_error("  - Failed to add option " + type_str(option) + " as the label is not a valid tuple")
+                        print_error("  - No se pudo añadir la option " + type_str(option) + " ya que no es un tipo tupla válida")
                 elif option_type == OptionCheckbox:
                     option_label_type = type(option.labels)
                     if option_label_type != str and option_label_type != tuple and not is_callable(option.labels):
-                        print_error("  - Failed to add option " + type_str(option) + " as the label is not a valid type")
+                        print_error("  - No se pudo añadir la option " + type_str(option) + " ya que no es un tipo label válido")
                 elif option_type == OptionChecklist:
                     option_label_type = type(option.label)
                     if option_label_type != str and option_label_type != tuple and not is_callable(option.label):
-                        print_error("  - Failed to add option " + type_str(option) + " as the label is not a valid type")
+                        print_error("  - No se pudo añadir la option " + type_str(option) + " ya que no es un tipo label válido")
                 else:
-                    print("  - Failed to add option " + type_str(option) + " as it is not a valid option type")
+                    print("  - No se pudo añadir la option " + type_str(option) + " ya que no es un tipo option válida")
                     continue
                 
                 final_options.append(option)
             
             if not final_options:
-                print_fatal("Tried to register a configuration with no valid options. Add options or fix erroring options")
+                print_fatal("Se ha intentado registrar una configuración sin options válida. Añada options o corrija las options erróneas")
             return final_options
         
         @staticmethod
@@ -58,7 +58,7 @@ init -998 python:
         @staticmethod
         def register_mod_config(config : Config):
             if not config.id in submods.mods:
-                print_error(KeyError("Tried to register a config to a non-existent mod. Skipping..."))
+                print_error(KeyError("Se ha intentado registrar una configuración en un mod inexistente. Omitiendo..."))
                 return
             options = ConfigAPI.process_config(config)
             ConfigAPI.mod_configurations[config.id] = {config: options}
