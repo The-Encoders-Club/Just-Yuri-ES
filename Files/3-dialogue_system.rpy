@@ -289,7 +289,7 @@ init -999 python:
             for condition in self.conditions:
                 try:
                     if not eval(condition):
-                        print_debug("Condition not met for " + self.label + ": " + condition)
+                        print_debug("Condición no cumplida para " + self.label + ": " + condition)
                         return False
                 except Exception as e:
                     return False  
@@ -366,7 +366,7 @@ init -999 python:
                     "three_choice_menu", 
                     active_dict, 
                     scroll_button_items, 
-                    [("Would it be fine if I changed the music a little?", "change_music"), ("Nevermind", "prompt_menu"), ("Why don't you change outfits, Yuri?", "changeoutfit")],
+                    [("¿Estaría bien si cambiara un poco la música?", "change_music"), ("No importa", "prompt_menu"), ("¿Por qué no te cambias de ropa, Yuri?", "changeoutfit")],
                     random.sample(list(active_dict.keys()), len(active_dict)), 
                     "no", 
                     0)
@@ -377,7 +377,7 @@ init -999 python:
                     farewell_options.append((dialogue_db[dialogue_name].name, dialogue_name))
                 if len(dialogue_list) > 3:
                     farewell_options = random.sample(farewell_options, k=3)
-                farewell_options.append(("Nevermind", "return"))
+                farewell_options.append(("No importa", "return"))
                 selected_dialogue = renpy.display_menu(farewell_options)
             
             
@@ -396,7 +396,7 @@ init -999 python:
             return
         else:
             print_debug(selection_method)
-            y("Selection method not found")
+            y("Método de elección no encontrado")
             return
 
 
@@ -440,7 +440,7 @@ init -999 python:
         if memory_name in persistent.dialogue_memory:
             return persistent.dialogue_memory[memory_name]
         else:
-            print_error(memory_name + " not found in persistent.dialogue_memory. Could not return_memory.")
+            print_error(memory_name + " no se encuentra en persistent.dialogue_memory. No se pudo devolver la memoria.")
 
     def reset_memory():
         persistent.dialogue_memory = {}
