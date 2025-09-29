@@ -16,11 +16,11 @@ python early:
             if getattr(old_persistent, "version"):
                 old_persistent = None
             else:
-                print("Backing up older persistent file...")
+                print("Realizando una copia de seguridad de un archivo persistente antiguo...")
                 if not os.path.exists(backup_directory):
                     os.makedirs(backup_directory)
                 copy_file(os.path.join(save_directory, "persistent"), os.path.join(backup_directory, "persistent_old_backup"))
-                print("- Done!")
+                print("- ¡Hecho!")
 
 
 
