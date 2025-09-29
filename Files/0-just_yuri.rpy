@@ -84,19 +84,19 @@ python early:
         if file_path and file_name:
             path = os.path.join(file_path, file_name)
             with open(path,"wb") as file:
-                print("Attempting to write...")
+                print("Intentando escribir...")
                 try:
                     persistent_data = dumps(persistent_var)
                     compressed = zlib.compress(persistent_data, 3)
                     compressed += renpy.savetoken.sign_data(persistent_data).encode("utf-8")
                     file.write(compressed)
-                    print("- Success")
+                    print("- Completado")
                 except Exception as e:
                     print_error(e, False)
 
     def apply_persistent(persistent_var, overwrite=True):
         if not persistent_var:
-            print_error(NameError("Failed to apply persistent as it is None"))
+            print_error(NameError("No se pudo aplicar persistent ya que es None"))
         persistent_data = vars(persistent_var)
         for key, value in sorted(persistent_data.items()):
             try:
@@ -115,7 +115,7 @@ python early:
 define current_label = None
 
 init -999 python:
-    print("Loading " + config.name + " - " + config.version + "..." + os.linesep + "-------------------------------")
+    print("Cargando " + config.name + " - " + config.version + "..." + os.linesep + "-------------------------------")
     dismiss_keys = config.keymap['dismiss']
     allow_dialogue = False
     allow_skipping = False
@@ -163,7 +163,7 @@ init -999 python:
 
     for archive in ['fonts']:
         if not archive in config.archives:
-            renpy.error("DDLC archive files not found in /game folder. Check installation and try again.")
+            renpy.error("No se han encontrado los archivos DDLC en la carpeta /game. Comprueba la instalación y vuelve a intentarlo.")
 
 
     persistent.HDY = False
@@ -211,7 +211,7 @@ init -999 python:
                     traceback.print_tb(tb, file=file_error)
                 except:
                     pass
-                print("  - Created error.log file in " + path)
+                print("  - Se ha creado el archivo error.log en " + path)
         elif type(path) == tuple:
             print(os.linesep + "------------ ERROR ------------" + os.linesep + exception_type + ": " + str(exception))
             traceback.print_tb(tb, file=sys.stdout)
@@ -223,7 +223,7 @@ init -999 python:
                         traceback.print_tb(tb, file=file_error)
                     except:
                         pass
-                    print("  - Created error.log file in " + sub_path)
+                    print("  - Se ha creado el archivo error.log en " + sub_path)
         else:
             print(os.linesep + "-------- SILENT ERROR ---------" + os.linesep + exception_type + ": " + str(exception))
             traceback.print_tb(tb, file=sys.stdout)
@@ -258,7 +258,7 @@ init -999 python:
                     traceback.print_tb(tb, file=file_error)
                 except:
                     pass
-                print("  - Created fatal.log file in " + path)
+                print("  - Se ha creado el archivo fatal.log en " + path)
         elif type(path) == tuple:
             print(os.linesep + "------------ FATAL ------------" + os.linesep + exception_type + ": " + str(exception))
             traceback.print_tb(tb, file=sys.stdout)
@@ -270,7 +270,7 @@ init -999 python:
                         traceback.print_tb(tb, file=file_error)
                     except:
                         pass
-                    print("  - Created fatal.log file in " + sub_path)
+                    print("  - Se ha creado el archivo fatal.log en " + sub_path)
         raise exception
 
 
@@ -279,5 +279,5 @@ init -999 python:
 
 init 999 python:
     year, month, day, hour, minute, second = tc_class.cur_time()
-    print(os.linesep + "Loading of " + config.name + " - " + config.version + " complete!" + os.linesep + "-------------------------------" + os.linesep + os.linesep)
+    print(os.linesep + "¡Carga de " + config.name + " - " + config.version + " completada!" + os.linesep + "-------------------------------" + os.linesep + os.linesep)
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
