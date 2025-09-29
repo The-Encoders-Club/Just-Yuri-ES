@@ -1,7 +1,7 @@
 
 image exception_bg = "#dadada"
-image fake_exception = Text("An exception has occurred.", size=40, style="_default")
-image fake_exception3 = Text("While running game code: File \"game/script-ch30.rpy\", line 7370, in script.", size=20, style="_default")
+image fake_exception = Text("Se ha producido un error.", size=40, style="_default")
+image fake_exception3 = Text("Al ejecutar el código del juego: Archivo \"game/script-ch30.rpy\", línea 7370, en el script.", size=20, style="_default")
 
 init -999 python:
 
