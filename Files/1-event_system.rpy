@@ -56,7 +56,7 @@ init -998 python:
         @staticmethod
         def register(event_class, *callbacks):
             if not inspect.isclass(event_class):
-                print_fatal(TypeError("Expected an Event class, but got an instance instead"))
+                print_fatal(TypeError("Se esperaba una clase de evento, pero en su lugar se obtuvo una instancia"))
                 return
             
             if not event_class in EventAPI.event_handlers:
@@ -69,7 +69,7 @@ init -998 python:
             if event.__class__ in EventAPI.event_handlers:
                 EventAPI.event_handlers[event.__class__].call(event)
             else:
-                print_error(NameError("Failed to execute event " + str(event.__class__.__name__) + " as the event was not registered prior to calling it"))
+                print_error(NameError("No se pudo ejecutar el evento " + str(event.__class__.__name__) + " ya que el este no fue registrado antes de convocarlo"))
         
         @staticmethod
         def is_registered(event_class):
@@ -92,10 +92,10 @@ init -999 python:
             self.register(callbacks)
         
         def register(self, callbacks):
-            print_debug("Registering " + str(len(callbacks)) + " callback(s) for event " + self.event.__name__)
+            print_debug("Registando " + str(len(callbacks)) + " callback(s) para event " + self.event.__name__)
             for callback in callbacks:
                 if callback and not callback in self.callbacks and type(callback) != tuple:
-                    print_debug("  - Registering callback: " + repr(callback))
+                    print_debug("  - Registrando callback: " + repr(callback))
                     self.callbacks.append(callback)
         
         def call(self, event : Event):
@@ -103,7 +103,7 @@ init -999 python:
                 try:
                     callback(event)
                 except BaseException as exception:
-                    print("Failed to execute event " + self.event.__name__ + " as the function errored upon execution")
+                    print("No se pudo ejecutar event " + self.event.__name__ + " ya que la función generó un error al ejecutarse")
                     print_error(exception, new_traceback=False)
 
 init -997 python:
@@ -136,12 +136,12 @@ init -997 python:
     def callback_exit():
         old_persistent = load_persistent(save_directory)
         if old_persistent:
-            print("Backing up persistent file...")
+            print("Realizando copias de seguridad de archivos persistentes...")
             if not os.path.exists(backup_directory):
                 os.makedirs(backup_directory)
             now = datetime.datetime.today()
             save_persistent(old_persistent, backup_directory, "persistent_backup-" + str(now.year) + "-" + str(now.month) + "-" + str(now.day))
-            print("- Done!")
+            print("- ¡Hecho!")
         
         EventAPI.call(ExitEvent())
 
