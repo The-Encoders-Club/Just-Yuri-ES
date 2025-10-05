@@ -106,17 +106,17 @@ label boop_nose:
     if persistent.boop_locations[0] == 1:
         $ update_memory("idle_60", "first_boop")
         $ show_chr("A-DDGBA-AAAA")
-        y "Ah... AHHHHH!"
+        y "Ah... ¡AHHHHH!"
         $ show_chr("A-DDABA-AAAJ")
-        y "W-what was that? [player]? What was that?!"
+        y "¿Q-Qué ha sido eso [player]? ¡¿Qué ha sido eso?!"
         $ show_chr("A-DEBBA-AAAJ")
-        y "I felt s-something touch my... my n-nose... what's going on?"
+        y "Sentí que a-algo me tocaba la nariz... ¿qué está pasando?"
         $ show_chr("A-GJDBA-AAAL")
-        y "D-does this mean it works after all?"
+        y "¿E-Esto significa que funciona después de todo?"
         $ show_chr("A-ICABA-AMAM")
-        y "Haha... wow..."
+        y "Jaja... wow..."
         $ show_chr("A-JCBAA-AMAM")
-        y "I'm glad it works... just... p-please warn me next time, okay?..."
+        y "Me alegro de que funcione... pero... por favor, avísame la próxima vez, ¿okey?..."
         $ show_chr("A-ACAAA-AAAA")
     elif persistent.boop_locations[0] < 3:
         if karma_lvl() < 3:
@@ -125,16 +125,16 @@ label boop_nose:
             $ show_chr("A-GJAAA-AAAA")
         elif karma_lvl() > 3:
             $ show_chr("A-GIBAA-AAAA")
-        y "Uuuuu... A-at least tell me before you do something like that, [player]..."
+        y "Uuuuu... A-Al menos avísame antes de hacer algo así, [player]..."
     elif persistent.boop_locations[0] < 7:
         $ show_chr("A-AABBA-AAAA")
-        y "...Haha... [player] Y-you seem to be enjoying this, huh? N-not that I mind or anything!"
+        y "... Jaja... [player], parece que estás disfrutando esto, ¿eh? ¡N-No es que me importe ni nada!"
     elif persistent.boop_locations[0] < 10:
         $ show_chr("A-BCBBA-AKAA")
-        y "C-could you do that again? I-if you want...that is..."
+        y "¿Podrías hacerlo otra vez? S-Si quieres... es decir..."
     elif persistent.boop_locations[0] < 15:
         $ show_chr("A-GAGBA-AAAA")
-        y "B-boop! hehe..."
+        y "¡B-Boop! Jeje..."
     else:
         $ BoopUpdate()
 
