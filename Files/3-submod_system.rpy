@@ -51,25 +51,25 @@ Puedes eliminar estos documentos si quieres liberar espacio para tu mod. Si algu
 
     modinfo_setup_content = """{
     ####################################################################################
-    # This is what the Just Yuri mod reads to figure out what this submod is.          #
-    # This is always automatically generated when a modinfo.json file is not detected. #
+    # Esto es lo que dice el mod Just Yuri para averiguar qué es este submod..          #
+    # Esto siempre se genera automáticamente cuando no se detecta un archivo modinfo.json.. #
     ####################################################################################
 
-    # The name of your submod. This will show up in game in the mods menu.
+    # El nombre de tu submod. Aparecerá en el juego, en el menú de mods.
     "name": "",
 
-    # The unique id of your submod. This is used in the dependencies blocks of other mods.
+    # El identificador único de tu submod. Se utiliza en los bloques de dependencias de otros mods.
     "id": "",
 
-    # The version of your submod. This can be anything you want, but keep it close to the format #.#.#
+    # La versión de tu submod. Puede ser cualquier cosa que desees, pero mantén un formato similar al siguiente: #.#.#
     "version": "1.0.0",
 
-    # The unique ids of each submod that this submod requires.
-    # If any id is present here and the mod isn't loaded, the game will crash and display any mods that are missing
-    # Also supports putting a single string as well if you don't want to use a list
-    "dependencies": [],
+    # Los identificadores únicos de cada submod que requiere este submod.
+    # Si hay algún identificador aquí y el mod no está cargado, el juego se bloqueará y mostrará los mods que faltan.
+    # También admite la inserción de una sola cadena si no desea utilizar una lista.
+    "dependencias": [],
 
-    # Whether to enable debug mode for Just Yuri. Adds additional information to the logs and allows access to the control panel
+    # Si se desea habilitar el modo de depuración para Just Yuri. Añade información adicional a los registros y permite el acceso al panel de control.
     "developer_mode": false
 }
 """
