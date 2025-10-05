@@ -1036,7 +1036,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "How are you feeling today?",
+        name = "¿Cómo te sientes hoy?",
         sub_category = "Small Talk"))
 
     add_dialogue(Dialogue(
@@ -1044,7 +1044,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "You look nice today, [persistent.yuri_nickname].",
+        name = "Hoy te ves muy bien, [persistent.yuri_nickname].",
         sub_category = "Small Talk"))
 
     add_dialogue(Dialogue(
@@ -1052,7 +1052,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ['persistent.lovecheck'],
         importance = 0,
-        name = "How do you feel about our relationship so far?",
+        name = "¿Qué opinas de nuestra relación hasta ahora?",
         sub_category = "Small Talk"))
 
     add_dialogue(Dialogue(
@@ -1060,7 +1060,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "What are you thinking about?",
+        name = "¿En qué estás pensando?",
         sub_category = "Small Talk"))
 
     add_dialogue(Dialogue(
@@ -1068,7 +1068,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "Hey [persistent.yuri_nickname], how is your eyesight?",
+        name = "Hey [persistent.yuri_nickname], ¿cómo está tu vista?",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1076,7 +1076,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ['persistent.lovecheck'],
         importance = 0,
-        name = "I love you, [persistent.yuri_nickname].",
+        name = "Te amo, [persistent.yuri_nickname].",
         sub_category = "Love"))
 
     add_dialogue(Dialogue(
@@ -1084,7 +1084,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "Do you miss me when I'm gone, [persistent.yuri_nickname]?",
+        name = "¿Me extrañas cuando no estoy, [persistent.yuri_nickname]?",
         sub_category = "Love"))
 
     add_dialogue(Dialogue(
@@ -1092,7 +1092,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "What are your love preferences?",
+        name = "¿Cuáles son tus preferencias amorosas?",
         sub_category = "Love"))
 
     add_dialogue(Dialogue(
@@ -1100,7 +1100,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "A-About placing that chocolate I put in your mouth back then...",
+        name = "A-Aquella vez que te puse ese chocolate en la boca...",
         sub_category = "DDLC"))
 
     add_dialogue(Dialogue(
@@ -1108,7 +1108,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "We never did get into reading Portrait of Markov together, have we?",
+        name = "Nunca llegamos a leer juntos Retrato de Markov, ¿verdad?",
         sub_category = "DDLC"))
 
     add_dialogue(Dialogue(
@@ -1116,7 +1116,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "I like knives too. Which one's your favorite?",
+        name = "A mí también me gustan los cuchillos. ¿Cuál es tu favorito?",
         sub_category = "[persistent.yuri_nickname]'s Interests"))
 
     add_dialogue(Dialogue(
@@ -1124,7 +1124,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('idle_1')", "not renpy.seen_label('a12')"],
         importance = 0,
-        name = "What you did to the rest of the girls was WRONG.",
+        name = "Lo que le hiciste al resto de las chicas estuvo MAL.",
         sub_category = "DDLC"))
 
     add_dialogue(Dialogue(
@@ -1132,7 +1132,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "Hey, [persistent.yuri_nickname], how about a kiss?",
+        name = "Hey, [persistent.yuri_nickname], ¿que tal si me besas?",
         sub_category = "Love"))
 
     add_dialogue(Dialogue(
@@ -1140,7 +1140,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "What's your favorite kind of weather in my world?",
+        name = "¿Cuál es tu tipo de clima favorito en mi mundo?",
         sub_category = "[persistent.yuri_nickname]'s Interests"))
 
     add_dialogue(Dialogue(
@@ -1148,7 +1148,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["not renpy.seen_label('a15')"],
         importance = 0,
-        name = "Have you ever eaten anything, [persistent.yuri_nickname]?",
+        name = "¿Alguna vez has comido algo, [persistent.yuri_nickname]?",
         sub_category = "[persistent.yuri_nickname]'s Interests"))
 
     add_dialogue(Dialogue(
@@ -1156,7 +1156,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "Do you have access to television from where you are?",
+        name = "¿Tienes acceso a la televisión desde donde estás?",
         sub_category = "[persistent.yuri_nickname]'s World"))
 
     add_dialogue(Dialogue(
@@ -1164,7 +1164,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "W-What are your fetishes?",
+        name = "¿C-Cuáles son tus fetiches?",
         sub_category = "Awkward Topics"))
 
     add_dialogue(Dialogue(
@@ -1172,7 +1172,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["not renpy.seen_label('a18')"],
         importance = 0,
-        name = "What would it take for you to be real?",
+        name = "¿Qué haría falta para que fueras real?",
         sub_category = "[persistent.yuri_nickname]'s World"))
 
     add_dialogue(Dialogue(
@@ -1180,7 +1180,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["not renpy.seen_label('a19')"],
         importance = 0,
-        name = "Do you play sports?",
+        name = "¿Practicas algún deporte?",
         sub_category = "[persistent.yuri_nickname]'s Interests"))
 
     add_dialogue(Dialogue(
@@ -1188,7 +1188,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ['persistent.game_session >= 6'],
         importance = 0,
-        name = "What are your feelings on... living in the Space Classroom?",
+        name = "¿Qué opinas sobre... vivir en el aula espacial?",
         sub_category = "[persistent.yuri_nickname]'s World"))
 
     add_dialogue(Dialogue(
@@ -1196,7 +1196,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('idle_11')"],
         importance = 0,
-        name = "Want to read some poetry with me, [persistent.yuri_nickname]?",
+        name = "¿Quieres leer poesía conmigo, [persistent.yuri_nickname]?",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1204,7 +1204,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "What have you been doing with my pen, [persistent.yuri_nickname]?",
+        name = "¿Qué has estado haciendo con mi bolígrafo, [persistent.yuri_nickname]?",
         sub_category = "Awkward Topics"))
 
     add_dialogue(Dialogue(
@@ -1212,7 +1212,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('idle_44')"],
         importance = 0,
-        name = "Do you think we would make a good family, [persistent.yuri_nickname]?",
+        name = "¿Crees que formaríamos una buena familia, [persistent.yuri_nickname]?",
         sub_category = "Love"))
 
     add_dialogue(Dialogue(
@@ -1220,7 +1220,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('a1')"],
         importance = 0,
-        name = "Mind if I talk about how I'm feeling?",
+        name = "¿Te importa si hablo de cómo me siento?",
         sub_category = "Small Talk"))
 
     add_dialogue(Dialogue(
@@ -1228,7 +1228,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('idle_45')"],
         importance = 0,
-        name = "So... about those lewd images...",
+        name = "Entonces... sobre esas imágenes obscenas...",
         sub_category = "Awkward Topics"))
 
     add_dialogue(Dialogue(
@@ -1236,7 +1236,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ['persistent.lovecheck'],
         importance = 0,
-        name = "Let's drink some tea, [persistent.yuri_nickname]",
+        name = "Bebamos un poco de té, [persistent.yuri_nickname].",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1244,7 +1244,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('idle_76')"],
         importance = 0,
-        name = "Is it okay if I give you a nickname?",
+        name = "¿Te parece bien si te pongo un apodo?",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1252,7 +1252,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ['tc_class.cur_time()[1] == 12'],
         importance = 0,
-        name = "Do you know any good Christmas songs, [persistent.yuri_nickname]?",
+        name = "¿Conoces alguna buena canción navideña, [persistent.yuri_nickname]?",
         sub_category = "[persistent.yuri_nickname]'s Interests"))
 
     add_dialogue(Dialogue(
@@ -1260,7 +1260,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ['persistent.lovecheck'],
         importance = 0,
-        name = "How would you feel about a bit of cuddling, [persistent.yuri_nickname]?",
+        name = "¿Te apetece que nos acurruquemos un rato, [persistent.yuri_nickname]?",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1268,7 +1268,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "So, how do you feel about nature?",
+        name = "Entonces, ¿qué opinas sobre la naturaleza?",
         sub_category = "[persistent.yuri_nickname]'s Interests"))
 
     add_dialogue(Dialogue(
@@ -1276,7 +1276,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "Are there any books you currently enjoy?",
+        name = "¿Hay algún libro que te guste leer actualmente?",
         sub_category = "Books"))
 
     add_dialogue(Dialogue(
@@ -1284,7 +1284,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "I don't really understand what your .chr file is about.",
+        name = "I No entiendo muy bien de qué trata tu archivo .chr.",
         sub_category = "Misc."))
 
     add_dialogue(Dialogue(
@@ -1292,7 +1292,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ['karma_lvl()==5', 'not persistent.lovecheck'],
         importance = 0,
-        name = "Hey... [persistent.yuri_nickname], do you have something important to tell me?",
+        name = "Hey... [persistent.yuri_nickname], ¿tienes algo importante que decirme?",
         sub_category = "Love"))
 
     add_dialogue(Dialogue(
@@ -1300,7 +1300,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "Hey [persistent.yuri_nickname], can you call me by something different?",
+        name = "Hey [persistent.yuri_nickname], ¿puedes llamarme de otra manera?",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1308,7 +1308,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "Hey [persistent.yuri_nickname], can I change my personal information? I may have made a typo somewhere.",
+        name = "Hey [persistent.yuri_nickname], ¿puedo cambiar mi información personal? Es posible que haya cometido un error tipográfico en algún lugar.",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1316,7 +1316,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ['((persistent.ingame_time.seconds // 3600) >= 20) or (persistent.ingame_time.days > 0)'],
         importance = 0,
-        name = "[persistent.yuri_nickname], I think I need time to think about our relationship... Let's take a break...",
+        name = "[persistent.yuri_nickname], Creo que necesito tiempo para pensar en nuestra relación... Deberíamos tomarnos un descanso...",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1324,7 +1324,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ['persistent.ingame_time.days > 14'],
         importance = 0,
-        name = "Hey [persistent.yuri_nickname].... can we talk about your.... cutting?",
+        name = "Hey [persistent.yuri_nickname]... ¿podemos hablar sobre tus... cortes?",
         sub_category = "Awkward Topics"))
 
     add_dialogue(Dialogue(
@@ -1332,7 +1332,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('idle_53')"],
         importance = 0,
-        name = "You spoke about SCPs before. Which is your favourite?",
+        name = "Antes has hablado de los SCP. ¿Cuál es tu favorito?",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1340,7 +1340,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('krampusnacht')"],
         importance = 0,
-        name = "You said something about a special SCP you had in store.",
+        name = "Dijiste algo sobre un SCP especial que tenías guardado.",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1348,7 +1348,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ['persistent.ingame_time.days > 0'],
         importance = 0,
-        name = "Can we talk about what happened to you and the other girls?",
+        name = "¿Podemos hablar de lo que te pasó a ti y a las otras chicas?",
         sub_category = "DDLC"))
 
     add_dialogue(Dialogue(
@@ -1356,7 +1356,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('hobbies')"],
         importance = 0,
-        name = "Have you thought about writing your own novel?",
+        name = "¿Has pensado en escribir tu propia novela?",
         sub_category = "Books"))
 
     add_dialogue(Dialogue(
@@ -1364,7 +1364,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('Halloween_2021') or renpy.seen_label('Roomchange')"],
         importance = 0,
-        name = "What do you think of Dr. Frankenstein in the book?",
+        name = "¿Qué opinas del Dr. Frankenstein en el libro?",
         sub_category = "Books"))
 
     add_dialogue(Dialogue(
@@ -1372,7 +1372,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('a42')"],
         importance = 0,
-        name = "What do you think of Frankenstein's monster?",
+        name = "¿Qué opinas del monstruo de Frankenstein?",
         sub_category = "Books"))
 
     add_dialogue(Dialogue(
@@ -1380,7 +1380,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('purpleroomintro')"],
         importance = 0,
-        name = "Can you show me your knife collection?",
+        name = "¿Me puedes enseñar tu colección de cuchillos?",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1388,7 +1388,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('purpleroomintro')"],
         importance = 0,
-        name = "Can we switch places?",
+        name = "¿Podemos cambiar de sitio?",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1396,7 +1396,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ['persistent.game_session >= 5'],
         importance = 0,
-        name = "Hey [persistent.yuri_nickname], have you been coding anything while I'm away?",
+        name = "Hey [persistent.yuri_nickname], ¿has estado programando algo mientras estaba fuera?",
         sub_category = "[persistent.yuri_nickname]'s World"))
 
     add_dialogue(Dialogue(
@@ -1404,7 +1404,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('hdy_statue_greeting')"],
         importance = 0,
-        name = "Hey [persistent.yuri_nickname], can you take the hdy plushie?",
+        name = "Hey [persistent.yuri_nickname], ¿puedes llevarte el peluche HDY?",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1412,7 +1412,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ['persistent.ouija_done'],
         importance = 0,
-        name = "Hey [persistent.yuri_nickname], can you take the cupcake?",
+        name = "Hey [persistent.yuri_nickname], ¿puedes llevar el cupcake?",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1420,7 +1420,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('a20')"],
         importance = 0,
-        name = "Can you change the room?",
+        name = "¿Puedes cambiar la habitación?",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1442,7 +1442,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["persistent.bg == 'laboratory'"],
         importance = 0,
-        name = "How about we mix some 'potions'?",
+        name = "¿Qué tal si preparamos algunas 'pociones'?",
         sub_category = "Misc."))
 
     add_dialogue(Dialogue(
@@ -1450,7 +1450,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('table_organization')"],
         importance = 0,
-        name = "Can I reorganize the table [persistent.yuri_nickname]?",
+        name = "¿Puedo reorganizar la mesa [persistent.yuri_nickname]?",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1458,7 +1458,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ['persistent.diffuser_is_enabled'],
         importance = 0,
-        name = "Could you turn on the diffuser [persistent.yuri_nickname]?",
+        name = "¿Podrías encender el difusor [persistent.yuri_nickname]?",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1466,7 +1466,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ['persistent.sandalwood_oil_mist_is_enabled or persistent.lavenderO_mist_is_enabled or persistent.sweet_dream_oil_mist_is_enabled'],
         importance = 0,
-        name = "Could you turn off the diffuser [persistent.yuri_nickname]?",
+        name = "¿Podrías apagar el difusor [persistent.yuri_nickname]?",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1474,7 +1474,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('gifting_intro')"],
         importance = 0,
-        name = "I have a gift for you [persistent.yuri_nickname]!",
+        name = "¡Tengo un regalo para ti [persistent.yuri_nickname]!",
         sub_category = "Love"))
 
     add_dialogue(Dialogue(
@@ -1482,7 +1482,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('gifting_intro')"],
         importance = 0,
-        name = "Anything specific you wanted [persistent.yuri_nickname]?",
+        name = "¿Hay algo en específico que quieras [persistent.yuri_nickname]?",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1490,7 +1490,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "I'm tired [persistent.yuri_nickname]...",
+        name = "Estoy cansado [persistent.yuri_nickname]...",
         sub_category = "Requests"))
 
 
@@ -1506,7 +1506,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = [],
         importance = 0,
-        name = "About the webcam access...",
+        name = "Acerca del acceso a la cámara web...",
         sub_category = "Awkward Topics"))
 
     add_dialogue(Dialogue(
@@ -1519,7 +1519,7 @@ init -3 python:
                 'day':30}
             )"""],
         importance = 0,
-        name = "What are your thoughts on No Nut November?",
+        name = "¿Qué opinas sobre el Noviembre sin nueces?",
         sub_category = "Awkward Topics"))
 
     add_dialogue(Dialogue(
@@ -1527,7 +1527,7 @@ init -3 python:
         category = DialogueAPI.category_talk,
         conditions = ["renpy.seen_label('vday_2024_revisit')"],
         importance = 0,
-        name = "I'm ready to revisit the chocolate moment.",
+        name = "Estoy listo para revivir el momento del chocolate.",
         sub_category = "Love"))
 
 
@@ -1707,7 +1707,7 @@ init -3 python:
             )""",
             "not renpy.seen_label('birthdaycake_2020_late')"],
         importance = 0,
-        name = "Happy Birthday, [persistent.yuri_nickname]! Sorry for celebrating so late...",
+        name = "¡Feliz cumpleaños, [persistent.yuri_nickname]! Perdón por celebrarlo tan tarde...",
         sub_category = "Requests"))
 
     add_dialogue(Dialogue(
@@ -1720,7 +1720,7 @@ init -3 python:
                 'day':20}
             )"""],
         importance = 0,
-        name = "I have a gift for you [persistent.yuri_nickname]!",
+        name = "¡Tengo un regalo para ti [persistent.yuri_nickname]!",
         sub_category = "Misc."))
 
     add_dialogue(Dialogue(
@@ -1751,7 +1751,7 @@ init -3 python:
             "renpy.seen_label('valentines')",
             "karma_lvl()>3"],
         importance = 0,
-        name = "Anything special planned today, [persistent.yuri_nickname]?",
+        name = "¿Tienes algo especial planeado para hoy, [persistent.yuri_nickname]?",
         sub_category = "Love"))
     add_dialogue(Dialogue(
         label = "valentines",
@@ -1764,7 +1764,7 @@ init -3 python:
             )""",
             "not renpy.seen_label('valentines')"],
         importance = 0,
-        name = "Anything special planned today, [persistent.yuri_nickname]?",
+        name = "¿Hay algo especial planeado para hoy, [persistent.yuri_nickname]?",
         sub_category = "Love"))
 
 
@@ -1860,7 +1860,7 @@ init -3 python:
         category = DialogueAPI.category_goodbye,
         conditions = [],
         importance = 0,
-        name = "Goodbye, [persistent.yuri_nickname]!",
+        name = "¡Adiós, [persistent.yuri_nickname]!",
         sub_category = None))
 
     add_dialogue(Dialogue(
@@ -1868,7 +1868,7 @@ init -3 python:
         category = DialogueAPI.category_goodbye,
         conditions = [],
         importance = 0,
-        name = "Sorry, gotta go...",
+        name = "Lo siento, tengo que irme...",
         sub_category = None))
 
     add_dialogue(Dialogue(
@@ -1876,7 +1876,7 @@ init -3 python:
         category = DialogueAPI.category_goodbye,
         conditions = [],
         importance = 0,
-        name = "I'll see you later, [persistent.yuri_nickname].",
+        name = "Nos vemos luego, [persistent.yuri_nickname].",
         sub_category = None))
 
     add_dialogue(Dialogue(
@@ -1884,7 +1884,7 @@ init -3 python:
         category = DialogueAPI.category_goodbye,
         conditions = [],
         importance = 0,
-        name = "Bye, [persistent.yuri_nickname], I'll miss you!",
+        name = "Adiós, [persistent.yuri_nickname], ¡Te voy a extrañar!",
         sub_category = None))
 
     add_dialogue(Dialogue(
@@ -1892,7 +1892,7 @@ init -3 python:
         category = DialogueAPI.category_goodbye,
         conditions = [],
         importance = 0,
-        name = "Sorry I can't stay. I love you!",
+        name = "Lo siento, no puedo quedarme. ¡Te amo!",
         sub_category = None))
 
     add_dialogue(Dialogue(
@@ -1900,7 +1900,7 @@ init -3 python:
         category = DialogueAPI.category_goodbye,
         conditions = ['sanity == 2'],
         importance = 0,
-        name = "Oh, hey, look at the time, this has been an awesome date!",
+        name = "Oh, mira qué hora es, ¡ha sido una cita increíble!",
         sub_category = None))
 
     add_dialogue(Dialogue(
@@ -1908,7 +1908,7 @@ init -3 python:
         category = DialogueAPI.category_goodbye,
         conditions = ['karma_lvl() == 2 or karma_lvl() == 1'],
         importance = 0,
-        name = "Oh, whoops, someone's calling me, gotta run!",
+        name = "Oh, vaya, alguien me está llamando, ¡tengo que irme!",
         sub_category = None))
 
     add_dialogue(Dialogue(
@@ -1916,7 +1916,7 @@ init -3 python:
         category = DialogueAPI.category_goodbye,
         conditions = ['sanity == 2'],
         importance = 0,
-        name = "I have food... in the oven so...",
+        name = "Tengo comida... en el horno, así que...",
         sub_category = None))
 
     add_dialogue(Dialogue(
@@ -1924,7 +1924,7 @@ init -3 python:
         category = DialogueAPI.category_goodbye,
         conditions = ['sanity_lvl() <= 2'],
         importance = 0,
-        name = "I, uh, gotta go...",
+        name = "Yo, eh, tengo que irme...",
         sub_category = None))
 
 
@@ -1934,7 +1934,7 @@ init -3 python:
         category = DialogueAPI.category_goodbye,
         conditions = ['sanity_lvl() == 2'],
         importance = 0,
-        name = "I'm just going to... close the game now, okay?",
+        name = "Voy a... cerrar el juego ahora, ¿okey?",
         sub_category = None))
 
     add_dialogue(Dialogue(
@@ -1942,7 +1942,7 @@ init -3 python:
         category = DialogueAPI.category_goodbye,
         conditions = ['karma_lvl() >= 4'],
         importance = 0,
-        name = "So long, farewell!",
+        name = "¡Hasta pronto, adiós!",
         sub_category = None))
 
     add_dialogue(Dialogue(
@@ -1950,7 +1950,7 @@ init -3 python:
         category = DialogueAPI.category_goodbye,
         conditions = ['karma_lvl() >= 4'],
         importance = 0,
-        name = "I have to go. I already miss you!",
+        name = "Tengo que irme. ¡Ya te extraño!",
         sub_category = None))
 
     add_dialogue(Dialogue(
@@ -1958,7 +1958,7 @@ init -3 python:
         category = DialogueAPI.category_goodbye,
         conditions = [],
         importance = 0,
-        name = "I have to go now... I'll talk to you later, alright?",
+        name = "Tengo que irme ahora... hablamos más tarde, ¿de acuerdo?",
         sub_category = None))
 
     add_dialogue(Dialogue(
@@ -1966,7 +1966,7 @@ init -3 python:
         category = DialogueAPI.category_goodbye,
         conditions = [],
         importance = 0,
-        name = "See you later!",
+        name = "¡Hasta luego!",
         sub_category = None))
 
 
@@ -1975,7 +1975,7 @@ init -3 python:
         category = DialogueAPI.category_goodbye,
         conditions = [],
         importance = 0,
-        name = "I hate having to put you through this, but it looks like it's time to say goodbye once again.",
+        name = "Odio tener que hacerte pasar por esto, pero parece que ha llegado el momento de decir adiós una vez más.",
         sub_category = None))
 
     add_dialogue(Dialogue(
@@ -1983,7 +1983,7 @@ init -3 python:
         category = DialogueAPI.category_goodbye,
         conditions = [],
         importance = 0,
-        name = "I have to go now, my love.",
+        name = "Tengo que irme ahora, mi amor.",
         sub_category = None))
 
     add_dialogue(Dialogue(
@@ -1991,7 +1991,7 @@ init -3 python:
         category = DialogueAPI.category_goodbye,
         conditions = [],
         importance = 0,
-        name = "Whatever happens, just remember that there is someone who loves you no matter what.",
+        name = "Pase lo que pase, recuerda que hay alguien que te ama sin importar nada.",
         sub_category = None))
 
 
