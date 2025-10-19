@@ -60,10 +60,10 @@ init python:
             else:
                 musicmenu.append((i, "<loop 0>../music/" + i))
         if all_options:
-            musicmenu.append(("Play Okay Everyone! Yuri Variant", "<loop 4.444>bgm/5_yuri.ogg"))
-            musicmenu.append(("Play Stagnant Air", "<loop 96.04>/music/jy_music/Stagnant_Air_Loop.ogg"))
-        musicmenu.append(("I think I'd like the non-custom music.", ""))
-        musicmenu.append(("Nevermind", "nevermind"))
+            musicmenu.append(("¡Reproducir Okay Everyone! (Versión de Yuri)", "<loop 4.444>bgm/5_yuri.ogg"))
+            musicmenu.append(("Reproducir Stagnant Air", "<loop 96.04>/music/jy_music/Stagnant_Air_Loop.ogg"))
+        musicmenu.append(("Creo que prefiero la música no personalizada.", ""))
+        musicmenu.append(("No importa", "nevermind"))
         return musicmenu
 
     def choose_music(all_options = True):
@@ -105,42 +105,42 @@ label change_music:
     $ show_chr("A-ABGAA-ACAA")
 
     menu:
-        y "Would you like to change the music?"
-        "Yes.":
+        y "¿Te gustaría cambiar la música?"
+        "Sí.":
             menu:
-                y "Would you like an explanation?"
-                "Yes.":
+                y "¿Te gustaría una explicación?"
+                "Sí.":
                     $ show_chr("A-BCAAA-ACAA")
-                    y "Interesting."
+                    y "Interesante."
                     $ show_chr("A-ADAAA-AAAF")
-                    y "The first thing you need to do is to have your music file in a /music folder."
-                    y "If you don't have a /music folder, just make one next to, but not inside of, the /game folder for this game"
-                    y "Make sure that the music file comes in the form of a .ogg, .mp3, or a .wav."
-                    y "Be aware, including symbols in the file name will possibly break the music system, so please try to avoid doing that, [player]."
-                    y "Also, be careful to not include too many music files."
+                    y "Lo primero que debes hacer es colocar tu archivo de música dentro de la carpeta /music."
+                    y "Si no tienes una carpeta /music, simplemente crea una junto a la carpeta /game, pero no dentro de ella."
+                    y "Asegúrate de que el archivo de música esté en formato .ogg, .mp3, o .wav."
+                    y "Ten en cuenta que incluir símbolos en el nombre del archivo podría dañar el sistema de música, así que trata de evitarlo, [player]."
+                    y "Además, procura no incluir demasiados archivos de música."
                     $ show_chr("A-ADAAA-AAAA")
                     menu:
-                        y "Done?"
-                        "Yes.":
+                        y "¿Listo?"
+                        "Sí.":
                             if custom_music_list() == []:
                                 $ show_chr("A-BFAAA-AAAN")
-                                y "Seems like you don't have anything in the folder right now..."
+                                y "Parece que no tienes nada en la carpeta por ahora..."
                                 $ show_chr("A-BBBAA-AAAN")
-                                y "That's fine. I'll be waiting for them regardless."
+                                y "Está bien. Esperaré a que los pongas, de todas formas."
                             else:
                                 $ choose_music()
                         "No.":
                             $ show_chr("A-GCBAA-AAAA")
-                            y "I see."
+                            y "Ya veo."
                             $ show_chr("A-ABBAA-AAAA")
-                            y "No need to rush. Take your time."
+                            y "No hay prisa. Tómate tu tiempo."
                 "No.":
                     $ choose_music()
         "No.":
             $ show_chr("A-GCBAA-AAAA")
-            y "Okay then."
+            y "Está bien entonces."
             $ show_chr("A-ABBAA-AAAA")
-            y "No need to rush."
+            y "No hay necesidad de apresurarse."
     call ch30_loop
 screen music_menu(items, orientation="vertical"):
     zorder 1
