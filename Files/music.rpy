@@ -62,7 +62,7 @@ init python:
         if all_options:
             musicmenu.append(("¡Reproducir Okay Everyone! (Versión de Yuri)", "<loop 4.444>bgm/5_yuri.ogg"))
             musicmenu.append(("Reproducir Stagnant Air", "<loop 96.04>/music/jy_music/Stagnant_Air_Loop.ogg"))
-        musicmenu.append(("Creo que prefiero la música no personalizada.", ""))
+        musicmenu.append(("Creo que prefiero la música no personalizada", ""))
         musicmenu.append(("No importa", "nevermind"))
         return musicmenu
 
@@ -106,10 +106,10 @@ label change_music:
 
     menu:
         y "¿Te gustaría cambiar la música?"
-        "Sí.":
+        "Sí":
             menu:
                 y "¿Te gustaría una explicación?"
-                "Sí.":
+                "Sí":
                     $ show_chr("A-BCAAA-ACAA")
                     y "Interesante."
                     $ show_chr("A-ADAAA-AAAF")
@@ -121,7 +121,7 @@ label change_music:
                     $ show_chr("A-ADAAA-AAAA")
                     menu:
                         y "¿Listo?"
-                        "Sí.":
+                        "Sí":
                             if custom_music_list() == []:
                                 $ show_chr("A-BFAAA-AAAN")
                                 y "Parece que no tienes nada en la carpeta por ahora..."
@@ -129,14 +129,14 @@ label change_music:
                                 y "Está bien. Esperaré a que los pongas, de todas formas."
                             else:
                                 $ choose_music()
-                        "No.":
+                        "No":
                             $ show_chr("A-GCBAA-AAAA")
                             y "Ya veo."
                             $ show_chr("A-ABBAA-AAAA")
                             y "No hay prisa. Tómate tu tiempo."
-                "No.":
+                "No":
                     $ choose_music()
-        "No.":
+        "No":
             $ show_chr("A-GCBAA-AAAA")
             y "Está bien entonces."
             $ show_chr("A-ABBAA-AAAA")
@@ -165,3 +165,4 @@ screen music_menu(items, orientation="vertical"):
                 textbutton i.caption at music_button_zoom:
                     action i.action
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
+
