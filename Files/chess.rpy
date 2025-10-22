@@ -136,17 +136,17 @@ label chess:
 label chess_results:
     $ renpy.free_memory()
     if _return == DRAW:
-        y "Looks like it's a draw. Well played, [player]."
+        y "Parece que es un empate. Bien jugado, [player]."
         jump ch30_loop
     else:
-        $ winner = "White" if _return == WHITE else "Black"
+        $ winner = "Blancas" if _return == WHITE else "Negras"
 
         if player_color is not None:
             if _return == player_color:
-                y "Congratulations, [player]!"
+                y "¡Felicidades, [player]!"
                 jump ch30_loop
             else:
-                y "Better luck next time, [player]."
+                y "Quizás tengas más suerte la próxima vez, [player]."
                 jump ch30_loop
 
     return
