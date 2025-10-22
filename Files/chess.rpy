@@ -9,56 +9,56 @@ label chess:
     if sanity_lvl() > 2 and karma_lvl() > 2:
 
         menu:
-            y "Oh, so you'd like to play some chess, hm?"
-            "Yes.":
-                y "Oh, good."
-                y "Which difficulty would you like this time?"
+            y "Oh, ¿así que te gustaría jugar una partida de ajedrez, mmm?"
+            "Sí":
+                y "Ah, perfecto."
+                y "¿Qué dificultad prefieres esta vez?"
                 $ pass
-            "No.":
-                y "I see..."
-                y "Perhaps some other time, then."
+            "No":
+                y "Ya veo..."
+                y "Quizás en otro momento, entonces."
                 jump ch30_loop
     elif sanity_lvl() > 2 and karma_lvl() < 3:
         menu:
-            y "You... want to play Chess...?"
-            "Yes.":
+            y "¿Tú... quieres jugar al ajedrez...?"
+            "Sí":
                 y "Oh..."
-                y "Well, sure, I guess I wouldn't really mind."
-                y "I have to wonder if you'll mock me for losing."
-                y "Judging from how much pleasure you derive from my misery I assume you will."
-                y "Anyway, just pick a difficulty and let's get on with it."
+                y "Bueno, claro, supongo que no me importaría."
+                y "Me pregunto si te burlarás de mí si pierdo."
+                y "Juzgando por cuánto disfrutas de mi sufrimiento, asumo que sí."
+                y "En fin, elige una dificultad y empecemos."
                 $ pass
-            "No.":
+            "No":
                 y "Oh..."
-                y "Perhaps... some other time, then."
+                y "Quizás... en otro momento, entonces."
                 jump ch30_loop
     elif sanity_lvl() < 3 and karma_lvl() > 2:
         menu:
-            y "Y-you want to play chess, yes?"
-            "Yes.":
-                y "Uhuhuhu~!"
-                y "Which difficulty would you like this time?"
-                y "It doesn't matter which one you'll choose, I'm sure you'll still dominate me no matter what you choose!~"
+            y "¿Q-quieres jugar ajedrez conmigo, sí?"
+            "Sí":
+                y "Uy, jeje~!"
+                y "¿Qué dificultad prefieres esta vez?"
+                y "Aunque no importa cuál elijas... estoy segura de que igual me dominarás por completo~"
                 $ pass
-            "No.":
+            "No":
                 y "O-oh..."
-                y "Well..."
-                y "Alright..."
-                y "Perhaps some other time, then..."
+                y "Bueno..."
+                y "Está bien..."
+                y "Quizás en otro momento, entonces..."
                 jump ch30_loop
     elif sanity_lvl() < 3 and karma_lvl() < 3:
         menu:
-            y "You want to play chess, hm?"
-            "Yes.":
-                y "I'm sure you'll somehow find a way to make even such a trivial matter into a nightmare for me..."
-                y "Somehow you'll still find a way to humiliate me..."
-                y "Right..."
-                y "Anyway, which difficulty do you want?"
+            y "¿Quieres jugar al ajedrez, eh?"
+            "Sí":
+                y "Estoy segura de que de alguna forma lograrás convertir incluso algo tan trivial en una pesadilla para mí..."
+                y "De alguna manera aún encontrarás la forma de humillarme..."
+                y "Verdad..."
+                y "En fin, ¿qué dificultad quieres?"
                 $ pass
-            "No.":
+            "No":
                 y "Oh..."
-                y "Well... I see..."
-                y "Perhaps some other time when you learn to make up your mind."
+                y "Bueno... ya veo..."
+                y "Quizás otro día... cuando aprendas a decidirte."
                 jump ch30_loop
 
     $ fen = STARTING_FEN
@@ -66,38 +66,38 @@ label chess:
     $ movetime = 2000
 
     menu:
-        "Easy":
+        "Fácil":
             $ show_chr("A-ACEAA-AMAM")
-            y "Oh, I see."
-            y "You'd like me to go easy on you this time, hm?"
-            y "I'm happy to oblige, [player]!"
+            y "Oh, ya veo."
+            y "¿Quieres que sea más amable contigo esta vez, eh?"
+            y "Me alegra complacerte, [player]!"
             $ depth = 1
-        "Medium":
+        "Medio":
 
             $ show_chr("A-ACEAA-AMAM")
-            y "Oh I see~ Trying to warm up with a slight challenge eh?"
-            y "Well then. I would like to see how you do!"
-            y "It is good to get out of your comfort zone a bit more."
+            y "Oh, ya entiendo~ ¿Buscas un pequeño desafío, eh?"
+            y "Bien entonces. ¡Me encantería ver cómo te desenvuelves!"
+            y "Salir un poco de tu zona de confort no hace daño, ¿verdad?."
             $ depth = 5
-        "Hard":
+        "Difícil":
 
             $ show_chr("A-ACEAA-AMAM")
-            y "Oh huhuhehehe... Really turning the dial up are you now, [player]?"
-            y "Well I do like it when you get a bit more daring~ It is rather inspiring."
+            y "Oh jejeje... ¿De verdad estás subiendo el ritmo, [player]?"
+            y "Me gusta cuando te atreves un poco más~ Es bastante inspirador."
 
-            y "Well as people say nowadays, I guess, let these games begin!"
-            y "O-oh but don't go too hard on yourself [player]... Eheheh."
+            y "Bueno, como dicen hoy en día, supongo, ¡que comiencen los juegos!"
+            y "P-pero no te presiones demasiado, [player]... jejeje."
             $ depth = 10
 
 
     menu:
-        y "What color would you like to be?"
-        "White":
-            y "May the better player win!"
+        y "¿Con qué color te gustaría jugar?"
+        "Blanco":
+            y "¡Que gane el mejor jugador!"
             $ player_color = WHITE
             $ renpy.free_memory()
-        "Black":
-            y "May the better player win!"
+        "Negro":
+            y "¡Que gane el mejor jugador!"
 
             $ player_color = BLACK
             $ renpy.free_memory()
