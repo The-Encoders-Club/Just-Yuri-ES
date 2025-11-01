@@ -52,22 +52,22 @@ label import_ddlc_persistent:
 
     if ddlc_save_path:
         $ ddlc_save_path = ddlc_save_path[0]
-        "Save data for Doki Doki Literature Club was found at [ddlc_save_path]."
+        "Se han encontrado datos guardados de Doki Doki Literature Club en [ddlc_save_path]."
         menu:
-            "Would you like to import Doki Doki Literature Club save data into [config.name]?\n(DDLC will not be affected)"
-            "Yes, import DDLC save data.":
+            "¿Desea importar los datos guardados de Doki Doki Literature Club a [config.name]?\n(DDLC no se verá afectado)"
+            "Sí, importar datos guardados de DDLC.":
                 pause 0.3
                 pass
-            "No, do not import.":
+            "No, no importar.":
                 pause 0.3
                 return
     else:
 
 
-        "Save data from Doki Doki Literature Club could not be found."
+        "No se han encontrado datos guardados de Doki Doki Literature Club."
         menu:
-            "Save data will not be imported at this time."
-            "Okay":
+            "Los datos guardados no se importarán en este momento."
+            "Okey":
                 pause 0.3
                 return
 
