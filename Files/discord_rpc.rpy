@@ -16,9 +16,9 @@ python early:
         try:
             RPC.connect()
             connected = True
-            print("Discord RPC Connected") 
+            print("Discord RPC conectado") 
         except Exception as e:
-            print(f"Failed to connect to Discord: {e}") 
+            print(f"No se pudo conectar a Discord: {e}") 
             connected = False
 
     def update_presence(details = None, large_image = "icon_large", large_text = None, small_image = None, small_text = None):
@@ -33,14 +33,14 @@ python early:
                 presence_small_text = small_text
                 
                 if details == None:
-                    details = "Spending time with " + ("his" if persistent.male else "her" if persistent.male == False else "their") + " " + (persistent.yuri_nickname if persistent.yuri_nickname else "Yuri")
+                    details = "Pasar tiempo con " + ("his" if persistent.male else "her" if persistent.male == False else "their") + " " + (persistent.yuri_nickname if persistent.yuri_nickname else "Yuri")
                 try:
                     RPC.update(details=details, large_image=large_image, large_text=large_text, small_image=small_image, small_text=small_text, start=presence_start_time)
-                    print("Updating discord presence")
+                    print("Actualización de la presencia en Discord")
                 except Exception as e:
-                    print(f"Failed to update presence: {e}")
+                    print(f"No se ha podido actualizar la presencia: {e}")
                     connected = False 
 
     connect_to_discord()
-    update_presence(details="Launching Just Yuri...")
+    update_presence(details="Lanzamiento de Just Yuri...")
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
