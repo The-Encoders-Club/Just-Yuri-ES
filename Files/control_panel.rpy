@@ -3,161 +3,161 @@ label control_panel:
         if not dev_access:
             renpy.call("save_and_quit_but_its_abrupt")
     menu:
-        "Where to Go?"
-        "Expression Hub":
+        "¿A dónde ir?"
+        "Centro de expresión":
             $ persistent.costume = "school"
             $ persistent.current_timecycle = "_day"
             $ show_chr("standard")
             call screen make_expression
-        "Dialogue Calling":
+        "Llamada de diálogo":
             call caller_loop
-        "Active Menu":
+        "Menú activo":
             $ call_dialogue(ch30_loop_type, "actives")
-        "Ch30_Loop Jump":
+        "Cap_30 salto de bucle":
             call ch30_loop
-        "KS System":
+        "Sistema KS":
             menu:
-                "Show KS Points":
+                "Mostrar puntos KS":
                     y "Sanity = [persistent.sanity_points], Karma = [persistent.karma_points]"
-                "Alter Karma/Sanity":
+                "Cambiar karma/cordura":
                     call alter_ks
-                "Nevermind":
+                "No importa":
                     $ pass
-        "Time_Tracker System":
+        "Sistema Time_Tracker":
             call alter_time_tracker
-        "Seen Label Memory Deletion":
+        "Borrado de la memoria de etiquetas vistas":
             python:
-                forget_label = renpy.input("Which seen label do you want to forget?")
+                forget_label = renpy.input("¿Qué etiqueta vista quieres olvidar?")
                 if forget_label.strip() != "":
                     if renpy.seen_label(forget_label):
-                        y("forgetting... [forget_label]")
+                        y("Olvidando... [forget_label]")
                         del renpy.game.persistent._seen_ever[forget_label]
                     else:
-                        y("I've never seen [forget_label] before.")
-        "Close Game":
+                        y("Nunca había visto [forget_label] antes.")
+        "Juego cerrado":
             jump save_and_quit
     jump control_panel
 
 label caller_loop:
     menu:
-        "Welcome to the Dialogue Loop"
-        "Trigger Random Dialogue Type":
+        "Bienvenido al bucle de diálogo"
+        "Activar tipo de diálogo aleatorio":
             menu:
-                "Which Dialogue Type?"
-                "Trigger Idle":
+                "¿Qué tipo de diálogo?"
+                "Activador inactivo":
                     $ call_dialogue(ch30_loop_type, "idles")
-                "Trigger Greeting":
+                "Saludo de activación":
                     $ call_dialogue(ch30_loop_type, "greetings")
-                "Trigger Farewell":
+                "Despedida de Trigger":
                     $ call_dialogue(ch30_loop_type, "farewells")
-        "Reset Memory":
+        "Restablecer memoria":
             $ reset_memory()
-        "Call To Dialogue":
+        "Llamada al diálogo":
             python:
-                jumper = str(renpy.input("Which dialogue do you want to call to?"))
+                jumper = str(renpy.input("¿A qué diálogo quieres llamar?"))
                 if renpy.has_label(jumper):
                     renpy.call_in_new_context(jumper)
                 else:
-                    y(str(jumper) + " does not exist.")
-        "Return To Control Panel":
+                    y(str(jumper) + " no existe.")
+        "Volver al Panel de control":
             jump control_panel
     jump caller_loop
 
 label alter_ks:
     menu:
-        "Would you like to alter these values based on points or ks_convert_ names?"
-        "Points":
+        "¿Desea modificar estos valores basándose en puntos o nombres ks_convert_?"
+        "Puntos":
             jump alter_1
         "ks_convert_":
             jump alter_2
 
 label alter_1:
     menu:
-        "All of the following increase the points by 10"
-        "Increase Karma":
+        "Todo lo siguiente aumenta los puntos en 10"
+        "Aumentar el karma":
             $ persistent.karma_points = persistent.karma_points + 10
-        "Increase Sanity":
+        "Aumentar la cordura":
             $ persistent.sanity_points = persistent.sanity_points + 10
-        "Decrease Karma":
+        "Disminuir el karma":
             $ persistent.karma_points = persistent.karma_points - 10
-        "Decrease Sanity":
+        "Disminuir la cordura":
             $ persistent.sanity_points = persistent.sanity_points - 10
-        "Reset Sanity and Karma to 0":
+        "Restablecer cordura y karma a 0":
             $ persistent.sanity_points = 0
             $ persistent.karma_points = 0
-        "Custom Increase":
+        "Aumento personalizado":
 
 
             jump custom_increase
-        "Custom Decrease":
+        "Disminución personalizada":
             jump custom_decrease
-        "Return To Control Panel":
+        "Volver al panel de control":
 
 
-            "Huh. I suppose we don't need to do that."
+            "Eh. Supongo que no hace falta que hagamos eso."
             jump control_panel
-    "Done."
+    "Hecho"
     jump alter_1
 
 label custom_increase:
     menu:
-        "Which value to increase?"
+        "¿Qué valor hay que aumentar?"
         "Karma":
             jump custom_karma_increase
-        "Sanity":
+        "Cordura":
             jump custom_sanity_increase
-        "Back":
+        "Volver":
             jump alter_1
 
 label custom_decrease:
     menu:
-        "Which value to decrease?"
+        "¿Qué valor hay que reducir?"
         "Karma":
             jump custom_karma_decrease
-        "Sanity":
+        "Cordura":
             jump custom_sanity_decrease
-        "Back":
+        "Volver":
             jump alter_1
 label custom_karma_increase:
     python:
-        amount = renpy.input("Enter amount to increase Karma (between -100 and 100):")
+        amount = renpy.input("Introduce la cantidad para aumentar el karma (entre -100 y 100):")
         try:
             amount = int(amount)
             if -100 <= amount <= 100:
                 persistent.karma_points += amount
-                y("Karma increased by [amount]. New Karma Points: [persistent.karma_points]")
+                y("El karma ha aumentado en [amount]. Nuevos puntos de karma: [persistent.karma_points]")
             else:
-                y("Invalid amount. Must be between -100 and 100.")
+                y("Importe no válido. Debe estar entre -100 y 100.")
         except ValueError:
-            y("Invalid input. Please enter a number.")
+            y("Entrada no válida. Por favor introduzca un número.")
     jump alter_1
 
 label custom_sanity_increase:
     python:
-        amount = renpy.input("Enter amount to increase Sanity (between -100 and 100):")
+        amount = renpy.input("Introduce la cantidad para aumentar la cordura (entre -100 y 100):")
         try:
             amount = int(amount)
             if -100 <= amount <= 100:
                 persistent.sanity_points += amount
-                y("Sanity increased by [amount]. New Sanity Points: [persistent.sanity_points]")
+                y("La cordura aumentó en [amount]. Nuevos puntos de cordura: [persistent.sanity_points]")
             else:
-                y("Invalid amount. Must be between -100 and 100.")
+                y("Importe no válido. Debe estar entre -100 y 100.")
         except ValueError:
-            y("Invalid input. Please enter a number.")
+            y("Entrada no válida. Por favor introduzca un número.")
     jump alter_1
 
 label custom_karma_decrease:
     python:
-        amount = renpy.input("Enter amount to decrease Karma (between -100 and 100):")
+        amount = renpy.input("Introduce la cantidad para reducir el karma (entre -100 y 100):")
         try:
             amount = int(amount)
             if -100 <= amount <= 100:
                 persistent.karma_points += amount  
-                y("Karma decreased by [amount]. New Karma: [persistent.karma_points]")
+                y("El karma ha disminuido en [amount]. Nuevo karma: [persistent.karma_points]")
             else:
-                y("Invalid amount. Must be between -100 and 100.")
+                y("Importe no válido. Debe estar entre -100 y 100.")
         except ValueError:
-            y("Invalid input. Please enter a number.")
+            y("Entrada no válida. Por favor introduzca un número.")
     jump alter_1
 
 label custom_sanity_decrease:
@@ -167,56 +167,56 @@ label custom_sanity_decrease:
             amount = int(amount)
             if -100 <= amount <= 100:
                 persistent.sanity_points += amount 
-                y("Sanity decreased by [amount]. New Sanity: [persistent.sanity_points]")
+                y("La cordura disminuyó en [amount]. Nueva cordura: [persistent.sanity_points]")
             else:
-                y("Invalid amount. Must be between -100 and 100.")
+                y("Importe no válido. Debe estar entre -100 y 100.")
         except ValueError:
-            y("Invalid input. Please enter a number.")
+            y("Entrada no válida. Por favor introduzca un número.")
     jump alter_1
 
 label alter_2:
     menu:
-        "Alter Karma or Sanity?"
+        "¿Cambiar el karma o la cordura?"
         "Karma":
             menu:
-                "Karma Level 5":
+                "Nivel de karma 5":
                     $ persistent.karma_points = lvl_to_point(5)
-                "Karma Level 4":
+                "Nivel de karma 4":
                     $ persistent.karma_points = lvl_to_point(4)
-                "Karma Level 3":
+                "Nivel de karma 3":
                     $ persistent.karma_points = lvl_to_point(3)
-                "Karma Level 2":
+                "Nivel de karma 2":
                     $ persistent.karma_points = lvl_to_point(2)
-                "Karma Level 1":
+                "Nivel de karma 1":
                     $ persistent.karma_points = lvl_to_point(1)
-                "Nevermind":
-                    "Huh. I suppose we don't need to do that."
-        "Sanity":
+                "No importa":
+                    "Eh. Supongo que no hace falta que hagamos eso."
+        "Cordura":
             menu:
-                "Sanity Level 5":
+                "Nivel de cordura 5":
                     $ persistent.sanity_points = lvl_to_point(5)
-                "Sanity Level 4":
+                "Nivel de cordura 4":
                     $ persistent.sanity_points = lvl_to_point(4)
-                "Sanity Level 3":
+                "Nivel de cordura 3":
                     $ persistent.sanity_points = lvl_to_point(3)
-                "Sanity Level 2":
+                "Nivel de cordura 2":
                     $ persistent.sanity_points = lvl_to_point(2)
-                "Sanity Level 1":
+                "Nivel de cordura 1":
                     $ persistent.sanity_points = lvl_to_point(1)
-                "Nevermind":
-                    "Huh. I suppose we don't need to do that."
-        "Return to Control Panel":
+                "No importa":
+                    "Eh. Supongo que no hace falta que hagamos eso."
+        "Volver al panel de control":
             jump control_panel
-    "Done."
+    "Hecho"
     jump alter_2
 
 label alter_time_tracker:
     menu:
-        "Show Current In_Game Time":
+        "Mostrar hora actual en el juego":
             y "[persistent.ingame_time]"
-        "Set In_Game Time":
-            $ ingame_time_seconds_temp = 3600*int(renpy.input("Number of Hours?\n"))
-            $ ingame_time_days_temp = int(renpy.input("Number of Days?"))
+        "Establecer la hora del juego":
+            $ ingame_time_seconds_temp = 3600*int(renpy.input("¿Número de horas?\n"))
+            $ ingame_time_days_temp = int(renpy.input("¿Número de días?"))
             $ persistent.ingame_time = datetime.timedelta(seconds = ingame_time_seconds_temp, days = ingame_time_days_temp)
             y "[persistent.ingame_time]"
     jump control_panel

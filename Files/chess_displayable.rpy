@@ -124,23 +124,23 @@ screen chess(fen, player_color, movetime, depth):
     fixed xpos 20 ypos 390 spacing 30:
         vbox:
             showif chess_displayable.whose_turn == WHITE:
-                text 'Whose turn: White' style 'game_status_text'
+                text 'Turno actual: Blancas' style 'game_status_text'
             else:
-                text 'Whose turn: Black' style 'game_status_text'
+                text 'Turno actual: Negras' style 'game_status_text'
 
 
 
             showif chess_displayable.game_status == CHECKMATE:
-                text 'Checkmate' style 'game_status_text'
+                text 'Jaque mate' style 'game_status_text'
             elif chess_displayable.game_status == STALEMATE:
-                text 'Stalemate' style 'game_status_text'
+                text 'Empate' style 'game_status_text'
             elif chess_displayable.game_status == INCHECK:
-                text 'In Check' style 'game_status_text'
+                text 'En verificación' style 'game_status_text'
 
 
 
 
-            text 'Most recent moves' style 'game_status_text' xalign 0.5
+            text 'Mostrar últimos movimientos' style 'game_status_text' xalign 0.5
             for move in chess_displayable.history:
                 text move.uci() style 'game_status_text' xalign 0.5
 
@@ -150,9 +150,9 @@ screen chess(fen, player_color, movetime, depth):
     fixed xpos 200 ypos 390:
         vbox:
             hbox spacing 5:
-                text 'Resign' color COLOR_WHITE size 13 yalign 0.5
+                text 'Rendirse' color COLOR_WHITE size 13 yalign 0.5
                 textbutton '⚐':
-                    action [Confirm('Would you like to resign?',
+                    action [Confirm('¿Desea renunciar?',
                         yes=[
                         Play('sound', AUDIO_DRAW),
                         
@@ -162,13 +162,13 @@ screen chess(fen, player_color, movetime, depth):
                     style 'control_button' yalign 0.5
 
             hbox spacing 5:
-                text 'Undo move' color COLOR_WHITE size 13 yalign 0.5
+                text 'Deshacer movimiento' color COLOR_WHITE size 13 yalign 0.5
                 textbutton '⟲':
                     action [Function(chess_displayable.undo_move)]
                     style 'control_button' yalign 0.5
 
             hbox spacing 5:
-                text 'Flip board view' color COLOR_WHITE size 13 yalign 0.5
+                text 'Vista de tablero giratorio' color COLOR_WHITE size 13 yalign 0.5
                 textbutton '↑↓':
                     action [Play('sound', AUDIO_FLIP_BOARD),
                     ToggleField(chess_displayable, 'bottom_color'),
@@ -195,7 +195,7 @@ screen chess(fen, player_color, movetime, depth):
 
 
     showif chess_displayable.show_promotion_ui:
-        text 'Select promotion piece type' xpos 20 ypos 550 color COLOR_WHITE size 18
+        text 'Selecciona la pieza a promocionar' xpos 20 ypos 550 color COLOR_WHITE size 18
 
 
         textbutton '♜' xpos 40 ypos 575:
@@ -242,7 +242,7 @@ init python:
         STARTUPINFO = subprocess.STARTUPINFO()
         STARTUPINFO.dwFlags = subprocess.STARTF_USESHOWWINDOW
     else:
-        raise Exception('No stockfish binary found for your system')
+        raise Exception('No se ha encontrado ningún binario stockfish para su sistema')
 
 
     stockfish_dir = os.path.join(renpy.config.gamedir, THIS_PATH, BIN_PATH)
@@ -452,7 +452,7 @@ init python:
                     
                     
                     if self.show_promotion_ui and not move.promotion:
-                        renpy.notify('Please select a piece type to promote to')
+                        renpy.notify('Selecciona la pieza a promocionar')
                     
                     if move in self.board.legal_moves:
                         self.make_move(move)
@@ -506,23 +506,23 @@ init python:
                 
                 
                 
-                renpy.notify('Checkmate! The winner is %s' % ('black' if self.whose_turn else 'white'))
+                renpy.notify('¡Jaque mate! El ganador es %s' % ('black' if self.whose_turn else 'white'))
                 self.winner = not self.whose_turn
                 return
             
             if self.board.is_stalemate():
                 self.game_status = STALEMATE
                 renpy.sound.play(AUDIO_DRAW)
-                renpy.notify('Stalemate')
+                renpy.notify('Empate')
                 return
             
             
             if self.board.can_claim_threefold_repetition():
                 self.game_status == THREEFOLD
-                self.show_claim_draw_ui(reason='Threefold repetition rule: ')
+                self.show_claim_draw_ui(reason='Regla de la triple repetición: ')
             if self.board.can_claim_fifty_moves():
                 self.game_status == FIFTYMOVES
-                self.show_claim_draw_ui(reason='Fifty moves rule: ')
+                self.show_claim_draw_ui(reason='Regla de los cincuenta movimientos: ')
             
             
             if self.board.is_check():
@@ -536,7 +536,7 @@ init python:
             reason: a string indicating the reason to claim the draw, directly prepended to message
             """
             renpy.show_screen('confirm', 
-                message=reason + 'Would you like to claim draw?', 
+                message=reason + '¿Le gustaría reclamar el empate?', 
                 yes_action=[
                     Hide('confirm'),
                     Play('sound', AUDIO_DRAW),

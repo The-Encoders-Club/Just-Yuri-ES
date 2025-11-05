@@ -9,7 +9,7 @@ label chess:
     if sanity_lvl() > 2 and karma_lvl() > 2:
 
         menu:
-            y "Oh, ¿así que te gustaría jugar una partida de ajedrez, mmm?"
+            y "Oh, ¿así que te gustaría jugar una partida de ajedrez, hm?"
             "Sí":
                 y "Ah, perfecto."
                 y "¿Qué dificultad prefieres esta vez?"
@@ -36,12 +36,12 @@ label chess:
         menu:
             y "¿Q-quieres jugar ajedrez conmigo, sí?"
             "Sí":
-                y "Uy, jeje~!"
+                y "¡Uhuhuhu~!"
                 y "¿Qué dificultad prefieres esta vez?"
                 y "Aunque no importa cuál elijas... estoy segura de que igual me dominarás por completo~"
                 $ pass
             "No":
-                y "O-oh..."
+                y "O-Oh..."
                 y "Bueno..."
                 y "Está bien..."
                 y "Quizás en otro momento, entonces..."
@@ -86,17 +86,17 @@ label chess:
             y "Me gusta cuando te atreves un poco más~ Es bastante inspirador."
 
             y "Bueno, como dicen hoy en día, supongo, ¡que comiencen los juegos!"
-            y "P-pero no te presiones demasiado, [player]... jejeje."
+            y "O-Oh pero no te presiones demasiado, [player]... jejeje."
             $ depth = 10
 
 
     menu:
         y "¿Con qué color te gustaría jugar?"
-        "Blanco":
+        "Blancas":
             y "¡Que gane el mejor jugador!"
             $ player_color = WHITE
             $ renpy.free_memory()
-        "Negro":
+        "Negras":
             y "¡Que gane el mejor jugador!"
 
             $ player_color = BLACK

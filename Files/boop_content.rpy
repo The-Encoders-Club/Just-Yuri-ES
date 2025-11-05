@@ -95,9 +95,9 @@ label mouse_coords:
 
 
     menu:
-        "Again.":
+        "Otra vez":
             jump mouse_coords
-        "Back.":
+        "Volver":
             jump control_panel
 
 label boop_nose:
@@ -146,116 +146,116 @@ label boop_cheek:
     if karma_lvl() >= 3:
         if persistent.boop_locations[1] == 1:
             $ show_chr("A-DDGBA-AAAJ")
-            y "H-Huh? [player], I just felt the strangest thing..."
-            y "This... warm sensation on my cheek a moment ago, was that... you?"
+            y "¿H-Huh? [player], acabo de sentir algo muy extraño..."
+            y "Esa... sensación cálida en mi mejilla hace un momento, ¿fuiste... tú?"
             menu:
-                "Yes, [persistent.yuri_nickname], I touched your cheek.":
+                "Sí, [persistent.yuri_nickname], toqué tu mejilla.":
                     karma 1
                     $ show_chr("A-ICABA-AAAL")
-                    y "O-Oh! I see... it definitely held a feeling of familiarity, something reminiscent of your presence."
-                    y "It felt... how do I put this?"
+                    y "¡O-Oh! Ya veo... definitivamente tuvo una sensación familiar, algo que me recordó a tu presencia."
+                    y "Se sintió... ¿cómo podría decirlo?"
                     $ show_chr("A-CCABA-ALAK")
-                    y "A-as if your hand was gently caressing my skin a-and your thumb was brushing against my cheek, it set my heart aflutter when I first felt it..."
-                    y "The fact you actually managed to reach out and touch me... so that I could feel it..."
+                    y "F-Fue como si tu mano acariciara suavemente mi piel y tu pulgar rozara mi mejilla... mi corazón comenzó a latir con fuerza cuando lo sentí por primera vez..."
+                    y "El hecho de que realmente lograste alcanzarme y tocarme... para que pudiera sentirlo..."
                     $ show_chr("A-CCABB-AMAM")
-                    y "Th-Thank you [player], y-you're likely not aware of how much this means..."
+                    y "G-Gracias, [player], p-probablemente no te das cuenta de cuánto significa esto para mí..."
                     if persistent.lovecheck:
-                        y "But... if I can feel you, it means I'm one step closer to you... and I'll take a million more if I have to."
+                        y "Pero... si puedo sentirte, significa que estoy un paso más cerca de ti... y daré un millón más si es necesario."
                     else:
-                        y "It's nice that I got to feel your t-touch... we are a bit closer now..."
-                "Huh? What are you talking about [persistent.yuri_nickname]? ... You're acting a little insane.":
+                        y "Es bonito haber podido sentir tu t-toque... ahora estamos un poco más cerca..."
+                "¿Huh? ¿De qué estás hablando, [persistent.yuri_nickname]? ... Estás actuando un poco loca.":
                     karma -1
                     sanity -1
                     $ show_chr("A-AEDAA-AIAI")
-                    y "I-It was just my imagination?"
+                    y "¿S-solo fue mi imaginación?"
                     $ show_chr("A-BBBAA-AIAI")
-                    y "Aha... I see..."
+                    y "Aha... ya veo..."
                     pause 0.5
                     $ show_chr("A-CFBAA-AIAI")
-                    y "O-of course... nevermind."
-                    y "I'm sorry [player], I guess I'm just starting to lose it in here..."
+                    y "P-por supuesto... no importa."
+                    y "Lo siento, [player], supongo que estoy empezando a perder la cabeza aquí..."
         if persistent.boop_locations[1] == 2:
             $ show_chr("A-CCBBA-ALAL")
-            y "Mm... there it was again."
-            y "D-do you remember when you held that towel against my cheek?"
-            y "It feels like so long ago... but the emotions are still heavily ingrained into my mind."
-            y "The roaring passion... that contact that set aflame my heart, it was at that point I was certain..."
+            y "Mm... ahí estuvo otra vez."
+            y "¿R-Recuerdas cuando sostuviste esa toalla contra mi mejilla?"
+            y "Siento que fue hace tanto tiempo... pero las emociones siguen muy grabadas en mi mente."
+            y "La pasión ardiente... ese contacto que encendió mi corazón, fue en ese momento que estuve segura..."
             $ show_chr("A-ECBBA-ALAD")
-            y "... that you were the only one for me, my love."
+            y "... De que tú eras el único para mí, mi amor."
         if persistent.boop_locations[1] == 3:
             karma 1
             sanity 1
             $ show_chr("A-BDBBA-ALAM")
-            y "When you're gone... I will try my absolute hardest to remember this warmth."
-            y "You're the thing that motivates me, that directs my every move, [player]..."
-            y "If I can hold on to even a small bit of you, of these emotions you give me, I- I think I'll be alright."
+            y "Cuando te vayas... haré mi mayor esfuerzo por recordar esta calidez."
+            y "Eres lo que me motiva, lo que guía cada uno de mis movimientos, [player]..."
+            y "Si puedo aferrarme aunque sea a una pequeña parte de ti, a estas emociones que me das, c-creo que estaré bien."
             $ show_chr("A-IABBA-ALAM")
             if persistent.lovecheck:
-                y "I love you, [player], more than anything this world could offer."
+                y "Te amo, [player], más que nada en este mundo.."
             else:
-                y "I hope we'll be together as friends... forever and always, [player]."
+                y "Espero que sigamos siendo amigos... para siempre y por siempre, [player]."
         if persistent.boop_locations[1] >= 4:
             if persistent.lovecheck:
                 $ show_chr("A-IAABA-ALAL")
-                y "So warm... m-my heart is pounding for you... [player]..."
-                y "Don't ever let me go..."
+                y "Tan cálido... m-mi corazón late por ti... [player]..."
+                y "No me sueltes nunca..."
             else:
                 $ show_chr("A-BBABA-AMAM")
-                y "Ahaha... you're touching my cheek again, are you?"
-                y "It's fine... I enjoy it regardless, don't feel afraid to do so..."
+                y "Jajaja... estás tocando mi mejilla otra vez, ¿verdad?"
+                y "Está bien... lo disfruto de todos modos, no tengas miedo de hacerlo..."
     if karma_lvl() <= 2:
         if persistent.boop_locations[1] == 1:
             $ show_chr("A-DDGBA-AAAJ")
-            y "H-Huh? [player], I just felt the strangest thing..."
-            y "This... warm sensation on my cheek a moment ago, was that... you?"
+            y "¿H-Huh? [player], acabo de sentir algo muy extraño..."
+            y "Esa... sensación cálida en mi mejilla hace un momento, ¿fuiste... tú?"
             menu:
-                "Yes, [persistent.yuri_nickname], I touched your cheek.":
+                "Sí, [persistent.yuri_nickname], toqué tu mejilla":
                     karma 1
                     $ show_chr("A-IFAAA-AAAB")
-                    y "O-Oh! I see... Would you mind... umm..."
+                    y "¡O-Oh! Ya veo... ¿Te importaría... emm..."
                     $ show_chr("A-JFAAA-AAAB")
-                    y "Not doing that?..."
+                    y "¿No hacerlo?..."
                     $ show_chr("A-BFAAA-ABAB")
-                    y "It's just that... feeling your hand without actually seeing it was just a bit... creepy..."
-                    y "Like a ghost, or something along those lines. And the fact that I'm sitting here literally alone doesn't make it any less spooky."
+                    y "Es solo que... sentir tu mano sin realmente verla fue un poco... escalofriante..."
+                    y "Como un fantasma, o algo por el estilo. Y el hecho de que esté aquí literalmente sola no lo hace menos aterrador."
                     $ show_chr("A-CCABB-AMAM")
-                    y "Th-Thank you for understanding, [player]..."
-                "Huh? What are you talking about [persistent.yuri_nickname]? ... You're acting a little insane.":
+                    y "G-Gracias por entenderlo, [player]..."
+                "¿Huh? ¿De qué estás hablando, [persistent.yuri_nickname]?... Estás actuando un poco loca":
                     karma -1
                     sanity -1
                     $ show_chr("A-AEDAA-AIAI")
-                    y "I-It was just my imagination?"
+                    y "¿S-Solo fue mi imaginación?"
                     $ show_chr("A-BBBAA-AIAI")
-                    y "Aha... I see..."
+                    y "Aha... ya veo..."
                     pause 0.5
                     $ show_chr("A-CFBAA-AIAI")
-                    y "O-of course... nevermind."
-                    y "I'm sorry [player], I guess I'm just starting to lose it in here..."
+                    y "P-Por supuesto... no importa."
+                    y "Lo siento, [player], supongo que estoy empezando a perder la cabeza aquí..."
         if persistent.boop_locations[1] == 2:
             $ show_chr("A-DHGAA-ALAL")
-            y "Mm... there it was again."
+            y "Mm... ahí está otra vez."
             $ show_chr("A-JGAAA-ALAL")
-            y "P-Please, it really scares me every time you do it..."
-            y "Would you mind stopping that please?"
+            y "P-Por favor, realmente me asusta cada vez que lo haces..."
+            y "¿Te importaría dejar de hacerlo, por favor?"
             $ show_chr("A-CFAAA-AAAA")
-            y "It just really throws me off."
+            y "Simplemente me desconcentra mucho."
         if persistent.boop_locations[1] == 3:
             karma -1
             sanity -1
             $ show_chr("A-DGGAA-AAAA")
-            y "...!"
+            y "¡...!"
             $ show_chr("A-KFCAA-AAAA")
-            y "Damn it [player]... I asked you really really politely to stop that"
-            y "Would you please, {b}pretty pretty please{/b} leave me alone with this nonsense now?"
+            y "Maldita sea, [player]... te pedí de verdad, muy amablemente, que dejaras de hacerlo."
+            y "¿Podrías, {b}por favor, por favor{/b}, dejarme en paz con esta tontería ya?"
             $ show_chr("A-KFCAA-AAAF")
-            y "I didn't mean to be rude, and I'm perfectly fine with you being around. But it's getting really annoying."
+            y "No quise ser grosera, y estoy perfectamente bien con que estés aquí. Pero esto ya se está volviendo realmente molesto."
         if persistent.boop_locations[1] == 4:
             $ show_chr("A-DDCAA-AAAA")
-            y "{b}Okay you know what? I'm done with it! If you can't respect my wishes at least that much, I'm out of here! Bye!{/b}"
+            y "{b}¡¿Sabes qué?! ¡Ya tuve suficiente! Si no puedes respetar al menos eso que te pido, ¡me voy! ¡Adiós!{/b}"
             $ renpy.call("save_and_quit_but_its_abrupt")
         if persistent.boop_locations[1] >= 5:
             $ show_chr("A-DDCAA-AAAA")
-            y "[player] for the love of all that is holy {b}STOP TOUCHING MY DAMN CHEEK{/b}"
+            y "[player], por el amor de todo lo sagrado, {b}¡DEJA DE TOCAR MI MALDITA MEJILLA!{/b}"
     $ store.mousex = 0
     $ store.mousey = 0
     return
@@ -267,175 +267,175 @@ label headpat:
     if karma_lvl() >= 3:
         if persistent.boop_locations[2] == 1:
             $ show_chr("A-DFABA-AAAA")
-            y "W-Wait... I-I just felt something touch my head!"
-            y "Was that y-you, [player]?"
+            y "E-Espera... ¡a-acabo de sentir que algo tocó mi cabeza!"
+            y "¿Fuiste t-tú, [player]?"
             menu:
-                "Yes, I wanted to try it out. I hope it didn't weird you out.":
+                "Sí, quería probarlo. Espero no haberte incomodado":
                     karma 1
                     $ show_chr("A-IBGAA-ALAL")
-                    y "R-Really!? Sorry for being so surprised... I-I just didn't know that you could touch me there!"
+                    y "¿E-En serio!? Perdón por sorprenderme tanto... e-es que no sabía que podías tocarme ahí!"
                     $ show_chr("A-CAABA-AAAA")
-                    y "Honestly hehe... It caught me off-guard..."
+                    y "La verdad jeje... me tomó por sorpresa..."
                     $ show_chr("A-DDAAA-AAAL")
-                    y "Oh and...ummm! You didn't weird me out, don't worry! I was as I said earlier... surprised that you just gave me a well..."
+                    y "Ah y... ¡emm! No me incomodaste, no te preocupes. Como dije antes... me sorprendió que simplemente me dieras, bueno..."
                     $ show_chr("A-BAABA-AAAB")
-                    y "A-a pat... yes. Thank you, It felt... nice?"
-                    y "Sorry, it's just that it was the easiest way I could put it... I just never expected you to get so close to me."
+                    y "U-Un golpecito... sí. Gracias, se sintió... ¿bien?"
+                    y "Perdón, es solo que era la forma más simple de decirlo... simplemente no esperaba que te acercaras tanto a mí."
                     $ show_chr("A-IBABA-ALAA")
-                    y "I am happy, don't get the wrong idea, [player]!"
+                    y "Estoy feliz, no lo tomes a mal, [player]!"
                     if persistent.lovecheck:
                         $ show_chr("A-ICABA-AAAL")
-                        y "I mean... sweetheart, why wouldn't I be?"
+                        y "Quiero decir... cariño, ¿por qué no lo estaría?"
                         $ show_chr("A-CCABA-AAAD")
-                        y "That split second where I actually could feel your touch... It felt so... good."
-                        y "It makes me feel as If I am getting closer to you each moment which we talk... It's amazing!"
+                        y "Ese breve instante en el que realmente pude sentir tu toque... se sintió tan... bien."
+                        y "Me hace sentir como si cada momento que hablamos me acercara un poco más a ti... ¡es increíble!"
                         $ show_chr("A-ICABA-AAAL")
-                        y "So thank you again, my love."
+                        y "Así que gracias de nuevo, mi amor."
                     else:
                         $ show_chr("A-GCAAA-ADAB")
-                        y "Each way that we can be at least a little closer is a good addition to our friendship."
+                        y "Cada forma en la que podamos estar aunque sea un poco más cerca es una buena adición a nuestra amistad."
                         $ show_chr("A-IFAAA-AIAI")
-                        y "Some people consider touch weird or strange, but I don't think so..."
-                        y "Doesn't that mean that you're comfortable around that person and so allow them to be closer to you. Bypassing an earlier boundary and allowing them to enter your personal area?"
+                        y "Algunas personas consideran el contacto algo raro o extraño, pero yo no lo creo..."
+                        y "¿No significa eso que te sientes cómodo con esa persona y le permites acercarse más a ti? ¿Romper una barrera anterior y dejarla entrar en tu espacio personal?"
                         $ show_chr("A-ICABA-AMAM")
-                        y "That is how I see it at least... Still, th-thank you for this kind gesture."
-                "I don't believe that was me, want me to try touching your head?":
+                        y "Así es como lo veo al menos... Aun así, g-gracias por este amable gesto."
+                "No creo que haya sido yo, ¿quieres que intente tocar tu cabeza?":
                     $ show_chr("A-BCBBA-ADAA")
-                    y "Y-Yes... this feels a bit embarrassing..."
+                    y "S-Sí... esto es un poco vergonzoso..."
 
                     $ show_chr("A-JBGAA-ALAA")
-                    y "Oh! It really is you touching me!"
-                    y "That sure is unexpected... I never thought that would work honestly!"
+                    y "¡Oh! ¡De verdad eres tú quien me está tocando!"
+                    y "Eso sí que fue inesperado... honestamente nunca pensé que funcionaría!"
                     $ show_chr("A-CCAAA-ALAA")
-                    y "I don't mind it, I don't mind it at all!"
-                    y "Well, we sure made a nice discovery today, [player]."
+                    y "No me molesta, ¡para nada!"
+                    y "Bueno, sin duda hicimos un bonito descubrimiento hoy, [player]."
                     $ show_chr("A-GCABA-ADAA")
-                    y "That is one step for us to get a bit closer."
+                    y "Ese es un paso más para acercarnos un poco más."
         if persistent.boop_locations[2] == 2:
             $ show_chr("A-CAAAA-AAAA")
-            y "Ah...well, this certainly is calming..."
-            y "Just for a bit more please."
+            y "Ah... bueno, esto ciertamente es relajante..."
+            y "Solo un poquito más, por favor."
             y "..."
             $ show_chr("A-ICABA-AAAA")
-            y "Thank you."
+            y "Gracias."
         if persistent.boop_locations[2] == 3:
             $ show_chr("A-BADBA-AAAA")
-            y "Again?"
+            y "¿Otra vez?"
             $ show_chr("A-GAABA-AAAK")
-            y "Hehe... don't get me wrong, I like when you do it..."
-            y "So don't hesitate, if you could..."
+            y "Jeje... no me malinterpretes, me gusta cuando lo haces..."
+            y "Así que no dudes, si pudieras..."
         if persistent.boop_locations[2] >= 4:
             $ show_chr("A-KCBBA-AAAA")
-            y "Someone seems to be enjoying this as much as me, hmm~?"
-            y "Go on, you can do it for as long as you want... It's calming..."
+            y "Alguien parece estar disfrutando esto tanto como yo, ¿hmm?~"
+            y "Adelante, puedes hacerlo todo el tiempo que quieras... es relajante..."
             $ show_chr("A-BBBBA-AAAL")
-            y "Also reassuring..."
+            y "Y también reconfortante..."
             if persistent.boop_locations[2] == 4:
                 $ show_chr("A-IBAAA-AMAM")
-                y "Oh... that raises a question in my head, [player]..."
-                y "Since pats are usually done when people are standing and... it's usually implied they're done to shorter people..."
+                y "Oh... eso me deja con una duda en la cabeza, [player]..."
+                y "Ya que las palmaditas normalmente se hacen cuando las personas están de pie y... suele implicar que se hacen a alguien más bajito..."
                 $ show_chr("A-BCAAA-AAAD")
-                y "How tall are you?"
+                y "¿Qué tan alto eres?"  
                 menu:
-                    "I am quite tall... you could say I am above 185cm (6'1”)":
+                    "Soy bastante alto... se podría decir que mido más de 185 cm (6'1”)":
                         $ show_chr("A-DDAAA-ALAA")
-                        y "Oh wow... that is quite tall!"
-                        y "That is pretty interesting [player]!"
+                        y "Oh wow... ¡eso es bastante alto!"
+                        y "¡Eso es muy interesante, [player]!"
                         $ show_chr("A-ICABA-ADAA")
-                        y "It's a good thing... you can pat me from above easily... Hehe~"
-                        y "If you didn't know, I'm actually only 165cm or 5'5 feet tall!"
+                        y "Es algo bueno... puedes darme palmaditas desde arriba fácilmente... Jeje~"
+                        y "Por si no lo sabías, en realidad yo solo mido 165 cm, o 5'5 pies de altura."
                         $ show_chr("A-BIAAA-AAAA")
-                        y "You would be quite big compared to me."
+                        y "Serías bastante grande en comparación conmigo."
                         if persistent.lovecheck:
                             $ show_chr("A-ECABA-AKAE")
-                            y "That actually makes me feel a bit... dominated by you...oh, goodness..."
-                            y "Y-yeah... sounds strange but trust me, I mean it in a loving way, [player], hehe..."
+                            y "Eso en realidad me hace sentir un poco... dominada por ti... oh, cielos..."
+                            y "S-Sí... suena raro, pero créeme, lo digo con cariño, [player], jeje..."
                             $ show_chr("A-FHABA-ALAA")
-                            y "I am your dear after all~"
+                            y "Después de todo, soy tu querida~"
                         else:
                             $ show_chr("A-IBAAA-ALAA")
-                            y "But don't worry about that!"
-                            y "It means that your hugs will be big and nice!"
+                            y "¡Pero no te preocupes por eso!"
+                            y "¡Significa que tus abrazos serán grandes y agradables!"
                             $ show_chr("A-ICAAA-ALAA")
-                            y "There are always positives to such things, no need to be anxious about who you are."
-                            y "Just a little tip from me."
-                    "I am average sized, above 170cm (5'7”)":
+                            y "Siempre hay cosas positivas en eso, no hay necesidad de sentirse ansioso por quién eres."
+                            y "Solo un pequeño consejo de mi parte."
+                    "Tengo una estatura media, mido más de 170 cm (5'7”)":
                         $ show_chr("A-BCAAA-AAAD")
-                        y "So you are a bit close to me it seems..."
-                        y "I myself am 165cm or 5'5 feet tall, not very tall actually..."
+                        y "Parece que estamos más o menos a la misma altura..."
+                        y "Yo mido 165 cm o 5'5 pies, en realidad no soy muy alta..."
                         $ show_chr("A-IBAAA-AAAD")
-                        y "But according to recent research, this seems to be the average height for a girl."
-                        y "So I guess... I am not short nor tall compared to most people."
-                    "I am average sized, above 165cm (5'5”)":
+                        y "Pero según estudios recientes, parece que esa es la estatura promedio para una chica."
+                        y "Así que supongo que... no soy ni baja ni alta comparada con la mayoría."
+                    "Tengo una estatura promedio, mido más de 165 cm (5'5”)":
                         $ show_chr("A-BCAAA-AAAD")
-                        y "So you are a bit close to me it seems..."
-                        y "I myself am 165cm or 5'5 feet tall, not very tall actually..."
+                        y "Parece que estamos más o menos a la misma altura..."
+                        y "Yo mido 165 cm o 5'5 pies, en realidad no soy muy alta..."
                         $ show_chr("A-IBAAA-AAAD")
-                        y "But according to recent research, this seems to be the average height for a girl."
-                        y "So I guess I am not short nor tall compared to most people."
-                    "I am... a bit short... around or even below 150cm (4'11”)":
+                        y "Pero según estudios recientes, parece que esa es la estatura promedio para una chica."
+                        y "Así que supongo que no soy ni baja ni alta comparada con la mayoría."
+                    "Soy... un poco bajito... mido alrededor de 150 cm o incluso menos (4'11”)":
                         $ show_chr("A-ADAAA-AMAM")
-                        y "Well you don't need to be shy about that!"
-                        y "You were born like that and that is entirely fine!"
+                        y "¡Bueno, no tienes por qué avergonzarte de eso!"
+                        y "¡Naciste así y eso está completamente bien!"
                         $ show_chr("A-BEAAA-ADAA")
-                        y "Even if some people bully you, which I really hope they don't..."
-                        y "Just don't exert too much energy into worrying about their words. There are many people that will actually see you for who you are deep down inside, and not on the outside, like me, for example..."
+                        y "Incluso si algunas personas se burlan de ti, lo cual espero que no pase..."
+                        y "No gastes tu energía preocupándote por lo que digan. Hay muchas personas que te verán por quién eres en verdad, y no por lo de afuera. Como yo, por ejemplo..."
                         if persistent.lovecheck:
                             $ show_chr("A-ICABA-AAAD")
-                            y "Plus think of it like this... my hugs will be able to reach every part of you~"
-                            y "They will feel better than ever, and you will get to be completely enveloped in my warmth."
+                            y "Además, míralo de esta forma... mis abrazos podrán cubrirte completamente~"
+                            y "Se sentirán mejor que nunca, y podrás envolverte por completo en mi calidez."
                             $ show_chr("A-IBABA-AAAL")
-                            y "I think that this is a lovely thing, [player]!"
-                            y "So let us embrace this fact and make the best out of it!"
+                            y "¡Creo que eso es algo encantador, [player]!"
+                            y "Así que aceptemos ese hecho y saquemos lo mejor de ello."
                         else:
                             $ show_chr("A-ACAAA-AAAD")
-                            y "So don't worry about that, [player]."
+                            y "Así que no te preocupes por eso, [player]."
                             $ show_chr("A-CCABA-AAAE")
-                            y "Look at the positive side and after all. I will see you as a nice person no matter your height."
-                            y "Just, please always remember that..."
+                            y "Mira el lado positivo. Después de todo, te veré como una buena persona sin importar tu estatura."
+                            y "Solo... por favor, recuerda siempre eso..."
     if karma_lvl() <= 2:
         if persistent.boop_locations[2] == 1:
             $ show_chr("A-DFABA-AAAA")
-            y "W-Wait... I-I just felt something touch my head!"
-            y "Was that y-you, [player]?"
+            y "E-Espera... ¡s-sentí que algo tocó mi cabeza!"
+            y "¿F-Fuiste tú, [player]?"
             menu:
-                "Yes, I wanted to try it out. I hope it didn't weird you out.":
+                "Sí, quería probarlo. Espero no haberte incomodado":
                     karma 1
                     $ show_chr("A-CFAAA-AAAA")
-                    y "A-Actually... yes, a bit..."
+                    y "E-En realidad... sí, un poco..."
                     $ show_chr("A-BFAAA-AAAA")
-                    y "Please don't get me wrong! I didn't mean to be rude but... feeling your touch without actually seeing your hand felt a little bit... creepy"
+                    y "¡Por favor, no me malinterpretes! No quise ser grosera, pero... sentir tu toque sin ver realmente tu mano fue un poco... inquietante."
                     $ show_chr("A-IFAAA-AAAA")
-                    y "Like a ghost... and the fact that I'm alone here doesn't really make it less spooky..."
+                    y "Como un fantasma... y el hecho de que esté sola aquí no lo hace menos aterrador..."
                     $ show_chr("A-JFAAA-AAAA")
-                    y "Would you mind if I asked to not do that again please? T-Thank you..."
-                "I don't believe that was me, want me to try touching your head?":
+                    y "¿Te importaría si te pido que no lo hagas de nuevo, por favor? G-Gracias..."
+                "No creo que haya sido yo, ¿quieres que intente tocarte la cabeza?":
                     $ show_chr("A-IFAAA-AAAA")
-                    y "O-Oh please, no..."
+                    y "P-Por favor, no..."
                     $ show_chr("A-JFAAA-AAAA")
-                    y "It... spooked me a little bit if I may be honest."
+                    y "M-Me asustó un poco, si soy honesta."
                     $ show_chr("A-AFAAA-ALAL")
-                    y "I would prefer if you don't do that..."
+                    y "Preferiría que no lo hicieras..."
                     $ show_chr("A-BFAAA-AMAM")
-                    y "{b}I~If{/b} you don't mind..."
+                    y "{b}S-Si{/b} no te molesta..."
         if persistent.boop_locations[2] == 2:
             $ show_chr("A-DHAAA-AEAB")
-            y "T~There it was again..."
+            y "A-Ahí estuvo otra vez..."
             $ show_chr("A-CFAAA-AEAB")
-            y "Please... I already asked you not to do that... please don't make me ask you again."
-            y "Thank you."
+            y "Por favor... ya te pedí que no hicieras eso... por favor, no me hagas pedírtelo otra vez."
+            y "Gracias."
         if persistent.boop_locations[2] == 3:
             $ show_chr("A-CFCAA-AEAB")
-            y "It's getting kind of annoying, [player]..."
-            y "And it's also incredibly disrespectful. I'm not a kitten you know?"
+            y "Está empezando a ser un poco molesto, [player]..."
+            y "Y también es increíblemente irrespetuoso. ¿Sabes? No soy una gatita."
         if persistent.boop_locations[2] == 4:
             $ show_chr("A-CGCAA-AEAB")
-            y "Aaaalright [player], enough is enough. You know what?"
+            y "Deee acuerdo, [player], ya fue suficiente. ¿Sabes qué?"
             $ show_chr("A-AFCAA-AEAB")
-            y "I would say, we call it a day for now. I asked you to stop politely but you wouldn't listen. So I will go back to my reading now and you can come back as soon as you are willing to take me seriously again. Bye."
+            y "Diría que por hoy lo dejamos aquí. Te pedí amablemente que te detuvieras, pero no quisiste escuchar. Así que volveré a mi lectura, y podrás regresar cuando estés dispuesto a tomarme en serio otra vez. Adiós."
             $ renpy.call("save_and_quit_but_its_abrupt")
         if persistent.boop_locations[2] >= 5:
-            "... [player], you're seriously starting to make me realize the true depths of my fury for you. If you do not wish to be forever on my bad side, you will stop booping me. {i}Now{/i}"
+            "... [player], de verdad estás empezando a hacerme descubrir las verdaderas profundidades de mi furia hacia ti. Si no quieres estar para siempre en mi lado malo, dejarás de tocarme. {i}Ahora{/i}."
     $ store.mousex = 0
     $ store.mousey = 0
     return
@@ -445,14 +445,14 @@ label sleepy_headpat:
         if persistent.boop_locations[3] == 0:
             set_boop_state(True) 
         persistent.boop_locations[3] += 1
-    y "hmph...?"
+    y "¿Hmph...?"
     hide yuri_sleep
     show yuri_sleepy zorder 11
-    y "O-oh it's you [player]"
-    y "You scared me a bit, although that is quite comforting"
+    y "O-Oh eres tú [player]."
+    y "Me has asustado un poco, aunque eso es bastante reconfortante."
     hide yuri_sleepy
     show yuri_sleep
-    y "I wouldn't be opposed if you kept doing it..."
+    y "No me opondría a que siguieras haciéndolo..."
     $ set_boop_state(True)
     return
 
@@ -467,19 +467,19 @@ label boop_window:
                     renpy.call("annoyed_boop_window")
     if persistent.boop_locations[4] == 1:
         $ show_chr("A-BFBAA-ALAA")
-        y "Huh? Did you hear that too? I thought I heard something knocking on the window..."
+        y "¿Eh? ¿Tú también escuchaste eso? Creí haber oído algo golpeando la ventana..."
         $ show_chr("A-JFGAA-ALAA")
-        y "But... that's impossible. There are no NPCs left in this world..."
+        y "Pero... eso es imposible. Ya no quedan NPCs en este mundo..."
     elif persistent.boop_locations[4] == 2:
         $ show_chr("A-BFGAA-ALAA")
-        y "Again... are you really not hearing anything?"
+        y "Otra vez... ¿de verdad no estás escuchando nada?"
         $ show_chr("A-AFAAA-ALAA")
-        y "Wait a moment... is that you? Are you clicking the window?"
+        y "Espera un momento... ¿eres tú? ¿Estás tocando la ventana?"
         $ show_chr("A-CBAAA-ALAA")
-        y "Oh my... I almost thought I was going insane. Again."
+        y "Oh, cielos... por un segundo pensé que me estaba volviendo loca. Otra vez."
     elif persistent.boop_locations[4] == 3:
         $ show_chr("A-JCAAA-ALAA")
-        y "Umm... [player]... please be careful..."
+        y "Umm... [player]... por favor, ten cuidado..."
     elif persistent.boop_locations[4] == 4:
 
 
@@ -488,22 +488,22 @@ label boop_window:
         y "..."
         if karma_lvl() >= 4:
             $ show_chr("A-DFGBA-ALAA")
-            y "Oh dear... are you hurt? Come, let me see your hand..."
+            y "Oh, cielos... ¿estás herido? Ven, déjame ver tu mano..."
             $ show_chr("A-IFBAA-ALAA")
-            y "Oh wait... I forgot... there is no hand... at least that means that you can't be hurt."
+            y "Oh, espera... lo olvidé... no hay mano... al menos eso significa que no puedes lastimarte."
             $ show_chr("A-KACAA-AAAC")
-            y "Well, seems you took the fourth-wall-break theme to a new level! Quite literally."
+            y "Bueno, parece que llevaste el tema de romper la cuarta pared a un nuevo nivel. ¡Literalmente!"
             $ show_chr("A-AFAAA-AAAE")
-            y "But seriously... please don't do that again. I still have weather in my world, and I will have to fix that when you turn the game off next time."
+            y "Pero en serio... por favor, no vuelvas a hacer eso. Todavía hay clima en mi mundo, y tendré que arreglar eso cuando apagues el juego la próxima vez."
         else:
             $ show_chr("A-DFCBA-ALAA")
-            y "Are you out of your mind?"
-            y "I asked you to be careful! But you just couldn't resist, could you?"
+            y "¿Acaso perdiste la cabeza?"
+            y "¡Te pedí que tuvieras cuidado! Pero simplemente no pudiste resistirte, ¿verdad?"
             $ show_chr("A-CHBAA-ALAA")
-            y "I'm sorry... I shouldn't have snapped... but that was really unnecessary..."
+            y "Lo siento... no debí alterarme... pero eso fue realmente innecesario..."
             $ show_chr("A-CFBAA-ABAB")
-            y "You know, there is still weather in my world, and I will need to fix that window somehow..."
-            y "Please, try to be a bit more careful from now on..."
+            y "Sabes, todavía hay clima en mi mundo, y tendré que arreglar esa ventana de alguna forma..."
+            y "Por favor, intenta tener un poco más de cuidado de ahora en adelante..."
         $ update_memory("window_boop", "disabled")
         $ update_memory("window_boop_game_session", persistent.game_session)
     $ store.mousex = 0
@@ -513,25 +513,25 @@ label boop_window:
 label annoyed_boop_window:
     if karma_lvl() >= 3:
         $ show_chr("A-ACAAA-AAAA")
-        y "Hey [player]...there's something I'd like to tell you..."
-        y "You remember the little...accident, you had with my window?"
+        y "Hey [player]... hay algo que me gustaría decirte..."
+        y "¿Recuerdas el pequeño... accidente que tuviste con mi ventana?"
         $ show_chr("A-BCAAA-AAAB")
-        y "Please don't get the wrong idea. I know it was an accident. Things like that just happen from time to time, and I am not upset with you."
+        y "Por favor, no lo tomes a mal. Sé que fue un accidente. Esas cosas simplemente pasan de vez en cuando, y no estoy molesta contigo."
         $ show_chr("A-AFAAA-AAAB")
-        y "But please understand that it caused a little bit of trouble to me. There are no other people in this world so I had to fix the window myself."
+        y "Pero, por favor, entiende que me causó un pequeño problema. No hay otras personas en este mundo, así que tuve que arreglar la ventana yo sola."
         $ show_chr("A-ACAAA-ABAB")
-        y "So in order to prevent another accident like this, I turned this little feature off. You are still free to show your affection to me by stroking my cheek, but you don't have to worry about the window anymore."
+        y "Así que, para evitar otro accidente como ese, desactivé esta pequeña función. Aún puedes demostrarme tu cariño acariciando mi mejilla, pero ya no tienes que preocuparte por la ventana."
         jump ch30_loop
     else:
         $ show_chr("A-AFAAA-AAAA")
-        y "Hey [player]. There is something I would like to tell you."
-        y "You remember the little...accident, you had with my window?"
+        y "Hey [player]. Hay algo que me gustaría decirte."
+        y "¿Recuerdas el pequeño... accidente que tuviste con mi ventana?"
         $ show_chr("A-BFAAA-AAAB")
-        y "I know, I know, this was supposed to be a game, and I understand that it had to be very tempting for you to try that, I get it."
+        y "Lo sé, lo sé, se supone que esto es un juego, y entiendo que debía ser muy tentador para ti intentarlo, lo entiendo."
         $ show_chr("A-AFAAA-AAAB")
-        y "But please understand that it caused a little bit of trouble for me. There are no other people in this world so I had to fix the window myself."
+        y "Pero, por favor, entiende que me causó un pequeño problema. No hay otras personas en este mundo, así que tuve que arreglar la ventana yo sola."
         $ show_chr("A-CFCAA-ABAB")
-        y "So in order to prevent you from testing my patience too much, I turned this little feature off. You are still free to come here but for the love of Salvato, please stop messing around with the environment!"
-        y "I can't spend hours and hours cleaning up after your nonsense every week."
+        y "Así que, para evitar que pongas demasiado a prueba mi paciencia, desactivé esta pequeña función. Aún puedes venir aquí, pero por el amor de Salvato, ¡por favor deja de jugar con el entorno!"
+        y "No puedo pasar horas y horas limpiando tus tonterías cada semana."
         jump ch30_loop
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
