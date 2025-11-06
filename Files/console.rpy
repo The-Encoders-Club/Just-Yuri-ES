@@ -232,35 +232,35 @@ label dev_console_startup:
     show black zorder 90
     call clear_dev_console ()
     call updatedevconsole_torrent ([('python', '>python'),
-        (" ", '{cps=30}\nPython 2.7.14 (v2.7.14:84471935ed, Sep 16 2017, 20:19:30) [MSC v.1500 32 bit (Intel)] on win32\nType "help", "copyright", "credits" or "license" for more information.{/cps}'),
+        (" ", '{cps=30}\nPython 2.7.14 (v2.7.14:84471935ed, Sep 16 2017, 20:19:30) [MSC v.1500 32 bit (Intel)] en win32\nEscribe "ayuda", "derechos de autor", "créditos" o "licencia" para obtener más información.{/cps}'),
         (">>dev_console.rpy", ">>>dev_console.py"),
         (" "," "),
-        ("Authenticating...........", ">Authenticating..........."),
-        (" ", ">Verified Access Token Recognized."),
-        (" ",">Welcome back GUEST."),
+        ("Autentificando...........", ">Autentificando..........."),
+        (" ", ">Token de acceso verificado reconocido."),
+        (" ",">Bienvenido de nuevo, INVITADO."),
         (" "," "),
-        (" ",str(config.name) + " "  + str(config.version) + " " + str(alpha.version) + " Proprietary Console."),
-        (" ", "Note: Due to recent breaches of security, the following Alpha Tester Console is heavily restrictive."),
-        (" ", "To operate, please select the desired option from the selection at the bottom of the screen."),
-        (" ", "More options are available with higher level clearance."),
-        (" ", "If any inconvenience arises, please contact us through the #latest-build channel for now as we reorganize."),
-        (" ", "To request aid on the Console, please refer to your select passphrases and responses to responses of denial/confusion from Heads."),
-        (" ", "For additional security reasons, any and all references to this Console are to be referred to as either 'photoshoppped' or 'great editing'."),
-        (" ", "If you are lacking the software update module, please access it through the JY Verified Storage Server: {a}https://discord.gg/kW6vTtW{/a}"),
+        (" ",str(config.name) + " "  + str(config.version) + " " + str(alpha.version) + " Consola propia."),
+        (" ", "Nota: Debido a recientes violaciones de seguridad, la siguiente consola Alpha Tester es muy restrictiva."),
+        (" ", "Para operar, seleccione la opción deseada de la selección que aparece en la parte inferior de la pantalla."),
+        (" ", "Hay más opciones disponibles con un nivel de autorización más alto."),
+        (" ", "Si surge algún inconveniente, por favor contáctenos a través del canal #latest-build por ahora mientras nos reorganizamos."),
+        (" ", "Para solicitar ayuda en la consola, consulte las contraseñas seleccionadas y las respuestas a las respuestas de denegación/confusión de los jefes."),
+        (" ", "Por motivos de seguridad adicionales, todas las referencias a esta consola deben denominarse 'photoshopeadas' o 'gran edición'."),
+        (" ", "Si no dispone del módulo de actualización de software, acceda a él a través del servidor de almacenamiento verificado JY: {a}https://discord.gg/kW6vTtW{/a}"),
         (" ", " "),
-        (' ', '>Please Select Desired Option')] )
+        (' ', '>Seleccione la opción deseada')] )
 
 label console_choice_test:
-    call screen console_choice([("Access Dreams", "dream_access"), ("Experimental Logs", "logs"), ("Exit", "dev_console_exit")])
+    call screen console_choice([("Acceder a los sueños", "dream_access"), ("Registros experimentales", "logs"), ("Salir", "dev_console_exit")])
     jump console_choice_test
 
 label dream_access:
     call updatedevconsole_torrent ([
         (" ", " "),
-        (" ", "No Dream Instances Active."),
+        (" ", "No hay instancias de sueño activas."),
         (" ", " "),
-        (" ", "Searching dream logs..."),
-        (" ", "No Dream Logs Found."),
+        (" ", "Buscando registros de sueños..."),
+        (" ", "No se han encontrado registros de sueños."),
         (" ", " "),
         (" ", " "),
         (" ", " ")
@@ -270,7 +270,7 @@ label logs:
 
     call updatedevconsole_torrent ([
         (" ", " "),
-        (" ", "No Experimental Logs Found. Insufficient Clearance/Not Stored in Local System."),
+        (" ", "No se han encontrado registros experimentales. Espacio libre insuficiente/no almacenado en el sistema local."),
         (" ", " "),
         (" ", " "),
         (" ", " ")
@@ -284,11 +284,11 @@ label dev_console_exit:
         import random
         x = random.randint(1, 100)
     if x == 100:
-        call updatedevconsole_torrent_fast ([("Wait, what is thi--", " ")])
+        call updatedevconsole_torrent_fast ([("Espera, qué es est--", " ")])
     elif x == 50:
-        call updatedevconsole_torrent_fast ([("Sleep, perchance to drea--", " ")])
+        call updatedevconsole_torrent_fast ([("Dormir, tal vez soñ--", " ")])
     elif x == 25:
-        call updatedevconsole_torrent_fast ([("W-what's h-happenin--", " ")])
+        call updatedevconsole_torrent_fast ([("Q-Qué está p-pasan--", " ")])
     $ persistent.narrative = False
     $ renpy.call("save_and_quit_but_its_abrupt")
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
