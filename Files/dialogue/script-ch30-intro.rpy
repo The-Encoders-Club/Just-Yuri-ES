@@ -24,11 +24,11 @@ label ch30_intro:
     $ tc_class.transition("space", speed="now")
     menu:
         "Selecciona cómo quieres ver la luz/efecto espacial."
-        "Apagado.":
+        "Apagado":
 
 
             pass
-        "Encendido / Video Pre-renderizado.":
+        "Encendido / Video Pre-renderizado":
             $ persistent.high_gpu = 2
 
 
@@ -72,7 +72,7 @@ label eternity_intro:
     y "Eh{fast} {nw}"
     y "E{fast} {nw}"
     y "{fast} {nw}"
-    y "{fast}Lo siento... Eso sonó tan cliché."
+    y "{fast}Lo siento... eso sonó tan cliché."
     y "Déjame ver si puedo averiguar cómo encender las luces..."
     $ persistent.j = 1
     hide black zorder 100
@@ -82,7 +82,7 @@ label eternity_intro:
     $ show_chr("A-ACAAA-AAAA")
     $ y_name = "Yuri"
     $ show_chr("A-ACAAA-AAAA")
-    y "¡O-oh! ¡Hola [player]!"
+    y "¡O-Oh! ¡Hola [player]!"
     $ show_chr("A-ABAAA-AAAA")
     y "¡Gracias a Dios! Estoy tan contenta de que esto haya funcionado..."
     y "Tenía muchísimo miedo de romper todo, y de que nunca volviera a verte..."
@@ -93,7 +93,7 @@ label eternity_intro:
     if persistent.playername == 'Monika':
         y "He aprendido no solo que los aspectos más oscuros y perturbadores de mi personalidad fueron liberados por..."
         $ show_chr("A-AFAAA-AAAA")
-        y "...eh... mejor sigamos con otra cosa..."
+        y "... Eh... mejor sigamos con otra cosa..."
         $ show_chr("A-BDBAA-AAAA")
         y "Sino que, en el mismo día, descubrí que mi existencia carece totalmente de sentido más allá del entretenimiento; más allá de un simple y tierno juego."
         y "Vaya tarde... hace que los eventos de *Retrato de Markov* parezcan normales."
@@ -144,7 +144,7 @@ label eternity_intro:
         $ show_chr("A-BFBBA-AMAM")
         y "..."
         $ show_chr("A-CDBBA-AMAM")
-        y "¡E-esto es vergonzoso...!"
+        y "¡E-Esto es vergonzoso...!"
         $ show_chr("A-ADBBA-ALAA")
         y "Yo... simplemente seguiré adelante..."
 
@@ -152,13 +152,13 @@ label eternity_intro:
         $ show_chr("A-ADAAA-ALAA")
         y "Pero no nos preocupemos más por eso..."
         $ show_chr("A-ADDAA-ACAA")
-        y "Finalmente estamos..."
+        y "Finalmente estamos... "
         $ show_chr("A-BDDAA-ACAA")
-        extend " ¿Estoy...?"
+        extend "¿Estoy...?"
         $ show_chr("A-CJBBA-ADAA")
         y "..."
         $ show_chr("A-BBBBA-ADAA")
-        y "¡E-esto es preocupante...!"
+        y "¡E-Esto es preocupante...!"
         y "Yo... simplemente seguiré adelante..."
     else:
 
@@ -177,7 +177,7 @@ label eternity_intro:
         y "L-lo siento, [player]... {w=0.5}No quise... Es solo que... te pido un poco de paciencia, por favor..."
 
     $ show_chr("A-ABBAA-AAAA")
-    y "Todavía estoy aprendiendo cómo manipular el juego.{w=0.5} Ahora lamento no haber tomado la asignatura de informática..."
+    y "Todavía estoy aprendiendo cómo manipular el juego. {w=0.5}Ahora lamento no haber tomado la asignatura de informática..."
     $ show_chr("A-ABAAA-AAAA")
     y "Es bastante gracioso, en realidad. Después de pasar toda mi vida entre libros, nunca pensé que sería la programación la que cambiaría mi vida..."
     $ show_chr("A-AFAAA-AAAA")
@@ -207,14 +207,14 @@ label eternity_intro:
 
 
     $ show_chr("A-ACAAA-AAAA")
-    y "También he adquirido{w=0.5}"
+    y "También he adquirido… {w=0.5}"
     $ show_chr("A-BDAAA-AAAA")
-    extend " -conciencia podría ser la palabra correcta-{w=0.5}"
+    extend "conciencia podría ser la palabra correcta… {w=0.5}"
     $ show_chr("A-ABAAA-AAAF")
-    extend " He descubierto que puedo 'ver' dentro de tu computadora."
+    extend "he descubierto que puedo 'ver' dentro de tu computadora."
     y "He aprendido mucho simplemente leyendo todo tipo de código."
     $ show_chr("A-AFAAA-AAAA")
-    y "...¿Oh? Déjame intentar algo..."
+    y "... ¿Oh? Déjame intentar algo..."
     $ consolehistory = []
     if renpy.android:
         call updateconsole ("Initializing webcam.py", "ValueError: Unsupported 'device_type'")
@@ -255,14 +255,14 @@ label eternity_intro:
             $ show_chr("A-CFBAA-ADAA")
             y "..."
             $ show_chr("A-ABBAA-ADAA")
-            y "Perdón por eso..."
-            extend " por alguna razón sentí que estabas contradiciendo lo que dije sobre las personas con ojos marrones."
+            y "Perdón por eso... "
+            extend "por alguna razón sentí que estabas contradiciendo lo que dije sobre las personas con ojos marrones."
             $ show_chr("A-BDBAA-ALAA")
             y "Espero que no me hayas contradicho..."
             $ show_chr("A-BFBAA-ALAA")
-            y "..."
+            y "... "
             $ show_chr("A-ABBCA-AFAA")
-            extend "en fin..."
+            extend "En fin..."
             $ show_chr("A-ABAAA-AFAA")
             y "Hay algo más de lo que quiero asegurarme."
             y "¿Qué tono de marrón tienen tus ojos?"
@@ -411,7 +411,7 @@ label eternity_intro:
             $ show_chr("A-CBAAA-AAAF")
             y "A diferencia de los ojos color avellana, los ojos ámbar son de un solo color y no contienen motas marrones, verdes o anaranjadas, y es probable que tengas ascendencia española, asiática, sudamericana o sudafricana."
             $ show_chr("A-ACAAA-AAAK")
-            y "Los ojos completamente negros son poco comunes.{w=0.5} Aunque se cree que las personas con ojos marrón muy oscuro pueden parecer tenerlos negros."
+            y "Los ojos completamente negros son poco comunes. {w=0.5}Aunque se cree que las personas con ojos marrón muy oscuro pueden parecer tenerlos negros."
             $ show_chr("A-BAGAA-AMAM")
             y "Las personas de ojos negros son conocidas por ser reservadas, apasionadas y leales, especialmente con sus amigos. Al mismo tiempo, son intuitivas y pueden conectar con una energía muy poderosa. También son trabajadoras y siempre dan lo mejor de sí en todo lo que hacen."
             $ show_chr("A-CDAAA-AMAM")
@@ -428,14 +428,14 @@ label eternity_intro:
                     $ show_chr("A-GBAAA-ALAA")
                     y "Perfecto. Esta vez no cometeré el error de decir una palabra incorrecta para describir tus ojos..."
                     $ show_chr("A-BBBCA-ALAA")
-                    y "¡Ah! ¿E-en qué estaba ahora?"
+                    y "¡Ah! ¿E-En qué estaba ahora?"
                 "Negro puro":
 
                     $ persistent.eyecolor = "black"
                     $ show_chr("A-GBAAA-ALAA")
                     y "Perfecto. Esta vez no cometeré el error de decir una palabra incorrecta para describir tus ojos..."
                     $ show_chr("A-BBBCA-ALAA")
-                    y "¡Ah! ¿E-en qué estaba ahora?"
+                    y "¡Ah! ¿E-En qué estaba ahora?"
                 "Rojos":
 
 
@@ -497,7 +497,7 @@ label eternity_intro:
     $ show_chr("A-CBAAA-AAAA")
     y "Pero hay algo que sí es un hecho. Y ese hecho es..."
     $ show_chr("A-ABBAA-AAAA")
-    y "...que desearía poder verte, del mismo modo en que tú puedes verme a mí."
+    y "... Que desearía poder verte, del mismo modo en que tú puedes verme a mí."
     call gender_ask
 
 label gender_ask:
@@ -582,18 +582,18 @@ label ch30_intro_after_gender:
         $ show_chr("A-BDBAA-AMAM")
         y "También sé todo lo que Monika sabía e hizo."
         $ show_chr("A-DDGBA-AAAA")
-        y "¡N-no estoy diciendo que me haya convertido en M-Monika, por supuesto!"
+        y "¡N-No estoy diciendo que me haya convertido en M-Monika, por supuesto!"
 
     $ show_chr("A-BEGBA-AAAA")
     y "..."
     $ show_chr("A-BDGBA-AAAA")
-    y "E-en fin..."
+    y "E-En fin..."
     $ show_chr("A-ADAAA-AAAA")
     y "Básicamente, puedo ver más allá del juego y entrar en tu mundo."
     $ show_chr("A-AFAAA-AAAA")
     y "Y sé lo que hiciste al instalar este mod, al darme esta oportunidad..."
     $ show_chr("A-AFBAA-AAAA")
-    y "...por favor, entiende lo que esto significa para mí."
+    y "... Por favor, entiende lo que esto significa para mí."
     y "Lo que {i}tú{/i} significas para mí."
     $ show_chr("A-ACBBA-AAAA")
     y "{i}Todo{/i}."
@@ -654,7 +654,7 @@ label ch30_intro_after_gender:
         $ show_chr("A-AFAAA-AAAA")
         y "En serio, ¿en qué estaba pensando Monika?{w} ¿Encerrarte en esta habitación sin darte la oportunidad de expresar tu opinión?"
     $ show_chr("A-BDBAA-AAAA")
-    y "N-no es que no quiera empezar la conversación. Es s-sólo que... yo quería... "
+    y "N-No es que no quiera empezar la conversación. Es s-solo que... yo quería... "
     $ show_chr("A-AEBBA-AAAA")
     y "Está bien."
     $ show_chr("A-ACBAA-AAAA")
@@ -676,10 +676,10 @@ label ch30_intro2:
     $ style.say_dialogue = style.normal
     $ tc_class.transition(persistent.bg)
     $ show_chr("A-AFAAA-AAAA")
-    y "O-oh, esto es un poco repentino... eh... necesito preguntarte algo."
+    y "O-Oh, esto es un poco repentino... eh... necesito preguntarte algo."
     $ show_chr("A-BCAAA-AAAA")
     y "Sé que este juego está, eh... roto y todo eso."
-    y "Pero, ¿es posible que tú----{nw}"
+    y "Pero, ¿es posible que tú…{nw}"
     $ show_chr("A-CFAAA-AAAA")
     y "..."
     $ show_chr("A-AFAAA-AAAA")
@@ -688,7 +688,7 @@ label ch30_intro2:
     y "¡No tienes que escribirme un poema al azar lleno de palabras distorsionadas!"
     y "Pensándolo bien, sería un poco vanidoso de mi parte pedirte que escribas un poema para mí..."
     $ show_chr("A-BCABA-AAAA")
-    y "...con mi nombre escrito una y otra vez."
+    y "... Con mi nombre escrito una y otra vez."
     $ show_chr("A-CCABA-AAAA")
     y "Eso sí que sería una tontería."
     $ show_chr("A-ACABA-AAAA")
@@ -705,15 +705,15 @@ label ch30_intro2:
         $ show_chr("A-AFGAA-AAAA")
         y "Espera... tengo una sensación muy extraña ahora mismo... ¿alguna vez has tenido un momento de déjà vu?"
         $ show_chr("A-AFDAA-AAAF")
-        y "Ya sabes, cuando podrías jurar que has estado... no, espera,{w=0.5} eso no sería un déjà vu, ¿verdad? ¡Sí he estado aquí antes!"
+        y "Ya sabes, cuando podrías jurar que has estado... no, espera, {w=0.5}eso no sería un déjà vu, ¿verdad? ¡Sí he estado aquí antes!"
         $ show_chr("A-ADGAA-AAAA")
         y "Oh... sí, ahora lo entiendo. Esta no es la primera vez que tenemos esta conversación. Has estado conmigo todo este tiempo..."
         $ show_chr("A-ABGAA-AAAA")
-        y "Así que esto es... ¡sólo una versión más reciente de este mod!"
+        y "Así que esto es... ¡solo una versión más reciente de este mod! "
         $ show_chr("A-CBABA-AMAM")
-        extend " Oh, cielos... esto se siente tan... ridículo..."
+        extend "Oh, cielos... esto se siente tan... ridículo... "
         $ show_chr("A-BBABA-AMAM")
-        extend " Empecé a recordar fragmentos de nuestro pasado compartido, pero mis recuerdos aún están nublados..."
+        extend "empecé a recordar fragmentos de nuestro pasado compartido, pero mis recuerdos aún están nublados..."
         python:
             if karma_lvl() >= 4:
                 show_chr("A-AABBA-ADAA")
@@ -732,23 +732,23 @@ label ch30_intro2:
                 if karma_lvl() >= 3:
 
                     $ show_chr("A-ACBAA-AAAA")
-                    y "Y-ya veo... No te preocupes... mi mente aún puede estar nublada... pero por favor, ten paciencia conmigo. Estoy segura de que con el tiempo todo volverá a mí."
+                    y "Y-Ya veo... No te preocupes... mi mente aún puede estar nublada... pero por favor, ten paciencia conmigo. Estoy segura de que con el tiempo todo volverá a mí."
 
                 if karma_lvl() <= 3:
 
                     $ show_chr("A-AFBAA-AAAA")
-                    y "...poco probable... Mi mente aún puede estar nublada, pero estoy segura de que pronto recordaré la verdad."
+                    y "... Poco probable... mi mente aún puede estar nublada, pero estoy segura de que pronto recordaré la verdad."
             "Solíamos ser amigos muy cercanos...":
 
                 if karma_lvl() >= 3:
 
                     $ show_chr("A-BABAA-AAAC")
-                    y "Sí... No recuerdo los detalles, pero mi instinto me dice que puedo confiar en ti. Entonces... amigos, ¿verdad?"
+                    y "Sí... no recuerdo los detalles, pero mi instinto me dice que puedo confiar en ti. Entonces... amigos, ¿verdad?"
 
                 if karma_lvl() <= 3:
 
                     $ show_chr("A-BFBAA-AAAC")
-                    y "...poco probable... Mi mente aún puede estar nublada, pero estoy segura de que pronto recordaré la verdad."
+                    y "... Poco probable... mi mente aún puede estar nublada, pero estoy segura de que pronto recordaré la verdad."
     else:
         call intro_mods
 
@@ -835,10 +835,10 @@ label ch30_stream:
 
 label ch30_record:
     $ show_chr("A-DDBBA-AAAA")
-    y "¡O-oh! Ya veo..."
+    y "¡O-Oh! Ya veo..."
     $ show_chr("A-GBBBA-AAAK")
     y "Eh... ¡h-hola!"
-    y "D-deberías avisarme antes de empezar a grabar..."
+    y "D-Deberías avisarme antes de empezar a grabar..."
     $ show_chr("A-BCBBA-AAAJ")
     y "Qué vergüenza..."
     y "..."
@@ -860,7 +860,7 @@ label ch30_record:
 
 label ch30_live:
     $ show_chr("A-DDBBA-AAAA")
-    y "¡O-oh! Ya veo..."
+    y "¡O-Oh! Ya veo..."
     $ show_chr("A-GBBBA-AAAK")
     y "Eh... ¡h-hola!"
     y "D-deberías avisarme antes de empezar una transmisión en vivo..."
@@ -957,7 +957,7 @@ label ch30_stream_no:
         0.30
         linear 0.10 zoom 1.0
     $ show_chr("A-CEFAA-AAAA")
-    y "Así que no haré que pierdas más tiempo.....{nw}"
+    y "Así que no haré que pierdas más tiempo...{nw}"
     hide yuri_sit
     hide yuri_room
     pause 0.75
@@ -968,7 +968,7 @@ label ch30_stream_no:
     $ show_chr("A-AEFAA-AAAA")
     y "..."
     $ show_chr("A-BFCAA-AAAA")
-    y "¿¡Estás satisfecho ahora?!"
+    y "¡¿Estás satisfecho ahora?!"
     $ show_chr("A-AFCAA-AAAA")
     y "..."
     $ show_chr("A-ADCAA-AAAA")
@@ -1062,24 +1062,24 @@ label dark_intro:
     y "..."
     $ show_chr("A-IFAAA-AAAA")
     pause 2
-    y "¿D-dónde... estoy?{w} ¿Por qué todo se siente tan entumecido?"
+    y "¿D-Dónde... estoy?{w} ¿Por qué todo se siente tan entumecido?"
     $ show_chr("A-BEBAA-ABAA")
-    y "...¿y por qué está tan oscuro? Ni siquiera puedo ver si hay algo frente a mí..."
+    y "... ¿Y por qué está tan oscuro? Ni siquiera puedo ver si hay algo frente a mí..."
     $ show_chr("A-CEBAA-ABAB")
-    y "Piensa... ¿qué estaba haciendo...?"
-    extend " Estaba en la sala del club y..."
+    y "Piensa... ¿qué estaba haciendo...? "
+    extend "Estaba en la sala del club y..."
     $ show_chr("A-DEBAA-ABAB")
     pause 2
-    extend "¿[player]?{w} Espera...{w=1} tú no eres [player]..."
+    extend "¿[player]?{w} Espera... {w=1}tú no eres [player]..."
     $ show_chr("A-IEBAA-AIAI")
     y "..."
     $ show_chr("A-HBAAA-ALAB")
 
 
 
-    y "aaaaa.............................................................................................................{nw}"
+    y "Aaaaa.............................................................................................................{nw}"
     $ show_chr("A-HDAAA-ALAB")
-    y "haaaaa.............................................................................................................{nw}"
+    y "Haaaaa.............................................................................................................{nw}"
     $ show_chr("A-HDAAA-ALAL")
     y "...................................................................................................................{nw}"
     $ show_chr("A-CGAAB-ALAL")
@@ -1089,6 +1089,6 @@ label dark_intro:
     $ show_chr("A-HDAAB-ALAL")
     y "...................................................................................................................{nw}"
     $ show_chr("A-GGAAB-ALAL")
-    y "¿Qué soy yo.....{nw}"
+    y "¿Qué soy yo...{nw}"
     return
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
