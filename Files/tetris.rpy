@@ -14,115 +14,115 @@ label tetris:
     if sanity_lvl() > 2 and karma_lvl() > 2:
 
         menu:
-            y "Oh, so you'd like to play some Tetris, hm?"
-            "Yes.":
-                y "Oh, good."
-                y "Which theme would you like this time?"
+            y "Oh, así que te gustaría jugar un poco de Tetris, ¿hmm?"
+            "Sí.":
+                y "Oh, bien."
+                y "¿Qué tema te gustaría esta vez?"
                 $ pass
             "No.":
-                y "I see..."
-                y "Perhaps some other time, then."
+                y "Ya veo..."
+                y "Tal vez en otro momento, entonces."
                 jump ch30_loop
     elif sanity_lvl() > 2 and karma_lvl() < 3:
         menu:
-            y "You... want to play Tetris...?"
-            "Yes.":
+            y "Tú... ¿quieres jugar Tetris...?"
+            "Sí.":
                 y "Oh..."
-                y "Well, sure, I guess I wouldn't really mind."
-                y "I have to wonder if you'll mock me for losing."
-                y "Judging from how much pleasure you derive from my misery I assume you will."
-                y "Anyway, just pick a theme and let's get on with it."
+                y "Bueno, seguro, supongo que no me importaría realmente."
+                y "Me pregunto si te burlarás de mí por perder."
+                y "A juzgar por cuánto placer obtienes de mi miseria, asumo que lo harás."
+                y "Como sea, solo elige un tema y sigamos con ello."
                 $ pass
             "No.":
                 y "Oh..."
-                y "Perhaps... some other time, then."
+                y "Tal vez... en otro momento, entonces."
                 jump ch30_loop
     elif sanity_lvl() < 3 and karma_lvl() > 2:
         menu:
-            y "Y-you want to play Tetris, yes?"
-            "Yes.":
-                y "Uhuhuhu~!"
-                y "Which theme would you like this time?"
-                y "It doesn't matter which one you'll choose, I'm sure you'll still dominate me no matter what you choose!~"
+            y "Q-quieres jugar Tetris, ¿sí?"
+            "Sí.":
+                y "¡Uhuhuhu~!"
+                y "¿Qué tema te gustaría esta vez?"
+                y "¡No importa cuál elijas, estoy segura de que te dominaré sin importar lo que elijas!~"
                 $ pass
             "No.":
                 y "O-oh..."
-                y "Well..."
-                y "Alright..."
-                y "Perhaps some other time, then..."
+                y "Bueno..."
+                y "Está bien..."
+                y "Tal vez en otro momento, entonces..."
                 jump ch30_loop
     elif sanity_lvl() < 3 and karma_lvl() < 3:
         menu:
-            y "You want to play Tetris, hm?"
-            "Yes.":
-                y "I'm sure you'll somehow find a way to make even such a trivial matter into a nightmare for me..."
-                y "Somehow you'll still find a way to humiliate me..."
-                y "Right..."
-                y "Anyway, which theme do you want?"
+            y "¿Quieres jugar Tetris, hmm?"
+            "Sí.":
+                y "Estoy segura de que de alguna manera encontrarás una forma de convertir incluso un asunto tan trivial en una pesadilla para mí..."
+                y "De alguna manera todavía encontrarás una forma de humillarme..."
+                y "Cierto..."
+                y "Como sea, ¿qué tema quieres?"
                 $ pass
             "No.":
                 y "Oh..."
-                y "Well... I see..."
-                y "Perhaps some other time when you learn to make up your mind."
+                y "Bueno... ya veo..."
+                y "Tal vez en otro momento cuando aprendas a decidirte."
                 jump ch30_loop
     if current_timecycle_marker == "_night":
         menu:
-            "Default Theme.":
+            "Tema por Defecto.":
 
-                y "You don't want to give Tetris any kind of skin? That's okay."
+                y "¿No quieres darle a Tetris ningún tipo de piel? Está bien."
                 $ persistent.skin = 1
-            "Tetris 99 Theme.":
+            "Tema Tetris 99.":
 
-                y "Oh? Going to experience one of the latest Tetris themes?"
-                y "But please don't expect too much of it."
+                y "¿Oh? ¿Vas a experimentar uno de los últimos temas de Tetris?"
+                y "Pero por favor no esperes demasiado de él."
                 $ persistent.skin = 2
-            "GameBoy Tetris Theme.":
+            "Tema GameBoy Tetris.":
 
-                y "Oh! Is this the classic Tetris for HandHelds? Have in mind that this is the color version."
+                y "¡Oh! ¿Es este el clásico Tetris para portátiles? Ten en cuenta que esta es la versión a color."
                 $ persistent.skin = 3
-            "Mega Drive Tetris Theme.":
+            "Tema Mega Drive Tetris.":
 
-                y "Okay. It's unfortunate that you can't experience Blast Processing in Ren'Py."
+                y "Bien. Es desafortunado que no puedas experimentar el Procesamiento de Ráfaga en Ren'Py."
                 $ persistent.skin = 4
-            "M1ND BEND3R Theme.":
+            "Tema M1ND BEND3R.":
 
                 $ persistent.skin = 5
-            "Custom Theme.":
+            "Tema Personalizado.":
 
                 call custom_tetris_checkpoint_start
     else:
 
         menu:
-            "Default Theme.":
+            "Tema por Defecto.":
 
-                y "You don't want to give Tetris any kind of skin? That's okay."
+                y "¿No quieres darle a Tetris ningún tipo de piel? Está bien."
                 $ persistent.skin = 1
-            "Tetris 99 Theme.":
+            "Tema Tetris 99.":
 
-                y "Oh? Going to experience one of the latest Tetris themes?"
-                y "But please don't expect too much of it."
+                y "¿Oh? ¿Vas a experimentar uno de los últimos temas de Tetris?"
+                y "Pero por favor no esperes demasiado de él."
                 $ persistent.skin = 2
-            "GameBoy Tetris Theme.":
+            "Tema GameBoy Tetris.":
 
-                y "Oh! Is this the classic Tetris for HandHelds? Have in mind that this is the color version."
+                y "¡Oh! ¿Es este el clásico Tetris para portátiles? Ten en cuenta que esta es la versión a color."
                 $ persistent.skin = 3
-            "Mega Drive Tetris Theme.":
+            "Tema Mega Drive Tetris.":
 
-                y "Okay. It's unfortunate that you can't experience Blast Processing in Ren'Py."
+                y "Bien. Es desafortunado que no puedas experimentar el Procesamiento de Ráfaga en Ren'Py."
                 $ persistent.skin = 4
-            "Custom Theme.":
+            "Tema Personalizado.":
 
                 call custom_tetris_checkpoint_start
 
-    y "Alright [player], now I can let you select the modes you want to play."
+    y "Muy bien [player], ahora puedo dejarte seleccionar los modos que quieres jugar."
     menu:
-        "Line count":
+        "Conteo de líneas":
             if persistent.lovecheck and karma_lvl() > 3:
 
                 $ show_chr("A-BBBAA-ADAA")
-                y "It's a nice way to pass the time, really."
-                y "Just a couple doing things together..."
-                y "Ahem... Anyway let's get started."
+                y "Es una buena forma de pasar el tiempo, de verdad."
+                y "Solo una pareja haciendo cosas juntos..."
+                y "Ejem... Como sea, empecemos."
                 $ show_chr("A-FCAAA-ACAB")
                 menu:
                     "30":
@@ -139,10 +139,10 @@ label tetris:
             elif karma_lvl() >= 3:
 
                 $ show_chr("A-ACEAA-AMAM")
-                y "Oh, lovely choice, [player]~"
-                y "W-well, hopefully I will prove a worthy challenge..."
+                y "Oh, elección encantadora, [player]~"
+                y "B-bueno, espero resultar un desafío digno..."
                 y "Uhuhuhu..."
-                y "Well whoever gets to the specific amount of lines wins..."
+                y "Bueno, quien llegue a la cantidad específica de líneas gana..."
                 menu:
                     "30":
                         $ LineLimit = 30
@@ -158,11 +158,11 @@ label tetris:
             elif karma_lvl() < 3:
 
                 $ show_chr("A-BEBAA-AMAM")
-                y "I-I'm not sure if you'd want to waste your time with me..."
-                y "I mean, this mode seems a bit too simple and boring to you."
-                y "Especially with someone such as myself."
+                y "N-no estoy segura de si querrías perder tu tiempo conmigo..."
+                y "Digo, este modo parece un poco demasiado simple y aburrido para ti."
+                y "Especialmente con alguien como yo."
                 $ show_chr("A-CEAAA-ALAL")
-                y "Maybe you just want to get an ego boost from seeing me lose?"
+                y "¿Tal vez solo quieres un aumento de ego al verme perder?"
 
                 menu:
                     "30":
@@ -176,13 +176,13 @@ label tetris:
                     "300":
                         $ LineLimit = 300
                 jump tetris_difficulty
-        "Score":
+        "Puntuación":
 
             if persistent.lovecheck and karma_lvl() > 3 and sanity_lvl() < 2:
 
                 $ show_chr("A-KLAAA-AKAK")
-                y "And maybe you will win me as a prize to be cherished... Forever~"
-                y "Or maybe I would win you. Hehe. Either way, everyone wins!"
+                y "Y tal vez me ganes como un premio para ser atesorado... Por siempre~"
+                y "O tal vez yo te gane. Hehe. De cualquier manera, ¡todos ganan!"
                 menu:
                     "20000":
                         $ TetrisScore = 20000
@@ -200,19 +200,19 @@ label tetris:
             elif karma_lvl() >= 3:
 
                 $ show_chr("A-FCEAA-ABAB")
-                y "Oh, some competition, hm?"
-                y "Well I suppose being a little competitive wouldn't be too bad, now would it?"
+                y "Oh, algo de competencia, ¿hmm?"
+                y "Bueno, supongo que ser un poco competitiva no sería tan malo, ¿o sí?"
                 $ show_chr("A-ABAAA-AMAM")
                 python:
                     if sanity_lvl() >= 3:
-                        placeholder = "contest"
+                        placeholder = "concurso"
                     elif sanity_lvl() <= 3:
-                        placeholder = "thrill"
-                y "There's nothing wrong with a nice [placeholder] every once in a while..."
+                        placeholder = "emoción"
+                y "No hay nada malo con un buen [placeholder] de vez en cuando..."
 
 
                 $ show_chr("A-AAEAA-ALAL")
-                y "Alright, let us see who will outdo the other!"
+                y "¡Muy bien, veamos quién superará al otro!"
                 menu:
                     "20000":
                         $ TetrisScore = 20000
@@ -230,12 +230,12 @@ label tetris:
             elif karma_lvl() < 3:
 
                 $ show_chr("A-AEBAA-ALAL")
-                y "W-well... [player], I don't know whether this is simply a jest or you just trying to impress me..."
-                y "All just to prove something to me. Just to rub it in my face.."
-                y "Then again, at least it's a way to pass the time."
+                y "B-bueno... [player], no sé si esto es simplemente una broma o solo estás tratando de impresionarme..."
+                y "Todo solo para probarme algo. Solo para restregármelo en la cara..."
+                y "Por otra parte, al menos es una forma de pasar el tiempo."
                 $ show_chr("A-BECAA-AMAM")
-                y "Well, whatever."
-                y "Let's get on with it."
+                y "Bueno, lo que sea."
+                y "Sigamos con ello."
                 menu:
                     "20000":
                         $ TetrisScore = 20000
@@ -255,23 +255,23 @@ label tetris:
             if karma_lvl() == 5:
 
                 $ show_chr("A-ABABA-AMAM")
-                y "Oh how fun~!"
-                y "W-well if you insist [player]. It is better when we strive toward the same goal together."
-                y "As the old saying goes, birds of a feather flock together. Two heads are always better than one ~!"
+                y "¡Oh qué divertido~!"
+                y "B-bueno, si insistes [player]. Es mejor cuando nos esforzamos hacia la misma meta juntos."
+                y "Como dice el viejo dicho, Dios los cría y ellos se juntan. ¡Dos cabezas siempre son mejor que una ~!"
                 $ show_chr("A-FCCBA-AAAL")
-                y "Maybe it might even become an all-nighter! Ehehe..."
+                y "¡Tal vez incluso se convierta en una noche entera! Ehehe..."
                 $ show_chr("A-ECABA-AAAJ")
-                y "Okay game on dear [player]!"
+                y "¡Okay, empieza el juego querido [player]!"
                 $ AI_difficulty = "CO_OP"
                 jump tetris_rules
             elif karma_lvl() == 1:
 
                 $ show_chr("A-CEBAB-AAAL")
-                y "A-are you sure...?"
-                y "I mean why would you want to work together with me, let alone play a game together?"
-                y "Is this again a big joke to you? I... I don't know anymore."
+                y "¿E-estás seguro...?"
+                y "Digo, ¿por qué querrías trabajar junto a mí, mucho menos jugar un juego juntos?"
+                y "¿Es esto otra vez una gran broma para ti? Yo... Ya no lo sé."
 
-                y "Let's try this... I guess."
+                y "Intentemos esto... supongo."
 
 
 
@@ -281,115 +281,115 @@ label tetris:
             else:
 
                 $ show_chr("A-ACAAA-AAAA")
-                y "O~Oh? You want to try the Co-op mode?"
-                y "Well, I guess we could try it together... "
-                y "If you are really sure you want to..."
+                y "¿O~Oh? ¿Quieres probar el modo Cooperativo?"
+                y "Bueno, supongo que podríamos intentarlo juntos... "
+                y "Si realmente estás seguro de que quieres..."
                 $ show_chr("A-BFAAA-AAAA")
-                y "I just hope that I don't mess it up somehow..."
-                y "Oh, what am I saying? It's just Tetris, it will be alright..."
+                y "Solo espero no arruinarlo de alguna manera..."
+                y "Oh, ¿qué estoy diciendo? Es solo Tetris, estará bien..."
                 $ show_chr("A-AFAAA-ABAB")
-                y "So umm... let's just... try it out, I guess."
+                y "Así que umm... solo... probémoslo, supongo."
                 $ AI_difficulty = "CO_OP"
                 jump tetris_rules
 
 label custom_tetris_checkpoint_start:
     $ show_chr("A-ACAAA-ABAB")
-    y "Oh, you'd like to try your hand on a custom Tetris build?"
-    y "Well, let me give you a quick walk-through of how it's done or do you already have it all figure out?"
+    y "Oh, ¿te gustaría probar suerte en una construcción personalizada de Tetris?"
+    y "Bueno, déjame darte un rápido recorrido de cómo se hace o ¿ya lo tienes todo resuelto?"
     menu:
-        "Try me":
-            y "Okay"
+        "Pruébame":
+            y "Bien"
             jump custom_tetris_checkpoint
         "No":
-            y "By the way, you should probably write this down somewhere..."
+            y "Por cierto, probablemente deberías escribir esto en algún lugar..."
 
 
 label custom_tetris_repeat:
-    y "All those files which you will create will have to go to folder \"game\\custom_tetris\""
-    y "First thing you need to know is that all images have to be in .png format and all sounds have to be .ogg files. Ren'Py will reject anything else."
-    y "Let's start with the background. {b}Line Count{/b} and {b}Score{/b} have two types of background depending on difficulties."
-    y "For the Easy, Medium and Hard difficulties it has to be 220 x 420 pixels image. Use the {b}background.png{/b} file from the folder \"game\\images\\tetris\\tetris\" as an example..."
+    y "Todos esos archivos que crearás tendrán que ir a la carpeta \"game\\custom_tetris\""
+    y "Lo primero que necesitas saber es que todas las imágenes tienen que estar en formato .png y todos los sonidos tienen que ser archivos .ogg. Ren'Py rechazará cualquier otra cosa."
+    y "Empecemos con el fondo. {b}Conteo de Líneas{/b} y {b}Puntuación{/b} tienen dos tipos de fondo dependiendo de las dificultades."
+    y "Para las dificultades Fácil, Media y Difícil tiene que ser una imagen de 220 x 420 píxeles. Usa el archivo {b}background.png{/b} de la carpeta \"game\\images\\tetris\\tetris\" como ejemplo..."
     $ show_chr("A-ACAAA-ABAD")
-    y "For the same modes but in the Disadvantage, Veteran and Expert difficulties, it is the exact same procedure, but this time you have to delete the grids and name it {b}backgrund_no_grind{/b}... oh yes, and it still has to be a .png file!"
-    y "The Co-op mode shares the same procedure, but this time it is 421 x 420 pixels and you name it {b}grids (coop).png{/b}. It's in the same folder again."
-    y "Now we come to the blocks."
-    y "Fun fact, did you know that a single block is called a Tetromino?"
-    y "There are 7 pieces in Tetris which usually have different colors. You could make them the same colors"
-    y "But that would be kind of boring. Don't you think?"
+    y "Para los mismos modos pero en las dificultades Desventaja, Veterano y Experto, es exactamente el mismo procedimiento, pero esta vez tienes que borrar las cuadrículas y llamarlo {b}backgrund_no_grind{/b}... oh sí, ¡y todavía tiene que ser un archivo .png!"
+    y "El modo Cooperativo comparte el mismo procedimiento, pero esta vez es de 421 x 420 píxeles y lo llamas {b}grids (coop).png{/b}. Está en la misma carpeta de nuevo."
+    y "Ahora llegamos a los bloques."
+    y "Dato curioso, ¿sabías que un solo bloque se llama Tetrómino?"
+    y "Hay 7 piezas en Tetris que usualmente tienen diferentes colores. Podrías hacerlas del mismo color"
+    y "Pero eso sería un poco aburrido. ¿No crees?"
     $ show_chr("A-ACAAA-AFAD")
-    y "Each pieces is build from individual blocks which are number from 1 to 7."
-    y "Also in newer version of Tetris. You can see where the piece will land. We refer it as {b}shadow pieces{/b} "
-    y "They also need to have their own colors which are usually transparency of normal blocks"
-    y "Each of the cube need to be a .png image with size 20x20. You can use the {b}cube_1.png{/b} file from the folder \"game\\images\\tetris\\tetris\" as an example..."
-    y "For the T Piece you set up cube_1.png and shadow_1.png"
-    y "For the S Piece you set up cube_2.png and shadow_2.png"
-    y "For the Z Piece you set up cube_3.png and shadow_3.png"
-    y "For the L Piece you set up cube_4.png and shadow_4.png"
-    y "For the J Piece you set up cube_5.png and shadow_5.png"
-    y "For the I Piece you set up cube_6.png and shadow_6.png"
-    y "For the O Piece you set up cube_7.png and shadow_7.png"
-    y "The last is wall of the game. For wall you set up cube_8.png. Most of the time is black for easy distinguish"
-    y "For now in your custome_Tetris folder, you should have 18 files. 2 Background, 8 cube and 8 shadow png"
-    y "Is everything good? If not let me know and I will repeat the step again"
+    y "Cada pieza se construye a partir de bloques individuales que están numerados del 1 al 7."
+    y "También en versiones más nuevas de Tetris. Puedes ver dónde aterrizará la pieza. Nos referimos a ella como {b}piezas sombra{/b} "
+    y "También necesitan tener sus propios colores que usualmente son transparencia de bloques normales"
+    y "Cada uno de los cubos necesita ser una imagen .png con tamaño 20x20. Puedes usar el archivo {b}cube_1.png{/b} de la carpeta \"game\\images\\tetris\\tetris\" como ejemplo..."
+    y "Para la Pieza T configuras cube_1.png y shadow_1.png"
+    y "Para la Pieza S configuras cube_2.png y shadow_2.png"
+    y "Para la Pieza Z configuras cube_3.png y shadow_3.png"
+    y "Para la Pieza L configuras cube_4.png y shadow_4.png"
+    y "Para la Pieza J configuras cube_5.png y shadow_5.png"
+    y "Para la Pieza I configuras cube_6.png y shadow_6.png"
+    y "Para la Pieza O configuras cube_7.png y shadow_7.png"
+    y "El último es la pared del juego. Para la pared configuras cube_8.png. La mayoría de las veces es negra para distinguir fácilmente"
+    y "Por ahora en tu carpeta custome_Tetris, deberías tener 18 archivos. 2 Fondos, 8 cubos y 8 sombras png"
+    y "¿Está todo bien? Si no déjame saber y repetiré el paso de nuevo"
     menu:
-        "Yes":
-            y "Okay. Let's go to next part"
+        "Sí":
+            y "Bien. Vamos a la siguiente parte"
         "No":
-            y " Oh dear. Let me repeat steps again."
+            y " Oh querido. Déjame repetir los pasos de nuevo."
             jump custom_tetris_repeat
 
 
 label custom_tetris_repeat_audio:
     $ show_chr("A-ACAAA-ABAD")
-    y "Now for the audio part..."
-    y "All the audio files must have specific names, otherwise the game will reject them, so here are the names for the sounds."
-    y "Keep in mind that sfx should be a very short sounds. If they will be long they will overlap. It will turn into mess"
-    y "Here are the names of the sfx sounds"
-    y "t-fl.ogg for a single line clear."
-    y "t-2f1.ogg for a double line clear."
-    y "t-3fl.ogg for a triple line clear."
-    y "t-4fl.ogg for a full tetris line clear."
-    y "t-drop.ogg for the hard drop sound."
-    y "t-move.ogg for whenever you move the piece."
-    y "t-rotate.ogg for whenever you rotate the piece."
-    y "Those are were sfx sound. For the main music which will loop for the duration of game."
-    y "Use \"tetris.ogg\""
-    y "So in the end your custome_Tetris folder should have 26 files. 2 Background, 8 cube, 8 shadow png and 8 .ogg files"
+    y "Ahora para la parte de audio..."
+    y "Todos los archivos de audio deben tener nombres específicos, de lo contrario el juego los rechazará, así que aquí están los nombres para los sonidos."
+    y "Tengan en cuenta que los sfx deben ser sonidos muy cortos. Si son largos se superpondrán. Se convertirá en un desastre"
+    y "Aquí están los nombres de los sonidos sfx"
+    y "t-fl.ogg para una línea limpia simple."
+    y "t-2f1.ogg para una línea limpia doble."
+    y "t-3fl.ogg para una línea limpia triple."
+    y "t-4fl.ogg para una línea limpia de tetris completo."
+    y "t-drop.ogg para el sonido de caída fuerte."
+    y "t-move.ogg para cada vez que mueves la pieza."
+    y "t-rotate.ogg para cada vez que rotas la pieza."
+    y "Esos eran sonidos sfx. Para la música principal que se repetirá durante la duración del juego."
+    y "Usa \"tetris.ogg\""
+    y "Así que al final tu carpeta custome_Tetris debería tener 26 archivos. 2 Fondos, 8 cubos, 8 sombras png y 8 archivos .ogg"
     $ show_chr("A-BCBAA-AEAD")
-    y "I-I hope I didn't confuse you with that explanation..."
-    y "I'm not good at explaining such technicalities..."
-    y "If I mess up and you still need to adjust something let me know and I will repeat the steps"
+    y "E-espero no haberte confundido con esa explicación..."
+    y "No soy buena explicando tales tecnicismos..."
+    y "Si me equivoco y todavía necesitas ajustar algo déjame saber y repetiré los pasos"
     menu:
-        "Everything is fine":
+        "Todo está bien":
             y "Yay"
-        "Please start from start":
-            y "Okay"
+        "Por favor empieza desde el inicio":
+            y "Bien"
             jump custom_tetris_repeat
-        "Please start from audio files":
-            y "Okay"
+        "Por favor empieza desde los archivos de audio":
+            y "Bien"
             jump custom_tetris_repeat_audio
     if karma_lvl() >= 2:
         $ show_chr("A-GCAAA-AEAD")
-        y "Anyway, I'm looking forward to what you might come up with!"
-        y "Everything you do is fun for me anyway..."
+        y "De todos modos, ¡espero con ansias lo que puedas idear!"
+        y "Todo lo que haces es divertido para mí de todos modos..."
     else:
         $ show_chr("A-BFBAA-AEAD")
-        y "Oh, I do wonder what you just might come up with..."
-        y "Most likely something ridiculous or nonsensical..."
+        y "Oh, me pregunto qué podrías idear..."
+        y "Lo más probable es que algo ridículo o sin sentido..."
     call custom_tetris_checkpoint
     return
 
 label custom_tetris_failure:
     $ show_chr("A-ACDAA-ABAB")
-    y "[player]? It seems you need to fix some issue which I mention"
-    y "Perhaps I should explain all steps again"
+    y "¿[player]? Parece que necesitas arreglar algún problema que mencioné"
+    y "Tal vez debería explicar todos los pasos de nuevo"
     call custom_tetris_repeat
 
 label custom_tetris_checkpoint:
 
     menu:
-        y "Do you have everything done?"
-        "Yes.":
+        y "¿Tienes todo hecho?"
+        "Sí.":
             python:
                 from os import walk
                 f = []
@@ -407,9 +407,9 @@ label custom_tetris_checkpoint:
 
                 if custom_tetris == [("", "")]:
                     show_chr("A-BFAAA-AAAN")
-                    y("Seems like you don't have anything in the folder right now...")
+                    y("Parece que no tienes nada en la carpeta ahora mismo...")
                     show_chr("A-BBBAA-AAAN")
-                    y("That's fine. I'll be waiting for them regardless.")
+                    y("Está bien. Los estaré esperando de todas formas.")
                     renpy.jump("ch30_loop")
                 custom_tetris_png_req = ["background", "background_no_grind"]
                 custom_tetris_music_req = ["t-fl", "t-2fl", "t-3fl", "t-4fl", "t-drop", "t-move", "t-rotate", "tetris"]
@@ -417,55 +417,55 @@ label custom_tetris_checkpoint:
                 for i in custom_tetris_png_req:
                     element = (i + ".png", i + ".png")
                     if not element in custom_tetris:
-                        y("It seems there is issue with background image:" + i)
+                        y("Parece que hay un problema con la imagen de fondo:" + i)
                         renpy.call("custom_tetris_failure")
                 for i in custom_tetris_music_req:
                     element = (i + ".ogg", i + ".ogg")
                     if not element in custom_tetris:
-                        y("It seems there is issue with audio files: " + i)
+                        y("Parece que hay un problema con los archivos de audio: " + i)
                         renpy.call("custom_tetris_failure")
                 for i in range(1, 9):
                     element = ("cube_" + str(i) + ".png", "cube_" + str(i) + ".png")
                     if not element in custom_tetris:
-                        y("It seems there is issue with piece cube image:" + i)
+                        y("Parece que hay un problema con la imagen del cubo de la pieza:" + i)
                         renpy.call("custom_tetris_failure")
                 for i in range(1, 8):
                     element = ("shadow_" + str(i) + ".png", "shadow_" + str(i) + ".png")
                     if not element in custom_tetris:
-                        y("It seems there is issue with piece shadows image:" + i)
+                        y("Parece que hay un problema con la imagen de las sombras de la pieza:" + i)
                         renpy.call("custom_tetris_failure")
                 persistent.skin = 6
         "No.":
             $ show_chr("A-GCBAA-AAAA")
-            y "I see."
+            y "Ya veo."
             $ show_chr("A-ABBAA-AAAA")
-            y "No need to rush. Take your time."
+            y "No hay necesidad de apresurarse. Tómate tu tiempo."
             jump ch30_loop
     return
 
 label tetris_difficulty:
     $ show_chr("A-AAAAA-AAAA")
-    y "If you are not used to Tetris, we can adjust the difficulty a bit. Just tell me how you wish it to be, I will not judge."
+    y "Si no estás acostumbrado a Tetris, podemos ajustar la dificultad un poco. Solo dime cómo deseas que sea, no juzgaré."
 
 
     menu:
-        "Easy":
+        "Fácil":
             $ AI_difficulty = 1
 
             if karma_lvl() >= 3:
-                y "Oh, I see."
-                y "You'd like me to go easy on you this time, hm?"
-                y "I'm happy to oblige, [player]!"
+                y "Oh, ya veo."
+                y "¿Te gustaría que fuera amable contigo esta vez, hm?"
+                y "¡Estoy feliz de complacerte, [player]!"
 
             elif karma_lvl() < 3:
 
                 $ show_chr("A-BEAAA-AMAM")
                 y "..."
-                y "I-is this some kind of joke? Directed at me?"
-                y "To indulge in this activity but at such an infantile level... Seemingly to jest at my abilities?"
+                y "¿E-es esto algún tipo de broma? ¿Dirigida a mí?"
+                y "¿Complacerse en esta actividad pero a un nivel tan infantil... Aparentemente para burlarse de mis habilidades?"
                 $ show_chr("A-CEBAA-AAAD")
-                y "Whatever... Let us proceed."
-        "Medium":
+                y "Como sea... Procedamos."
+        "Medio":
 
 
 
@@ -476,19 +476,19 @@ label tetris_difficulty:
             if karma_lvl() >= 3:
 
                 $ show_chr("A-ABABA-AAAJ")
-                y "Oh I see~ Trying to warm up with a slight challenge eh?"
-                y "Well then. I would like to see how you do!"
-                y "It is good to get out of your comfort zone a bit more."
+                y "Oh ya veo~ Tratando de calentar con un ligero desafío ¿eh?"
+                y "¡Bueno entonces. Me gustaría ver cómo lo haces!"
+                y "Es bueno salir de tu zona de confort un poco más."
 
             elif karma_lvl() < 3:
 
                 $ show_chr("A-ADCAA-AAAL")
-                y "Hm... Y-you know I am slightly surprised that you wanted to partake in this game with me. I was thinking you'd pick a harder difficulty just to prove a point."
-                y "I mean why even bother with such a simple difficulty with someone as myself?"
-                y "If this is meant to be a joke, I quite frankly do not understand it."
+                y "Hm... Sabes, estoy ligeramente sorprendida de que quisieras participar en este juego conmigo. Pensaba que elegirías una dificultad más difícil solo para probar un punto."
+                y "Digo, ¿por qué molestarse con una dificultad tan simple con alguien como yo?"
+                y "Si esto se supone que es una broma, francamente no la entiendo."
                 $ show_chr("A-CECAA-ALAL")
-                y "Whatever... Anyways let the games begin."
-        "Hard":
+                y "Como sea... De todos modos que empiecen los juegos."
+        "Difícil":
 
 
             $ AI_difficulty = 3
@@ -496,19 +496,19 @@ label tetris_difficulty:
             if karma_lvl() >= 3:
 
                 $ show_chr("A-ACCAA-AMAM")
-                y "Oh huhuhehehe... Really turning the dial up are you now, [player]?"
-                y "Well I do like it when you get a bit more daring~ It is rather inspiring."
+                y "Oh huhuhehehe... Realmente subiendo el nivel ahora, ¿no es así, [player]?"
+                y "Bueno, me gusta cuando te pones un poco más atrevido~ Es bastante inspirador."
 
-                y "Well as people say nowadays, I guess, let these games begin!"
-                y "O-oh but don't go too hard on yourself [player]... Eheheh."
+                y "Bueno, como dice la gente hoy en día, supongo, ¡que estos juegos comiencen!"
+                y "O-oh pero no seas muy duro contigo mismo [player]... Eheheh."
 
             elif karma_lvl() < 3:
 
                 $ show_chr("A-CECAA-ALAL")
-                y "I-I guess you really want to rub it in my face just to prove a point..."
-                y "Very well then... Let the games begin, I suppose."
+                y "S-supongo que realmente quieres restregármelo en la cara solo para probar un punto..."
+                y "Muy bien entonces... Que los juegos comiencen, supongo."
                 y "Hmph."
-        "Disadvantage":
+        "Desventaja":
 
 
             $ AI_difficulty = 4
@@ -516,62 +516,62 @@ label tetris_difficulty:
             if karma_lvl() >= 3:
                 $ show_chr("A-DCCBA-AAAD")
                 y "Mmm..."
-                y "Oh dear [player]. That seems like such a Herculean task to tackle. Are you sure?"
+                y "Oh querido [player]. Eso parece una tarea tan Hercúlea para realizar. ¿Estás seguro?"
                 $ show_chr("A-ABAAA-ALAL")
-                y "Ehehehehe... Well alright if you insist~"
-                y "Prepare thy mind and body for the penultimate gamer's challenge dear [player]!"
+                y "Ehehehehe... Bueno está bien si insistes~"
+                y "¡Prepara tu mente y cuerpo para el penúltimo desafío de jugador querido [player]!"
 
             elif karma_lvl() > 3 and sanity_lvl() < 3:
 
                 $ show_chr("A-DLCBA-AMAM")
-                y "Oh oh... Oh my yes!"
-                y "A glutton for punishment aren't you [player]?"
-                y "Whatever scars from this task you may carry I will bear with you!"
-                y "J-just be a bit careful [player]... If you exert yourself too much and get hurt, I might have to thrash a few things here~ Aahahaha..."
+                y "Oh oh... ¡Oh cielos, sí!"
+                y "¿Un glotón por el castigo no eres [player]?"
+                y "¡Cualquier cicatriz de esta tarea que lleves la cargaré contigo!"
+                y "S-solo ten un poco de cuidado [player]... Si te excedes demasiado y te lastimas, podría tener que destrozar algunas cosas aquí~ Aahahaha..."
                 $ show_chr("A-DCAAA-AFAG")
-                y "Show me, show them all what you are made of sweet [player]!!!"
+                y "¡¡¡Muéstrame, muéstrales a todos de qué estás hecho dulce [player]!!!"
 
             elif karma_lvl() < 3:
 
                 $ show_chr("A-DEDAA-ABAB")
-                y "I-I see..."
-                y "I guess you just want to jest with me then..."
+                y "Y-ya veo..."
+                y "Supongo que solo quieres bromear conmigo entonces..."
                 $ show_chr("A-BEABB-AMAM")
-                y "Maybe prove your point further on how bigger you are than me? Rub it in my face just a little more. To show how much you don't need me?"
+                y "¿Tal vez probar tu punto más allá sobre cuán más grande eres que yo? Restregármelo en la cara solo un poco más. ¿Para mostrar cuánto no me necesitas?"
                 $ show_chr("A-CEAAA-AMAM")
-                y "N-nevermind... It wouldn't matter what I said here. Let the games begin I guess."
-        "Expert":
+                y "O-olvídalo... No importa lo que dijera aquí. Que los juegos comiencen supongo."
+        "Experto":
 
 
             $ AI_difficulty = 5
 
             $ show_chr("A-ACBAA-AIAI")
-            y "Oh you are in for a bumpy ride [player]..."
+            y "Oh te espera un viaje agitado [player]..."
 
             if persistent.lovecheck:
 
                 $ show_chr("A-ACCBA-AIAI")
-                y "...but I guess you like it that way don't you..."
+                y "...pero supongo que te gusta de esa manera, ¿no?"
             else:
 
                 if karma_lvl() >= 3:
 
                     $ show_chr("A-ACBAA-ABAL")
-                    y "Very well, I'll try my best to offer you a suitable challenge."
-                    y "Just keep in mind, it is just a game. It doesn't really matter who wins as long as we are having a good time."
+                    y "Muy bien, intentaré lo mejor para ofrecerte un desafío adecuado."
+                    y "Solo ten en cuenta, es solo un juego. Realmente no importa quién gane mientras estemos pasando un buen rato."
 
                 elif karma_lvl() < 3:
 
                     $ show_chr("A-AFBAA-ABAL")
-                    y "Maybe I can teach you a lesson here..."
-        "Veteran":
+                    y "Tal vez pueda enseñarte una lección aquí..."
+        "Veterano":
 
 
             $ AI_difficulty = 6
             $ show_chr("A-ACAAA-ABAL")
-            y "The highest, I see..."
-            y "I'm not even sure if I'm good enough to pull this off but... let's give it a try."
-        "Your choice, [persistent.yuri_nickname]":
+            y "El más alto, ya veo..."
+            y "Ni siquiera estoy segura de si soy lo suficientemente buena para lograr esto pero... intentémoslo."
+        "Tu elección, [persistent.yuri_nickname]":
 
 
 
@@ -589,9 +589,9 @@ label tetris_difficulty:
 
                     $ show_chr("A-IAABA-AAAC")
                     if persistent.lovecheck == True:
-                        y "Oh, how polite of you to let me choose. Why don't we keep it casual for now with easy then darling~"
+                        y "Oh, qué educado de tu parte dejarme elegir. ¿Por qué no lo mantenemos casual por ahora con fácil entonces cariño~?"
                     else:
-                        y "Oh, how polite of you to let me choose [player]. Why don't we keep it casual with easy then?"
+                        y "Oh, qué educado de tu parte dejarme elegir [player]. ¿Por qué no lo mantenemos casual con fácil entonces?"
                 else:
 
 
@@ -599,9 +599,9 @@ label tetris_difficulty:
 
                     $ show_chr("A-IAABA-AAAC")
                     if persistent.lovecheck == True:
-                        y "Oh, how polite of you to let me choose. Why don't we keep it casual for now with medium then darling~"
+                        y "Oh, qué educado de tu parte dejarme elegir. ¿Por qué no lo mantenemos casual por ahora con medio entonces cariño~?"
                     else:
-                        y "Oh, how polite of you to let me choose [player]. Why don't we keep it casual with medium for now then?"
+                        y "Oh, qué educado de tu parte dejarme elegir [player]. ¿Por qué no lo mantenemos casual con medio por ahora entonces?"
 
 
             elif (abs(karma_lvl() + sanity_lvl() - 8) < 2):
@@ -612,8 +612,8 @@ label tetris_difficulty:
                     $ show_chr("A-CCAAA-AAAC")
                     y "Hmm..."
                     $ show_chr("A-ICAAA-AAAC")
-                    y "I'm feeling something just a bit less challenging if that's alright with you."
-                    y "Easy should work just fine for us then."
+                    y "Estoy sintiendo algo solo un poco menos desafiante si te parece bien."
+                    y "Fácil debería funcionar bien para nosotros entonces."
 
                 elif (randomMood == 0):
 
@@ -622,8 +622,8 @@ label tetris_difficulty:
                     $ show_chr("A-CCAAA-AAAC")
                     y "Hmm..."
                     $ show_chr("A-ICAAA-AAAC")
-                    y "I'm feeling something just a bit challenging if that's alright with you."
-                    y "Medium should work just fine for us then."
+                    y "Estoy sintiendo algo solo un poco desafiante si te parece bien."
+                    y "Medio debería funcionar bien para nosotros entonces."
                 else:
 
 
@@ -632,8 +632,8 @@ label tetris_difficulty:
                     $ show_chr("A-CCAAA-AAAC")
                     y "Hmm..."
                     $ show_chr("A-ICAAA-AAAC")
-                    y "I'm feeling something with a decent bit of challenge if that's alright with you."
-                    y "Hard should work just fine for us then."
+                    y "Estoy sintiendo algo con un poco decente de desafío si te parece bien."
+                    y "Difícil debería funcionar bien para nosotros entonces."
 
 
 
@@ -646,27 +646,27 @@ label tetris_difficulty:
                     if (abs(karma_lvl() - sanity_lvl()) < 2):
 
                         $ show_chr("A-BCAAA-AMAM")
-                        y "I-If you're comfortable with that, [player]."
-                        y "Don't expect me to give you a free pass though."
+                        y "S-si estás cómodo con eso, [player]."
+                        y "No esperes que te dé un pase libre sin embargo."
                         $ show_chr("A-IAAAA-AMAM")
-                        y "Medium should suffice."
+                        y "Medio debería ser suficiente."
 
                     elif (karma_lvl() < sanity_lvl()):
 
                         $ show_chr("A-CECAA-AAAA")
                         y "..."
                         $ show_chr("A-CDCAA-AAAA")
-                        y "Could you at least have put in the effort to choose your own difficulty setting?"
-                        y "Let's just get this over with. Medium it is."
+                        y "¿Podrías al menos haber puesto el esfuerzo para elegir tu propia configuración de dificultad?"
+                        y "Terminemos con esto. Medio será."
                     else:
 
 
                         $ show_chr("A-DBAAA-AAAA")
-                        y "{b}It would be quite fun if you were always this passive towards me [player].{/b}"
+                        y "{b}Sería bastante divertido si siempre fueras tan pasivo hacia mí [player].{/b}"
                         $ show_chr("A-CAABA-ADAA")
                         y "..."
                         $ show_chr("A-CBABA-ADAA")
-                        y "I still need to go ahead and choose a difficulty don't I? Medium should do just fine then, correct?"
+                        y "Todavía necesito seguir adelante y elegir una dificultad, ¿no? Medio debería estar bien entonces, ¿correcto?"
 
                 elif (randomMood == 0):
 
@@ -675,27 +675,27 @@ label tetris_difficulty:
                     if (abs(karma_lvl() - sanity_lvl()) < 2):
 
                         $ show_chr("A-BCAAA-AMAM")
-                        y "I-If you're comfortable with that, [player]."
-                        y "Don't expect me to give you a free pass though."
+                        y "S-si estás cómodo con eso, [player]."
+                        y "No esperes que te dé un pase libre sin embargo."
                         $ show_chr("A-IAAAA-AMAM")
-                        y "Hard should suffice."
+                        y "Difícil debería ser suficiente."
 
                     elif (karma_lvl() < sanity_lvl()):
 
                         $ show_chr("A-CECAA-AAAA")
                         y "..."
                         $ show_chr("A-CDCAA-AAAA")
-                        y "Could you at least have put in the effort to choose your own difficulty setting?"
-                        y "Let's just get this over with. Hard it is."
+                        y "¿Podrías al menos haber puesto el esfuerzo para elegir tu propia configuración de dificultad?"
+                        y "Terminemos con esto. Difícil será."
                     else:
 
 
                         $ show_chr("A-DBAAA-AAAA")
-                        y "{b}It would be quite fun if you were always this passive towards me [player].{/b}"
+                        y "{b}Sería bastante divertido si siempre fueras tan pasivo hacia mí [player].{/b}"
                         $ show_chr("A-CAABA-ADAA")
                         y "..."
                         $ show_chr("A-CBABA-ADAA")
-                        y "I still need to go ahead and choose a difficulty don't I? Hard should do just fine then, correct?"
+                        y "Todavía necesito seguir adelante y elegir una dificultad, ¿no? Difícil debería estar bien entonces, ¿correcto?"
                 else:
 
 
@@ -704,27 +704,27 @@ label tetris_difficulty:
                     if (abs(karma_lvl() - sanity_lvl()) < 2):
 
                         $ show_chr("A-BCAAA-AMAM")
-                        y "I-If you're comfortable with that, [player]."
-                        y "Don't expect me to give you a free pass though."
+                        y "S-si estás cómodo con eso, [player]."
+                        y "No esperes que te dé un pase libre sin embargo."
                         $ show_chr("A-IAAAA-AMAM")
-                        y "Disadvantaged should suffice."
+                        y "Desventaja debería ser suficiente."
 
                     elif (karma_lvl() < sanity_lvl()):
 
                         $ show_chr("A-CECAA-AAAA")
                         y "..."
                         $ show_chr("A-CDCAA-AAAA")
-                        y "Could you at least have put in the effort to choose your own difficulty setting?"
-                        y "Let's just get this over with. Disadvantaged it is."
+                        y "¿Podrías al menos haber puesto el esfuerzo para elegir tu propia configuración de dificultad?"
+                        y "Terminemos con esto. Desventaja será."
                     else:
 
 
                         $ show_chr("A-DBAAA-AAAA")
-                        y "{b}It would be quite fun if you were always this passive towards me [player].{/b}"
+                        y "{b}Sería bastante divertido si siempre fueras tan pasivo hacia mí [player].{/b}"
                         $ show_chr("A-CAABA-ADAA")
                         y "..."
                         $ show_chr("A-CBABA-ADAA")
-                        y "I still need to go ahead and choose a difficulty don't I? Disadvantaged should do just fine then, correct?"
+                        y "Todavía necesito seguir adelante y elegir una dificultad, ¿no? Desventaja debería estar bien entonces, ¿correcto?"
 
 
 
@@ -737,28 +737,28 @@ label tetris_difficulty:
                     if (abs(karma_lvl() - sanity_lvl()) < 2):
 
                         $ show_chr("A-CEAAA-AAAC")
-                        y "I d-don't really know..."
-                        y "Does it really even matter what difficulty we play on?"
-                        y "I guess I'll just go for hard, You'll probably just boast about it afterwards regardless."
+                        y "N-no sé realmente..."
+                        y "¿Realmente importa en qué dificultad jugamos?"
+                        y "Supongo que iré por difícil, probablemente solo te jactarás de ello después de todos modos."
 
                     elif (karma_lvl() < sanity_lvl()):
 
                         $ show_chr("A-CEAAA-AAAC")
-                        y "I d-don't really know..."
-                        y "Does it really even matter what difficulty we play on?"
-                        y "I guess I'll just go for hard, You'll probably just boast about it afterwards regardless..."
+                        y "N-no sé realmente..."
+                        y "¿Realmente importa en qué dificultad jugamos?"
+                        y "Supongo que iré por difícil, probablemente solo te jactarás de ello después de todos modos..."
                         $ show_chr("A-CEAAB-AAAJ")
-                        y "What did I do to deserve this kind of treatment anyways?"
+                        y "¿Qué hice para merecer este tipo de tratamiento de todos modos?"
                         y "..."
                         $ show_chr("A-CEAAA-AAAK")
-                        y "Let's just get on with it already."
+                        y "Solo sigamos con ello ya."
                     else:
 
 
-                        y "How about we go for hard if you're willing?"
+                        y "¿Qué tal si vamos por difícil si estás dispuesto?"
                         $ show_chr("A-DAAAA-AAAD")
-                        y "It would be quite fun to pressure you just a bit."
-                        y "Not to mention it's cute to watch you squirm around trying to keep up with me."
+                        y "Sería bastante divertido presionarte solo un poco."
+                        y "Sin mencionar que es lindo verte retorcerte tratando de seguirme el ritmo."
 
                 elif (randomMood == 0):
 
@@ -767,28 +767,28 @@ label tetris_difficulty:
                     if (abs(karma_lvl() - sanity_lvl()) < 2):
 
                         $ show_chr("A-CEAAA-AAAC")
-                        y "I d-don't really know..."
-                        y "Does it really even matter what difficulty we play on?"
-                        y "I guess I'll just go for disadvantaged, You'll probably just boast about it afterwards regardless."
+                        y "N-no sé realmente..."
+                        y "¿Realmente importa en qué dificultad jugamos?"
+                        y "Supongo que iré por desventaja, probablemente solo te jactarás de ello después de todos modos."
 
                     elif (karma_lvl() < sanity_lvl()):
 
                         $ show_chr("A-CEAAA-AAAC")
-                        y "I d-don't really know..."
-                        y "Does it really even matter what difficulty we play on?"
-                        y "I guess I'll just go for disadvantaged, You'll probably just boast about it afterwards regardless..."
+                        y "N-no sé realmente..."
+                        y "¿Realmente importa en qué dificultad jugamos?"
+                        y "Supongo que iré por desventaja, probablemente solo te jactarás de ello después de todos modos..."
                         $ show_chr("A-CEAAB-AAAJ")
-                        y "What did I do to deserve this kind of treatment anyways?"
+                        y "¿Qué hice para merecer este tipo de tratamiento de todos modos?"
                         y "..."
                         $ show_chr("A-CEAAA-AAAK")
-                        y "Let's just get on with it already."
+                        y "Solo sigamos con ello ya."
                     else:
 
 
-                        y "How about we go for disadvantaged if you're willing?"
+                        y "¿Qué tal si vamos por desventaja si estás dispuesto?"
                         $ show_chr("A-DAAAA-AAAD")
-                        y "It would be quite fun to pressure you just a bit."
-                        y "Not to mention it's cute to watch you squirm around trying to keep up with me."
+                        y "Sería bastante divertido presionarte solo un poco."
+                        y "Sin mencionar que es lindo verte retorcerte tratando de seguirme el ritmo."
                 else:
 
 
@@ -797,28 +797,28 @@ label tetris_difficulty:
                     if (abs(karma_lvl() - sanity_lvl()) < 2):
 
                         $ show_chr("A-CEAAA-AAAC")
-                        y "I d-don't really know..."
-                        y "Does it really even matter what difficulty we play on?"
-                        y "I guess I'll just go for expert, You'll probably just boast about it afterwards regardless."
+                        y "N-no sé realmente..."
+                        y "¿Realmente importa en qué dificultad jugamos?"
+                        y "Supongo que iré por experto, probablemente solo te jactarás de ello después de todos modos."
 
                     elif (karma_lvl() < sanity_lvl()):
 
                         $ show_chr("A-CEAAA-AAAC")
-                        y "I d-don't really know..."
-                        y "Does it really even matter what difficulty we play on?"
-                        y "I guess I'll just go for expert, You'll probably just boast about it afterwards regardless..."
+                        y "N-no sé realmente..."
+                        y "¿Realmente importa en qué dificultad jugamos?"
+                        y "Supongo que iré por experto, probablemente solo te jactarás de ello después de todos modos..."
                         $ show_chr("A-CEAAB-AAAJ")
-                        y "What did I do to deserve this kind of treatment anyways?"
+                        y "¿Qué hice para merecer este tipo de tratamiento de todos modos?"
                         y "..."
                         $ show_chr("A-CEAAA-AAAK")
-                        y "Let's just get on with it already."
+                        y "Solo sigamos con ello ya."
                     else:
 
 
-                        y "How about we go for expert if you're willing?"
+                        y "¿Qué tal si vamos por experto si estás dispuesto?"
                         $ show_chr("A-DAAAA-AAAD")
-                        y "It would be quite fun to pressure you just a bit."
-                        y "Not to mention it's cute to watch you squirm around trying to keep up with me."
+                        y "Sería bastante divertido presionarte solo un poco."
+                        y "Sin mencionar que es lindo verte retorcerte tratando de seguirme el ritmo."
 
 
 
@@ -826,22 +826,10 @@ label tetris_difficulty:
             elif (abs(karma_lvl() + sanity_lvl() - 2) < 2):
                 if (randomMood == -1):
 
-                    $ AI_difficulty = 4
-
-                    if (karma_lvl() < sanity_lvl()):
-                        $ show_chr ("A-AECAA-AAAF")
-                        y "I couldn't honestly care less what difficulty we play at by this point."
-                        y "N-No wait, you know what?"
-                        y "This would make for a good opportunity to put you in your place, and I won't waste it."
-                        y "Let's set it to disadvantaged and see just how well you do."
-                    else:
-
-                        $ show_chr("A-AECAA-AAAF")
-                        y "I couldn't honestly care less what difficulty we play at by this point."
-                        y "N-No wait, you know what?"
-                        y "This would make for a good opportunity to put you in your place, and I won't waste it."
+                        y "N-No espera, ¿sabes qué?"
+                        y "Esta sería una buena oportunidad para ponerte en tu lugar, y no la desperdiciaré."
                         $ show_chr ("A-AECAA-AAAG")
-                        y "Let's set it to disadvantaged and see just how well you do."
+                        y "Pongámoslo en desventaja y veamos qué tan bien lo haces."
 
                 elif (randomMood == 0):
 
@@ -849,18 +837,18 @@ label tetris_difficulty:
 
                     if (karma_lvl() < sanity_lvl()):
                         $ show_chr ("A-AECAA-AAAF")
-                        y "I couldn't honestly care less what difficulty we play at by this point."
-                        y "N-No wait, you know what?"
-                        y "This would make for a good opportunity to put you in your place, and I won't waste it."
-                        y "Let's set it to expert and see just how well you do."
+                        y "Honestamente no podría importarme menos en qué dificultad juguemos a este punto."
+                        y "N-No espera, ¿sabes qué?"
+                        y "Esta sería una buena oportunidad para ponerte en tu lugar, y no la desperdiciaré."
+                        y "Pongámoslo en experto y veamos qué tan bien lo haces."
                     else:
 
                         $ show_chr("A-AECAA-AAAF")
-                        y "I couldn't honestly care less what difficulty we play at by this point."
-                        y "N-No wait, you know what?"
-                        y "This would make for a good opportunity to put you in your place, and I won't waste it."
+                        y "Honestamente no podría importarme menos en qué dificultad juguemos a este punto."
+                        y "N-No espera, ¿sabes qué?"
+                        y "Esta sería una buena oportunidad para ponerte en tu lugar, y no la desperdiciaré."
                         $ show_chr ("A-AECAA-AAAG")
-                        y "Let's set it to expert and see just how well you do."
+                        y "Pongámoslo en experto y veamos qué tan bien lo haces."
                 else:
 
 
@@ -868,18 +856,18 @@ label tetris_difficulty:
 
                     if (karma_lvl() < sanity_lvl()):
                         $ show_chr ("A-AECAA-AAAF")
-                        y "I couldn't honestly care less what difficulty we play at by this point."
-                        y "N-No wait, you know what?"
-                        y "This would make for a good opportunity to put you in your place, and I won't waste it."
-                        y "Let's set it to veteran and see just how well you do."
+                        y "Honestamente no podría importarme menos en qué dificultad juguemos a este punto."
+                        y "N-No espera, ¿sabes qué?"
+                        y "Esta sería una buena oportunidad para ponerte en tu lugar, y no la desperdiciaré."
+                        y "Pongámoslo en veterano y veamos qué tan bien lo haces."
                     else:
 
                         $ show_chr("A-AECAA-AAAF")
-                        y "I couldn't honestly care less what difficulty we play at by this point."
-                        y "N-No wait, you know what?"
-                        y "This would make for a good opportunity to put you in your place, and I won't waste it."
+                        y "Honestamente no podría importarme menos en qué dificultad juguemos a este punto."
+                        y "N-No espera, ¿sabes qué?"
+                        y "Esta sería una buena oportunidad para ponerte en tu lugar, y no la desperdiciaré."
                         $ show_chr ("A-AECAA-AAAG")
-                        y "Let's set it to veteran and see just how well you do."
+                        y "Pongámoslo en veterano y veamos qué tan bien lo haces."
 
 
             elif (abs(karma_lvl() + sanity_lvl()) < 2):
@@ -888,51 +876,51 @@ label tetris_difficulty:
                     $ AI_difficulty = 5
 
                     $ show_chr("A-DBCAA-AAAF")
-                    y "{b}HA HA...{/b}"
-                    y "You want me to choose the difficulty?"
-                    y "Fine [player], your wish is my command."
+                    y "{b}JA JA...{/b}"
+                    y "¿Quieres que yo elija la dificultad?"
+                    y "Bien [player], tus deseos son órdenes."
                     $ show_chr("A-DBCAA-AAAC")
-                    y "How about expert hmm? Seems like a fair competition don't you think?"
+                    y "¿Qué tal experto hmm? Parece una competencia justa, ¿no crees?"
                     $ show_chr("A-CBCAA-AAAC")
-                    y "I just hope you'll be able to keep up the pace. It would be quite a shame if I decimated the scoreboard."
+                    y "Solo espero que seas capaz de mantener el ritmo. Sería una lástima si diezmara el marcador."
                 else:
 
 
                     $ AI_difficulty = 6
 
                     $ show_chr("A-DBCAA-AAAF")
-                    y "{b}HA HA...{/b}"
-                    y "You want me to choose the difficulty?"
-                    y "Fine [player], your wish is my command."
+                    y "{b}JA JA...{/b}"
+                    y "¿Quieres que yo elija la dificultad?"
+                    y "Bien [player], tus deseos son órdenes."
                     $ show_chr("A-DBCAA-AAAC")
-                    y "How about veteran hmm? Seems like a fair competition don't you think?"
+                    y "¿Qué tal veterano hmm? Parece una competencia justa, ¿no crees?"
                     $ show_chr("A-CBCAA-AAAC")
-                    y "I just hope you'll be able to keep up the pace. It would be quite a shame if I decimated the scoreboard."
+                    y "Solo espero que seas capaz de mantener el ritmo. Sería una lástima si diezmara el marcador."
 
 
 label tetris_rules:
     $ show_chr("A-GAGAA-AAAA")
     if persistent.tetris_first:
-        y "Allow me to explain the controls..."
-        y "You can use arrows to move your pieces. Hitting UP will rotate your piece, hitting DOWN will speed up your drop."
-        y "Hitting SPACE will drop the piece instantaneously."
-        y "Q key will put the piece into hold, but you can't double hold the same piece..."
-        y "...While the E key will use the piece which you are holding."
+        y "Permíteme explicar los controles..."
+        y "Puedes usar las flechas para mover tus piezas. Presionar ARRIBA rotará tu pieza, presionar ABAJO acelerará tu caída."
+        y "Presionar ESPACIO dejará caer la pieza instantáneamente."
+        y "La tecla Q pondrá la pieza en reserva, pero no puedes reservar dos veces la misma pieza..."
+        y "...Mientras que la tecla E usará la pieza que estás reservando."
         $ persistent.tetris_first = False
 
 
     menu:
-        y "Would you like some Tetris music while we play?"
-        "Yes":
+        y "¿Te gustaría algo de música de Tetris mientras jugamos?"
+        "Sí":
             if AI_difficulty != "CO_OP":
-                y "Let the best Tetris player win."
+                y "Que gane el mejor jugador de Tetris."
                 $ show_chr("A-AACAA-AAAA")
-                y "Game on, [player]!"
+                y "¡A jugar, [player]!"
                 $ renpy.free_memory()
             else:
-                y "Let's enjoy our time together trying to get the highest score!"
+                y "¡Disfrutemos nuestro tiempo juntos tratando de obtener la puntuación más alta!"
                 $ show_chr("A-CBBAA-AAAJ")
-                y "I really hope I will be at least some of help for you, [player]."
+                y "Realmente espero ser de al menos algo de ayuda para ti, [player]."
                 $ show_chr("A-AACAA-AAAA")
                 $ renpy.free_memory()
             if persistent.skin == 1:
@@ -950,14 +938,14 @@ label tetris_rules:
                 $ change_music("<loop 0>/custom_tetris/tetris.ogg")
         "No":
             if AI_difficulty != "CO_OP":
-                y "Let the best Tetris player win."
+                y "Que gane el mejor jugador de Tetris."
                 $ show_chr("A-AACAA-AAAA")
-                y "Game on, [player]!"
+                y "¡A jugar, [player]!"
                 $ renpy.free_memory()
             else:
-                y "Let's enjoy our time together trying to get the highest score!"
+                y "¡Disfrutemos nuestro tiempo juntos tratando de obtener la puntuación más alta!"
                 $ show_chr("A-CBBAA-AAAJ")
-                y "I really hope I will be at least some of help for you, [player]."
+                y "Realmente espero ser de al menos algo de ayuda para ti, [player]."
                 $ show_chr("A-AACAA-AAAA")
                 $ renpy.free_memory()
 
@@ -970,20 +958,20 @@ label tetris_over:
         if karma_lvl() > 3 and sanity_lvl() > 3:
 
             $ show_chr("A-ABABA-AAAL")
-            y "O-oh my!! Oh that was quite a little thrill~"
-            y "I had enjoyment just being in that moment with you [player]. Even though I may have strived for a higher score."
+            y "¡¡O-oh cielos!! Oh eso fue bastante emocionante~"
+            y "Disfruté solo estando en ese momento contigo [player]. Aunque pude haberme esforzado por una puntuación más alta."
             $ show_chr("A-CCAAA-AAAD")
-            y "Really though, it is indeed the moment shared together and the heart that counts!"
-            y "Hehehe... Though I will admit part of me does want to try again and see if I score higher."
+            y "¡De verdad sin embargo, es de hecho el momento compartido juntos y el corazón lo que cuenta!"
+            y "Jejeje... Aunque admitiré que parte de mí sí quiere intentar de nuevo y ver si obtengo una puntuación más alta."
             $ show_chr("A-ABAAA-AMAM")
-            y "Either way I believe we both put our best effort!"
+            y "¡De cualquier manera creo que ambos pusimos nuestro mejor esfuerzo!"
 
             menu:
-                y "So [player], do you want to try again? Us together one more time?"
-                "Yes":
+                y "Entonces [player], ¿quieres intentar de nuevo? ¿Nosotros juntos una vez más?"
+                "Sí":
                     menu:
-                        y "Would you like the same music as our last game?"
-                        "Yes":
+                        y "¿Te gustaría la misma música que en nuestro último juego?"
+                        "Sí":
                             if persistent.skin == 1:
                                 $ change_music("<loop 21.06>/music/tetris (a).ogg")
                             elif persistent.skin == 2:
@@ -1002,82 +990,82 @@ label tetris_over:
                             call screen startTetris(AI_difficulty)
                 "No":
                     $ show_chr("A-GBAAA-AMAM")
-                    y "I really enjoy playing with you. Let's do this again sometime soon."
+                    y "Realmente disfruto jugar contigo. Hagamos esto de nuevo pronto."
                     jump ch30_loop
 
         elif karma_lvl() > 3 and sanity_lvl() == 3:
 
             $ show_chr("A-BCAAA-AMAM")
-            y "O-oh my... Oh I hope I did not slip up too much."
-            y "Aheheh..."
+            y "O-oh cielos... Oh espero no haber cometido muchos errores."
+            y "Jejeje..."
             $ show_chr("A-BCABA-AMAM")
-            y "I mean I obviously think your skills are lovely... I-I just don't want to b-bore you too much with mine... I mean! It was a lovely time and I appreciated it very much."
+            y "Digo obviamente creo que tus habilidades son encantadoras... S-solo no quiero a-aburrirte demasiado con las mías... ¡Digo! Fue un tiempo encantador y lo aprecié mucho."
             $ show_chr("A-ACAAA-AAAC")
 
             menu:
-                y "Anyways.. W-would you like to play this again with me [player]...?"
-                "Yes":
+                y "De todos modos... ¿T-te gustaría jugar esto de nuevo conmigo [player]...?"
+                "Sí":
                     call screen startTetris(AI_difficulty)
                     $ renpy.music.play()
                 "No":
                     $ show_chr("A-GBAAA-AMAM")
-                    y "I really enjoy playing with you. Let's do this again sometime soon."
+                    y "Realmente disfruto jugar contigo. Hagamos esto de nuevo pronto."
                     jump ch30_loop
         elif karma_lvl() <= 2:
 
             $ show_chr("A-ACAAA-AAAC")
-            y "O-oh you won eh...?"
-            y "I suppose now would be a good time to rub it in that you won over me."
+            y "¿O-oh ganaste eh...?"
+            y "Supongo que ahora sería un buen momento para restregarme que me ganaste."
             $ show_chr("A-ACAAA-AAAC")
-            y "G-go ahead. Boast to your heart's content."
-            y "I bet you only pretended to have fun playing against me..."
-            y "Go on [player]."
+            y "A-adelante. Jáctate todo lo que quieras."
+            y "Apuesto a que solo fingiste divertirte jugando contra mí..."
+            y "Anda [player]."
         elif sanity_lvl() > 2 and karma_lvl() < 3:
             $ show_chr("A-ACAAA-AAAA")
-            y "Congratulations, well done."
-            y "I have to admit, that was more fun than I anticipated. Actually I was a bit worried that Tetris might become boring pretty fast."
+            y "Felicidades, bien hecho."
+            y "Tengo que admitir, eso fue más divertido de lo que anticipé. De hecho estaba un poco preocupada de que Tetris pudiera volverse aburrido bastante rápido."
             $ show_chr("A-ACAAA-ALAL")
 
             menu:
-                y "I hope you had a bit of fun too? If you wish we could try another round. Are you up for a rematch?"
-                "Yes":
+                y "¿Espero que te hayas divertido un poco también? Si deseas podríamos intentar otra ronda. ¿Estás listo para la revancha?"
+                "Sí":
                     call screen startTetris(AI_difficulty)
                     $ renpy.music.play()
                 "No":
                     $ show_chr("A-GBAAA-AMAM")
-                    y "I really enjoy playing with you. Let's do this again sometime soon."
+                    y "Realmente disfruto jugar contigo. Hagamos esto de nuevo pronto."
                     jump ch30_loop
         elif sanity_lvl() <= 3 and karma_lvl() >= 3:
             $ show_chr("A-ACAAA-ABAB")
-            y "Oh my, it looks like you've beaten me!"
-            y "I might have to put more training into this, so that I can be an actual challenge next time."
-            y "Actually, would you like to give it another try? Playing with you turned out to be a lot of fun, even if it's only Tetris."
+            y "¡Oh cielos, parece que me has ganado!"
+            y "Podría tener que poner más entrenamiento en esto, para poder ser un desafío real la próxima vez."
+            y "De hecho, ¿te gustaría darle otro intento? Jugar contigo resultó ser muy divertido, incluso si es solo Tetris."
             $ show_chr("A-BCAAA-ABAC")
-            y "We could probably try something else in the future. Chess, or maybe a card game?"
-            y "I also thought about darts, but honestly I have no idea how to code that in..."
+            y "Podríamos probablemente intentar algo más en el futuro. ¿Ajedrez, o tal vez un juego de cartas?"
+            y "También pensé en dardos, pero honestamente no tengo idea de cómo codificar eso..."
             $ show_chr("A-ACAAA-ABAE")
 
             menu:
-                y "Oh but I almost forgot, would you like to play another round with me?"
-                "Yes":
+                y "Oh pero casi lo olvido, ¿te gustaría jugar otra ronda conmigo?"
+                "Sí":
                     call screen startTetris(AI_difficulty)
                     $ renpy.music.play()
                 "No":
                     $ show_chr("A-GBAAA-AMAM")
-                    y "I really enjoy playing with you. Let's do this again sometime soon."
+                    y "Realmente disfruto jugar contigo. Hagamos esto de nuevo pronto."
                     jump ch30_loop
         elif sanity_lvl() <= 3 and karma_lvl() < 3:
             $ show_chr("A-BFAAA-ABAE")
-            y "Congratulations, I guess?"
+            y "¿Felicidades, supongo?"
             $ show_chr("A-IFAAA-ABAE")
-            y "Oh I'm sorry, I didn't mean to sound so unenthusiastic."
-            y "It's just... I find it a bit difficult to focus right now. I can't help but ask myself how we ended up here like this."
+            y "Oh lo siento, no quise sonar tan poco entusiasta."
+            y "Es solo... encuentro un poco difícil concentrarme ahora mismo. No puedo evitar preguntarme cómo terminamos aquí así."
             $ show_chr("A-CFAAA-ABAE")
-            y "Forgive me, am I too dramatic? What I meant to say is.. I wish we were able to do more together than playing Tetris. Please don't read too much into it. "
+            y "Perdóname, ¿soy muy dramática? Lo que quise decir es... desearía que pudiéramos hacer más juntos que jugar Tetris. Por favor no le des muchas vueltas."
 
             menu:
-                extend "Would you like to play another round?"
-                "Yes":
+                extend "¿Te gustaría jugar otra ronda?"
+                "Sí":
                     call screen startTetris(AI_difficulty)
                     $ renpy.music.play()
                 "No":
@@ -1085,85 +1073,85 @@ label tetris_over:
     elif TetrisWinner == 1:
         if sanity_lvl() > 2 and karma_lvl() > 2:
             $ show_chr("A-ACAAA-ALAL")
-            y "Oh my..."
-            y "Good show, good effort~"
+            y "Oh cielos..."
+            y "Buen espectáculo, buen esfuerzo~"
             $ show_chr("A-ACABA-AAAD")
-            y "I know you wanted a higher score but there will always be a next time!"
-            y "I hope you had fun, [player], I know I did!"
+            y "¡Sé que querías una puntuación más alta pero siempre habrá una próxima vez!"
+            y "¡Espero que te hayas divertido, [player], sé que yo lo hice!"
 
         elif karma_lvl() > 4 and sanity_lvl() == 3:
 
             $ show_chr("A-ACDAA-AMAM")
-            y "O-oh... You lost? Uhm... eheh."
-            y "I-I hope I did not get too intense for you. Don't feel bad about it [player]. I had a lot of fun."
-            y "I hope you did too... O-oh... I mean but... We can do something else if you'd like. I really hope you enjoyed it though. I-It means so much to me... Just time together like this."
-            y "Did I make you feel bad [player]? I hope I didn't... I'd give you a hug at least for your efforts..."
+            y "O-oh... ¿Perdiste? Uhm... jeje."
+            y "E-espero no haberme puesto demasiado intensa para ti. No te sientas mal por ello [player]. Tuve mucha diversión."
+            y "Espero que tú también... O-oh... digo pero... Podemos hacer algo más si quisieras. Realmente espero que lo hayas disfrutado sin embargo. E-Significa tanto para mí... Solo tiempo juntos así."
+            y "¿Te hice sentir mal [player]? Espero que no... Te daría un abrazo al menos por tus esfuerzos..."
             $ show_chr("A-ACAAA-ABAB")
-            y "It's the heart and thought that c-counts after all."
-            y "S-so... do you want to play again? Or if you want to do something else, that is okay too [player]~"
+            y "Es el corazón y la intención lo que c-cuenta después de todo."
+            y "A-así que... ¿quieres jugar de nuevo? O si quieres hacer algo más, eso está bien también [player]~"
 
         elif karma_lvl() != 3 and sanity_lvl() != 3:
 
             $ show_chr("A-BCABA-AMAM")
-            y "W-well... This was quite intriguing to say the least."
-            y "I am not exactly sure if this time together does count or whether it matters but... I am intrigued by this game of matching blocks and tiles."
+            y "B-bueno... Esto fue bastante intrigante por decir lo menos."
+            y "No estoy exactamente segura si este tiempo juntos cuenta o si importa pero... estoy intrigada por este juego de combinar bloques y fichas."
             $ show_chr("A-JEDBA-AMAM")
-            y "If you are here and hearing this [player] I would say this session was alright and I do feel slightly bad that you lost."
-            y "M-maybe this activity might help me relax and get my bearings on getting used to here and maybe knowing you more?"
+            y "Si estás aquí y escuchando esto [player] diría que esta sesión estuvo bien y me siento ligeramente mal de que perdieras."
+            y "¿T-tal vez esta actividad podría ayudarme a relajarme y orientarme para acostumbrarme a estar aquí y tal vez conocerte más?"
             $ show_chr("A-ACAAA-AAAC")
-            y "I-I am not sure..."
-            y "D-do you want to play a bit more [player]?"
+            y "N-no estoy segura..."
+            y "¿Q-quieres jugar un poco más [player]?"
 
         elif sanity_lvl() > 2 and karma_lvl() < 3:
             $ show_chr("A-AEAAA-AAAC")
-            y "Oh... you lost, eh?"
-            y "Well then that's no surprise, I guess."
-            y "I mean, not that you would care for my input perhaps but.."
+            y "Oh... perdiste, ¿eh?"
+            y "Bueno entonces eso no es sorpresa, supongo."
+            y "Digo, no es que te importara mi opinión tal vez pero..."
             $ show_chr("A-CEAAA-AAAL")
             y "Hm..."
-            y "Well, I still hope you enjoyed playing... I guess."
+            y "Bueno, todavía espero que hayas disfrutado jugar... Supongo."
 
         elif sanity_lvl() < 3 and karma_lvl() > 3:
 
             $ show_chr("A-ABAAA-AAAD")
-            y "Aww... sorry [player]~"
-            y "Looks like I won again uhuhuhu~"
-            y "Don't feel too bad though, love..."
-            y "I had an immensely pleasurable time just playing with you. Imagining seeing you so focused and determined with sweat running down your face as you tried to score."
+            y "Aww... lo siento [player]~"
+            y "Parece que gané de nuevo uhuhuhu~"
+            y "No te sientas tan mal sin embargo, amor..."
+            y "Tuve un tiempo inmensamente placentero solo jugando contigo. Imaginando verte tan concentrado y determinado con el sudor corriendo por tu cara mientras intentabas anotar."
             $ show_chr("A-HCCAA-AMAM")
-            y "Your sweet sweat and essence... Your eyes focusing on mine as the colors of the game shone on your face. Only for me, and me alone."
+            y "Tu dulce sudor y esencia... Tus ojos enfocándose en los míos mientras los colores del juego brillaban en tu cara. Solo para mí, y solo para mí."
             $ show_chr("A-HLAAA-AFAG")
-            y "I look forward to another session with you as always [player]. Forever and just us.."
-            y "No one ELSE!... Just us uhuhuhehehe...~"
+            y "Espero con ansias otra sesión contigo como siempre [player]. Por siempre y solo nosotros..."
+            y "¡Nadie MÁS!... Solo nosotros uhuhuhehehe...~"
 
         elif karma_lvl() == 3 and sanity_lvl() <= 2:
 
             $ show_chr("A-HLAAA-ALAL")
-            y "Aww, you lost?"
-            y "W-well hey don't feel bad and leave so soon..."
-            y "We can stay here in this room together forever. Breathing in each others' scents as we sweat and play this wonderful classic together."
+            y "Aww, ¿perdiste?"
+            y "B-bueno oye no te sientas mal y te vayas tan pronto..."
+            y "Podemos quedarnos aquí en esta habitación juntos por siempre. Respirando los aromas del otro mientras sudamos y jugamos este maravilloso clásico juntos."
             $ show_chr("A-HCAAA-ALAL")
-            y "Here in this room and no one else... I know you want to... And I want to also~"
-            y "What do you say [player]? Doesn't that sound so heavenly?"
+            y "Aquí en esta habitación y nadie más... Sé que quieres... Y yo quiero también~"
+            y "¿Qué dices [player]? ¿No suena eso tan celestial?"
 
         elif sanity_lvl() < 3 and karma_lvl() < 3:
             $ show_chr("A-DECAA-ABAB")
-            y "Oh, so you lost, hm?"
-            y "Well, that's not surprising."
+            y "Oh, así que perdiste, ¿hm?"
+            y "Bueno, eso no es sorprendente."
             $ show_chr("A-CDCAA-AAAL")
-            y "That was honestly even quite... pathetic..."
-            y "To be honest, I expected a greater challenge."
+            y "Eso fue honestamente incluso bastante... patético..."
+            y "Para ser honesta, esperaba un desafío mayor."
 
     elif TetrisWinner == 2:
         $ show_chr("A-IBCAA-AAAL")
-        y "[player], We cleared our highest Score!"
+        y "¡[player], Superamos nuestra Puntuación más alta!"
         $ show_chr("A-GBAAA-AAAL")
-        y "That was quite the game, too..."
+        y "Ese fue un gran juego, también..."
     else:
         $ show_chr("A-BEBAA-AMAM")
-        y "I am sorry [player]...we fell short of our highest score."
+        y "Lo siento [player]... nos quedamos cortos de nuestra puntuación más alta."
         $ show_chr("A-CBAAA-AMAM")
-        y "But fret not! There's always next time..."
+        y "¡Pero no te preocupes! Siempre hay una próxima vez..."
 
     jump ch30_loop
 
@@ -1716,9 +1704,10 @@ init python:
                             shape = renpy.render(self.color_9, width, height, st, at)
                             r.blit(shape, (int(sx - self.PIXEL_SIZE / 2) + self.PIXEL_SIZE * idc, int(sy - self.PIXEL_SIZE / 2) + self.PIXEL_SIZE * idr))
             
-            b = "Lines - %(s)d " % {"s":self.allLines }
-            c = "Level - %(s)d " % {"s":self.level}
-            d = "Next:"
+            
+            b = "Líneas - %(s)d " % {"s":self.allLines }
+            c = "Nivel - %(s)d " % {"s":self.level}
+            d = "Siguiente:"
             
             f = Text(b)
             g = Text(c)
@@ -1734,19 +1723,19 @@ init python:
                 r.blit(text_level_render, (-120, -50))
                 r.blit(text_next_render, (-120, -10))
                 draw_shape(-100, 40, self.current_shape.next_shape,0)
-                i = "Hold:"
+                i = "Reserva:"
                 j = Text(i)
                 text_hold_render = renpy.render(j, width, height, st, at)
                 r.blit(text_hold_render, (-120, 100))
                 draw_shape(-100, 160, self.current_shape.shape_hold,0)
                 if LineLimit != 0:
-                    i = "Line to Victory - %(s)d " % {"s":LineLimit}
+                    i = "Línea para Victoria - %(s)d " % {"s":LineLimit}
                     j = Text(i)
                     text_line = renpy.render(j, width, height, st, at)
                     r.blit(text_line, (420, -100))
                     PlayerForYuri = self.allLines
                 elif TetrisScore != 0:
-                    a = "Score - %(s)d " % {"s":self.score }
+                    a = "Puntuación - %(s)d " % {"s":self.score }
                     e = Text(a)
                     text_score_render = renpy.render(e, width, height, st, at)
                     r.blit(text_score_render, (30, -100))
@@ -2650,12 +2639,12 @@ init python:
                             shape = renpy.render(self.color_9, width, height, st, at)
                             r.blit(shape, (int(sx - self.PIXEL_SIZE / 2) + self.PIXEL_SIZE * idc, int(sy - self.PIXEL_SIZE / 2) + self.PIXEL_SIZE * idr))
             
-            a = "Score - %(s)d " % {"s":self.score }
-            b = "Lines - %(s)d " % {"s":self.allLines }
-            c = "Level - %(s)d " % {"s":self.level}
-            d = "Next player:"
-            i = "Best Score - %(s)d " % {"s":persistent.best_co_op_tetris_score }
-            k = "Next Yuri:"
+            a = "Puntuación - %(s)d " % {"s":self.score }
+            b = "Líneas - %(s)d " % {"s":self.allLines }
+            c = "Nivel - %(s)d " % {"s":self.level}
+            d = "Siguiente jugador:"
+            i = "Mejor Puntuación - %(s)d " % {"s":persistent.best_co_op_tetris_score }
+            k = "Siguiente Yuri:"
             
             e = Text(a)
             f = Text(b)

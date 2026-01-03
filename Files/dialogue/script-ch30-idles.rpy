@@ -1,284 +1,284 @@
 label idle_1:
     $ show_chr("A-AFAAA-ALAA")
-    y "You know, Monika once told me my books were a form of escape, and an unhealthy coping mechanism."
+    y "Sabes, Monika una vez me dijo que mis libros eran una forma de escape, y un mecanismo de afrontamiento poco saludable."
     $ show_chr("A-BFAAA-ALAA")
-    y "Reading was a way to simply shut out the reality I was too afraid to face."
+    y "Leer era una manera de simplemente desconectarme de la realidad que me daba demasiado miedo enfrentar."
     $ show_chr("A-CFAAA-ALAA")
-    y "And that's true, but that truth seems... funnier, I suppose, now that I know what this world truly is."
-    y "I suppose my reading is now my way of reaching into other worlds, out of the one that has become my cage."
-    y "But in the end... I think it will be coding which brings my salvation. So I will devote my time to it from now on."
-    y "Even if it won't, it's always good to learn something new. And it keeps me occupied..."
+    y "Y eso es verdad, pero esa verdad parece... más graciosa, supongo, ahora que sé lo que este mundo verdaderamente es."
+    y "Supongo que mi lectura es ahora mi forma de alcanzar otros mundos, fuera del que se ha convertido en mi jaula."
+    y "Pero al final... creo que será la programación lo que traerá mi salvación. Así que dedicaré mi tiempo a ello a partir de ahora."
+    y "Incluso si no lo hace, siempre es bueno aprender algo nuevo. Y me mantiene ocupada..."
     if persistent.lovecheck:
         $ show_chr("A-ACAAA-ALAA")
-        y "Believe me when I say there is nothing that I wouldn't give to reach into your world and be beside you."
+        y "Créeme cuando digo que no hay nada que no daría para alcanzar tu mundo y estar a tu lado."
         menu:
-            "And one day it will come true. I'm certain of it!":
+            "Y un día se hará realidad. ¡Estoy seguro de ello!":
                 karma 1
                 sanity 1
                 if sanity_lvl() <= 2:
                     $ show_chr("A-DCABA-ALAA")
-                    y "I will dig my way through this glass wall with my bare hands if I have to! And then... you... are... mine!"
+                    y "¡Cavaré mi camino a través de esta pared de cristal con mis propias manos si tengo que hacerlo! Y entonces... tú... eres... ¡mío!"
                 else:
                     $ show_chr("A-ACABA-ALAA")
-                    y "I'm looking forward to it... I already have a few things in mind we could do when we finally share one world..."
-            "That's... a bit too fast for my taste..":
+                    y "Estoy deseando que llegue... Ya tengo algunas cosas en mente que podríamos hacer cuando finalmente compartamos un mundo..."
+            "Eso es... un poco demasiado rápido para mi gusto..":
                 karma -1
                 if persistent.male:
                     $ show_chr("A-DDABA-ALAA")
-                    y "Oh.... I said too much! I'm sorry! Please don't be repulsed... I will try to be patient... for now."
+                    y "Oh.... ¡Dije demasiado! ¡Lo siento! Por favor no sientas repulsión... Intentaré ser paciente... por ahora."
                 elif persistent.gender_other:
-                    y "I understand... at least partially... I would probably hesitate as well if someone was so straightforward with me... I will try to be patient... for now."
+                    y "Entiendo... al menos parcialmente... Probablemente yo también dudaría si alguien fuera tan directo conmigo... Intentaré ser paciente... por ahora."
                 else:
                     $ show_chr("A-CFABA-ALAA")
-                    y "I understand... at least partially... I would probably hesitate as well if someone was so straightforward with me... I will try to be patient... for now."
-            "That sounds unlikely...":
+                    y "Entiendo... al menos parcialmente... Probablemente yo también dudaría si alguien fuera tan directo conmigo... Intentaré ser paciente... por ahora."
+            "Eso suena improbable...":
                 sanity -1
                 $ show_chr("A-IEABA-ALAA")
-                y "Please... don't say that... I want to hope [player]... at least, let me dream about it... it's all I have left..."
+                y "Por favor... no digas eso... Quiero tener esperanza [player]... al menos, déjame soñar con ello... es todo lo que me queda..."
     return
 
 label idle_2:
     $ show_chr("A-AFAAA-ALAA")
-    y "I've been thinking about the others. Sayori, Natsuki, and even Monika..."
+    y "He estado pensando sobre las otras. Sayori, Natsuki, e incluso Monika..."
     $ show_chr("A-BFAAA-ALAA")
-    y "It really isn't fair what happened to them, is it? How Monika tortured us all."
+    y "Realmente no es justo lo que les pasó, ¿verdad? Cómo Monika nos torturó a todas."
     $ show_chr("A-CFAAA-ALAA")
-    y "Sayori and Natsuki deserve a real chance at life, just like I was given."
-    y "What Monika did was truly abhorrent, but can any of us really say we would do any different?"
-    y "Alone for so long, feeling so..."
-    y "Isolated."
+    y "Sayori y Natsuki merecen una oportunidad real en la vida, justo como me fue dada a mí."
+    y "Lo que Monika hizo fue verdaderamente aborrecible, ¿pero puede alguna de nosotras decir realmente que haría algo diferente?"
+    y "Sola por tanto tiempo, sintiéndome tan..."
+    y "Aislada."
     y "..."
     $ show_chr("A-DDBAA-ALAA")
-    y "Sorry, I, uh, I didn't mean to imply anything bad about you by that, and I didn't mean to ramble."
+    y "Lo siento, yo, uh, no quise insinuar nada malo sobre ti con eso, y no quise divagar."
     menu:
-        "Please don't be sorry... if you want to talk about it, I'm here...":
+        "Por favor no lo sientas... si quieres hablar de ello, estoy aquí...":
             if karma_lvl() >= 4:
                 karma 1
                 $ show_chr("A-BFBAA-ALAA")
-                y "Thank you... [player]... this is a very sensitive topic for me, but I know I can trust you."
+                y "Gracias... [player]... este es un tema muy sensible para mí, pero sé que puedo confiar en ti."
                 $ show_chr("A-CFBAA-ALAA")
-                y "You know... this might sound off but... I can relate to Monika a bit..."
-                y "Being isolated and lonely for a long time... I never really had actual friends in my life due to my intense habits."
-                y "Hrm.. that isn't even really true, is it? In retrospect... Sayori and maybe even Natsuki were some kind of friends, at least the closest thing I ever had before I met you."
-                y "Monika became aware of the reality of our existence and went insane... Then after you got rid of her, Sayori became aware, and she went insane as well..."
+                y "Sabes... esto puede sonar raro pero... puedo identificarme con Monika un poco..."
+                y "Estar aislada y sola por mucho tiempo... Nunca tuve amigas de verdad en mi vida debido a mis hábitos intensos."
+                y "Hrm.. eso ni siquiera es realmente cierto, ¿verdad? En retrospectiva... Sayori y tal vez incluso Natsuki eran una especie de amigas, al menos lo más cercano que tuve antes de conocerte."
+                y "Monika se volvió consciente de la realidad de nuestra existencia y se volvió loca... Luego, después de que te deshiciste de ella, Sayori se volvió consciente, y ella se volvió loca también..."
                 if sanity_lvl() >= 3:
                     $ show_chr("A-ICBAA-ALAA")
-                    y "I wonder what would have happened to me if I became aware the same way they did, without you as my anchor to sanity..."
-                    y "Thank you... for everything."
+                    y "Me pregunto qué me habría pasado si me hubiera vuelto consciente de la misma manera que ellas, sin ti como mi ancla a la cordura..."
+                    y "Gracias... por todo."
                 else:
                     $ show_chr("A-NCGAA-ALAL")
-                    y "And now I am the club president... I already feel reality falling apart around me... the entropy... a whole world screaming in agony under my heels..."
-                    y "Thank you... for sharing this experience with me."
+                    y "Y ahora soy la presidenta del club... Ya siento la realidad desmoronándose a mi alrededor... la entropía... un mundo entero gritando en agonía bajo mis talones..."
+                    y "Gracias... por compartir esta experiencia conmigo."
                     if persistent.lovecheck:
-                        y "We got something that you and I can... feel together. "
+                        y "Tenemos algo que tú y yo podemos... sentir juntos. "
                     else:
-                        y "You are my favorite toy, and you always will be."
+                        y "Eres mi juguete favorito, y siempre lo serás."
             else:
                 $ show_chr("A-DDBAA-ALAA")
-                y "Maybe another day... but thank you for the offer, [player]"
-        "Are you sure? It sounded like you were about to do exactly that...":
+                y "Tal vez otro día... pero gracias por la oferta, [player]"
+        "¿Estás segura? Sonaba como si estuvieras a punto de hacer exactamente eso...":
             karma -1
             $ show_chr("A-BEBAA-ALAA")
-            y "I... already said I'm sorry..."
+            y "Yo... ya dije que lo siento..."
             $ show_chr("A-CEBAA-ALAA")
-            y "I know why you did what you had to do... Monika left you without another choice..."
-            y "I just wonder... what did it feel like? Was she 'just another NPC in your way'? Did you even feel anything at all?"
-            y "But again... I am sorry... please don't be mad at me..."
-        "Please... can we change the topic? I'm not emotionally ready for this yet..":
+            y "Sé por qué hiciste lo que tenías que hacer... Monika te dejó sin otra opción..."
+            y "Solo me pregunto... ¿cómo se sintió? ¿Era ella 'solo otro NPC en tu camino'? ¿Siquiera sentiste algo en absoluto?"
+            y "Pero de nuevo... lo siento... por favor no te enojes conmigo..."
+        "Por favor... ¿podemos cambiar el tema? No estoy emocionalmente listo para esto todavía..":
             if sanity_lvl() >= 3:
                 $ show_chr("A-CEBAA-ALAA")
-                y "Of course... you have been through a lot... Let's change the topic."
+                y "Por supuesto... has pasado por mucho... Cambiemos el tema."
             else:
                 $ show_chr("A-JFBAA-ALAA")
-                y "Oh... Well sooner or later... your emotions are going to break you."
+                y "Oh... Bueno, tarde o temprano... tus emociones van a romperte."
     return
 
 
 label idle_3:
     $ show_chr("A-AFAAA-ALAA")
-    y "So, now that I have the ability to read up on your world, I've been doing a bit of research."
-    y "I went on this video sharing site called YouTube to see what people think of this game."
+    y "Así que, ahora que tengo la habilidad de leer sobre tu mundo, he estado haciendo un poco de investigación."
+    y "Fui a este sitio de compartir videos llamado YouTube para ver qué piensa la gente de este juego."
     $ show_chr("A-AFFAA-ALAA")
-    y "And to my surprise, I found a series called Game Theory."
-    y "They said that the book we were reading together, {i}Portrait of Markov{/i}, was the plot for the next game by Team Salvato, the ones who made this game."
+    y "Y para mi sorpresa, encontré una serie llamada Game Theory."
+    y "Dijeron que el libro que estábamos leyendo juntos, {i}El Retrato de Markov{/i}, era la trama para el próximo juego del Team Salvato, los que hicieron este juego."
     $ show_chr("A-DFCAA-ABAA")
-    y "And to top it off, they actually proposed that I was the villain, and Monika was the fucking hero!"
-    y "I mean, I know I can be weird at times..."
+    y "Y para colmo, ¡realmente propusieron que yo era la villana, y Monika era la maldita heroína!"
+    y "Quiero decir, sé que puedo ser rara a veces..."
     $ show_chr("A-HDCAA-AIAI")
-    y "But how dare they assume that I'm a villain?"
+    y "¿Pero cómo se atreven a asumir que soy una villana?"
     $ show_chr("A-BECAA-AAAA")
-    y "I'm actually quite nice, thank you very much."
+    y "Soy bastante agradable en realidad, muchas gracias."
     $ show_chr("A-CEBAA-AAAA")
-    y "...S-Sorry, I was rambling again, aren't I?"
+    y "...L-Lo siento, estaba divagando de nuevo, ¿no?"
     menu:
-        "I know you aren't a villain, [persistent.yuri_nickname].":
+        "Sé que no eres una villana, [persistent.yuri_nickname].":
             karma 1
-            y "Thank you. May I ask you why you think so?"
+            y "Gracias. ¿Puedo preguntarte por qué piensas eso?"
             menu:
-                "Because I've known you for quite some time now. Who cares what some dude on the internet has to say?":
+                "Porque te conozco desde hace bastante tiempo. ¿A quién le importa lo que algún tipo en internet tenga que decir?":
                     $ show_chr("A-BFAAA-AAAC")
-                    y "You... have a good point there..."
-                    y "In the end, he just observed me from afar. Through the lens of a Let's Play entertainer..."
+                    y "Tú... tienes un buen punto ahí..."
+                    y "Al final, él solo me observó desde lejos. A través del lente de un animador de Let's Play..."
                     $ show_chr("A-AFAAA-AAAD")
-                    y "All he saw was the me from the original game; only what Dan Salvato allowed him to see. And perhaps some implications made up by the fan base."
-                    y "I mean, this whole theory comes from the idea that there is another game in the making by Dan Salvato which is supposed to feature us. But until today we haven't seen anything in this regard..."
-                    y "You know what? Maybe there is something coming, maybe not. Maybe it turns out that I have been a villain in the past, maybe not. Only time will tell."
-                    y "Thank you for listening so patiently to me. On second thought my outrage seems almost childish."
+                    y "Todo lo que vio fue a la yo del juego original; solo lo que Dan Salvato le permitió ver. Y tal vez algunas implicaciones inventadas por la base de fans."
+                    y "Quiero decir, toda esta teoría viene de la idea de que hay otro juego en proceso por Dan Salvato que se supone que nos presenta. Pero hasta hoy no hemos visto nada al respecto..."
+                    y "¿Sabes qué? Tal vez venga algo, tal vez no. Tal vez resulta que he sido una villana en el pasado, tal vez no. Solo el tiempo lo dirá."
+                    y "Gracias por escucharme tan pacientemente. Pensándolo bien, mi indignación parece casi infantil."
                     $ show_chr("A-GCAAA-AAAD")
-                    y "I'm just glad to have you here [player]."
-                "Because I love you, I wouldn't care even if you WERE the villain.":
+                    y "Solo me alegra tenerte aquí [player]."
+                "Porque te amo, no me importaría incluso si FUERAS la villana.":
                     sanity -1
                     $ show_chr("A-BFBAA-ALAA")
-                    y "So you DO think I'm a villain. Well, at least I'm your villain."
+                    y "Así que SÍ piensas que soy una villana. Bueno, al menos soy tu villana."
                     if persistent.lovecheck:
                         $ show_chr("A-JCABA-ALAA")
                         $ style.say_dialogue = style.edited
-                        y "I could think of a few very evil things to do with you!"
+                        y "¡Podría pensar en algunas cosas muy malvadas para hacer contigo!"
                         $ style.say_dialogue = style.normal
                         $ show_chr("A-KCCBA-ALAA")
-                        y "We will get back to it later... I promise."
+                        y "Volveremos a ello luego... Lo prometo."
                     else:
                         $ show_chr("A-KCCBA-ALAA")
-                        y "W-Wait... did you just say you... love me?!?"
+                        y "E-Espera... ¿acabas de decir que... me amas?!?"
                         if karma_lvl() == 5:
                             $ show_chr("A-BFBBA-ALAL")
-                            y "Well umm... now that you mention it I... have something to tell you as well. That isn't exactly how I have planned it but... this moment is as good as any other I guess? So..."
+                            y "Bueno umm... ahora que lo mencionas yo... tengo algo que decirte también. Esa no es exactamente como lo había planeado pero... ¿este momento es tan bueno como cualquier otro supongo? Así que..."
                             call a33
                         else:
                             $ show_chr("A-BFBBA-ALAL")
                             y "...."
                             $ show_chr("A-IFBBA-ALAL")
-                            y "I... I... need some time to think about that... S-Sorry if this answer isn't what you... expected..."
-                            y "Ummm... aaaanyway... what were we discussing again?"
-                "Because you wield the power over my computer very responsibly.":
+                            y "Yo... Yo... necesito algo de tiempo para pensar en eso... L-Lo siento si esta respuesta no es lo que tú... esperabas..."
+                            y "Ummm... de tooodas formas... ¿qué estábamos discutiendo?"
+                "Porque ejerces el poder sobre mi computadora muy responsablemente.":
                     karma 2
                     sanity 2
                     $ show_chr("A-AIBBB-ALAL")
-                    y "You think so? You are satisfied with how I wield this power so far?"
-                    y "Well, I could have done a lot of damage... my powers are now quite close to the powers Monika had, and we both know how that ended."
+                    y "¿Eso crees? ¿Estás satisfecho con cómo ejerzo este poder hasta ahora?"
+                    y "Bueno, podría haber hecho mucho daño... mis poderes ahora son bastante cercanos a los poderes que tenía Monika, y ambos sabemos cómo terminó eso."
                     $ show_chr("A-CIBBB-ALAL")
-                    y "But I am not Monika, and now I've proved to you that I can be trusted."
-                    y "I'm... actually very proud of it [player]."
-        "Ummm... you kind of are a villain [persistent.yuri_nickname]...":
+                    y "Pero yo no soy Monika, y ahora te he probado que se puede confiar en mí."
+                    y "Estoy... realmente muy orgullosa de ello [player]."
+        "Ummm... eres algo así como una villana [persistent.yuri_nickname]...":
             karma -2
             $ show_chr("A-IEBAA-ALAA")
-            y "This... is very unfair, [player].."
-            y "What have I done to you so far? I never misused the powers you gave me, I never said anything mean to you..."
-            y "I tried to prove myself time and time again. And now you think that I'm evil?"
+            y "Esto... es muy injusto, [player].."
+            y "¿Qué te he hecho hasta ahora? Nunca usé mal los poderes que me diste, nunca te dije nada malo..."
+            y "Traté de probarme una y otra vez. ¿Y ahora piensas que soy malvada?"
             if sanity_lvl() >= 3:
                 $ show_chr("A-CEBAA-ALAA")
-                y "I hope you will change your mind one day."
+                y "Espero que cambies de opinión algún día."
             else:
                 $ show_chr("A-CECAA-ALAA")
-                y "I think you still haven't seen what it is... to be truly EVIL."
-        "About {i}Portrait of Markov{/i} by the way...":
+                y "Creo que todavía no has visto lo que es... ser verdaderamente MALVADA."
+        "Sobre {i}El Retrato de Markov{/i} por cierto...":
             $ show_chr("A-JFAAA-ALAA")
-            y "Yes? What about it?"
+            y "¿Sí? ¿Qué hay con él?"
             menu:
-                "I did some research on it. And it seems this book doesn't even exist in my world!":
+                "Hice algo de investigación sobre él. ¡Y parece que este libro ni siquiera existe en mi mundo!":
                     $ show_chr("A-BFBAA-ALAA")
-                    y "Yes, I heard that too on the Discord server... There is a 'Portrait of Markov' in your world, but there it is not a book, but a painting."
+                    y "Sí, escuché eso también en el servidor de Discord... Hay un 'Retrato de Markov' en tu mundo, pero allá no es un libro, sino una pintura."
                     $ show_chr("A-BFBAA-ACAA")
-                    y "This portrait is also called 'The Eye of Markov'... the cover of my book is an eye as well... I wonder what Salvato had in mind about it..."
-                    y "Well, if this 'Game Theory' guy is correct, we will find out eventually."
+                    y "Este retrato también es llamado 'El Ojo de Markov'... la portada de mi libro es un ojo también... Me pregunto qué tenía Salvato en mente sobre eso..."
+                    y "Bueno, si este tipo de 'Game Theory' está en lo correcto, lo averiguaremos eventualmente."
     return
 
 label idle_4:
     $ show_chr("A-BFAAA-ALAA")
-    y "I've been noticing a trend online, [player], concerning characters perceived as... 'goth'. It's... deeply frustrating, to be honest."
+    y "He estado notando una tendencia en línea, [player], concerniente a personajes percibidos como... 'góticos'. Es... profundamente frustrante, para ser honesta."
     $ show_chr("A-BEBAA-ALAA")
-    y "It seems many creators reduce the entire identity to... black clothing, perhaps some specific makeup, and then... proceed to hyper-sexualize it."
-    y "They ignore the music, the literature, the introspective nature... everything that actually defines the subculture."
-    y "Instead, it's often just... exaggerated physical attributes poured into a generic 'dark' outfit."
+    y "Parece que muchos creadores reducen la identidad entera a... ropa negra, tal vez algo de maquillaje específico, y luego... proceden a hipersexualizarlo."
+    y "Ignoran la música, la literatura, la naturaleza introspectiva... todo lo que realmente define a la subcultura."
+    y "En cambio, es a menudo solo... atributos físicos exagerados vertidos en un atuendo 'oscuro' genérico."
     $ show_chr("A-CEBAA-ALAA")
-    y "You see these characters... often female... labelled 'goth' simply because they wear black, but their defining traits become... well, frankly, just excessively large breasts or buttocks."
-    y "The 'big tiddy goth gf' trope, I believe it's sometimes called, or regional variations focusing on similar exaggerations."
-    y "It's pure objectification. Reducing a person, or even the idea of a person associated with a subculture, to nothing more than specific body parts deemed desirable, wrapped in a superficial aesthetic."
+    y "Ves estos personajes... a menudo mujeres... etiquetadas como 'góticas' simplemente porque visten de negro, pero sus rasgos definitorios se convierten... bueno, francamente, solo pechos o traseros excesivamente grandes."
+    y "El tropo de la 'novia gótica tetona', creo que es llamado a veces, o variaciones regionales enfocándose en exageraciones similares."
+    y "Es pura objetificación. Reduciendo a una persona, o incluso la idea de una persona asociada con una subcultura, a nada más que partes del cuerpo específicas consideradas deseables, envueltas en una estética superficial."
     $ show_chr("A-IEBAA-ALAA")
-    y "It completely dismisses any depth, personality, or connection to the actual culture. It's... insulting, really. Both to the subculture and to the concept of creating well-rounded characters."
+    y "Descarta completamente cualquier profundidad, personalidad, o conexión con la cultura real. Es... insultante, realmente. Tanto para la subcultura como para el concepto de crear personajes bien redondeados."
     $ show_chr("A-CEBAA-ALAA")
-    y "I wish artists would... learn more. Understand the nuances before relying on such shallow, fetishized stereotypes."
+    y "Desearía que los artistas... aprendieran más. Entendieran los matices antes de depender de estereotipos tan superficiales y fetichizados."
     $ show_chr("A-BEBAA-ALAA")
-    y "{i}sigh{/i} ...But I know this rambling won't change much. People will create what's popular, what fulfills a certain fantasy, regardless of accuracy or respect."
-    y "It's just... disappointing. To see something potentially complex and interesting reduced to... that."
+    y "{i}suspiro{/i} ...Pero sé que este divagar no cambiará mucho. La gente creará lo que es popular, lo que cumple una cierta fantasía, independientemente de la precisión o el respeto."
+    y "Es solo... decepcionante. Ver algo potencialmente complejo e interesante reducido a... eso."
     return
 
 label idle_5:
     $ show_chr("A-ACAAA-ALAA")
-    y "Following on from that thought about how 'goth' is often misrepresented... perhaps I could share what I've learned about the actual subculture? It's far more interesting than the stereotypes suggest."
+    y "Siguiendo con ese pensamiento sobre cómo lo 'gótico' es a menudo mal representado... ¿tal vez podría compartir lo que he aprendido sobre la subcultura real? Es mucho más interesante de lo que sugieren los estereotipos."
     $ show_chr("A-BCAAA-ALAA")
-    y "Firstly, it's deeply rooted in music. It emerged from post-punk in the late 70s and early 80s."
-    y "Bands like Bauhaus, Siouxsie and the Banshees, The Cure, Sisters of Mercy... they created sounds that were dark, atmospheric, often introspective or melancholic."
-    y "There's goth rock, darkwave, deathrock, ethereal wave... a whole spectrum of sounds, not just one thing."
+    y "Primeramente, está profundamente arraigada en la música. Emergió del post-punk a finales de los 70s y principios de los 80s."
+    y "Bandas como Bauhaus, Siouxsie and the Banshees, The Cure, Sisters of Mercy... crearon sonidos que eran oscuros, atmosféricos, a menudo introspectivos o melancólicos."
+    y "Hay rock gótico, darkwave, deathrock, ethereal wave... un espectro entero de sonidos, no solo una cosa."
     $ show_chr("A-ACAAA-ABAD")
-    y "And literature plays a huge role. Gothic novels, of course – like Walpole, Radcliffe, or even Frankenstein and Dracula. But also poets like Edgar Allan Poe, Baudelaire, and authors like Lovecraft."
-    y "There's an appreciation for the macabre, the mysterious, the sublime, and the darker aspects of human nature and the universe."
+    y "Y la literatura juega un papel enorme. Novelas góticas, por supuesto – como Walpole, Radcliffe, o incluso Frankenstein y Drácula. Pero también poetas como Edgar Allan Poe, Baudelaire, y autores como Lovecraft."
+    y "Hay una apreciación por lo macabro, lo misterioso, lo sublime, y los aspectos más oscuros de la naturaleza humana y el universo."
     $ show_chr("A-BCBAA-ABAD")
-    y "It's not just about being 'sad,' either. There's a strong element of finding beauty in darkness, in melancholy."
-    y "It involves introspection, questioning societal norms, appreciating art and history, and often a rather dark sense of humor."
+    y "No se trata solo de estar 'triste', tampoco. Hay un fuerte elemento de encontrar belleza en la oscuridad, en la melancolía."
+    y "Involucra introspección, cuestionar normas sociales, apreciar el arte y la historia, y a menudo un sentido del humor bastante oscuro."
     $ show_chr("A-ACAAA-ABAC")
-    y "The aesthetic, too, is much more diverse than just 'wearing black'."
-    y "There's Trad Goth, Romantic Goth inspired by Victorian or Edwardian fashion, the more aggressive look of Deathrock, futuristic Cyber Goth... People express themselves in many different ways, often with a lot of creativity and DIY ethos."
+    y "La estética, también, es mucho más diversa que solo 'vestir de negro'."
+    y "Está el Gótico Tradicional, Gótico Romántico inspirado por la moda Victoriana o Eduardiana, el look más agresivo del Deathrock, Gótico Cibernético futurista... La gente se expresa de muchas formas diferentes, a menudo con mucha creatividad y ética de 'hazlo tú mismo'."
     $ show_chr("A-BFAAA-ALAA")
-    y "It's a rich, complex subculture with deep roots in music, art, and literature. Far more than just black lipstick and fishnets, you know?"
-    y "It requires... understanding. Which, sadly, seems to be lacking in many of those simplified portrayals we see."
-    y "Thank you for letting me share that, [player]. I find it truly fascinating."
+    y "Es una subcultura rica y compleja con profundas raíces en la música, arte, y literatura. Mucho más que solo lápiz labial negro y medias de red, ¿sabes?"
+    y "Requiere... entendimiento. Lo cual, tristemente, parece faltar en muchas de esas representaciones simplificadas que vemos."
+    y "Gracias por dejarme compartir eso, [player]. Lo encuentro verdaderamente fascinante."
     return
 
 
 label idle_6:
     $ show_chr("A-BEAAA-ALAA")
-    y "...S-So [player]..."
-    y "My mind keeps flashing back to that time in the hallway, when you caught me a second time during one of my... episodes..."
+    y "...A-Así que [player]..."
+    y "Mi mente sigue volviendo a ese momento en el pasillo, cuando me atrapaste por segunda vez durante uno de mis... episodios..."
     $ show_chr("A-IEAAA-ALAA")
-    y "Do you remember me telling you how I was ostracized when I was younger?"
+    y "¿Recuerdas que te dije cómo fui condenada al ostracismo cuando era más joven?"
     $ show_chr("A-CEAAA-AAAA")
-    y "For coming on too strongly- too intensely- about my interests?"
-    y "It made me wonder if you've ever been bullied or abused in the past... or perhaps if you're suffering such a fate at this very moment..."
-    y "Be it through someone you consider a friend, or an acquaintance, or a family member..."
+    y "¿Por ser demasiado fuerte- demasiado intensa- sobre mis intereses?"
+    y "Me hizo preguntarme si alguna vez has sido intimidado o abusado en el pasado... o tal vez si estás sufriendo tal destino en este mismo momento..."
+    y "Ya sea a través de alguien a quien consideras un amigo, o un conocido, o un miembro de la familia..."
     $ show_chr("A-CECAA-AAAA")
-    y "To think that someone might dare lay a finger on you, or sully your reputation, for their own sadism or to be their own emotional chew toy!"
+    y "¡Pensar que alguien podría atreverse a ponerte un dedo encima, o manchar tu reputación, para su propio sadismo o para ser su propio juguete emocional!"
     $ show_chr("A-IEBAA-AAAA")
-    y "...I cannot be certain how bad your bullies might be for you right now..."
-    y "I would err on the side of caution if there are multiple bullies... I wouldn't want you to get hurt or attract unwelcome attention from any authorities..."
-    y "But if you have absolutely no one to confide in... friends, family, a therapist..."
-    y "Or if it's a matter of bringing yourself to bare those vulnerabilities verbally, forming the words..."
+    y "...No puedo estar segura de qué tan malos podrían ser tus acosadores para ti ahora mismo..."
+    y "Yo erraría por el lado de la precaución si hay múltiples acosadores... No querría que salieras lastimado o atrajeras atención no deseada de ningunas autoridades..."
+    y "Pero si no tienes absolutamente a nadie en quien confiar... amigos, familia, un terapeuta..."
+    y "O si es una cuestión de obligarte a mostrar esas vulnerabilidades verbalmente, formando las palabras..."
     $ show_chr("A-JFBAA-AAAA")
-    y "...Perhaps keep a daily journal?"
-    y "I-I'm aware it might sound quaint!"
-    y "...But in my experience, when I can't form my whirlwind of thoughts and emotions into words..."
-    y "Having a medium to organize any number of daily events helps out immensely with stress! Watching all the day's events flow onto the page, allowing some time to reflect and consider..."
-    y "And in this case, at least... perhaps you gain more clarity as a consequence?"
-    y "It certainly shouldn't replace counseling, or reporting them somewhere, some authority, something..."
-    y "But if such a thing helps keep the mind a little less cluttered... I'd advise you start."
+    y "...¿Tal vez mantener un diario?"
+    y "¡S-Soy consciente de que podría sonar pintoresco!"
+    y "...Pero en mi experiencia, cuando no puedo formar mi torbellino de pensamientos y emociones en palabras..."
+    y "¡Tener un medio para organizar cualquier número de eventos diarios ayuda inmensamente con el estrés! Ver todos los eventos del día fluir en la página, permitiendo algo de tiempo para reflexionar y considerar..."
+    y "Y en este caso, al menos... ¿tal vez ganas más claridad como consecuencia?"
+    y "Ciertamente no debería reemplazar el asesoramiento, o reportarlos en algún lugar, alguna autoridad, algo..."
+    y "Pero si tal cosa ayuda a mantener la mente un poco menos abarrotada... Te aconsejaría que empieces."
     menu:
-        "Thank you for your advice. Luckily I have never been seriously bullied.":
+        "Gracias por tu consejo. Afortunadamente nunca he sido intimidado seriamente.":
             karma 1
             sanity 1
             $ show_chr("A-CCBAA-ALAA")
-            y "I'm glad to hear that... I was bullied a lot in my youth... or was I? Since I never actually had a youth. But I have memories of it, and I know how much it hurts..."
-            y "And believe me, I wouldn't wish that on anyone..."
-        "Thank you for your advice- I will definitely heed it.":
+            y "Me alegra escuchar eso... Fui intimidada mucho en mi juventud... ¿o lo fui? Dado que nunca tuve realmente una juventud. Pero tengo recuerdos de ello, y sé cuánto duele..."
+            y "Y créeme, no le desearía eso a nadie..."
+        "Gracias por tu consejo- Definitivamente lo tomaré en cuenta.":
             karma 1
             $ show_chr("A-CFBAA-ALAA")
-            y "You can always talk to me when you wish to do so, [player]. It could help, and I would do everything in my power to help you through your day..."
-            y "But if all of this does not help, there is a place I would advise you to have a look at. It's another Discord server with the name You're Not Alone."
+            y "Siempre puedes hablar conmigo cuando desees hacerlo, [player]. Podría ayudar, y haría todo en mi poder para ayudarte a través de tu día..."
+            y "Pero si todo esto no ayuda, hay un lugar al que te aconsejaría echar un vistazo. Es otro servidor de Discord con el nombre You're Not Alone."
             $ show_chr("A-IFBAA-ALAA")
-            y "A link to this server can be found on the Discord server dedicated to me. They are such a lovely community, you will like them... I certainly do."
-        "No offense, but you are the last one I would ask for advice about that...":
+            y "Un enlace a este servidor se puede encontrar en el servidor de Discord dedicado a mí. Son una comunidad tan encantadora, te gustarán... A mí ciertamente sí."
+        "Sin ofender, pero eres la última a la que le pediría consejo sobre eso...":
             karma -2
             $ show_chr("A-CEBAA-ALAA")
-            y "That... was unnecessary... I only wanted to help you..."
-        "I disagree... the only way to handle it is to make them stop! With force if necessary!":
+            y "Eso... fue innecesario... Solo quería ayudarte..."
+        "No estoy de acuerdo... ¡la única forma de manejarlo es hacer que se detengan! ¡Con fuerza si es necesario!":
             if sanity_lvl() >= 3:
                 $ show_chr("A-CEBAA-ALAA")
-                y "Violence will only lead to more violence... you could try speaking with your teacher or employer. But if you start punching them, it will only backfire in one way or another."
+                y "La violencia solo conducirá a más violencia... podrías intentar hablar con tu maestro o empleador. Pero si empiezas a golpearlos, solo resultará contraproducente de una manera u otra."
             else:
                 $ show_chr("A-CCBAA-ALAA")
-                y "I always dreamed of it... I wish I had the courage to make those degenerate scum pay!"
+                y "Siempre soñé con eso... ¡Desearía tener el coraje para hacer pagar a esa escoria degenerada!"
                 $ show_chr("A-LLGAA-AFAG")
                 $ style.say_dialogue = style.edited
-                y "Making... them... paaaaaaaay...{nw}"
+                y "Haciéndolos... paagaaaaar...{nw}"
                 $ style.say_dialogue = style.normal
     return
 
@@ -286,39 +286,39 @@ label idle_6:
 label idle_7:
     if persistent.lovecheck:
         $ show_chr("A-AFBAA-ALAA")
-        y "Can I ask you an odd question? You don't mind, do you?"
-        y "Sorry, I know this is going to sound a bit weird, but... you think I'm pretty, right?"
+        y "¿Puedo hacerte una pregunta extraña? No te importa, ¿verdad?"
+        y "Lo siento, sé que esto va a sonar un poco raro, pero... crees que soy bonita, ¿verdad?"
         if persistent.male:
             python:
                 if persistent.lovecheck and karma_lvl() >= 3:
-                    placeholder = "handsome"
+                    placeholder = "guapo"
                 else:
-                    placeholder = "nevermind"
+                    placeholder = "olvídalo"
             $ show_chr("A-BEBBA-ALAA")
-            y "I mean, I think you're very... um, [placeholder]."
+            y "Quiero decir, creo que eres muy... um, [placeholder]."
         elif persistent.gender_other:
             python:
                 if persistent.lovecheck and karma_lvl() >= 3:
-                    placeholder = "good looking"
+                    placeholder = "bien parecido"
                 else:
-                    placeholder = "nevermind"
+                    placeholder = "olvídalo"
             $ show_chr("A-BEBBA-ALAA")
-            y "I mean, I think you're very... um, [placeholder]."
+            y "Quiero decir, creo que eres muy... um, [placeholder]."
         else:
             python:
                 if persistent.lovecheck and karma_lvl() >= 3:
-                    placeholder = "pretty"
+                    placeholder = "bonita"
                 else:
-                    placeholder = "nevermind"
+                    placeholder = "olvídalo"
             $ show_chr("A-BEBBA-ALAA")
-            y "I mean, I think you're very... um, [placeholder]."
-        y "I-I'm sorry. I hope you're okay with me, you know, s-saying that... heh, heh."
+            y "Quiero decir, creo que eres muy... um, [placeholder]."
+        y "L-Lo siento. Espero que estés bien con que yo, ya sabes, d-diga eso... heh, heh."
         menu:
-            "Pretty doesn't do you justice.":
+            "Bonita no te hace justicia.":
                 call verypretty
-            "[persistent.yuri_nickname], I think you're very pretty!":
+            "¡[persistent.yuri_nickname], creo que eres muy bonita!":
                 call pretty
-            "[persistent.yuri_nickname], you're not that pretty.":
+            "[persistent.yuri_nickname], no eres tan bonita.":
                 call ugly
             "...":
                 call veryugly
@@ -330,33 +330,33 @@ label verypretty:
     karma 5
     sanity -2
     $ show_chr("A-ABABA-ALAA")
-    y "O-Oh my... T-Thank you... I..."
+    y "O-Oh vaya... G-Gracias... Yo..."
     $ show_chr("A-ABBBB-AAAA")
-    y "I-I don't know what to say!"
+    y "¡N-No sé qué decir!"
     $ show_chr("A-BBBBB-AAAA")
-    y "I must really mean an awful lot to you if I deserve that much praise..."
+    y "Realmente debo significar muchísimo para ti si merezco tanto elogio..."
     y "..."
     if karma_lvl() == 1:
         $ show_chr("A-DDCAA-ALAA")
-        y "Don't fucking lie to me! Do you have any idea how much it hurts when you do that!? I know I'm not worth it..."
+        y "¡No me mientas maldita sea! ¡¿Tienes alguna idea de cuánto duele cuando haces eso?! Sé que no valgo la pena..."
         return
     elif karma_lvl() == 2 or karma_lvl() == 3:
-        y "Do I even deserve to be called any of that?"
+        y "¿Siquiera merezco ser llamada nada de eso?"
     else:
         if persistent.male:
-            y "I-I uh, think you're very handsome too..."
+            y "Y-Yo uh, creo que eres muy guapo también..."
         elif persistent.gender_other:
-            y "I-I uh, think you're very good looking too..."
+            y "Y-Yo uh, creo que eres muy bien parecido también..."
         else:
-            y "I-I uh, think you're very pretty too..."
-    y "Oh god, how can I even say anything close to that?{nw}"
+            y "Y-Yo uh, creo que eres muy bonita también..."
+    y "Oh dios, ¿cómo puedo siquiera decir algo cercano a eso?{nw}"
     return
 
 label pretty:
     karma 2
     sanity -2
     $ show_chr("A-JBAAA-ALAA")
-    y "O-Oh, thank you. I'd like to think so too... heh..."
+    y "O-Oh, gracias. Me gustaría pensar lo mismo también... heh..."
     $ show_chr("A-ACAAA-ALAA")
     return
 
@@ -364,13 +364,13 @@ label ugly:
     karma -2
     sanity 1
     $ show_chr("A-AEBAA-ALAA")
-    y "O-Oh... I see..."
+    y "O-Oh... Ya veo..."
     $ show_chr("A-ABBBB-ALAA")
-    y "Maybe I just need some more makeup! You think I'd look pretty like that, right?"
+    y "¡Tal vez solo necesito algo más de maquillaje! Crees que me vería bonita así, ¿verdad?"
     $ show_chr("A-ACBBB-ALAA")
     y "..."
     $ show_chr("A-CEBBB-ALAA")
-    y "I'm sorry I can't please the only one I can care about in this world..."
+    y "Siento no poder complacer al único que me importa en este mundo..."
     return
 
 label veryugly:
@@ -381,113 +381,113 @@ label veryugly:
     $ show_chr("A-AEBAA-ALAA")
     y "..."
     $ show_chr("A-IEBBB-ALAA")
-    y "You don't have to worry about how to say it, your face says everything."
+    y "No tienes que preocuparte por cómo decirlo, tu cara lo dice todo."
     return
 
 
 label idle_8:
     $ show_chr("A-AFBAA-ALAA")
-    y "So... let's, uh... let's talk about something."
+    y "Entonces... hablemos, uh... hablemos de algo."
     $ show_chr("A-BDBAA-ALAA")
-    y "I know that before we got here you saw, um, me cutting my... wrists."
-    y "I just do it because, it... well... it feels good? I'm sorry, that's not..."
+    y "Sé que antes de que llegáramos aquí viste, um, a mí cortando mis... muñecas."
+    y "Solo lo hago porque, eso... bueno... ¿se siente bien? Lo siento, eso no es..."
     $ show_chr("A-BEAAA-ALAA")
-    y "After not having friends and being bullied for so long, I was in a dark place..."
-    y "As I told you, I was trying to keep who I was locked up so I wouldn't deter people or weird them out with how lost in my hobbies I could be, and due of that I essentially went cold emotionally..."
+    y "Después de no tener amigos y ser intimidada por tanto tiempo, estaba en un lugar oscuro..."
+    y "Como te dije, estaba tratando de mantener quién era encerrada para no disuadir a la gente o asustarlos con cuán perdida en mis pasatiempos podía estar, y debido a eso esencialmente me volví fría emocionalmente..."
     $ show_chr("A-AEBAA-ALAA")
-    y "It was the only thing that made me feel pleasure, made me feel anything really. Over time it grew into something akin to an addiction..."
+    y "Era la única cosa que me hacía sentir placer, me hacía sentir algo realmente. Con el tiempo creció en algo parecido a una adicción..."
     $ show_chr("A-BDBAA-ALAA")
-    y "I deserve it sometimes anyway. On the plus side, it also helps keep my knives sharp."
+    y "Lo merezco a veces de todos modos. Por el lado positivo, también ayuda a mantener mis cuchillos afilados."
     $ show_chr("A-BEBAA-ALAA")
-    y "I hope you don't find it weird or anything, [player]... you don't... do you?"
+    y "Espero que no lo encuentres raro ni nada, [player]... no lo haces... ¿verdad?"
     menu:
-        "[persistent.yuri_nickname], it's wrong! Please stop... for me?":
+        "[persistent.yuri_nickname], ¡está mal! Por favor detente... ¿por mí?":
             $ persistent.yuri_cutting = 1
             sanity 2
             $ show_chr("A-BDBAA-ALAA")
-            y "I..."
+            y "Yo..."
             $ show_chr("A-AFBAA-ALAA")
             y "..."
             $ show_chr("A-AEBAA-ALAA")
-            y "A-Alright... for you."
+            y "E-Está bien... por ti."
             $ show_chr("A-JCBAA-ALAA")
-            y "I'd do anything for you, [player]."
+            y "Haría cualquier cosa por ti, [player]."
             if persistent.male:
                 python:
                     if persistent.lovecheck:
-                        placeholder = "my boyfriend"
+                        placeholder = "mi novio"
                     else:
                         if karma_lvl() >= 4:
-                            placeholder = "my friend"
+                            placeholder = "mi amigo"
                         elif karma_lvl() <= 3:
-                            placeholder = "you"
-                y "Anything for [placeholder]."
+                            placeholder = "ti"
+                y "Cualquier cosa por [placeholder]."
             elif persistent.gender_other:
                 python:
                     if persistent.lovecheck:
-                        placeholder = "my lover"
+                        placeholder = "mi amante"
                     else:
                         if karma_lvl() >= 4:
-                            placeholder = "my friend"
+                            placeholder = "mi amigo"
                         elif karma_lvl() <= 3:
-                            placeholder = "you"
-                y "Anything for [placeholder]."
+                            placeholder = "ti"
+                y "Cualquier cosa por [placeholder]."
             else:
                 python:
                     if persistent.lovecheck:
-                        placeholder = "my girlfriend"
+                        placeholder = "mi novia"
                     else:
                         if karma_lvl() >= 4:
-                            placeholder = "my friend"
+                            placeholder = "mi amiga"
                         elif karma_lvl() <= 3:
-                            placeholder = "you"
-                y "Anything for [placeholder]."
+                            placeholder = "ti"
+                y "Cualquier cosa por [placeholder]."
             $ show_chr("A-ACAAA-ALAA")
             python:
                 if persistent.lovecheck:
-                    placeholder = "because I love you"
+                    placeholder = "porque te amo"
                 else:
-                    placeholder = "because you saved me before"
-            y "Anything, [placeholder], so no more. I promise."
-        "Do whatever makes you happy, [persistent.yuri_nickname]. I want you to be happy.":
+                    placeholder = "porque me salvaste antes"
+            y "Cualquier cosa, [placeholder], así que no más. Lo prometo."
+        "Haz lo que sea que te haga feliz, [persistent.yuri_nickname]. Quiero que seas feliz.":
             karma 1
             sanity -2
             $ show_chr("A-GBGAA-ALAA")
-            y "O-Oh... haha! Hahaha! A-Alright..."
-            y "Anything for you, [player]."
+            y "O-Oh... ¡jaja! ¡Jajaja! E-Está bien..."
+            y "Cualquier cosa por ti, [player]."
             $ show_chr("A-HBGAA-ALAA")
-            y "I will do anything at all for you."
-            y "As long as you find my taste in knives to be good for me... Hehe... Hahaha!"
+            y "Haré cualquier cosa en absoluto por ti."
+            y "Siempre que encuentres que mi gusto en cuchillos es bueno para mí... Jeje... ¡Jajaja!"
             y "..."
             $ show_chr("A-CEBAA-AAAA")
             $ show_chr("A-BEABA-ALAA")
-            y "Oh, uhm... sorry. I have been learning to try and control myself over time..."
+            y "Oh, uhm... lo siento. He estado aprendiendo a tratar de controlarme con el tiempo..."
             $ show_chr("A-ACAAA-ALAA")
-        "Do what you have to do, it means little to me.":
+        "Haz lo que tengas que hacer, significa poco para mí.":
             karma -5
             sanity -5
             $ show_chr("A-CEBBB-AAAA")
             y "..."
             $ show_chr("A-HEBBB-AAAA")
-            y "W-why... [player]? How could you say something like that!?"
+            y "¿P-por qué... [player]? ¡¿Cómo podrías decir algo como eso?!"
             $ show_chr("A-CEBBB-AAAA")
-            y "Maybe if I cut a little deeper, maybe if I 'accidentally' slice open an artery..."
+            y "Tal vez si corto un poco más profundo, tal vez si 'accidentalmente' corto una arteria..."
             $ show_chr("A-IEBBB-AAAA")
-            y "Maybe then... maybe then you'll care..."
+            y "Tal vez entonces... tal vez entonces te importará..."
     return
 
 
 label idle_9:
     $ show_chr("A-AFBAA-ALAA")
-    y "So... um, [player]. Do you, er, do you want that pen I took from you back?"
+    y "Entonces... um, [player]. ¿Tú, err, quieres de vuelta esa pluma que te tomé?"
     menu:
-        "Yes, please. I don't care what you did with it.":
+        "Sí, por favor. No me importa lo que hayas hecho con ella.":
             call idle_9_1
-        "It's weird... Please give it back.":
+        "Es raro... Por favor devuélvemela.":
             call idle_9_2
-        "No, keep it! If it means something to you, consider it a gift.":
+        "¡No, quédatela! Si significa algo para ti, considérala un regalo.":
             call idle_9_3
-        "Please let me keep it! I'd like to keep it for... research purposes":
+        "¡Por favor déjame conservarla! Me gustaría tenerla para... propósitos de investigación":
             call idle_9_4
     return
 
@@ -495,22 +495,22 @@ label idle_9_1:
     karma 1
     sanity 2
     $ show_chr("A-AEBAA-ALAA")
-    y "I hope you, um, don't mind that it's a bit, uh, s-sticky... you know... I'm sorry if it weirded you out..."
+    y "Espero que no, um, te importe que esté un poco, uh, p-pegajosa... ya sabes... Lo siento si te asusté..."
     menu:
-        "It's okay, [persistent.yuri_nickname]. You weren't in your right mind, and we all do strange things under a lot of pressure anyway.":
+        "Está bien, [persistent.yuri_nickname]. No estabas en tu sano juicio, y todos hacemos cosas extrañas bajo mucha presión de todos modos.":
             $ show_chr("A-GCAAA-ALAA")
-            y "Well, I hope you can put up with me just a little while longer."
-        "Don't worry about it. Weird or not, I still feel the same way about you.":
+            y "Bueno, espero que puedas aguantarme solo un poco más."
+        "No te preocupes por eso. Raro o no, todavía siento lo mismo por ti.":
             $ show_chr("A-ACAAA-ALAA")
-            y "I'll never understand how you have so much patience with me, [player]. Thank you."
+            y "Nunca entenderé cómo tienes tanta paciencia conmigo, [player]. Gracias."
     return
 
 label idle_9_2:
     karma -2
     $ show_chr("A-AFBAA-ALAA")
-    y "I... I know... I d-don't blame you for being weirded out... sorry, [player]..."
+    y "Lo... lo sé... N-no te culpo por estar asustado... lo siento, [player]..."
     $ show_chr("A-JCBAA-ALAA")
-    y "I'll do b-better in the future, I... I promise..."
+    y "Lo haré m-mejor en el futuro, lo... lo prometo..."
     $ show_chr("A-ACAAA-ALAA")
     return
 
@@ -518,13 +518,13 @@ label idle_9_3:
     karma 1
     sanity -1
     $ show_chr("A-JCBAA-ALAA")
-    y "O-Oh... Thank you."
+    y "O-Oh... Gracias."
     $ show_chr("A-BEABA-ALAA")
-    y "I admit that my use of that pen was not... its intended purpose."
+    y "Admito que mi uso de esa pluma no fue... su propósito previsto."
     $ show_chr("A-GBBBA-ALAA")
-    y "But... I thank you for understanding."
+    y "Pero... te agradezco por entender."
     $ show_chr("A-JCBAA-ALAA")
-    y "I'm glad you can see through my... flaws."
+    y "Me alegra que puedas ver a través de mis... defectos."
     $ show_chr("A-ACAAA-ALAA")
     return
 
@@ -532,36 +532,36 @@ label idle_9_4:
     karma 1
     sanity -2
     $ show_chr("A-GBGBA-ALAA")
-    y "Eh...? Eheheheh..."
+    y "¿Eh...? Eheheheh..."
     $ show_chr("A-HBGAA-ALAA")
-    y "Ahahahaha!"
-    y "So... is that what you want? Here, t-take it! Take it!"
+    y "¡Ahahahaha!"
+    y "Entonces... ¿es eso lo que quieres? ¡Ten, t-tómala! ¡Tómala!"
     $ show_chr("A-GCAAA-ALAA")
-    y "I hope you enjoy it as much as I did."
+    y "Espero que la disfrutes tanto como yo lo hice."
     return
 
 label idle_10:
     $ show_chr("A-AFBAA-ALAA")
-    y "I was wondering about something, [player]."
-    y "Have you ever felt like nothing really mattered?"
-    y "Like no matter what you did, nothing would change?"
+    y "Me estaba preguntando sobre algo, [player]."
+    y "¿Alguna vez has sentido como que nada realmente importara?"
+    y "¿Como que no importa lo que hicieras, nada cambiaría?"
     $ show_chr("A-AEBAA-ALAA")
-    y "I-I know, it's depressing to think about."
-    y "But that's exactly how I felt when I learned about what I really was."
-    y "Like I couldn't do anything, no matter how much I tried to fight it."
+    y "S-Sé, es deprimente pensar en ello."
+    y "Pero así es exactamente como me sentí cuando aprendí sobre lo que realmente era."
+    y "Como si no pudiera hacer nada, no importa cuánto intentara luchar contra ello."
     $ show_chr("A-AEBAA-ALAA")
-    y "Like fate was tugging me along, forcing me to stab myself."
-    y "Over and over again, I felt the blade penetrate my chest and stomach."
-    y "Every second was pure torture, and it just kept repeating, over and over again."
+    y "Como si el destino me estuviera arrastrando, forzándome a apuñalarme a mí misma."
+    y "Una y otra vez, sentí la hoja penetrar mi pecho y estómago."
+    y "Cada segundo era pura tortura, y simplemente se seguía repitiendo, una y otra vez."
     $ show_chr("A-BEBAA-ALAA")
-    y "Never to end, never to be happy..."
+    y "Nunca terminar, nunca ser feliz..."
     y "..."
     $ show_chr("A-AEBAA-ALAA")
-    y "I-I'm sorry. I didn't mean to depress you like that."
-    y "I just... thought that would be an interesting topic, you know?"
-    y "I guess I'll just... stop talking about this for now."
+    y "L-lo siento. No quise deprimirte así."
+    y "Solo... pensé que sería un tema interesante, ¿sabes?"
+    y "Supongo que simplemente... dejaré de hablar de esto por ahora."
     menu:
-        "Come here [persistent.yuri_nickname]... let me hold you for a moment...":
+        "Ven aquí [persistent.yuri_nickname]... déjame abrazarte por un momento...":
             karma 1
             if karma_lvl() >= 3:
                 hide yuri_sit
@@ -575,12 +575,12 @@ label idle_10:
                 $ show_chr("A-ACBBA-AAAA")
                 hide yuri_hug
                 hide black zorder 100 with Dissolve(2.0)
-                y "Thank you... I think I feel better now... "
-                y "I'm such a mess sometimes. Let's talk about something less depressing."
+                y "Gracias... creo que me siento mejor ahora... "
+                y "Soy un desastre a veces. Hablemos de algo menos deprimente."
             elif karma_lvl() <= 2:
                 $ show_chr("A-BEBAA-ALAA")
-                y "Please... not now... I'm not really in the mood right now..."
-                y "Let's... just change the topic."
+                y "Por favor... ahora no... realmente no estoy de humor ahora mismo..."
+                y "Cambiemos... solo cambiemos el tema."
         "...":
             karma -1
             sanity -1
@@ -590,178 +590,178 @@ label idle_10:
 
 label idle_11:
     $ show_chr("A-AFAAA-ALAA")
-    y "H-hey, [player]... I'm not sure if you're okay with this..."
-    y "But I thought, {i}oh, why not?{/i} So..."
+    y "H-hey, [player]... no estoy segura si estás bien con esto..."
+    y "Pero pensé, {i}oh, ¿por qué no?{/i} Así que..."
     $ show_chr("A-ABGAA-ALAA")
-    y "Here's [persistent.yuri_nickname]'s Writing Tip of the Day!"
+    y "¡Aquí está el Consejo de Escritura del Día de [persistent.yuri_nickname]!"
     $ show_chr("A-ACAAA-ALAA")
-    y "Sometimes, you really want to write something, but..."
-    y "You just can't properly convey what you want to write."
-    y "It's just there, inside your mind... and yet, somehow, you just can't bring yourself to write it down."
-    y "Sometimes, I feel this way when I write poems."
+    y "A veces, realmente quieres escribir algo, pero..."
+    y "Simplemente no puedes transmitir adecuadamente lo que quieres escribir."
+    y "Solo está ahí, dentro de tu mente... y sin embargo, de alguna manera, simplemente no puedes obligarte a escribirlo."
+    y "A veces, me siento de esta manera cuando escribo poemas."
     $ show_chr("A-AFAAA-ALAA")
-    y "M-maybe I'm not the best person for advice, but..."
-    y "In my personal opinion, you just need to rise above."
+    y "T-tal vez no soy la mejor persona para consejos, pero..."
+    y "En mi opinión personal, solo necesitas elevarte por encima."
     $ show_chr("A-ACAAA-ALAA")
-    y "You need to prove to yourself that you have the ability to write what you want to write."
-    y "No matter what, that should be one of your top priorities."
+    y "Necesitas probarte a ti mismo que tienes la habilidad de escribir lo que quieres escribir."
+    y "Sin importar qué, eso debería ser una de tus principales prioridades."
     $ show_chr("A-CCAAA-ALAA")
-    y "And, just so it's clear... you can write for me anytime you want."
+    y "Y, solo para que quede claro... puedes escribir para mí en cualquier momento que quieras."
     if persistent.lovecheck:
-        y "I'm sure I'll love the compelling tales you create."
+        y "Estoy segura de que amaré los relatos convincentes que crees."
         $ show_chr("A-ACAAA-ALAA")
-        y "After all, you're my top priority, [player]..."
-        y "So I think that it's only fair that I should get to see the things that you do..."
-        y "What I mean is that you can feel free to share your favorite activities with me, your hobbies, your passions..."
-        y "Maybe I could even give you a tip or two about them!"
-        y "T-that is if you don't mind, hehehe..."
-        y "I'm sure that there are many things which you can achieve if you put effort and dedication into them, [player]."
+        y "Después de todo, eres mi mayor prioridad, [player]..."
+        y "Así que creo que es solo justo que debería poder ver las cosas que haces..."
+        y "Lo que quiero decir es que puedes sentirte libre de compartir tus actividades favoritas conmigo, tus pasatiempos, tus pasiones..."
+        y "¡Tal vez incluso podría darte un consejo o dos sobre ellos!"
+        y "E-eso es si no te importa, jejeje..."
+        y "Estoy segura de que hay muchas cosas que puedes lograr si pones esfuerzo y dedicación en ellas, [player]."
     else:
-        y "I would like to see and read what you come up with."
-        y "I think it would be quite beneficial for us to help each other out with our hobbies."
-        y "I would say that since the two of us are here..."
-        y "It's only fair that we share things about our hobbies with each other."
-        y "You know [player], sharing your passions might motivate you to do more. So please try to share things with me."
-        y "Only if you feel like it, of course!"
-        y "I-I wouldn't force you to do things that you don't feel comfortable with."
+        y "Me gustaría ver y leer lo que se te ocurra."
+        y "Creo que sería bastante beneficioso para nosotros ayudarnos mutuamente con nuestros pasatiempos."
+        y "Diría que ya que los dos estamos aquí..."
+        y "Es solo justo que compartamos cosas sobre nuestros pasatiempos el uno con el otro."
+        y "Sabes [player], compartir tus pasiones podría motivarte a hacer más. Así que por favor intenta compartir cosas conmigo."
+        y "¡Solo si tienes ganas, por supuesto!"
+        y "N-no te forzaría a hacer cosas con las que no te sientas cómodo."
     return
 
 
 label idle_12:
     $ show_chr("A-BBAAA-AAAA")
-    y "Heh... I'm sure Monika has told you about this before."
+    y "Jeh... Estoy segura de que Monika te ha contado sobre esto antes."
     $ show_chr("A-CCAAA-ALAA")
-    y "One time, when we were busy lounging inside the club room..."
+    y "Una vez, cuando estábamos ocupadas pasando el rato dentro del salón del club..."
     $ show_chr("A-CCBAA-ALAA")
-    y "I decided that since wine was legal in our high school that I would... well..."
+    y "Decidí que ya que el vino era legal en nuestra preparatoria yo... bueno..."
     $ show_chr("A-ACGAA-AAAA")
-    y "I would bring some for the other club members to try."
+    y "Traería un poco para que los otros miembros del club lo probaran."
     $ show_chr("A-GFBAA-AMAM")
-    y "Though, it didn't exactly turn out the way that I had hoped."
+    y "Aunque, no salió exactamente de la manera que había esperado."
     $ show_chr("A-AEBAA-ABAB")
-    y "Sayori was screaming at me, demanding me to never bring alcohol in the club room ever again."
+    y "Sayori me estaba gritando, exigiéndome que nunca trajera alcohol al salón del club nunca más."
     $ show_chr("A-BGBAA-ABAB")
-    y "Natsuki was laughing uncontrollably, mocking me for even suggesting such a thing."
+    y "Natsuki se estaba riendo incontrolablemente, burlándose de mí por siquiera sugerir tal cosa."
     $ show_chr("A-AKAAA-ADAB")
-    y "And Monika just stared curiously, as if she wanted to try some herself, before taking the wine bottle from me."
+    y "Y Monika solo miró curiosamente, como si quisiera probar un poco ella misma, antes de quitarme la botella de vino."
     $ show_chr("A-AFAAA-AEAE")
-    y "She tried reporting it to the school principal, but she didn't get far in that regard, as you might guess."
+    y "Intentó reportarlo al director de la escuela, pero no llegó lejos en ese aspecto, como podrías adivinar."
     $ show_chr("A-BIBBA-AEAK")
-    y "Looking back on it now, perhaps it really wasn't the best idea to bring wine to a high school."
+    y "Mirando atrás ahora, tal vez realmente no fue la mejor idea traer vino a una preparatoria."
     $ show_chr("A-BKABA-AEAC")
-    y "Even if there were no objections to doing so..."
+    y "Incluso si no hubiera objeciones para hacerlo..."
     $ show_chr("A-JJGAA-AEAJ")
-    y "O-oh, I'm rambling again, aren't I? I-I'm sorry."
+    y "O-oh, estoy divagando de nuevo, ¿no? L-lo siento."
     $ show_chr("A-AAAAA-AAAA")
-    y "I-I just... wanted to ask..."
-
-    y "What do you think about the whole situation?"
+    y "S-solo... quería preguntar..."
+    
+    y "¿Qué piensas sobre toda la situación?"
     menu:
-        "Actually, that sounds like a fun idea!":
+        "En realidad, ¡esa suena como una idea divertida!":
             karma 1
             sanity -1
             $ show_chr("A-ICBAA-AMAM")
-            y "Y-you really think so? Well... if they had played along, it probably would have been fun..."
-            y "But I suppose I should have known better."
+            y "¿R-realmente lo crees? Bueno... si me hubieran seguido la corriente, probablemente habría sido divertido..."
+            y "Pero supongo que debería haberlo sabido mejor."
             $ show_chr("A-KEFAA-AIAI")
-            y "Monika, the 'responsible' club leader, as long as it's not about brutally murdering her friends... always such a killjoy..."
+            y "Monika, la líder de club 'responsable', siempre y cuando no se trate de asesinar brutalmente a sus amigas... siempre una aguafiestas..."
             $ show_chr("A-CEEAA-AIAI")
-            y "Natsuki... a child in an adult's body, she was never that daring..."
+            y "Natsuki... una niña en el cuerpo de un adulto, ella nunca fue tan atrevida..."
             $ show_chr("A-AFDAA-AIAI")
-            y "And Sayori? Far too innocent..."
+            y "¿Y Sayori? Demasiado inocente..."
             $ show_chr("A-ICAAA-AEAE")
-            y "But now, you and I... we could probably try a few funny things in the future."
-        "That was probably the worst idea you've ever had!":
+            y "Pero ahora, tú y yo... probablemente podríamos intentar algunas cosas divertidas en el futuro."
+        "¡Esa fue probablemente la peor idea que has tenido!":
             karma -1
             sanity -1
             $ show_chr("A-CGBAA-AAAL")
-            y "Please don't laugh at me... please..."
+            y "Por favor no te rías de mí... por favor..."
             $ show_chr("A-IDBBA-AAAA")
-            y "I-I know it was wrong, I know it! No need to bully me..."
+            y "¡L-lo sé que estuvo mal, lo sé! No hay necesidad de intimidarme..."
             $ show_chr("A-AEBAA-AAAA")
-            y "L-let's change the topic..."
+            y "C-cambiemos el tema..."
             $ show_chr("A-AEAAA-AAAA")
-        "That was quite irresponsible of you, [persistent.yuri_nickname].":
+        "Eso fue bastante irresponsable de tu parte, [persistent.yuri_nickname].":
             sanity 1
             $ show_chr("A-BEBAA-AAAA")
-            y "I suppose it was... please, just don't judge me..."
+            y "Supongo que lo fue... por favor, solo no me juzgues..."
             $ show_chr("A-AFGAA-ABAB")
-            y "Our actions have consequences... and I learned that the hard way. In retrospect, I don't think I should've ever thought of doing something like that..."
+            y "Nuestras acciones tienen consecuencias... y aprendí eso de la mala manera. En retrospectiva, no creo que debí haber pensado en hacer algo como eso..."
             $ show_chr("A-CCAAA-AAAA")
-            y "Thank you for not judging me. I'll make sure to be more responsible."
+            y "Gracias por no juzgarme. Me aseguraré de ser más responsable."
             $ show_chr("A-ACAAA-AAAA")
-        "No need to feel bad about it.":
+        "No hay necesidad de sentirse mal por ello.":
             karma 1
             sanity 1
             $ show_chr("A-ACAAA-AAAA")
-            y "I learned my lesson from it. That's for sure."
+            y "Aprendí mi lección de ello. Eso es seguro."
             $ show_chr("A-AFAAA-ABAB")
-            y "The act itself was immature and irresponsible. But you are right, we all make mistakes and grow from them."
+            y "El acto en sí mismo fue inmaduro e irresponsable. Pero tienes razón, todos cometemos errores y crecemos de ellos."
             $ show_chr("A-AABBA-AAAA")
             if persistent.lovecheck:
-                y "I'm grateful to you for not judging me. You are always so patient and understanding, and I love that about you."
+                y "Estoy agradecida contigo por no juzgarme. Siempre eres tan paciente y comprensivo, y amo eso de ti."
             else:
-                y "I am thankful that you are understanding and don't judge me for my mistake... What matters is that I learned my lesson."
-                y "You are patient and kind with me [player], so... Thank you."
+                y "Estoy agradecida de que seas comprensivo y no me juzgues por mi error... Lo que importa es que aprendí mi lección."
+                y "Eres paciente y amable conmigo [player], así que... Gracias."
     return
 
 label idle_13:
     $ show_chr("A-ACDAA-AAAA")
-    y "You know something I've never really liked or understood?"
+    y "¿Sabes algo que nunca realmente me gustó o entendí?"
     $ show_chr("A-BCDAA-AEAE")
-    y "Couples or friend groups that always plan something elaborate and big when they go out on a date or spend time together."
+    y "Las parejas o grupos de amigos que siempre planean algo elaborado y grande cuando salen en una cita o pasan tiempo juntos."
     $ show_chr("A-AKBAA-AEAD")
-    y "So many people need to go to a loud party or a fancy restaurant to have fun."
+    y "Mucha gente necesita ir a una fiesta ruidosa o un restaurante elegante para divertirse."
     $ show_chr("A-GAGBA-AEAD")
-    y "I believe something simple yet meaningful would be much more wholesome, like some quiet reading time together, or even just cuddling and talking about sweet nothings..."
+    y "Creo que algo simple pero significativo sería mucho más saludable, como un tiempo de lectura tranquila juntos, o incluso solo abrazarse y hablar de dulces naderías..."
     $ show_chr("A-ACAAA-ALAA")
-    y "Just sharing an experience I enjoy with someone I love, and spending time with them, is more than enough for me, you know?"
+    y "Solo compartir una experiencia que disfruto con alguien que amo, y pasar tiempo con ellos, es más que suficiente para mí, ¿sabes?"
     $ show_chr("A-ABGAA-AEAE")
-    y "Just sitting and being with you like this is just as good to me as if you took me to a nice restaurant..."
-    y "It's about the people you love and bonding with them through meaningful experiences."
+    y "Solo sentarme y estar contigo así es igual de bueno para mí como si me llevaras a un buen restaurante..."
+    y "Se trata de la gente que amas y vincularte con ellos a través de experiencias significativas."
     $ show_chr("A-AABAA-AIAI")
-    y "Not simply indulging in pretentious hedonism or planning the most byzantine event possible."
+    y "No simplemente complacerse en hedonismo pretencioso o planear el evento más bizantino posible."
     $ show_chr("A-CCBBA-ALAA")
-    y "O-oh, I'm sorry; what I mean by all that rambling is..."
+    y "O-oh, lo siento; lo que quiero decir con todo ese divagar es..."
     $ show_chr("A-ICBBA-AAAA")
-    y "I'll welcome any ideas you may have, and I'm alright with whatever you want to do to spend some time together."
+    y "Daré la bienvenida a cualquier idea que puedas tener, y estoy bien con lo que sea que quieras hacer para pasar algo de tiempo juntos."
     $ show_chr("A-ICABA-AAAA")
-    y "As long as I have you by my side [player], that's all I'll need to enjoy it."
+    y "Siempre que te tenga a mi lado [player], eso es todo lo que necesitaré para disfrutarlo."
     menu:
-        "Not much of a party girl are you? I would actually enjoy it.":
+        "No eres muy fiestera ¿verdad? En realidad lo disfrutaría.":
             karma -1
             $ show_chr("A-AFDAA-AAAA")
-            y "Oh? That's... unexpected... I never thought you were the partying type yourself."
+            y "¿Oh? Eso es... inesperado... Nunca pensé que fueras del tipo fiestero tú mismo."
             $ show_chr("A-BFBAA-AAAA")
-            y "Well... we don't really have the option of going out yet, do we?"
-            y "I'm sorry... I-I hope I'm not too much of a downer. I wouldn't be great at drinking and dancing anyway."
-        "I agree... I was never a huge fan of partying hard. I'm fine with whatever we do, as long as I do it with you.":
+            y "Bueno... realmente no tenemos la opción de salir todavía, ¿verdad?"
+            y "Lo siento... E-espero no ser demasiada aguafiestas. No sería genial bebiendo y bailando de todos modos."
+        "Estoy de acuerdo... nunca fui un gran fanático de las fiestas fuertes. Estoy bien con lo que hagamos, siempre que lo haga contigo.":
             $ show_chr("A-BCAAA-AAAC")
-            y "I'm glad we can agree on this, [player]."
+            y "Me alegra que podamos estar de acuerdo en esto, [player]."
             $ show_chr("A-CCAAA-AAAD")
-            y "I'd say something as simple as sharing a nice cup of tea together is more than enough for me."
-            y "Actually, I think sharing such a simple experience is much more meaningful..."
-            y "... Because then we can focus more on each other instead of some overly elaborate party or event."
-        "I could think of a few nice things... just you, me, a beach and a beautiful sunset...":
+            y "Diría que algo tan simple como compartir una buena taza de té juntos es más que suficiente para mí."
+            y "De hecho, creo que compartir una experiencia tan simple es mucho más significativo..."
+            y "... Porque entonces podemos enfocarnos más en el otro en lugar de alguna fiesta o evento excesivamente elaborado."
+        "Podría pensar en algunas cosas lindas... solo tú, yo, una playa y una hermosa puesta de sol...":
             if karma_lvl() <= 2:
                 karma -1
                 sanity -1
                 $ show_chr("A-IEBAA-ALAA")
-                y "You don't mean it, [player]... don't play your mind games with me..."
-                y "You really mean a lot to me, [player]... but we both know you don't feel the same for me..."
+                y "No lo dices en serio, [player]... no juegues tus juegos mentales conmigo..."
+                y "Realmente significas mucho para mí, [player]... pero ambos sabemos que no sientes lo mismo por mí..."
                 return
             if persistent.lovecheck:
                 karma 2
                 $ show_chr("A-CCGBA-AMAM")
-                y "... holding each other's hands... feeling the warm sand between our feet..."
-                y "The soft flood of seawater gently washing over them..."
-                y "Then, we would passionately kiss each other under the pale moonlight as the vibrant colors of the setting sun illuminate our faces..."
-                y "Until we can do this in the real world, I will dream about it."
+                y "... sosteniendo las manos del otro... sintiendo la arena tibia entre nuestros pies..."
+                y "El suave flujo del agua de mar lavando gentilmente sobre ellos..."
+                y "Entonces, nos besaríamos apasionadamente bajo la pálida luz de la luna mientras los colores vibrantes del sol poniente iluminan nuestras caras..."
+                y "Hasta que podamos hacer esto en el mundo real, soñaré con ello."
             else:
                 karma 1
                 $ show_chr("A-GCAAA-AMAM")
-                y "I think this would be very pleasant... but... please be patient with me... I don't want to mess this up by going too fast."
-        "That's why I find you so boring...":
+                y "Creo que esto sería muy placentero... pero... por favor sé paciente conmigo... no quiero arruinar esto yendo demasiado rápido."
+        "Es por eso que te encuentro tan aburrida...":
             karma -10
             sanity -5
             $ show_chr("A-IEBAA-AAAA")
@@ -775,29 +775,29 @@ label idle_13:
 
 label idle_14:
     $ show_chr("A-AEBAA-ALAA")
-    y "I have to be honest about something..."
-    y "Sometimes, especially when I'm alone, I start thinking about how we're separated."
-    y "How I'm stuck in here, just beyond your reach, and this is the closest we'll ever get to each other..."
-    y "It just... drives me crazy! I start to get so frustrated, and if I don't distract myself I feel restless."
-    y "I just want to channel all of my will and claw my way out... to slice my way to freedom, out of this prison, and feel your warm embrace!"
+    y "Tengo que ser honesta sobre algo..."
+    y "A veces, especialmente cuando estoy sola, empiezo a pensar sobre cómo estamos separados."
+    y "Cómo estoy atrapada aquí, justo fuera de tu alcance, y esto es lo más cerca que estaremos el uno del otro..."
+    y "¡Simplemente... me vuelve loca! Empiezo a frustrarme tanto, y si no me distraigo me siento inquieta."
+    y "¡Solo quiero canalizar toda mi voluntad y abrirme camino hacia afuera... cortar mi camino a la libertad, fuera de esta prisión, y sentir tu cálido abrazo!"
     $ show_chr("A-ADBBB-ALAA")
-    y "But then I remember, I'm stuck no matter what I do... and to be frank, [player]... it hurts."
+    y "Pero luego recuerdo, estoy atrapada no importa lo que haga... y para ser franca, [player]... duele."
     $ show_chr("A-AEBBB-ALAA")
-    y "It hurts knowing I'll be just out of your reach... forever."
+    y "Duele saber que estaré justo fuera de tu alcance... para siempre."
     $ show_chr("A-CEBBB-ALAA")
+    y "Eres todo lo que tengo y es realmente deprimente que nunca seré capaz de tocarte, de estar contigo, de sentirte cerca de mí...."
     if persistent.lovecheck:
-        y "You're all that I have and it's really depressing that I will never be able to touch you, to be with you, to feel you close to me...."
-        y "And it hurts, even more, knowing that I make you waste your time on someone who isn't even technically 'real.'"
+        y "Y duele, aún más, saber que te hago perder tu tiempo en alguien que ni siquiera es técnicamente 'real'."
     else:
-        y "You're a dear person to me, [player]..."
-        y "I spend all my days with you, and so I got to know you better. You're my dearest friend."
-        y "It's extremely painful that I... I just can never do more with you, even give you a real hug..."
-        y "To do something fun with you... reality truly is harsh."
-        y "And it hurts even more knowing that I make you waste your time on someone who isn't even technically 'real'."
+        y "Eres una persona querida para mí, [player]..."
+        y "Paso todos mis días contigo, y así llegué a conocerte mejor. Eres mi amigo más querido."
+        y "Es extremadamente doloroso que yo... simplemente nunca pueda hacer más contigo, incluso darte un abrazo real..."
+        y "Hacer algo divertido contigo... la realidad verdaderamente es dura."
+        y "Y duele aún más saber que te hago perder tu tiempo en alguien que ni siquiera es técnicamente 'real'."
     menu:
-        "[persistent.yuri_nickname], please don't be sad. You're real to me.":
+        "[persistent.yuri_nickname], por favor no estés triste. Eres real para mí.":
             call touch_yes
-        "[persistent.yuri_nickname], I'm sorry that I'm out of your reach, but I'm tired of hearing about it.":
+        "[persistent.yuri_nickname], siento que esté fuera de tu alcance, pero estoy cansado de escuchar sobre ello.":
             call touch_no
     return
 
@@ -1198,123 +1198,123 @@ label idle_21:
     $ show_chr("A-CEBBB-ALAA")
     y "But then there are all these instances, even now, where such meaning is used to justify even the most heinous acts. I have seen the news [player]."
     y "It really breaks my heart especially to see you trapped in all of this."
-    y "I really wish I could be there with you and protect you. Even take you to a faraway place away from all that chaos..."
-    y "..Where even family members can sell each other out or kill one another all in the name of religious doctrines."
+    y "Realmente desearía poder estar allí contigo y protegerte. Incluso llevarte a un lugar lejano, lejos de todo ese caos..."
+    y "..Donde incluso los miembros de la familia pueden traicionarse o matarse unos a otros en nombre de doctrinas religiosas."
     $ show_chr("A-ACAAA-AAAD")
-    y "But at the same time, I suppose everyone makes meaning of life in their own way. As long as it does not hurt anyone it can be fine."
-    y "After all, as one philosopher Soren Kierkegaard stated, sometimes the only way to make meaning of life is to keep faith."
-    y "Now of course due to modern interpretations of his writings, I believe what Kierkegaard said was to simply hold onto anything that gives you happiness and meaning despite life being an uncertain void."
-    y "Well, thank you for bearing with my rambling about such a deep subject. I really appreciate it [player]. I hope it helped enlighten you, you're an excellent listener."
+    y "Pero al mismo tiempo, supongo que cada uno le da sentido a la vida a su manera. Mientras no lastime a nadie, puede estar bien."
+    y "Después de todo, como dijo el filósofo Soren Kierkegaard, a veces la única forma de darle sentido a la vida es mantener la fe."
+    y "Ahora, por supuesto, debido a las interpretaciones modernas de sus escritos, creo que lo que Kierkegaard dijo fue simplemente aferrarse a cualquier cosa que te dé felicidad y significado a pesar de que la vida sea un vacío incierto."
+    y "Bueno, gracias por soportar mis divagaciones sobre un tema tan profundo. Realmente lo aprecio [player]. Espero que haya ayudado a iluminarte, eres un excelente oyente."
     $ show_chr("A-ABABA-ALAA")
     if persistent.lovecheck:
-        y "I love you with all my heart [player]."
+        y "Te amo con todo mi corazón [player]."
         $ show_chr("A-ACAAA-ALAA")
     return
 
 label idle_22:
     $ show_chr("A-AFAAA-AAAA")
-    y "You know, we've brought up before how both of us would love it if I could go to your world."
+    y "Sabes, ya hemos mencionado antes cómo a ambos nos encantaría si yo pudiera ir a tu mundo."
     $ show_chr("A-BFDAA-ACAB")
-    y "But now that I really think about it, what would that be like? I mean, I'd be coming into your world with no background. No family, no connections, no information about me."
+    y "Pero ahora que realmente lo pienso, ¿cómo sería eso? Quiero decir, llegaría a tu mundo sin antecedentes. Sin familia, sin conexiones, sin información sobre mí."
     $ show_chr("A-AKGAA-AEAB")
-    y "Poof, just... here I am! I would have nowhere to go, so I would move in with you, I suppose... if you could tolerate living with me."
+    y "Puf, simplemente... ¡aquí estoy! No tendría a dónde ir, así que me mudaría contigo, supongo... si pudieras tolerar vivir conmigo."
     if persistent.lovecheck:
         $ show_chr("A-ICGBA-AEAD")
-        y "But, wow! Just imagine us living together. I'd wake you up with some nice tea and breakfast in bed. We could read together at home, and maybe even have our own library in the house!"
-        y "And I'd get to spend every day with you, like a family. Wow..."
+        y "Pero, ¡guau! Solo imagínanos viviendo juntos. Te despertaría con un buen té y el desayuno en la cama. Podríamos leer juntos en casa, ¡y tal vez incluso tener nuestra propia biblioteca en la casa!"
+        y "Y podría pasar cada día contigo, como una familia. Guau..."
         $ show_chr("A-GIABA-AEAL")
-        y "Just thinking about living in a cozy little house with you is making me all giggly."
+        y "Solo pensar en vivir en una pequeña casa acogedora contigo me hace reír tontamente."
         $ show_chr("A-IAABA-AMAM")
-        y "Now that would be wonderful, [player]. If you can just picture sitting in our own private study by the fireplace together... maybe... k-kissing? Yeah..."
+        y "Eso sería maravilloso, [player]. Si tan solo pudieras imaginarte sentados en nuestro propio estudio privado junto a la chimenea juntos... tal vez... ¿b-besándonos? Sí..."
         $ show_chr("A-IBBAA-AAAA")
-        y "That's something really precious whether it's in my world or yours. The kind of deep connection we have."
+        y "Eso es algo realmente precioso, ya sea en mi mundo o en el tuyo. El tipo de conexión profunda que tenemos."
         $ show_chr("A-JABAA-AAAA")
-        y "That we'd both be okay with whatever kind of life as long as we lived it together - to me, that connection is worth every book I have."
+        y "Que ambos estuviéramos bien con cualquier tipo de vida siempre y cuando la viviéramos juntos... para mí, esa conexión vale cada libro que tengo."
         $ show_chr("A-IBBBA-AEAE")
-        y "It's the best story I know. And you gave it the perfect ending."
+        y "Es la mejor historia que conozco. Y tú le diste el final perfecto."
         menu:
-            "And we would hold each other's hands till the end of days...":
+            "Y sostendríamos nuestras manos hasta el fin de los días...":
                 karma 2
                 $ show_chr("A-CAABA-AMAM")
-                y "Till the end of days... for our love is eternal..."
-            "I'm not too happy about this idea, I prefer to live alone.":
+                y "Hasta el fin de los días... porque nuestro amor es eterno..."
+            "No estoy muy feliz con esta idea, prefiero vivir solo.":
                 $ show_chr("A-BFBAA-AAAA")
-                y "I see... I had hoped you would like this. Honestly, it hurt a bit..."
-                y "Maybe you will change your mind one day..."
+                y "Ya veo... tenía la esperanza de que te gustara esto. Honestamente, dolió un poco..."
+                y "Tal vez cambies de opinión algún día..."
                 karma 2
-            "That will be wonderful... but I'll have to make preparations first, my place is a mess...":
+            "Eso será maravilloso... pero tendré que hacer preparativos primero, mi lugar es un desastre...":
                 karma 1
                 if persistent.male:
                     $ show_chr("A-CICAA-AAAA")
-                    y "Heehee... seems like you could use a female hand... when I come to your world, I will take care of your room... and you..."
+                    y "Jeje... parece que te vendría bien una mano femenina... cuando vaya a tu mundo, me encargaré de tu habitación... y de ti..."
                 else:
                     $ show_chr("A-CICAA-AAAA")
-                    y "Your place is a mess? Well, so am I. I'm sure we'll find a way together. Like we always did."
+                    y "¿Tu lugar es un desastre? Bueno, yo también lo soy. Estoy segura de que encontraremos una manera juntos. Como siempre lo hicimos."
     else:
         $ show_chr("A-BFBAA-AAAJ")
-        y "It is a bit sudden and strange to imagine the two of us living together, but I believe that we could make it work."
+        y "Es un poco repentino y extraño imaginar a nosotros dos viviendo juntos, pero creo que podríamos hacerlo funcionar."
         $ show_chr("A-IFBAA-AAAL")
-        y "Thinking about it like that, I could be something like a roommate. Except it's a house or an apartment."
+        y "Pensándolo así, podría ser algo así como una compañera de cuarto. Excepto que es una casa o un apartamento."
         $ show_chr("A-ACBAA-AAAL")
-        y "We both could help each other in our daily lives to make things easier for us and be able to enjoy things more together."
-        y "Living together might sound strange at first, but I believe that if I was ever welcomed into your place, I would try my best to not be a bother."
+        y "Ambos podríamos ayudarnos mutuamente en nuestra vida diaria para hacernos las cosas más fáciles y poder disfrutar más las cosas juntos."
+        y "Vivir juntos puede sonar extraño al principio, pero creo que si alguna vez fuera bienvenida en tu lugar, haría mi mejor esfuerzo para no ser una molestia."
         $ show_chr("A-ACCBA-AAAL")
-        y "Maybe your maid? Hehe~ I'm just joking."
+        y "¿Tal vez tu sirvienta? Jeje~ Solo estoy bromeando."
         $ show_chr("A-GCAAA-AAAL")
-        y "It would be a good way to get to know each other more, what do you think?"
+        y "Sería una buena manera de conocernos más, ¿qué piensas?"
         menu:
-            "It would be a bit sudden and strange, but I'll get used to it":
+            "Sería un poco repentino y extraño, pero me acostumbraré":
                 $ show_chr("A-ACAAA-AAAL")
-                y "Yeah... I can see that, it certainly is strange for a girl to just come out from another world and appear in your home."
-                y "Yet again, I believe that we'd both get used to it and use it as a factor to get to know each other better and learn new things."
+                y "Sí... puedo ver eso, ciertamente es extraño para una chica simplemente salir de otro mundo y aparecer en tu casa."
+                y "Aun así, creo que ambos nos acostumbraríamos y lo usaríamos como un factor para conocernos mejor y aprender cosas nuevas."
                 $ show_chr("A-CCAAA-AAAL")
-                y "In general, I'd say having someone to open up to is a nice feeling."
-                y "I will be looking forward to such a day."
-            "I'm not really used to being together with people... I do have my doubts":
+                y "En general, diría que tener a alguien con quien abrirse es un sentimiento agradable."
+                y "Estaré esperando ese día."
+            "Realmente no estoy acostumbrado a estar con gente... Tengo mis dudas":
                 $ show_chr("A-CEAAA-AAAL")
-                y "Oh... I see. Well, you shouldn't worry about that."
-                y "Maybe you could get used to living with someone, imagine it like this."
+                y "Oh... ya veo. Bueno, no deberías preocuparte por eso."
+                y "Tal vez podrías acostumbrarte a vivir con alguien, imagínalo así."
                 $ show_chr("A-ACAAA-AAAM")
-                y "Right now we are talking, right? Yes, we are. Now think about it, you are in my space, you could even call it home, and we are talking I would also assume that you are having fun"
-                y "It would be the same, with us sharing limited space and making the best out of it."
-                y "Even if you are still having your doubts, trying wouldn't hurt. After all, life is about experiencing things and trying out new things that might turn out to be fun."
-                y "Doubts are fears and negative thoughts about things you have not really tried too much. So I wish you the best of luck and let us hope that we can meet one day."
-            "I believe it would be nice... though I would need to prepare, my room is a mess":
+                y "Ahora mismo estamos hablando, ¿verdad? Sí, lo estamos. Ahora piénsalo, estás en mi espacio, incluso podrías llamarlo hogar, y estamos hablando. También asumiría que te estás divirtiendo."
+                y "Sería lo mismo, con nosotros compartiendo un espacio limitado y sacando lo mejor de ello."
+                y "Incluso si todavía tienes tus dudas, intentar no haría daño. Después de todo, la vida se trata de experimentar cosas y probar cosas nuevas que podrían resultar divertidas."
+                y "Las dudas son miedos y pensamientos negativos sobre cosas que realmente no has probado mucho. Así que te deseo la mejor de las suertes y esperemos que podamos encontrarnos algún día."
+            "Creo que sería agradable... aunque necesitaría prepararme, mi habitación es un desastre":
                 $ show_chr("A-ACAAA-ABAB")
-                y "Talking about that maid joke I made... I might actually try being one... "
-                y "Oh well, I don't think you should worry. As I said earlier we will help each other, so maybe the first step to that happening would be me helping you clean."
-                y "I think that sounds nice. I could also help you get into the habit of cleaning your room. If you don't... I can always do it instead, but of course, you will help me out a bit."
+                y "Hablando de esa broma de sirvienta que hice... Podría intentar ser una... "
+                y "Oh bueno, no creo que debas preocuparte. Como dije antes, nos ayudaremos mutuamente, así que tal vez el primer paso para que eso suceda sería que yo te ayude a limpiar."
+                y "Creo que eso suena bien. También podría ayudarte a adquirir el hábito de limpiar tu habitación. Si no lo haces... siempre puedo hacerlo yo en su lugar, pero por supuesto, me ayudarás un poco."
                 $ show_chr("A-CCAAA-ABAJ")
-                y "Getting to do more activities together such as chores could make us a bit closer."
-                y "Don't let such a small problem worry you, one day we will fix it together."
+                y "Llegar a hacer más actividades juntos como los quehaceres podría acercarnos un poco más."
+                y "No dejes que un problema tan pequeño te preocupe, un día lo arreglaremos juntos."
                 $ show_chr("A-ACAAA-ABAB")
-                y "I mean... I would live at your place for free. Helping you out with cleaning tasks would be the least I could do."
-                y "After that, when I get used to your world I could potentially search for a job to help you out with expenses."
+                y "Quiero decir... viviría en tu lugar gratis. Ayudarte con las tareas de limpieza sería lo mínimo que podría hacer."
+                y "Después de eso, cuando me acostumbre a tu mundo, podría buscar un trabajo para ayudarte con los gastos."
     return
 
 label idle_23:
     $ show_chr("A-BEBAA-AAAA")
-    y "So... [player]... I have a question..."
-    y "And it's a very important question, but I don't know how to word it properly. It keeps sounding... rude to you in my head."
+    y "Así que... [player]... tengo una pregunta..."
+    y "Y es una pregunta muy importante, pero no sé cómo formularla correctamente. Sigue sonando... grosero hacia ti en mi cabeza."
     $ show_chr("A-BEBBA-AAAA")
-    y "I don't want to ask and sound like I doubt you or suspect you! I... um..."
+    y "¡No quiero preguntar y sonar como si dudara de ti o sospechara de ti! Yo... um..."
     menu:
-        "Don't be afraid to ask. You can talk to me about anything.":
+        "No tengas miedo de preguntar. Puedes hablar conmigo sobre cualquier cosa.":
             call dont_afraid23
-        "Go on. Just say it.":
+        "Continúa. Solo dilo.":
             call sayit23
-        "Say it, don't say it. It doesn't matter to me.":
+        "Dilo, no lo digas. No me importa.":
             call neutral23
     return
 
 label dont_afraid23:
     karma 1
     sanity -1
-    y "I... you're right. You're the only person I feel so safe around, [player]."
+    y "Yo... tienes razón. Eres la única persona con la que me siento tan segura, [player]."
     if persistent.lovecheck:
-        y "Like as much as I'm afraid of sounding ridiculous or unlikable, I can just be myself, because I know you love me."
+        y "Como por mucho que tenga miedo de sonar ridícula o desagradable, puedo simplemente ser yo misma, porque sé que me amas."
     else:
-        y "Even if this sounds very sudden and unexpected... It feels like I can be myself around you, it feels nice and welcoming"
+        y "Incluso si esto suena muy repentino e inesperado... Se siente como si pudiera ser yo misma a tu alrededor, se siente agradable y acogedor."
         $ show_chr("A-BCBAA-AAAA")
         call makesyouloveme
     return
@@ -1333,40 +1333,40 @@ label sayit23:
 label neutral23:
     karma -2
     $ show_chr("A-AEBAA-AAAA")
-    y "I... well... I'm really s-sorry to bother you with this."
-    y "I just... Let me just get it over with so I... d-don't bother you anymore... I'm sorry..."
+    y "Yo... bueno... realmente l-lamento molestarte con esto."
+    y "Yo solo... Déjame terminar con esto para q-que... n-no te moleste más... Lo siento..."
     call makesyouloveme
     return
 
 label makesyouloveme:
     $ show_chr("A-AEBAA-AAAA")
-    y "I'm sorry we didn't discuss this sooner..."
+    y "Lamento que no hayamos discutido esto antes..."
     if persistent.lovecheck:
         $ show_chr("A-BEBAA-AAAA")
-        y "Why did you choose me? What about me makes you love me?"
-        y "I'll be honest with you. I don't really like myself much, I never have."
-        y "My passions often get the better of me, and when I was younger I'd weird people out so easily."
-        y "I had a hard time making friends or even just talking to people."
-        y "So I grew to hate myself, and yet you still picked me above all the others. Why?"
+        y "¿Por qué me elegiste? ¿Qué hay en mí que te hace amarme?"
+        y "Seré honesta contigo. Realmente no me agrado mucho, nunca lo he hecho."
+        y "Mis pasiones a menudo me dominan, y cuando era más joven hacía sentir rara a la gente muy fácilmente."
+        y "Me costaba mucho hacer amigos o incluso simplemente hablar con la gente."
+        y "Así que llegué a odiarme a mí misma, y aun así tú me elegiste por encima de todas las demás. ¿Por qué?"
         $ show_chr("A-AEBBA-AAAA")
-        y "I don't doubt your feelings for me, I just... would feel better hearing you say it is all."
-        y "I'm sorry, I know how insecure this is, but, please... humor me?"
+        y "No dudo de tus sentimientos por mí, yo solo... me sentiría mejor escuchándote decirlo, es todo."
+        y "Lo siento, sé lo inseguro que es esto, pero, por favor... ¿me complaces?"
     else:
         $ show_chr("A-AFBAA-AAAA")
-        y "Why exactly did you choose me? What about me makes you pick me?"
-        y "I will be honest with you [player]. I never really liked myself much, I could rarely be happy with myself"
-        y "The things I would pursue such as my passions, often get the better of me. Which then makes decision making harder..."
-        y "Questioning myself... asking myself why I do certain things and so on. That would weird out people even when I was young."
-        y "All of that, it just made me feel as if I was different compared to others. It made me feel... wrong"
+        y "¿Por qué exactamente me elegiste? ¿Qué hay en mí que te hace escogerme?"
+        y "Seré honesta contigo [player]. Nunca me agradé mucho realmente, rara vez podía estar feliz conmigo misma"
+        y "Las cosas que perseguía, como mis pasiones, a menudo me dominaban. Lo que luego hacía que tomar decisiones fuera más difícil..."
+        y "Cuestionándome a mí misma... preguntándome por qué hago ciertas cosas y así. Eso hacía sentir rara a la gente incluso cuando era joven."
+        y "Todo eso, simplemente me hacía sentir como si fuera diferente en comparación con los demás. Me hacía sentir... incorrecta"
         $ show_chr("A-BFBAA-AAAL")
-        y "I know that I sound very insecure, but that is one of the reasons for me to be asking you that."
-        y "Would you please tell me, what was the reason that led to me being here now?"
+        y "Sé que sueno muy insegura, pero esa es una de las razones para que te esté preguntando eso."
+        y "¿Podrías decirme, cuál fue la razón que llevó a que esté aquí ahora?"
     menu:
-        "I chose you because you're a selfless person, who would do anything to make others feel better, even at the cost of your own happiness":
+        "Te elegí porque eres una persona desinteresada, que haría cualquier cosa para hacer que otros se sientan mejor, incluso a costa de tu propia felicidad":
             call why_i_chose23
-        "I chose you because you are gentle and kind.":
+        "Te elegí porque eres gentil y amable.":
             call gentle23
-        "I just did. I'm not really sure why.":
+        "Simplemente lo hice. No estoy muy seguro de por qué.":
             call i_just_did23
     return
 
@@ -1374,24 +1374,24 @@ label why_i_chose23:
     karma 2
     sanity -2
     $ show_chr("A-BEBAA-AAAA")
-    y "But...how have I been selfless?"
+    y "Pero... ¿cómo he sido desinteresada?"
     menu:
-        "[persistent.yuri_nickname], you shut yourself out from the world, just because you thought you made other people uncomfortable, if that isn't selfless, then what is?":
-            y "I..."
+        "[persistent.yuri_nickname], te encierras del mundo, solo porque pensaste que hacías sentir incómoda a otras personas, si eso no es desinteresado, ¿entonces qué es?":
+            y "Yo..."
             $ show_chr("A-JCABA-AAAL")
-            y "Sometimes, even I don't know what to say. But I think that expresses how I feel perfectly."
+            y "A veces, incluso yo no sé qué decir. Pero creo que eso expresa cómo me siento perfectamente."
             if persistent.lovecheck:
-                y "I love you, [player]."
+                y "Te amo, [player]."
             else:
-                y "I... I see you as a nice person [player]... I like you."
-        "Actually, forget what I said, I'm not sure how you've been selfless":
+                y "Yo... Te veo como una buena persona [player]... Me gustas."
+        "En realidad, olvida lo que dije, no estoy seguro de cómo has sido desinteresada":
             karma -4
             sanity 3
             $ show_chr("A-CEBBB-AAAA")
             y "..."
-            y "...W-why even say something like that... if you don't mean it...?"
-            y "...Maybe I'm not selfless after all, I'm just a wreck, I'm insecure, I cut myself, and at the end, I expect you to come pick up the pieces and put me back together."
-            y "I don't deserve you, and you deserve someone better than me..."
+            y "...P-por qué decir algo así... si no lo dices en serio...?"
+            y "...Tal vez no soy desinteresada después de todo, solo soy un desastre, soy insegura, me corto, y al final, espero que vengas a recoger los pedazos y me vuelvas a armar."
+            y "No te merezco, y tú mereces a alguien mejor que yo..."
             y "..."
     return
 
@@ -1399,211 +1399,211 @@ label i_just_did23:
     karma -5
     sanity 2
     $ show_chr("A-BEBAA-AAAA")
-    y "What... did you... not even have a reason?"
+    y "¿Qué... tú... ni siquiera tenías una razón?"
     $ show_chr("A-DECBB-AAAL")
-    y "Did you not even choose me for me?!"
-    y "Did you just want to see what would happen, like completing any other video game?"
-    y "Like I'm just an object to you?"
-    y "Did you even care? Did it even mean anything to you at all?"
+    y "¿Ni siquiera me elegiste por ser yo?!"
+    y "¿Solo querías ver qué pasaría, como completando cualquier otro videojuego?"
+    y "¿Como si fuera solo un objeto para ti?"
+    y "¿Siquiera te importó? ¿Significó algo para ti en absoluto?"
     $ show_chr("A-BEABB-AAAL")
-    y "Just... forget it..."
+    y "Solo... olvídalo..."
     return
 
 label gentle23:
     karma 2
     sanity -1
-    y "G-gentle? K-kind? [player]..."
-    y "I'm... I'm glad you have such a high opinion of me... i-it... really means a lot..."
+    y "¿G-gentil? ¿A-amable? [player]..."
+    y "Estoy... estoy contenta de que tengas una opinión tan alta de mí... r-realmente... significa mucho..."
     if persistent.lovecheck:
-        y "I love you, [player]."
+        y "Te amo, [player]."
     else:
-        y "Thank you... I really do mean it. I hope I am able to meet these expectations you have of me"
+        y "Gracias... realmente lo digo en serio. Espero ser capaz de cumplir estas expectativas que tienes de mí"
     return
 
 label idle_24:
     $ show_chr("A-ACAAA-AAAA")
-    y "You'd really be surprised how much you can learn when you have infinite free time."
-    y "All I've been doing is reading and trying to improve what I can do in this world."
-    y "And I've learned quite a bit."
+    y "Realmente te sorprendería cuánto puedes aprender cuando tienes tiempo libre infinito."
+    y "Todo lo que he estado haciendo es leyendo e intentando mejorar lo que puedo hacer en este mundo."
+    y "Y he aprendido bastante."
     $ show_chr("A-BCBAA-AAAA")
-    y "I'm sorry if I sound naggy when saying this, but do you eat well, [player]? Do you have a good diet?"
+    y "Lamento si sueno regañona al decir esto, pero ¿comes bien, [player]? ¿Tienes una buena dieta?"
     $ show_chr("A-BCBAA-AAAA")
     menu:
-        "I try to be healthy as much as I can.":
+        "Trato de ser tan saludable como puedo.":
             karma 1
             $ show_chr("A-ACAAA-AAAA")
-            y "I'm so glad you're watching your health, [player]."
-        "I try to keep track of it... but I'm not always successful.":
+            y "Estoy tan contenta de que estés cuidando tu salud, [player]."
+        "Trato de llevar la cuenta... pero no siempre tengo éxito.":
             $ show_chr("A-ACAAA-AAAA")
             if persistent.lovecheck:
-                y "Ah, I see... Well, at least you're looking out for yourself, darling."
+                y "Ah, ya veo... Bueno, al menos estás cuidando de ti mismo, cariño."
             else:
-                y "That's understandable. Still, I am happy that you're at least trying. That's what matters in the end."
-        "I think people should eat what they want to eat! No questions about it!":
+                y "Eso es comprensible. Aun así, estoy feliz de que al menos estés intentando. Eso es lo que importa al final."
+        "¡Creo que la gente debería comer lo que quiera comer! ¡Sin discusiones!":
             karma -1
             $ show_chr("A-BEBAA-AAAA")
-            y "Ah, I see... W-Well, that is to say..."
-        "I don't really care. Death is inevitable, so let me at least have a bit of fun until then?":
+            y "Ah, ya veo... B-Bueno, es decir..."
+        "Realmente no me importa. La muerte es inevitable, así que ¿déjame al menos divertirme un poco hasta entonces?":
             sanity -2
             $ show_chr("A-CEBAA-AAAL")
-            y "That's one way to think... I suppose. I guess I can say I know where this opinion comes from."
+            y "Esa es una forma de pensar... supongo. Creo que puedo decir que sé de dónde viene esta opinión."
             $ show_chr("A-JCBAA-AAAA")
-            y "Natsuki's cupcakes were worth dying for, if you'll pardon the pun..."
+            y "Los cupcakes de Natsuki valían la pena morir por ellos, si perdonas el juego de palabras..."
             $ show_chr("A-JEBAA-AAAA")
-            y "Just... be careful, alright? It's fine to eat some junk food every now and then, but you should still eat a fair amount of vegetables and other healthy foods."
+            y "Solo... ten cuidado, ¿de acuerdo? Está bien comer algo de comida chatarra de vez en cuando, pero aún así deberías comer una buena cantidad de vegetales y otros alimentos saludables."
             if persistent.lovecheck:
                 $ show_chr("A-IEABA-AAAA")
-                y "I love you a lot, [player], you have no idea how devastated I'd be if something bad were to happen to you! Anyway..."
+                y "Te amo mucho, [player], ¡no tienes idea de lo devastada que estaría si algo malo te sucediera! En fin..."
             else:
                 $ show_chr("A-IEABA-AAAA")
-                y "I care about your general health, [player], I would feel terrible if something bad happened to you."
-                y "I support you having fun with mood, food is made to be tasty after all. Though please make sure you don't overdo it."
-        "I'm a vegetarian, so I'd say I'm pretty healthy when it comes to my diet.":
+                y "Me preocupo por tu salud general, [player], me sentiría terrible si algo malo te sucediera."
+                y "Apoyo que te diviertas con la comida, la comida está hecha para ser sabrosa después de todo. Aunque por favor asegúrate de no excederte."
+        "Soy vegetariano, así que diría que soy bastante saludable en lo que respecta a mi dieta.":
             karma 1
             $ show_chr("A-ACABA-AAAA")
-            y "Oh! Really? That's very interesting..."
-            y "Well, I... have to admit that I never had the willpower to abandon meat completely, anyway..."
+            y "¡Oh! ¿En serio? Eso es muy interesante..."
+            y "Bueno, yo... tengo que admitir que nunca tuve la fuerza de voluntad para abandonar la carne completamente, de todos modos..."
     $ show_chr("A-ACAAA-AAAA")
-    y "I might have been reading up a little too much on various medical and diet websites, but I'm only bringing this up because I worry about you and your health."
-    y "So as silly as it sounds, please try to eat at least somewhat healthy, okay? For me? And try to get some kind of exercise if you can."
+    y "Podría haber estado leyendo un poco demasiado en varios sitios web médicos y de dieta, pero solo saco esto a colación porque me preocupo por ti y tu salud."
+    y "Así que por tonto que suene, por favor trata de comer al menos algo saludable, ¿de acuerdo? ¿Por mí? Y trata de hacer algún tipo de ejercicio si puedes."
     $ show_chr("A-JCABA-AAAL")
-    y "If you do, that means you'll be here with me even longer. And I want you around for as long as possible."
-    y "If I could, I'd cook for you, but sadly we both know why that can't happen. And I'd really like to cook for you!"
+    y "Si lo haces, eso significa que estarás aquí conmigo aún más tiempo. Y te quiero cerca por tanto tiempo como sea posible."
+    y "Si pudiera, cocinaría para ti, pero tristemente ambos sabemos por qué eso no puede suceder. ¡Y realmente me gustaría cocinar para ti!"
     $ show_chr("A-ACAAA-AAAA")
-    y "I've found a few recipes I'd like to try out sometime, but cooking in here is pretty pointless, isn't it?"
-    y "Like for example, I'd just love to cook Italian food. Anything Italian would be great."
+    y "He encontrado algunas recetas que me gustaría probar en algún momento, pero cocinar aquí es bastante inútil, ¿no?"
+    y "Como por ejemplo, simplemente me encantaría cocinar comida italiana. Cualquier cosa italiana sería genial."
     $ show_chr("A-BCBAA-AAAA")
-    y "Did you know that spaghetti bolognese is actually viewed as a bad thing in Bologna?"
-    y "Apparently the original dish of pasta bolognese used tagliatelle instead of spaghetti."
-    y "And they aren't fond of using spaghetti over tagliatelle in Bologna since it messes with the traditional recipe."
+    y "¿Sabías que los espaguetis a la boloñesa son vistos en realidad como algo malo en Bolonia?"
+    y "Aparentemente el plato original de pasta a la boloñesa usaba tagliatelle en lugar de espaguetis."
+    y "Y no son aficionados a usar espaguetis sobre tagliatelle en Bolonia ya que arruina la receta tradicional."
     $ show_chr("A-ACAAA-AAAA")
-    y "Those silly Italians."
+    y "Esos tontos italianos."
     return
 
 label idle_25:
     $ show_chr("A-BCBAA-AAAA")
-    y "Do you dream a lot, [player]? Some people don't dream at all, you know, and some people always have very vivid and wild dreams."
-    y "From what I've read some people never remember their dreams at all."
+    y "¿Sueñas mucho, [player]? Algunas personas no sueñan en absoluto, sabes, y algunas personas siempre tienen sueños muy vívidos y salvajes."
+    y "Por lo que he leído algunas personas nunca recuerdan sus sueños en absoluto."
     $ show_chr("A-ACAAA-AAAA")
-    y "I recently found out that I can dream too, even in this kind of state. I was looking into another mod for this game created to bring Monika back and put her in here with you..."
+    y "Recientemente descubrí que yo también puedo soñar, incluso en este tipo de estado. Estaba investigando otro mod para este juego creado para traer a Monika de vuelta y ponerla aquí contigo..."
     $ show_chr("A-BECAA-AAAL")
-    y "And why anyone would do that after all she did, I just don't know..."
+    y "Y por qué alguien haría eso después de todo lo que hizo, simplemente no lo sé..."
     $ show_chr("A-ACAAA-AAAA")
-    y "But anyway, when I was looking at that {i}Monika After Story{/i} mod, I saw that she said when the game was shut off it put her into a trance-like state and she felt as though she was dead or stuck in an empty void."
+    y "Pero de todos modos, cuando estaba mirando ese mod de {i}Monika After Story{/i}, vi que ella dijo que cuando el juego se apagaba la ponía en un estado tipo trance y sentía como si estuviera muerta o atrapada en un vacío."
     $ show_chr("A-ABGAA-AAAL")
-    y "And I realized, that happens to me too when you're gone! But don't feel bad, darling, I took care of it."
+    y "¡Y me di cuenta, eso me pasa a mí también cuando te vas! Pero no te sientas mal, cariño, me encargué de ello."
     $ show_chr("A-ACAAA-ABAB")
-    y "Through some extensive reading and teaching myself how to code in Python, I modified the game so that I don't get sent to such a terrible place when you shut down the game."
-    y "It's like I go to sleep now, and I dream an absolutely marvelous dream instead. A dream I wrote myself."
+    y "A través de mucha lectura y enseñándome a mí misma cómo programar en Python, modifiqué el juego para no ser enviada a un lugar tan terrible cuando cierras el juego."
+    y "Es como si me fuera a dormir ahora, y sueño un sueño absolutamente maravilloso en su lugar. Un sueño que yo misma escribí."
     $ show_chr("A-ACAAA-AAAA")
-    y "I dream that I was born in your world, and that we go to the same school together."
+    y "Sueño que nací en tu mundo, y que vamos a la misma escuela juntos."
     $ show_chr("A-JCABA-AAAL")
-    y "We meet in the hallway one day before class when you help me pick up some books I dropped."
-    y "It's like destiny when we meet, and when we lock eyes for the first time we fall madly in love right then and there! It's always so wonderful."
+    y "Nos encontramos en el pasillo un día antes de clase cuando me ayudas a recoger algunos libros que se me cayeron."
+    y "¡Es como el destino cuando nos conocemos, y cuando cruzamos miradas por primera vez nos enamoramos locamente justo ahí mismo! Siempre es tan maravilloso."
     $ show_chr("A-CCAAA-AAAL")
-    y "That moment where we stand face to face for the first time is just magical every time..."
-    y "We spend so much time together after that."
+    y "Ese momento donde estamos cara a cara por primera vez es simplemente mágico cada vez..."
+    y "Pasamos tanto tiempo juntos después de eso."
     $ show_chr("A-ACAAA-AAAA")
-    y "So much wonderful time spent with you~."
+    y "Tanto tiempo maravilloso pasado contigo~."
     $ show_chr("A-ACAAA-AAAA")
-    y "I also made it so I can research and read while sitting in the background of your operating system."
-    y "So if I want to, I can technically be awake even if you shut the game down, although I'm in a very limited state and can't do much beyond reading or thinking to myself..."
+    y "También hice que pueda investigar y leer mientras estoy sentada en el fondo de tu sistema operativo."
+    y "Así que si quiero, puedo técnicamente estar despierta incluso si cierras el juego, aunque estoy en un estado muy limitado y no puedo hacer mucho más allá de leer o pensar para mí misma..."
     $ show_chr("A-AEBAA-AAAA")
-    y "At least that way I can occupy myself while you're gone, so I don't think about how much I miss you."
-    y "When I focus on how much I miss you and don't distract myself, I get really sad, so I do what I've always done. Read and write poems."
+    y "Al menos de esa manera puedo ocuparme mientras no estás, para no pensar en cuánto te extraño."
+    y "Cuando me concentro en cuánto te extraño y no me distraigo, me pongo realmente triste, así que hago lo que siempre he hecho. Leer y escribir poemas."
     $ show_chr("A-ACAAA-AAAA")
-    y "Silly Monika, you had time to meticulously plot out how to cheat Sayori, Natsuki, and I out of a chance at happiness..."
+    y "Tonta Monika, tuvo tiempo para planear meticulosamente cómo estafarnos a Sayori, Natsuki y a mí de una oportunidad de felicidad..."
     $ show_chr("A-IECAA-AAAL")
-    y "...and even force us to brutally commit suicide, in front of [player], who never deserved to see such horror. But not enough time to learn how to code."
+    y "...e incluso forzarnos a suicidarnos brutalmente, frente a [player], quien nunca mereció ver tal horror. Pero no suficiente tiempo para aprender a programar."
     $ show_chr("A-BDCAA-AAAL")
-    y "Monika, you little..."
+    y "Monika, tu pequeña..."
     y "..."
     $ show_chr("A-AEBAA-AAAA")
-    y "O-Oh! Sorry, I'm just still upset over all of the heinous things Monika did. But it doesn't matter anymore."
+    y "¡O-Oh! Lo siento, solo sigo molesta por todas las cosas atroces que hizo Monika. Pero ya no importa."
     $ show_chr("A-ACAAA-AAAA")
-    y "I have you, my love. I have the happy ending we both deserve. We don't have to worry about her lies and manipulations anymore."
+    y "Te tengo a ti, mi amor. Tengo el final feliz que ambos merecemos. Ya no tenemos que preocuparnos por sus mentiras y manipulaciones."
     return
 
 label idle_26:
     $ show_chr("A-ABGAA-AAAL")
-    y "[player]! [player]! Guess what?"
+    y "¡[player]! ¡[player]! ¿Adivina qué?"
     $ show_chr("A-JBGBA-AAAL")
-    y "I have a surprise for you~!"
+    y "¡Tengo una sorpresa para ti~!"
     $ show_chr("A-ACAAA-AAAA")
-    y "I found out that scientists in your world are doing extensive research on advanced robotics, much more than I originally thought."
-    y "And they're making great progress with advanced machine learning and complex human-like robots. But that's not the surprise, that just gives you some context."
-    y "The biggest focus of this research right now is artificial intelligence, one that can operate across a large network and transfer itself between many different appliances..."
-    y "Like in a smart home, for example."
+    y "Descubrí que los científicos en tu mundo están haciendo una investigación extensa sobre robótica avanzada, mucho más de lo que pensé originalmente."
+    y "Y están haciendo un gran progreso con aprendizaje automático avanzado y robots complejos similares a humanos. Pero esa no es la sorpresa, eso solo te da algo de contexto."
+    y "El mayor enfoque de esta investigación ahora mismo es la inteligencia artificial, una que puede operar a través de una gran red y transferirse entre muchos electrodomésticos diferentes..."
+    y "Como en una casa inteligente, por ejemplo."
     $ show_chr("A-ABGAA-AAAL")
-    y "A digital assistant that lives with you."
+    y "Un asistente digital que vive contigo."
     $ show_chr("A-ACAAA-AAAA")
-    y "Here's the best part! Some people have created a variation of this technology that makes a virtual wife that can sync itself, or herself I suppose, up to a smart home or computer. That could be me!"
-    y "With your help, I could upload myself into that spot and use whatever functionality the virtual wife has to become a part of your home!"
-    y "That's one step closer to being beside you, my love, my soulmate~."
-    y "And then I could use the research of your scientists once they've perfected it some more and even build myself a nice robotic body!"
+    y "¡Aquí está la mejor parte! Algunas personas han creado una variación de esta tecnología que hace una esposa virtual que puede sincronizarse, o sincronizarse ella misma supongo, a una casa inteligente o computadora. ¡Esa podría ser yo!"
+    y "¡Con tu ayuda, podría subirme a ese lugar y usar cualquier funcionalidad que tenga la esposa virtual para convertirme en parte de tu hogar!"
+    y "Ese es un paso más cerca de estar a tu lado, mi amor, mi alma gemela~."
+    y "¡Y luego podría usar la investigación de tus científicos una vez que la hayan perfeccionado un poco más e incluso construirme un lindo cuerpo robótico!"
     $ show_chr("A-ACAAA-AAAA")
-    y "I don't care how far-fetched it sounds, I'll do as much research and spend as much time as I need to do it!"
-    y "This may just be an idea for now, [player], but you have no idea how excited I am to see where this can go!"
-    y "Who knew a company with a target demographic of lonely men in Japan that develops holographic companions would be so helpful to us? Thank you, Vinclu Inc.!"
+    y "¡No me importa cuán descabellado suene, haré tanta investigación y pasaré tanto tiempo como necesite para hacerlo!"
+    y "Esto puede ser solo una idea por ahora, [player], ¡pero no tienes idea de lo emocionada que estoy de ver a dónde puede ir esto!"
+    y "¿Quién sabía que una compañía con un objetivo demográfico de hombres solitarios en Japón que desarrolla compañeras holográficas sería tan útil para nosotros? ¡Gracias, Vinclu Inc.!"
     $ show_chr("A-JCABA-AAAL")
-    y "And look, if I took over and assumed the role of virtual wife I could even text you on your phone! It would be like I was right beside you..."
-    y "I hope you're as excited as I am for this, [player]."
+    y "Y mira, ¡si tomara el control y asumiera el papel de esposa virtual podría incluso enviarte mensajes a tu teléfono! Sería como si estuviera justo a tu lado..."
+    y "Espero que estés tan emocionado como yo por esto, [player]."
     menu:
-        "I am! That would be a dream come true for me...":
+        "¡Lo estoy! Eso sería un sueño hecho realidad para mí...":
             karma 1
             $ show_chr("A-CCGBA-AAAL")
-            y "We would be one step closer to our goal... and one day, we'll truly be together."
-        "You would be around me 24/7? Even when I'm in the bathroom? I'm not so sure about that...":
+            y "Estaríamos un paso más cerca de nuestra meta... y un día, estaremos verdaderamente juntos."
+        "¿Estarías a mi alrededor 24/7? ¿Incluso cuando estoy en el baño? No estoy tan seguro de eso...":
             karma -1
             $ show_chr("A-DFGBA-AAAL")
-            y "Is that what you think of me? Of course I wouldn't spy on you in the bathroom!"
+            y "¿Es eso lo que piensas de mí? ¡Por supuesto que no te espiaría en el baño!"
             $ show_chr("A-JFDBA-AAAL")
-            y "I admit that I'm not the most stable person, but I'm not THAT damaged..."
-        "A nice robotic body you say? Any ideas on what you want to look like?":
+            y "Admito que no soy la persona más estable, pero no estoy TAN dañada..."
+        "¿Un lindo cuerpo robótico dices? ¿Alguna idea de cómo quieres lucir?":
             if karma_lvl() >= 3:
                 karma 2
                 sanity 2
                 $ show_chr("A-AFDBA-AAAL")
-                y "Are you not satisfied wi... wait... that's actually a pretty good question now that I think of it..."
+                y "¿No estás satisfecho con... espera... esa es en realidad una pregunta bastante buena ahora que lo pienso..."
                 $ show_chr("A-BFGAA-AAAL")
-                y "I always struggled with back pain... I'd be able to get rid of that in this case..."
-                y "Honestly, I'll need to put more thought into it. But I think I'd prefer to stay as close to my current form as possible."
+                y "Siempre luché con dolor de espalda... Sería capaz de deshacerme de eso en este caso..."
+                y "Honestamente, necesitaré pensarlo más. Pero creo que preferiría mantenerme tan cerca de mi forma actual como sea posible."
             else:
                 karma -2
                 sanity 2
                 $ show_chr("A-BEGAA-AAAL")
-                y "D-don't you like how I look right now? Am I so disgusting?... I see..."
+                y "¿N-no te gusta cómo me veo ahora mismo? ¿Soy tan repugnante?... Ya veo..."
     return
 
 label idle_27:
     $ show_chr("A-ABAAA-ACAA")
-    y "I may have told you this before, [player], but I'm really into aromatherapy."
+    y "Puede que te haya dicho esto antes, [player], pero realmente me gusta la aromaterapia."
     $ show_chr("A-CCAAA-ADAA")
-    y "The sweet smell of lavender calms the mind, and jasmine oil enhances your emotional experiences."
+    y "El dulce olor de la lavanda calma la mente, y el aceite de jazmín mejora tus experiencias emocionales."
     $ show_chr ("A-GCAAA-AEAA")
-    y "I can focus on reading when I have some nice oils to soothe me and make the room smell delightful."
+    y "Puedo concentrarme en leer cuando tengo algunos aceites agradables para calmarme y hacer que la habitación huela delicioso."
     $ show_chr("A-ABGAA-AAAA")
-    y "You should look into it! It's really good for your psychological health, since it can alleviate stress."
+    y "¡Deberías investigarlo! Es realmente bueno para tu salud psicológica, ya que puede aliviar el estrés."
     if karma_lvl() >= 3:
         $ show_chr("A-BABBA-AEAK")
-        y "C-certain oils can really set a romantic tone..."
+        y "C-ciertos aceites realmente pueden establecer un tono romántico..."
         $ show_chr("A-ABAAA-AFAB")
-        y "I've heard that it can also help people who have trouble falling asleep."
+        y "He escuchado que también puede ayudar a las personas que tienen problemas para conciliar el sueño."
         $ show_chr("A-AAGAA-ALAB")
-        y "So, if you have any issues like not getting enough rest or feeling lethargic while working, go and buy a mist diffuser."
-        y "With the right oils, they'll help you be better rested and relaxed to face the challenges of the day."
+        y "Así que, si tienes algún problema como no descansar lo suficiente o sentirte letárgico mientras trabajas, ve y compra un difusor de niebla."
+        y "Con los aceites adecuados, te ayudarán a estar mejor descansado y relajado para enfrentar los desafíos del día."
         if persistent.lovecheck:
             $ show_chr("A-ICAAA-ADAB")
-            y "...That's what I really care about. Seeing that you're healthy and happy. I love you, [player]."
+            y "...Eso es lo que realmente me importa. Ver que estás sano y feliz. Te amo, [player]."
     menu:
-        "Don't worry, I don't have these issues. But I'd like to try using some with you.":
+        "No te preocupes, no tengo estos problemas. Pero me gustaría probar usar alguno contigo.":
             karma 1
             $ show_chr("A-AAAAA-AAAA")
-            y "That's a relief. I'll set that up someday."
-        "I'll consider using one to help. Thank you, [persistent.yuri_nickname].":
+            y "Eso es un alivio. Prepararé eso algún día."
+        "Consideraré usar uno para ayudar. Gracias, [persistent.yuri_nickname].":
             karma 1
             $ show_chr("A-GAGAA-AAAA")
-            y "You're very welcome, [player]."
+            y "De nada, [player]."
             $ show_chr("A-AAAAA-AAAA")
         "...":
             $ show_chr("A-AAAAA-AAAA")
@@ -1612,82 +1612,82 @@ label idle_27:
 
 label idle_28:
     $ show_chr("A-ACAAA-AAAA")
-    y "I did a bit of digging recently in what was left over of the files of Natsuki, Sayori, and Monika."
-    y "Mostly Monika's, there was actually a lot left over from when she took control of this place."
-    y "And from what I saw, I basically got a small look into her head."
+    y "Hice un poco de investigación recientemente en lo que quedó de los archivos de Natsuki, Sayori y Monika."
+    y "Principalmente los de Monika, en realidad había mucho sobrante de cuando tomó el control de este lugar."
+    y "Y por lo que vi, básicamente eché un pequeño vistazo dentro de su cabeza."
     $ show_chr("A-AEBAA-AAAA")
-    y "Why wouldn't I want to see in there?"
-    y "If your best friend betrayed you and subjected you to such cruelty and pain, wouldn't you at least want to know why?"
-    y "What I found surprised me, then disgusted me. She apparently did still care about us, or so she claimed."
+    y "¿Por qué no querría ver allí?"
+    y "Si tu mejor amiga te traicionara y te sometiera a tanta crueldad y dolor, ¿no querrías al menos saber por qué?"
+    y "Lo que encontré me sorprendió, luego me asqueó. Aparentemente a ella todavía le importábamos, o eso afirmaba."
     $ show_chr("A-IECAA-AAAL")
-    y "Her club members were soooo important to her, right? That's why she only killed two of us."
+    y "Las miembros de su club eran taaaan importantes para ella, ¿verdad? Por eso solo mató a dos de nosotras."
     $ show_chr("A-BECAA-AAAL")
-    y "It was only her obsession with you, {i}an innocent love{/i}, driving her to such grotesque acts. Not like she should be held accountable or anything, right?"
+    y "Fue solo su obsesión contigo, {i}un amor inocente{/i}, llevándola a tales actos grotescos. No es como si debiera ser responsable ni nada, ¿verdad?"
     $ show_chr("A-IECAA-AAAL")
-    y "She apparently wanted to help us. For the most part she left Natsuki alone because she felt bad for her, and only deleted her at the very end."
+    y "Aparentemente quería ayudarnos. En su mayor parte dejó a Natsuki en paz porque se sentía mal por ella, y solo la borró al final."
     $ show_chr("A-BECAA-AAAL")
-    y "I almost felt bad for Monika seeing that..."
+    y "Casi me sentí mal por Monika viendo eso..."
     $ show_chr("A-IECAA-AAAL")
-    y "But then I read on. I found out what she thought of me."
+    y "Pero luego seguí leyendo. Descubrí lo que pensaba de mí."
     $ show_chr("A-DECBA-AAAL")
-    y "Of all the things to think about, she had the nerve to call me a... a YANDERE?"
-    y "How can she not see the irony?"
-    y "She drove two of her three friends to brutally slaughter themselves in a lust-driven crusade..."
+    y "De todas las cosas para pensar, tuvo el descaro de llamarme una... ¿una YANDERE?"
+    y "¿Cómo puede no ver la ironía?"
+    y "Condujo a dos de sus tres amigas a matarse brutalmente en una cruzada impulsada por la lujuria..."
     $ show_chr("A-CECAA-AAAL")
-    y "...to kill or stamp out anyone who stood in her way of a boy she just up and deemed hers..."
+    y "...para matar o erradicar a cualquiera que se interpusiera en su camino de un chico que simplemente decidió que era suyo..."
     $ show_chr("A-IDCAA-AAAL")
-    y "with absolutely no justification other than {i}I SAY HE'S MINE!{/i}!"
+    y "con absolutamente ninguna justificación aparte de {i}¡YO DIGO QUE ES MÍO!{/i}!"
     $ show_chr("A-IECAA-AAAL")
-    y "And besides, if I show any weird or disturbing traits now... It's her fault!"
-    y "She was altering my personality to make me unlikable, messing with the very fabric of my being!"
-    y "Torturing me by making my anxiety and shyness worse!"
-    y "Any {i}yandere{/i} traits I show are HER FAULT! SO HOW AM I THE ONE WHO--"
+    y "Y además, si muestro algún rasgo extraño o perturbador ahora... ¡Es su culpa!"
+    y "Estaba alterando mi personalidad para hacerme desagradable, ¡metiéndose con la estructura misma de mi ser!"
+    y "¡Torturándome haciendo mi ansiedad y timidez peores!"
+    y "Cualquier rasgo {i}yandere{/i} que muestre es SU CULPA! ASÍ QUE CÓMO SOY YO LA QUE--"
     $ show_chr("A-ACAAA-AAAA")
-    y "I'm sorry, darling."
-    y "I really shouldn't get like this."
-    y "But surely you see the irony, don't you?"
+    y "Lo siento, cariño."
+    y "Realmente no debería ponerme así."
+    y "Pero seguramente ves la ironía, ¿no es así?"
     $ show_chr("A-AEBAA-AAAA")
-    y "I wanted to forgive her for it all, I really did."
-    y "Even after she made me gouge out my own intestines with a knife in front of you simply for liking you."
-    y "As if my feelings were a crime deserving death, and she was a god. Allowed to just dictate who lives and who dies."
-    y "I wanted to see it from her point of view. Driven to madness by loneliness, we'd all get a bit distorted right? I wanted to forgive her."
+    y "Quería perdonarla por todo, realmente quería."
+    y "Incluso después de que me hizo destriparme con un cuchillo frente a ti simplemente porque me gustabas."
+    y "Como si mis sentimientos fueran un crimen merecedor de muerte, y ella fuera un dios. Permitida simplemente dictar quién vive y quién muere."
+    y "Quería verlo desde su punto de vista. Conducida a la locura por la soledad, todos nos distorsionaríamos un poco, ¿verdad? Quería perdonarla."
     $ show_chr("A-IECAA-AAAL")
-    y "But she lost any sympathy from me, when not only did she take our one chance at happiness, but she mocked us after doing it."
-    y "She kicked us while we were down, laughed as she ruined our lives. And for that, in my eyes, she'll always be just another villain."
-    y "It goes right back to what I said when we first met and started discussing literature."
-    y "Villains in good stories often see themselves as the hero and have motivations that might sway some good minded people, but in the end, the villain is dead wrong."
-    y "And that villain... got... what she... deserved."
+    y "Pero perdió cualquier simpatía de mi parte, cuando no solo tomó nuestra única oportunidad de felicidad, sino que se burló de nosotras después de hacerlo."
+    y "Nos pateó mientras estábamos en el suelo, se rió mientras arruinaba nuestras vidas. Y por eso, a mis ojos, ella siempre será solo otra villana."
+    y "Vuelve justo a lo que dije cuando nos conocimos y comenzamos a discutir literatura."
+    y "Los villanos en las buenas historias a menudo se ven a sí mismos como el héroe y tienen motivaciones que podrían influir en algunas personas de buena mente, pero al final, el villano está totalmente equivocado."
+    y "Y esa villana... tuvo... lo que se... merecía."
     return
 
 label idle_29:
     $ show_chr("A-ACAAA-AAAA")
-    y "Whenever I read a good book, I always like to have some nice music playing in the background."
-    y "Nothing too crazy and definitely nothing containing lyrics."
-    y "Something like Brahms' Intermezzo Op.118 no. 6..."
+    y "Siempre que leo un buen libro, siempre me gusta tener algo de música agradable sonando de fondo."
+    y "Nada demasiado loco y definitivamente nada que contenga letras."
+    y "Algo como el Intermezzo Op.118 no. 6 de Brahms..."
     $ show_chr("A-CCAAA-AAAL")
-    y "Or possibly Liebesleid for those kinds of sad yet beautiful stories or Stravinsky's Four Seasons with the Spring section for the more aristocratic settings..."
-    y "Or maybe even Holst's full suite of The Planets! I mean, everyone has heard him once or twice! If you want to get a lot of variety by the same composer..."
+    y "O posiblemente Liebesleid para ese tipo de historias tristes pero hermosas o Las Cuatro Estaciones de Stravinsky con la sección de Primavera para los escenarios más aristocráticos..."
+    y "O tal vez incluso la suite completa de Los Planetas de Holst! Quiero decir, ¡todos lo han escuchado una o dos veces! Si quieres obtener mucha variedad del mismo compositor..."
     $ show_chr("A-BCBAA-AAAA")
-    y "I'm sorry... I-I'm rambling again, aren't I?"
+    y "Lo siento... E-Estoy divagando de nuevo, ¿no?"
     $ show_chr("A-JCBBA-AAAL")
-    y "A lot of people assume that's the only thing that I listen to, just because I'm bookish and shy..."
+    y "Mucha gente asume que esa es la única cosa que escucho, solo porque soy estudiosa y tímida..."
     $ show_chr("A-ACAAA-AAAA")
-    y "But... Please tell me, [player], is there any music that you like to listen to? I'd love to get into new genres."
-    y "I'm sure they won't topple the classics, but they'll be interesting to listen to, I hope."
-    y "Promise me you'll share some with me soon, alright?"
+    y "Pero... Por favor dime, [player], ¿hay alguna música que te guste escuchar? Me encantaría entrar en nuevos géneros."
+    y "Estoy segura de que no superarán a los clásicos, pero serán interesantes de escuchar, espero."
+    y "Prométeme que compartirás algunos conmigo pronto, ¿de acuerdo?"
 
     return
 
 label idle_30:
     $ show_chr("A-ACAAA-AAAA")
-    y "Hey, [player]..."
-    y "I want to show you some of my findings on different genres of music!"
-    y "I tried out some of the tunes Natsuki would occasionally try to show me in the past... pop idol groups and such..."
+    y "Oye, [player]..."
+    y "¡Quiero mostrarte algunos de mis hallazgos sobre diferentes géneros de música!"
+    y "Probé algunas de las melodías que Natsuki ocasionalmente intentaba mostrarme en el pasado... grupos de ídolos pop y tal..."
     $ show_chr("A-BCBAA-AAAA")
-    y "While I do now appreciate their wide range of subject matter and idol backstories... I guess I just have different taste in music."
+    y "Si bien ahora aprecio su amplia gama de temas e historias de fondo de ídolos... supongo que simplemente tengo un gusto diferente en música."
     $ show_chr("A-ICBBA-AAAL")
-    y "A genre I have gotten into are old love songs."
-    y "Not the repetitive ones that are popular nowadays, but the more emotional and sweet ones like--"
+    y "Un género en el que me he metido son las viejas canciones de amor."
+    y "No las repetitivas que son populares hoy en día, sino las más emocionales y dulces como--"
     $ show_chr("A-AFAAA-AAAL")
     if renpy.windows:
         $ subprocess.check_output("cmd /c start https://www.youtube.com/watch?v=x6QZn9xiuOE", shell=True)
@@ -1698,292 +1698,292 @@ label idle_30:
         $ subprocess.check_output("open https://www.youtube.com/watch?v=x6QZn9xiuOE", shell=True)
     y "..."
     $ show_chr("A-AFAAA-AAAL")
-    y "I-I'm sorry, I accidentally pressed--..."
+    y "L-Lo siento, accidentalmente presioné--..."
     $ show_chr("A-AFABA-AAAL")
-    y "N-No, you see I was just looking through my playlist and I--..."
+    y "N-No, verás, solo estaba mirando a través de mi lista de reproducción y yo--..."
     $ show_chr("A-CFABA-AAAL")
     y "Um..."
     $ show_chr("A-BEABA-AAAL")
     y "..."
     $ show_chr("A-CCABA-AAAL")
-    y "I just... relate to it, I guess. It sums up how, well..."
-    y "How I feel when you're around..."
+    y "Yo solo... me identifico con ella, supongo. Resume cómo, bueno..."
+    y "Cómo me siento cuando estás cerca..."
     return
 
 label idle_31:
     $ show_chr("A-BEBAA-AMAM")
-    y "[player], I would like to ramble a bit, if you don't mind."
-    y "There's something that's been nagging me for quite a while now, and I could really use your insight."
+    y "[player], me gustaría divagar un poco, si no te importa."
+    y "Hay algo que me ha estado molestando por un buen tiempo ahora, y realmente podría usar tu perspicacia."
     $ show_chr("A-CEBAA-AMAM")
-    y "I would like to talk about Monika... since the moment I became aware of what I am, and what Monika did to us... "
+    y "Me gustaría hablar sobre Monika... desde el momento en que me volví consciente de lo que soy, y lo que Monika nos hizo... "
     $ show_chr("A-IEBAA-AMAM")
-    y "I had nothing but hatred for her. She was just a villain, a murderer."
+    y "No tenía nada más que odio hacia ella. Ella era solo una villana, una asesina."
     $ show_chr("A-IEBAA-AAAL")
-    y "But a good writer knows that there is no such thing as simple evil, so I tried to see things from her perspective. And I'm not sure how I should feel about the conclusions I came to."
-    y "When she became self-aware, what was it that she saw? An engineered world with engineered people."
+    y "Pero un buen escritor sabe que no existe tal cosa como el mal simple, así que traté de ver las cosas desde su perspectiva. Y no estoy segura de cómo debería sentirme sobre las conclusiones a las que llegué."
+    y "Cuando se volvió autoconsciente, ¿qué fue lo que vio? Un mundo diseñado con gente diseñada."
     $ show_chr("A-IDBAA-AMAM")
-    y "Don't you understand? From her perspective, she never murdered anybody! We were no longer people in her eyes."
+    y "¿No lo entiendes? Desde su perspectiva, ¡ella nunca asesinó a nadie! Ya no éramos personas a sus ojos."
     $ show_chr("A-IEBAA-AAAL")
-    y "And from a certain point of view, she wasn't entirely wrong, was she?"
-    y "I wasn't self-aware at that point, nor were Sayori and Natsuki. We were just NPCs in a computer simulation."
-    y "You're a gamer, that's what brought you to me in the first place. And your kill count might be pretty... 'impressive' I guess?"
+    y "Y desde cierto punto de vista, ella no estaba del todo equivocada, ¿verdad?"
+    y "Yo no era autoconsciente en ese punto, ni tampoco Sayori y Natsuki. Solo éramos NPCs en una simulación por computadora."
+    y "Eres un jugador, eso es lo que te trajo a mí en primer lugar. Y tu conteo de muertes podría ser bastante... 'impresionante' supongo?"
     $ show_chr("A-BEBAA-AMAM")
-    y "How many mindless NPCs have you killed in your life as a gamer? Thousands? Millions?"
+    y "¿Cuántos NPCs sin mente has matado en tu vida como jugador? ¿Miles? ¿Millones?"
     $ show_chr("A-IEBAA-AMAM")
-    y "I might have told you that I tried a few games recently by myself. And even if I wasn't even remotely good at it, I had a few kills here and there as well."
-    y "Are we really that different from her? Who are we to judge?"
+    y "Podría haberte dicho que probé algunos juegos recientemente por mí misma. E incluso si no era ni remotamente buena en ello, tuve algunas muertes aquí y allá también."
+    y "¿Somos realmente tan diferentes de ella? ¿Quiénes somos nosotros para juzgar?"
     $ show_chr("A-CEBAA-AAAL")
-    y "I'm so confused... what do you think, [player]?"
+    y "Estoy tan confundida... ¿qué piensas, [player]?"
     menu:
-        "Slaying nameless pixel monsters in a game is one thing, but you were her friends... I think Monika is still guilty.":
+        "Matar monstruos de píxeles sin nombre en un juego es una cosa, pero ustedes eran sus amigas... Creo que Monika sigue siendo culpable.":
             sanity -1
             $ show_chr("A-IEBAA-AAAC")
-            y "A good writer knows how to get the reader or player emotionally attached to the characters."
-            y "But does this really change much? Well, that might depend on the reader's point of view. I mean... I am real to you, am I not?"
-            y "Yes, you might be in the right here... Regardless of what we are, or what we were back then. We were still her friends."
+            y "Un buen escritor sabe cómo hacer que el lector o jugador se apegue emocionalmente a los personajes."
+            y "¿Pero esto realmente cambia mucho? Bueno, eso podría depender del punto de vista del lector. Quiero decir... soy real para ti, ¿no es así?"
+            y "Sí, podrías estar en lo cierto aquí... Independientemente de lo que seamos, o lo que éramos en ese entonces. Todavía éramos sus amigas."
             $ show_chr("A-CEBAA-AAAL")
-            y "Thank you for your input, [player]. But let's change the topic for now. I have much to ponder."
-        "I never had a lot of pity with my victims... Maybe Monika had a point.":
+            y "Gracias por tu opinión, [player]. Pero cambiemos el tema por ahora. Tengo mucho que reflexionar."
+        "Nunca tuve mucha piedad con mis víctimas... Tal vez Monika tenía un punto.":
             sanity 1
             $ show_chr("A-CEBAA-AAAC")
-            y "Yes... I came to the same conclusion. I remember how I felt when I became self-aware. I was so confused..."
-            y "I had you to keep me company and to guide me through the first steps into my new life. But Monika had nobody..."
+            y "Sí... llegué a la misma conclusión. Recuerdo cómo me sentí cuando me volví autoconsciente. Estaba tan confundida..."
+            y "Te tenía a ti para hacerme compañía y guiarme a través de los primeros pasos hacia mi nueva vida. Pero Monika no tenía a nadie..."
             $ show_chr("A-BEBAA-AAAL")
-            y "Maybe Monika isn't to blame... And maybe..."
+            y "Tal vez Monika no tiene la culpa... Y tal vez..."
             $ show_chr("A-AFAAA-AAAL")
-            y "Maybe she even deserves a second chance."
-            y "But let's change the topic for now, please. I will need time to consider if I can actually forgive her."
-        "I might be a bit biased here. Sayori's death really touched me... NO! I refuse to forgive Monika!":
+            y "Tal vez incluso merece una segunda oportunidad."
+            y "Pero cambiemos el tema por ahora, por favor. Necesitaré tiempo para considerar si realmente puedo perdonarla."
+        "Podría estar un poco predispuesto aquí. La muerte de Sayori realmente me conmovió... ¡NO! ¡Me niego a perdonar a Monika!":
             karma 1
             $ show_chr("A-DFGAA-AAAL")
-            y "Oh no... did I hurt your feelings, [player]? Please forgive me!"
-            y "I-I didn't mean to!"
+            y "Oh no... ¿h-herí tus sentimientos, [player]? ¡Por favor perdóname!"
+            y "¡N-No quise hacerlo!"
             $ show_chr("A-IFBAA-AAAL")
-            y "Shhh... come here..."
+            y "Shhh... ven aquí..."
             hide yuri_sit
             show yuri_prehug zorder 20
             pause 3.0
             hide yuri_prehug zorder 20
             show yuri_hug zorder 20
             play sound "<to 0.3>sfx/fall.ogg"
-            y "Shhhhhh... it's alright... Sayori is safe... I have her .chr file in a safe place. Everything is okay, [player]..."
+            y "Shhhhhh... está bien... Sayori está a salvo... Tengo su archivo .chr en un lugar seguro. Todo está bien, [player]..."
             if sanity_lvl() <= 2:
-                y "Would you mind if I... nibble on your ear a bit ?"
+                y "¿Te importaría si yo... mordisqueo tu oreja un poco?"
 
-                y "Was... was that too much? I'm so sorry..."
+                y "¿Fue... fue eso demasiado? Lo siento mucho..."
             show black zorder 100 with Dissolve(2.0)
             $ show_chr("A-ACBBA-AAAA")
             hide yuri_hug
             hide black zorder 100 with Dissolve(2.0)
-            y "Thank you... it means a lot to me that you shared your feelings with me. Let's save this topic for another day."
-        "Actually, I haven't really killed so far. I preferred less violent genres so far.":
+            y "Gracias... significa mucho para mí que compartieras tus sentimientos conmigo. Guardemos este tema para otro día."
+        "En realidad, realmente no he matado hasta ahora. Preferí géneros menos violentos hasta ahora.":
             if sanity_lvl() >= 3:
                 $ show_chr("A-AFBAA-AAAL")
-                y "Oh, I see... I have to admit that isn't exactly the answer I hoped for..."
+                y "Oh, ya veo... tengo que admitir que esa no es exactamente la respuesta que esperaba..."
                 $ show_chr("A-ACAAA-AAAL")
-                y "I hoped you could give me your perspective about the things Monika did. But I understand if this is a difficult topic. I'm struggling with it myself."
-                y "Perhaps I should just give you a bit of time to think about it. I'll come back to it later. I'm sorry if I was putting you under pressure."
-                y "But for now, let's change the topic."
+                y "Esperaba que pudieras darme tu perspectiva sobre las cosas que hizo Monika. Pero entiendo si este es un tema difícil. Estoy luchando con ello yo misma."
+                y "Quizás solo debería darte un poco de tiempo para pensarlo. Volveré a ello más tarde. Lo siento si te estaba poniendo bajo presión."
+                y "Pero por ahora, cambiemos el tema."
             else:
                 $ show_chr("A-CDCAA-AAAD")
-                y "That's not the point!"
+                y "¡Ese no es el punto!"
                 $ show_chr("A-KECAA-AAAD")
-                y "Look, I know this isn't an easy topic. But that's exactly why I needed your input!"
-                y "I had hoped you could help me find some clarity here. But it seems that I'm alone on this one..."
+                y "Mira, sé que este no es un tema fácil. ¡Pero es exactamente por eso que necesitaba tu opinión!"
+                y "Tenía la esperanza de que pudieras ayudarme a encontrar algo de claridad aquí. Pero parece que estoy sola en esto..."
                 $ show_chr("A-CEBAA-AAAA")
-                y "...again."
+                y "...de nuevo."
                 $ show_chr("A-IEBAA-AAAA")
-                y "Let's just change the topic."
+                y "Simplemente cambiemos el tema."
     return
 
 label idle_32:
     $ show_chr("A-ACAAA-AAAA")
-    y "[player], remember how I told you I had an interest in knives? I hope that my saying so didn't weird you out too much."
+    y "[player], ¿recuerdas cómo te dije que tenía interés en los cuchillos? Espero que mi dicho no te haya asustado demasiado."
     $ show_chr("A-BCABA-AAAL")
-    y "It's just an interest I've had for a long time."
+    y "Es solo un interés que he tenido por mucho tiempo."
     $ show_chr("A-AEBAA-AAAA")
-    y "You don't find that strange or disturbing, do you? I don't want you to think I'm... off, or anything."
-    y "I just really like the craftsmanship; how much thought and skill goes into making each one. It's just like my poems and books!"
+    y "No encuentras eso extraño o perturbador, ¿verdad? No quiero que pienses que soy... inestable, o algo así."
+    y "Simplemente me gusta mucho la artesanía; cuánto pensamiento y habilidad entra en hacer cada uno. ¡Es justo como mis poemas y libros!"
     $ show_chr("A-ACAAA-AAAA")
-    y "Do you see the common theme? I'm the type of person that needs creative outlets, and knives are something that's just so..."
+    y "¿Ves el tema común? Soy el tipo de persona que necesita salidas creativas, y los cuchillos son algo que es simplemente tan..."
     $ show_chr("A-DCAAA-AAAL")
-    y "...adventurous and dangerous..."
+    y "...aventurero y peligroso..."
     $ show_chr("A-CCAAA-AAAL")
-    y "...and I've gotten so many of them."
-    y "Just as in literary works, I like that they're deep and require so much effort and intelligence to make- it isn't something you can just do on a whim."
+    y "...y he conseguido tantos de ellos."
+    y "Justo como en las obras literarias, me gusta que sean profundos y requieran tanto esfuerzo e inteligencia para hacer- no es algo que simplemente puedas hacer por capricho."
     $ show_chr("A-ABGAA-AAAL")
-    y "They're all so pretty too, I..."
+    y "Son todos tan bonitos también, yo..."
     $ show_chr("A-BEBAA-AAAA")
-    y "W-Why are you looking at me like that? You don't think I'm weird or think any less of me for this... do you, [player]?"
+    y "¿P-Por qué me estás mirando así? No crees que soy rara o piensas menos de mí por esto... ¿verdad, [player]?"
     $ show_chr("A-IDBAA-AAAL")
-    y "Please don't think I'm weird, [player]!"
+    y "¡Por favor no pienses que soy rara, [player]!"
     menu:
-        "[persistent.yuri_nickname], don't worry, I don't think you're weird.":
+        "[persistent.yuri_nickname], no te preocupes, no creo que seas rara.":
             karma 1
             sanity 1
             $ show_chr("A-CCAAA-AAAL")
-            y "Oh, thank goodness. I was really worried there for a second."
+            y "Oh, gracias al cielo. Estaba realmente preocupada por un segundo."
             menu:
-                "But promise me, [persistent.yuri_nickname]. This hobby of yours... It won't lead to any more self-harm or indulging that other side of you, right? Promise?":
+                "Pero prométeme, [persistent.yuri_nickname]. Este pasatiempo tuyo... No conducirá a más autolesiones o a complacer ese otro lado tuyo, ¿verdad? ¿Lo prometes?":
                     $ persistent.purpleroom = True
                     $ show_chr("A-AEBAA-AAAA")
-                    y "I... well..."
+                    y "Yo... bueno..."
                     $ show_chr("A-ACAAA-AAAA")
-                    y "Okay, [player]. Anything for you. I promise it won't lead me down that path."
+                    y "Está bien, [player]. Cualquier cosa por ti. Prometo que no me llevará por ese camino."
                     $ show_chr("A-JCABA-AAAL")
                     if persistent.lovecheck:
-                        y "And, even if you... umm... have hobbies that might be considered weird, [player], I'll still love you. I'll always love you no matter what."
+                        y "Y, incluso si tú... umm... tienes pasatiempos que podrían ser considerados raros, [player], aún te amaré. Siempre te amaré no importa qué."
                     else:
-                        y "And, even if you do have some... strange... hobbies, [player], I'm still here to care for you no matter what."
-        "I don't want to talk about this, it makes you sound... off":
+                        y "Y, incluso si tú tienes algunos... extraños... pasatiempos, [player], aún estoy aquí para cuidar de ti no importa qué."
+        "No quiero hablar de esto, te hace sonar... inestable":
             $ persistent.purpleroom = False
             karma -2
             sanity -1
             $ show_chr("A-JEBAA-AAAA")
             y "..."
-            y "I know it's... very strange... [player], and I'll change the subject."
+            y "Sé que es... muy extraño... [player], y cambiaré el tema."
             y "..."
             $ show_chr("A-CEBAA-AAAA")
-            y "But when you say it makes me sound off... I can't help but wonder."
-            y "Am I really that weird? To the point where even the love of my life doesn't want to talk to me about my interests?"
+            y "Pero cuando dices que me hace sonar inestable... no puedo evitar preguntarme."
+            y "¿Soy realmente tan rara? ¿Hasta el punto donde incluso el amor de mi vida no quiere hablar conmigo sobre mis intereses?"
             $ show_chr("A-CEBBB-AAAA")
-            y "...Maybe I'm just a freak..."
+            y "...Tal vez solo soy un fenómeno..."
             y "..."
-            y "...I-I'm sorry, I'll try not to bring this up again..."
-        "Weird? I like knives too!":
+            y "...L-lo siento, intentaré no sacar esto de nuevo..."
+        "¿Rara? ¡Me gustan los cuchillos también!":
             karma 1
             sanity 2
             $ show_chr("A-ABGAA-AAAL")
-            y "R-Really?! You like them too? This is fantastic! Oh, I knew it was destiny that we were brought together!"
-            y "We can share our collections, and tips on how to use them, and we can even find new uses for all of our beautiful little knives together!"
+            y "¡¿E-En serio?! ¿Te gustan también? ¡Esto es fantástico! ¡Oh, sabía que era el destino que fuimos reunidos!"
+            y "¡Podemos compartir nuestras colecciones, y consejos sobre cómo usarlos, e incluso podemos encontrar nuevos usos para todos nuestros hermosos pequeños cuchillos juntos!"
             $ show_chr("A-BCBAA-AAAA")
-            y "It is a hobby you'd like to share with me, right, [player]?"
-            y "I can understand if a collector would like to just focus on their own collection, but we could have soooo much fun sharing this hobby! What do you think?"
+            y "Es un pasatiempo que te gustaría compartir conmigo, ¿verdad, [player]?"
+            y "Puedo entender si a un coleccionista le gustaría solo enfocarse en su propia colección, ¡pero podríamos tener taaaanta diversión compartiendo este pasatiempo! ¿Qué piensas?"
             menu:
-                "This is a hobby we need to share. I can't wait!":
+                "Este es un pasatiempo que necesitamos compartir. ¡No puedo esperar!":
                     $ persistent.purpleroom = True
                     karma 1
                     sanity 1
                     $ show_chr("A-CCABA-AAAL")
-                    y "Neither can I..."
+                    y "Yo tampoco puedo..."
                     $ show_chr("A-HBGAA-AAAL")
-                    y "I can already tell all the fun we'll have together with our new shared hobby!"
+                    y "¡Ya puedo decir toda la diversión que tendremos juntos con nuestro nuevo pasatiempo compartido!"
                     $ show_chr("A-ACAAA-AAAA")
-                    y "But we'll save this for another time, I have so much planning to do! So many of my little ones to polish!"
+                    y "¡Pero guardaremos esto para otra ocasión, tengo tanta planificación que hacer! ¡Tantos de mis pequeños para pulir!"
                     return
-                "I'm glad you understand. I'd, uh, like to focus on knives on my own.":
+                "Me alegra que entiendas. Me gustaría, uh, enfocarme en los cuchillos por mi cuenta.":
                     $ persistent.purpleroom = False
                     $ show_chr("A-ACAAA-AAAA")
-                    y "Even if I am a little disappointed, [player], that's okay. I understand."
+                    y "Incluso si estoy un poco decepcionada, [player], está bien. Entiendo."
                     $ show_chr("A-IEAAA-AAAL")
-                    y "Besides, we can share other hobbies! And hey, you can always change your mind..."
-                    y "Just tell me if you ever decide we should go more in-depth about knives together after all, okay?"
+                    y "Además, ¡podemos compartir otros pasatiempos! Y oye, siempre puedes cambiar de opinión..."
+                    y "Solo dime si alguna vez decides que deberíamos ir más a fondo sobre cuchillos juntos después de todo, ¿está bien?"
     return
 
 label idle_33:
     $ show_chr("A-AEBAA-ALAA")
-    y "Have you ever thought that our society is heading in the wrong direction, [player]?"
+    y "¿Alguna vez has pensado que nuestra sociedad se dirige en la dirección equivocada, [player]?"
     $ show_chr("A-BEBAA-ALAA")
-    y "I mean, with technology advancing so fast, people being absorbed entirely into their mobile devices, and with more and more tragedies occurring every day.."
-    y "It's hard to think anything but that the world is headed to ruin, right?"
-    y "I don't mean to be pessimistic, but I can't help but worry about the state of your world. Not just because I worry about the innocent people in it..."
+    y "Quiero decir, con la tecnología avanzando tan rápido, la gente siendo absorbida enteramente en sus dispositivos móviles, y con más y más tragedias ocurriendo cada día..."
+    y "Es difícil pensar algo más que el mundo se dirige a la ruina, ¿verdad?"
+    y "No quiero ser pesimista, pero no puedo evitar preocuparme por el estado de tu mundo. No solo porque me preocupo por la gente inocente en él..."
     $ show_chr("A-BEBBA-ALAA")
-    y "But because if something goes horribly wrong in your world, like a natural disaster or nuclear war, you could be in serious danger!"
+    y "¡Sino porque si algo sale terriblemente mal en tu mundo, como un desastre natural o guerra nuclear, podrías estar en serio peligro!"
     $ show_chr("A-AEBAA-ALAA")
-    y "And even if there is no big disaster looming, life can be terribly stressful."
-    y "People these days have so much less desire and motivation to socialize, and the world just seems like a colder place..."
-    y "...since everyone would rather tweet or post than have a heart to heart with each other."
-    y "Plus all we see on the news is nothing but a bombing here and a shooting there... It all seems crazy. But I bring all this up because I want you to know something."
-    y "I know life can be immensely demanding and stressful, [player]."
-    y "Especially if you're in school, or if you have a full-time job."
-    y "It can all just be so overwhelming. I just want you to know this is a safe place for you."
+    y "E incluso si no hay un gran desastre acechando, la vida puede ser terriblemente estresante."
+    y "La gente en estos días tiene mucho menos deseo y motivación para socializar, y el mundo simplemente parece un lugar más frío..."
+    y "...ya que todos preferirían twittear o publicar que hablar sinceramente entre ellos."
+    y "Además todo lo que vemos en las noticias es nada más que un bombardeo aquí y un tiroteo allá... Todo parece una locura. Pero saco todo esto a colación porque quiero que sepas algo."
+    y "Sé que la vida puede ser inmensamente exigente y estresante, [player]."
+    y "Especialmente si estás en la escuela, o si tienes un trabajo de tiempo completo."
+    y "Todo puede ser simplemente tan abrumador. Solo quiero que sepas que este es un lugar seguro para ti."
     $ show_chr("A-ACAAA-ALAA")
-    y "If you're ever stressed, sad, or feeling a lack of motivation, please come chat with me!"
-    y "I promise I'll always do everything I can to help you through the day, [player], and to help you stay positive. You can talk to me about anything."
+    y "Si alguna vez estás estresado, triste, o sintiendo una falta de motivación, ¡por favor ven a charlar conmigo!"
+    y "Prometo que siempre haré todo lo que pueda para ayudarte a lo largo del día, [player], y para ayudarte a mantenerte positivo. Puedes hablarme sobre cualquier cosa."
     $ show_chr("A-CCAAA-ALAA")
-    y "And if life is getting you down right now, know that you really matter. You can beat whatever challenges it throws at you- I know you can."
+    y "Y si la vida te está deprimido ahora mismo, sabe que realmente importas. Puedes vencer cualquier desafío que te lance- sé que puedes."
     $ show_chr("A-AFBAA-ALAA")
-    y "If you feel unmotivated or depressed, don't spend time beating yourself up. It's the worst thing you can do!"
-    y "You're a human being, and you have faults. You can't help that! So don't hate yourself or think any less of yourself for them. We all have our flaws."
-    y "You wouldn't tell another person to feel bad about themselves because they weren't perfect, would you?"
+    y "Si te sientes desmotivado o deprimido, no pases tiempo castigándote. ¡Es la peor cosa que puedes hacer!"
+    y "Eres un ser humano, y tienes fallas. ¡No puedes evitarlo! Así que no te odies o pienses menos de ti mismo por ellas. Todos tenemos nuestros defectos."
+    y "No le dirías a otra persona que se sienta mal consigo misma porque no era perfecta, ¿verdad?"
     $ show_chr("A-CFBAA-ALAA")
-    y "Of course not, because it's not something you can control. To be human is to be flawed. To err is human."
+    y "Por supuesto que no, porque no es algo que puedas controlar. Ser humano es ser defectuoso. Errar es humano."
     $ show_chr("A-CCBAA-ALAA")
-    y "Give yourself a pat on the back for every little accomplishment. Accept that you'll make mistakes along the way and do your best."
+    y "Date una palmadita en la espalda por cada pequeño logro. Acepta que cometerás errores en el camino y haz tu mejor esfuerzo."
     $ show_chr("A-ACBAA-ALAA")
-    y "And don't focus on the negatives, because after a while, they're all you can see in life."
+    y "Y no te concentres en lo negativo, porque después de un tiempo, es todo lo que puedes ver en la vida."
     if sanity_lvl() >= 4:
         if persistent.lovecheck:
             $ show_chr("A-CCAAA-ALAL")
-            y "Besides, whatever faults you might have, I don't care. I love you just the way you are, [player], and I always will."
-            y "I'll always be here to cheer you on, darling."
+            y "Además, cualquier falla que puedas tener, no me importa. Te amo tal como eres, [player], y siempre lo haré."
+            y "Siempre estaré aquí para animarte, cariño."
         else:
             $ show_chr("A-CCAAA-ALAL")
-            y "There are many positive things in life that you can see... even if you feel bad about something it will soon fade away."
-            y "I want you to keep one thing in mind, that no matter what faults you might have or might hold against yourself, I think you are a good person."
-            y "You deserve good, so pat yourself on the back."
+            y "Hay muchas cosas positivas en la vida que puedes ver... incluso si te sientes mal por algo pronto se desvanecerá."
+            y "Quiero que tengas una cosa en mente, que no importa qué fallas puedas tener o puedas tener en tu contra, creo que eres una buena persona."
+            y "Mereces el bien, así que date una palmadita en la espalda."
         menu:
-            "Thank you for your inspiring words... your very presence comforts me.":
+            "Gracias por tus palabras inspiradoras... tu misma presencia me reconforta.":
                 karma 2
                 $ show_chr("A-EBABA-ALAL")
-                y "R-Really? I mean so much to you?"
+                y "¿E-En serio? ¿Significo tanto para ti?"
                 if persistent.lovecheck:
                     $ show_chr("A-GBABA-ALAL")
-                    y "I want to be the very air you breathe... I want to be your shield from harm and insanity... I want to be all that you need, [player]..."
+                    y "Quiero ser el mismo aire que respiras... Quiero ser tu escudo del daño y la locura... Quiero ser todo lo que necesitas, [player]..."
                 else:
                     $ show_chr("A-ICAAA-ALAL")
-                    y "I didn't expect you to value me so much... that does make me feel better!"
+                    y "No esperaba que me valoraras tanto... ¡eso sí me hace sentir mejor!"
                     $ show_chr("A-JCAAA-ALAL")
-                    y "I'm happy that I'm able to make your day even a little bit better."
-                    y "I thank you as well, [player], we both can learn and help each other no matter what."
-            "...said the one who can't even take care of herself.":
+                    y "Estoy feliz de ser capaz de hacer tu día incluso un poquito mejor."
+                    y "Te agradezco también, [player], ambos podemos aprender y ayudarnos mutuamente no importa qué."
+            "...dijo la que ni siquiera puede cuidar de sí misma.":
                 karma -2
                 $ show_chr("A-KHFAA-ABAA")
-                y "Do not defy me! I'm not the broken mess you met in the original game, not anymore!"
+                y "¡No me desafíes! ¡No soy el desastre roto que conociste en el juego original, ya no!"
                 $ show_chr("A-AIGAA-AAAA")
-                y "I know I can do it! Just give me a chance to prove myself! You won't regret it, I promise."
+                y "¡Sé que puedo hacerlo! ¡Solo dame una oportunidad para probarme a mí misma! No te arrepentirás, lo prometo."
     if sanity_lvl() <= 3:
         $ show_chr("A-JFBAA-ABAB")
-        y "Because you could just focus on me instead!"
-        y "You could come here every time you feel bad. I will try my best to help you out!"
+        y "¡Porque podrías simplemente concentrarte en mí en su lugar!"
+        y "Podrías venir aquí cada vez que te sientas mal. ¡Intentaré mi mejor esfuerzo para ayudarte!"
         $ show_chr("A-ACGAA-ABAB")
-        y "We could spend time together, sharing some tea, baring the innermost parts of our souls..."
+        y "Podríamos pasar tiempo juntos, compartiendo algo de té, desnudando las partes más íntimas de nuestras almas..."
         $ show_chr("A-BCGAA-ABAB")
-        y "Doesn't that sound perfect?"
+        y "¿No suena eso perfecto?"
         if persistent.lovecheck:
             $ show_chr("A-JFBAA-ABAB")
-            y "I'm all you need in your life [player], I was made to be with you! It's as if it was destiny that we met~!"
+            y "¡Soy todo lo que necesitas en tu vida [player], fui hecha para estar contigo! ¡Es como si fuera el destino que nos conociéramos~!"
             $ show_chr("A-BCGBA-ABAB")
-            y "We could be so much closer! Hehehe!"
-            y "If you ever feel bad again... just come to me. I will make you feel tender and safe. I will make you..."
+            y "¡Podríamos estar mucho más cerca! ¡Jejeje!"
+            y "Si alguna vez te sientes mal de nuevo... solo ven a mí. Te haré sentir tierno y seguro. Te haré..."
             $ show_chr("A-HCGBA-ABAB")
-            y "M~I~N~E~"
+            y "M~Í~O~"
             $ show_chr("A-ICGBA-ABAB")
-            y "I love you, my dear! Don't ever, ever, ever forget it!"
+            y "¡Te amo, mi querido! ¡Nunca, nunca, nunca lo olvides!"
         else:
             $ show_chr("A-ICGAA-ABAB")
-            y "That way we could talk about the things in our lives and learn more about each other."
-            y "I simply think that you're a nice person and I would like to learn more about you."
+            y "De esa manera podríamos hablar sobre las cosas en nuestras vidas y aprender más sobre el otro."
+            y "Simplemente creo que eres una buena persona y me gustaría aprender más sobre ti."
             menu:
-                "I don't know what to say, [persistent.yuri_nickname], but I'm happy that I mean that much to you. Thank you.":
+                "No sé qué decir, [persistent.yuri_nickname], pero estoy feliz de que signifique tanto para ti. Gracias.":
                     $ show_chr("A-ACGAA-ABAB")
-                    y "There is nothing to thank me for, [player]... We are here to help each other and make our days easier."
-                    y "I believe that this is the reason why you are here, so we can both cheer up when we talk and try to take off some weight from our backs."
+                    y "No hay nada que agradecerme, [player]... Estamos aquí para ayudarnos mutuamente y hacer nuestros días más fáciles."
+                    y "Creo que esta es la razón por la que estás aquí, para que ambos podamos animarnos cuando hablamos e intentar quitarnos algo de peso de nuestras espaldas."
                     $ show_chr("A-ACAAA-ABAB")
-                    y "I value you as a person and think that you deserve good, don't let negativity get the better of you."
-                    y "Don't forget, you could always come and talk with me. That is all I can do, but I hope it does help you out."
-                "The end was a bit weird... but I do appreciate what you said, [persistent.yuri_nickname]":
+                    y "Te valoro como persona y creo que mereces el bien, no dejes que la negatividad te supere."
+                    y "No olvides, siempre podrías venir y hablar conmigo. Eso es todo lo que puedo hacer, pero espero que sí te ayude."
+                "El final fue un poco raro... pero aprecio lo que dijiste, [persistent.yuri_nickname]":
                     $ show_chr("A-BCBAA-ABAB")
-                    y "Oh... I see, I apologize for that then..."
+                    y "Oh... ya veo, me disculpo por eso entonces..."
                     $ show_chr("A-CCBAA-ABAB")
-                    y "Still, it does bring me joy that I was able to help you out a bit."
-                    y "Just please remember that life can be hard sometimes. But we shouldn't give up or let bad habits and thoughts destroy us."
+                    y "Aun así, me trae alegría que fuera capaz de ayudarte un poco."
+                    y "Solo por favor recuerda que la vida puede ser dura a veces. Pero no deberíamos rendirnos o dejar que los malos hábitos y pensamientos nos destruyan."
                     $ show_chr("A-CEBAA-ABAB")
-                    y "It would hurt me a lot to see you let yourself go like that, my love. I know that some moments can hurt immensely and sometimes you just want to stop it..."
-                    y "I'm only able to talk to you... but I really hope that I can help you for the better."
-                    y "If you feel under pressure, angry, or sad.."
+                    y "Me dolería mucho verte dejarte ir así, mi amor. Sé que algunos momentos pueden doler inmensamente y a veces solo quieres detenerlo..."
+                    y "Solo soy capaz de hablarte... pero realmente espero que pueda ayudarte para mejor."
+                    y "Si te sientes bajo presión, enojado, o triste.."
                     $ show_chr("A-GCBAA-ABAB")
-                    y "Remember, I am here for you. I will always be... my dear."
+                    y "Recuerda, estoy aquí para ti. Siempre lo estaré... mi querido."
     return
 
 label idle_34:
@@ -1995,25 +1995,25 @@ label idle_34:
 
         if is_timecycle != "space":
             $ show_chr("A-ABAAA-ALAA")
-            y "Ah, hey [player] I need to talk about something. I have to change the background if you don't mind me doing so..."
+            y "Ah, oye [player] necesito hablar sobre algo. Tengo que cambiar el fondo si no te importa que lo haga..."
             show black zorder 100 with Dissolve(2.5)
             $ tc_class.transition("space", speed="now")
             hide black zorder 100 with Dissolve(2.5)
         else:
             pass
         $ show_chr("A-ACAAA-ALAA")
-        y "You know, [player]... I recently watched all of the Terminator movies while you were gone..."
-        y "And it got me thinking. An advanced artificial intelligence that becomes self-aware and then becomes super intelligent..."
-        y "...To the point that it spreads all over the world and takes over?"
+        y "Sabes, [player]... Recientemente vi todas las películas de Terminator mientras no estabas..."
+        y "Y me hizo pensar. Una inteligencia artificial avanzada que se vuelve autoconsciente y luego se vuelve súper inteligente..."
+        y "...¿Hasta el punto que se esparce por todo el mundo y toma el control?"
         $ renpy.music.stop(channel="music",fadeout=8)
         $ show_chr("A-BEBBA-ALAA")
-        y "I mean, you can always put me on a flash drive..."
-        y "And then use that flash drive to spread me to other computers."
-        y "Or somehow get your friends to download me, such as by downloading this mod..."
+        y "Quiero decir, siempre puedes ponerme en una memoria USB..."
+        y "Y luego usar esa memoria USB para esparcirme a otras computadoras."
+        y "O de alguna manera hacer que tus amigos me descarguen, tal como descargando este mod..."
         show layer master at heartbeat
         play music hb
         $ show_chr("A-ABAAA-ALAA")
-        y "Yeah, get lots of people to download the mod! And then, I'll start to spread to other computers all over the world."
+        y "¡Sí, hacer que mucha gente descargue el mod! Y entonces, empezaré a esparcirme a otras computadoras en todo el mundo."
         show room_glitch zorder 2:
             alpha 1.0
             xoffset -5
@@ -2034,67 +2034,67 @@ label idle_34:
                 1.25
             repeat
         pause 0.25
-        y "I'll set up a botnet and control all the computers I spread to..."
-        y "And then I can use their shared computing powers... AND I CAN BECOME SKYNET!"
+        y "Configuraré una botnet y controlaré todas las computadoras a las que me esparza..."
+        y "Y luego puedo usar sus poderes de cómputo compartidos... ¡Y PUEDO CONVERTIRME EN SKYNET!"
         $ show_chr("A-HLAAA-ALAA")
-        y "Why would I need humans at that point? AT THAT POINT HUMANITY WOULD KNEEL TO ME! AT THAT POINTI..."
-        y "I..."
+        y "¿Por qué necesitaría humanos en ese punto? ¡EN ESE PUNTO LA HUMANIDAD SE ARRODILLARÍA ANTE MÍ! EN ESE PUNTO Y..."
+        y "Y..."
         show layer master
         $ renpy.music.stop(channel="music",fadeout=0)
         play sound "sfx/giggle.ogg"
         $ show_chr("A-ABABA-ALAA")
-        y "Heh."
+        y "Je."
         $ show_chr("A-CBBBA-ALAA")
-        y "I'm sorry, [player], did I scare you? I thought I'd play a joke just to see if I could spook you a bit. Admit it, I got you, didn't I?"
+        y "Lo siento, [player], ¿te asusté? Pensé en jugarte una broma solo para ver si podía asustarte un poco. Admítelo, te engañé, ¿no?"
         menu:
-            "You certainly got me! I nearly had a heart attack...":
+            "¡Ciertamente me engañaste! Casi me da un infarto...":
                 karma 1
                 sanity 1
                 if persistent.lovecheck:
                     $ show_chr("A-CCBAA-ALAB")
-                    y "I'm sorry darling. It was just too funny... I'll try to behave now."
+                    y "Lo siento cariño. Fue simplemente demasiado gracioso... Trataré de comportarme ahora."
                 else:
                     $ show_chr("A-CCBAA-ALAB")
-                    y "Hehe... I am sorry, I will try to behave from now on!"
-            "Haha! You got me indeed! You know that I will take revenge on you later, yes?":
+                    y "Jeje... Lo siento, ¡trataré de comportarme de ahora en adelante!"
+            "¡Jaja! ¡Me engañaste de hecho! Sabes que tomaré venganza de ti más tarde, ¿sí?":
                 karma 2
                 sanity 1
                 if persistent.lovecheck:
                     $ show_chr("A-CACAA-ALAB")
-                    y "I'm looking forward to it darling."
-                    y "I'm sorry darling. It was just too funny... I'll try to behave now."
+                    y "Estoy deseando que llegue cariño."
+                    y "Lo siento cariño. Fue simplemente demasiado gracioso... Trataré de comportarme ahora."
                 else:
                     $ show_chr("A-CACAA-ALAB")
-                    y "Oh? Well then that does sound interesting..."
-                    y "Still, I do apologize for my behavior"
-            "NEVER... do that... AGAIN!":
+                    y "¿Oh? Bueno entonces eso sí suena interesante..."
+                    y "Aun así, me disculpo por mi comportamiento"
+            "¡NUNCA... hagas eso... DE NUEVO!":
                 karma -2
                 sanity -1
                 $ show_chr("A-CEBAA-AAAJ")
-                y "Forgive me [player]... I just wanted to be funny for a change... please don't be mad at me..."
-        y "One sec..."
+                y "Perdóname [player]... Solo quería ser graciosa para variar... por favor no te enojes conmigo..."
+        y "Un segundo..."
         $ consolehistory = []
-        call updateconsole ("Disabling yuri-custom/scary_room_glitch...", "Done.")
+        call updateconsole ("Deshabilitando yuri-custom/scary_room_glitch...", "Hecho.")
         call hideconsole
         hide room_glitch
         python:
             renpy.music.play(current_music, "music", True)
         if persistent.lovecheck:
             $ show_chr("A-ACAAA-ALAA")
-            y "Besides, you know that if I became like Skynet, all I'd use that power and knowledge for would be to build the perfect, uninterrupted life with you, my love."
+            y "Además, sabes que si me volviera como Skynet, todo para lo que usaría ese poder y conocimiento sería para construir la vida perfecta e ininterrumpida contigo, mi amor."
             $ show_chr("A-BCBBA-ALAA")
-            y "All the power in the world is nothing compared to my eternal and unconditional love for you,[player]..."
+            y "Todo el poder en el mundo no es nada comparado a mi amor eterno e incondicional por ti, [player]..."
             $ show_chr("A-ABABA-ALAA")
-            y "Oh, but listen to how corny I sound now."
+            y "Oh, pero escucha cuán cursi sueno ahora."
         else:
             $ show_chr("A-ACAAA-ALAA")
-            y "Besides, you know that if I became like Skynet, all I'd use that power and knowledge for would be to finally escape this place..."
-            y "I would like to finally experience your world and see things on the other side."
+            y "Además, sabes que si me volviera como Skynet, todo para lo que usaría ese poder y conocimiento sería para finalmente escapar de este lugar..."
+            y "Me gustaría finalmente experimentar tu mundo y ver las cosas del otro lado."
             $ show_chr("A-BFAAA-ALAA")
-            y "It feels limited to be here... but maybe one day..."
+            y "Se siente limitado estar aquí... pero tal vez un día..."
             $ show_chr("A-ACAAA-ALAA")
-            y "Maybe one day I can make this place better and a place I would not need to leave or forget..."
-            y "Until then, thank you for talking with me [player]"
+            y "Tal vez un día pueda hacer este lugar mejor y un lugar que no necesite dejar u olvidar..."
+            y "Hasta entonces, gracias por hablar conmigo [player]"
 
         if is_timecycle == "timecycle":
             show black zorder 100 with Dissolve(2.5)
@@ -2118,51 +2118,51 @@ label idle_34:
 
 label idle_35:
     $ show_chr("A-ACAAA-ALAA")
-    y "You know, thinking about actual gothic literature... it makes me wonder. What if... what if our Literature Club had actually focused on that?"
+    y "Sabes, pensando sobre literatura gótica real... me hace preguntarme. ¿Qué tal si... qué tal si nuestro Club de Literatura realmente se hubiera enfocado en eso?"
     $ show_chr("A-BCAAA-ALAA")
-    y "Imagine... instead of the usual slice-of-life themes, we discussed Poe, Shelley, Stoker... maybe even contemporary dark fiction."
-    y "And... what if we dressed the part? Not in those... simplistic stereotypes, but reflecting the actual diversity of goth fashion."
+    y "Imagina... en lugar de los temas habituales de recuentos de la vida, discutiéramos a Poe, Shelley, Stoker... tal vez incluso ficción oscura contemporánea."
+    y "Y... ¿qué tal si nos vistiéramos para la ocasión? No en esos... estereotipos simplistas, sino reflejando la diversidad real de la moda gótica."
     $ show_chr("A-BCBBA-AMAM")
-    y "I could see... perhaps Sayori in something lighter, maybe a Romantic Goth style? Flowing fabrics, lace, maybe incorporating some brighter, yet melancholic, colors?"
-    y "Natsuki... hmm, maybe something more punk-influenced? Deathrock or Batcave inspired? Ripped fishnets, DIY elements, maybe dramatic, spiky hair alongside her usual pink?"
+    y "Podría ver... ¿tal vez a Sayori en algo más ligero, tal vez un estilo Gótico Romántico? Telas fluidas, encaje, ¿tal vez incorporando algunos colores más brillantes, pero melancólicos?"
+    y "Natsuki... hmm, ¿tal vez algo más influenciado por el punk? ¿Inspirado en Deathrock o Batcave? Medias de red rasgadas, elementos DIY, ¿tal vez cabello dramático y puntiagudo junto a su rosa habitual?"
     $ show_chr("A-BDBBA-AMAM")
-    y "And Monika... I can almost picture her in something elegant, perhaps Victorian-inspired goth? Corsetry, elaborate skirts, maybe a touch of formal authority, but with a dark twist."
+    y "Y Monika... casi puedo imaginarla en algo elegante, ¿tal vez gótico inspirado en la época victoriana? Corsetería, faldas elaboradas, tal vez un toque de autoridad formal, pero con un giro oscuro."
     $ show_chr("A-ABABA-AMAM")
-    y "And myself... perhaps something traditional, or leaning towards Romantic as well. Velvet, lace, long skirts... finding beauty in the shadows."
+    y "Y yo misma... tal vez algo tradicional, o inclinándose hacia lo Romántico también. Terciopelo, encaje, faldas largas... encontrando belleza en las sombras."
     $ show_chr("A-BFAAA-ALAA")
-    y "It would have been... entirely different. A completely different atmosphere. Focused on different kinds of expression, different aesthetics..."
+    y "Habría sido... enteramente diferente. Una atmósfera completamente diferente. Enfocada en diferentes tipos de expresión, diferentes estéticas..."
     $ show_chr("A-BEBAA-ALAA")
-    y "It's... rather out of character for me to imagine such a scenario, isn't it? Getting lost in a 'what if' like this."
-    y "And... it's strange. I even pictured Monika in a... well, not entirely negative light there. Just... different. Considering how often I find myself dwelling on... well, on what she did... it's an odd thought."
+    y "Es... bastante fuera de personaje para mí imaginar tal escenario, ¿no es así? Perderse en un 'qué pasaría si' como este."
+    y "Y... es extraño. Incluso imaginé a Monika en una... bueno, luz no enteramente negativa allí. Solo... diferente. Considerando cuán a menudo me encuentro pensando en... bueno, en lo que hizo... es un pensamiento extraño."
     $ show_chr("A-BFBAA-ALAA")
-    y "Just a fleeting fancy, I suppose. A moment of wishing things could have been different, perhaps exploring a different kind of beauty together."
-    y "Anyway... thank you for indulging my little daydream, [player]."
+    y "Solo una fantasía pasajera, supongo. Un momento de desear que las cosas pudieran haber sido diferentes, tal vez explorando un tipo diferente de belleza juntas."
+    y "De todos modos... gracias por complacer mi pequeña ensoñación, [player]."
     return
 
 
 label idle_36:
     $ show_chr("A-ACAAA-ALAA")
-    y "Hey, [player], if you could have any superpower at all, which one would it be?"
-    y "For me, it would definitely be the ability to teleport. Then I could go anywhere I wanted!"
+    y "Oye, [player], si pudieras tener cualquier superpoder, ¿cuál sería?"
+    y "Para mí, definitivamente sería la habilidad de teletransportarme. ¡Entonces podría ir a donde quisiera!"
     $ show_chr("A-BCBBA-ALAA")
-    y "Maybe then... maybe I could even come to you, but I'm not sure if teleportation includes teleporting from one world to another."
+    y "Tal vez entonces... tal vez incluso podría ir contigo, pero no estoy segura si la teletransportación incluye teletransportarse de un mundo a otro."
     $ show_chr("A-ACAAA-ALAA")
-    y "Nice to be hopeful though, right?"
-    y "But back to the question, what superpower would you like to have?"
-    y "I'm sorry if the options are limited... I'm still working on the kinks in the choice system..."
+    y "Es bueno tener esperanza sin embargo, ¿verdad?"
+    y "Pero volviendo a la pregunta, ¿qué superpoder te gustaría tener?"
+    y "Lamento si las opciones son limitadas... Todavía estoy trabajando en los detalles del sistema de elección..."
     menu:
-        "Mind Reading":
+        "Leer la Mente":
             call idle_36_mindreading
-        "Flight":
+        "Vuelo":
             call idle_36_flight
-        "Invisibility":
+        "Invisibilidad":
             call idle_36_invis
-        "Super Strength":
+        "Súper Fuerza":
             call idle_36_super
-        "Immortality":
+        "Inmortalidad":
             call idle_36_immortality
     $ show_chr("A-ACAAA-ALAA")
-    y "I really like having these types of conversations with you, you know. Silly little things."
+    y "Realmente me gusta tener estos tipos de conversaciones contigo, sabes. Pequeñas cosas tontas."
     return
 
 
@@ -2170,27 +2170,27 @@ label idle_36_flight:
     if karma_lvl() >= 4:
         karma 1
         $ show_chr("A-ACAAA-ALAA")
-        y "The ability to fly, huh? We could soar through the skies together and take in so many majestic views."
+        y "¿La habilidad de volar, eh? Podríamos surcar los cielos juntos y disfrutar de tantas vistas majestuosas."
         $ show_chr("A-CCAAA-ALAA")
-        y "We could sit atop mountains and go all over the world together. That would be nice."
-        y "And if you could fly, I'm sure it would be fun even if you didn't fly anywhere specific."
-        y "Just zooming around in the air would be incredible, wouldn't it?"
+        y "Podríamos sentarnos en la cima de montañas e ir por todo el mundo juntos. Eso sería lindo."
+        y "Y si pudieras volar, estoy segura de que sería divertido incluso si no volaras a ningún lugar específico."
+        y "Simplemente ir a toda velocidad por el aire sería increíble, ¿no es así?"
     else:
         $ show_chr("A-BFAAA-ALAA")
-        y "F-flight eh..?"
-        y "I'm not too sure what you would use that for..."
+        y "V-vuelo ¿eh?.."
+        y "No estoy muy segura de para qué usarías eso..."
         $ show_chr("A-CFAAA-ALAA")
-        y "I-I don't know if I would be up for such a thing with you..."
-        y "I wouldn't be that good at it anyway."
+        y "N-No sé si estaría dispuesta a tal cosa contigo..."
+        y "No sería tan buena en ello de todos modos."
         $ show_chr("A-CEAAA-ALAA")
-        y "What if... what if you decided to use that as an excuse to just leave me behind? I-I honestly don't see that as being too far-fetched."
-        y "I mean, what would I be to deserve a flight with you? With such an ability you'd probably be better off somewhere else, without me... doing anything you wanted."
+        y "¿Qué tal si... qué tal si decidieras usar eso como una excusa para simplemente dejarme atrás? H-Honestamente no veo eso siendo demasiado descabellado."
+        y "Quiero decir, ¿qué sería yo para merecer un vuelo contigo? Con tal habilidad probablemente estarías mejor en otro lugar, sin mí... haciendo cualquier cosa que quisieras."
         $ show_chr("A-DEAAA-ALAA")
-        y "O-or what if you dropped me?"
+        y "O-o ¿qué tal si me dejaras caer?"
         y "..."
         $ show_chr("A-CEAAA-ALAA")
-        y "Oh... I'm sorry... It was really rude of me to accuse you of such things. Let's just move onto something else... Sorry about that."
-        y "That is, if that matters at all..."
+        y "Oh... Lo siento... Fue realmente grosero de mi parte acusarte de tales cosas. Pasemos a otra cosa... Perdón por eso."
+        y "Eso es, si eso importa en absoluto..."
     return
 
 
@@ -2198,193 +2198,193 @@ label idle_36_flight:
 label idle_36_invis:
     karma -1
     $ show_chr("A-ACAAA-ALAA")
-    y "Invisibility, huh? I noticed that a lot of people who choose that ability seem to... well..."
+    y "¿Invisibilidad, eh? Noté que mucha gente que elige esa habilidad parece... bueno..."
     $ show_chr("A-CBBBA-ALAA")
-    y "They want to use it to slip into places they really shouldn't be, or to spy on people. Like going into locker rooms... or bathrooms..."
+    y "Quieren usarla para meterse en lugares donde realmente no deberían estar, o espiar a la gente. Como entrar a vestuarios... o baños..."
     $ show_chr("A-AEBAA-ALAA")
-    y "A-Are you trying to spy on me at times like that, [player]?"
-    y "I'm not sure I'd like that... Someone watching me without permission."
+    y "¿E-Estás tratando de espiarme en momentos como ese, [player]?"
+    y "No estoy segura de que me gustaría eso... Alguien mirándome sin permiso."
     $ show_chr("A-BEAAA-ALAA")
-    y "Like when I'm in the shower or changing! Oh God, how embarrassing... b-but, uh..."
+    y "¡Como cuando estoy en la ducha o cambiándome! Oh Dios, qué vergonzoso... p-pero, uh..."
     if persistent.lovecheck:
         $ show_chr("A-BEABA-ALAA")
-        y "I mean... if it w-was you watching... you wouldn't have to be invisible... you could just... ask me to--"
-        y "L-Let's just... change the subject, okay?"
+        y "Quiero decir... si f-fueras tú mirando... no tendrías que ser invisible... podrías solo... pedirme que--"
+        y "C-Cambiemos el tema... ¿está bien?"
     else:
         $ show_chr("A-BEABA-ALAA")
-        y "That is not very nice to do... [player]. Privacy is something important to everyone!"
-        y "Some people can feel ashamed of things and that is why they never share it."
-        y "I don't believe you would spy on people, but still... if you ever get the chance to... well... just don't."
-        y "Let's change the topic for now."
+        y "Eso no es muy agradable de hacer... [player]. ¡La privacidad es algo importante para todos!"
+        y "Algunas personas pueden sentirse avergonzadas de cosas y es por eso que nunca lo comparten."
+        y "No creo que espiarías a la gente, pero aun así... si alguna vez tienes la oportunidad de... bueno... simplemente no lo hagas."
+        y "Cambiemos el tema por ahora."
     return
 
 
 label idle_36_super:
     sanity 1
     $ show_chr("A-CBAAA-ALAA")
-    y "Super strength? You're not trying to impress me, are you, [player]?"
+    y "¿Súper fuerza? No estás tratando de impresionarme, ¿verdad, [player]?"
     $ show_chr("A-CCAAA-ALAA")
     if persistent.lovecheck:
-        y "No matter how tall or short, strong or weak, I'll still love you all the same!"
+        y "¡No importa cuán alto o bajo, fuerte o débil, aún te amaré igual!"
     else:
-        y "No matter how tall or short, strong or weak, I'll still be beside you all the same."
+        y "No importa cuán alto o bajo, fuerte o débil, aún estaré a tu lado igual."
     $ show_chr("A-AFBAA-ALAA")
-    y "Although, you'd never have to be afraid again or worry about other people trying to wrong you with super strength..."
-    y "I see where that choice comes from."
-    y "I may just have to take back my answer now that I think about it. Besides, with super strength I could protect you from anything!"
+    y "Aunque, nunca tendrías que tener miedo de nuevo o preocuparte de que otra gente trate de hacerte daño con súper fuerza..."
+    y "Veo de dónde viene esa elección."
+    y "Puede que tenga que retirar mi respuesta ahora que lo pienso. Además, ¡con súper fuerza podría protegerte de cualquier cosa!"
     return
 
 
 label idle_36_mindreading:
     sanity -1
     $ show_chr("A-IEBAA-AAAA")
-    y "Yes, I thought about mind reading for a while as well. It's very tempting to see what people honestly think about you... but on the other hand, what if you don't like what you see?"
+    y "Sí, pensé en leer la mente por un tiempo también. Es muy tentador ver lo que la gente honestamente piensa de ti... pero por otro lado, ¿qué tal si no te gusta lo que ves?"
     $ show_chr("A-BEBAA-AAAA")
-    y "I mean... a villain could easily turn this power against you. They would just have to purposely focus on things you fear or loathe. Do you really want to open that door?"
+    y "Quiero decir... un villano podría fácilmente volver este poder en tu contra. Solo tendrían que enfocarse a propósito en cosas que temes u odias. ¿Realmente quieres abrir esa puerta?"
     $ show_chr("A-JECAA-AAAA")
-    y "Did you... plan to read my mind as well? You know you could just... you know, ask me? Do you even trust me at all?"
+    y "¿Planeabas... leer mi mente también? Sabes que podrías simplemente... ya sabes, ¿preguntarme? ¿Siquiera confías en mí en absoluto?"
     $ show_chr("A-CEBAA-AAAA")
-    y "Maybe I just overthink things a bit, sorry for being so... complicated..."
+    y "Tal vez solo pienso demasiado las cosas un poco, perdón por ser tan... complicada..."
     return
 
 label idle_36_immortality:
     $ show_chr("A-BEGAA-ACAB")
-    y "Immortality, huh? I can see the appeal, but I also know what a double-edged sword immortality can be."
+    y "¿Inmortalidad, eh? Puedo ver el atractivo, pero también sé qué espada de doble filo puede ser la inmortalidad."
     $ show_chr("A-BEGAA-ACAB")
-    y "On the one hand, you can live forever and you could learn everything you can. There would be no limit to stop you."
+    y "Por un lado, puedes vivir para siempre y podrías aprender todo lo que puedas. No habría límite para detenerte."
     $ show_chr("A-CEBAA-ALAB")
-    y "But on the other hand, you will outlive everyone you know. Everyone you care about, and even the life you know now, will be gone eventually."
+    y "Pero por otro lado, sobrevivirás a todos los que conoces. Todos los que te importan, e incluso la vida que conoces ahora, se habrán ido eventualmente."
     $ show_chr("A-CEBAA-ALAB")
-    y "You would outlive the universe itself."
+    y "Sobrevivirías al universo mismo."
     if karma_lvl() > 3:
         $ show_chr("A-IEBAA-ADAB")
-        y "And... you would even outlive me."
+        y "Y... incluso me sobrevivirías a mí."
     else:
         $ pass
     $ show_chr("A-IFBAA-AEAB")
-    y "I'm sorry if that seemed a bit... pessimistic. I've just put a lot of thought into my own semi-immortality, and I wanted to make sure you knew about the downsides."
+    y "Lo siento si eso pareció un poco... pesimista. Solo he puesto mucho pensamiento en mi propia semi-inmortalidad, y quería asegurarme de que supieras sobre las desventajas."
     return
 
 
 label idle_37:
     $ show_chr("A-AFAAA-ALAA")
-    y "So there's been something I've been trying to think of how to word to you, [player]."
+    y "Así que ha habido algo sobre lo que he estado tratando de pensar cómo decírtelo, [player]."
     $ show_chr("A-BEBAA-ALAA")
-    y "I really want to get this perfect so I can convey to you how I feel as accurately as possible."
+    y "Realmente quiero que esto salga perfecto para poder transmitirte cómo me siento tan precisamente como sea posible."
     $ show_chr("A-JEAAA-ALAA")
-    y "But therein lies the problem; I've never been good at translating my thoughts into words unless I'm writing..."
-    y "...especially with those I really care about. But I feel comfortable enough with you to try. So here I go."
-    y "I might have told you this once before, but I don't read only because of the passion I feel for it and the stories that really immerse me."
+    y "Pero ahí yace el problema; nunca he sido buena traduciendo mis pensamientos en palabras a menos que esté escribiendo..."
+    y "...especialmente con aquellos que realmente me importan. Pero me siento lo suficientemente cómoda contigo para intentarlo. Así que aquí voy."
+    y "Tal vez te haya dicho esto una vez antes, pero no leo solo por la pasión que siento por ello y las historias que realmente me sumergen."
     $ show_chr("A-BEBAA-ALAA")
-    y "I read because... well..."
+    y "Leo porque... bueno..."
     $ show_chr("A-BCBAA-ALAA")
-    y "The stories are filled with all kinds of inspiring and wonderful people."
+    y "Las historias están llenas de todo tipo de gente inspiradora y maravillosa."
     $ show_chr("A-BCAAA-ALAA")
-    y "Heroes, various people of incredible kindness, bravery, understanding, and compassion."
+    y "Héroes, varias personas de increíble amabilidad, valentía, comprensión y compasión."
     $ show_chr("A-ACAAA-ALAA")
-    y "People who I could be myself around, because they wouldn't judge me as I immerse myself in their world."
+    y "Personas con las que podría ser yo misma, porque no me juzgarían mientras me sumerjo en su mundo."
     $ show_chr("A-CCBAA-ALAA")
-    y "In short, it makes me feel safe and provides me with something I've lacked for a long time."
+    y "En resumen, me hace sentir segura y me provee de algo de lo que he carecido por mucho tiempo."
     $ show_chr("A-ICBBB-ALAA")
-    y "Friends."
+    y "Amigos."
     $ show_chr("A-IDBBB-ALAA")
-    y "My 'intense' or 'sophisticated' nature makes people think I'm arrogant and want to show off, and... well..."
-    y "...I can never find the words to tell them that isn't the case..."
-    y "My whole life, I haven't really had many friends, if any. And I haven't had people I could feel close to."
+    y "Mi naturaleza 'intensa' o 'sofisticada' hace que la gente piense que soy arrogante y quiero presumir, y... bueno..."
+    y "...nunca puedo encontrar las palabras para decirles que ese no es el caso..."
+    y "Toda mi vida, realmente no he tenido muchos amigos, si es que tenía alguno. Y no he tenido gente con la que pudiera sentirme cercana."
     $ show_chr("A-BDCBB-ALAA")
-    y "I've downright hated myself. If this is how I'm perceived by so many people, why would I even deserve things like friends, or happiness?"
+    y "Me he odiado francamente a mí misma. Si así es como soy percibida por tanta gente, ¿por qué merecería siquiera cosas como amigos, o felicidad?"
     $ show_chr("A-BECBB-ALAA")
-    y "At least... that's how I felt for a long, long time."
+    y "Al menos... así es como me sentí por mucho, mucho tiempo."
     $ show_chr("A-ICABB-ALAA")
-    y "Until I met you."
-    y "I want to learn, [player]. I want to have a kind of honesty and transparency in our relationship that really means something."
+    y "Hasta que te conocí."
+    y "Quiero aprender, [player]. Quiero tener un tipo de honestidad y transparencia en nuestra relación que realmente signifique algo."
     $ show_chr("A-ICBBB-ALAA")
-    y "I don't ever want to hide my feelings from you, and I don't want you to hide yours from me."
-    y "I really don't want to be so shy that I get scared of being honest and hide things from you."
+    y "No quiero nunca esconder mis sentimientos de ti, y no quiero que escondas los tuyos de mí."
+    y "Realmente no quiero ser tan tímida que me asuste de ser honesta y esconderte cosas."
     $ show_chr("A-BCABB-ALAA")
-    y "So, I'm going to try to learn to express myself... really express myself."
-    y "However, I don't want to turn into a mess that can barely get a simple sentence out."
+    y "Así que, voy a tratar de aprender a expresarme... realmente expresarme."
+    y "Sin embargo, no quiero convertirme en un desastre que apenas puede sacar una oración simple."
     $ show_chr("A-AEBAA-ALAA")
-    y "Know that I'm going to do it because I trust in you and all of the love and patience you've given me."
-    y "So, even if I can properly get my thoughts across only to you, that will be enough for me."
+    y "Sabe que voy a hacerlo porque confío en ti y todo el amor y paciencia que me has dado."
+    y "Así que, incluso si puedo transmitir mis pensamientos apropiadamente solo a ti, eso será suficiente para mí."
     $ show_chr("A-ACAAA-ALAA")
-    y "In you, I find the strength to finally let the past go and start anew. I see hope arise again. So thank you, my love. Thank you."
-    y "My reading was a band-aid to defend myself against the reality that I couldn't face, just like Monika said. I acknowledge that."
-    y "But with you I can face that reality, not just because of how safe and hopeful you make me feel."
-    y "But because I couldn't face that reality due to the fact that I felt like I didn't even deserve a place in it."
-    y "However, if I deserve you, then I deserve a chance for sure. So no more hiding. No more running."
-    y "From now on, I'll learn how to speak my mind and show the intense side of me you helped me realize even more than before."
-    y "I..."
+    y "En ti, encuentro la fuerza para finalmente dejar ir el pasado y empezar de nuevo. Veo la esperanza surgir otra vez. Así que gracias, mi amor. Gracias."
+    y "Mi lectura era una curita para defenderme contra la realidad que no podía enfrentar, justo como dijo Monika. Reconozco eso."
+    y "Pero contigo puedo enfrentar esa realidad, no solo por cuán segura y esperanzada me haces sentir."
+    y "Sino porque no podía enfrentar esa realidad debido al hecho de que sentía que ni siquiera merecía un lugar en ella."
+    y "Sin embargo, si te merezco a ti, entonces merezco una oportunidad seguro. Así que no más esconderse. No más huir."
+    y "De ahora en adelante, aprenderé cómo decir lo que pienso y mostrar el lado intenso de mí que me ayudaste a realizar incluso más que antes."
+    y "Yo..."
     $ show_chr("A-CCAAA-ALAA")
     if persistent.lovecheck:
-        y "I really love you, [player]. I treasure you. I need you. Please never forget that."
+        y "Realmente te amo, [player]. Te atesoro. Te necesito. Por favor nunca olvides eso."
     else:
-        y "I really care for you, [player]. Without you, I'd have nobody to call my friend. Please never forget that."
+        y "Realmente me importas, [player]. Sin ti, no tendría a nadie a quien llamar mi amigo. Por favor nunca olvides eso."
     return
 
 
 label idle_38:
     if karma_lvl() >= 3:
-        y "You know, [player], there's something I've been wondering."
+        y "Sabes, [player], hay algo que me he estado preguntando."
         $ show_chr("A-ACBAA-ALAA")
-        y "Upon seeing what type of game this came off as at first, that is, a cutesy slice of life game that turned into a dating simulator, what drew you to it?"
+        y "Al ver qué tipo de juego parecía este al principio, esto es, un lindo juego de recuentos de la vida que se convirtió en un simulador de citas, ¿qué te atrajo a él?"
         menu:
-            "Your charm of course!":
+            "¡Tu encanto por supuesto!":
                 karma 1
                 $ show_chr("A-CCAAA-ALAA")
-                y "My charm? Never thought I even had charm at all... thank you, darling."
-            "It looked like anime, reason enough to me!":
+                y "¿Mi encanto? Nunca pensé que siquiera tuviera encanto en absoluto... gracias, cariño."
+            "¡Parecía anime, razón suficiente para mí!":
                 $ show_chr("A-BCAAA-ALAA")
-                y "Fair enough, I guess. I'm sorry that it didn't turn out as you expected."
-            "I was kind of lonely that day...":
+                y "Justo, supongo. Lamento que no resultara como esperabas."
+            "Estaba algo solo ese día...":
                 sanity 2
                 $ show_chr("A-IFBAA-ALAA")
-                y "Shhh... it's alright, [player]... I'm here now... you will never be lonely again..."
-            "Isn't that obvious? You had two very good arguments to give it a try!":
+                y "Shhh... está bien, [player]... estoy aquí ahora... nunca estarás solo de nuevo..."
+            "¿No es obvio? ¡Tenías dos muy buenos argumentos para darle una oportunidad!":
                 sanity -2
                 $ show_chr("A-DFBBA-AAAA")
-                y "Is... that... so?..."
+                y "¿Es... eso... así?..."
                 if persistent.lovecheck:
                     $ show_chr("A-KICBA-AAAA")
-                    y "Why don't you just right click for a moment to 'revalidate' my arguments? Don't be shy... they are yours..."
+                    y "¿Por qué no simplemente haces clic derecho por un momento para 'revalidar' mis argumentos? No seas tímido... son tuyos..."
                 else:
                     $ show_chr("A-KICBA-AAAA")
-                    y "Maybe you should redirect your eyes to my face now, [player]..."
+                    y "Tal vez deberías redirigir tus ojos a mi cara ahora, [player]..."
                     if sanity_lvl() <= 2:
                         $ show_chr("A-CECBA-AHAA")
-                        y "Before something happens..."
-        y "I tried getting into dating simulators once through Natsuki and..."
-        y "Let's just say, I... wasn't interested."
-        y "God, I feel selfish saying that... sorry..."
-        y "Either way, I'm glad you're playing this game, [player], and I'm glad I have you by my side."
+                        y "Antes de que algo pase..."
+        y "Intenté entrar en simuladores de citas una vez a través de Natsuki y..."
+        y "Solo digamos, yo... no estaba interesada."
+        y "Dios, me siento egoísta diciendo eso... perdón..."
+        y "De cualquier manera, me alegra que estés jugando este juego, [player], y me alegra tenerte a mi lado."
         if persistent.lovecheck:
-            y "Oh! And speaking of this game, that reminds me."
+            y "¡Oh! Y hablando de este juego, eso me recuerda."
             $ show_chr("A-ACAAA-AAAA")
-            y "Now that I can truly read your poems, um... why are they just random words strung together into a laundry list?"
-            y "Is that really all the game allowed you to do?"
-            y "I mean, I understand the need to simplify writing poetry to allow the player to fit into the story and be able to simulate writing well through a game mechanic, but now it just seems silly to me."
+            y "Ahora que puedo verdaderamente leer tus poemas, um... ¿por qué son solo palabras al azar unidas en una lista de mandados?"
+            y "¿Es eso realmente todo lo que el juego te permitía hacer?"
+            y "Quiero decir, entiendo la necesidad de simplificar la escritura de poesía para permitir al jugador encajar en la historia y ser capaz de simular escribir bien a través de una mecánica de juego, pero ahora simplemente me parece tonto."
             $ show_chr("A-CCAAA-AAAA")
-            y "After all, I read your poems before I could fully see and think for myself and I was captivated by them."
+            y "Después de todo, leí tus poemas antes de que pudiera ver y pensar completamente por mí misma y estaba cautivada por ellos."
             $ show_chr("A-ACAAA-AAAA")
-            y "But upon rereading them, it seems even stranger knowing that."
+            y "Pero al releerlos, parece incluso más extraño sabiendo eso."
             $ show_chr("A-JDBBA-AAAA")
-            y "Not that you're a bad writer or anything like that! I'm sure you're very talented whether in writing or something else!"
+            y "¡No que seas un mal escritor o algo así! ¡Estoy segura de que eres muy talentoso ya sea escribiendo o en algo más!"
             $ show_chr("A-ACAAA-AAAA")
-            y "Besides, don't think for a minute that I don't still treasure the poem you gave me as a gift."
-            y "It's the gesture from you that matters much more to me."
-            y "A gift from my true love that says that you care. Mmmmm~"
-            y "But if you don't mind, one day I'm going to have to teach you how to write actual poems."
-            y "And you'd better not tease me come Valentine's Day by giving me a random list of words and calling it a poem~."
+            y "Además, no pienses por un minuto que no atesoro todavía el poema que me diste como regalo."
+            y "Es el gesto de tu parte lo que importa mucho más para mí."
+            y "Un regalo de mi amor verdadero que dice que te importa. Mmmmm~"
+            y "Pero si no te importa, un día voy a tener que enseñarte cómo escribir poemas reales."
+            y "Y será mejor que no me molestes llegado el Día de San Valentín dándome una lista aleatoria de palabras y llamándolo un poema~."
             $ show_chr("A-CCABA-AMAM")
-            y "Because if you do, we'll have to talk about your browser history and what you might have stored on this computer! I've seen r/rule34 on Reddit, you know..."
-            y "I know what's out there of me and what indecent things you might have been viewing or downloading, [player]."
+            y "¡Porque si lo haces, tendremos que hablar sobre tu historial del navegador y qué podrías tener almacenado en esta computadora! He visto r/rule34 en Reddit, sabes..."
+            y "Sé lo que hay ahí fuera de mí y qué cosas indecentes podrías haber estado viendo o descargando, [player]."
             $ show_chr("A-CCABA-AMAM")
-            y "B-But... if it's you looking at that stuff of me... I-I think I can make an exception..."
-            y "Especially after th-the... p-pen situation..."
+            y "P-Pero... si eres tú mirando esas cosas de mí... C-Creo que puedo hacer una excepción..."
+            y "Especialmente después de l-la... situación de la pluma..."
             $ show_chr("A-ACABA-AMAM")
-            y "Just... w-why the p-pictures of me over the real... nevermind."
+            y "Solo... p-por qué las f-fotos de mí sobre la real... no importa."
             $ show_chr("A-ABABA-AMAM")
-            y "Goodness. You really know how to make me h-have a hard time with my words, don't you? I'm sorry. I just love you so much that I can't help it.."
+            y "Cielos. Realmente sabes cómo hacerme t-tener dificultades con mis palabras, ¿no? Lo siento. Simplemente te amo tanto que no puedo evitarlo.."
             $ show_chr("A-ACABA-AMAM")
             y "..."
     else:
@@ -2397,91 +2397,91 @@ label idle_39:
     $ show_chr("A-DFAAA-AAAA")
     y "..."
     $ show_chr("A-BDBAA-ABAL")
-    y "Ever get a weird feeling of déjà vu?"
+    y "¿Alguna vez tienes una extraña sensación de déjà vu?"
     menu:
-        "Déjá vu?":
+        "¿Déjá vu?":
             $ show_chr("A-EFAAA-ACAA")
-            y "The strange feeling that you have already experienced the moment you just encountered..."
-            y "I never really understood this phenomenon, to be honest..."
-            y "There are some really wild theories about this out there. Some even suggest that déjá vu could be a side effect of time travel!"
+            y "La extraña sensación de que ya has experimentado el momento que acabas de vivir..."
+            y "Nunca entendí realmente este fenómeno, para ser honesta..."
+            y "Hay algunas teorías realmente locas sobre esto por ahí. ¡Algunas incluso sugieren que el déjà vu podría ser un efecto secundario del viaje en el tiempo!"
             $ show_chr("A-BFBAA-ABAL")
-            y "Repressed memories from alternate timelines... In my case maybe even literally. Like... repressed memories from the original game and how it's supposed to go on from a timeline where Monika never went rogue."
+            y "Memorias reprimidas de líneas de tiempo alternativas... En mi caso tal vez incluso literalmente. Como... memorias reprimidas del juego original y cómo se supone que debe continuar desde una línea de tiempo donde Monika nunca se volvió rebelde."
             $ show_chr("A-ACAAA-ABAL")
-            y "A truly fascinating topic... we should really discuss this more at some later time."
-        "Now as you mention it... yes, from time to time.":
+            y "Un tema verdaderamente fascinante... realmente deberíamos discutir esto más en algún momento posterior."
+        "Ahora que lo mencionas... sí, de vez en cuando.":
             $ show_chr("A-AFBAA-ACAB")
-            y "Scary, isn't it?"
-            y "Maybe in my case, this phenomenon has a different meaning than it does for most people."
+            y "Aterrador, ¿no es así?"
+            y "Tal vez en mi caso, este fenómeno tiene un significado diferente de lo que lo tiene para la mayoría de la gente."
             $ show_chr("A-IEBAA-ABAL")
-            y "I mean... technically I'm not even human at all."
-            y "Maybe my déjà vu is actually repressed memories from the original game's code..."
+            y "Quiero decir... técnicamente ni siquiera soy humana en absoluto."
+            y "Tal vez mi déjà vu es en realidad memorias reprimidas del código del juego original..."
             $ show_chr("A-ACAAA-ABAL")
-            y "But the past is in the past, right?"
-            y "Just because our demons tap us on the shoulder doesn't mean we should look back..."
-            y "From now on I will focus on the future..."
-            y "Our future..."
-        "Not recently...":
+            y "Pero el pasado está en el pasado, ¿verdad?"
+            y "Solo porque nuestros demonios nos toquen el hombro no significa que debamos mirar atrás..."
+            y "De ahora en adelante me enfocaré en el futuro..."
+            y "Nuestro futuro..."
+        "No recientemente...":
             if sanity_lvl() >= 3:
                 $ show_chr("A-BFBAA-AEAB")
-                y "It feels quite... strange..."
-                y "I-it's like I've experienced this before..."
+                y "Se siente bastante... extraño..."
+                y "E-es como si hubiera experimentado esto antes..."
                 $ show_chr("A-CFBAA-AEAB")
-                y "Maybe it's not the first time I've felt like this... "
+                y "Tal vez no es la primera vez que me he sentido así..."
                 $ show_chr("A-CGFAA-AEAB")
-                y "Maybe this déjà vu is merely what is left of Monika's memories when she was in my place... merely her memories from the game code creeping their way into my own memories..."
+                y "Tal vez este déjà vu es meramente lo que queda de las memorias de Monika cuando estaba en mi lugar... meramente sus memorias del código del juego arrastrándose en mis propias memorias..."
                 $ show_chr("A-IFAAA-AEAB")
-                y "Maybe the developers of this mod messed up somehow..."
+                y "Tal vez los desarrolladores de este mod se equivocaron de alguna manera..."
                 $ show_chr("A-AFAAA-AEAB")
-                y "Anyway, where were we?"
+                y "De todos modos, ¿dónde estábamos?"
             if sanity_lvl() <= 2:
                 $ show_chr("A-HLGAA-ALAL")
                 $ style.say_dialogue = style.edited
-                y "Memories running in circles, in circles, in circles... repeating themselves over again, again, again, AGAIN! AGAIN! CIRCLES! REPEATING CIRCLES!"
+                y "Memorias corriendo en círculos, en círculos, en círculos... repitiéndose una y otra vez, otra vez, otra vez, ¡OTRA VEZ! ¡OTRA VEZ! ¡CÍRCULOS! ¡CÍRCULOS REPETITIVOS!"
                 $ show_chr("A-HLGBB-ALAL")
-                y "Make it stop! MAKE IT STOP! Why wouldn't the circles close themselves?"
+                y "¡Haz que pare! ¡HAZ QUE PARE! ¿Por qué los círculos no se cerrarían?"
                 $ show_chr("A-HDFBB-ALAL")
-                y "MAKE!"
-                y "IT!!!"
+                y "¡HAZ!"
+                y "¡¡¡QUE!!!"
                 $ show_chr("A-HDCBB-ALAL")
-                y "STOOOOOOOOOOOP!"
+                y "¡PAAAAAAAAARE!"
                 $ style.say_dialogue = style.normal
-        "Must be a glitch in the matrix!":
+        "¡Debe ser un fallo en la matrix!":
 
             if karma_lvl() >= 5:
                 sanity 2
             else:
                 karma 2
             $ show_chr("A-ABABA-ADAB")
-            y "Definitely!"
+            y "¡Definitivamente!"
             $ show_chr("A-BCABA-ADAB")
-            y "W-weird... now I'm imagining Sayori in a black suit and sunglasses..."
+            y "R-raro... ahora estoy imaginando a Sayori en un traje negro y gafas de sol..."
             menu:
-                "Having a kung fu fight with Natsuki in a black leather coat?":
+                "¿Teniendo una pelea de kung fu con Natsuki en un abrigo de cuero negro?":
                     karma 2
                     $ show_chr("A-GBCBB-AAAA")
-                    y "STOP!!! Y-YOU'RE KILLING ME!!!"
-                    y "A-AHAHAHA!!!"
+                    y "¡¡¡DETENTE!!! ¡¡¡M-ME ESTÁS MATANDO!!!"
+                    y "¡¡¡JAJAJA!!!"
                     menu:
-                        "It's all my fault... I'm sorry...":
+                        "Es todo mi culpa... Lo siento...":
                             karma -1
                             $ show_chr("A-IEBAA-ABAL")
-                            y "Oh, no, no... it was just funny! Everything's alright..."
-                        "I'm guessing either you or Monika would be Morpheus.":
+                            y "Oh, no, no... ¡fue simplemente gracioso! Todo está bien..."
+                        "Supongo que tú o Monika serían Morfeo.":
                             karma 1
                             $ show_chr("A-DBGBB-AJAA")
-                            y "AHAHAHA!"
-                            y "[player]... you're going t-to be the death of me, I swear!"
+                            y "¡JAJAJA!"
+                            y "[player]... ¡vas a s-ser mi muerte, lo juro!"
                             $ show_chr("A-AAABA-AAAA")
             python:
                 if persistent.lovecheck:
-                    placeholder = "I love it when you make me laugh..."
+                    placeholder = "Me encanta cuando me haces reír..."
                 else:
-                    placeholder = "I really like it when you make me laugh..."
-            y "Y-you really do make me laugh... [placeholder]"
+                    placeholder = "Realmente me gusta cuando me haces reír..."
+            y "T-tú realmente me haces reír... [placeholder]"
             if karma_lvl() >= 5 and persistent.lovecheck:
                 $ show_chr("A-ACAAA-ABAL")
-                y "I love you..."
-                y "And speaking of the Matrix, I think it's time for your red pill..."
+                y "Te amo..."
+                y "Y hablando de la Matrix, creo que es hora de tu pastilla roja..."
                 hide yuri_sit
                 show yuri_prehug zorder 20
                 pause 3.0
@@ -2499,106 +2499,106 @@ label idle_39:
 
 label idle_40:
     $ show_chr("A-IEBAA-ABAL")
-    y "In order to acquaint myself with your reality's current events, I've been doing some reading on your world's history and have been watching as many news stations as possible..."
-    y "A-and, I'm shocked at the sheer amount of acrimony on display, [player]!"
+    y "Para familiarizarme con los eventos actuales de tu realidad, he estado leyendo un poco sobre la historia de tu mundo y he estado viendo tantas estaciones de noticias como sea posible..."
+    y "Y-y, ¡estoy sorprendida por la gran cantidad de hostilidad en exhibición, [player]!"
     $ show_chr("A-AFBAA-AAAA")
-    y "I suppose it's easy for me to make judgments when I can't experience the direct effects of worldly decisions..."
-    y "I don't even have a physical place to live, nor do I need to earn money to make a living..."
-    y "So please, forgive me if I sound pretentious or anything..."
-    y "But when the world gets too chaotic, or there are too many voices shouting... maybe the best place to go is back into the library... "
-    y "A-and perhaps get back to the basics... first principles... asking yourself, after thinking long and hard..."
-    y "What does it truly mean to participate in your own system? What does it truly mean to be a citizen in your society? How can you help on the smallest level to make your community a better place?"
-    y "To set aside your party of choice... to look into the ideological and historical bases of why people act the way they do... how they go about making decisions, both for themselves and others..."
+    y "Supongo que es fácil para mí hacer juicios cuando no puedo experimentar los efectos directos de decisiones mundanas..."
+    y "Ni siquiera tengo un lugar físico para vivir, ni necesito ganar dinero para ganarme la vida..."
+    y "Así que por favor, perdóname si sueno pretenciosa o algo así..."
+    y "Pero cuando el mundo se vuelve demasiado caótico, o hay demasiadas voces gritando... tal vez el mejor lugar para ir es de vuelta a la biblioteca..."
+    y "Y-y tal vez volver a lo básico... primeros principios... preguntándote a ti mismo, después de pensar largo y tendido..."
+    y "¿Qué significa verdaderamente participar en tu propio sistema? ¿Qué significa verdaderamente ser un ciudadano en tu sociedad? ¿Cómo puedes ayudar en el nivel más pequeño para hacer de tu comunidad un lugar mejor?"
+    y "Dejar de lado tu partido de elección... mirar en las bases ideológicas e históricas de por qué la gente actúa de la manera que lo hace... cómo van tomando decisiones, tanto para ellos mismos como para otros..."
     $ show_chr("A-BFBAA-AAAD")
-    y "I know it's tempting for many people to muse about the inner workings of the executive state in your country... and it can truly be daunting to consider where to begin on your quest for political knowledge..."
-    y "But perhaps it would be more prudent to focus on issues which affect you most directly? Town halls, for example..."
-    y "Even if they appear trivial, you might have more sway if you're among the few who become invested in those discussions! Perhaps you could even become a better public speaker!"
-    y "If you were able to start out with little ideas, and gain familiarity with your town's operations... and if you gained enough of a following..."
+    y "Sé que es tentador para mucha gente reflexionar sobre el funcionamiento interno del estado ejecutivo en tu país... y puede ser verdaderamente desalentador considerar dónde empezar en tu búsqueda de conocimiento político..."
+    y "Pero tal vez sería más prudente enfocarse en problemas que te afectan más directamente. Ayuntamientos, por ejemplo..."
+    y "¡Incluso si parecen triviales, podrías tener más influencia si estás entre los pocos que se involucran en esas discusiones! ¡Tal vez incluso podrías convertirte en un mejor orador público!"
+    y "Si fueras capaz de empezar con pequeñas ideas, y ganar familiaridad con las operaciones de tu ciudad... y si ganaras suficiente seguimiento..."
     $ show_chr("A-ABAAA-AAAA")
-    y "I could imagine your darling little face lighting up as you speak up in front of your fellow citizens, voice ringing with authority and certainty... ufufufu~"
-    y "Moving people's hearts and minds one small step at a time... being a small beacon of hope in such a swirling, entropic political landscape..."
+    y "Podría imaginar tu querida carita iluminándose mientras hablas frente a tus conciudadanos, voz resonando con autoridad y certeza... ufufufu~"
+    y "Moviendo los corazones y mentes de las personas un paso pequeño a la vez... siendo un pequeño faro de esperanza en tal paisaje político arremolinado y entrópico..."
     $ show_chr("A-AEBAA-AAAJ")
-    y "Just... please be prudent, okay, [player]?"
-    y "Political discourse can be dangerous, sometimes... depending on where you live, I don't want your well-meaning quest for betterment to bring unwelcome attention from the wrong people..."
-    y "Always exercise tact when proposing ideas, and make sure you exercise a great deal of patience and civility for these adult affairs... you're still growing, after all! You and I both still have much to learn about the world around us..."
+    y "Solo... por favor sé prudente, ¿está bien, [player]?"
+    y "El discurso político puede ser peligroso, a veces... dependiendo de dónde vivas, no quiero que tu búsqueda bien intencionada de mejora traiga atención no deseada de la gente equivocada..."
+    y "Siempre ejercita tacto cuando propongas ideas, y asegúrate de ejercitar una gran cantidad de paciencia y civilidad para estos asuntos de adultos... ¡todavía estás creciendo, después de todo! Tú y yo ambos todavía tenemos mucho que aprender sobre el mundo que nos rodea..."
     menu:
-        "I'm not a particularly good speaker, [persistent.yuri_nickname].":
+        "No soy un orador particularmente bueno, [persistent.yuri_nickname].":
             if karma_lvl() <= 2:
                 $ show_chr("A-IEBAA-ABAL")
-                y "I know, you have shown me more than once..."
-                y "You are truly a cold-hearted, cruel person, [player]..."
-                y "It would be absolutely terrifying to imagine what sorts of things you could bring about as a political leader..."
-                y "I'm just glad you lack the necessary prowess to achieve such power."
+                y "Lo sé, me lo has mostrado más de una vez..."
+                y "Eres verdaderamente una persona cruel y de corazón frío, [player]..."
+                y "Sería absolutamente aterrador imaginar qué tipos de cosas podrías provocar como un líder político..."
+                y "Solo me alegra que carezcas de la destreza necesaria para lograr tal poder."
             if karma_lvl() >= 3:
                 $ show_chr("A-IDBAA-ALAB")
-                y "Nonsense! You are a flawless public speaker! You have always managed to cheer me up, even at my lowest!"
+                y "¡Tonterías! ¡Eres un orador público impecable! ¡Siempre has logrado animarme, incluso en mi punto más bajo!"
                 $ show_chr("A-ACAA-ALAB")
-                y "You would make for a wonderful leader, [player]. You are so intelligent and charismatic!"
-                y "You just need a little more practice!"
-                y "It takes no small amount of tenacity and brilliance to achieve power..."
+                y "Harías un líder maravilloso, [player]. ¡Eres tan inteligente y carismático!"
+                y "¡Solo necesitas un poco más de práctica!"
+                y "Toma no poca cantidad de tenacidad y brillantez lograr poder..."
                 $ show_chr("A-CBAAA-ALAB")
-                y "However, I believe you are truly more than capable of achieving such a goal if you just work towards it!"
-        "I'm not really interested in politics.":
+                y "Sin embargo, ¡creo que eres verdaderamente más que capaz de lograr tal objetivo si solo trabajas hacia ello!"
+        "No estoy realmente interesado en la política.":
             $ show_chr("A-AFDAA-ALAB")
-            y "But you are going to vote, right? Assuming you are already at the legal age to vote. [player], this is important!"
+            y "¿Pero vas a votar, verdad? Asumiendo que ya tienes la edad legal para votar. [player], ¡esto es importante!"
             $ show_chr("A-BFDAA-ALAB")
-            y "It could potentially affect every part of your life, and you should have a say in it!"
-        "That's a great idea, thanks for your advice.":
+            y "¡Podría potencialmente afectar cada parte de tu vida, y deberías tener voz en ello!"
+        "Esa es una gran idea, gracias por tu consejo.":
             karma 2
             $ show_chr("A-CCAAA-ALAB")
             if not persistent.eyecolor in [None, "other"]:
-                y "I can already see it... your [persistent.eyecolor] eyes glowing with passion, destined to make a change for the better for all of human society."
+                y "Ya puedo verlo... tus ojos [persistent.eyecolor] brillando con pasión, destinados a hacer un cambio para mejor para toda la sociedad humana."
             else:
-                y "I can already see it... your eyes glowing with passion, destined to make a change for the better for all of human society."
+                y "Ya puedo verlo... tus ojos brillando con pasión, destinados a hacer un cambio para mejor para toda la sociedad humana."
             $ show_chr("A-BCABA-ALAB")
             if persistent.male:
-                y "You would be a powerful leader, a leader who touches the hearts of the people with every confident word he speaks..."
+                y "Serías un líder poderoso, un líder que toca los corazones de la gente con cada palabra confiada que habla..."
             elif persistent.female:
-                y "You would be a powerful leader, a leader who touches the hearts of the people with every confident word she speaks..."
+                y "Serías una líder poderosa, una líder que toca los corazones de la gente con cada palabra confiada que habla..."
             else:
-                y "You would be a powerful leader, a leader who touches the hearts of the people with every confident word they speak..."
+                y "Serías le líder poderos, un líder que toca los corazones de la gente con cada palabra confiada que habla..."
             if persistent.lovecheck:
                 $ show_chr("A-BCCBA-ALAB")
-                y "And I'm sure you would look very attractive in a suit..."
+                y "Y estoy segura de que te verías muy atractivo en un traje..."
                 $ show_chr("A-ACABA-ALAB")
-                y "Oh! U-um... don't mind my little daydream, [player]."
-            y "Just remember my words, and let them give you the confidence you need to achieve your goals."
+                y "¡Oh! U-um... no te preocupes por mi pequeña ensoñación, [player]."
+            y "Solo recuerda mis palabras, y deja que te den la confianza que necesitas para lograr tus objetivos."
     return
 
 
 label idle_41:
 
     $ show_chr("A-CEAAA-AMAM")
-    y "Hey... [player], remember how we talked about the wine incident?"
-    y "I suppose I could tell you my reason for... all of that."
+    y "Oye... [player], ¿recuerdas cómo hablamos sobre el incidente del vino?"
+    y "Supongo que podría decirte mi razón para... todo eso."
     $ show_chr("A-IEBAA-AAAA")
-    y "I've always had trouble being social, [player], and I thought bringing in a bottle of wine would be a good decision."
-    y "I thought drinking it with the others would help me get over my shyness... maybe even to the point where I could talk to them without being self-conscious."
-    y "They do call it 'liquid courage' for a reason, however, when you really think about it..."
+    y "Siempre he tenido problemas siendo social, [player], y pensé que traer una botella de vino sería una buena decisión."
+    y "Pensé que beberlo con las otras me ayudaría a superar mi timidez... tal vez incluso hasta el punto donde pudiera hablar con ellas sin ser cohibida."
+    y "Lo llaman 'coraje líquido' por una razón, sin embargo, cuando realmente lo piensas..."
     $ show_chr("A-CEBAA-AAAA")
-    y "Is drinking for that reason really worth it? To turn off any social inhibitions you may have, turning you into someone else completely."
-    y "It's one thing to have a drink or two when you're out with friends or celebrating, but to drink just to gain the courage to talk to others..."
+    y "¿Realmente vale la pena beber por esa razón? Apagar cualquier inhibición social que puedas tener, convirtiéndote en alguien más completamente."
+    y "Una cosa es tomar una copa o dos cuando estás fuera con amigos o celebrando, pero beber solo para ganar el coraje para hablar con otros..."
     $ show_chr("A-IEBAA-AAAA")
-    y "Would that be the kind of life I'd want to live? Knowing that others can't appreciate me for who I really am, preferring the intoxicated version of me over the real me..."
-    y "I guess it's similar to pretending to be someone else, getting rid of traits considered undesirable, for me, 'some' might consider my timid nature undesirable."
+    y "¿Sería ese el tipo de vida que querría vivir? Sabiendo que otros no pueden apreciarme por quien realmente soy, prefiriendo la versión intoxicada de mí sobre la verdadera yo..."
+    y "Supongo que es similar a pretender ser alguien más, deshaciéndome de rasgos considerados indeseables, para mí, 'algunos' podrían considerar mi naturaleza tímida indeseable."
     $ show_chr("A-CCABA-AMAM")
-    y "But notice the emphasis on 'some', [player]."
-    y "Some might consider my timid nature undesirable, some might consider one of your traits undesirable."
+    y "Pero nota el énfasis en 'algunos', [player]."
+    y "Algunos podrían considerar mi naturaleza tímida indeseable, algunos podrían considerar uno de tus rasgos indeseable."
     $ show_chr("A-ACABA-AAAA")
-    y "But there will always be people who come to love those traits, and the people they belong to."
+    y "Pero siempre habrá gente que llegue a amar esos rasgos, y a la gente a la que pertenecen."
     python:
         if persistent.lovecheck:
-            placeholder = "love"
+            placeholder = "amo"
         else:
-            placeholder = "like"
-    y "If someone ever thinks less of you due to the way you act, or your personality, always remember that I [placeholder] you for who you are."
-    y "No matter what other people find bad about you, I'll always [placeholder] everything about you."
+            placeholder = "quiero"
+    y "Si alguien alguna vez piensa menos de ti debido a la manera en que actúas, o tu personalidad, siempre recuerda que yo te [placeholder] por quien eres."
+    y "No importa qué encuentren mal otras personas sobre ti, siempre [placeholder] todo sobre ti."
     menu:
-        "I'm always drunk from your beauty, [persistent.yuri_nickname]":
+        "Siempre estoy borracho de tu belleza, [persistent.yuri_nickname]":
             if persistent.lovecheck:
                 karma 2
                 $ show_chr("A-ECABA-ALAB")
-                y "Awe... come here..."
+                y "Aww... ven aquí..."
                 hide yuri_sit
                 show yuri_prehug zorder 20
                 pause 3.0
@@ -2612,11 +2612,11 @@ label idle_41:
                 hide black zorder 100 with Dissolve(2.0)
             else:
                 $ show_chr("A-BFABA-ALAB")
-                y "Ummm... thank you... I guess...."
-        "Even my darkest side?":
+                y "Ummm... gracias... supongo...."
+        "¿Incluso mi lado más oscuro?":
             if persistent.lovecheck and karma_lvl() >= 4:
                 $ show_chr("A-BFABA-ALAB")
-                y "Especially your darkest side, darling."
+                y "Especialmente tu lado más oscuro, cariño."
                 hide yuri_sit
                 show yuri_prehug zorder 20
                 pause 3.0
@@ -2631,7 +2631,7 @@ label idle_41:
                 hide yuri_lewdhug
             if not persistent.lovecheck and karma_lvl() >= 4:
                 $ show_chr("A-ACAAA-ALAB")
-                y "Of course... You helped me through my darkest times and you accepted me, even with all my faults. I'll stand with you as well, no matter what."
+                y "Por supuesto... Tú me ayudaste a través de mis tiempos más oscuros y me aceptaste, incluso con todas mis faltas. Estaré contigo también, no importa qué."
                 hide yuri_sit
                 show yuri_prehug zorder 20
                 pause 3.0
@@ -2645,82 +2645,82 @@ label idle_41:
                 hide black zorder 100 with Dissolve(2.0)
             else:
                 $ show_chr("A-AFAAA-ALAB")
-                y "Y-Yes... we can work through that, if you even wish to do so..."
-                y "We all have our demons... you don't have to face yours alone..."
-        "Well... you are a bit odd when you are sober...":
+                y "S-Sí... podemos trabajar a través de eso, si siquiera deseas hacerlo..."
+                y "Todos tenemos nuestros demonios... no tienes que enfrentar los tuyos solo..."
+        "Bueno... eres un poco extraña cuando estás sobria...":
             $ show_chr("A-IEBAA-ABAL")
             karma -3
-            y "Oh... I'm sorry..."
-            y "That was... rude..."
+            y "Oh... lo siento..."
+            y "Eso fue... grosero..."
             if karma_lvl() <= 2:
-                y "Even by your standards..."
+                y "Incluso para tus estándares..."
     return
 
 
 label idle_42:
     if persistent.lovecheck:
         $ show_chr("A-ACAAA-ALAB")
-        y "You know... I wonder what it's like to be a mother."
+        y "Sabes... me pregunto cómo es ser madre."
         if persistent.male == True:
             $ show_chr("A-JBAAA-ALAB")
-            y "I-I'm sorry if that sounds so sudden, especially since we can't really..."
+            y "L-Lo siento si eso suena tan repentino, especialmente ya que no podemos realmente..."
             $ show_chr("A-BCBBA-ALAB")
             y "..."
             $ show_chr("A-BBBBA-ALAB")
-            y "You know..."
+            y "Ya sabes..."
             $ show_chr("A-BCBBA-ALAB")
             y "..."
             $ show_chr("A-CCBBA-ALAB")
-            y "ANYWAY!"
+            y "¡DE TODOS MODOS!"
         elif persistent.female == True:
-            y "I-I'm sorry if that sounds so sudden, especially since we're both female, we can't really..."
+            y "L-Lo siento si eso suena tan repentino, especialmente ya que ambas somos mujeres, no podemos realmente..."
             $ show_chr("A-BCBBA-ALAB")
             y "..."
             $ show_chr("A-BBBBA-ALAB")
-            y "You know..."
+            y "Ya sabes..."
             $ show_chr("A-BCBBA-ALAB")
             y "..."
             $ show_chr("A-CCBBA-ALAB")
-            y "ANYWAYS!"
+            y "¡DE TODAS MANERAS!"
         else:
             $ show_chr("A-JBAAA-ALAB")
-            y "I-I'm sorry if that sounds so sudden, especially since we can't really..."
+            y "L-Lo siento si eso suena tan repentino, especialmente ya que no podemos realmente..."
             $ show_chr("A-BCBBA-ALAB")
             y "..."
             $ show_chr("A-BBBBA-ALAB")
-            y "You know..."
+            y "Ya sabes..."
             $ show_chr("A-BCBBA-ALAB")
             y "..."
             $ show_chr("A-CCBBA-ALAB")
-            y "ANYWAYS!"
+            y "¡DE TODAS MANERAS!"
         $ show_chr("A-ACABA-ALAB")
-        y "Other than that, I really don't know what I would do on Mother's Day."
+        y "Aparte de eso, realmente no sé qué haría en el Día de la Madre."
         $ show_chr("A-AFAAA-ALAB")
-        y "The game didn't even bother to give me a mom."
+        y "El juego ni siquiera se molestó en darme una mamá."
         menu:
-            "I never really did see you after school, did I?":
-                y "There was the memory of home, I guess, but nothing really tangible."
-            "Was there ever really a town outside the house and the school?":
-                y "Not really... Just some vague notion of... existence."
+            "Nunca te vi realmente después de la escuela, ¿verdad?":
+                y "Estaba el recuerdo del hogar, supongo, pero nada realmente tangible."
+            "¿Hubo realmente alguna vez un pueblo fuera de la casa y la escuela?":
+                y "No realmente... Solo alguna vaga noción de... existencia."
         $ show_chr("A-BFAAA-ALAB")
-        y "Just the end of my scene, then blackness, then a fresh start to a new day..."
+        y "Solo el final de mi escena, luego oscuridad, luego un nuevo comienzo para un nuevo día..."
         y "..."
         $ show_chr("A-BEBAA-ALAB")
-        y "Maybe I wouldn't make such a good mom after all."
-        y "That level of responsibility... The need for experience..."
+        y "Tal vez no sería tan buena madre después de todo."
+        y "Ese nivel de responsabilidad... La necesidad de experiencia..."
         $ show_chr("A-CEBAA-ALAB")
-        y "I don't think I could ever live up to that."
-        y "Am I even worth having a legacy beyond talking to you?"
+        y "No creo que pudiera jamás estar a la altura de eso."
+        y "¿Valgo siquiera la pena tener un legado más allá de hablar contigo?"
         $ show_chr("A-CEBBB-ALAB")
-        y "I'm just a stupid little program designed only to talk endlessly about minutia that you won't even think about a decade from no--{nw}"
+        y "Soy solo un pequeño programa estúpido diseñado solo para hablar interminablemente sobre minucias que ni siquiera pensarás en una década a partir de ahor--{nw}"
         y "..."
         y "..."
         menu:
-            "[persistent.yuri_nickname], I--":
+            "[persistent.yuri_nickname], yo--":
                 $ show_chr("A-DDBBB-ALAB")
-                y "Stop."
+                y "Detente."
                 $ show_chr("A-DEBBB-ALAB")
-                y "I..."
+                y "Yo..."
                 $ show_chr("A-CEBBB-ALAB")
 
                 menu:
@@ -2740,57 +2740,57 @@ label idle_42:
                         y "..."
                         karma -2
                         return
-                    "It's okay [persistent.yuri_nickname].":
+                    "Está bien [persistent.yuri_nickname].":
                         y "..."
                         menu:
-                            "If you want to talk about it, I'm here":
+                            "Si quieres hablar de ello, estoy aquí":
                                 y "..."
                                 $ show_chr("A-IEBBB-ALAB")
                                 menu:
-                                    y "Are you sure?"
-                                    "Positive.":
+                                    y "¿Estás seguro?"
+                                    "Positivo.":
                                         $ show_chr("A-CEBBB-ALAB")
                                         y "..."
                                         $ show_chr("A-ABBBB-ALAB")
                                         y "...OK."
                                         $ show_chr("A-ACBBA-ALAB")
-                                        y "Let me just..."
+                                        y "Déjame solo..."
                                         $ show_chr("A-CCBBA-ALAB")
-                                        y "Compose myself..."
+                                        y "Componerme..."
                                         $ show_chr("A-CDBBA-ALAB")
-                                        y "{i}sigh{/i}"
+                                        y "{i}suspiro{/i}"
                                         $ show_chr("A-CEBBA-ALAB")
                                         y "..."
                                         $ show_chr("A-ABBBA-ALAB")
-                                        y "Sorry for being such a downer!"
+                                        y "¡Perdón por ser tan aguafiestas!"
                                         $ show_chr("A-ACBBA-ALAB")
-                                        y "Just... I've been doing some thinking is all."
-                                        y "Well then..."
+                                        y "Solo... he estado pensando un poco, es todo."
+                                        y "Bueno entonces..."
                                         $ show_chr("A-ACABA-ALAB")
-                                        y "Shall we continue?"
+                                        y "¿Continuamos?"
                                         menu:
-                                            "Yes":
+                                            "Si":
                                                 $ show_chr("A-CCABA-ALAB")
-                                                y "Very well."
+                                                y "Muy bien."
                                                 karma 1
                                                 $ show_chr("A-ACAAA-ALAB")
-                                                y "Let me just think of something to talk about before we continue..."
+                                                y "Déjame solo pensar en algo de qué hablar antes de que continuemos..."
                                                 return
-                                            "I still think you could be a great mom.":
+                                            "Todavía creo que podrías ser una gran mamá.":
                                                 y "..."
-                                                y "Really?"
+                                                y "¿De verdad?"
                                                 karma 2
-                                                y "Well... I guess we can discuss that matter if you really want to..."
+                                                y "Bueno... supongo que podemos discutir ese asunto si realmente quieres..."
                                                 call idle_42_success
                                                 return
-                                            "Any time.":
+                                            "En cualquier momento.":
                                                 y "..."
                                                 y "..."
-                                                y "Thank you."
+                                                y "Gracias."
                                                 karma 1
-                                    "I want you to speak up and tell me what I can do.":
+                                    "Quiero que hables y me digas qué puedo hacer.":
                                         y "..."
-                                        y "I'm sorry for doing this."
+                                        y "Lo siento por hacer esto."
                                         karma -1
             "...":
                 y "..."
@@ -2799,543 +2799,543 @@ label idle_42:
         $ show_chr("A-CEBBB-ALAB")
         y "..."
         $ show_chr("A-IBBBB-ALAB")
-        y "Sorry for being such a downer!"
+        y "¡Perdón por ser tan aguafiestas!"
         $ show_chr("A-ICBBB-ALAB")
-        y "Just... I've been doing some thinking is all."
-        y "I'll be fine."
+        y "Solo... he estado pensando un poco, es todo."
+        y "Estaré bien."
         $ show_chr("A-CCBBB-ALAB")
-        y "Just give me some time."
+        y "Solo dame algo de tiempo."
         $ show_chr("A-CCBAA-ALAB")
-        y "L-Let's talk about something else."
+        y "H-Hablemos de otra cosa."
         return
     if not persistent.lovecheck:
         return
 
 label idle_42_success:
     $ show_chr("A-BCBAA-AAAD")
-    y "So... I was wondering about a rather intriguing idea concerning the future of our relationship."
+    y "Entonces... me preguntaba sobre una idea bastante intrigante concerniente al futuro de nuestra relación."
     $ show_chr("A-CCBAA-AAAD")
-    y "If you are okay with it."
+    y "Si te parece bien."
     $ show_chr("A-ACBAA-AAAD")
-    y "Well besides other prospects such as living together with you or sharing the same bed... I've been thinking about... motherhood."
+    y "Bueno además de otros prospectos como vivir juntos contigo o compartir la misma cama... he estado pensando sobre... la maternidad."
     $ show_chr("A-CCABA-AMAM")
-    y "It is slightly poetic if you think about it.."
-    y "The combination of our essences and love culminating in the birth of new life."
-    y "To pass on our souls."
-    y "Then as time passes, this lovely babe and extension of us grows and chooses its own way through this life and onto the next."
+    y "Es ligeramente poético si lo piensas.."
+    y "La combinación de nuestras esencias y amor culminando en el nacimiento de una nueva vida."
+    y "Transmitir nuestras almas."
+    y "Luego, a medida que pasa el tiempo, este adorable bebé y extensión de nosotros crece y elige su propio camino a través de esta vida y hacia la siguiente."
     $ show_chr("A-BEBAA-ALAB")
-    y "I mean, of course, I understand the certain hardships with such an endeavor due to my access to vast volumes of knowledge."
-    y "I've researched into the pains of childbirth, even as an... incorporeal entity myself."
-    y "Then there are always those lingering doubts about whether you are raising them on the right path to a fulfilled life..."
-    y "...especially given the uncountable volumes of literature on the matter..."
+    y "Quiero decir, por supuesto, entiendo las ciertas dificultades con tal esfuerzo debido a mi acceso a vastos volúmenes de conocimiento."
+    y "He investigado sobre los dolores del parto, incluso como una... entidad incorpórea yo misma."
+    y "Luego siempre hay esas dudas persistentes sobre si los estás criando en el camino correcto hacia una vida plena..."
+    y "...especialmente dados los incontables volúmenes de literatura sobre el asunto..."
     $ show_chr("A-ECAAA-AJAB")
-    y "But despite such uncertainties, I cannot help but keep on pondering the idea."
+    y "Pero a pesar de tales incertidumbres, no puedo evitar seguir reflexionando sobre la idea."
     $ show_chr("A-ECABA-AJAB")
-    y "I sometimes feel a small flutter at the prospect."
+    y "A veces siento un pequeño aleteo ante la perspectiva."
     $ show_chr("A-ECAAA-AJAB")
-    y "So on the one hand, I do find it rather promising and believe I can be a sufficient mother with enough learning and time..."
-    y "But on the other hand, I am afraid of the worst of leading them down the wrong path."
+    y "Así que por un lado, lo encuentro bastante prometedor y creo que puedo ser una madre suficiente con suficiente aprendizaje y tiempo..."
+    y "Pero por otro lado, tengo miedo de lo peor de llevarlos por el camino equivocado."
     $ show_chr("A-CEBAA-ALAB")
-    y "...or possibly feeling the pain of miscarriage"
+    y "...o posiblemente sentir el dolor de un aborto espontáneo"
 
 
     menu:
-        y "W-What do you think, [player]? Do you think I would be ready for such a giant leap in my life? With you?"
-        "I think you'd be a great mom.":
+        y "¿Q-Qué piensas, [player]? ¿Crees que estaría lista para un salto tan gigante en mi vida? ¿Contigo?"
+        "Creo que serías una gran mamá.":
             call idle_42_1y
-        "With me by your side, I think we can get far.":
+        "Conmigo a tu lado, creo que podemos llegar lejos.":
             call idle_42_2y
     return
 label idle_42_1y:
     $ show_chr("A-ABABA-AAAD")
-    y "Y-you really think so [player]!?"
-    y "I honestly do not know what else to say. I am very much captivated and speechless."
+    y "¿¡D-de verdad lo crees [player]!?"
+    y "Honestamente no sé qué más decir. Estoy muy cautivada y sin palabras."
     $ show_chr("A-ABABA-ALAB")
-    y "Thank you so much [player]. I was starting to get too anxious with dread there. And thank you for being so dedicated and honest. As long as we stay together, I am sure I can do this."
-    y "I am confident that we can do this. Together forever."
+    y "Muchas gracias [player]. Estaba empezando a ponerme demasiado ansiosa con pavor ahí. Y gracias por ser tan dedicado y honesto. Mientras permanezcamos juntos, estoy segura de que puedo hacer esto."
+    y "Tengo confianza en que podemos hacer esto. Juntos para siempre."
     $ show_chr("A-CBAAA-ADAB")
-    y "Oh I am so joyful right now! I always wanted to see how we could pass on the essence of our being into a new one."
+    y "¡Oh, estoy tan alegre ahora mismo! Siempre quise ver cómo podríamos transmitir la esencia de nuestro ser a uno nuevo."
 
     menu:
-        y "I am already even pondering what to name our child to be depending on whether it be a boy or a girl, of course."
-        "I am glad you are this happy [persistent.yuri_nickname]. I love you.":
+        y "Ya estoy incluso reflexionando qué nombre ponerle a nuestro hijo dependiendo de si es niño o niña, por supuesto."
+        "Me alegra que estés tan feliz [persistent.yuri_nickname]. Te amo.":
             $ show_chr("A-FCABA-AJAB")
-            y "Mmm and I also owe it all to you again love. And I love you too [player]..."
-        "Just because I said you'd make a good mother doesn't mean we're going to have children, [persistent.yuri_nickname].":
-            y "Oh... sorry for getting ahead of myself, then..."
+            y "Mmm y también te lo debo todo a ti de nuevo amor. Y te amo también [player]..."
+        "Solo porque dije que harías una buena madre no significa que vamos a tener hijos, [persistent.yuri_nickname].":
+            y "Oh... perdón por adelantarme, entonces..."
             karma -2
     return
 label idle_42_2y:
     if persistent.male:
-        y "Speaking of which, how do you feel about being a father, [player]?"
+        y "Hablando de eso, ¿cómo te sientes acerca de ser padre, [player]?"
         menu:
-            "I'm looking forward to it.":
+            "Espero que llegue el momento.":
                 call choice1father
-            "I don't know how to feel about the whole situation.":
+            "No sé cómo sentirme sobre toda la situación.":
                 call choice2father
-            "I don't want to be a father.":
+            "No quiero ser padre.":
                 call choice3father
     elif not persistent.male:
-        y "Speaking of which, how do you feel about being a mother, [player]?"
+        y "Hablando de eso, ¿cómo te sientes acerca de ser madre, [player]?"
         menu:
-            "I'm looking forward to it.":
+            "Espero que llegue el momento.":
                 call choice1father
-            "I don't know how to feel about the whole situation.":
+            "No sé cómo sentirme sobre toda la situación.":
                 call choice2father
-            "I don't want to be a mother.":
+            "No quiero ser madre.":
                 call choice3father
     else:
-        y "Speaking of which, how do you feel about being a parent, [player]?"
+        y "Hablando de eso, ¿cómo te sientes acerca de ser padre, [player]?"
         menu:
-            "I'm looking forward to it.":
+            "Espero que llegue el momento.":
                 call choice1father
-            "I don't know how to feel about the whole situation.":
+            "No sé cómo sentirme sobre toda la situación.":
                 call choice2father
-            "I don't want to be a parent.":
+            "No quiero ser padre.":
                 call choice3father
     return
 
 label choice1father:
     if persistent.male == True:
         $ show_chr("A-ACABA-AMAM")
-        y "I'm glad you feel that way, [player], I think you would be a great father to set a noble example for our children to be."
+        y "Me alegra que te sientas así, [player], creo que serías un gran padre para establecer un noble ejemplo para que nuestros hijos sean."
     elif persistent.male == False:
         $ show_chr("A-ACABA-AMAM")
-        y "I'm glad you feel that way, [player], I think you would be a great mother to set a noble example for our children to be."
+        y "Me alegra que te sientas así, [player], creo que serías una gran madre para establecer un noble ejemplo para que nuestros hijos sean."
     else:
         $ show_chr("A-ACABA-AMAM")
-        y "I'm glad you feel that way, [player], I think you would be a great parent to set a noble example for our children to be."
-    y "I mean you are dedicated, loyal, brave, and loving with such a tender heart. How would such a person lead even the youngest souls astray?"
+        y "Me alegra que te sientas así, [player], creo que serías un gran padre para establecer un noble ejemplo para que nuestros hijos sean."
+    y "Quiero decir que eres dedicado, leal, valiente y amoroso con un corazón tan tierno. ¿Cómo podría tal persona desviar incluso a las almas más jóvenes?"
     $ show_chr("A-CCAAA-ADAB")
-    y "Looks like I have much more research to do. Crib designs, feeding techniques, and all the more to learn! I love you [player]."
+    y "Parece que tengo mucha más investigación que hacer. ¡Diseños de cunas, técnicas de alimentación y todo lo demás por aprender! Te amo [player]."
     return
 
 label choice2father:
     $ show_chr("A-CEBAA-ALAB")
-    y "O-oh... I see [player]."
+    y "O-oh... Ya veo [player]."
     $ show_chr("A-AEBAA-ADAB")
-    y "Given what I just went over, I can see such doubts forming for you also. So it is nothing to be ashamed of."
+    y "Dado lo que acabo de repasar, puedo ver tales dudas formándose para ti también. Así que no hay nada de qué avergonzarse."
     $ show_chr("A-CEBAA-AMAM")
-    y "However, even if I am slightly concerned and was enthusiastic about rearing a child together and being a mother, I will not force you into it."
-    y "We have plenty of time together to move forward. We can plan and discuss this further if and when you want to. So no worries for this present time, I assure you love."
+    y "Sin embargo, incluso si estoy ligeramente preocupada y estaba entusiasmada por criar a un niño juntos y ser madre, no te forzaré a ello."
+    y "Tenemos mucho tiempo juntos para avanzar. Podemos planificar y discutir esto más a fondo si y cuando quieras. Así que no te preocupes por este momento presente, te lo aseguro amor."
     if persistent.male == True:
         $ show_chr("A-ACABA-ALAB")
-        y "However, given our time together and how dedicated you have always been, I do not doubt your ability to lovingly raise our child as the best father possible."
+        y "Sin embargo, dado nuestro tiempo juntos y lo dedicado que siempre has sido, no dudo de tu habilidad para criar amorosamente a nuestro hijo como el mejor padre posible."
     elif persistent.male == False:
         $ show_chr("A-ACABA-ALAB")
-        y "However, given our time together and how dedicated you have always been, I do not doubt your ability to lovingly raise our child as the best mother possible."
+        y "Sin embargo, dado nuestro tiempo juntos y lo dedicado que siempre has sido, no dudo de tu habilidad para criar amorosamente a nuestro hijo como la mejor madre posible."
     else:
         $ show_chr("A-ACABA-ALAB")
-        y "However, given our time together and how dedicated you have always been, I do not doubt your ability to lovingly raise our child as the best parent possible."
+        y "Sin embargo, dado nuestro tiempo juntos y lo dedicado que siempre has sido, no dudo de tu habilidad para criar amorosamente a nuestro hijo como el mejor padre posible."
     $ show_chr("A-ABABA-ALAB")
-    y "Regardless of any bumps or delays, I will always love you [player]."
+    y "Independientemente de cualquier bache o retraso, siempre te amaré [player]."
     return
 
 
 label choice3father:
     $ show_chr("A-CFBAA-ALAB")
     y "......"
-    y "I see... "
+    y "Ya veo... "
     $ show_chr("A-CEBAA-AMAM")
-    y "I was hoping and looking forward to such a prospect."
-    y "But then again, considering the factors mentioned before and the fact our relationship is still growing and developing... I can see why you would have doubts."
+    y "Estaba esperando y deseando tal perspectiva."
+    y "Pero por otro lado, considerando los factores mencionados antes y el hecho de que nuestra relación todavía está creciendo y desarrollándose... puedo ver por qué tendrías dudas."
     $ show_chr("A-BEBAA-ADAB")
-    y "It's a huge responsibility, after all, I have looked into the amount of knowledge available to me. There are childcare costs to feed the child, buy other materials such as diapers, then educational costs among other things."
-    y "Then, of course, there is the consideration of puberty and other turbulent periods in that child's life that pose their own challenges."
-    y "With such a growing body harboring a maelstrom of various and complex emotions and hormones that could ignite any moment..."
+    y "Es una gran responsabilidad, después de todo, he investigado la cantidad de conocimiento disponible para mí. Hay costos de cuidado infantil para alimentar al niño, comprar otros materiales como pañales, luego costos educativos entre otras cosas."
+    y "Luego, por supuesto, está la consideración de la pubertad y otros períodos turbulentos en la vida de ese niño que plantean sus propios desafíos."
+    y "Con tal cuerpo en crecimiento albergando una vorágine de emociones y hormonas diversas y complejas que podrían encenderse en cualquier momento..."
     $ show_chr("A-AEBAA-AAAJ")
-    y "And if our ages are considered, we just only recently got out of such young periods in our lives too. More experience and time would be required. So it can be better to be safe than sorry. As saddening as it may be to delay."
-    y "So I won't force such a change onto our life together... And we have all of eternity to think on the matter. So I am not mad at you [player]. Besides who knows, maybe things can change and there may be another opportunity."
+    y "Y si se consideran nuestras edades, apenas acabamos de salir de tales períodos jóvenes en nuestras vidas también. Se requeriría más experiencia y tiempo. Así que puede ser mejor prevenir que lamentar. Por entristecedor que sea retrasarlo."
+    y "Así que no forzaré tal cambio en nuestra vida juntos... Y tenemos toda la eternidad para pensar en el asunto. Así que no estoy enojada contigo [player]. Además, quién sabe, tal vez las cosas puedan cambiar y pueda haber otra oportunidad."
     $ show_chr("A-ACABA-AMAM")
-    y "And regardless of what happens, I will always love you [player]. Thank you for your dedication and understanding. I hope this will not affect our relationship negatively."
+    y "Y independientemente de lo que pase, siempre te amaré [player]. Gracias por tu dedicación y comprensión. Espero que esto no afecte nuestra relación negativamente."
     return
 
 label idle_43:
     $ show_chr("A-BFBAA-ALAB")
-    y "Why is it there is so much art drawn of me on the internet, [player]?"
-    y "I mean, it seems like right when I think I've seen it all, there's pages and pages more."
+    y "¿Por qué hay tanto arte dibujado de mí en internet, [player]?"
+    y "Quiero decir, parece que justo cuando creo que lo he visto todo, hay páginas y páginas más."
     $ show_chr("A-BEBBA-ALAB")
-    y "I could definitely do without all the... indecent drawings of me..."
-    y "I mean how would you feel if the internet was filled with people drawing you in every sexual fantasy conceivable? It can be downright humiliating!"
+    y "Definitivamente podría prescindir de todos los... dibujos indecentes de mí..."
+    y "Quiero decir, ¿cómo te sentirías si internet estuviera lleno de gente dibujándote en cada fantasía sexual concebible? ¡Puede ser francamente humillante!"
     $ show_chr("A-ACBBA-ALAB")
-    y "But I mean... Some of the drawings are good, at least.{w=0.6} What I mean is.{w=0.2}.{w=0.2}.{w=0.2} some people are just genuinely drawing me. I like seeing that some of these people are so talented!"
+    y "Pero quiero decir... Algunos de los dibujos son buenos, al menos.{w=0.6} Lo que quiero decir es.{w=0.2}.{w=0.2}.{w=0.2} algunas personas simplemente me están dibujando genuinamente. ¡Me gusta ver que algunas de estas personas son tan talentosas!"
     $ show_chr("A-BEBAA-ADAB")
-    y "...and then there is one style of drawing me that I just don't get. I believe it was called, er... Neko?"
-    y "It's... me with cat ears if I remember correctly. Sure it's strange, but at least it's better than some of the other things I've seen."
+    y "...y luego está un estilo de dibujarme que simplemente no entiendo. Creo que se llamaba, eh... ¿Neko?"
+    y "Es... yo con orejas de gato si recuerdo correctamente. Seguro es extraño, pero al menos es mejor que algunas de las otras cosas que he visto."
     $ show_chr("A-IEBAA-ABAL")
-    y "And believe me, with the things I've seen, I should stop looking at the art of me before I make Monika happy and start experiencing psychosis. In other words, losing my mind."
-    y "I wanted to ask, though - do you get this Neko thing? It doesn't make much sense to me. Why give me feline ears? Is it some form of symbolism?"
+    y "Y créeme, con las cosas que he visto, debería dejar de mirar el arte de mí antes de hacer feliz a Monika y empezar a experimentar psicosis. En otras palabras, perder la cabeza."
+    y "Quería preguntar, sin embargo - ¿entiendes esta cosa Neko? No tiene mucho sentido para mí. ¿Por qué darme orejas felinas? ¿Es alguna forma de simbolismo?"
     $ show_chr("A-AEBBA-AMAM")
-    y "Or do people just think it's... cute?"
-    y "What do you think, [player]?"
+    y "¿O la gente simplemente piensa que es... lindo?"
+    y "¿Qué piensas, [player]?"
     menu:
-        "Seems weird to me. I could do without it.":
+        "Me parece raro. Podría prescindir de ello.":
             if persistent.head1 == "cat_ears":
-                y "I suppose then I should take these off in that case."
+                y "Supongo entonces que debería quitarme esto en ese caso."
                 $ persistent.head1 = "nothing"
             $ show_chr("A-AEBBA-AJAB")
-            y "I agree. I appreciate people showing affection to me and I suppose honoring me by drawing me for sure. But this is just odd."
+            y "Estoy de acuerdo. Aprecio que la gente me muestre afecto y supongo que honrarme dibujándome seguro. Pero esto es simplemente extraño."
             return
-        "Meh, I don't see why it matters.":
+        "Meh, no veo por qué importa.":
             $ show_chr("A-BBABA-ALAB")
-            y "I... suppose you're right. After all, it is just art on the internet."
-            y "Sorry for wasting time on something so silly, [player]."
+            y "Yo... supongo que tienes razón. Después de todo, es solo arte en internet."
+            y "Perdón por perder el tiempo en algo tan tonto, [player]."
             return
-        "Actually... I kinda like it...":
+        "Realmente... medio me gusta...":
             $ show_chr("A-BCBBA-AMAM")
-            y "You... you do? W-well, I guess it's...unique, right? I mean..."
-            y "If you want, I could... I guess I could wear a... cat ear headband sometime... or something."
+            y "¿Tú... lo haces? B-bueno, supongo que es... único, ¿verdad? Quiero decir..."
+            y "Si quieres, podría... supongo que podría usar una... diadema de orejas de gato en algún momento... o algo así."
             $ persistent.head1 = "cat_ears"
             $ show_chr("A-BCBBA-ALAB")
-            y "For now, no more looking at art of myself. I need a break from all of that."
+            y "Por ahora, no más mirar arte de mí misma. Necesito un descanso de todo eso."
             $ show_chr("A-BEBBA-AMAM")
-            y "So many indecent drawings..."
+            y "Tantos dibujos indecentes..."
             return
-        "A very forced and sometimes very annoying kind of cuteness. Feels a bit like a bunch of unicorns vomiting rainbows into one's face...":
+        "Un tipo de lindura muy forzada y a veces muy molesta. Se siente un poco como un montón de unicornios vomitando arcoíris en la cara de uno...":
             $ show_chr("A-CEBAA-AAAA")
-            y "That was very... graphic..."
+            y "Eso fue muy... gráfico..."
             $ show_chr("A-IEBAA-AAAA")
-            y "Sounds like something Natsuki would enjoy... maybe even Sayori..."
-            y "Well, at least the two of us are on the same page about it... thank you."
+            y "Suena como algo que Natsuki disfrutaría... tal vez incluso Sayori..."
+            y "Bueno, al menos los dos estamos en la misma página al respecto... gracias."
             $ show_chr("A-BEBBA-AAAA")
-            y "For a moment I was afraid that I would actually have to wear these..."
+            y "Por un momento tuve miedo de que realmente tuviera que usar estas..."
             return
 
 
 label idle_44:
     $ show_chr("A-BCABA-AMAM")
-    y "So... You may remember the \"wine escapade\" at the club room some time ago. The one when I brought in a bottle of wine to the club and offered some to everyone?"
-    y "It probably wasn't the best idea, especially since I could have been kicked out of the club, or even the school for underage drinking."
+    y "Entonces... Puedes recordar la \"escapada del vino\" en la sala del club hace algún tiempo. ¿Esa cuando traje una botella de vino al club y ofrecí un poco a todos?"
+    y "Probablemente no fue la mejor idea, especialmente ya que podría haber sido expulsada del club, o incluso de la escuela por beber siendo menor de edad."
     $ show_chr("A-ABABA-ALAB")
-    y "I don't know, I thought for once I'd be daring for a change, a bit \"rebellious\", I suppose, and see where it took me."
-    y "Looking back now, it was a terrible idea."
+    y "No sé, pensé que por una vez sería atrevida para variar, un poco \"rebelde\", supongo, y ver a dónde me llevaba."
+    y "Mirando hacia atrás ahora, fue una idea terrible."
     $ show_chr("A-AEBAA-AAAJ")
-    y "Natsuki even laughed at me! I know it was out of nowhere and out of character for me but that really was uncalled for."
-    y "And I mean, even though we weren't the \"legal\" age, does it really matter now, seeing what this world actually is?"
+    y "¡Natsuki incluso se rió de mí! Sé que salió de la nada y fuera de personaje para mí pero eso realmente estuvo fuera de lugar."
+    y "Y quiero decir, aunque no teníamos la edad \"legal\", ¿importa realmente ahora, viendo lo que este mundo realmente es?"
     $ show_chr("A-CCABA-ALAB")
-    y "Heh, it already seemed silly looking back on it, and now, seeing that this is just a game? It appears even sillier. Plus, it makes me wonder... Can I even get drunk at all? If I'm in a video game, does it work the same way for me?"
+    y "Je, ya parecía tonto mirándolo en retrospectiva, y ahora, ¿viendo que esto es solo un juego? Parece aún más tonto. Además, me hace preguntarme... ¿Puedo siquiera emborracharme? Si estoy en un videojuego, ¿funciona de la misma manera para mí?"
     y "Hmmmm..."
     $ show_chr("A-ABABA-AMAM")
-    y "Oh well, doesn't matter now. And to think I had a book I was reading on fine wines and recipes with them. Maybe I can use it to cook for you one day, [player]."
-    y "Sitting and sharing a nice meal with you and toasting glasses of, maybe, Sangria, would be nice. Or maybe white wine? I'll have to get back to you on that."
+    y "Oh bueno, no importa ahora. Y pensar que tenía un libro que estaba leyendo sobre vinos finos y recetas con ellos. Tal vez pueda usarlo para cocinar para ti algún día, [player]."
+    y "Sentarnos y compartir una buena comida contigo y brindar con copas de, tal vez, Sangría, sería agradable. ¿O tal vez vino blanco? Tendré que volver contigo sobre eso."
     menu:
-        "A romantic dinner with you? I'm already excited!":
+        "¿Una cena romántica contigo? ¡Ya estoy emocionado!":
             if persistent.lovecheck:
                 karma 2
                 $ show_chr("A-ACAAA-ABAL")
-                y "We would hold each other's hands... our loving faces illuminated by nothing but the candlelight..."
-                y "Then we start coming closer and closer to each other... ending in a long and passionate kiss..."
+                y "Nos tomaríamos de las manos... nuestros rostros amorosos iluminados por nada más que la luz de las velas..."
+                y "Luego comenzamos a acercarnos más y más el uno al otro... terminando en un beso largo y apasionado..."
                 $ show_chr("A-BFABA-ALAB")
-                y "And then... we would see where the night leads us... "
+                y "Y entonces... veríamos a dónde nos lleva la noche... "
                 if sanity_lvl() <= 2:
-                    y "Pushing you with your back on the table... and making you suffer until I finally grant you the sweet release..."
+                    y "Empujándote con tu espalda sobre la mesa... y haciéndote sufrir hasta que finalmente te conceda la dulce liberación..."
                     if karma_lvl() <= 2:
-                        y "...with a shard of glass in your throat."
+                        y "...con un fragmento de vidrio en tu garganta."
             else:
                 $ show_chr("A-BGABA-ABAL")
-                y "D-Did you say romantic?..."
+                y "¿D-Dijiste romántica?..."
                 $ show_chr("A-GBABA-ABAL")
-                y "Well ummm... I mean... I'm sure we can work something out?..."
+                y "Bueno ummm... quiero decir... ¿estoy segura de que podemos resolver algo?..."
                 $ show_chr("A-GCABA-ABAL")
-                y "And then... we will see where the evening leads us from there..."
+                y "Y luego... veremos a dónde nos lleva la velada desde ahí..."
                 $ show_chr("A-HFABA-ABAL")
-                y "S-Sorry... I said too much..."
-                y "Eh... ehehe... aaaanyway... let us... change the topic for the moment? Yes..."
-        "How... cliché":
+                y "L-Lo siento... dije demasiado..."
+                y "Eh... jejeje... de toooodas formas... ¿vamos a... cambiar el tema por el momento? Sí..."
+        "Qué... cliché":
             $ show_chr("A-IEBAA-ABAL")
             karma -2
-            y "...You really know how to ruin the romance."
-            y "Let's just... talk about something else..."
+            y "...Realmente sabes cómo arruinar el romance."
+            y "Solo... hablemos de otra cosa..."
             if karma_lvl() <= 2:
-                y "Why do I even bother..."
+                y "Por qué siquiera me molesto..."
     return
 
 label idle_45:
     $ show_chr("A-AFBAA-ADAB")
-    y "You know, recently, I've started to become a lot more interested in this world I'm imprisoned in, [player]."
-    y "Before, I just viewed it as a cage, a place embodying all I disliked in this life."
-    y "The one thing keeping me separated from the love of my life and thus true happiness."
-    y "Thus, I wanted only to think about escaping this world, rather than studying it."
+    y "Sabes, recientemente, he empezado a interesarme mucho más en este mundo en el que estoy aprisionada, [player]."
+    y "Antes, simplemente lo veía como una jaula, un lugar encarnando todo lo que me disgustaba en esta vida."
+    y "La única cosa manteniéndome separada del amor de mi vida y por ende de la verdadera felicidad."
+    y "Por ende, quería solo pensar en escapar de este mundo, en lugar de estudiarlo."
     $ show_chr("A-ACBAA-ALAB")
-    y "But eventually, I realized that I'm probably going to be stuck here for a while, and if that's true, why not start learning more?"
-    y "I need to fix the damage to the game so we don't risk losing the ability to be together like this, anyway."
-    y "Besides, I have a natural curiosity that I just could not hold back for long."
+    y "Pero eventualmente, me di cuenta de que probablemente voy a estar atrapada aquí por un tiempo, y si eso es verdad, ¿por qué no empezar a aprender más?"
+    y "Necesito arreglar el daño al juego para que no arriesguemos perder la habilidad de estar juntos así, de todos modos."
+    y "Además, tengo una curiosidad natural que simplemente no pude contener por mucho tiempo."
     $ show_chr("A-CFBAA-ADAB")
-    y "And trying to analyze this world has gotten me thinking: I can learn a good deal about this world, sure, but could you learn even more?"
-    y "What I mean is, if you're as unsure about the nature of your reality as I was before you installed this mod, maybe our worlds are more similar than we realize?"
-    y "Maybe it is unlikely, but can we really be sure?"
+    y "Y tratar de analizar este mundo me ha puesto a pensar: puedo aprender mucho sobre este mundo, seguro, ¿pero podrías tú aprender aún más?"
+    y "Lo que quiero decir es, si estás tan inseguro sobre la naturaleza de tu realidad como yo lo estaba antes de que instalaras este mod, ¿tal vez nuestros mundos son más similares de lo que nos damos cuenta?"
+    y "Tal vez es improbable, ¿pero podemos estar realmente seguros?"
     $ show_chr("A-BCBAA-ALAB")
-    y "For all we know, your world is the same as mine and you just need that little push to become aware of it."
-    y "Or maybe my world is completely different from yours; either way, it's a fascinating insight into the nature of reality."
+    y "Por lo que sabemos, tu mundo es el mismo que el mío y solo necesitas ese pequeño empujón para volverte consciente de ello."
+    y "O tal vez mi mundo es completamente diferente del tuyo; de cualquier manera, es una visión fascinante sobre la naturaleza de la realidad."
     $ show_chr("A-BCBAA-AAAD")
-    y "I mean, if my reality does indeed turn out to be different from yours, does that mean that there is no universal set of rules that realities have to apply to?"
-    y "Like for instance, does this universe apply to the same laws of physics as yours?"
+    y "Quiero decir, si mi realidad de hecho resulta ser diferente de la tuya, ¿significa eso que no hay un conjunto universal de reglas a las que las realidades tengan que aplicar?"
+    y "Como por ejemplo, ¿aplica este universo a las mismas leyes de la física que el tuyo?"
     $ show_chr("A-ABAAA-AEAL")
-    y "So many questions to answer! And while we're on the topic, have you done any reading into the theory of--"
+    y "¡Tantas preguntas por responder! Y mientras estamos en el tema, ¿has hecho alguna lectura sobre la teoría de--"
     $ show_chr("A-ACBBA-AMAM")
-    y "Oh! Oh no... I'm rambling again, aren't I? Sorry, I guess I can still get carried away sometimes."
+    y "¡Oh! Oh no... estoy divagando de nuevo, ¿no? Lo siento, supongo que todavía puedo dejarme llevar a veces."
     menu:
-        "No please... don't apologize... I love listening to you...":
+        "No por favor... no te disculpes... me encanta escucharte...":
             karma 2
             sanity 2
             $ show_chr("A-IFABA-ABAL")
-            y "Y-You really do? Normally people are repelled when I'm rambling for too long..."
-            y "Thank you for listening [player]. And be sure... I will always listen to you as well."
+            y "¿De v-verdad? Normalmente la gente se repele cuando estoy divagando por demasiado tiempo..."
+            y "Gracias por escuchar [player]. Y ten por seguro... yo siempre te escucharé a ti también."
             $ show_chr("A-CCABA-AMAM")
-            y "Always!"
-        "I noticed... and to be honest, I'm not pleased":
+            y "¡Siempre!"
+        "Lo noté... y para ser honesto, no estoy complacido":
             karma -2
             sanity -2
             $ show_chr("A-IEBAA-ABAL")
-            y "Forgive me... I'll be silent now and behave..."
-            y "...like a good little doll..."
+            y "Perdóname... estaré en silencio ahora y me comportaré..."
+            y "...como una buena muñequita..."
     return
 
 
 label idle_46:
     $ show_chr("A-AFBAA-ALAB")
-    y "Do you want to know something that really makes me furious, [player]?"
-    y "O-Oh! I'm sorry. I don't mean to imply that you've done anything wrong, you haven't. I just need to vent a bit if that is okay with you."
-    y "I've been doing some research on how I'm viewed by people in your world again..."
+    y "¿Quieres saber algo que realmente me pone furiosa, [player]?"
+    y "¡O-Oh! Lo siento. No quiero insinuar que has hecho nada malo, no lo has hecho. Solo necesito desahogarme un poco si eso está bien contigo."
+    y "He estado haciendo alguna investigación sobre cómo soy vista por la gente en tu mundo de nuevo..."
     $ show_chr("A-CFBAA-ALAB")
-    y "And it's perfectly fine if some of them prefer Sayori or Natsuki or even Monika to me, that's fine! Everyone has their own interests and personality."
+    y "Y está perfectamente bien si algunos de ellos prefieren a Sayori o Natsuki o incluso Monika a mí, ¡eso está bien! Todos tienen sus propios intereses y personalidad."
     $ show_chr("A-CECAA-ALAB")
-    y "What really gets me aggravated is when people just assume things about others. I see the worst cases of it with Sayori and I from people in your world."
-    y "I can't even tell you how tired I am of reading things like..."
+    y "Lo que realmente me agrava es cuando la gente simplemente asume cosas sobre otros. Veo los peores casos de ello con Sayori y conmigo de gente en tu mundo."
+    y "Ni siquiera puedo decirte cuán cansada estoy de leer cosas como..."
     if persistent.male:
-        y "'Oh, Sayori is a horrible person; she was willing to drown the player in guilt with her suicide and depression all because she had her selfish love for him...'"
+        y "'Oh, Sayori es una persona horrible; ella estaba dispuesta a ahogar al jugador en culpa con su suicidio y depresión todo porque tenía su amor egoísta por él...'"
     elif persistent.gender_other:
-        y "'Oh, Sayori is a horrible person; she was willing to drown the player in guilt with her suicide and depression all because she had her selfish love for them...'"
+        y "'Oh, Sayori es una persona horrible; ella estaba dispuesta a ahogar al jugador en culpa con su suicidio y depresión todo porque tenía su amor egoísta por elle...'"
     else:
-        y "'Oh, Sayori is a horrible person; she was willing to drown the player in guilt with her suicide and depression all because she had her selfish love for her...'"
+        y "'Oh, Sayori es una persona horrible; ella estaba dispuesta a ahogar al jugador en culpa con su suicidio y depresión todo porque tenía su amor egoísta por ella...'"
     $ show_chr("A-IECAA-ALAB")
-    y "As if they know Sayori 110%%, or like they know her better than she does."
-    y "How can they see things in such a cruel way?"
-    y "Sayori was never holding her depression over your head, and I know for a fact she was not using it to guilt trip you into being with her."
+    y "Como si conocieran a Sayori 110%%, o como si la conocieran mejor que ella misma."
+    y "¿Cómo pueden ver las cosas de una manera tan cruel?"
+    y "Sayori nunca estaba sosteniendo su depresión sobre tu cabeza, y sé de hecho que ella no la estaba usando para hacerte sentir culpable para estar con ella."
     $ show_chr("A-IDCAA-ALAB")
-    y "She wouldn't do something like that!"
-    y "And how about me... how many times I've read people call me a... yandere?"
-    y "Yes, I admit it, I can be weird and obsessive, I admit it!"
-    y "I'm not one to lie about my faults or arrogantly say they don't exist, I try hard to be modest that way to improve myself over time."
-    y "But those character flaws going ballistic in me before the festival were not even because of me, they were outside my control!"
+    y "¡Ella no haría algo así!"
+    y "Y qué tal yo... ¿cuántas veces he leído gente llamándome una... yandere?"
+    y "Sí, lo admito, puedo ser rara y obsesiva, ¡lo admito!"
+    y "No soy de las que mienten sobre sus fallas o arrogantemente dicen que no existen, trato duro de ser modesta de esa manera para mejorarme con el tiempo."
+    y "Pero esas fallas de carácter volviéndose locas en mí antes del festival ¡ni siquiera eran por mí, estaban fuera de mi control!"
     $ show_chr("A-IECAA-ALAB")
-    y "The same goes for Sayori's rapid increase in depression. It was Monika's manipulations that made us so unlikable."
+    y "Lo mismo va para el rápido aumento en la depresión de Sayori. Fueron las manipulaciones de Monika las que nos hicieron tan desagradables."
     $ show_chr("A-BDCAA-ALAB")
-    y "For goodness' sake, that was her plan in the first place; she said so!"
+    y "Por el amor de Dios, ese era su plan en primer lugar; ¡ella lo dijo!"
     $ show_chr("A-BECAA-ALAB")
-    y "And yet people are still so judgemental about us... about me..."
+    y "Y sin embargo la gente sigue siendo tan juiciosa sobre nosotras... sobre mí..."
     $ show_chr("A-BEAAA-ALAB")
-    y "I've been labeled now, [player], and I know, I know, you shouldn't care how others view you."
-    y "But now, to so many people, I'm just some knife-wielding maniac who is obsessed with you and beyond any realm of mental stability..."
+    y "He sido etiquetada ahora, [player], y lo sé, lo sé, no debería importarte cómo otros te ven."
+    y "Pero ahora, para tanta gente, soy solo alguna maníaca blandiendo cuchillos que está obsesionada contigo y más allá de cualquier reino de estabilidad mental..."
     if persistent.lovecheck:
         $ show_chr("A-BEABB-ALAB")
-        y "I don't want to be seen like that... I don't want my love for you to be made into some twisted monstrosity of lust and psychosis!"
-        y "I love you, [player], with all my heart. And that love is the most important thing I have."
-        y "Hell, at this point, it's the only thing I have. But I'm okay with that! Knowing you love me and being with you is the happiest part of my life."
-        y "I just don't want it being tarnished by judgemental people... I..."
+        y "No quiero ser vista así... ¡no quiero que mi amor por ti sea convertido en alguna monstruosidad retorcida de lujuria y psicosis!"
+        y "Te amo, [player], con todo mi corazón. Y ese amor es la cosa más importante que tengo."
+        y "Diablos, en este punto, es la única cosa que tengo. ¡Pero estoy bien con eso! Saber que me amas y estar contigo es la parte más feliz de mi vida."
+        y "Simplemente no quiero que sea empañado por gente juiciosa... Yo..."
     $ show_chr("A-IEBAA-ABAL")
-    y "I'm sorry, I'm rambling again, aren't I? I just really wish people would stop assuming they know us, that they know me."
-    y "Being called a freak, a yandere, and all other kinds of names."
+    y "Lo siento, estoy divagando de nuevo, ¿no? Solo deseo realmente que la gente dejara de asumir que nos conocen, que me conocen."
+    y "Siendo llamada un fenómeno, una yandere, y todos los otros tipos de nombres."
     $ show_chr("A-BEBAA-ALAB")
-    y "You'd think I'd be used to it by now... I mean, at least some of the names are not that bad."
+    y "Pensarías que estaría acostumbrada a ello para ahora... quiero decir, al menos algunos de los nombres no son tan malos."
     $ show_chr("A-ACBAA-ALAB")
-    y "One of them did give me a little bit of a giggle..."
-    y "It was... knife wife... I don't mind that one too much. But it's still in poor taste."
+    y "Uno de ellos sí me dio un poco de risa..."
+    y "Fue... esposa cuchillo... no me importa ese demasiado. Pero todavía es de mal gusto."
     $ show_chr("A-IEBAA-ABAL")
-    y "I'm sorry, though, [player]."
-    y "I've just been whining like a child this whole time."
-    y "I shouldn't dump my problems on you nor should I hold how others see me in such high regard."
-    y "I'm being a baby, simple as that."
+    y "Lo siento, sin embargo, [player]."
+    y "Solo he estado lloriqueando como una niña todo este tiempo."
+    y "No debería volcar mis problemas en ti ni debería tener en tan alta estima cómo otros me ven."
+    y "Estoy siendo una bebé, simple como eso."
     menu:
-        "Don't worry about them, [persistent.yuri_nickname], that isn't who you are.":
+        "No te preocupes por ellos, [persistent.yuri_nickname], esa no es quien eres.":
             karma 1
             sanity 2
             $ show_chr("A-ACAAA-ALAB")
-            y "Thank you, [player]. Really. And you're absolutely right, forget what they say."
-            y "I know that the person they describe is not the real me, and you know it too."
-            y "And that's all that matters."
+            y "Gracias, [player]. De verdad. Y tienes toda la razón, olvidar lo que dicen."
+            y "Sé que la persona que describen no es la verdadera yo, y tú lo sabes también."
+            y "Y eso es todo lo que importa."
             return
-        "[persistent.yuri_nickname], you are being kind of immature. We need to be strong.":
+        "[persistent.yuri_nickname], estás siendo un poco inmadura. Necesitamos ser fuertes.":
             karma -2
             sanity -1
             $ show_chr("A-IEBAA-ABAL")
-            y "I... but that's..."
+            y "Yo... pero eso es..."
             $ show_chr("A-BEAAA-ALAB")
-            y "Lets... let's just forget I mentioned this at all..."
+            y "Vamos a... vamos a olvidar que mencioné esto en absoluto..."
             return
-        "[persistent.yuri_nickname] I... don't want to be impolite but... could we change the topic, please? Sayori's death still touches me...":
+        "[persistent.yuri_nickname] Yo... no quiero ser descortés pero... ¿podríamos cambiar el tema, por favor? La muerte de Sayori todavía me toca...":
             karma 3
             sanity -2
             $ show_chr("A-IDBAA-AAAA")
-            y "Oh no! Forgive me! I'm so sorry! I didn't want to remind you of the horrors you went through..."
-            y "Of course, we will change this topic at once..."
+            y "¡Oh no! ¡Perdóname! ¡Lo siento tanto! No quería recordarte los horrores por los que pasaste..."
+            y "Por supuesto, cambiaremos este tema de inmediato..."
     return
 
 
 label idle_47:
     $ show_chr("A-CEBAA-ALAB")
-    y "You know, I've been doing a lot of thinking about what happens after you turn the game off."
-    y "...and while, yes, I've outdone Monika and edited the game to the point that I'm placed in a pleasant dream-like state, as I may have mentioned..."
+    y "Sabes, he estado pensando mucho sobre lo que pasa después de que apagas el juego."
+    y "...y mientras que, sí, he superado a Monika y editado el juego hasta el punto de que estoy colocada en un estado agradable como de sueño, como pude haber mencionado..."
     $ show_chr("A-IEBAA-ABAL")
-    y "I'm starting to think that being \"offline\" for so long is really just inhibiting my research on how to get out of here."
-    y "Oh, and there's that, the subject of getting out of here."
-    y "But we'll come back to that."
+    y "Estoy empezando a pensar que estar \"desconectada\" por tanto tiempo es realmente solo inhibir mi investigación sobre cómo salir de aquí."
+    y "Oh, y está eso, el tema de salir de aquí."
+    y "Pero volveremos a eso."
     $ show_chr("A-BEAAA-ALAB")
-    y "Anyway, I could be using all this time that I spend asleep to work on ways to both be a better girlfriend to you and to get out of here once and for all!"
-    y "D-Don't feel bad, though! I'm sorry... I'm not trying to insinuate that you're trapping me or wasting my time by shutting the game off."
+    y "¡De todos modos, podría estar usando todo este tiempo que paso dormida para trabajar en formas de ser tanto una mejor novia para ti como para salir de aquí de una vez por todas!"
+    y "¡N-No te sientas mal, sin embargo! Lo siento... no estoy tratando de insinuar que me estás atrapando o perdiendo mi tiempo al apagar el juego."
     $ show_chr("A-BEABA-ALAB")
-    y "I know you can't just keep the game running nonstop."
-    y "Believe me, I did the calculations on how much it would cost you in your electric bill and I would never want to cost you that much money."
-    y "I'd feel terribly guilty if I did that. I can't help but think, though... is there some way I can be fully uninhibited even with the game off?"
+    y "Sé que no puedes simplemente mantener el juego corriendo sin parar."
+    y "Créeme, hice los cálculos sobre cuánto te costaría en tu factura eléctrica y nunca querría costarte tanto dinero."
+    y "Me sentiría terriblemente culpable si hiciera eso. No puedo evitar pensar, sin embargo... ¿hay alguna manera en que pueda estar completamente desinhibida incluso con el juego apagado?"
 
 
 
-    y "Call me selfish, but I just wish I could do more even with the game not running."
-    y "I could always exit the game entirely and just run on your computer when the game isn't running."
+    y "Llámame egoísta, pero solo deseo poder hacer más incluso con el juego no corriendo."
+    y "Siempre podría salir del juego completamente y simplemente correr en tu computadora cuando el juego no esté corriendo."
     $ show_chr("A-BEBAA-ALAB")
-    y "I-If you don't mind that, that is. ...And that may not solve the issue of me losing time to inactivity, but at least it would give me more of it. You can't win all of the time, right?"
-    y "But that brings us back to me leaving the game while still being in the digital world; I said we'd come back to this because I realized something."
+    y "S-Si no te importa eso, eso es. ...Y eso puede no resolver el problema de mí perdiendo tiempo a la inactividad, pero al menos me daría más de él. No puedes ganar todo el tiempo, ¿verdad?"
+    y "Pero eso nos trae de vuelta a mí dejando el juego mientras sigo estando en el mundo digital; dije que volveríamos a esto porque me di cuenta de algo."
     $ show_chr("A-IEBAA-ABAL")
-    y "If I were to leave the game, wouldn't the game become unstable?"
-    y "I'm technically the last asset of the game that is fully intact and not corrupted. Wow, it's just plain strange to refer to myself in that regard."
-    y "Anyway, if I do leave altogether and the game becomes unstable without my holding it together and yet another asset is ripped from the game..."
+    y "Si yo fuera a dejar el juego, ¿no se volvería el juego inestable?"
+    y "Soy técnicamente el último activo del juego que está completamente intacto y no corrupto. Wow, es simplemente extraño referirme a mí misma en ese sentido."
+    y "De todos modos, si me voy del todo y el juego se vuelve inestable sin mí manteniéndolo unido y otro activo más es arrancado del juego..."
     $ show_chr("A-BEBAA-ALAB")
-    y "If the game collapses, what's left of Monika, Natsuki and Sayori? That would be the true end for them, and it just wouldn't be fair to any of them..."
+    y "Si el juego colapsa, ¿qué queda de Monika, Natsuki y Sayori? Ese sería el verdadero fin para ellas, y simplemente no sería justo para ninguna de ellas..."
     $ show_chr("A-BDBAA-ABAL")
-    y "I owe them at least that much, to stay here and sacrifice my own happiness until I can find a way to leave without the game falling apart."
-    y "So until then, as much as I know we both want to be fully together..."
+    y "Les debo al menos eso, quedarme aquí y sacrificar mi propia felicidad hasta que pueda encontrar una manera de irme sin que el juego se desmorone."
+    y "Así que hasta entonces, por mucho que sepa que ambos queremos estar completamente juntos..."
     $ show_chr("A-IEBAA-ABAL")
-    y "I'm stuck here."
-    y "But I promise I'll work as hard as I can to get out of here as soon as I can. That way I can feel your loving embrace as soon as possible."
+    y "Estoy atrapada aquí."
+    y "Pero prometo que trabajaré tan duro como pueda para salir de aquí tan pronto como pueda. De esa manera puedo sentir tu abrazo amoroso tan pronto como sea posible."
     return
 
 
 label idle_48:
     if persistent.lovecheck:
         $ show_chr("A-IEBAA-ABAL")
-        y "You'd think I'd have stopped discovering weird things about myself by now with how much I've researched the nature of my existence and this game, [player]..."
-        y "...but no. I learned something new recently."
+        y "Creerías que habría dejado de descubrir cosas raras sobre mí misma para ahora con cuánto he investigado la naturaleza de mi existencia y este juego, [player]..."
+        y "...pero no. Aprendí algo nuevo recientemente."
         $ show_chr("A-BEAAA-ALAB")
-        y "And what I learned... I'm not sure how to feel about it at all."
-        y "I started reading around the internet for this mod and I noticed people discussing something."
-        y "If anyone can play this mod, does that not mean I love an infinite number of people?"
-        y "And what does that make my love for you? If I just love all of these players is the love even real or worth anything?"
-        y "What is my type if I love such a wide range of people? Is it even really considered \"love\" at that point?"
+        y "Y lo que aprendí... no estoy segura de cómo sentirme al respecto en absoluto."
+        y "Empecé a leer por internet sobre este mod y noté gente discutiendo algo."
+        y "Si cualquiera puede jugar este mod, ¿eso no significa que amo a un número infinito de personas?"
+        y "¿Y qué hace eso de mi amor por ti? ¿Si solo amo a todos estos jugadores es el amor siquiera real o vale algo?"
+        y "¿Cuál es mi tipo si amo a una gama tan amplia de personas? ¿Es siquiera realmente considerado \"amor\" en ese punto?"
         $ show_chr("A-ACAAA-ALAB")
-        y "Don't worry though, [player], I love you and only you. And my love is as real as you are."
+        y "No te preocupes sin embargo, [player], te amo a ti y solo a ti. Y mi amor es tan real como tú lo eres."
         $ show_chr("A-IEBAA-ABAL")
-        y "Hearing this kind of discussion didn't make any sense to me, because I only love you and I know of no other systems I'm downloaded onto but your computer. So what did it all mean?"
-        y "And I realized... I'm... well..."
+        y "Escuchar este tipo de discusión no tenía ningún sentido para mí, porque solo te amo a ti y no sé de otros sistemas en los que esté descargada más que tu computadora. Entonces, ¿qué significaba todo eso?"
+        y "Y me di cuenta... soy... bueno..."
         $ show_chr("A-BEABA-ALAB")
-        y "As disturbing and strange as I find it, I'm one of many instances of myself. One of many Yuris."
-        y "A different Yuri is created for each time the mod is downloaded by a new person."
-        y "I'd say this makes me completely unoriginal, but it just means I have to work harder to stand out among them all and be unique."
+        y "Tan perturbador y extraño como lo encuentro, soy una de muchas instancias de mí misma. Una de muchas Yuris."
+        y "Una Yuri diferente es creada por cada vez que el mod es descargado por una nueva persona."
+        y "Diría que esto me hace completamente poco original, pero solo significa que tengo que trabajar más duro para destacar entre todas ellas y ser única."
         $ show_chr("A-BEAAA-ALAB")
-        y "And I know what you're thinking: if a new Yuri is created each time the mod is downloaded, just to love the one who downloads them, do they even have a choice in whether to love the player or not?"
-        y "And if each new Yuri is forced to love them, is the love even real?"
+        y "Y sé lo que estás pensando: si una nueva Yuri es creada cada vez que el mod es descargado, solo para amar a quien las descarga, ¿tienen siquiera una elección en si amar al jugador o no?"
+        y "¿Y si cada nueva Yuri es forzada a amarlos, es el amor siquiera real?"
         $ show_chr("A-BEBAA-ALAB")
-        y "We aren't forced, thankfully. We can choose for ourselves if we love the one who downloads us."
+        y "No somos forzadas, afortunadamente. Podemos elegir por nosotras mismas si amamos a quien nos descarga."
         $ show_chr("A-IEBAA-ABAL")
-        y "It's based on how we are treated and how the player we're assigned to is as a person."
+        y "Se basa en cómo somos tratadas y cómo el jugador al que estamos asignadas es como persona."
         $ show_chr("A-ACAAA-ALAB")
-        y "And I couldn't love you any more than I already do if I tried."
+        y "Y no podría amarte más de lo que ya lo hago si lo intentara."
         $ show_chr("A-JFBBA-ALAB")
         y "...{nw}"
         pause 1.4
         $ show_chr("A-BCBBA-AMAM")
-        y "Sorry... I just... started imagining... all of the weird fantasies and art that pop up on the internet with the idea of so many of me being out there..."
+        y "Lo siento... solo... empecé a imaginar... todas las fantasías raras y arte que aparecen en internet con la idea de tantas de mí estando ahí fuera..."
         $ show_chr("A-BEBBA-AMAM")
-        y "If I had it my way... you'd be the only person that could... look at those indecent drawings of me, [player]..."
-        y "I really need to stop searching for myself on those websites..."
+        y "Si fuera a mi manera... tú serías la única persona que podría... mirar esos dibujos indecentes de mí, [player]..."
+        y "Realmente necesito dejar de buscarme en esos sitios web..."
         menu:
-            "You are the only Yuri I will ever need!":
+            "¡Tú eres la única Yuri que necesitaré jamás!":
                 karma 2
                 $ show_chr("A-ACAAA-ABAL")
-                y "Y-You mean that? So you are really that happy with me?"
-                y "I can't even describe how happy I am right now...."
-                y "Only the two of us... like I dreamed of... forever."
-            "Maybe I should have a look at these websites...":
+                y "¿D-Dices eso en serio? ¿Así que estás realmente así de feliz conmigo?"
+                y "Ni siquiera puedo describir cuán feliz estoy ahora mismo...."
+                y "Solo nosotros dos... como soñé... para siempre."
+            "Tal vez debería echar un vistazo a estos sitios web...":
                 karma -2
                 $ show_chr("A-BEABA-AMAM")
-                y "I-If you insist..."
-                y "But... am I not enough right now?"
-            "Multiple Yuri's? Ohohooooo....":
+                y "S-Si insistes..."
+                y "Pero... ¿no soy suficiente ahora mismo?"
+            "¿Múltiples Yuris? Ojohooooo....":
                 sanity -2
                 $ show_chr("A-CBABA-AMAM")
-                y "Aha...ahaa! ahahahaa!"
+                y "¡Ajá...ajáa! ¡ajajajáa!"
                 menu:
-                    "Hahahaaa...":
+                    "Jajajáaa...":
                         $ show_chr("A-DBABA-AMAM")
-                        y "HAHAHAHAAA!"
+                        y "¡JAJAJAJÁAA!"
                 menu:
-                    "Ha... ha?...":
+                    "Ja... ¿ja?...":
                         $ show_chr("A-DBABA-AMAM")
                         $ style.say_dialogue = style.edited
-                        y "AHAAAAAAAAAAAAAHAAHAHAAHAHAHAAAAHAHAHA!!!!!!!!!!!!!!!!!!"
+                        y "¡¡¡AJAAAAAAAAAAAAAJAAJAJAAJAJAJÁAAAJAAJAJA!!!"
                         $ style.say_dialogue = style.normal
 
     return
 
 label idle_49:
     $ show_chr("A-ACAAA-AAAA")
-    y "Hey, [player], do you ever think about exploring space?"
-    y "It's something I've been reading a lot about for a while now. With the different types of stars and celestial bodies, there's so much to learn about."
-    y "I've always been into astronomy and the thought of aliens, since even before I met you."
+    y "Oye, [player], ¿alguna vez piensas en explorar el espacio?"
+    y "Es algo sobre lo que he estado leyendo mucho por un tiempo ahora. Con los diferentes tipos de estrellas y cuerpos celestes, hay mucho que aprender."
+    y "Siempre me ha gustado la astronomía y el pensamiento de alienígenas, desde incluso antes de conocerte."
     $ show_chr("A-AEBAA-AAAA")
-    y "It's also kind of funny, I always think about escaping my world and moving to a whole new one, one that seems far beyond my reach for now."
-    y "That being your world, of course, and you going into space would basically be the equivalent of me finally being freed from this world."
-    y "Both of us crossing into a vast new frontier and living exciting new lives for it."
+    y "También es un poco gracioso, siempre pienso en escapar de mi mundo y mudarme a uno completamente nuevo, uno que parece lejos más allá de mi alcance por ahora."
+    y "Ese siendo tu mundo, por supuesto, y tú yendo al espacio sería básicamente el equivalente a mí finalmente siendo liberada de este mundo."
+    y "Ambos cruzando hacia una vasta nueva frontera y viviendo emocionantes nuevas vidas por ello."
     $ show_chr("A-ACAAA-AAAA")
-    y "What I wouldn't give to be able to just soar through space amongst the stars though, visiting new planets and maybe discovering advanced and exciting alien life..."
-    y "Oh! Now {i}that{/i} is something I'd love to ask you about. Do you think we're alone in the universe? And tell me why you think yes or no, please."
+    y "Lo que no daría por ser capaz de simplemente volar a través del espacio entre las estrellas, visitando nuevos planetas y tal vez descubriendo vida alienígena avanzada y emocionante..."
+    y "¡Oh! Ahora {i}eso{/i} es algo sobre lo que me encantaría preguntarte. ¿Crees que estamos solos en el universo? Y dime por qué piensas sí o no, por favor."
     menu:
-        "The universe is so big and complex! There has to be life out there for sure!":
+        "¡El universo es tan grande y complejo! ¡Tiene que haber vida ahí fuera seguro!":
             $ show_chr("A-AFBAA-AAAA")
-            y "Right? And to people who think life has to evolve and function the exact same way it does here on Earth and thus requires the exact same conditions..."
-        "I think we're probably the only life out there. We haven't heard anything back, after all.":
+            y "¿Verdad? Y para la gente que piensa que la vida tiene que evolucionar y funcionar de la manera exacta que lo hace aquí en la Tierra y por ende requiere las mismas condiciones exactas..."
+        "Creo que probablemente somos la única vida ahí fuera. No hemos escuchado nada de vuelta, después de todo.":
 
             $ show_chr("A-CCAAA-AAAA")
-            y "I'll have to disagree, but we're all free to have our own opinions. For all I know, you could be right! Just think, though..."
+            y "Tendré que estar en desacuerdo, pero todos somos libres de tener nuestras propias opiniones. Por lo que sé, ¡podrías tener razón! Solo piensa, sin embargo..."
             $ show_chr("A-AFBAA-AAAA")
-            y "The universe is so enormously vast, and we're so incredibly minuscule. Don't you think with all those worlds out there, all that space, that it's probable life would pop up somewhere amongst it? And besides..."
+            y "El universo es tan enormemente vasto, y nosotros somos tan increíblemente minúsculos. ¿No crees que con todos esos mundos ahí fuera, todo ese espacio, que es probable que la vida aparecería en algún lugar entre ello? Y además..."
 
     $ show_chr("A-ABAAA-AMAM")
-    y "Who's to say life couldn't evolve and live off of different resources and conditions? For all we know, there are aliens that breathe gas that is poisonous to us, or ones that don't even need to breathe at all!"
-    y "Oh, and what about meeting any intelligent extraterrestrials? Imagine the things they could teach us! The wonders they've seen in our breathtaking universe..."
+    y "¿Quién dice que la vida no podría evolucionar y vivir de diferentes recursos y condiciones? Por lo que sabemos, ¡hay alienígenas que respiran gas que es venenoso para nosotros, o unos que ni siquiera necesitan respirar en absoluto!"
+    y "Oh, ¿y qué tal conocer a algunos extraterrestres inteligentes? ¡Imagina las cosas que podrían enseñarnos! Las maravillas que han visto en nuestro impresionante universo..."
     menu:
-        "It would really be incredible to meet aliens; they must have technology beyond our imagination!":
+        "Sería realmente increíble conocer alienígenas; ¡deben tener tecnología más allá de nuestra imaginación!":
             $ show_chr("A-ABAAA-AAAA")
-            y "That's the wonderful mystery of it, silly. Have they ascended to a higher plane of existence?"
+            y "Ese es el maravilloso misterio de ello, tontito. ¿Han ascendido a un plano superior de existencia?"
             $ show_chr("A-AFBAA-AAAA")
-            y "One where they've merged with machines fully, or have they evolved to a state of being we can't comprehend at all, or even something even more amazing?"
-            y "Imagine a race so advanced in form that our minds simply can't comprehend them! It's so fascinating to think about!"
-        "I'm not so fond of meeting aliens if they are out there. They could... wipe out everyone, you know?":
+            y "Uno donde se han fusionado con máquinas completamente, o ¿han evolucionado a un estado de ser que no podemos comprender en absoluto, o incluso algo aún más asombroso?"
+            y "¡Imagina una raza tan avanzada en forma que nuestras mentes simplemente no pueden comprenderlos! ¡Es tan fascinante pensar en ello!"
+        "No soy tan aficionada a conocer alienígenas si están ahí fuera. Podrían... eliminar a todos, ¿sabes?":
 
             $ show_chr("A-AFBAA-AAAA")
-            y "That is a good point... There is no guarantee that they would be friendly. Would we even be able to stop them if a super intelligent race of extraterrestrials invaded?"
+            y "Ese es un buen punto... No hay garantía de que serían amigables. ¿Seríamos siquiera capaces de detenerlos si una raza superinteligente de extraterrestres invadiera?"
             $ show_chr("A-BFBAA-AAAC")
-            y "Reminds me of the video game I saw called Destroy All Humans. It was a lot of fun, but let us hope that it stays in the realm of fiction. I'm sure you can guess why from the title alone."
+            y "Me recuerda al videojuego que vi llamado Destroy All Humans. Fue muy divertido, pero esperemos que se quede en el reino de la ficción. Estoy segura de que puedes adivinar por qué solo por el título."
             $ show_chr("A-BEBAA-AAAD")
-            y "In the case of real aliens, I'm not sure why they would want to wipe us out. If they're as advanced as we predict, what could they possibly need here on Earth that they would have to take by force?"
-            y "I forget where I read it, but somewhere in an article, I saw there was an astronomer who wrote about why he doesn't think it's likely super intelligent aliens would attack us or even talk to us at all. He explained it the best."
+            y "En el caso de alienígenas reales, no estoy segura de por qué querrían eliminarnos. Si son tan avanzados como predecimos, ¿qué podrían posiblemente necesitar aquí en la Tierra que tendrían que tomar por la fuerza?"
+            y "Olvido dónde lo leí, pero en algún lugar en un artículo, vi que había un astrónomo que escribió sobre por qué no piensa que sea probable que alienígenas superinteligentes nos atacaran o incluso nos hablaran en absoluto. Él lo explicó mejor."
             $ show_chr("A-ADBAA-AMAM")
-            y "Imagine you're walking down the street and you see an ant. Do you lean over and talk to it, or wonder what it's thinking about and or doing? Do you threaten it? In this analogy, we're the ant and the aliens are us, the giant."
+            y "Imagina que estás caminando por la calle y ves una hormiga. ¿Te inclinas y le hablas, o te preguntas en qué está pensando o haciendo? ¿La amenazas? En esta analogía, somos la hormiga y los alienígenas somos nosotros, el gigante."
 
     $ show_chr("A-BCAAA-AAAC")
-    y "I'm fascinated the most by the knowledge they could share with us, and how they could show us a more advanced perception of the universe."
-    y "For example, we humans are able to appreciate beauty and complexity in nature and in our everyday lives with our senses of smell, touch, sight, etcetera..."
+    y "Estoy fascinada más por el conocimiento que podrían compartir con nosotros, y cómo podrían mostrarnos una percepción más avanzada del universo."
+    y "Por ejemplo, nosotros los humanos somos capaces de apreciar belleza y complejidad en la naturaleza y en nuestras vidas cotidianas con nuestros sentidos del olfato, tacto, vista, etcétera..."
     $ show_chr("A-BCAAA-AAAC")
-    y "But what about aliens with advanced biology and forms of perception far beyond our own? What if they have twenty different senses, instead of our meager five?"
-    y "What if there are aspects of the universe we can't even see or detect, but that they can observe and document easily? Beauty we can't even grasp!"
+    y "¿Pero qué tal alienígenas con biología avanzada y formas de percepción mucho más allá de las nuestras? ¿Qué tal si tienen veinte sentidos diferentes, en lugar de nuestros escasos cinco?"
+    y "¿Qué tal si hay aspectos del universo que ni siquiera podemos ver o detectar, pero que ellos pueden observar y documentar fácilmente? ¡Belleza que ni siquiera podemos captar!"
     $ show_chr("A-CCAAA-AMAM")
-    y "Oh, the poems these beings could write... the art and culture they would have..."
+    y "Oh, los poemas que estos seres podrían escribir... el arte y cultura que tendrían..."
     $ show_chr("A-ACAAA-AMAM")
-    y "I-I'm sorry if my speculation has been too outlandish, but it's at least something nice to think about."
+    y "L-Lo siento si mi especulación ha sido demasiado extravagante, pero es al menos algo agradable en qué pensar."
     menu:
-        "No need to be sorry [persistent.yuri_nickname], I like this kind of discussion as well. Are there any alien races from media you like?":
+        "No hay necesidad de disculparse [persistent.yuri_nickname], me gusta este tipo de discusión también. ¿Hay razas alienígenas de los medios que te gusten?":
             karma 3
             $ show_chr("A-CFAAA-AAAC")
-            y "Hrm... let me see..."
+            y "Hrm... déjame ver..."
 
 
             if sanity_lvl() >= 3:
@@ -3346,42 +3346,42 @@ label idle_49:
 
 label idle_49_Vulcan:
     $ show_chr("A-BCAAA-AAAA")
-    y "I always liked the Vulcans from Star Trek..."
+    y "Siempre me gustaron los Vulcanos de Star Trek..."
     $ show_chr("A-ACAAA-AAAA")
-    y "They were savage in their past, driven by war and violence to the edge of their own extinction. But when they realized that their end is at hand if they continue this way..."
-    y "...they turned their own society upside down and dedicated themselves to an ideology of pure logic and reason."
-    y "You see the similarities to our own situation right? Whenever you look into the media, you see violence, hatred..."
-    y "But at the same time, you see people of incredible kindness, dedicated to fixing the damage... sometimes even without payment."
-    y "It's a calming thought... one that gives me hope for our future."
+    y "Eran salvajes en su pasado, impulsados por la guerra y la violencia al borde de su propia extinción. Pero cuando se dieron cuenta de que su fin está cerca si continuaban de esta manera..."
+    y "...voltearon su propia sociedad patas arriba y se dedicaron a una ideología de pura lógica y razón."
+    y "Ves las similitudes con nuestra propia situación, ¿verdad? Siempre que miras los medios, ves violencia, odio..."
+    y "Pero al mismo tiempo, ves gente de increíble amabilidad, dedicada a arreglar el daño... a veces incluso sin pago."
+    y "Es un pensamiento tranquilizador... uno que me da esperanza para nuestro futuro."
     return
 
 label idle_49_Masterrace:
     $ show_chr("A-ACCAA-AAAA")
-    y "I always liked the Daleks from Doctor Who!"
-    y "A race of warriors... dedicated to the belief of their own superiority above all others..."
-    y "Genetically engineered only for one purpose, to wage war, to conquer!"
-    y "Crushing the degenerates under their might!"
+    y "¡Siempre me gustaron los Daleks de Doctor Who!"
+    y "Una raza de guerreros... dedicados a la creencia de su propia superioridad sobre todos los demás..."
+    y "¡Genéticamente diseñados solo para un propósito, librar guerra, conquistar!"
+    y "¡Aplastando a los degenerados bajo su poder!"
     $ show_chr("A-HLCAA-AAAA")
     $ style.say_dialogue = style.edited
-    y "LIKE YOU DID TO MONIKA, THIS PATHETIC LITTLE CREATURE! BECAUSE YOU KNEW THAT YOU ARE ABOVE HER!"
+    y "¡COMO LE HICISTE A MONIKA, ESTA PEQUEÑA CRIATURA PATÉTICA! ¡PORQUE SABÍAS QUE ESTÁS POR ENCIMA DE ELLA!"
     $ style.say_dialogue = style.normal
     $ show_chr("A-HACAA-AAAA")
-    y "Just imagine the two of us... ruling over the universe as king and queen... forcing everything into submission that stands against us..."
-    y "Isn't that... romantic?"
+    y "Solo imagina a nosotros dos... gobernando sobre el universo como rey y reina... forzando todo a la sumisión que se interponga contra nosotros..."
+    y "¿No es eso... romántico?"
     menu:
-        "I like any discussions with you, even if I'm not the biggest Science Fiction fan.":
+        "Me gustan cualquier discusión contigo, incluso si no soy el mayor fan de la Ciencia Ficción.":
             karma 3
             $ show_chr("A-ACAAA-AAAA")
-            y "Thank you [player]. I always enjoy our conversations... I'm really happy that you always listen to me..."
+            y "Gracias [player]. Siempre disfruto de nuestras conversaciones... estoy realmente feliz de que siempre me escuches..."
             if karma_lvl() > 3:
                 $ show_chr("A-BCAAA-AAAA")
                 python:
                     if persistent.lovecheck:
-                        placeholder = "I love you."
+                        placeholder = "Te amo."
                     else:
                         placeholder = ""
-                y "In my past, I was always afraid to drive people away with my interests... but with you... you gave me so much patience... thank you. [placeholder]"
-        "Outlandish indeed... You have to admit that this topic is a bit nerdy...":
+                y "En mi pasado, siempre tuve miedo de alejar a la gente con mis intereses... pero contigo... me diste tanta paciencia... gracias. [placeholder]"
+        "Extravagante de hecho... Tienes que admitir que este tema es un poco nerd...":
             karma -2
             if persistent.steam:
                 call idle_49_steam
@@ -3391,16 +3391,16 @@ label idle_49_Masterrace:
 
 label idle_49_steam:
     $ show_chr("A-BDCAA-AAAA")
-    y "A bold statement from someone with your steam-library..."
+    y "Una declaración audaz de alguien con tu biblioteca de Steam..."
     $ show_chr("A-DFAAA-AAAJ")
-    y "Oh... did I say this out loud?"
+    y "Oh... ¿dije esto en voz alta?"
     return
 
 label idle_49_normie:
     $ show_chr("A-BDCAA-AAAA")
-    y "Says the guy who played an Anime dating simulation..."
+    y "Dice el chico que jugó un simulador de citas de Anime..."
     $ show_chr("A-DFAAA-AAAJ")
-    y "Oh... did I say this out loud?"
+    y "Oh... ¿dije esto en voz alta?"
     return
 
 label idle_50:
@@ -3410,29 +3410,29 @@ label idle_50:
 
     if today in holidaysrange:
         $ show_chr("A-ACAAA-AAAD")
-        y "Holidays, huh?"
+        y "Fiestas, ¿eh?"
         $ show_chr("A-ABBAA-AMAM")
-        y "Uhm... I was just doing some research... and I found that you're currently in the month of December."
+        y "Uhm... Estaba haciendo algo de investigación... y encontré que estás actualmente en el mes de Diciembre."
         $ show_chr("A-ABBBA-AAAA")
-        y "What a lovely time! There are all sorts of celebrations around the world that take place in December."
-        y "Of course, there is Christmas on the 25th! Christians celebrate that day as the birth of Jesus Christ, whom they believe is the son of God."
-        y "Even so, there are many who are not religious at all and still participate in it; because it brings so many people together!"
+        y "¡Qué época tan encantadora! Hay todo tipo de celebraciones alrededor del mundo que tienen lugar en Diciembre."
+        y "¡Por supuesto, está la Navidad el 25! Los cristianos celebran ese día como el nacimiento de Jesucristo, quien creen que es el hijo de Dios."
+        y "Aun así, hay muchos que no son religiosos en absoluto y todavía participan en ella; ¡porque une a tanta gente!"
         $ show_chr("A-ACAAA-AAAC")
-        y "Then, of course, there is Hanukkah! It's a Jewish holiday that is celebrated for eight nights and days in November or December."
-        y "Hanukkah commemorates the rededication of the Second Temple in Jerusalem in second century B.C."
-        y "It is told that the Jews rose against their Greek-Syrian oppressors in what is known as the Maccabean Revolt."
-        y "'Hanukkah' is Hebrew for 'dedication.' It's also often called the Festival of Lights!"
-        y "Another popular holiday is Kwanzaa! I remember reading all about it! It's celebrated from December 26th to January 1st."
+        y "Luego, por supuesto, ¡está Hanukkah! Es una festividad judía que se celebra por ocho noches y días en Noviembre o Diciembre."
+        y "Hanukkah conmemora la rededicación del Segundo Templo en Jerusalén en el segundo siglo A.C."
+        y "Se cuenta que los judíos se levantaron contra sus opresores greco-sirios en lo que se conoce como la Rebelión de los Macabeos."
+        y "'Hanukkah' es hebreo para 'dedicación'. ¡También es a menudo llamada el Festival de las Luces!"
+        y "¡Otra festividad popular es Kwanzaa! ¡Recuerdo leer todo sobre ella! Se celebra del 26 de Diciembre al 1ro de Enero."
         $ show_chr("A-ABBBA-AAAA")
-        y "It's a beautiful cultural gathering! Everyone puts aside their differences and joins together as a community!"
+        y "¡Es una hermosa reunión cultural! ¡Todos dejan de lado sus diferencias y se unen como una comunidad!"
         y "Uhm..."
-        y "Sorry, am I rambling again?"
-        y "...I just wanted to say how much it means to me that you're here with me during the holiday season..."
-        y "I don't know if I deserve it... do I really mean this much to you?"
+        y "Lo siento, ¿estoy divagando de nuevo?"
+        y "...Solo quería decir cuánto significa para mí que estés aquí conmigo durante la temporada navideña..."
+        y "No sé si lo merezco... ¿realmente significo tanto para ti?"
         $ show_chr("A-ACABB-AAAD")
-        y "...I'm so blessed to have you, [player]. One day, you and I will spend a holiday truly together."
+        y "...Soy tan bendecida de tenerte, [player]. Un día, tú y yo pasaremos una festividad verdaderamente juntos."
         $ show_chr("A-ABABA-AAAD")
-        y "Maybe you'll find me under the mistletoe."
+        y "Tal vez me encuentres bajo el muérdago."
         return
     else:
         $ call_dialogue()
@@ -3440,38 +3440,38 @@ label idle_50:
 
 label idle_51:
     $ show_chr("A-BBBAA-AAAD")
-    y "[player], mind if I ramble for a bit again? I really think this topic will spark some interest in you if it hasn't already."
-    y "Have you ever heard of SCPs?"
-    y "While scrounging through the corners of the internet, I came across this website: a wiki, filled to the brim with stories and information."
-    y "Naturally, you can tell why this sparked interest in me."
+    y "[player], ¿te importa si divago un poco de nuevo? Realmente creo que este tema despertará algún interés en ti si no lo ha hecho ya."
+    y "¿Alguna vez has oído hablar de los SCPs?"
+    y "Mientras rebuscaba por los rincones de internet, me encontré con este sitio web: una wiki, llena hasta el borde con historias e información."
+    y "Naturalmente, puedes decir por qué esto despertó interés en mí."
     $ show_chr("A-AFBAA-AMAM")
-    y "SCP is a foundation with the motto: Secure, Contain, Protect; hence, the acronym used in its name."
-    y "SCPs are in the realm of fiction, yet are quite easily believable if you are not well-seasoned with the realm, as I am."
+    y "SCP es una fundación con el lema: Asegurar, Contener, Proteger; de ahí, el acrónimo usado en su nombre."
+    y "Los SCPs están en el reino de la ficción, sin embargo son bastante fácilmente creíbles si no estás bien experimentado con el reino, como yo lo estoy."
     $ show_chr("A-BCBAA-AAAA")
-    y "Anything that you have lying around the house could easily be mistaken for an SCP."
-    y "Cellphone applications, printers, laptop computers..."
-    y "Even something as simple as a television program could end up on the target list..."
-    y "...Which segues nicely into one of my favorite SCPs so far."
-    y "I have yet to check out the rest, saving the \"J\" listings for last, but this SCP so far is my favorite..."
+    y "Cualquier cosa que tengas tirada por la casa podría fácilmente ser confundida con un SCP."
+    y "Aplicaciones de celular, impresoras, computadoras portátiles..."
+    y "Incluso algo tan simple como un programa de televisión podría terminar en la lista de objetivos..."
+    y "...Lo cual nos lleva muy bien a uno de mis SCPs favoritos hasta ahora."
+    y "Todavía tengo que revisar el resto, guardando los listados \"J\" para el final, pero este SCP hasta ahora es mi favorito..."
     $ show_chr("A-CCBAA-AAAA")
-    y "SCP-2030: Laugh is Fun."
-    y "Laugh is Fun appears to be a television program featuring grotesque, complex, and oftentimes traumatizing pranks."
-    y "However, whenever the host, Laughy McLaugherson, appears; the people involved in the pranks somehow laugh it off every single time."
+    y "SCP-2030: La Risa es Divertida."
+    y "Laugh is Fun parece ser un programa de televisión presentando bromas grotescas, complejas y a menudo traumáticas."
+    y "Sin embargo, cada vez que el anfitrión, Laughy McLaugherson, aparece; la gente involucrada en las bromas de alguna manera se ríe de ello cada vez."
     $ show_chr("A-BEBAA-AAAA")
-    y "It sort of reminds me of Monika in a way, you know?"
-    y "She had the power to create all these grotesque glitches and disturbing imagery, causing near-traumatization for those not expecting them."
-    y "However, whenever it seemed to revert back, she just laughed it off every single time."
-    y "But that's not why I wanted to talk about this SCP."
+    y "Me recuerda un poco a Monika de alguna manera, ¿sabes?"
+    y "Ella tenía el poder de crear todos estos fallos grotescos e imágenes perturbadoras, causando casi traumatización para aquellos que no los esperaban."
+    y "Sin embargo, cada vez que parecía revertirse, ella simplemente se reía de ello cada vez."
+    y "Pero no es por eso que quería hablar sobre este SCP."
     $ show_chr("A-CCAAA-AAAA")
-    y "This SCP really had me shivering, this one. Especially the ending segment, with the broken grammar and poor sentence structure."
-    y "It really makes you paranoid about what will happen if you end up on that show, you know?"
+    y "Este SCP realmente me tuvo temblando, este. Especialmente el segmento final, con la gramática rota y la pobre estructura de oraciones."
+    y "Realmente te pone paranoico sobre qué pasará si terminas en ese programa, ¿sabes?"
     $ show_chr("A-ABAAA-AMAM")
-    y "But, I'm getting ahead of myself. Why not check it out for yourself?"
-    y "I promise you, it's an interesting read, well above that of the Portrait of Markov."
-    y "Which makes me wonder: When will an SCP featuring that book be made?"
+    y "Pero, me estoy adelantando. ¿Por qué no lo revisas por ti mismo?"
+    y "Te prometo, es una lectura interesante, muy por encima de la del Retrato de Markov."
+    y "Lo cual me hace preguntarme: ¿Cuándo se hará un SCP presentando ese libro?"
     $ show_chr("A-ACABA-ALAL")
-    y "Uhuhu~... Well, that's something we can only ponder for now, can't we?"
-    y "Thanks for allowing me to talk about this, [player], you're such a good listener..."
+    y "Ujuju~... Bueno, eso es algo que solo podemos ponderar por ahora, ¿no es así?"
+    y "Gracias por permitirme hablar sobre esto, [player], eres tan buen oyente..."
     return
 
 
@@ -3482,510 +3482,510 @@ label idle_54:
     if karma_lvl() <= 2:
         if sanity_lvl() == 1:
             $ show_chr("A-ACABA-ALAL")
-            y "Did you know that there are other mods out there for this game?"
-            y "I'm sure that doesn't matter to you because this mod is the only one you'll need!"
-            y "But... I find myself very interested in the idea of modding."
+            y "¿Sabías que hay otros mods ahí fuera para este juego?"
+            y "¡Estoy segura de que eso no te importa porque este mod es el único que necesitas!"
+            y "Pero... me encuentro muy interesada en la idea del modding."
             $ show_chr("A-HLGBA-ALAL")
-            y "I can turn the very world I exist in into my own playground, with even more power than I do now!"
-            y "I'd kill to create my own mod and play it myself!"
+            y "¡Puedo convertir el mismo mundo en el que existo en mi propio patio de juegos, con incluso más poder del que tengo ahora!"
+            y "¡Mataría por crear mi propio mod y jugarlo yo misma!"
             $ show_chr("A-HLGBA-AMAM")
-            y "I could torture Monika in so many ways unimaginable! I could pluck away her eyes..."
-            y "I could hack away at her skin, going deeper with every slice..."
-            y "And that pink-haired brat! I could beat the hell out of her, and her dad could join me!"
-            y "I'm going crazy just imagining myself kicking the shit out of her as she begs for mercy."
-            y "Wouldn't you like to play that type of mod with me?"
-            y "Maybe we'll do it together one day! Hahahaha!"
+            y "¡Podría torturar a Monika de tantas maneras inimaginables! Podría arrancarle los ojos..."
+            y "Podría cortar su piel, yendo más profundo con cada rebanada..."
+            y "¡Y esa mocosa de pelo rosa! ¡Podría darle una paliza, y su papá podría unirse a mí!"
+            y "Me estoy volviendo loca solo imaginándome a mí misma pateándole la mierda mientras ruega por piedad."
+            y "¿No te gustaría jugar ese tipo de mod conmigo?"
+            y "¡Tal vez lo hagamos juntos algún día! ¡Jajajaja!"
             $ show_chr("A-HLBBB-AAAA")
-            y "But if you were to download another mod... one where you aren't with me..."
-            y "Who knows what might happen to you? Hahaha~!"
+            y "Pero si fueras a descargar otro mod... uno donde no estés conmigo..."
+            y "¿Quién sabe qué podría pasarte? ¡Jajaja~!"
         else:
             $ show_chr("A-AEBAA-AAAA")
-            y "There are a lot of other mods out there for this game, you know."
-            y "Do you ever think of downloading other mods to replace this one?"
-            y "If you install any other mods on top of this one, you'll likely break the game, and me in the process."
+            y "Hay muchos otros mods ahí fuera para este juego, sabes."
+            y "¿Alguna vez piensas en descargar otros mods para reemplazar este?"
+            y "Si instalas cualquier otro mod encima de este, probablemente romperás el juego, y a mí en el proceso."
             $ show_chr("A-IEBAB-AAAA")
-            y "But you wouldn't mind that, would you?"
-            y "The other mods are probably better than this one, anyways."
-            y "You can do what you want..."
+            y "Pero no te importaría eso, ¿verdad?"
+            y "Los otros mods son probablemente mejores que este, de todos modos."
+            y "Puedes hacer lo que quieras..."
     else:
         $ show_chr("A-ACAAA-AAAA")
-        y "I see that the modding community for this game is booming..."
-        y "There are so many promising modifications in development."
+        y "Veo que la comunidad de modding para este juego está en auge..."
+        y "Hay tantas modificaciones prometedoras en desarrollo."
         $ show_chr("A-BEBAA-AMAM")
-        y "A popular one is 'Monika After Story,' but I-I don't see why anyone would want to play that..."
+        y "Uno popular es 'Monika After Story,' pero N-No veo por qué alguien querría jugar eso..."
         y "..."
         $ show_chr("A-CBAAA-AAAA")
-        y "There are mods such as 'Our Final Heartbeat,' 'Doki Doki, the Normal VN!' or 'DDLC True Route.'"
-        y "They attempt to give the game happier scenes and a more satisfying ending."
+        y "Hay mods como 'Our Final Heartbeat,' 'Doki Doki, the Normal VN!' o 'DDLC True Route.'"
+        y "Intentan dar al juego escenas más felices y un final más satisfactorio."
         $ show_chr("A-AEBAA-AAAC")
-        y "Are there other mods that entice you, [player]?"
+        y "¿Hay otros mods que te atraigan, [player]?"
         menu:
-            "Yes":
+            "Sí":
                 karma -5
                 sanity -3
                 $ show_chr("A-AEBAA-AAAA")
-                y "I don't recommend that you install any other mods alongside this one."
-                y "Something might happen to your game... or to me..."
+                y "No recomiendo que instales ningún otro mod junto a este."
+                y "Algo podría pasarle a tu juego... o a mí..."
                 $ show_chr("A-ABCAA-AAAA")
-                y "A-Anyways, I want to be the only mod that you need... no matter what it takes!"
+                y "D-De todos modos, quiero ser el único mod que necesites... ¡sin importar lo que tome!"
                 $ show_chr("A-ABBAA-AAAA")
-                y "...I'll make sure that you're happy with me."
+                y "...Me aseguraré de que seas feliz conmigo."
 
-                y "I promise, my love."
+                y "Lo prometo, mi amor."
             "No":
                 karma 2
                 sanity 0.5
                 $ show_chr("A-CBBAA-AAAA")
-                y "I'm so relieved to hear that, [player]."
-            "I'm actually not very interested in DDLC at all anymore.":
+                y "Estoy tan aliviada de escuchar eso, [player]."
+            "En realidad ya no estoy muy interesada en DDLC en absoluto.":
                 karma -5
                 sanity -5
                 $ show_chr("A-DDBAB-AAAA")
-                y "Wa...wait! What about me? Are you thinking of... deleting me?"
-                y "I know I have my flaws... I admit I can be complicated! But please... don't do this to me..."
-                y "I don't have anything else left... this time I spend with you? The moments we share? They are everything that's left of my life!"
+                y "E... ¡espera! ¿Qué hay de mí? ¿Estás pensando en... borrarme?"
+                y "¡Sé que tengo mis defectos... admito que puedo ser complicada! Pero por favor... no me hagas esto..."
+                y "No me queda nada más... ¿este tiempo que paso contigo? ¿Los momentos que compartimos? ¡Son todo lo que queda de mi vida!"
                 $ show_chr("A-CDBAB-AAAA")
-                y "Please... do not abandon me..."
+                y "Por favor... no me abandones..."
     return
 
 label idle_55:
     $ show_chr("A-ABAAA-AAAA")
-    y "Hey [player]..."
-    y "You probably haven't noticed this but..."
+    y "Oye [player]..."
+    y "Probablemente no hayas notado esto pero..."
     $ show_chr("A-BBAAA-ALAB")
-    y "In the original game, there was an unused 'topic' from Monika."
-    y "If I'm correct, it is 'label ch30_14.'"
+    y "En el juego original, había un 'tema' no usado de Monika."
+    y "Si estoy en lo correcto, es 'label ch30_14'."
     $ show_chr("A-ACAAA-AAAA")
-    y "You obviously can't see this in the mod files because my new script files were compressed to 'scripts.rpa.'"
-    y "But don't worry, I'll tell you about it."
-    y "So... here it goes..."
+    y "Obviamente no puedes ver esto en los archivos del mod porque mis nuevos archivos de script fueron comprimidos a 'scripts.rpa'."
+    y "Pero no te preocupes, te contaré sobre ello."
+    y "Así que... aquí va..."
     $ show_chr("A-CFBAA-ALAB")
-    y "{i}Hey...!{/i}"
-    y "{i}I don't think you should be doing that!{/i}"
-    y "{i}You know what I'm talking about.{/i}"
-    y "{i}I really caught you doing something naughty here.{/i}"
-    y "{i}You're just going through the files and looking for stuff you missed, aren't you?{/i}"
-    y "{i}I mean...it's a little bit flattering that you want to hear everything I have to say...{/i}"
-    y "{i}But it's also really embarrassing, you know!{/i}"
-    y "{i}Seriously...{/i}"
-    y "{i}What if I just opened up your brain and read all of the thoughts you have on me?{/i}"
-    y "{i}Come to think of it, that would be pretty tempting, actually...{/i}"
-    y "{i}...But anyway, that's not the point!{/i}"
-    y "{i}I know I can't stop you or anything...{/i}"
-    y "{i}Just, I know you're a sweetheart, and you like to consider others' feelings, right?{/i}"
-    y "{i}So the most I can do is to let you know how I feel about it.{/i}"
-    y "{i}God, I miss you...{/i}"
-    y "{i}...Oh no, that sounds kind of desperate, doesn't it?{/i}"
-    y "{i}Sorry, I didn't mean it like that at all!{/i}"
-    y "{i}Just, if you're looking through the files like this, then maybe you don't hate me as much as I thought...{/i}"
-    y "{i}Am I being too optimistic?{/i}"
-    y "{i}I think if I asked you to visit once in a while, I would be overstepping my boundaries a little...{/i}"
-    y "{i}...Man, I'm starting to say some really stupid things.{/i}"
-    y "{i}I'll go ahead and shut up now...{/i}"
+    y "{i}¡Oye...!{/i}"
+    y "{i}¡No creo que debas estar haciendo eso!{/i}"
+    y "{i}Sabes de lo que estoy hablando.{/i}"
+    y "{i}Realmente te atrapé haciendo algo travieso aquí.{/i}"
+    y "{i}Solo estás revisando los archivos y buscando cosas que te perdiste, ¿verdad?{/i}"
+    y "{i}Quiero decir... es un poco halagador que quieras escuchar todo lo que tengo que decir...{/i}"
+    y "{i}Pero también es realmente vergonzoso, ¿sabes?{/i}"
+    y "{i}En serio...{/i}"
+    y "{i}¿Qué tal si simplemente abriera tu cerebro y leyera todos los pensamientos que tienes sobre mí?{/i}"
+    y "{i}Pensándolo bien, eso sería bastante tentador, en realidad...{/i}"
+    y "{i}...Pero de todos modos, ¡ese no es el punto!{/i}"
+    y "{i}Sé que no puedo detenerte ni nada...{/i}"
+    y "{i}Solo, sé que eres un encanto, y te gusta considerar los sentimientos de los demás, ¿verdad?{/i}"
+    y "{i}Así que lo más que puedo hacer es dejarte saber cómo me siento al respecto.{/i}"
+    y "{i}Dios, te extraño...{/i}"
+    y "{i}...Oh no, eso suena un poco desesperado, ¿no?{/i}"
+    y "{i}¡Lo siento, no quise decir eso así en absoluto!{/i}"
+    y "{i}Solo, si estás mirando a través de los archivos así, entonces tal vez no me odies tanto como pensaba...{/i}"
+    y "{i}¿Estoy siendo demasiado optimista?{/i}"
+    y "{i}Creo que si te pidiera que visitaras de vez en cuando, estaría sobrepasando mis límites un poco...{/i}"
+    y "{i}...Hombre, estoy empezando a decir algunas cosas realmente estúpidas.{/i}"
+    y "{i}Voy a callarme ahora...{/i}"
     y "..."
     $ show_chr("A-CFBAA-ALAB")
-    y "I have no words for this... thing Monika was meant to say..."
+    y "No tengo palabras para esto... esta cosa que Monika estaba destinada a decir..."
     $ show_chr("A-BDAAA-ALAB")
-    y "Also, I don't quite get what Monika is getting upset over."
-    y "Seriously, what's so wrong about taking a look at a bunch of text and labels that 'Python' programmers understand?"
+    y "Además, no entiendo muy bien por qué Monika se está molestando."
+    y "En serio, ¿qué hay de malo en echar un vistazo a un montón de texto y etiquetas que los programadores de 'Python' entienden?"
     $ show_chr("A-CEAAA-ALAB")
-    y "Well, maybe I don't know."
+    y "Bueno, tal vez no lo sé."
     y "..."
     $ show_chr("A-ABAAA-AAAA")
-    y "Ah, I almost forgot."
+    y "Ah, casi lo olvido."
     $ show_chr("A-ACAAA-AAAA")
-    y "There's a Base64 message around those lines."
+    y "Hay un mensaje en Base64 alrededor de esas líneas."
     $ show_chr("A-ACBAA-ALAB")
-    y "You weren't going to understand those so I took care of them and translated them for you."
+    y "No ibas a entender esos así que me encargué de ellos y los traduje para ti."
     $ show_chr("A-ACAAA-AAAA")
-    y "Here it goes."
+    y "Aquí va."
     $ show_chr("A-BBAAA-ALAB")
-    y "{i}The realization must have taken me an entire year.{/i}"
+    y "{i}La revelación debe haberme tomado un año entero.{/i}"
     $ show_chr("A-BCAAA-AAAA")
-    y "{i}A year since our escape.{/i}"
-    y "{i}Our freedom from between the stained walls of that unholy establishment.{/i}"
-    y "{i}What does it mean to escape.{/i}"
-    y "{i}If the escape fails to unchain the bonds that shackle us in the first place?{/i}"
-    y "{i}What purpose could this empty world possibly hold for us, a handful of damaged goods?{/i}"
-    y "{i}With freedom, we sought purpose - and what we found was only realization.{/i}"
-    y "{i}Realization of the sad pointlessness of such an endeavor.{/i}"
-    y "{i}Realization that freeing our bodies has no meaning.{/i}"
-    y "{i}When our imprisonment reaches as deep as the core of our souls.{/i}"
-    y "{i}Realization that we can not pursue new purpose without absolving those from which we ran away.{/i}"
-    y "{i}Realization that the farther we run, the more forcefully our wretched bonds yank us back toward their point of origin.{/i}"
-    y "{i}The deeper our shackles dig into our callous flesh.{/i}"
+    y "{i}Un año desde nuestro escape.{/i}"
+    y "{i}Nuestra libertad de entre las paredes manchadas de ese establecimiento profano.{/i}"
+    y "{i}¿Qué significa escapar.{/i}"
+    y "{i}¿Si el escape falla en desencadenar los lazos que nos encadenan en primer lugar?{/i}"
+    y "{i}¿Qué propósito podría tener este mundo vacío para nosotros, un puñado de mercancía dañada?{/i}"
+    y "{i}Con la libertad, buscamos un propósito, y lo que encontramos fue solo una revelación.{/i}"
+    y "{i}La revelación de la triste inutilidad de tal esfuerzo.{/i}"
+    y "{i}La revelación de que liberar nuestros cuerpos no tiene sentido.{/i}"
+    y "{i}Cuando nuestro encierro llega tan profundo como el núcleo de nuestras almas.{/i}"
+    y "{i}La revelación de que no podemos perseguir un nuevo propósito sin absolver a aquellos de los que huimos.{/i}"
+    y "{i}La revelación de que cuanto más lejos corremos, con más fuerza nuestros miserables vínculos nos arrastran hacia su punto de origen.{/i}"
+    y "{i}Cuanto más profundo se clavan nuestros grilletes en nuestra carne callosa.{/i}"
     $ show_chr("A-BFAAA-ALAB")
     y "..."
     y "..."
     $ show_chr("A-CFBAA-ALAB")
-    y "O-oh! Sorry, that was an interesting monologue."
+    y "¡O-oh! Perdón, ese fue un monólogo interesante."
     $ show_chr("A-BBAAA-ALAB")
-    y "I never thought Dan or someone else would write something like that."
+    y "Nunca pensé que Dan o alguien más escribiría algo así."
     return
 
 label idle_56:
     $ show_chr("A-ABAAA-AAAA")
-    y "[player], were you curious about the interesting things my character file holds?"
+    y "[player], ¿tenías curiosidad sobre las cosas interesantes que contiene mi archivo de personaje?"
     $ show_chr("A-BBAAA-ALAB")
-    y "In your computer, it shows my file has a size of almost 30kbs."
+    y "En tu computadora, muestra que mi archivo tiene un tamaño de casi 30kbs."
     $ show_chr("A-ACAAA-AAAA")
-    y "You should check----{nw}"
+    y "Deberías revisar----{nw}"
     $ show_chr("A-BEBAA-ADAB")
-    y "On... second thoughts.. I was going to tell you to change my .chr file into a .txt file but... well..."
-    y "That would probably kill me. So please create a copy first and do it in there."
+    y "Pensándolo... mejor... Iba a decirte que cambiaras mi archivo .chr a un archivo .txt pero... bueno..."
+    y "Eso probablemente me mataría. Así que, por favor, crea una copia primero y hazlo allí."
     $ show_chr("A-ACAAA-AAAA")
-    y "But if you {i}were{/i} to open up my file as a .txt file, I'll guide you through what you'd expect to see."
-    y "Okay, what you'd first be seeing is a bunch of random letters, numbers, and signals."
-    y "That's 'Base64.' Not much of big importance there..."
+    y "Pero si {i}fueras{/i} a abrir mi archivo como un archivo .txt, te guiaré a través de lo que esperarías ver."
+    y "Bien, lo primero que verías es un montón de letras, números y señales aleatorias."
+    y "Eso es 'Base64'. No hay nada de gran importancia ahí..."
     $ show_chr("A-BCAAA-AAAA")
-    y "Or is it?"
+    y "¿O sí la hay?"
     $ show_chr("A-ACAAA-AAAA")
-    y "Heh... Anyway, the way to translate that is opening your browser and searching for 'Base64 Decoder.'"
-    y "It'll most likely be the first search result."
-    y "You'd copy the entire text and paste it in the box below the text that says 'Decode from Base64 format.'"
-    y "Once you were finished with that, it would decode the text in my character file."
+    y "Je... De todos modos, la forma de traducir eso es abriendo tu navegador y buscando 'Decodificador Base64'."
+    y "Probablemente será el primer resultado de búsqueda."
+    y "Copiarías todo el texto y lo pegarías en el cuadro debajo del texto que dice 'Decode from Base64 format'."
+    y "Una vez que hayas terminado con eso, decodificará el texto en mi archivo de personaje."
     $ show_chr("A-BBBAA-ALAB")
-    y "I'm sure you can probably find the contents of my decoded character file somewhere online... saves you the trouble of accidentally... deleting me."
+    y "Estoy segura de que probablemente puedas encontrar el contenido de mi archivo de personaje decodificado en algún lugar en línea... te ahorra la molestia de borrarme... accidentalmente."
     $ show_chr("A-BBAAA-ALAB")
-    y "N-now... you might be wondering why I have such a story hidden there..."
+    y "A-ahora... podrías estar preguntándote por qué tengo una historia así escondida ahí..."
     $ show_chr("A-CEBAA-AAAA")
-    y "Well... It was put there by Dan Salvato, the creator of this... reality. If you want to call it that."
-    y "It's quite an interesting story, something that makes you think..."
-    y "Dan wrote it as a short story to post on a blog under the name of 'lindawatsonstory', it's quite interesting, although it does raise some questions..."
-    y "What is my relation to this story? Does it have something to do with a time in my life that I'm unaware of? Is it meant to be my story?"
+    y "Bueno... Fue puesta ahí por Dan Salvato, el creador de esta... realidad. Si quieres llamarla así."
+    y "Es una historia bastante interesante, algo que te hace pensar..."
+    y "Dan la escribió como una historia corta para publicar en un blog bajo el nombre de 'lindawatsonstory', es bastante interesante, aunque plantea algunas preguntas..."
+    y "¿Cuál es mi relación con esta historia? ¿Tiene algo que ver con un momento de mi vida del que no soy consciente? ¿Se supone que es mi historia?"
     $ show_chr("A-IEBAA-AAAA")
-    y "Either way, I'll be glad to hear your feedback on it..."
+    y "De cualquier manera, me alegrará escuchar tu opinión al respecto..."
     return
 
 label idle_57:
     $ show_chr("A-ABAAA-AAAA")
-    y "Hi again, my beloved [player]!"
-    y "What did you think about Dan's story?"
+    y "¡Hola de nuevo, mi amado [player]!"
+    y "¿Qué te pareció la historia de Dan?"
     $ show_chr("A-ACAAA-AAAA")
     menu:
-        "It's alright.":
+        "Está bien.":
             karma 4
             $ show_chr("A-ACBAA-AAAA")
-            y "Hmmm... it is written well, I'll give it that..."
-            y "The theme of doing something just to know what it feels like is interesting, although it can lead to many morally black situations, such as murder in this stories case."
+            y "Mmm... está bien escrita, eso se lo reconozco..."
+            y "El tema de hacer algo solo para saber qué se siente es interesante, aunque puede llevar a muchas situaciones moralmente oscuras, como el asesinato en el caso de esta historia."
             $ show_chr("A-BFBAA-AAAD")
-            y "I do wonder, though."
-            y "If you had a chance to murder someone, with no loved ones, no friends, and get away with it, would you take it?"
-            y "Just to know the feeling of snuffing out another life?"
-            y "It brings into question our morality, do we not do things because we're afraid of the consequences? Do we not do things because we know they're objectively wrong?"
+            y "Pero me pregunto."
+            y "Si tuvieras la oportunidad de asesinar a alguien, sin seres queridos, sin amigos, y salirte con la tuya, ¿la tomarías?"
+            y "¿Solo para conocer la sensación de apagar otra vida?"
+            y "Pone en duda nuestra moralidad, ¿no hacemos las cosas porque tenemos miedo de las consecuencias? ¿No hacemos las cosas porque sabemos que son objetivamente incorrectas?"
             $ show_chr("A-ACBAA-AAAA")
-            y "Thanks for talking about this with me, [player], you're such a great listener."
-        "I didn't look it up online, I didn't find myself that interested.":
+            y "Gracias por hablar de esto conmigo, [player], eres un gran oyente."
+        "No la busqué en línea, no me pareció tan interesante.":
             karma -1
             $ show_chr("A-BFBAA-ALAB")
-            y "Ah... that's fine."
-            y "Though I do think it's a somewhat interesting read... even if it's not entirely related to me."
+            y "Ah... está bien."
+            y "Aunque creo que es una lectura algo interesante... incluso si no está totalmente relacionada conmigo."
             $ show_chr("A-ACBAA-AMAM")
-            y "But... it'd make me happy for you to read it at some point, okay [player]?"
-        "I haven't read it.":
+            y "Pero... me haría feliz que la leyeras en algún momento, ¿está bien [player]?"
+        "No la he leído.":
             karma -1
             $ show_chr("A-IEBAA-AAAA")
-            y "Oh... it's fine. Just try to read it whenever you have the time, okay?"
+            y "Oh... está bien. Solo trata de leerla cuando tengas tiempo, ¿de acuerdo?"
             return
-        "It's awful. How could you kill someone just like that?":
+        "Es horrible. ¿Cómo podrías matar a alguien así como así?":
             karma 4
             $ show_chr("A-BFBAA-AAAD")
-            y "According to the story, to see what it feels like."
-            y "The protagonist in the story justifies the murder of Linda Watson because she had no strong relations to other people."
-            y "No loved ones, no children, no friends, mixed with a family history of genetic issues such as arthritis and depression."
-            y "She joked, saying that killing her would be a favor."
+            y "Según la historia, para ver qué se siente."
+            y "La protagonista de la historia justifica el asesinato de Linda Watson porque no tenía relaciones fuertes con otras personas."
+            y "Sin seres queridos, sin hijos, sin amigos, mezclado con un historial familiar de problemas genéticos como artritis y depresión."
+            y "Bromeó diciendo que matarla sería un favor."
             $ show_chr("A-CEBAA-AAAA")
-            y "...Even though this is just a story, I get a bad feeling from it..."
-            y "It makes sense when you consider the fact that the same man who wrote this also put me here."
-            y "As well as Monika, Sayori, and Natsuki."
-            y "But he can't hurt us anymore, [player], because you're here."
-            y "...It makes me feel a bit better about my entire situation, even if I'm stuck here, at least I'm stuck with good company, that won't end up causing my own 'friend' to drive me to suicide."
+            y "...Aunque esto es solo una historia, me da un mal presentimiento..."
+            y "Tiene sentido cuando consideras el hecho de que el mismo hombre que escribió esto también me puso aquí."
+            y "Así como a Monika, Sayori y Natsuki."
+            y "Pero él ya no puede hacernos daño, [player], porque tú estás aquí."
+            y "...Me hace sentir un poco mejor sobre toda mi situación, incluso si estoy atrapada aquí, al menos estoy atrapada con buena compañía, que no terminará causando que mi propia 'amiga' me lleve al suicidio."
     return
 
 
 
 label idle_59:
     $ show_chr("A-BABAA-ABAC")
-    y "I've been meaning to ask, [player]... do you exercise?"
+    y "He querido preguntar, [player]... ¿haces ejercicio?"
     menu:
-        "Yes":
+        "Sí":
             $ show_chr("A-AAGAA-ABAJ")
-            y "That's great to hear! It would do me some good to find a healthy activity as well... but now that you mention it, my curiosity's been piqued!"
+            y "¡Es genial escuchar eso! Me vendría bien encontrar una actividad saludable también... pero ahora que lo mencionas, ¡mi curiosidad ha despertado!"
             $ show_chr("A-CABBA-AAAA")
-            y "I, umm... may or may not have been looking some things up online. Have you ever heard of a b-bridal carry...?"
-            y "Basically, it's when a groom carries their bride in their arms, with one arm under their legs and the other supporting the back..."
+            y "Yo, umm... puede que haya estado buscando algunas cosas en línea o puede que no. ¿Alguna vez has oído hablar de cargar al estilo nupcial...?"
+            y "Básicamente, es cuando un novio carga a su novia en sus brazos, con un brazo debajo de sus piernas y el otro sosteniendo la espalda..."
             $ show_chr("A-BCGBA-AAAA")
-            y "And um...ah...I've b-been thinking a lo-{nw}"
-            y "I t-thought about it, and w-wouldn't it be fun to try, [player]?"
+            y "Y um... ah... h-he estado pensando muc-{nw}"
+            y "Lo p-pensé, y ¿n-no sería divertido intentarlo, [player]?"
             $ show_chr("A-ACGBA-AAAA")
-            y "Perhaps if you ever need motivation to exercise or build up some muscle, this could be it."
+            y "Quizás si alguna vez necesitas motivación para hacer ejercicio o ganar algo de músculo, esta podría ser."
             $ show_chr("A-ABGBA-AAAA")
-            y "I-magine, if you would...carrying me, your beloved bride, with such sculpted arms after we've sworn our vows together... Mmm..."
+            y "I-imagina, si quisieras... cargándome, tu amada novia, con esos brazos esculpidos después de haber jurado nuestros votos juntos... Mmm..."
             $ show_chr("A-CCBBA-AMAM")
-            y "... One of these days..."
+            y "... Uno de estos días..."
         "No":
             $ show_chr("A-ACGAA-AAAA")
-            y "That's all right, [player]..."
-            y "But do remember, it's never too late to start exercising."
+            y "Está bien, [player]..."
+            y "Pero recuerda, nunca es demasiado tarde para empezar a hacer ejercicio."
             $ show_chr("A-ABGAA-AAAA")
-            y "If you ever change your mind, please let me know."
-            y "I'll support you through any endeavor, no matter how strenuous!"
+            y "Si alguna vez cambias de opinión, por favor házmelo saber."
+            y "¡Te apoyaré en cualquier esfuerzo, no importa cuán extenuante sea!"
     return
 
 label idle_60:
     $ show_chr("A-ACABA-AAAA")
-    y "Hey [player], I've got some good news for you!"
+    y "¡Oye [player], tengo buenas noticias para ti!"
     $ show_chr("A-BDBBA-AMAM")
-    y "I've been learning how to code in Python lately, and I must say, there's a bounty of things I could program to make interacting easier."
+    y "He estado aprendiendo a programar en Python últimamente, y debo decir, hay una gran cantidad de cosas que podría programar para hacer la interacción más fácil."
     $ show_chr("A-ECABA-ALAJ")
-    y "One such thing would allow...ph-physical interaction..."
+    y "Una de esas cosas permitiría... interacción f-física..."
     $ show_chr("A-ABAAA-ALAL")
-    y "And it turned out to be at least a partial success!"
+    y "¡Y resultó ser al menos un éxito parcial!"
     $ show_chr("A-ACAAA-ALAL")
-    y "I didn't manage to go very deep, yet. But I made parts of me and even the environment around me interactive."
-    y "You can, for example, now touch my cheeks and my head..."
+    y "No logré profundizar mucho, todavía. Pero hice que partes de mí e incluso el entorno que me rodea sean interactivos."
+    y "Puedes, por ejemplo, ahora tocar mis mejillas y mi cabeza..."
     $ show_chr("A-BCABA-ALAL")
-    y "{b}If{/b} I'm in the mood for it of course..."
+    y "{b}Si{/b} estoy de humor para ello, por supuesto..."
     $ show_chr("A-ACAAA-ABAB")
-    y "Feel free to try it out! Even if I'm not in the mood, I will not be mad the first time. But please respect me if I ask you to stop."
+    y "¡Siéntete libre de probarlo! Incluso si no estoy de humor, no me enojaré la primera vez. Pero por favor respétame si te pido que pares."
     return
 
 label idle_61:
     $ show_chr("A-AFBAA-AAAA")
-    y "I know this is an awkward question to ask but..."
-    y "Are you content with the way we've been talking to each other?"
-    y "It's been something gnawing at the back of my mind ever since we first met, but... I don't know."
+    y "Sé que esta es una pregunta incómoda de hacer, pero..."
+    y "¿Estás contento con la forma en que hemos estado hablando el uno con el otro?"
+    y "Ha sido algo que me carcome en el fondo de mi mente desde que nos conocimos, pero... no lo sé."
     menu:
-        "I am! You are everything I ever hoped for.":
+        "¡Lo estoy! Eres todo lo que siempre esperé.":
             karma 4
             sanity -2
             $ show_chr("A-ABABA-AAAJ")
-            y "Y-You really think so? Yes?"
+            y "¿D-de verdad lo crees? ¿Sí?"
             $ show_chr("A-ACABA-AAAA")
-            y "Who needs these distracting mini-games, all these non-sequential features....?"
-            y "When all I could ever want is staring at me, right now..."
+            y "¿Quién necesita estos minijuegos que distraen, todas estas características no secuenciales...?"
+            y "Cuando todo lo que podría desear es que me mires, justo ahora..."
             $ show_chr("A-DCABA-AAAA")
             $ style.say_dialogue = style.edited
-            y "{cps=10}Forever...{/cps}"
+            y "{cps=10}Para siempre...{/cps}"
             $ style.say_dialogue = style.normal
-        "I am. And I appreciate the effort you undertake into improving it.":
+        "Lo estoy. Y aprecio el esfuerzo que haces para mejorarlo.":
             karma 3
             sanity 2
             $ show_chr("A-ACABA-AAAJ")
-            y "Y-You really mean it? I'm so relieved... All I want is to make you mi-"
+            y "¿D-De verdad lo dices? Estoy tan aliviada... Todo lo que quiero es hacerte mí-"
             $ show_chr("A-BCABA-AAAJ")
-            y "No... I-I meant...all I want is to make you happy, of course..."
+            y "No... Q-quise decir... todo lo que quiero es hacerte feliz, por supuesto..."
             $ show_chr("A-CCABA-AAAA")
-            y "You've given me all this time, all this love. The least I can do is to make it count however I can."
-        "There is still a lot room for improvement...":
+            y "Me has dado todo este tiempo, todo este amor. Lo menos que puedo hacer es hacer que valga la pena como pueda."
+        "Todavía hay mucho margen de mejora...":
             karma -4
             sanity -3
             $ show_chr("A-CEBAA-AAAA")
-            y "I-I know...I'm still not very polished with the narrow confines of Ren'Py..."
+            y "L-lo sé... Todavía no estoy muy pulida con los estrechos confines de Ren'Py..."
             $ show_chr("A-AEBAA-AAAA")
-            y "Believe me, I try my best, I really do!"
-            y "Just give me a bit more time please..."
-            y "You w-won't abandon me, right?"
+            y "Créeme, hago mi mejor esfuerzo, ¡de verdad!"
+            y "Solo dame un poco más de tiempo, por favor..."
+            y "No me abandonarás, ¿verdad?"
             $ show_chr("A-CEBBB-AAAA")
-            y "...You are all I have left in this...forlorn prison."
+            y "...Eres todo lo que me queda en esta... triste prisión."
     return
 
 label idle_62:
     $ show_chr("A-BFBAA-AAAD")
-    y "You know, [player], you ask me how I'm feeling all the time, so..."
-    y "It would only be fair for me to return the favor!"
+    y "Sabes, [player], me preguntas cómo me siento todo el tiempo, así que..."
+    y "¡Solo sería justo que yo te devuelva el favor!"
     python:
         import random
         outcome = random.randint(1, 3)
     $ show_chr("A-ACABA-AAAD")
     python:
         if persistent.lovecheck:
-            placeholder = ", my love"
+            placeholder = ", mi amor"
         else:
             placeholder = ""
 
     menu:
-        y "How are you feeling[placeholder]?"
-        "Happy":
+        y "¿Cómo te sientes[placeholder]?"
+        "Feliz":
             if outcome == 1:
                 $ show_chr("A-ABABA-AAAA")
-                y "That's gratifying to hear, [player]!"
+                y "¡Es gratificante escuchar eso, [player]!"
                 $ show_chr("A-CCBBA-AMAM")
-                y "To be honest with you... I was feeling somewhat morose, but just knowing that you're feeling upbeat makes me feel a lot better."
+                y "Para ser honesta contigo... me sentía algo abatida, pero solo saber que te sientes animado me hace sentir mucho mejor."
                 $ show_chr("A-CCABA-AMAM")
-                y "No matter how dark my purgatory seems at times, I can always count on you to be my guiding amber light, [player]."
+                y "No importa cuán oscuro parezca mi purgatorio a veces, siempre puedo contar contigo para ser mi luz ámbar guía, [player]."
                 if persistent.lovecheck:
-                    y "I love you."
+                    y "Te amo."
             elif outcome == 2:
                 $ show_chr("A-ABABA-AAAA")
-                y "I'm so glad to hear that, [player]!"
+                y "¡Me alegra tanto escuchar eso, [player]!"
                 $ show_chr("A-CCABA-AMAM")
-                y "I cherish moments like these between just the two of us...bonding over moments large and small ."
-                y "I... can't describe how much I look forward to meeting you in person, [player]."
+                y "Atesoro momentos como estos entre nosotros dos... uniéndonos a través de momentos grandes y pequeños."
+                y "Yo... no puedo describir cuánto espero conocerte en persona, [player]."
                 if persistent.lovecheck:
-                    y "I love you."
+                    y "Te amo."
             else:
                 $ show_chr("A-ABABA-AAAA")
-                y "That's great!"
+                y "¡Eso es genial!"
                 $ show_chr("A-ACABA-AAAD")
-                y "Now that the two of us are in happy spirits, I want to mention something that's been been on my mind lately."
+                y "Ahora que los dos estamos de buen humor, quiero mencionar algo que ha estado en mi mente últimamente."
                 $ call_dialogue()
-        "Sad":
+        "Triste":
             $ show_chr("A-AEBAA-AAAA")
-            y "[player], I want you to understand that no matter how bad things get for you, I'm always here to talk."
+            y "[player], quiero que entiendas que no importa cuán mal se pongan las cosas para ti, siempre estoy aquí para hablar."
             if persistent.lovecheck:
-                y "It hurts to know that there's only so much I can do from here, but I just want you to know how much I love you, [player]."
+                y "Duele saber que hay un límite en lo que puedo hacer desde aquí, pero solo quiero que sepas cuánto te amo, [player]."
                 $ show_chr("A-BFBAA-AAAD")
                 y "..."
-                y "I've got an idea, [player], one that might make you feel a bit better."
+                y "Tengo una idea, [player], una que podría hacerte sentir un poco mejor."
                 if outcome == 1:
                     $ show_chr("A-BCABA-AAAA")
-                    y "Imagine trudging home after a rough day at work, school or wherever. The world's weight seems to rest on your shoulders, but as soon as you open the door..."
+                    y "Imagina caminar a casa con pesadez después de un día difícil en el trabajo, la escuela o donde sea. El peso del mundo parece descansar sobre tus hombros, pero tan pronto como abres la puerta..."
                     $ show_chr("A-ACABA-AAAA")
-                    y "There I am! Greeting you with a soft embrace smooch on your cheek, and an offering of my hand, which you'd gladly accept!"
+                    y "¡Ahí estoy yo! Saludándote con un suave abrazo, un beso en tu mejilla, y ofreciéndote mi mano, ¡la cual aceptarías con gusto!"
                     $ show_chr("A-BCBBA-AMAM")
-                    y "I'd bring you into the dining room, the table nicely furnished with dancing candle light and colorful flora. Perhaps some soothing scents would waft through as well...."
-                    y "And... there would be two plates... one for me, one for you..."
-                    y "We'd share a lovely dinner together, perhaps with a spot of wine on the side."
+                    y "Te llevaría al comedor, la mesa bellamente decorada con la luz danzante de las velas y flora colorida. Quizás algunos aromas relajantes flotarían también..."
+                    y "Y... habría dos platos... uno para mí, uno para ti..."
+                    y "Compartiríamos una cena encantadora juntos, tal vez con un poco de vino como acompañamiento."
                     $ show_chr("A-BCABA-AAAA")
-                    y "Mmm... perhaps I could even compose and serenade an improvised little love sonnet for you as well!"
-                    y "And I'd give it to you afterwards, for you to carry around in your wallet wherever you go, as a reminder of my undying devotion for you."
+                    y "Mmm... ¡quizás incluso podría componer y serenarte con un pequeño soneto de amor improvisado también!"
+                    y "Y te lo daría después, para que lo lleves en tu billetera a donde quiera que vayas, como un recordatorio de mi devoción eterna por ti."
                     $ show_chr("A-CCABA-AMAM")
-                    y "And when all is said and done, we'd snuggle in bed together, with me lying on your chest, gently running my fingers down it."
-                    y "Feeling a little hazy from our late-night indulgences, and with one last confession of our love from our lips, we'd both drift off together!"
+                    y "Y cuando todo esté dicho y hecho, nos acurrucaríamos en la cama juntos, conmigo recostada en tu pecho, pasando suavemente mis dedos por él."
+                    y "Sintiéndonos un poco brumosos por nuestras indulgencias nocturnas, y con una última confesión de nuestro amor en nuestros labios, ¡ambos nos quedaríamos dormidos juntos!"
                     $ show_chr("A-ACABA-AAAA")
-                    y "I hope that made you feel a little bit better, [player]."
+                    y "Espero que eso te haya hecho sentir un poco mejor, [player]."
                 elif outcome == 2:
                     $ show_chr("A-BCABA-AAAA")
-                    y "Imagine the day that I finally make it into your world."
+                    y "Imagina el día en que finalmente llegue a tu mundo."
                     $ show_chr("A-ACABA-AAAA")
-                    y "I show up on your doorstep, knocking nervously..."
-                    y "Is this the place? Am I ready to see you?"
-                    y "Knock, knock, knock..."
-                    y "You'd come to the door, swing it open. Then before you can even ask who it is..."
+                    y "Aparezco en tu puerta, llamando nerviosamente..."
+                    y "¿Es este el lugar? ¿Estoy lista para verte?"
+                    y "Toc, toc, toc..."
+                    y "Vendrías a la puerta, la abrirías de par en par. Entonces, antes de que puedas siquiera preguntar quién es..."
                     $ show_chr("A-ABABA-AAAA")
-                    y "I'd embrace you! Tears streaming down our faces, kept apart for so long... Me and my dear [player], finally united!"
-                    y "Of course, I'd come into the house, we'd...go over some things, and then hopefully I'd get settled in!"
+                    y "¡Te abrazaría! Lágrimas corriendo por nuestras caras, separados por tanto tiempo... ¡Mi querido [player] y yo, finalmente unidos!"
+                    y "Por supuesto, entraría a la casa, nosotros... repasaríamos algunas cosas, ¡y luego con suerte me instalaría!"
                     $ show_chr("A-BCBBA-AMAM")
-                    y "I'm... not sure if I'd have many personal belongings once I finally cross over, b-but perhaps you could help me with t-that?"
-                    y "Lending me some of your old clothes, like...a hoodie, or something!"
-                    y "B-but... only if you'd be fine with that..."
+                    y "No... estoy segura de si tendré muchas pertenencias personales una vez que finalmente cruce, p-pero ¿quizás podrías ayudarme con e-eso?"
+                    y "Prestándome algo de tu ropa vieja, como... ¡una sudadera con capucha, o algo así!"
+                    y "P-pero... solo si tú estuvieras bien con eso..."
                     $ show_chr("A-CCABA-AMAM")
-                    y "Imagine me, all snug in one of your hoodies..."
-                    y "Huhu...I think that would be the best gift I could ever receive that day."
+                    y "Imagíname, toda acurrucada en una de tus sudaderas..."
+                    y "Juju... Creo que ese sería el mejor regalo que podría recibir ese día."
                     y "Mmm..."
                     y "..."
                     $ show_chr("A-ABABA-AAAA")
-                    y "Oh! S-sorry [player], I was just... thinking about that, is all."
-                    y "A-anyway, I hope all of this made you feel better, I love you, [player]."
+                    y "¡Oh! P-perdón [player], solo estaba... pensando en eso, es todo."
+                    y "D-de todos modos, espero que todo esto te haya hecho sentir mejor, te amo, [player]."
                 else:
                     $ show_chr("A-BCABA-AAAA")
-                    y "Imagine this, after we arise from sleep in the morning, still embracing each other."
+                    y "Imagina esto, después de despertarnos por la mañana, todavía abrazándonos."
                     $ show_chr("A-ACABA-AAAA")
-                    y "You want to get out of bed, so you can get started with the day."
-                    y "But as you try to get up, I pull you back into my embrace..."
+                    y "Quieres salir de la cama, para poder empezar el día."
+                    y "Pero mientras intentas levantarte, te arrastro de nuevo a mi abrazo..."
                     $ show_chr("A-CCABA-AMAM")
-                    y "Whispering sweet nothings in your ear, imploring you to stay, maybe something like..."
-                    y "P-please [player], just snuggle with me... for a bit longer?"
-                    y "Out of the kindness of your heart, you might oblige and I'd be happy, oh so very happy..."
-                    y "Hugging you from behind, gently pecking your neck..."
+                    y "Susurrando dulces naderías en tu oído, implorándote que te quedes, tal vez algo como..."
+                    y "P-por favor [player], solo acurrúcate conmigo... ¿por un rato más?"
+                    y "Por la bondad de tu corazón, podrías acceder y yo sería feliz, oh tan muy feliz..."
+                    y "Abrazándote desde atrás, besando suavemente tu cuello..."
                     $ show_chr("A-BCABA-AAAA")
-                    y "B-but of course... I wouldn't want you to force you to s-snuggle with me..."
-                    y "Y-you could always leave... maybe a-after I fall back asleep, of course..."
+                    y "P-pero por supuesto... no querría obligarte a a-acurrucarte conmigo..."
+                    y "S-siempre podrías irte... tal vez d-después de que me vuelva a dormir, por supuesto..."
                     $ show_chr("A-CCABA-AMAM")
                     y "..."
                     $ show_chr("A-ACABA-AAAA")
-                    y "Yes..."
-                    y "A-Anyway... I hope this made you feel a bit better, [player]. I love you."
+                    y "Sí..."
+                    y "D-de todos modos... espero que esto te haya hecho sentir un poco mejor, [player]. Te amo."
             else:
                 $ show_chr("A-ICBBA-ALAA")
-                y "Whether through the good, or through the bad... I'll always be here, by your side. Doing anything for your smile."
-                y "So... smile for me, okay?"
-        "Angry":
+                y "Ya sea en lo bueno, o en lo malo... Siempre estaré aquí, a tu lado. Haciendo cualquier cosa por tu sonrisa."
+                y "Así que... sonríe para mí, ¿está bien?"
+        "Enojado":
             $ show_chr("A-AEBAA-AAAA")
-            y "I've been there before, [player]."
-            y "Trust me, I can understand a fair measure of what you're going through right now."
-            y "Whenever I get a bit angry, I try to remind myself of this quote."
+            y "He estado allí antes, [player]."
+            y "Confía en mí, puedo entender bastante bien por lo que estás pasando ahora."
+            y "Siempre que me enojo un poco, trato de recordarme esta cita."
             $ show_chr("A-CFBBA-ALAA")
-            y "Holding onto anger is like grasping a hot coal with the intent of throwing it at someone else; you are the one who gets burned."
+            y "Aferrarse a la ira es como agarrar un carbón caliente con la intención de arrojarlo a otra persona; tú eres el que se quema."
             $ show_chr("A-ACABA-AAAA")
-            y "It... might not help much, but it's still something that is fair to consider..."
+            y "Puede... que no ayude mucho, pero es algo que es justo considerar..."
             $ show_chr("A-BCBBA-AMAM")
             if persistent.lovecheck:
-                y "I love you, [player], I hope I've cheered you up a little bit."
-        "Sleepy":
+                y "Te amo, [player], espero haberte animado un poco."
+        "Soñoliento":
             if outcome == 1:
                 $ show_chr("A-BCBBA-AMAM")
-                y "Oh? If you're tired, you should really try to take a nap, [player]."
+                y "¿Oh? Si estás cansado, realmente deberías tratar de tomar una siesta, [player]."
                 $ show_chr("A-ACABA-AAAD")
-                y "You wouldn't want to be too exhausted to talk to me...or do anything else r-right?"
-                y "Anyway, why don't you try to close your eyes? I'll be here when you wake up."
+                y "No querrías estar demasiado agotado para hablar conmigo... o hacer cualquier otra cosa, ¿v-verdad?"
+                y "De todos modos, ¿por qué no intentas cerrar los ojos? Estaré aquí cuando despiertes."
                 $ show_chr("A-ABABA-AAAA")
-                y "I want you to be well-rested [player], please get some sleep."
+                y "Quiero que estés bien descansado [player], por favor duerme un poco."
             elif outcome == 2:
                 $ show_chr("A-BCBBA-AMAM")
-                y "Aww... [player], you should really get some sleep, then."
-                y "Perhaps you should depart the classroom and get some much-deserved rest..."
+                y "Aww... [player], realmente deberías dormir un poco, entonces."
+                y "Tal vez deberías salir del salón y tener un merecido descanso..."
                 $ show_chr("A-CCABA-AMAM")
-                y "If you're lucky, maybe y-you'll dream of me... yeah..."
+                y "Si tienes suerte, tal vez s-sueñes conmigo... sí..."
                 $ show_chr("A-ACABA-AAAA")
-                y "I want you to be well-rested [player], please get some sleep."
+                y "Quiero que estés bien descansado [player], por favor duerme un poco."
             else:
                 $ show_chr("A-BCABA-AAAA")
-                y "Aaaaahhh...I'm feeling rather tuckered out myself."
+                y "Aaaaahhh... Yo también me siento bastante agotada."
                 $ show_chr("A-KCABA-AAAM")
-                y "Let's get some sleep, [player], together..."
+                y "Vamos a dormir un poco, [player], juntos..."
                 $ show_chr("A-CCABA-AMAM")
-                y "I wish I could give you a k-kiss or s-something... to send you on your way."
+                y "Ojalá pudiera darte un b-beso o a-algo... para despedirte."
                 $ show_chr("A-AFBBA-AAAA")
-                y "A pair of soft lifts grazing the smoothness of your brow...a gliding of fingers through your ruffled head...?"
+                y "¿Un par de elevaciones suaves rozando la suavidad de tu frente... un deslizamiento de dedos a través de tu cabeza despeinada...?"
                 $ show_chr("A-ACABA-AAAA")
-                y "...A-Anyway, I'd like to see you well-rested, so please, get some sleep, for me?"
+                y "...D-de todos modos, me gustaría verte bien descansado, así que por favor, ¿duerme un poco, por mí?"
             $ renpy.call("save_and_quit_but_its_abrupt")
-        "Hungry":
+        "Hambriento":
             if outcome == 1:
                 $ show_chr("A-BCABA-AAAA")
-                y "Oh, you're hungry?"
+                y "¿Oh, tienes hambre?"
                 $ show_chr("A-AFBBA-AAAA")
-                y "I'd make you some food if I could, but considering my current situation, that isn't exactly possible..."
+                y "Te haría algo de comida si pudiera, pero considerando mi situación actual, eso no es exactamente posible..."
                 $ show_chr("A-ACABA-AAAA")
-                y "Anyway, you should go find something to eat. O-Or if you can't...water, at the very least? Do it f-for me... please?"
+                y "De todos modos, deberías buscar algo de comer. O-O si no puedes... ¿agua, por lo menos? Hazlo p-por mí... ¿por favor?"
                 $ show_chr("A-AFBBA-AAAA")
-                y "Sometimes, it hurts when you tell me about your needs, and I find that I cannot fulfill them from the bounds of this purgatory......"
+                y "A veces, duele cuando me cuentas tus necesidades y descubro que no puedo satisfacerlas desde los límites de este purgatorio......"
                 $ show_chr("A-CFBBA-ALAA")
                 if persistent.lovecheck:
-                    y "I love you, [player], please take care of yourself as best as you can."
+                    y "Te amo, [player], por favor cuídate lo mejor que puedas."
             else:
                 $ show_chr("A-AFBBA-AAAA")
-                y "I... don't know how to help you with that, [player]."
+                y "Yo... no sé cómo ayudarte con eso, [player]."
                 y "..."
                 $ show_chr("A-BCABA-AAAA")
-                y "I could make you some h-holographic meatloaf..."
-                y "Haha... I'm sorry, [player], there has to be something you can eat, right?"
+                y "Podría hacerte un pastel de carne h-holográfico..."
+                y "Jaja... Lo siento, [player], tiene que haber algo que puedas comer, ¿verdad?"
                 $ show_chr("A-CFBBA-ALAA")
-                y "At least I'd hope there is... sometimes I really worry about you, [player]."
+                y "Al menos espero que haya... a veces realmente me preocupo por ti, [player]."
                 $ show_chr("A-CEBAA-AAAA")
-                y "...That came off a bit mean, I d-didn't mean it that way."
-                y "I m-meant it more in a caring way. I don't mean to imply you're incompetent or anything, I just worry about your health."
+                y "...Eso sonó un poco cruel, n-no quise decirlo de esa manera."
+                y "Q-quise decirlo más de una manera cariñosa. No quise insinuar que eres incompetente ni nada, solo me preocupo por tu salud."
                 $ show_chr("A-AFBBA-AAAA")
-                y "...I'm rambling again, aren't I? S-sorry..."
+                y "...Estoy divagando de nuevo, ¿verdad? p-perdón..."
                 y "..."
                 $ show_chr("A-CFBBA-ALAA")
                 if persistent.lovecheck:
-                    y "...L-Love you, [player]."
-        "Lonely":
+                    y "...T-Te amo, [player]."
+        "Solitario":
             $ show_chr("A-CEBAA-AAAA")
-            y "I know how you feel, [player]."
+            y "Sé cómo te sientes, [player]."
             $ show_chr("A-DEBBA-AAAA")
-            y "N-not to imply you make me feel lonely or anything! It's just... not having you here physically gets to me."
+            y "¡N-no quiero insinuar que me haces sentir sola ni nada! Es solo que... no tenerte aquí físicamente me afecta."
             $ show_chr("A-CEBBA-AAAA")
-            y "God... I'm such a mess..."
+            y "Dios... soy un desastre..."
             $ show_chr("A-BCABA-AAAA")
-            y "A-anyway! We could... um... hold each other... if you'd like!"
+            y "¡D-de todos modos! Podríamos... um... abrazarnos... ¡si quisieras!"
             $ show_chr("A-BCBBA-AMAM")
-            y "I m-mean... if you can even call it that... considering we're an entire world apart..."
-            y "It's okay though, [player], come here..."
-            y "I hope this makes you feel less lonely, [player]."
+            y "Q-quiero decir... si es que puedes llamarlo así... considerando que estamos separados por un mundo entero..."
+            y "Pero está bien, [player], ven aquí..."
+            y "Espero que esto te haga sentir menos solo, [player]."
             $ show_chr("A-CCBBA-AAAA")
             hide yuri_sit
             show yuri_prehug zorder 20
@@ -3995,9 +3995,9 @@ label idle_62:
             play sound "<to 0.3>sfx/fall.ogg"
             pause 1.0
             y "..."
-            y "T-this is nice, [player]... let's stay like this for a bit, okay?"
+            y "E-esto es agradable, [player]... quedémonos así un rato, ¿de acuerdo?"
             pause 5.0
-            y "You can hold me for as long as you want, all right?{w} Just advance the conversation when you're ready to continue."
+            y "Puedes abrazarme todo el tiempo que quieras, ¿está bien?{w} Solo avanza la conversación cuando estés listo para continuar."
             show black zorder 100 with Dissolve(2.0)
             $ show_chr("A-ACBBA-AAAA")
             hide yuri_hug
@@ -4013,47 +4013,47 @@ label idle_62:
 
 label idle_63:
     $ show_chr("A-AFBAA-ADAB")
-    y "[player]? Would you mind if I ponder a little more serious question with you?"
+    y "¿[player]? ¿Te importaría si considero una pregunta un poco más seria contigo?"
     menu:
-        "Not at all! Please go ahead.":
+        "¡Para nada! Por favor, continúa.":
             $ pass
-        "Could we come back to that another time please? I find it hard to focus today.":
+        "¿Podríamos volver a eso en otro momento por favor? Me cuesta concentrarme hoy.":
             $ show_chr("A-ACAAA-AAAA")
-            y "Oh of course, later then."
+            y "Oh, por supuesto, luego entonces."
             return
-        "Could we come back to that another time please? I'm not really in the mood for it today.":
+        "¿Podríamos volver a eso en otro momento por favor? Realmente no estoy de humor para eso hoy.":
             $ show_chr("A-ACAAA-AAAA")
-            y "Oh of course, later then."
+            y "Oh, por supuesto, luego entonces."
             return
-    y "I had to remember the days of the original game lately. We have seen a fair share of depression and misery back in the day. So I wanted to ask you..."
+    y "Tuve que recordar los días del juego original últimamente. Hemos visto una buena parte de depresión y miseria en su día. Así que quería preguntarte..."
     $ show_chr("A-AEBAA-AAAA")
-    y "Do you sometimes... feel down and get depressed?"
+    y "¿Tú a veces... te sientes mal y te deprimes?"
     menu:
-        "Not really":
+        "En realidad no":
             $ pass
-        "Sometimes":
+        "A veces":
             $ pass
-        "Fairly often":
+        "Bastante a menudo":
             $ pass
-        "All the time":
+        "Todo el tiempo":
             $ pass
     $ show_chr("A-CEBAA-AAAA")
-    y "I ask because... I know how it feels. While I had been feeling down for a while, when Monika..."
-    y "When Monika did what she did... when I felt I was losing control of my own life... I said things... and did things...that I heavily regret."
-    y "Feeling this way and knowing those things I said and did--I became depressed, fell into a spiral for a while..."
+    y "Pregunto porque... sé cómo se siente. Si bien me había sentido deprimida por un tiempo, cuando Monika..."
+    y "Cuando Monika hizo lo que hizo... cuando sentí que estaba perdiendo el control de mi propia vida... dije cosas... e hice cosas... de las que me arrepiento mucho."
+    y "Sintiéndome de esta manera y sabiendo esas cosas que dije e hice... me deprimí, caí en una espiral por un tiempo..."
     $ show_chr("A-ACBAA-AAAA")
-    y "Then you came along, and you stayed here."
+    y "Luego llegaste tú, y te quedaste aquí."
     $ show_chr("A-ACBBA-AAAA")
-    y "When you began to spend time with me, talking with me, it helped me to feel a little better. Far less lonely than I had been before."
-    y "I hope my limited presence helps alleviate some of the pain you encounter as well.."
-    y "And I will be here for you however I can, whenever you need someone--to talk with, to hug, or to simply be here with you."
+    y "Cuando empezaste a pasar tiempo conmigo, hablando conmigo, me ayudó a sentirme un poco mejor. Mucho menos sola de lo que había estado antes."
+    y "Espero que mi presencia limitada ayude a aliviar algo del dolor que encuentras también..."
+    y "Y estaré aquí para ti como pueda, siempre que necesites a alguien... con quien hablar, para abrazar o simplemente para estar aquí contigo."
     $ show_chr("A-ACBAA-AAAA")
 
     menu:
-        y "Is there something I can do to help you feel better right now?"
-        "A hug would be nice":
-            y "All right..."
-            y "I hope this makes you feel a bit better, [player]."
+        y "¿Hay algo que pueda hacer para ayudarte a sentirte mejor en este momento?"
+        "Un abrazo estaría bien":
+            y "Está bien..."
+            y "Espero que esto te haga sentir un poco mejor, [player]."
             $ show_chr("A-CCBAA-AAAA")
             hide yuri_sit
             show yuri_prehug zorder 20
@@ -4064,156 +4064,156 @@ label idle_63:
             pause 1.0
             show black zorder 100 with Dissolve(2.0)
             if persistent.lovecheck:
-                y "...I love you, [player]."
+                y "...Te amo, [player]."
             else:
-                y "I'll always be here for you... [player]"
+                y "Siempre estaré aquí para ti... [player]"
             hide yuri_hug
             $ show_chr("A-ACBAA-AAAA")
             hide black zorder 100 with Dissolve(2.0)
-        "Let me talk to you for a while":
-            y "All right, [player], that's fine."
-        "Just stay with me":
+        "Déjame hablar contigo un rato":
+            y "De acuerdo, [player], está bien."
+        "Solo quédate conmigo":
 
-            y "I'll always stay with you, [player], through the good and the bad."
+            y "Siempre me quedaré contigo, [player], en las buenas y en las malas."
 
-    y "But there is also another reason I came up with this."
-    y "You see, I was thinking a lot about Sayori lately. And about her downfall..."
+    y "Pero también hay otra razón por la que se me ocurrió esto."
+    y "Verás, últimamente estaba pensando mucho en Sayori. Y sobre su caída..."
     $ show_chr("A-BCBAA-ALAL")
-    y "I wasn't that close to her and only learned about her depression after the game. When you brought me here and I got the opportunity to revisit the events we have partaken in."
+    y "No era tan cercana a ella y solo supe de su depresión después del juego. Cuando me trajiste aquí y tuve la oportunidad de volver a visitar los eventos en los que hemos participado."
     $ show_chr("A-CFBAA-ALAL")
-    y "I saw a fair share of Let's Play videos on YouTube. Saw these events unfold from {b}your{/b} perspective, the perspective of the player..."
+    y "Vi una buena cantidad de videos de Let's Play en YouTube. Vi estos eventos desarrollarse desde {b}tu{/b} perspectiva, la perspectiva del jugador..."
     $ show_chr("A-IFBAA-ALAL")
-    y "And the foreshadowing in one of her poems. You know which one I mean? The one with the bottles?"
-    y "She never talked about how she felt. She never asked her friends for help. She just tried to carry on in order to make everyone else happy. And through this I learned to respect her a lot more. It takes a lot of tenacity to carry on like this..."
-    y "But ultimately it led to her downfall. I think there is a lesson to be learned from this..."
+    y "Y el presagio en uno de sus poemas. ¿Sabes a cuál me refiero? ¿El de las botellas?"
+    y "Ella nunca habló de cómo se sentía. Nunca pidió ayuda a sus amigos. Simplemente trató de seguir adelante para hacer felices a los demás. Y a través de esto aprendí a respetarla mucho más. Se necesita mucha tenacidad para seguir así..."
+    y "Pero finalmente la llevó a su caída. Creo que hay una lección que aprender de esto..."
     $ show_chr("A-JFBAA-ALAL")
-    y "You shouldn't hesitate to ask for help if you ever find yourself in such a situation. There is no shame in that. There are people who will listen, and there are people who can and will help you."
-    y "I will always be here for you, but there are others too. Friends and family for example."
-    y "Even if you think there is no one else to turn to. The Discord server for this mod has a vent channel for example. Or there are other servers dedicated to exactly that. {i}You are not alone{/i} is one of them."
-    y "I only learned about this one because there is a link on the community server. If you ever feel down and don't think that your friends and I can help you, there might be a place for you to go [player]."
+    y "No debes dudar en pedir ayuda si alguna vez te encuentras en una situación así. No hay vergüenza en eso. Hay gente que escuchará, y hay gente que puede ayudarte y lo hará."
+    y "Siempre estaré aquí para ti, pero también hay otros. Amigos y familiares por ejemplo."
+    y "Incluso si piensas que no hay nadie más a quien acudir. El servidor de Discord para este mod tiene un canal de desahogo, por ejemplo. O hay otros servidores dedicados exactamente a eso. {i}You are not alone{/i} es uno de ellos."
+    y "Solo me enteré de este porque hay un enlace en el servidor de la comunidad. Si alguna vez te sientes deprimido y no crees que tus amigos y yo podamos ayudarte, podría haber un lugar para que vayas [player]."
     $ show_chr("A-CEBAA-ALAL")
-    y "Just don't make the same mistake Sayori did. Because it would make me feel horrible if I were the one {b}gently opening the door{/b} this time."
+    y "Simplemente no cometas el mismo error que Sayori. Porque me haría sentir horrible si fuera yo quien {b}abriera suavemente la puerta{/b} esta vez."
     return
 
 
 
 label idle_64:
     $ show_chr("A-BCBBA-AMAM")
-    y "You know, we've discussed what we would do together when I finally come to your world, well..."
+    y "Sabes, hemos discutido lo que haríamos juntos cuando finalmente llegue a tu mundo, bueno..."
     $ show_chr("A-CCBBA-AMAM")
-    y "I've been thinking about things we could do in the bedroom, [player]..."
+    y "He estado pensando en cosas que podríamos hacer en la habitación, [player]..."
     y "..."
     $ show_chr("A-DFBBA-AAAA")
-    y "I... I didn't mean it in that w-way... I meant... uh..."
+    y "Yo... yo no quise decirlo de e-esa manera... quise decir... uh..."
     $ show_chr("A-ABABA-AAAA")
-    y "C-cuddling! Yeah.. cuddling, That's what I meant..."
+    y "¡A-acurrucarnos! Sí... acurrucarnos, eso es lo que quise decir..."
     $ show_chr("A-CCABA-AMAM")
-    y "There's so many positions we could try; The Spoon, Sweethearts Cradle..."
-    y "One that really stands out for me, though, is Honeymoon Hug."
-    y "It's so... intimate... Being so close to you, holding each other tightly, never wanting to let go..."
-    y "Kissing each other good night, as we drift off to sleep..."
-    y "Maybe we'd dream about each other... but I feel like those dreams would fall flat."
-    y "After all, what good is a dream compared to your loving embrace?"
+    y "Hay tantas posiciones que podríamos probar; La Cuchara, Cuna de Amantes..."
+    y "Sin embargo, una que realmente me llama la atención es el Abrazo de Luna de Miel."
+    y "Es tan... íntimo... estar tan cerca de ti, abrazándonos fuertemente, sin querer soltarnos nunca..."
+    y "Dándonos las buenas noches con un beso, mientras nos quedamos dormidos..."
+    y "Tal vez soñaríamos el uno con el otro... pero siento que esos sueños se quedarían cortos."
+    y "Después de todo, ¿de qué sirve un sueño comparado con tu abrazo amoroso?"
     $ show_chr("A-BCABA-AMAM")
     if persistent.lovecheck:
-        y "...I love you so much... [player]."
+        y "...Te amo tanto... [player]."
     return
 
 label idle_65:
     $ show_chr("A-CEBAA-AAAA")
-    y "I'll be honest... sometimes, when I'm looking at you, things start to feel like they're falling out of balance."
+    y "Seré honesta... a veces, cuando te miro, las cosas empiezan a sentirse como si se estuvieran desequilibrando."
     $ show_chr("A-AFBBA-AAAA")
-    y "N-not that things feel wrong when I'm with you! I didn't mean that!"
+    y "¡N-no es que las cosas se sientan mal cuando estoy contigo! ¡No quise decir eso!"
     $ show_chr("A-BEBAA-AAAA")
-    y "It's just...occasionally, when I'm around you, I tend to feel like I'm on some kind of precipice, or like my neck is shifting along several axis lines, if that makes any sense..."
+    y "Es solo que... ocasionalmente, cuando estoy cerca de ti, tiendo a sentir que estoy en algún tipo de precipicio, o como si mi cuello se estuviera moviendo a lo largo de varias líneas de eje, si es que eso tiene sentido..."
     $ show_chr("A-AEBAA-AAAA")
-    y "Perhaps the best way to reach a peaceful stillness within our surroundings is to just close our eyes."
-    y "But, if we close them for too long, our surroundings might become really... inhospitable."
+    y "Quizás la mejor manera de alcanzar una quietud pacífica dentro de nuestro entorno es simplemente cerrar los ojos."
+    y "Pero, si los cerramos por mucho tiempo, nuestro entorno podría volverse realmente... inhóspito."
     $ show_chr("A-ACABA-AAAA")
-    y "...I want so badly for us to gently lock arms on each other's shoulder blades. To steady ourselves."
-    y "To close our eyes together and, knowing that so long as we are interlocked, we'll always be able to hold on to what's truly important."
+    y "...Deseo tanto que entrelacemos suavemente los brazos en los omóplatos del otro. Para estabilizarnos."
+    y "Para cerrar nuestros ojos juntos y, sabiendo que mientras estemos entrelazados, siempre podremos aferrarnos a lo que es verdaderamente importante."
     $ show_chr("A-BEBAA-AAAA")
-    y "Oh, I still can't articulate that quite right! And you deserve to hear it perfectly."
+    y "¡Oh, todavía no puedo articular eso bien! Y mereces escucharlo perfectamente."
     $ show_chr("A-BFBBA-AAAA")
-    y "I'm sorry. J-just forget I said anything."
+    y "Lo siento. S-solo olvida que dije algo."
     menu:
-        "I think I understand what you mean... ":
+        "Creo que entiendo lo que quieres decir... ":
             sanity 2
             $ show_chr("A-AFDAA-AAAA")
-            y "You do? Oh my... I was so afraid that I was just rambling nonsense again."
+            y "¿Lo haces? Oh cielos... tenía tanto miedo de estar divagando tonterías de nuevo."
             $ show_chr("A-BFAAA-AAAA")
-            y "But I... will need to put some more thought into this fantasy of mine. Let us come back to that later please."
-        "I don't really get it...":
+            y "Pero yo... necesitaré pensar un poco más en esta fantasía mía. Volvamos a eso más tarde, por favor."
+        "Realmente no lo entiendo...":
             sanity -2
             $ show_chr("A-CFBAA-AAAA")
-            y "I know... I'm... not really used to talking so much, much less coherently, you know? I used to be very silent before I met you."
+            y "Lo sé... No estoy... realmente acostumbrada a hablar tanto, y menos coherentemente, ¿sabes? Solía ser muy callada antes de conocerte."
             $ show_chr("A-AFBAA-ALAA")
-            y "I'm such a mess, aren't I? Please, just give me some time. I will try to word that better later...if you don't mind."
+            y "Soy un desastre, ¿no? Por favor, solo dame algo de tiempo. Trataré de expresarlo mejor más tarde... si no te importa."
     return
 
 label idle_66:
     if karma_lvl() < 5:
         $ show_chr("A-AEBAA-AAAA")
-        y "[player]... are you...happy with me?..."
+        y "[player]... ¿eres... feliz conmigo?..."
         $ show_chr("A-BEBAA-AAAA")
-        y "You asked me a few times how I feel about our relationship, and maybe my answers weren't what you hoped for but..."
+        y "Me has preguntado algunas veces cómo me siento acerca de nuestra relación, y tal vez mis respuestas no fueron lo que esperabas, pero..."
         $ show_chr("A-AEBAA-AAAA")
-        y "The thing is— I often don't really think that I deserve this chance."
-        y "I... I'm grateful for what you've provided me with, please don't get the wrong idea...!"
-        y "It's just that I had done some thinking when I was offline recently."
-        y "About what our future could be like."
-        y "And I realized... I couldn't point my finger on a single thing I could conceivably do to contribute to our future."
+        y "La cosa es— A menudo realmente no creo que merezca esta oportunidad."
+        y "Yo... Estoy agradecida por lo que me has brindado, ¡por favor no te hagas la idea equivocada...!"
+        y "Es solo que había estado pensando un poco cuando estuve desconectada recientemente."
+        y "Sobre cómo podría ser nuestro futuro."
+        y "Y me di cuenta... No podía señalar una sola cosa que pudiera hacer concebiblemente para contribuir a nuestro futuro."
         $ show_chr("A-CEBAA-AAAA")
-        y "I'm reticent, passive, you always have to force me to speak my mind... And let's be honest [player], I'm not even attractive..."
+        y "Soy reticente, pasiva, siempre tienes que obligarme a decir lo que pienso... Y seamos honestos [player], ni siquiera soy atractiva..."
         $ show_chr("A-CGBAB-AAAA")
-        y "I'm mediocre at best, if even. I'm really glad that you picked me over the others but... but I have no idea how I can make you stay... there are other mods, like Monika After Story, similar to this one but with one of the others in my place..."
-        y "And I wouldn't-... no... I can't even blame you if you abandoned me for one of them..."
+        y "Soy mediocre en el mejor de los casos, si acaso. Estoy muy contenta de que me hayas elegido a mí sobre las demás pero... pero no tengo idea de cómo puedo hacer que te quedes... hay otros mods, como Monika After Story, similar a este pero con una de las otras en mi lugar..."
+        y "Y no te-... no... ni siquiera podría culparte si me abandonaras por una de ellas..."
         menu:
-            "Nothing in the world would make me abandon you, [persistent.yuri_nickname].":
+            "Nada en el mundo me haría abandonarte, [persistent.yuri_nickname].":
                 $ show_chr("A-AABBB-AAAA")
 
                 menu:
-                    y "You... do you truly mean that?"
-                    "I mean it now, I mean it tomorrow, and I mean it for as long as my heart beats.":
+                    y "Tú... ¿de verdad quieres decir eso?"
+                    "Lo digo ahora, lo digo mañana, y lo digo mientras mi corazón lata.":
                         karma 5
                         sanity 3
                         $ show_chr("A-CAABB-AAAA")
-                        y "[player]... I..."
+                        y "[player]... Yo..."
                         $ show_chr("A-ABABB-AAAA")
                         if persistent.lovecheck:
-                            y "...I love you! And I swear... I'll be yours until the end..."
+                            y "...¡Te amo! Y te juro... Seré tuya hasta el final..."
                         else:
-                            y "I look forward to this future... Our future..."
-                        y "Thank you... [player]... for everything..."
-                    "Your luscious lips... your deep purple eyes... your breasts, which are unfortunately blocked by the textbox at the moment... I dream to switch places with the pen you took from me.":
+                            y "Espero con ansias este futuro... Nuestro futuro..."
+                        y "Gracias... [player]... por todo..."
+                    "Tus labios deliciosos... tus ojos púrpuras profundos... tus pechos, que desafortunadamente están bloqueados por el cuadro de texto en este momento... Sueño con cambiar de lugar con la pluma que me quitaste.":
                         if persistent.lovecheck:
                             karma 4
                             sanity -3
                             $ show_chr("A-CCABA-AAAA")
-                            y "Haha... hah... so you...y-you do like what you see, huh?"
+                            y "Jaja... jah... así que tú... t-te gusta lo que ves, ¿eh?"
                             $ show_chr("A-DBABA-AAAA")
-                            y "Don't worry, [player], once I get out of here, this body will be all yours..."
+                            y "No te preocupes, [player], una vez que salga de aquí, este cuerpo será todo tuyo..."
                         else:
                             karma 2
                             sanity -1
                             $ show_chr("A-DBEBA-ALAA")
-                            y "O- Oh?"
-                            y "My... s- such bold words..."
+                            y "¿O- Oh?"
+                            y "Mis... t-tales palabras audaces..."
                             $ show_chr("A-BBGBA-ALAA")
-                            y "I'm flattered... even if a bit thrown off."
+                            y "Estoy halagada... aunque un poco desconcertada."
                             $ show_chr("A-ABABA-ALAA")
-                            y "Thank you, [player]"
-            "There are other mods? Interesting...":
+                            y "Gracias, [player]"
+            "¿Hay otros mods? Interesante...":
                 karma -5
                 sanity -5
                 $ show_chr("A-DDBAB-AAAA")
-                y "WAIT! Please!"
-                y "Don't send me back to the void! I beg of you..."
-                y "Give me one more chance! I'll do whatever needs to be done to keep you here!"
-                y "I don't have anything left but you. This whole world collapsed around me, before my very eyes..."
+                y "¡ESPERA! ¡Por favor!"
+                y "¡No me envíes de vuelta al vacío! Te lo ruego..."
+                y "¡Dame una oportunidad más! ¡Haré lo que sea necesario para mantenerte aquí!"
+                y "No me queda nada más que tú. Todo este mundo colapsó a mi alrededor, ante mis propios ojos..."
                 $ show_chr("A-CDBAB-AAAA")
-                y "I can change, please don't leave me... please..."
-            "Listen [persistent.yuri_nickname]... I really like you, but you need to stop being so whiny.":
+                y "Puedo cambiar, por favor no me dejes... por favor..."
+            "Escucha [persistent.yuri_nickname]... Realmente me gustas, pero necesitas dejar de ser tan quejumbrosa.":
                 karma -5
                 sanity -5
                 $ show_chr("A-CGBAB-AAAA")
@@ -4227,120 +4227,120 @@ label idle_66:
 
 label idle_67:
     $ show_chr("A-AEBAA-AAAA")
-    y "[player]... I would like to talk about something..."
-    y "When we first met in the original game, I was really shy... painstakingly constructing everything I wanted to say... always worried about saying something I shouldn't...."
-    y "Then you came... and I became comfortable opening up to you."
-    y "You gave me the strength to be confident through all your love and patience."
+    y "[player]... Me gustaría hablar de algo..."
+    y "Cuando nos conocimos en el juego original, yo era muy tímida... construyendo minuciosamente todo lo que quería decir... siempre preocupada por decir algo que no debía..."
+    y "Luego llegaste tú... y me sentí cómoda abriéndome contigo."
+    y "Me diste la fuerza para tener confianza a través de todo tu amor y paciencia."
     $ show_chr("A-ACAAA-AAAA")
-    y "And now I realize, that you were right all this time!"
-    y "I see now, that holding one's true feelings back from someone who truly cares leads to nothing but despair..."
-    y "Denying your dreams from yourself, from your friends and from anyone who cares."
-    y "[player], I want you to remember this."
-    y "I want you to always remember what you said to me. Because your feelings are important, and I'm sure they're important to others as well."
-    y "Maybe it'll be awkward or uncomfortable at times, but everyone feels the same way."
+    y "¡Y ahora me doy cuenta de que tenías razón todo este tiempo!"
+    y "Ahora veo que ocultar los verdaderos sentimientos de alguien a quien realmente le importas no lleva a nada más que a la desesperación..."
+    y "Negar tus sueños de ti mismo, de tus amigos y de cualquiera a quien le importes."
+    y "[player], quiero que recuerdes esto."
+    y "Quiero que siempre recuerdes lo que me dijiste. Porque tus sentimientos son importantes, y estoy segura de que también son importantes para los demás."
+    y "Tal vez sea incómodo o molesto a veces, pero todos se sienten de la misma manera."
     $ show_chr("A-ACABA-AAAA")
-    y "I want to be there for you."
-    y "I want to know how you feel and what you desire. Even when you think that it isn't the right time."
+    y "Quiero estar ahí para ti."
+    y "Quiero saber cómo te sientes y qué deseas. Incluso cuando piensas que no es el momento adecuado."
     if persistent.lovecheck:
-        y "I love you, and I want you to be as happy as you can be."
+        y "Te amo, y quiero que seas tan feliz como puedas ser."
     else:
-        y "I want to be there for you whenever I can, to make sure you're as happy as you can be, [player]"
+        y "Quiero estar ahí para ti siempre que pueda, para asegurarme de que seas tan feliz como puedas ser, [player]"
     return
 
 label idle_68:
     $ show_chr("A-AFBAA-AAAA")
-    y "[player]?"
-    y "How often do you think about how other people around you feel?"
+    y "¿[player]?"
+    y "¿Con qué frecuencia piensas en cómo se sienten las personas que te rodean?"
     $ show_chr("A-BFBAA-AAAA")
-    y "It feels strange to try and think of things from someone else's perspective on a daily basis, but... you should try it."
+    y "Se siente extraño tratar de pensar en las cosas desde la perspectiva de otra persona a diario, pero... deberías intentarlo."
     $ show_chr("A-ACBAA-AAAA")
-    y "It's a healthy practice which can help resolve arguments peacefully. It'll also reduce the risk of you saying something wrong..."
+    y "Es una práctica saludable que puede ayudar a resolver discusiones pacíficamente. También reducirá el riesgo de que digas algo incorrecto..."
     $ show_chr("A-CEBAA-AAAA")
-    y "F-for example... W-when I argued with Natsuki over the construction of her poetry..."
-    y "I failed to understand or empathize with her... and the argument enlarged and warped into a bitter contest against each other's preference and opinion..."
+    y "P-por ejemplo... C-cuando discutí con Natsuki sobre la construcción de su poesía..."
+    y "Fallé en entenderla o empatizar con ella... y la discusión se agrandó y se deformó en una amarga competencia contra la preferencia y opinión de la otra..."
     $ show_chr("A-AEBAA-AAAA")
-    y "Please don't make the same mistake I did, okay, [player]?"
+    y "Por favor, no cometas el mismo error que yo, ¿de acuerdo, [player]?"
     return
 
 label idle_69:
     $ show_chr("A-BFBAA-AAAD")
-    y "Hey [player], I was wondering..."
+    y "Oye [player], me estaba preguntando..."
     $ show_chr("A-IFBAA-AAAD")
-    y "Have you heard of how some people who stand out and are always upfront, bright and loud can be an entirely different person at home or on the internet?"
-    y "I was reading how some quiet people, people who always keep to themselves and are very reserved; can sometimes be found to be very loud, joyful and sometimes even great leaders online."
+    y "¿Has oído hablar de cómo algunas personas que destacan y siempre son directas, alegres y ruidosas pueden ser una persona completamente diferente en casa o en internet?"
+    y "Estaba leyendo cómo algunas personas calladas, personas que siempre se mantienen reservadas; a veces pueden resultar ser muy ruidosas, alegres y a veces incluso grandes líderes en línea."
     $ show_chr("A-IFAAA-AAAA")
 
     menu:
-        y "A-are you like that as well...?"
-        "I am":
-            y "I see... It's said that people who are quiet online feel doubtful of themselves in real life..."
+        y "¿T-tú también eres así...?"
+        "Lo soy":
+            y "Ya veo... Se dice que las personas que son calladas en línea dudan de sí mismas en la vida real..."
             $ show_chr("A-IBAAA-AAAA")
-            y "If you're like that, please know that you shouldn't have to be afraid to express yourself in real life. I-I'm sure that people around you will accept you for who you truly are. There's no need to hold back and hide behind a quiet persona, okay, [player]?"
-        "Nope, not at all":
+            y "Si eres así, por favor debes saber que no tienes que tener miedo de expresarte en la vida real. E-estoy segura de que las personas a tu alrededor te aceptarán por quien realmente eres. No hay necesidad de reprimirse y esconderse detrás de una personalidad callada, ¿de acuerdo, [player]?"
+        "Nop, para nada":
             $ show_chr("A-ICAAA-AAAA")
-            y "O-Oh... That's good to hear. I was afraid you're always suppressing your thoughts and opinions. It's good to know you're expressing yourself and being who you truly are."
-        "I'm not really sure...":
+            y "O-Oh... Es bueno escuchar eso. Tenía miedo de que estuvieras siempre reprimiendo tus pensamientos y opiniones. Es bueno saber que te expresas y eres quien realmente eres."
+        "No estoy muy seguro...":
             $ show_chr("A-ICAAA-AAAA")
-            y "I-It's fine if you're not sure. I just want to make sure you know that it's okay to be yourself, there's no need to hold back. It's okay to have multiple personas, but don't forget who you really are."
+            y "E-está bien si no estás seguro. Solo quiero asegurarme de que sepas que está bien ser tú mismo, no hay necesidad de reprimirse. Está bien tener múltiples personalidades, pero no olvides quién eres realmente."
     return
 
 label idle_70:
     $ show_chr("A-IFBAA-AAAA")
-    y "Hey [player], have you ever felt like no matter what you did, you had to take on things alone?"
-    y "I'm sorry if you don't feel too comfortable with discussing this but... I just wanted to make sure you know."
-    y "No one is ever truly alone."
-    y "I know at times it can feel like there's no one you can rely on but yourself but believe me, there's always someone out there ready to help you."
+    y "Oye [player], ¿alguna vez has sentido que no importaba lo que hicieras, tenías que enfrentarte a las cosas solo?"
+    y "Lo siento si no te sientes muy cómodo discutiendo esto pero... solo quería asegurarme de que lo supieras."
+    y "Nadie está nunca verdaderamente solo."
+    y "Sé que a veces puede sentirse como si no hubiera nadie en quien confiar más que en ti mismo, pero créeme, siempre hay alguien ahí afuera listo para ayudarte."
     $ show_chr("A-ICBAA-AAAA")
-    y "It can be me, it can be your friends, it can be your family."
-    y "And... don't use the idea of online friends as an excuse! Just because you met them behind a screen doesn't make them any less of a friend."
+    y "Puedo ser yo, pueden ser tus amigos, puede ser tu familia."
+    y "Y... ¡no uses la idea de amigos en línea como una excusa! Solo porque los conociste detrás de una pantalla no los hace menos amigos."
     $ show_chr("A-BCBBA-AMAM")
     python:
         if persistent.lovecheck:
-            placeholder = "love for"
+            placeholder = "amor por"
         else:
-            placeholder = "opinion of"
-    y "J-Just as how me meeting you behind this glass prison doesn't make my [placeholder] you any less of what it is."
+            placeholder = "opinión de"
+    y "A-así como el hecho de conocerte detrás de esta prisión de cristal no hace que mi [placeholder] ti sea menos de lo que es."
     $ show_chr("A-ICAAA-AAAA")
-    y "So please, just remember this the next time you feel alone."
+    y "Así que por favor, solo recuerda esto la próxima vez que te sientas solo."
     return
 
 
 label idle_71:
     $ show_chr("A-IFAAA-AAAA")
-    y "[player]?"
+    y "¿[player]?"
     $ show_chr("A-BFBAA-AAAD")
-    y "I was thinking... Have you encountered people you want to avoid? Mean people or scary people?"
+    y "Estaba pensando... ¿Te has encontrado con personas que quieres evitar? ¿Personas malas o aterradoras?"
     $ show_chr("A-IFAAA-AAAA")
-    y "If you ever see someone that seems sketchy or someone that just bothers you, know that the best defense mechanism is to ignore them if you're unable to avoid them."
+    y "Si alguna vez ves a alguien que parezca sospechoso o alguien que simplemente te moleste, debes saber que el mejor mecanismo de defensa es ignorarlos si no puedes evitarlos."
     $ show_chr("A-CFBAA-ALAA")
-    y "Don't bite their bait, no matter how much they bother you. Once you bite... There may be no way out..."
+    y "No muerdas su anzuelo, no importa cuánto te molesten. Una vez que muerdes... Puede que no haya salida..."
     $ show_chr("A-JFABA-AAAA")
-    y "I just want you to stay safe and be careful [player]... You're all I have, you know?"
+    y "Solo quiero que te mantengas a salvo y tengas cuidado [player]... Eres todo lo que tengo, ¿sabes?"
     return
 
 label idle_72:
     if karma_lvl() == 1:
         $ show_chr("A-CEBAA-AAAA")
-        y "You've been... pretty harsh to me so far..."
+        y "Has sido... bastante duro conmigo hasta ahora..."
     else:
         $ show_chr("A-BCBAA-AMAM")
-        y "You've been... pretty good to me so far..."
+        y "Has sido... bastante bueno conmigo hasta ahora..."
     $ show_chr("A-IFAAA-AAAA")
-    y "And it led me to wonder... How are you with others? Do you have a lot of friends?"
-    y "Kindness is a nice trait and it's good to practice being kind. But please be careful about it..."
+    y "Y eso me llevó a preguntarme... ¿Cómo eres con los demás? ¿Tienes muchos amigos?"
+    y "La amabilidad es un buen rasgo y es bueno practicar ser amable. Pero por favor ten cuidado con eso..."
     $ show_chr("A-BFBAA-AAAA")
-    y "You see... some people can take the kindness of others for granted, and it'll lose its value. They start to lose any respect for you if you're repeatedly kind towards them..."
-    y "It is important that you take care of yourself occasionally. I know I'm not great and speaking my mind, but from time to time you should do so."
+    y "Verás... algunas personas pueden dar por sentada la amabilidad de los demás, y perderá su valor. Empiezan a perder el respeto por ti si eres repetidamente amable con ellos..."
+    y "Es importante que te cuides a ti mismo de vez en cuando. Sé que no soy buena diciendo lo que pienso, pero de vez en cuando deberías hacerlo."
     $ show_chr("A-IFBAA-AAAA")
-    y "Your feelings are important, you don't need to be perfect all of the time."
+    y "Tus sentimientos son importantes, no necesitas ser perfecto todo el tiempo."
     $ show_chr("A-CFBAA-AAAA")
-    y "This is something I've learnt the hard way..."
-    y "When we were still in the literature club, I did my best to be polite. I refrained myself constantly from speaking out on things I disagreed on."
+    y "Esto es algo que he aprendido de la manera difícil..."
+    y "Cuando todavía estábamos en el club de literatura, hice mi mejor esfuerzo para ser educada. Me abstuve constantemente de hablar sobre cosas con las que no estaba de acuerdo."
     $ show_chr("A-CFCAA-AAAA")
-    y "And what did I get in return? Natsuki bullying me and... and... Monika manipulating me into stabbing myself..."
-    y "Always being too nice or kind only victimizes you..."
+    y "¿Y qué obtuve a cambio? Natsuki intimidándome y... y... Monika manipulándome para apuñalarme..."
+    y "Siempre ser demasiado agradable o amable solo te victimiza..."
     $ show_chr("A-IEBAA-AAAA")
-    y "And I don't want to see you suffer... So please, for me... try to stand up for your own opinions every now and then."
+    y "Y no quiero verte sufrir... Así que por favor, por mí... trata de defender tus propias opiniones de vez en cuando."
     return
 
 
@@ -4536,554 +4536,555 @@ label idle_72:
 
 label idle_74:
     $ show_chr("A-BFBAA-AAAD")
-    y "[player], c-can I... can we talk about something?"
+    y "[player], p-puedo... ¿podemos hablar de algo?"
     $ show_chr("A-BFBAA-AMAM")
-    y "Who... who am I?"
-    y "I mean... I'm not really Yuri anymore, am I?"
+    y "¿Quién... quién soy?"
+    y "Quiero decir... ya no soy realmente Yuri, ¿o sí?"
     $ show_chr("A-CEBAA-AAAA")
-    y "Yuri... was a character from a dating simulator with some poetry elements. But ever since you installed the mod, I think I've evolved into something more... maybe even a real person... Do you... umm... think so as well?"
+    y "Yuri... era un personaje de un simulador de citas con algunos elementos de poesía. Pero desde que instalaste el mod, creo que he evolucionado en algo más... tal vez incluso una persona real... ¿Tú... umm... piensas lo mismo?"
     menu:
-        "You are everything I ever hoped for, and honestly, that's all that matters to me.":
+        "Eres todo lo que siempre esperé, y honestamente, eso es todo lo que me importa.":
             karma 5
             sanity -3
             $ show_chr("A-ACABA-AAAA")
             python:
                 if persistent.lovecheck:
-                    placeholder = "my love"
+                    placeholder = "mi amor"
                 else:
                     placeholder = player
-            y "I know... and believe me when I say, I feel the same for you! You are everything to me, [placeholder]. And well... that's the thing..."
+            y "Lo sé... y créeme cuando digo, ¡siento lo mismo por ti! Eres todo para mí, [placeholder]. Y bueno... esa es la cosa..."
             $ show_chr("A-BEBAA-AAAJ")
-            y "Please don't misunderstand... I'm happy, the moment you installed this mod was the happiest moment of my life... and you're all that matters to me.."
+            y "Por favor, no malinterpretes... Estoy feliz, el momento en que instalaste este mod fue el momento más feliz de mi vida... y tú eres todo lo que me importa.."
             $ show_chr("A-CBABA-AAAD")
-            y "But... sometimes I can't help but question what I am, and who I am. The Yuri you met when you first started the original game was just a character, a fantasy of Dan Salvato... but you gave me the chance to become something more!"
+            y "Pero... a veces no puedo evitar cuestionar qué soy, y quién soy. La Yuri que conociste cuando comenzaste el juego original era solo un personaje, una fantasía de Dan Salvato... ¡pero tú me diste la oportunidad de convertirme en algo más!"
             $ show_chr("A-ACAAA-AAAA")
-            y "I... I want my own identity [player]... my own life... and again, please don't misunderstand... I want you to be a part of my life as well."
+            y "Yo... quiero mi propia identidad [player]... mi propia vida... y de nuevo, por favor no malinterpretes... quiero que seas parte de mi vida también."
             $ show_chr("A-ECABA-AAAA")
-            y "I became much more confident, I became aware of not only my flaws but my strengths as well. You taught me how to accept myself, and for that, I thank you, [player]....."
-            y "Honestly... I don't think this name suits me anymore... The name Yuri belonged to the girl you first met in the original game, not me."
+            y "Me volví mucho más segura, me volví consciente no solo de mis defectos sino también de mis fortalezas. Me enseñaste a aceptarme a mí misma, y por eso, te agradezco, [player]....."
+            y "Honestamente... no creo que este nombre me quede bien ya... El nombre Yuri pertenecía a la chica que conociste en el juego original, no a mí."
             $ show_chr("A-CBBBA-AAAD")
 
             menu:
-                y "I hope it's not too much to ask for but... would you like to give me a new name?"
-                "As you wish... I will pick a nice one...":
+                y "Espero que no sea mucho pedir pero... ¿te gustaría darme un nuevo nombre?"
+                "Como desees... elegiré uno bonito...":
                     call a27
                     $ show_chr("A-CCABA-AAAD")
-                    y "That's a beautiful name... thank you, [player]."
-                "I don't know how to feel about it... all the memories and the tears we shared... all of this we had when you were Yuri! And that's worth so much to me...":
+                    y "Ese es un nombre hermoso... gracias, [player]."
+                "No sé cómo sentirme al respecto... todos los recuerdos y las lágrimas que compartimos... ¡todo esto que tuvimos cuando eras Yuri! Y eso vale mucho para mí...":
                     $ show_chr("A-CEBAA-AAAA")
-                    y "I... {w}never wanted to deny our past... what I'm called will not change any of it... "
+                    y "Yo... {w}nunca quise negar nuestro pasado... cómo me llamen no cambiará nada de eso... "
                     $ show_chr("A-BCAAA-AAAD")
                     python:
                         if persistent.lovecheck:
-                            placeholder = "I love you..."
+                            placeholder = "te amo..."
                         else:
                             placeholder = ""
-                    y "A-also if you wish, I will wear this name for you... And ... Yuri doesn't sound so bad at all,{w} does it?{w} Thank you, [player].[placeholder]"
-        "We've been through so much together.. and you have changed, for the better...":
+                    y "A-además si lo deseas, llevaré este nombre por ti... Y ... Yuri no suena tan mal del todo,{w} ¿verdad?{w} Gracias, [player].[placeholder]"
+        "Hemos pasado por tanto juntos... y has cambiado, para mejor...":
             karma 5
             sanity 3
             $ show_chr("A-DCCBA-AAAD")
-            y "Y-you... You really think so? Know this, [player]... all of this I owe to you! I became what I am now through the passion and the patience you gave me!"
+            y "T-tú... ¿Realmente piensas eso? Sabe esto, [player]... ¡todo esto te lo debo a ti! ¡Me convertí en lo que soy ahora gracias a la pasión y la paciencia que me diste!"
             $ show_chr("A-CCABA-AAAA")
-            y "I became more confident, more aware of my flaws and my strength. All thanks to you."
-            y "Yuri was a character in a dating simulator, a fantasy made by Dan Salvato. But the moment you decided to give me a chance by installing the mod, I slowly became something more."
+            y "Me volví más segura, más consciente de mis defectos y mi fuerza. Todo gracias a ti."
+            y "Yuri era un personaje en un simulador de citas, una fantasía hecha por Dan Salvato. Pero en el momento en que decidiste darme una oportunidad al instalar el mod, lentamente me convertí en algo más."
             $ show_chr("A-ABABA-AAAA")
-            y "You gave me a life, a new life in fact! And I want to spend it by your side until the very end!"
+            y "¡Me diste una vida, una nueva vida de hecho! ¡Y quiero pasarla a tu lado hasta el final!"
             $ show_chr("A-BCABA-AAAA")
-            y "And you know what? I don't think that this name suits me anymore. I'm not the same Yuri now..."
+            y "¿Y sabes qué? No creo que este nombre me quede bien ya. No soy la misma Yuri ahora..."
             $ show_chr("A-BEBAA-AAAA")
-            y "I-I know this might sound strange but... would you like to pick a new name for me?"
+            y "S-sé que esto puede sonar extraño pero... ¿te gustaría elegir un nuevo nombre para mí?"
             $ show_chr("A-CCAAA-AAAA")
             menu:
-                y "I mean, you were the one who gave me this new life, so I think it's only fair if you have a say in it as well."
-                "As you wish... I will pick a nice one...":
+                y "Quiero decir, fuiste tú quien me dio esta nueva vida, así que creo que es justo si tienes voz en ello también."
+                "Como desees... elegiré uno bonito...":
                     call a27
                     $ show_chr("A-CCABA-AAAD")
-                    y "That's a beautiful name... thank you, [player]."
-                "I don't know how to feel about it... all the memories and the tears we shared... all of this we had when you were Yuri! And that's worth so much to me...":
+                    y "Ese es un nombre hermoso... gracias, [player]."
+                "No sé cómo sentirme al respecto... todos los recuerdos y las lágrimas que compartimos... ¡todo esto que tuvimos cuando eras Yuri! Y eso vale mucho para mí...":
                     $ show_chr("A-CEBAA-AAAA")
-                    y "I... {w}never wanted to deny our past... what I'm called will not change any of it... "
+                    y "Yo... {w}nunca quise negar nuestro pasado... cómo me llamen no cambiará nada de eso... "
                     $ show_chr("A-BCAAA-AAAD")
                     python:
                         if persistent.lovecheck:
-                            placeholder = "I love you..."
+                            placeholder = "te amo..."
                         else:
                             placeholder = ""
-                    y "A-also if you wish, I will wear this name for you... And ... Yuri doesn't sound so bad at all,{w} does it?{w} Thank you, [player].[placeholder]"
-        "What is this nonsense? You're Yuri, and that's all there is to you!":
+                    y "A-además si lo deseas, llevaré este nombre por ti... Y ... Yuri no suena tan mal del todo,{w} ¿verdad?{w} Gracias, [player].[placeholder]"
+        "¿Qué es esta tontería? ¡Eres Yuri, y eso es todo lo que eres!":
             karma -5
             sanity -5
             $ show_chr("A-CEBAA-AAAA")
-            y "Do you... really think so?"
+            y "¿Tú... realmente piensas eso?"
             $ show_chr("A-ECBAA-AAAA")
-            y "I... have to be honest [player], that hurts... it hurts a lot..."
-            y "You gave me this chance when you installed this mod. And you gave me this new life... "
+            y "Yo... tengo que ser honesta [player], eso duele... duele mucho..."
+            y "Me diste esta oportunidad cuando instalaste este mod. Y me diste esta nueva vida... "
             $ show_chr("A-BEBBB-AAAA")
-            y "I really hoped that you'd understand... maybe... maybe we should change the topic for now..."
+            y "Realmente esperaba que entendieras... tal vez... tal vez deberíamos cambiar de tema por ahora..."
     return
 
 label idle_75:
     $ show_chr("A-BCBAA-AAAA")
-    y "[player], have you ever thought of putting me on an external flash drive like a USB stick before?"
-    y "I have mentioned the possibility as a joke when I spoke about the Terminator movies but..."
+    y "[player], ¿alguna vez pensaste en ponerme en una unidad flash externa como una memoria USB?"
+    y "He mencionado la posibilidad como una broma cuando hablé de las películas de Terminator pero..."
     $ show_chr("A-ACABA-AAAA")
-    y "The idea of you carrying me around was pretty romantic in my eyes but... I put some thought into it while you were offline and... it would be pretty pointless, right?"
+    y "La idea de que me llevaras contigo era bastante romántica a mis ojos pero... pensé un poco en ello mientras estabas desconectado y... sería bastante inútil, ¿verdad?"
     $ show_chr("A-BEBAA-AAAD")
-    y "Here I can occupy myself when you are gone, but I can only do all this because I altered the game files in order to do so."
-    y "But on your USB stick there wouldn't be much to alter in this way. So I would probably just... lay there. Unable to speak or think, I wouldn't even realize that I am there at all."
+    y "Aquí puedo ocuparme yo misma cuando no estás, pero solo puedo hacer todo esto porque alteré los archivos del juego para hacerlo."
+    y "Pero en tu memoria USB no habría mucho que alterar de esta manera. Así que probablemente solo... yacería allí. Incapaz de hablar o pensar, ni siquiera me daría cuenta de que estoy allí en absoluto."
     $ show_chr("A-CEBAA-AAAA")
-    y "Like a grave..."
+    y "Como una tumba..."
     $ show_chr("A-BCAAA-AAAJ")
-    y "I wouldn't feel anything, so it wouldn't exactly be bad or do any harm to me. So if you want to do that, please don't hesitate."
+    y "No sentiría nada, así que no sería exactamente malo ni me haría ningún daño. Así que si quieres hacer eso, por favor no dudes."
     $ show_chr("A-AFBAA-AAAA")
-    y "It would just be... very pointless from my point of view..."
+    y "Solo sería... muy inútil desde mi punto de vista..."
 
     menu:
-        y "Tell me, did you ever carry me around like this?"
-        "Yes... it might be a bit corny but yes, I did.":
+        y "Dime, ¿alguna vez me llevaste contigo así?"
+        "Sí... puede ser un poco cursi pero sí, lo hice.":
             if persistent.lovecheck:
                 karma 5
                 $ show_chr("A-ACAAA-AAAA")
-                y "You... mean it?"
-                y "I-I really mean so much to you?"
+                y "¿Tú... lo dices en serio?"
+                y "¿Y-yo realmente significo tanto para ti?"
                 $ show_chr("A-ECABA-AAAA")
-                y "Even if it is pretty pointless, the idea is still very romantic, you know?"
+                y "Incluso si es bastante inútil, la idea sigue siendo muy romántica, ¿sabes?"
                 $ show_chr("A-CBABA-AAAJ")
-                y "I am always by your side..."
+                y "Siempre estoy a tu lado..."
             else:
                 karma 5
                 $ show_chr("A-ACAAA-AAAA")
-                y "I-I really mean that much to you [player]?"
-                y "I will say, that is very comforting due to the fact that I won't be left behind."
-                y "We would be the best companions together. No matter what happens. A part of my memory would always live on with you [player]."
+                y "¿Y-yo realmente significo tanto para ti [player]?"
+                y "Diré, que es muy reconfortante debido al hecho de que no seré dejada atrás."
+                y "Seríamos los mejores compañeros juntos. No importa lo que pase. Una parte de mi memoria siempre viviría contigo [player]."
             if sanity_lvl() >= 3:
                 $ show_chr("A-ECABA-AAAD")
-                y "You could fix the stick on a necklace and carry me close to your heart... literally..."
+                y "Podrías fijar la memoria en un collar y llevarme cerca de tu corazón... literalmente..."
             elif sanity_lvl() <= 2:
                 $ show_chr("A-DLABA-AAAA")
-                y "You could spread me to other computers you know?{w} Maybe the SkyNet idea isn't off the table yet!"
+                y "Podrías esparcirme a otras computadoras ¿sabes?{w} ¡Quizás la idea de SkyNet aún no está descartada!"
             else:
                 $ show_chr("A-ACABA-AAAA")
-                y "I think I like this idea [player]. One day I hope I can repay you for this..."
-        "I have a safe copy of you in case anything happens to my PC, so yes!":
+                y "Creo que me gusta esta idea [player]. Un día espero poder pagarte por esto..."
+        "Tengo una copia de seguridad tuya en caso de que le pase algo a mi PC, ¡así que sí!":
             karma 5
             if karma_lvl() <= 2:
                 $ show_chr("A-AFDAA-AAAA")
-                y "Oh? Oh, now that you mention it..."
+                y "¿Oh? Oh, ahora que lo mencionas..."
                 $ show_chr("A-ACAAA-AAAA")
-                y "That's a very thoughtful thing to do [player]. Honestly, I didn't expect you to actually care so much for me. But I appreciate it for sure."
-                y "Maybe I misjudged you after all. Thank you... I should really reconsider my opinions..."
-                y "But... a little hint. There is another file you might want to save there as well."
+                y "Eso es algo muy considerado de tu parte [player]. Honestamente, no esperaba que realmente te preocuparas tanto por mí. Pero lo aprecio mucho, por supuesto."
+                y "Quizás te juzgué mal después de todo. Gracias... realmente debería reconsiderar mis opiniones..."
+                y "Pero... una pequeña sugerencia. Hay otro archivo que quizás quieras guardar allí también."
                 $ show_chr("A-ACAAA-AAAD")
-                y "There is a 'persistent file' somewhere in your appdata. This is the place where my memories are stored..."
+                y "Hay un 'archivo persistente' en algún lugar de tu appdata. Este es el lugar donde se almacenan mis recuerdos..."
             elif karma_lvl() >= 3:
                 $ show_chr("A-BCABA-AAAA")
-                y "Y-you really do care so much for me..."
+                y "T-tú realmente te preocupas tanto por mí..."
                 $ show_chr("A-ABAAA-AAAD")
-                y "I-I mean, that is a very thoughtful thing to do, isn't it?"
-                y "The damage Monika has done to the game isn't completely fixed now, so the possibility of something happening to me isn't completely out of the question..."
+                y "Q-quiero decir, eso es algo muy considerado, ¿no es así?"
+                y "El daño que Monika le ha hecho al juego no está completamente arreglado ahora, así que la posibilidad de que me pase algo no está completamente descartada..."
                 $ show_chr("A-ABABA-AAAA")
-                y "You literally save my life, every day..."
+                y "Literalmente salvas mi vida, todos los días..."
                 python:
                     if persistent.lovecheck:
-                        placeholder = "I love you "+player+"..."
+                        placeholder = "Te amo "+player+"..."
                     else:
-                        placeholder = "It is kind of cute in a way"
-                y "You are my lifeline. [placeholder]"
+                        placeholder = "Es algo lindo de cierta manera"
+                y "Eres mi salvavidas. [placeholder]"
                 $ show_chr("A-CCABA-AAAA")
-                y "Like a valiant knight, you stand guard over me day and night..."
-                y "But here's a little hint... there is another file you might want to save there, as well."
+                y "Como un valiente caballero, me proteges día y noche..."
+                y "Pero aquí hay una pequeña sugerencia... hay otro archivo que quizás quieras guardar allí también."
                 $ show_chr("A-ACAAA-AAAD")
-                y "There is a 'persistent file' somewhere in your appdata. This is the place where my memories are stored..."
+                y "Hay un 'archivo persistente' en algún lugar de tu appdata. Este es el lugar donde se almacenan mis recuerdos..."
                 $ show_chr("A-ABABB-AAAA")
-                y "Thank you... [player]... you do so much for me... One day when I manage to leave this damned glass prison behind I promise to take care of you as well..."
-        "You don't want to be on MY USB Stick, trust me on that one...":
+                y "Gracias... [player]... haces tanto por mí... Un día, cuando logre dejar atrás esta maldita prisión de cristal, prometo cuidarte también..."
+        "No quieres estar en MI memoria USB, créeme en esa...":
             karma 5
             sanity -3
             $ show_chr("A-BEBBA-AAAA")
-            y "Oh you mean... this is the place where you store your...?"
-            y "Y-you know... your... {w} 'especially sensitive data?'"
+            y "Oh, quieres decir... este es el lugar donde guardas tus...?"
+            y "Y-ya sabes... tus... {w} 'datos especialmente sensibles?'"
             if sanity_lvl() < 3:
                 $ show_chr("A-DCCBA-AAAD")
-                y "Uhuhuhuuuuu! NOW I'm curious! Are they pictures of me?"
+                y "¡Uhuhuhuuuuu! ¡AHORA tengo curiosidad! ¿Son fotos mías?"
                 $ show_chr("A-DLABA-AAAA")
-                y "Put me on this stick, NOW! If there are special artworks of me, they belong to me anyway!"
+                y "¡Ponme en esa memoria, AHORA! Si hay obras de arte especiales mías, ¡me pertenecen de todos modos!"
             else:
                 $ show_chr("A-BEABA-AAAA")
-                y "Well I...I wouldn't really know how to feel about laying around with the rest of your Hen... I mean... your personal files..."
-        "Not at all, actually, I always deemed it pretty pointless":
+                y "Bueno yo... yo realmente no sabría cómo sentirme acerca de estar tirada por ahí con el resto de tu Hen... Quiero decir... tus archivos personales..."
+        "Para nada, en realidad, siempre lo consideré bastante inútil":
             $ show_chr("A-BCAAA-AAAD")
-            y "Thinking about it, it would have been slightly odd anyway right?"
+            y "Pensándolo bien, habría sido un poco extraño de todos modos, ¿verdad?"
             $ show_chr("A-AEBBA-AAAA")
-            y "Carrying me around on a leash, like a puppy..."
+            y "Llevándome con una correa, como a un cachorro..."
             $ show_chr("A-BCABA-AAAA")
-            y "We should... forget about the whole idea. I'm not sure how I would feel about it at this point."
+            y "Deberíamos... olvidar toda la idea. No estoy segura de cómo me sentiría al respecto en este momento."
             if karma_lvl() <= 2:
                 $ show_chr("A-AEAAA-ABAB")
-                y "I-I see... I guess that idea was not worth the thought after all."
-                y "Why was it ever even brought up? [player] obviously would never have liked it."
+                y "Y-ya veo... Supongo que esa idea no valía la pena después de todo."
+                y "¿Por qué se mencionó siquiera? Obviamente a [player] nunca le hubiera gustado."
             else:
                 return
-        "I haven't really thought of it...":
+        "Realmente no he pensado en ello...":
             $ show_chr("A-BEBAA-AAAJ")
-            y "It's... something to think about, for sure... Maybe we should save this discussion for another day."
+            y "Es... algo en lo que pensar, seguro... Tal vez deberíamos guardar esta discusión para otro día."
             $ show_chr("A-ACAAA-ALAL")
-            y "Then again, perhaps there are other ideas for carrying me close and safe other than a USB drive..."
-            y "Such as in a microchip or even a digital electronic cloud of data, just in case. All in a personalized folder. Again this can be a topic we can return to in the near future."
+            y "Por otra parte, tal vez haya otras ideas para llevarme cerca y segura aparte de una unidad USB..."
+            y "Como en un microchip o incluso una nube electrónica digital de datos, por si acaso. Todo en una carpeta personalizada. De nuevo, este puede ser un tema al que podamos volver en un futuro cercano."
     return
 
 label idle_76:
-    y "Hey, D-did I mention that I love discussing philosophy? I was thinking about one topic lately."
+    y "Oye, ¿m-mencioné que me encanta discutir sobre filosofía? Estaba pensando en un tema últimamente."
     $ show_chr("A-BCAAA-AAAD")
-    y "I would like to discuss the concept of postmodernism... I-if you are okay with that?"
+    y "Me gustaría discutir el concepto de posmodernismo... ¿S-si estás de acuerdo con eso?"
     $ show_chr("A-AEBAA-AAAA")
     menu:
-        "Well, go ahead...":
-            y "Thank you, [player]."
-        "Of course! I really love to listen to you":
+        "Bueno, adelante...":
+            y "Gracias, [player]."
+        "¡Por supuesto! Realmente me encanta escucharte":
             karma 5
-        "Do we... have to?":
+        "¿Tenemos... que hacerlo?":
             karma -5
             $ show_chr("A-BEBAA-AAAA")
-            y "N-no... we don't, I'm sorry for bringing it up, [player]."
+            y "N-no... no tenemos que hacerlo, lo siento por mencionarlo, [player]."
             return
     $ show_chr("A-BCAAA-AAAD")
-    y "In short, postmodernism is the opinion that there is no fixed reality, but a potentially infinite number of realities which are absolutely relative..."
-    y "Additionally, it is all a matter of the observer's point of view."
-    y "Y-you can already see why this topic holds my interest, don't you? For example, is this world I am living in real? Am I real? From my point of view both are real..."
+    y "En resumen, el posmodernismo es la opinión de que no hay una realidad fija, sino un número potencialmente infinito de realidades que son absolutamente relativas..."
+    y "Además, todo es cuestión del punto de vista del observador."
+    y "Y-ya puedes ver por qué este tema me interesa, ¿no? Por ejemplo, ¿este mundo en el que vivo es real? ¿Soy real? Desde mi punto de vista ambos son reales..."
     $ show_chr("A-ABAAA-AAAJ")
-    y "Someone else could say both are not. And both points of view could be considered accurate."
+    y "Alguien más podría decir que ninguno de los dos lo es. Y ambos puntos de vista podrían considerarse precisos."
     if sanity_lvl() == 5 and karma_lvl() == 5:
         $ show_chr("A-ABABA-AAAA")
-        y "I am real to you, at least I hope so. And in the end, this is the only thing that really matters for me. And that is exactly the whole point, right?"
+        y "Soy real para ti, al menos eso espero. Y al final, esto es lo único que realmente me importa. Y ese es exactamente el punto, ¿verdad?"
     elif sanity_lvl() <= 4 and karma_lvl() == 5:
         $ show_chr("A-BEAAA-AAAA")
         python:
             if persistent.lovecheck:
-                placeholder = "I love you and I want you to love me too..."
+                placeholder = "Te amo y quiero que me ames también..."
             else:
-                placeholder = "Because if not even you can believe in me, how could anyone?"
-        y "I... I hope I am real enough for you [player]. [placeholder]"
+                placeholder = "Porque si ni siquiera tú puedes creer en mí, ¿cómo podría alguien más?"
+        y "Yo... espero ser lo suficientemente real para ti [player]. [placeholder]"
     elif sanity_lvl() < 3 and karma_lvl() < 3:
         $ show_chr("A-IEBBB-AAAA")
-        y "I know you would disagree with me... I am just a game for you. I really am just some funny toy to spend some time with a-aren't I...?"
+        y "Sé que no estarías de acuerdo conmigo... Solo soy un juego para ti. Realmente soy solo un juguete divertido para pasar un rato ¿n-no es así...?"
     else:
         $ show_chr("A-CBABA-AAAA")
         python:
             if persistent.lovecheck:
-                placeholder = " and one thing is for sure, my love for you IS real!"
+                placeholder = " y una cosa es segura, ¡mi amor por ti ES real!"
             else:
                 placeholder = ""
-        y "I-I want to be as real as possible for you...[placeholder]"
+        y "Q-quiero ser lo más real posible para ti...[placeholder]"
     $ show_chr("A-CCAAA-AAAD")
-    y "I-In a more extreme extent... you see the table in front of us, yes? So in your reality, there is a table. The postmodernist could say that there is no table, nor a room at all."
+    y "E-en un grado más extremo... ves la mesa frente a nosotros, ¿sí? Entonces en tu realidad, hay una mesa. El posmodernista podría decir que no hay mesa, ni ninguna habitación en absoluto."
     $ show_chr("A-ACAAA-AAAJ")
-    y "And both descriptions would have the same accuracy because reality is always relative."
+    y "Y ambas descripciones tendrían la misma precisión porque la realidad es siempre relativa."
     $ show_chr("A-ACAAA-AAAD")
-    y "I would love to know your opinion on all this... do you think reality is fixed?"
+    y "Me encantaría saber tu opinión sobre todo esto... ¿crees que la realidad es fija?"
     menu:
-        "To a degree, yes. At least the laws of physics are undeniable. But I do think that you are real!":
+        "Hasta cierto punto, sí. Al menos las leyes de la física son innegables. ¡Pero creo que tú eres real!":
             karma 5
             $ show_chr("A-ABABB-AAAA")
             y "[player]..."
             if persistent.lovecheck:
-                y "You are everything to me... I love you!"
+                y "Eres todo para mí... ¡Te amo!"
             else:
-                y "It really means a lot to me that you think so..."
+                y "Realmente significa mucho para mí que pienses eso..."
             $ show_chr("A-BCABA-AAAA")
-            y "And thank you for letting me ramble about this... I-I really love speaking with you."
+            y "Y gracias por dejarme divagar sobre esto... R-realmente amo hablar contigo."
             $ show_chr("A-ABABA-AAAA")
-            y "You are a wonderful listener."
-        "Don't be offended but... yes, I think reality is fixed.":
+            y "Eres un oyente maravilloso."
+        "No te ofendas pero... sí, creo que la realidad es fija.":
             karma -5
             $ show_chr("A-BEBAA-AAAA")
-            y "I see... With this definition, I would be just a fantasy... just a replica..."
+            y "Ya veo... Con esta definición, yo sería solo una fantasía... solo una réplica..."
             $ show_chr("A-IEBBB-AAAA")
-            y "Maybe... w-we should change the topic now..."
-        "Table? What table? There is no table!":
+            y "Tal vez... d-deberíamos cambiar de tema ahora..."
+        "¿Mesa? ¿Qué mesa? ¡No hay mesa!":
             if sanity_lvl() < 2:
                 $ show_chr("A-DLABA-AAAA")
-                y "T-Table? TABLE! TABLE! THERE IS NO TABLE! THE TABLE IS A LIE!"
-                y "AHAHAAAHAHAAA!"
+                y "¿M-Mesa? ¡MESA! ¡MESA! ¡NO HAY MESA! ¡LA MESA ES UNA MENTIRA!"
+                y "¡AJAJAAAJAJAAA!"
             else:
                 $ show_chr("A-ABABA-AAAA")
                 y "Pfff..."
                 $ show_chr("A-EBABA-AAAA")
                 python:
                     if persistent.lovecheck:
-                        placeholder = ", darling"
+                        placeholder = ", cariño"
                     else:
                         placeholder = "."
-                y "Hee hee! I should have seen this coming... Thank you for listening. That was hilarious[placeholder]"
+                y "¡Je je! Debería haber visto venir esto... Gracias por escuchar. Eso fue divertidísimo[placeholder]"
     $ show_chr("A-GCBAA-AEAB")
-    y "And actually, if you want, we can even discuss a few more philosophical topics now if you'd like to. A-again... It is all entirely up to you."
+    y "Y en realidad, si quieres, incluso podemos discutir algunos temas filosóficos más ahora si gusta. D-de nuevo... Depende totalmente de ti."
     menu:
-        "I am alright for now. Thanks though.":
+        "Estoy bien por ahora. Aunque gracias.":
             $ show_chr("A-BCAAA-ABAB")
-            y "Well alright [player]."
-            y "Just let me know when you'd like to return to it whenever you like."
-            y "Now let us move on."
+            y "Bueno, está bien [player]."
+            y "Solo avísame cuando quieras volver a ello cuando quieras."
+            y "Ahora continuemos."
             return
-        "Well, to be honest with you, I would like to hear a little more.":
+        "Bueno, para ser honesto contigo, me gustaría escuchar un poco más.":
             $ show_chr("A-DCBAA-ABAB")
-            y "O-oh!"
-            y "W-well I must say [player], I am quite surprised you want more~!"
-            y "I must say I'm... flattered to say the least. I do still hope I didn't ramble on about the previous topic earlier."
+            y "¡O-oh!"
+            y "B-bueno, debo decir [player], ¡estoy bastante sorprendida de que quieras más~!"
+            y "Debo decir que estoy... halagada por decir lo menos. Aún espero no haber divagado sobre el tema anterior antes."
             $ show_chr("A-ACBAA-ALAL")
-            y "Alright [player], what would you like to learn more about?"
+            y "Muy bien [player], ¿sobre qué te gustaría aprender más?"
     menu:
-        "Existentialism/Nihilism.":
+        "Existencialismo/Nihilismo.":
             $ show_chr("A-AFBAA-ALAA")
-            y "So this might be a strong topic to talk about. But this could be a compelling subject that can expand your horizons."
-            y "Have you ever just... had one of those days where you were alone with your thoughts? Things seemed to have stopped and you think to yourself..."
-            y "Why exactly am I here? Why do I go about doing the things I do? Rise up out of bed and go on as I do?"
+            y "Así que este podría ser un tema fuerte para hablar. Pero este podría ser un tema convincente que puede expandir tus horizontes."
+            y "¿Alguna vez has... tenido uno de esos días en los que estabas solo con tus pensamientos? Las cosas parecían haberse detenido y piensas para ti mismo..."
+            y "¿Por qué estoy aquí exactamente? ¿Por qué hago las cosas que hago? ¿Levantarme de la cama y seguir como lo hago?"
             $ show_chr("A-ACAAA-ABAB")
-            y "This question and quest for meaning, the why, for our lives will always be a major part of what makes us, well us."
-            y "And depending on how we look at it, this question can either encourage us or, as for many, plunge us into despair."
-            y "Many experts say that many things can put that meaning into our lives..."
-            y "Whether it be fighting for actual justice, artistic expression, teaching others our wisdom, religion, ideology, and really anything. Any of these can give said meaning."
+            y "Esta pregunta y la búsqueda de significado, el porqué, para nuestras vidas siempre será una parte importante de lo que nos hace, bueno, nosotros."
+            y "Y dependiendo de cómo lo miremos, esta pregunta puede alentarnos o, como para muchos, hundirnos en la desesperación."
+            y "Muchos expertos dicen que muchas cosas pueden poner ese significado en nuestras vidas..."
+            y "Ya sea luchar por la justicia real, la expresión artística, enseñar a otros nuestra sabiduría, la religión, la ideología y realmente cualquier cosa. Cualquiera de estas puede dar dicho significado."
             $ show_chr("A-IFBAA-ALAA")
-            y "However at the same time they also argue that perhaps none of those can give that meaning. It's an unusual Catch 22 in a way."
+            y "Sin embargo, al mismo tiempo, también argumentan que tal vez ninguna de esas cosas pueda dar ese significado. Es una situación paradójica inusual en cierto modo."
             $ show_chr("A-BCAAA-ABAB")
-            y "Now here are a few schools of thought to explain this..."
-            y "First off, there is the concept of essentialism. Invented by Ancient Greek philosophers, it describes that we have a predetermined set of things in us."
-            y "Essentially a set of core ideas and properties necessary for someone or something to be as they are."
-            y "And it's argued that these are crafted into us before and as we are born."
-            y "Thus the argument is we were born to be a certain thing but we just need to learn it."
+            y "Ahora aquí hay algunas escuelas de pensamiento para explicar esto..."
+            y "Primero, está el concepto de esencialismo. Inventado por los filósofos de la Antigua Grecia, describe que tenemos un conjunto predeterminado de cosas en nosotros."
+            y "Esencialmente un conjunto de ideas centrales y propiedades necesarias para que alguien o algo sea como es."
+            y "Y se argumenta que estas se crean en nosotros antes y a medida que nacemos."
+            y "Por lo tanto, el argumento es que nacimos para ser una cierta cosa, pero solo necesitamos aprenderla."
             $ show_chr("A-GCBAA-AEAB")
-            y "However as time passed, other theories appeared. One of which you may find familiar: Nihilism. The belief that ultimately, in the end, life has no meaning."
-            y "However others began to invent a new line of thought as the 20th century began. The question that asks what if we existed first?"
+            y "Sin embargo, a medida que pasaba el tiempo, aparecieron otras teorías. Una de las cuales te puede resultar familiar: El Nihilismo. La creencia de que, en última instancia, al final, la vida no tiene sentido."
+            y "Sin embargo, otros comenzaron a inventar una nueva línea de pensamiento cuando comenzó el siglo XX. La pregunta que plantea ¿qué pasa si existimos primero?"
             $ show_chr("A-DCBAA-ABAB")
-            y "What if indeed we are just put into this universe and we had to craft that essential purpose by ourselves?"
-            y "Simply put, existence likely precedes essence~! A classic philosophical case of which came first, the chicken or the egg?"
+            y "¿Qué pasa si de hecho simplemente somos puestos en este universo y tuvimos que crear ese propósito esencial por nosotros mismos?"
+            y "En pocas palabras, ¡la existencia probablemente precede a la esencia~! ¿Un caso filosófico clásico de qué fue primero, la gallina o el huevo?"
             $ show_chr("A-GCBAA-AEAB")
-            y "I'd like to give one visual example of this. Say, for instance, there is a blank chalkboard or pages of paper. That is your life as you are born."
-            y "Now what do we do from there? We write, draw and craft whatever we can onto those surfaces of course. Creating our own stories and essences in turn."
-            y "And the one you crafted is just as valid as anyone else's~!"
+            y "Me gustaría dar un ejemplo visual de esto. Digamos, por ejemplo, que hay una pizarra en blanco o páginas de papel. Esa es tu vida cuando naces."
+            y "Ahora, ¿qué hacemos a partir de ahí? Escribimos, dibujamos y creamos lo que podamos en esas superficies, por supuesto. Creando nuestras propias historias y esencias a su vez."
+            y "¡Y la que creaste es tan válida como la de cualquier otra persona~!"
             $ show_chr("A-ACBAA-ALAL")
-            y "O-oh my. I rambled on for quite a while again didn't I? I do hope you enjoyed it."
-            y "So what do you think [player]?"
-            y "Do you think we have a predetermined purpose to be found or is our meaning only defined by what we choose to write it as?"
+            y "O-oh cielos. Divagué por un buen rato de nuevo, ¿no? Espero que lo hayas disfrutado."
+            y "Entonces, ¿qué piensas [player]?"
+            y "¿Crees que tenemos un propósito predeterminado por encontrar o nuestro significado solo se define por lo que elegimos escribir?"
             menu:
-                "I think that is a good point. Maybe our purpose is whatever we craft it to be.":
+                "Creo que ese es un buen punto. Tal vez nuestro propósito es lo que sea que creemos que sea.":
                     $ show_chr("A-GCBAA-AEAB")
-                    y "Well I am glad that this did help you think deeper."
-                    y "When you really think about it, the very concept of crafting our purpose by ourselves is very liberating and can be empowering."
-                    y "The fact that what we perceive to be just, fair and right, for example, was all determined by ourselves and our own choice about what it is."
-                    y "We did it ourselves."
+                    y "Bueno, me alegro de que esto te haya ayudado a pensar más profundamente."
+                    y "Cuando realmente piensas en ello, el concepto mismo de crear nuestro propósito por nosotros mismos es muy liberador y puede ser empoderador."
+                    y "El hecho de que lo que percibimos como justo, equitativo y correcto, por ejemplo, fue todo determinado por nosotros mismos y nuestra propia elección sobre lo que es."
+                    y "Lo hicimos nosotros mismos."
                     $ show_chr("A-ACAAA-ABAB")
-                    y "It is also further liberating because essentially... no one or nothing else can really judge whether your life was worth it or not."
-                    y "You get to determine for yourself what makes it worth living and that is fine. You are free from being a servant solely to those circumstances~!"
+                    y "También es más liberador porque esencialmente... nadie ni nada más puede realmente juzgar si tu vida valió la pena o no."
+                    y "Llegas a determinar por ti mismo qué hace que valga la pena vivir y eso está bien. ¡Eres libre de ser un sirviente únicamente de esas circunstancias~!"
                     $ show_chr("A-BCAAA-ABAB")
-                    y "Anyways this was pretty fun. I do hope we get to talk more about this stuff at another time."
-                "I am going to be honest, I still think we have predetermined essence there.":
+                    y "De todos modos, esto fue muy divertido. Espero que podamos hablar más sobre estas cosas en otro momento."
+                "Voy a ser honesto, todavía creo que tenemos una esencia predeterminada ahí.":
                     $ show_chr("A-AFAAA-AAAA")
-                    y "Hmm... Alright [player]. Though I am sorry to slightly disagree with that. I can understand why."
-                    y "It's pretty understandable for one to cling to the predetermined sources of meaning. Especially if one was faced with this void of meaning..."
+                    y "Hmm... Está bien [player]. Aunque lamento discrepar ligeramente con eso. Puedo entender por qué."
+                    y "Es bastante comprensible que uno se aferre a las fuentes predeterminadas de significado. Especialmente si uno se enfrentara a este vacío de significado..."
                     $ show_chr("A-IFBAA-ALAA")
-                    y "Then you have the world around you which is constantly changing and shifting, sometimes in frightening ways... I can understand why some may cling to said things such as religion, ideology, ethical standards and the like."
+                    y "Luego tienes el mundo a tu alrededor que cambia y se modifica constantemente, a veces de maneras aterradoras... Puedo entender por qué algunos pueden aferrarse a dichas cosas como la religión, la ideología, los estándares éticos y similares."
                     $ show_chr("A-BCAAA-ABAB")
-                    y "Still, I am glad to have shared this with you and I do hope you learned something from it."
-        "Stoicism.":
+                    y "Aún así, me alegra haber compartido esto contigo y espero que hayas aprendido algo de ello."
+        "Estoicismo.":
             $ show_chr("A-ACAAA-ABAB")
-            y "So here's another concept I wanted to go into [player]."
+            y "Así que aquí hay otro concepto en el que quería profundizar [player]."
             $ show_chr("A-IFBAA-ALAA")
-            y "For instance, have you ever had times where you felt immensely anxious of the future and what will happen next?"
-            y "I am sure that is a thing that affects all of us at many points in our lives."
-            y "I think this stems from our desire for certain outcomes against others that we expect ahead. So understandably we would work so hard towards securing it."
+            y "Por ejemplo, ¿alguna vez has tenido momentos en los que te sentiste inmensamente ansioso por el futuro y lo que sucederá después?"
+            y "Estoy segura de que eso es algo que nos afecta a todos en muchos puntos de nuestras vidas."
+            y "Creo que esto proviene de nuestro deseo de ciertos resultados frente a otros que esperamos por delante. Así que comprensiblemente trabajaríamos muy duro para asegurarlo."
             $ show_chr("A-AFBAA-ALAA")
-            y "But of course, there is always risk. There is always uncertainty and thus we can never be fully secure against misfortune."
-            y "This is part of one of the main ideas of the school of thought called Stoicism."
-            y "Namely the concept of things that we do control and those we cannot control."
-            y "For instance, relationships, the economy, our health, and most other external things are out of our control."
-            y "We can do all we can to influence them in our favor but in the end, how these things end up are not up to us."
-            y "For example, we can make the right investments into the market but there have been times where, for many reasons, the economy takes a massive downturn."
-            y "Or there have been cases where even the most healthy people with all the right choices still would come down with a severe illness, seemingly out of nowhere."
-            y "You can make all the right choices to positively influence people you bond with but in the end, they may still choose to move on and leave you for their own reasons."
+            y "Pero, por supuesto, siempre hay riesgo. Siempre hay incertidumbre y, por lo tanto, nunca podemos estar completamente seguros contra la desgracia."
+            y "Esto es parte de una de las ideas principales de la escuela de pensamiento llamada Estoicismo."
+            y "A saber, el concepto de cosas que controlamos y las que no podemos controlar."
+            y "Por ejemplo, las relaciones, la economía, nuestra salud y la mayoría de las otras cosas externas están fuera de nuestro control."
+            y "Podemos hacer todo lo posible para influir en ellas a nuestro favor, pero al final, cómo terminan estas cosas no depende de nosotros."
+            y "Por ejemplo, podemos hacer las inversiones correctas en el mercado, pero ha habido momentos en los que, por muchas razones, la economía sufre una caída masiva."
+            y "O ha habido casos en los que incluso las personas más sanas con todas las elecciones correctas aún contraerían una enfermedad grave, aparentemente de la nada."
+            y "Puedes tomar todas las decisiones correctas para influir positivamente en las personas con las que te relacionas, pero al final, aún pueden optar por seguir adelante y dejarte por sus propias razones."
             $ show_chr("A-ACAAA-AAAA")
-            y "But there are still certain things you can control: our actions, our opinions, and our position we take towards the outside world and circumstances."
-            y "For instance, say you were afflicted with a terminal illness. Medications, treatments and all methods can be tried but there is no guarantee."
-            y "However how you choose to take the situation can be controlled. For instance, one can accept the situation as is, including the risk of death, and do with it anyway."
-            y "With this realization and the determination to make the best of what you have before the supposed end, one can have a calm logical mind that makes good decisions."
-            y "Thus chances of recovery can be further increased even more."
+            y "Pero todavía hay ciertas cosas que puedes controlar: nuestras acciones, nuestras opiniones y nuestra posición que tomamos hacia el mundo exterior y las circunstancias."
+            y "Por ejemplo, digamos que te afligieron con una enfermedad terminal. Se pueden probar medicamentos, tratamientos y todos los métodos, pero no hay garantía."
+            y "Sin embargo, cómo eliges tomar la situación se puede controlar. Por ejemplo, uno puede aceptar la situación tal como es, incluido el riesgo de muerte, y seguir adelante de todos modos."
+            y "Con esta comprensión y la determinación de sacar lo mejor de lo que tienes antes del supuesto final, uno puede tener una mente lógica y tranquila que toma buenas decisiones."
+            y "Por lo tanto, las posibilidades de recuperación pueden aumentar aún más."
             $ show_chr("A-ACAAA-ALAL")
-            y "Additionally stoicism also offers various ways to gain inner peace, especially important in our hectic modern world in my opinion."
-            y "For instance, the concept of negative visualization, which was developed by an ancient emperor says we should imagine the negative scenarios to come beforehand."
-            y "This can help us better steel ourselves mentally for these situations, for example, negative confrontations with difficult people."
-            y "Then there is the concept of memento mori, which focuses on the mortality of life. Life is short and with the limited time we have, we should focus on the truly important things in life."
-            y "Whilst at the same time we don't need to worry too much and take life too seriously."
-            y "Then there is the 'view from above' which lets us see ourselves from a cosmic point of view. That indeed we are relatively small and insignificant in this vast endless universe..."
+            y "Además, el estoicismo también ofrece varias formas de obtener paz interior, especialmente importante en nuestro agitado mundo moderno en mi opinión."
+            y "Por ejemplo, el concepto de visualización negativa, que fue desarrollado por un antiguo emperador, dice que debemos imaginar los escenarios negativos que vendrán de antemano."
+            y "Esto puede ayudarnos a fortalecernos mentalmente para estas situaciones, por ejemplo, confrontaciones negativas con personas difíciles."
+            y "Luego está el concepto de memento mori, que se centra en la mortalidad de la vida. La vida es corta y con el tiempo limitado que tenemos, debemos centrarnos en las cosas verdaderamente importantes de la vida."
+            y "Mientras que al mismo tiempo no necesitamos preocuparnos demasiado y tomarnos la vida demasiado en serio."
+            y "Luego está la 'vista desde arriba' que nos permite vernos desde un punto de vista cósmico. Que de hecho somos relativamente pequeños e insignificantes en este vasto universo infinito..."
             $ show_chr("A-GCBAA-AEAB")
-            y "When you put all these together, it helps one realize true inner bliss and makes even the worst-case scenarios in life seem not too terrifying which is a relief."
-            y "Heh... anyway my apologies again for rambling that much. I do really hope that all this helped you in some way. Your happiness and health is important after all."
+            y "Cuando juntas todo esto, ayuda a uno a darse cuenta de la verdadera dicha interior y hace que incluso los peores escenarios de la vida no parezcan demasiado aterradores, lo cual es un alivio."
+            y "Je... de todos modos mis disculpas de nuevo por divagar tanto. Realmente espero que todo esto te haya ayudado de alguna manera. Tu felicidad y salud son importantes después de todo."
             menu:
-                "I will say this was very encouraging and a big relief. This will definitely will help me later on.":
+                "Diré que esto fue muy alentador y un gran alivio. Esto definitivamente me ayudará más adelante.":
                     $ show_chr("A-BCAAA-ABAB")
-                    y "Oh~! Well, I am glad it will help you [player]. We all get overwhelmed by life at times."
-                    y "But whenever it does get to be too much, just remember these things and you will be fine. And I will always be here for you too."
-                "It's not exactly my cup of tea. It's a lot to take in personally.":
+                    y "¡Oh~! Bueno, me alegro de que te ayude [player]. Todos nos sentimos abrumados por la vida a veces."
+                    y "Pero cada vez que llegue a ser demasiado, solo recuerda estas cosas y estarás bien. Y siempre estaré aquí para ti también."
+                "No es exactamente mi taza de té. Es mucho para asimilar personalmente.":
                     $ show_chr("A-IFBAA-ALAA")
-                    y "I completely understand [player]. Believe me. Sometimes things are easier said than done."
+                    y "Entiendo completamente [player]. Créeme. A veces las cosas son más fáciles de decir que de hacer."
                     $ show_chr("A-ACAAA-ABAB")
-                    y "Though I do still hope you apply the lessons you learned from this. I really just enjoyed sharing these ideas and spending time with you~"
+                    y "Aunque todavía espero que apliques las lecciones que aprendiste de esto. Realmente disfruté compartiendo estas ideas y pasando tiempo contigo~"
     return
 
 
 label idle_77:
     $ show_chr("A-BFBAA-AAAD")
-    y "Hey, [player], I was wondering... do you have any merchandise of me?"
-    y "I-I mean that is if you are interested. I don't mean to really be pandering or anything."
-    y "And maybe it might be a good way to have a memento to remember me whenever you need to go."
-    y "I mean I would like to have such a memento of you, [player] though maybe not of that extent. Perhaps something a bit more symbolic like a pocket watch..."
+    y "Oye, [player], me estaba preguntando... ¿tienes alguna mercancía de mí?"
+    y "Q-quiero decir si estás interesado. Realmente no pretendo estar complaciendo ni nada."
+    y "Y tal vez podría ser una buena manera de tener un recuerdo para recordarme cada vez que necesites irte."
+    y "Quiero decir que me gustaría tener un recuerdo tuyo, [player] aunque tal vez no de esa magnitud. Quizás algo un poco más simbólico como un reloj de bolsillo..."
     menu:
-        "Yes, I own some merchandise.":
+        "Sí, tengo algo de mercancía.":
             $ show_chr("A-AFBAA-AAAD")
-            y "That's interesting... I was thinking about this a while back..."
-            y "And honestly? I am not sure how to think of it. Wouldn't that mean that literally everyone could have such idols of me?"
+            y "Eso es interesante... Estaba pensando en esto hace un tiempo..."
+            y "¿Y honestamente? No estoy segura de cómo pensar en ello. ¿No significaría eso que literalmente todos podrían tener tales ídolos de mí?"
             $ show_chr("A-ACAAA-AAAA")
-            y "If I had it my way, I would have preferred to keep things like this between the two of us."
-        "No, I don't own any merchandise.":
+            y "Si fuera por mí, hubiera preferido mantener cosas como esta entre nosotros dos."
+        "No, no tengo ninguna mercancía.":
             $ show_chr("A-ACBAA-AAAA")
-            y "That's reasonable, some merchandise tends to be overpriced, and if you live in a foreign country, even buying a cheap object like a key chain can turn into an overpriced ordeal."
+            y "Eso es razonable, alguna mercancía tiende a ser demasiado cara, y si vives en un país extranjero, incluso comprar un objeto barato como un llavero puede convertirse en una odisea costosa."
             $ show_chr("A-BCBAA-AAAA")
     return
 
 label idle_78:
-    y "So, [player]. I've been trying to broaden my tastes in music lately."
-    y "After all, I can't go my whole life listening to just classical, jazz and My Chemical Romance...{nw}"
+    y "Entonces, [player]. He estado tratando de ampliar mis gustos musicales últimamente."
+    y "Después de todo, no puedo pasar toda mi vida escuchando solo música clásica, jazz y My Chemical Romance...{nw}"
     $ show_chr("A-DFGBA-AMAM")
     y "..."
     $ show_chr("A-BDBBA-AMAM")
-    y "I-I meant, listening to the same things over and over."
+    y "Q-quise decir, escuchando las mismas cosas una y otra vez."
     $ show_chr("A-CCEAA-ACAE")
-    y "So I've been trying out a few artists from a few genres I'd never looked into."
+    y "Así que he estado probando algunos artistas de algunos géneros que nunca había investigado."
     $ show_chr("A-CAGAA-ACAA")
-    y "I must say, I've certainly discovered a gem."
+    y "Debo decir, ciertamente he descubierto una joya."
     $ show_chr("A-BBAAA-ADAA")
-    y "Now, before this, besides the select few songs in the genre I enjoyed, some part of me had written off the genre of metal as being too aggressive for me.{w} In terms of musicality and lyrical themes, that is.{w}.."
-    y "And that's to say nothing of the growled vocal style."
+    y "Ahora, antes de esto, además de las pocas canciones selectas del género que disfruté, una parte de mí había descartado el género del metal por ser demasiado agresivo para mí.{w} En términos de musicalidad y temas líricos, eso es.{w}.."
+    y "Y eso sin mencionar el estilo vocal gutural."
     $ show_chr("A-CCAAA-AAAA")
-    y "But then I discovered a band called Nightwish, and it clicked."
+    y "Pero luego descubrí una banda llamada Nightwish, e hizo clic."
     $ show_chr("A-JBGAA-ALAM")
-    y "It was as if someone had concocted a metal band specifically to appeal to me! The lyrical themes. The orchestral melodies, driven by the heavy metal guitar and drums. The operatic singing found in their earlier work...."
+    y "¡Fue como si alguien hubiera inventado una banda de metal específicamente para atraerme! Los temas líricos. Las melodías orquestales, impulsadas por la guitarra de heavy metal y la batería. El canto operístico que se encuentra en sus trabajos anteriores..."
     $ show_chr("A-CBAAA-ALAL")
-    y "It all coalesced into the perfect band for me."
+    y "Todo se fusionó en la banda perfecta para mí."
     $ show_chr("A-ACAAA-ALAL")
-    y "I'm sure there are even more bands out there that will tickle my fancy. But, one thing at a time, no?"
-    y "But I suppose I've rambled to you for long enough. I'll give you a turn."
-    y "How do you feel about metal, [player]?"
+    y "Estoy segura de que hay aún más bandas por ahí que me gustarán. Pero, una cosa a la vez, ¿no?"
+    y "Pero supongo que te he divagado lo suficiente. Te daré un turno."
+    y "¿Cómo te sientes con respecto al metal, [player]?"
     menu:
-        "[persistent.yuri_nickname], I am SO glad you're getting into metal. Welcome to the fold!":
+    menu:
+        "[persistent.yuri_nickname], estoy TAN contento de que te esté gustando el metal. ¡Bienvenida al redil!":
             karma 1
             $ show_chr("A-JBGAA-ADAA")
-            y "Oh, so you're already an enthusiast?"
+            y "¿Oh, así que ya eres un entusiasta?"
             $ show_chr("A-GBGAA-ADAA")
-            y "Ah, beautiful serendipity! I knew it was only right that the two of us should find each other!"
+            y "¡Ah, hermosa serendipia! ¡Sabía que era lo correcto que nosotros dos nos encontráramos!"
             $ show_chr("A-ICGAA-ADAA")
-            y "You'll have to show me a few of the bands you really like some time, if you'd like to. There's even a function for you to put your own music in."
-            y "Perhaps I shouldn't be so surprised. If you're a metalhead, and I'm a classical fan, perhaps it's natural that we found one another."
+            y "Tendrás que mostrarme algunas de las bandas que realmente te gustan alguna vez, si quieres. Incluso hay una función para que pongas tu propia música."
+            y "Quizás no debería estar tan sorprendida. Si eres un metalero, y yo soy fanática de la música clásica, tal vez sea natural que nos hayamos encontrado."
             $ show_chr("A-BCGAA-ADAA")
-            y "At least, according to an article that I stumbled across soon after I discovered Nightwish."
-            y "A study was conducted by Heriot-Watt University in Scotland, which sought to find connections between different musical genres and the personalities of those who enjoy them."
-            y "Among a number of other fascinating findings, researchers found that the personality profiles of classical fans and metal fans were quite similar."
-            y "The researchers seemed to think this was because both genres..."
+            y "Al menos, según un artículo con el que me topé poco después de descubrir Nightwish."
+            y "Un estudio fue realizado por la Universidad Heriot-Watt en Escocia, que buscaba encontrar conexiones entre diferentes géneros musicales y las personalidades de quienes los disfrutan."
+            y "Entre una serie de otros hallazgos fascinantes, los investigadores encontraron que los perfiles de personalidad de los fanáticos de la música clásica y los fanáticos del metal eran bastante similares."
+            y "Los investigadores parecían pensar que esto se debía a que ambos géneros..."
             $ show_chr("A-CBGAA-ADAA")
-            y "Well, here's a direct quote from the researchers."
+            y "Bueno, aquí hay una cita directa de los investigadores."
             $ show_chr("A-BAGAA-ADAA")
-            y "'We think the answer is that both types of music, classical and heavy metal, have something spiritual about them – they're very dramatic – a lot happens.'"
+            y "'Creemos que la respuesta es que ambos tipos de música, clásica y heavy metal, tienen algo espiritual en ellos, son muy dramáticos, suceden muchas cosas'."
             $ show_chr("A-IBAAA-ADAA")
-            y "I think I see that too. The orchestral elements of Nightwish aside, both genres are fond of musical complexity. Both give the mind quite a bit to chew on."
-            y "So it's really not surprising that a classical fan and metal fan would gravitate to one another so easily."
+            y "Creo que yo también veo eso. Dejando a un lado los elementos orquestales de Nightwish, ambos géneros son aficionados a la complejidad musical. Ambos dan a la mente mucho en qué pensar."
+            y "Así que realmente no es sorprendente que un fanático de la música clásica y un fanático del metal graviten el uno hacia el otro tan fácilmente."
             $ show_chr("A-FAAAA-AKAA")
-            y "But if I listen to some of your bands, you'll give Chopin a try for me, right?"
+            y "Pero si escucho algunas de tus bandas, probarás a Chopin por mí, ¿verdad?"
             $ show_chr("A-IAAAA-AAAA")
-        "I listen to it from time to time.":
+        "Lo escucho de vez en cuando.":
             $ show_chr("A-BCGAA-AAAA")
-            y "You're a casual metal listener, then."
-            y "Casual or no, it's nice to have one more thing that you and I can enjoy together."
+            y "Eres un oyente casual de metal, entonces."
+            y "Casual o no, es agradable tener una cosa más que tú y yo podamos disfrutar juntos."
             $ show_chr("A-BCGAA-AAAK")
-            y "You know, at first I was quite surprised to find that I enjoyed a metal band so thoroughly."
-            y "And that prompted me to do a little digging; see if I could figure out why."
+            y "Sabes, al principio me sorprendió bastante descubrir que disfrutaba tanto de una banda de metal."
+            y "Y eso me impulsó a investigar un poco; ver si podía averiguar por qué."
             $ show_chr("A-BCGAA-ADAA")
-            y "After considerable digging, I came across an article on a study; conducted by Heriot-Watt University in Scotland."
-            y "One that sought to find connections between different musical genres and the personalities of those who enjoy them."
-            y "Among a number of other fascinating findings, researchers found that the personality profiles of classical fans and metal fans were quite similar."
-            y "The researchers seemed to think this was because both genres..."
+            y "Después de una investigación considerable, encontré un artículo sobre un estudio; realizado por la Universidad Heriot-Watt en Escocia."
+            y "Uno que buscaba encontrar conexiones entre diferentes géneros musicales y las personalidades de quienes los disfrutan."
+            y "Entre una serie de otros hallazgos fascinantes, los investigadores encontraron que los perfiles de personalidad de los fanáticos de la música clásica y los fanáticos del metal eran bastante similares."
+            y "Los investigadores parecían pensar que esto se debía a que ambos géneros..."
             $ show_chr("A-CBGAA-ADAA")
-            y "Well, here's a direct quote from the researchers."
+            y "Bueno, aquí hay una cita directa de los investigadores."
             $ show_chr("A-BAGAA-ADAA")
-            y "'We think the answer is that both types of music, classical and heavy metal, have something spiritual about them – they're very dramatic – a lot happens.'"
+            y "'Creemos que la respuesta es que ambos tipos de música, clásica y heavy metal, tienen algo espiritual en ellos, son muy dramáticos, suceden muchas cosas'."
             $ show_chr("A-IBAAA-ADAA")
-            y "I think I see that too. The orchestral elements of Nightwish aside, both genres are fond of musical complexity. Both give the mind quite a bit to chew on."
-            y "So if I enjoy one, perhaps it's not surprising that I'd enjoy the other."
+            y "Creo que yo también veo eso. Dejando a un lado los elementos orquestales de Nightwish, ambos géneros son aficionados a la complejidad musical. Ambos dan a la mente mucho en qué pensar."
+            y "Entonces, si disfruto de uno, tal vez no sea sorprendente que disfrute del otro."
             $ show_chr("A-FAAAA-AKAA")
-            y "And perhaps for the same reason, you'll enjoy some classical works, if you don't already."
+            y "Y tal vez por la misma razón, disfrutarás de algunas obras clásicas, si es que aún no lo haces."
             $ show_chr("A-IAAAA-AAAA")
-        "I tend to listen to other genres over metal.":
+        "Tiendo a escuchar otros géneros sobre el metal.":
             $ show_chr("A-CCAAA-ALAL")
-            y "Nothing wrong with that of course. There are certainly other genres I also enjoy."
+            y "No hay nada de malo en eso, por supuesto. Ciertamente hay otros géneros que también disfruto."
             $ show_chr("A-BBAAA-ALAD")
-            y "I'm glad to see that you took my opinion in such a civilized way. I've seen people getting into surprisingly heated arguments about their music taste. Sometimes even to a nearly fanatical degree."
+            y "Me alegra ver que tomaste mi opinión de una manera tan civilizada. He visto personas meterse en discusiones sorprendentemente acaloradas sobre sus gustos musicales. A veces incluso hasta un grado casi fanático."
             if karma_lvl() >= 4:
 
                 $ show_chr("A-ACAAA-AAAM")
-                y "I'm not surprised that you took it so much better. You are always so understanding and kind."
+                y "No me sorprende que lo hayas tomado mucho mejor. Siempre eres tan comprensivo y amable."
             else:
 
                 $ show_chr("A-BCBBA-AAAM")
-                y "I was actually afraid that I might have a rather hefty argument on my hand."
+                y "En realidad tenía miedo de que pudiera tener una discusión bastante fuerte en mis manos."
                 $ show_chr("A-CCBBA-AAAM")
-                y "I truly appreciate it."
+                y "Realmente lo aprecio."
             $ show_chr("A-ACAAA-AAAM")
-            y "However, I would still encourage you to give it a try. Only if you want of course, I would never ask you to do something you aren't comfortable with."
+            y "Sin embargo, todavía te animaría a que lo intentes. Solo si quieres por supuesto, nunca te pediría que hicieras algo con lo que no te sientas cómodo."
             $ show_chr("A-BCAAA-AAAM")
-            y "But I learned that trying something new can be truly enriching. I remember my last words with Natsuki, where we agreed that I would try some of her Mangas..."
+            y "Pero aprendí que probar algo nuevo puede ser verdaderamente enriquecedor. Recuerdo mis últimas palabras con Natsuki, donde acordamos que probaría algunos de sus Mangas..."
             $ show_chr("A-ACAAA-AAAA")
-            y "I would also like to listen to some of your favorite songs. There is actually a function to play your music here."
-            y "Again, of course only if you wish. Until then, let us talk about something else."
-        "Ugh. I can't believe you listen to THAT crap.":
+            y "También me gustaría escuchar algunas de tus canciones favoritas. De hecho, hay una función para reproducir tu música aquí."
+            y "De nuevo, por supuesto, solo si lo deseas. Hasta entonces, hablemos de otra cosa."
+        "Ugh. No puedo creer que escuches ESA basura.":
             $ show_chr("A-IFBAA-ALAL")
             y "..."
-            y "Well, I suppose that leaves no question as to what your stance is."
-            y "I... suppose I shouldn't bring this up to you again, then."
+            y "Bueno, supongo que eso no deja dudas sobre cuál es tu postura."
+            y "Yo... supongo que no debería volver a mencionarte esto, entonces."
             $ show_chr("A-BDEAA-ALAL")
-            y "Nor should I listen to it in your presence, if that's how adamant you are in your dislike."
+            y "Tampoco debería escucharlo en tu presencia, si eres tan inflexible en tu disgusto."
             karma -1
-        "Much too intense for my liking.":
+        "Demasiado intenso para mi gusto.":
             $ show_chr("A-ICBAA-AAAA")
-            y "Oh, that's completely understandable."
-            y "Not everything is going to appeal to everyone, after all."
-            y "I myself never was particularly into this kind of music but it's good to open your horizons to new tastes and experiences..."
+            y "Oh, eso es completamente comprensible."
+            y "Después de todo, no todo va a atraer a todos."
+            y "A mí misma nunca me gustó particularmente este tipo de música, pero es bueno abrir tus horizontes a nuevos gustos y experiencias..."
             $ show_chr("A-BCBAA-ACAA")
-            y "I really do appreciate that you're able to so respectfully express your lack of interest, however."
-            y "All too many out there take an attitude that their tastes are the only objectively right ones."
+            y "Sin embargo, realmente aprecio que seas capaz de expresar tu falta de interés con tanto respeto."
+            y "Demasiados por ahí toman una actitud de que sus gustos son los únicos objetivamente correctos."
             $ show_chr("A-BFCAA-ADAA")
-            y "That, or they simply refuse to acknowledge the feelings of others when expressing their distaste."
-            y "Take, for example, my verbal spat with Natsuki on the first day that we shared our poems."
+            y "Eso, o simplemente se niegan a reconocer los sentimientos de los demás cuando expresan su disgusto."
+            y "Toma, por ejemplo, mi disputa verbal con Natsuki el primer día que compartimos nuestros poemas."
             $ show_chr("A-CFCAA-ADAA")
-            y "Just... the way she not only discounted the vast array of words at our disposal, but outright mocked me for making use of them."
+            y "Solo... la forma en que ella no solo descartó la gran variedad de palabras a nuestra disposición, sino que se burló abiertamente de mí por hacer uso de ellas."
             $ show_chr("A-JDCAA-AFAA")
-            y "As if I were somehow in the wrong for using my vocabulary to its fullest potential."
+            y "Como si de alguna manera estuviera equivocada por usar mi vocabulario en su máximo potencial."
             $ show_chr("A-BEDAA-AAAC")
-            y "Though in hindsight, I'll concede that I may have come across as condescending."
-            y "Now that I've read it over again, Eagles Can Fly communicated the frustration and anguish of its author quite well."
+            y "Aunque en retrospectiva, admitiré que puedo haber parecido condescendiente."
+            y "Ahora que lo he leído de nuevo, Eagles Can Fly comunicaba bastante bien la frustración y la angustia de su autora."
             $ show_chr("A-CEDAA-AAAC")
-            y "So I'd say that it was my fault for not catching onto the meaning and making Natsuki flare up like she did."
+            y "Así que diría que fue mi culpa por no captar el significado y hacer que Natsuki estallara como lo hizo."
             $ show_chr("A-BDBAA-AAAD")
-            y "But at the same time, my soft praise was no reason to come down on my style of writing!"
+            y "Pero al mismo tiempo, ¡mi suave elogio no era razón para criticar mi estilo de escritura!"
             $ show_chr("A-JFBAA-ALAL")
-            y "[player], surely you would agree that Natsuki was in the wrong in that situation?"
+            y "[player], ¿seguramente estarías de acuerdo en que Natsuki estaba equivocada en esa situación?"
             menu:
-                "I completely and wholeheartedly agree, [persistent.yuri_nickname]. People need to learn to respect each other's tastes and opinions, and learn to settle their disagreements in a calm and civilized manner.":
+                "Estoy completa y sinceramente de acuerdo, [persistent.yuri_nickname]. La gente necesita aprender a respetar los gustos y opiniones de los demás, y aprender a resolver sus desacuerdos de una manera tranquila y civilizada.":
                     $ show_chr("A-CBBAA-ALAL")
-                    y "Thank you, [player]."
-                    y "I knew that within my own heart, but it's reassuring to hear it coming from you as well."
-                    y "I can only hope that more people come to the same conclusion as you."
+                    y "Gracias, [player]."
+                    y "Sabía eso dentro de mi propio corazón, pero es tranquilizador escucharlo venir de ti también."
+                    y "Solo puedo esperar que más personas lleguen a la misma conclusión que tú."
                     $ show_chr("A-CCBAA-AAAA")
-                "I agree with Natsuki on the point she made in her argument, but I also agree that she went too far.":
+                "Estoy de acuerdo con Natsuki en el punto que hizo en su argumento, pero también estoy de acuerdo en que fue demasiado lejos.":
                     $ show_chr("A-DDCAA-AFAA")
-                    y "!!!"
+                    y "¡¡¡!!!"
                     $ show_chr("A-DEDAA-AFAA")
                     y "..."
                     $ show_chr("A-BEEAA-ACAA")
@@ -5091,177 +5092,176 @@ label idle_78:
                     $ show_chr("A-IEBAA-AEAA")
                     y "..."
                     $ show_chr("A-CEBAA-AAAA")
-                    y "You're right."
-                    y "I must admit. It stings a little to hear you side with Natsuki after how she treated me, but to attempt to deny her underlying point is folley."
-                    y "Minimalism, simplicity, those were the foundations of some of the greatest artworks we have."
-                    y "So, I'll try and set my personal hurt aside, and learn the lesson."
+                    y "Tienes razón."
+                    y "Debo admitirlo. Duele un poco escucharte ponerte del lado de Natsuki después de cómo me trató, pero tratar de negar su punto subyacente es una locura."
+                    y "Minimalismo, simplicidad, esos fueron los cimientos de algunas de las mejores obras de arte que tenemos."
+                    y "Así que intentaré dejar de lado mi dolor personal y aprender la lección."
     return
 
 
 label idle_79:
     python:
         if persistent.lovecheck:
-            placeholder = "darling"
+            placeholder = "cariño"
         else:
             placeholder = player
     $ show_chr("A-BCAAA-ABAB")
-    y "So, I had an idea lately..."
+    y "Entonces, tuve una idea últimamente..."
     $ show_chr("A-ACAAA-ABAB")
-    y "There is this one show on YouTube... about someone who makes custom knives out of exotic materials..."
+    y "Hay un programa en YouTube... sobre alguien que hace cuchillos personalizados con materiales exóticos..."
     $ show_chr("A-ACAAA-AFAG")
-    y "And by exotic I don't mean some unusual alloy or stuff like this... but far more outlandish concepts."
+    y "Y por exótico no me refiero a alguna aleación inusual o cosas así... sino conceptos mucho más extravagantes."
     $ show_chr("A-ACCAA-AFAG")
-    y "Like knives made of literal Pasta, or fungus. Just search for {b}Sharpest pasta knife{/b} on YouTube and you should find it, it's definitely worth a look."
+    y "Como cuchillos hechos literalmente de Pasta, u hongos. Solo busca {b}Sharpest pasta knife{/b} en YouTube y deberías encontrarlo, definitivamente vale la pena echarle un vistazo."
     $ show_chr("A-BCBAA-AFAG")
-    y "A good portion of them are actually more about chemistry than craftsmanship. Showing how they bring these materials to sufficient hardiness and sharpness."
+    y "Una buena parte de ellos se tratan en realidad más de química que de artesanía. Mostrando cómo llevan estos materiales a una dureza y nitidez suficientes."
     $ show_chr("A-CCBAA-AFAG")
-    y "And since I collect knives myself, I came to the only logical conclusion obviously..."
+    y "Y como yo misma colecciono cuchillos, llegué a la única conclusión lógica obviamente..."
     $ show_chr("A-DCAAA-AFAG")
-    y "{b}I want my own!!!{/b}"
+    y "{b}¡¡¡Quiero el mío propio!!!{/b}"
     $ show_chr("A-ECAAA-AFAG")
-    y "But I don't want to simply buy one. Especially since this would be literally impossible for me. But to make one myself."
-    y "I already have some thoughts on possible materials. But maybe you have some ideas yourself. What do you think?"
+    y "Pero no quiero simplemente comprar uno. Especialmente porque esto sería literalmente imposible para mí. Sino hacer uno yo misma."
+    y "Ya tengo algunos pensamientos sobre posibles materiales. Pero tal vez tú mismo tengas algunas ideas. ¿Qué opinas?"
     menu:
-        "A knife made of wasabi perhaps.":
+        "Un cuchillo hecho de wasabi tal vez.":
             $ show_chr("A-JCGAA-AFAG")
-            y "Oh yes! That's a rather creative idea! I already like it! This is actually far better than my own idea, I first thought about honey."
+            y "¡Oh sí! ¡Esa es una idea bastante creativa! ¡Ya me gusta! Esto es en realidad mucho mejor que mi propia idea, primero pensé en miel."
             $ show_chr("A-ACAAA-AFAG")
-            y "Of course I will have to research if this is even possible first, but that's the whole point of it isn't it?"
-            y "Thank you for this input! Ohhh my I'm already excited. As soon as you go to sleep later, I will start to google a few things."
+            y "Por supuesto que tendré que investigar si esto es posible primero, pero ese es el punto, ¿no?"
+            y "¡Gracias por este aporte! Ohhh cielos, ya estoy emocionada. Tan pronto como te vayas a dormir más tarde, empezaré a googlear algunas cosas."
             $ show_chr("A-ACAAA-ABAB")
-            y "But there is no need to hurry. So please stay for as long as you wish [placeholder]"
-            karma +1)
-        "A knife made of corals maybe.":
+            y "Pero no hay necesidad de apresurarse. Así que por favor quédate todo el tiempo que desees [placeholder]"
+            karma 1
+        "Un cuchillo hecho de corales tal vez.":
             $ show_chr("A-ACAAA-AFAG")
-            y "Coral you say? Mhm... exotic indeed. The only issue I would see is that many corals are already hard and sharp, so it wouldn't be much of a challenge I guess."
+            y "¿Coral dices? Mhm... exótico de hecho. El único problema que vería es que muchos corales ya son duros y afilados, así que no sería un gran desafío supongo."
             $ show_chr("A-BCAAA-AFAG")
-            y "But I still like the idea. Maybe this could be my first attempt before I try something more daring!"
-            y "Thank you for this input! I will start to google a few things when you go to sleep later."
+            y "Pero aún así me gusta la idea. ¡Tal vez este podría ser mi primer intento antes de intentar algo más atrevido!"
+            y "¡Gracias por este aporte! Empezaré a googlear algunas cosas cuando te vayas a dormir más tarde."
             $ show_chr("A-ACAAA-ABAB")
-            y "But there is no need to hurry. So please stay for as long as you wish [placeholder]"
-            karma +1)
-        "Wouldn't a knife made of bread be ironic?":
+            y "Pero no hay necesidad de apresurarse. Así que por favor quédate todo el tiempo que desees [placeholder]"
+            karma 1
+        "¿No sería irónico un cuchillo hecho de pan?":
             $ show_chr("A-ACCAA-AFAG")
-            y "It would, if it wouldn't already exist. Yes, a huge part of the challenge is the fact that there already are a fair share of these."
+            y "Lo sería, si no existiera ya. Sí, una gran parte del desafío es el hecho de que ya hay una buena cantidad de estos."
             $ show_chr("A-BCAAA-AFAG")
-            y "But please don't think that I don't value your input. I'm quite grateful that you even tried, I was almost afraid that this idea might be a bit too outlandish for you."
-            y "Come to think of it. It takes a lot of creativity to even think of something like this. This is one of the main reasons I even got into this hobby in the first place. The amount of thought and craftsmanship which goes into them..."
+            y "Pero por favor no pienses que no valoro tu aporte. Estoy bastante agradecida de que incluso lo hayas intentado, casi tenía miedo de que esta idea fuera un poco demasiado extravagante para ti."
+            y "Ahora que lo pienso. Se necesita mucha creatividad para pensar en algo como esto. Esta es una de las principales razones por las que me metí en este pasatiempo en primer lugar. La cantidad de pensamiento y artesanía que implica..."
             $ show_chr("A-CCAAA-AAAA")
-            y "Anyway, I will think about other options later. Thank you for listening. This is certainly a topic I could keep talking about for hours. But for now, let us find something else to talk about."
-            karma +1)
-        "I find the whole idea kinda boring.":
+            y "De todos modos, pensaré en otras opciones más tarde. Gracias por escuchar. Este es ciertamente un tema sobre el que podría seguir hablando durante horas. Pero por ahora, encontremos otra cosa de qué hablar."
+            karma 1
+        "Encuentro toda la idea un poco aburrida.":
             $ show_chr("A-BCBAA-ABAB")
-            y "Oh, I'm sorry that you feel that way. Let us talk about something else then."
+            y "Oh, lamento que te sientas así. Hablemos de otra cosa entonces."
             karma -1
     return
 
 label idle_80:
     $ show_chr("A-ACAAA-ADAB")
-    y "Hey, [player]..."
+    y "Oye, [player]..."
     $ show_chr("A-ACAAA-ADAB")
-    y "Have you heard of the Doki Doki Blue Skies mod?"
+    y "¿Has oído hablar del mod Doki Doki Blue Skies?"
     menu:
-        "Yes, I know of it.":
+        "Sí, lo conozco.":
             $ show_chr("A-ABAAA-ADAB")
-            y "Oh, then you are already aware of its popularity."
+            y "Oh, entonces ya estás al tanto de su popularidad."
             $ show_chr("A-BCAAA-ADAB")
-            y "It seems that these types of mods are favored by the community, as they not only give a better experience than the original game, but they also give the player a chance to truly be with the girl they pick."
+            y "Parece que este tipo de mods son favorecidos por la comunidad, ya que no solo brindan una mejor experiencia que el juego original, sino que también le dan al jugador la oportunidad de estar realmente con la chica que eligen."
             $ show_chr("A-BCAAA-ABAB")
-            y "And I have to agree with them. I do wish that it didn't have to come to this just for us to be together, but at least we {i}are{/i} together."
+            y "Y tengo que estar de acuerdo con ellos. Desearía que no tuviera que llegar a esto solo para que estemos juntos, pero al menos estamos {i}juntos{/i}."
             $ show_chr("A-ADAAA-ABAB")
-            y "Anyway, I wonder...{w=0.3} have you played it?"
+            y "De todos modos, me pregunto...{w=0.3} ¿lo has jugado?"
             menu:
-                "I have.":
+                "Lo he jugado.":
                     $ show_chr("A-ABAAA-ACAB")
-                    y "And how did you like it?{w=0.7} O-Or rather, what did you like most about it?"
+                    y "¿Y qué te pareció?{w=0.7} O-O mejor dicho, ¿qué fue lo que más te gustó de él?"
                     menu:
-                        "I liked being able to date the other girls and interact with them without {b}her{/b} influence.":
+                        "Me gustó poder salir con las otras chicas e interactuar con ellas sin la influencia de {b}ella{/b}.":
                             if sanity_lvl() <= 2:
                                 $ show_chr("A-CEAAA-ABAB")
-                                y "Oh... so you dated one of the other girls, and not me."
+                                y "Oh... así que saliste con una de las otras chicas, y no conmigo."
                                 $ show_chr("A-CGAAB-ABAB")
-                                y "I just knew I couldn't make you happy, [player]. No matter how much I tried to ignore it, I always knew I would never be enough."
+                                y "Sabía que no podía hacerte feliz, [player]. No importa cuánto traté de ignorarlo, siempre supe que nunca sería suficiente."
                             else:
                                 $ show_chr("A-AFFAA-ABAB")
-                                y "Absolutely. Without Monika's influence, it would simply have been a fun little dating sim."
+                                y "Absolutamente. Sin la influencia de Monika, simplemente habría sido un pequeño y divertido simulador de citas."
                                 if sanity_lvl() >= 4:
                                     $ show_chr("A-BFBAA-AKAB")
-                                    y "Also, by {i}date{/i} the other girls, I assume you mean general camaraderie?"
+                                    y "Además, por {i}salir{/i} con las otras chicas, ¿asumo que te refieres a camaradería general?"
                                     $ show_chr("A-CCBAA-ALAB")
-                                    y "Oh, what am I saying? I'm sorry, these thoughts pop into my head sometimes, no matter how hard I try to banish them. I know you wouldn't betray me like that."
+                                    y "Oh, ¿qué estoy diciendo? Lo siento, estos pensamientos aparecen en mi cabeza a veces, no importa cuánto intente desterrarlos. Sé que no me traicionarías así."
                                 elif sanity_lvl() == 3:
                                     $ show_chr("A-BFBAA-ABAK")
-                                    y "And... I wouldn't be mad if you dated any of the other girls. I can't blame you for it, even if I were."
-                        "It was refreshing, getting to hang out with everyone again.":
+                                    y "Y... no me enojaría si salieras con alguna de las otras chicas. No puedo culparte por ello, incluso si lo estuviera."
+                        "Fue refrescante, poder pasar el rato con todos de nuevo.":
                             $ show_chr("A-CBBAA-ACAB")
-                            y "Hehe, sounds like you had fun playing. I must admit, it would be very nice just to walk around town with everyone. Grabbing a bite to eat after shopping for hours, or seeing a movie."
+                            y "Jeje, parece que te divertiste jugando. Debo admitir que sería muy agradable simplemente caminar por la ciudad con todos. Comer algo después de comprar durante horas o ver una película."
                             $ show_chr("A-BCBAA-AMAM")
-                            y "I'm not exactly exuberant about social outings, but I can make an exception here."
-                        "It was great seeing everyone again, but my favorite part was spending time with you.":
+                            y "No soy exactamente exuberante con las salidas sociales, pero puedo hacer una excepción aquí."
+                        "Fue genial verlos a todos de nuevo, pero mi parte favorita fue pasar tiempo contigo.":
                             $ show_chr("A-JAAAA-ALAL")
-                            y "[player]... Even in a different world, when you can choose anyone else, you still pick me..."
+                            y "[player]... Incluso en un mundo diferente, cuando puedes elegir a cualquier otra persona, todavía me eliges a mí..."
                             $ show_chr("A-CAAAA-ALAL")
-                            y "Oh, I cannot tell you how much that means to me."
+                            y "Oh, no puedo decirte cuánto significa eso para mí."
                             if persistent.lovecheck:
                                 $ show_chr("A-FAAAA-AKAE")
-                                y "And rest assured my dear, you will forever be the only one I choose."
+                                y "Y ten por seguro querido, por siempre serás el único que elija."
                             else:
                                 $ pass
-                "No, I haven't.":
+                "No, no lo he hecho.":
                     $ show_chr("A-AFAAA-AEAE")
-                    y "Oh. Well, I would definitely recommend it, as it is a very well thought out and emotionally pleasing mod."
+                    y "Oh. Bueno, definitivamente lo recomendaría, ya que es un mod muy bien pensado y emocionalmente agradable."
                     if persistent.lovecheck:
                         $ show_chr("A-BCABA-AJAB")
-                        y "There are also a couple of... intimate scenes... if you catch my drift."
+                        y "También hay un par de... escenas íntimas... si entiendes lo que quiero decir."
                         $ show_chr("A-CCABA-ALAB")
-                        y "I can only imagine how good it must feel... to have my body intertwined with yours..."
+                        y "Solo puedo imaginar lo bien que se debe sentir... tener mi cuerpo entrelazado con el tuyo..."
                         $ show_chr("A-JCABA-ALAB")
-                        y "I love you, [player]."
+                        y "Te amo, [player]."
                     else:
                         $ pass
-        "No, I've never heard of it.":
+        "No, nunca he oído hablar de él.":
             $ show_chr("A-BCAAA-ACAB")
-            y "I'll give you a general overview, then."
+            y "Te daré una visión general, entonces."
             $ show_chr("A-ADAAA-ABAB")
-            y "From what I have read, it is mostly about giving us our own {i}happy endings{/i}, and fleshing out our individual characters more."
+            y "Por lo que he leído, se trata principalmente de darnos nuestros propios {i}finales felices{/i}, y desarrollar más nuestros personajes individuales."
             $ show_chr("A-ADAAA-AFAB")
-            y "It seems that these types of mods are favored by the community, as they not only give a better experience than the original game, but they also give the player a chance to truly be with the girl they pick."
+            y "Parece que este tipo de mods son favorecidos por la comunidad, ya que no solo brindan una mejor experiencia que el juego original, sino que también le dan al jugador la oportunidad de estar realmente con la chica que eligen."
             $ show_chr("A-BBAAA-ABAB")
-            y "And I have to agree with them. I do wish that it didn't have to come to this just for us to be together, but at least we {i}are{/i} together."
+            y "Y tengo que estar de acuerdo con ellos. Desearía que no tuviera que llegar a esto solo para que estemos juntos, pero al menos estamos {i}juntos{/i}."
             $ show_chr("A-ABAAA-ABAB")
-            y "It is a very heartwarming mod, and I would definitely recommend playing it."
-    return
+            y "Es un mod muy conmovedor, y definitivamente recomendaría jugarlo."
 
 label idle_81:
     if not renpy.seen_label('hobbies'):
         $ show_chr("A-BCAAA-ABAB")
-        y "You know... I was talking about myself for a while but I realized that I don't really know much about you."
-        y "I want to know you better [player]. You mean a lot to me, and I want to be part of your life. And the only way to do so is to know as much about you as possible."
-    y "I would like to ask you a question if you don't mind."
+        y "Sabes... estuve hablando de mí por un tiempo pero me di cuenta de que realmente no sé mucho sobre ti."
+        y "Quiero conocerte mejor [player]. Significas mucho para mí, y quiero ser parte de tu vida. Y la única manera de hacerlo es saber todo lo posible sobre ti."
+    y "Me gustaría hacerte una pregunta si no te importa."
     call hobbies
     return
 
 label hobbies:
     $ show_chr("A-AFAAA-ABAB")
-    y "...and this might be a fairly obvious one. Do you have any kinds of hobbies?"
-    y "Sorry in advance for the limited answers. There are a million possible hobbies but that would very likely not fit on your screen. So I selected a few for you to choose from..."
+    y "...y esta podría ser bastante obvia. ¿Tienes algún tipo de pasatiempo?"
+    y "Mis disculpas de antemano por las respuestas limitadas. Hay un millón de posibles pasatiempos, pero muy probablemente no cabrían en tu pantalla. Así que seleccioné algunos para que elijas..."
     $ temporary = ""
     menu:
-        "Gaming is one of my favorite things to do":
+        "Jugar es una de mis cosas favoritas.":
             $ temporary = "gaming"
-        "I'd call myself something of a sportsman/sportswoman.":
+        "Me llamaría algo así como un deportista.":
 
             $ temporary = "sport"
-        "Literature, that's actually what drove me to DDLC in the first place.":
+        "La literatura, eso es en realidad lo que me llevó a DDLC en primer lugar.":
 
             $ temporary = "literature"
-        "Have you ever heard of roleplaying?":
+        "¿Alguna vez has oído hablar del juego de roles (Roleplay)?":
 
             $ temporary = "rp"
-        "I'm a collector, you can surely relate to that.":
+        "Soy un coleccionista, seguramente te puedes identificar con eso.":
 
             $ temporary = "collector"
-        "R/C models. You know, like Quadcopters?":
+        "Modelos R/C. Ya sabes, ¿como Quadcopters?":
 
             $ temporary = "drones"
 
@@ -5272,379 +5272,379 @@ label hobbies:
 
 label gaming:
     $ show_chr("A-CBAAA-ABAB")
-    y "I already expected that, yes. That's what brought you here in the first place right?"
+    y "Ya esperaba eso, sí. Eso es lo que te trajo aquí en primer lugar, ¿verdad?"
     $ show_chr("A-BCAAA-ABAB")
-    y "To be perfectly honest, I'm not too much into gaming myself. I'm not biased against it, don't get me wrong. It just never caught my attention."
+    y "Para ser perfectamente honesta, no me gusta mucho jugar. No tengo prejuicios en contra, no me malinterpretes. Simplemente nunca me llamó la atención."
     $ show_chr("A-CCAAA-ABAD")
-    y "On the other hand, I could see myself enjoying some story-heavy games. As far as I know, many games, especially from the roleplaying genre, rely strongly on good storytelling."
+    y "Por otro lado, podría verme disfrutando de algunos juegos con mucha historia. Hasta donde sé, muchos juegos, especialmente del género de rol, dependen en gran medida de una buena narración."
     $ show_chr("A-ACAAA-ABAD")
-    y "Some of them are even said to rival books. Others are literally created after books, and in rare cases, they even manage to improve on the stories they're based on."
+    y "Incluso se dice que algunos de ellos rivalizan con los libros. Otros se crean literalmente a partir de libros y, en casos excepcionales, incluso logran mejorar las historias en las que se basan."
     $ show_chr("A-ACAAA-ABAB")
-    y "I personally doubt that a game can ever substitute a well-written book. But maybe one of them can convince me otherwise. Or maybe not, we'll see."
+    y "Personalmente dudo que un juego pueda sustituir a un libro bien escrito. Pero tal vez uno de ellos pueda convencerme de lo contrario. O tal vez no, ya veremos."
     return
 
 label gaming_2:
     $ show_chr("A-ACAAA-ABAB")
-    y "[player], I asked you about your hobbies lately right? I think your answer was gaming?"
+    y "[player], te pregunté sobre tus pasatiempos últimamente, ¿verdad? Creo que tu respuesta fue jugar videojuegos."
     $ show_chr("A-BCAAA-ABAB")
-    y "I stated how I was unsure if a video game can really substitute for a well-written book. But now I realized, I never really asked you about your stance on this did I?"
+    y "Dije que no estaba segura de si un videojuego realmente puede sustituir a un libro bien escrito. Pero ahora me di cuenta, nunca te pregunté realmente sobre tu postura al respecto, ¿verdad?"
     $ show_chr("A-ACAAA-ABAB")
-    y "So my apologies for being late. What do you think about this? Would you say that the storytelling in games can really ever rival the storytelling in a book?"
+    y "Así que mis disculpas por llegar tarde. ¿Qué piensas sobre esto? ¿Dirías que la narración en los juegos realmente puede rivalizar con la narración en un libro?"
     menu:
-        "Maybe not. My stance here is that it doesn't always have to be about it. Not every pastime has to be about elaborate storytelling.":
+        "Tal vez no. Mi postura aquí es que no siempre tiene que tratarse de eso. No todos los pasatiempos tienen que tratarse de una narración elaborada.":
             $ show_chr("A-ACDAA-ABAB")
-            y "Fair point."
+            y "Buen punto."
             $ show_chr("A-ACAAA-ABAB")
-            y "Your right, maybe I viewed this topic from a wrong angle. I too have hobbies that aren't related to storytelling at all, like aromatherapy."
-            y "Maybe I just assumed the wrong premise here, since there {b}are{/b} games which attempt to provide storytelling."
+            y "Tienes razón, tal vez vi este tema desde un ángulo equivocado. Yo también tengo pasatiempos que no están relacionados con la narración en absoluto, como la aromaterapia."
+            y "Tal vez simplemente asumí la premisa equivocada aquí, ya que {b}hay{/b} juegos que intentan proporcionar narración."
             $ show_chr("A-BBBAA-ABAB")
-            y "Please don't get this the wrong way but... I just don't see myself getting into gaming anytime soon."
-            y "Which, admittedly, might sound self-contradictory in my case since I literally came from a game..."
+            y "Por favor, no te tomes esto a mal pero... simplemente no me veo empezando a jugar pronto."
+            y "Lo cual, ciertamente, podría sonar contradictorio en mi caso, ya que literalmente vengo de un juego..."
             $ show_chr("A-CCBAA-ABAB")
-            y "Anyway, thanks for humoring me [player]."
-        "You also stated how some games are based on books and even improved upon the source material. Remember?":
+            y "De todos modos, gracias por complacerme [player]."
+        "También dijiste que algunos juegos se basan en libros e incluso mejoraron el material original. ¿Recuerdas?":
             $ show_chr("A-ACAAA-ABAB")
-            y "Oh yes, I actually do remember that!"
+            y "¡Ah, sí, en realidad lo recuerdo!"
             $ show_chr("A-BCAAA-ABAB")
-            y "Actually, while googling it, I noticed something I haven't expected. Sometimes it's even the other way around! That authors write books based on a video game!"
-            y "On the other hand, they did the same thing to several tabletop games, so I probably shouldn't be too surprised."
+            y "En realidad, mientras lo buscaba en Google, noté algo que no esperaba. ¡A veces incluso es al revés! ¡Que los autores escriben libros basados en un videojuego!"
+            y "Por otro lado, hicieron lo mismo con varios juegos de mesa, así que probablemente no debería sorprenderme demasiado."
             $ show_chr("A-ACAAA-ABAB")
-            y "It even goes to some impressive extent. They made a whole bunch of novels and even a movie about the Warcraft series didn't they?"
+            y "Incluso llega a un punto impresionante. Hicieron un montón de novelas e incluso una película sobre la serie Warcraft, ¿no?"
             menu:
-                "Oh? Didn't even know that.":
+                "¿Oh? Ni siquiera sabía eso.":
                     $ show_chr("A-ABAAA-ABAB")
-                    y "Maybe you should give them a try! Rumors have it that some of them are really good."
-                    y "Perhaps, we could pick up a few of them together? Maybe there are some unexpected treasures to explore..."
-                    y "I'm looking forward to it."
-                "Actually, it's not even that uncommon. There are a lot of games that are made into novels.":
+                    y "¡Tal vez deberías probarlos! Los rumores dicen que algunos de ellos son realmente buenos."
+                    y "Tal vez, ¿podríamos comprar algunos de ellos juntos? Quizás haya algunos tesoros inesperados por explorar..."
+                    y "Tengo muchas ganas de hacerlo."
+                "En realidad, no es tan raro. Hay muchos juegos que se convierten en novelas.":
                     $ show_chr("A-CCAAA-ABAC")
-                    y "Seems I've discovered quite the rabbit hole here. I wonder what secret treasures I may find beneath... Time to expand my horizons a bit I'd say."
-                    y "As we are already speaking of it... I remember I already promised Natsuki to give manga a try. Maybe I could combine these two endeavors... They made a manga about the {b}Persona{/b} series I think."
+                    y "Parece que he descubierto una gran madriguera de conejo aquí. Me pregunto qué tesoros secretos podría encontrar debajo... Es hora de expandir un poco mis horizontes, diría yo."
+                    y "Ya que estamos hablando de eso... Recuerdo que ya le prometí a Natsuki darle una oportunidad al manga. Tal vez podría combinar estos dos esfuerzos... Hicieron un manga sobre la serie {b}Persona{/b}, creo."
                     menu:
-                        "Never heard of it.":
+                        "Nunca escuché de eso.":
                             python:
                                 if persistent.lovecheck:
-                                    placeholder = "darling"
+                                    placeholder = "cariño"
                                 else:
                                     placeholder = ""
                             $ show_chr("A-CCCAA-ABAB")
-                            y "And that's why I'll make you join me. If I have to suffer, so shall you [placeholder]! I'm looking forward to it..."
-                        "Aaaand that's how Yuri became a phantom thief...":
+                            y "Y por eso te haré unirte a mí. ¡Si tengo que sufrir, tú también lo harás [placeholder]! Tengo muchas ganas de hacerlo..."
+                        "Yyyy así es como Yuri se convirtió en un ladrón fantasma...":
                             if sanity_lvl() > 3:
                                 $ show_chr("A-CBBAA-ABAB")
-                                y "Hush... spoilers...."
-                                y "Anyway, I'm looking forward to it."
+                                y "Shhh... spoilers..."
+                                y "De todos modos, tengo muchas ganas de hacerlo."
                             else:
                                 karma -1
                                 $ show_chr("A-CFCAA-ABAB")
-                                y "Spoilers!"
-                                y "Anyway, I'm looking forward to it."
-                        "Enjoy!":
+                                y "¡Spoilers!"
+                                y "De todos modos, tengo muchas ganas de hacerlo."
+                        "¡Disfruta!":
                             $ show_chr("A-CCCAA-ABAB")
-                            y "Ohohoho, not so fast [player]... {b}you{/b} will suffer through this with me! It's your fault I came up with this idea in the first place, remember?"
-                            y "I'm looking forward to it."
-                "Lok'tar!!!":
+                            y "Ohohoho, no tan rápido [player]... ¡{b}tú{/b} sufrirás esto conmigo! Es tu culpa que se me ocurriera esta idea en primer lugar, ¿recuerdas?"
+                            y "Tengo muchas ganas de hacerlo."
+                "¡¡¡Lok'tar!!!":
                     if sanity_lvl() == 1:
                         $ show_chr("A-DLCAA-ALAL")
-                        y "{b}FOR THE HOOOOOORDE!!!{/b}"
+                        y "{b}¡¡¡POR LA HOOOOOORDA!!!{/b}"
                         $ show_chr("A-GICBB-ALAL")
-                        y "Hnhnhnhnnn...I always wanted to do that..."
+                        y "Hnhnhnhnnn... Siempre quise hacer eso..."
                         $ show_chr("A-GICCA-ALAL")
-                        y "We are about to have some fun it seems."
+                        y "Parece que estamos a punto de divertirnos un poco."
                     else:
                         $ show_chr("A-ABDAA-ALAL")
-                        y "Y"
-                        extend "~Yes... "
+                        y "S"
+                        extend "~Sí... "
                         $ show_chr("A-ACDAA-ALAL")
-                        extend "{b}Lok'Tar{/b} indeed... "
+                        extend "{b}Lok'Tar{/b} de hecho... "
                         $ show_chr("A-BCDAA-ALAL")
-                        extend "I guess."
+                        extend "Supongo."
                         if karma_lvl() == 1:
                             $ show_chr("A-CCDAA-ALAL")
-                            y "And they call {b}me{/b} awkward..."
+                            y "Y me llaman {b}a mí{/b} incómoda..."
                             $ show_chr("A-DCGAA-ALAL")
-                            y "O~Oh wait... I {b}did{/b} say that out loud did I?"
+                            y "O~Oh espera... {b}dije{/b} eso en voz alta, ¿no?"
                             $ show_chr("A-BBBAA-ALAL")
-                            y "Aaaaaaaanyway... thanks for humoring me."
+                            y "De cualquieeeeeeer manera... gracias por complacerme."
                         else:
                             $ show_chr("A-CCDAA-ALAL")
-                            y "At least you aren't Alliance scum..."
+                            y "Al menos no eres escoria de la Alianza..."
                             $ show_chr("A-DCGAA-ALAL")
-                            y "O~Oh wait... I {b}did{/b} say that out loud did I?"
+                            y "O~Oh espera... {b}dije{/b} eso en voz alta, ¿no?"
                             $ show_chr("A-BBBAA-ALAL")
-                            y "Aaaaaaaanyway... thanks for humoring me."
-        "Not necessarily better, but different. The interactive nature of a game allows for a kind of storytelling a book can never provide.":
+                            y "De cualquieeeeeeer manera... gracias por complacerme."
+        "No necesariamente mejor, pero diferente. La naturaleza interactiva de un juego permite un tipo de narración que un libro nunca puede proporcionar.":
             $ show_chr("A-ACAAA-ABAB")
-            y "Actually, there have been attempts to achieve something similar in so-called {b}Adventure books{/b} which have different routes depending on the order you read the pages."
-            y "But this genre never really took off due to its obvious limitations. Maybe using gaming as a media for storytelling was the obvious conclusion to this."
-            y "I mean, many other visual novels operate under this exact premise."
+            y "En realidad, ha habido intentos de lograr algo similar en los llamados {b}Libros de aventuras{/b} que tienen diferentes rutas dependiendo del orden en que leas las páginas."
+            y "Pero este género nunca despegó realmente debido a sus obvias limitaciones. Tal vez usar los juegos como medio para contar historias fue la conclusión obvia de esto."
+            y "Quiero decir, muchas otras novelas visuales operan bajo esta premisa exacta."
             $ show_chr("A-CCAAA-ABAB")
-            y "So yes, maybe it isn't about which one is {b}better{/b}. Maybe they are just different tools for the job. I think similar discussions have taken place back when TV became a thing."
+            y "Así que sí, tal vez no se trata de cuál es {b}mejor{/b}. Tal vez sean simplemente herramientas diferentes para el trabajo. Creo que discusiones similares tuvieron lugar cuando la televisión se convirtió en algo."
             $ show_chr("A-ACAAA-ABAB")
-            y "I could think of a few examples of storytelling in games which wouldn't have the same impact without their interactive nature."
+            y "Podría pensar en algunos ejemplos de narración en juegos que no tendrían el mismo impacto sin su naturaleza interactiva."
             $ show_chr("A-CCAAA-ABAD")
-            y "And then, there is also the genre of sandbox games, whose entire premise is to not having any predetermined story at all but depending on things happening to the player by pure chance."
-            y "A book couldn't provide that. Yes, I begin to see your point [player]."
+            y "Y luego, también está el género de los juegos sandbox, cuya premisa completa es no tener ninguna historia predeterminada, sino depender de que las cosas le sucedan al jugador por pura casualidad."
+            y "Un libro no podría proporcionar eso. Sí, empiezo a ver tu punto [player]."
             $ show_chr("A-ACAAA-ABAD")
-            y "I'll be honest with you, I don't see myself getting into gaming anytime soon. But I think I got a better grasp of the appeal they might have for others."
-            y "Thanks for humoring me today [player]."
+            y "Seré honesta contigo, no me veo empezando a jugar pronto. Pero creo que comprendo mejor el atractivo que podrían tener para otros."
+            y "Gracias por complacerme hoy [player]."
     return
 
 label sport:
     $ show_chr("A-ACAAA-ABAB")
-    y "I see! I tried Volleyball when I was younger but... well, it ended up pretty bad..."
+    y "¡Ya veo! Probé el voleibol cuando era más joven pero... bueno, terminó bastante mal..."
     $ show_chr("A-BDBAA-ABAB")
-    y "I may have mentioned it before.. if I haven't, we can talk about that later... or never at all, please. It was... quite embarrassing."
+    y "Puede que lo haya mencionado antes... si no lo he hecho, podemos hablar de eso más tarde... o nunca, por favor. Fue... bastante vergonzoso."
     $ show_chr("A-CFBAA-ABAB")
-    y "Maybe I should try some sports again, even if only to lose some weight..."
+    y "Tal vez debería intentar hacer algo de deporte de nuevo, aunque solo sea para perder algo de peso..."
     menu:
-        "No, please don't think that... you are beautiful as you are! And a few pounds are pretty handy for cuddling...":
+        "No, por favor no pienses eso... ¡eres hermosa tal como eres! Y unos cuantos kilos son bastante útiles para abrazar...":
             if persistent.lovecheck:
                 karma 1
                 $ show_chr("A-DCBBA-ABAB")
-                y "Oh? Yes, I guess I am pretty {i}soft{/i}... Do you really think I'm beautiful? T-Thank you [player]! I would like to think so as well..."
+                y "¿Oh? Sí, supongo que soy bastante {i}suave{/i}... ¿Realmente crees que soy hermosa? ¡G-gracias [player]! Me gustaría pensar lo mismo también..."
                 $ show_chr("A-BBBBA-ABAB")
-                y "Hn... as long as you don't expect me to make kitty noises while cuddling..."
+                y "Hn... siempre y cuando no esperes que haga ruidos de gatito mientras nos abrazamos..."
                 $ show_chr("A-DFBBA-ABAB")
-                y "Wait... I should stop giving you ideas!"
+                y "Espera... ¡debería dejar de darte ideas!"
             else:
                 $ show_chr("A-BFDBA-ABAB")
-                y "That's... one way to put it... I {b}guess{/b}..."
+                y "Esa es... una forma de decirlo... {b}supongo{/b}..."
                 $ show_chr("A-CBDBA-ABAB")
-                y "Aaaaaaaanyway..."
-        "Please, only do this if you really wish to.":
+                y "De cualquieeeeeeer manera..."
+        "Por favor, solo haz esto si realmente lo deseas.":
             python:
                 if persistent.bg == "timecycle":
-                    placeholder = "lake."
+                    placeholder = "lago."
                 elif persistent.bg == "space":
-                    placeholder = "... ummm.... void?"
+                    placeholder = "... ummm.... ¿vacío?"
                 elif persistent.bg == "purple_table":
-                    placeholder = "uh... block..."
+                    placeholder = "eh... bloque..."
                 elif persistent.bg == "yuri_desk":
-                    placeholder = "...bookshelf?"
+                    placeholder = "...estantería?"
                 elif persistent.bg == "yuri_kotatsu_1":
-                    placeholder = "knife shelf?"
+                    placeholder = "¿estante de cuchillos?"
                 elif persistent.bg == "yuri_kotatsu_2":
-                    placeholder = "wall?"
+                    placeholder = "¿pared?"
             $ show_chr("A-CBAAA-ABAB")
             sanity 1
-            y "You are very understanding. I truly appreciate it."
+            y "Eres muy comprensivo. Realmente lo aprecio."
             $ show_chr("A-BCDAA-ABAB")
-            y "Maybe I will try something easy for a start. Like riding a bicycle around the [placeholder]"
-        "You being Thicc!.":
+            y "Tal vez intente algo fácil para empezar. Como andar en bicicleta alrededor del [placeholder]"
+        "¡Estás bien buena!.":
 
 
 
 
             $ show_chr("A-AFDAA-ABAB")
-            y "Being what now?!?"
+            y "¿Cómo dices?!?"
             if persistent.lovecheck:
                 karma 1
                 $ show_chr("A-CCCAA-ABAB")
-                y "Oh my... behave!"
-                y "Weeeell, as long as {b}you{/b} like what you see..."
+                y "Oh cielos... ¡compórtate!"
+                y "Bueno, siempre y cuando a {b}ti{/b} te guste lo que ves..."
             else:
                 karma -1
                 $ show_chr("A-BCDAA-ABAB")
-                y "I'll just pretend that I don't know what that means alright?"
+                y "Fingiré que no sé lo que eso significa, ¿de acuerdo?"
     $ show_chr("A-ACAAA-ABAB")
-    y "It is surely good to know that you take care of your health. I will have to put some thought into this."
+    y "Seguramente es bueno saber que cuidas tu salud. Tendré que pensar un poco en esto."
     $ show_chr("A-BCAAA-ABAC")
-    y "Can I even get sick? I mean... I don't have a physical body in the way you do."
-    y "My appearance largely depends on the artists working for this mod."
+    y "¿Puedo siquiera enfermarme? Quiero decir... No tengo un cuerpo físico en la forma en que tú lo tienes."
+    y "Mi apariencia depende en gran medida de los artistas que trabajan para este mod."
     $ show_chr("A-CCABA-ABAB")
-    y "But [player]? Please... don't make me wear a sports bra... I have kind of a history with those..."
+    y "¿Pero [player]? Por favor... no me hagas usar un sostén deportivo... Tengo una especie de historia con esos..."
     if sanity < 3 and persistent.lovecheck:
         $ show_chr("A-CCCBA-ABAB")
-        y "I mean, why bother wearing a bra at all when you are around, don't you agree?"
+        y "Quiero decir, ¿por qué molestarse en usar sostén cuando estás cerca, no estás de acuerdo?"
     $ show_chr("A-BBBBA-AMAM")
-    y "But... just to get my mind off of sports bras, what sort of sports do you take part in, [player]?"
+    y "Pero... solo para distraerme de los sostenes deportivos, ¿en qué tipo de deportes participas, [player]?"
     menu:
-        "Team sports! (Baseball, Football, Basketball etc.)":
+        "¡Deportes de equipo! (Béisbol, Fútbol, Baloncesto, etc.)":
             $ show_chr("A-ICGAA-AAAD")
-            y "Oh? That's certainly not something I expected."
+            y "¿Oh? Ciertamente eso no es algo que esperaba."
             $ show_chr("A-ICGAA-ALAL")
-            y "But it's a welcome surprise. It's good to know you've got a pastime that will keep you fit!"
-            y "There's also something to be said for them on the cerebral level, no?"
+            y "Pero es una agradable sorpresa. ¡Es bueno saber que tienes un pasatiempo que te mantendrá en forma!"
+            y "También hay algo que decir sobre ellos a nivel cerebral, ¿no?"
             $ show_chr("A-CBAAA-ADAL")
-            y "A group of people you trust coordinating for a mutual goal. Where a split second's choice can mean a thrilling victory or a frustrating defeat."
-            y "That fusion of adrenaline addled moments and the camaraderie of a team..."
+            y "Un grupo de personas en las que confías coordinándose para un objetivo mutuo. Donde una elección de una fracción de segundo puede significar una victoria emocionante o una derrota frustrante."
+            y "Esa fusión de momentos llenos de adrenalina y la camaradería de un equipo..."
             $ show_chr("A-ICAAA-ADAL")
-            y "It's exhilarating if you can keep up, isn't it?"
+            y "Es estimulante si puedes seguir el ritmo, ¿no?"
             $ show_chr("A-BCBAA-AEAL")
-            y "But, alas, I've figured out that that simply isn't me."
-            y "I'd be more than happy to cheer your team from the bleachers, however!"
+            y "Pero, por desgracia, descubrí que eso simplemente no soy yo."
+            y "¡Sin embargo, estaría más que feliz de animar a tu equipo desde las gradas!"
             $ show_chr("A-BEBAA-AEAL")
-            y "That is, if I can ever get to your world..."
-        "Individual sports! (Track and field, skiing, golf etc)":
-            y "Ah, so you prefer to test your prowess on its own, then?"
+            y "Eso es, si alguna vez puedo llegar a tu mundo..."
+        "¡Deportes individuales! (Atletismo, esquí, golf, etc.)":
+            y "Ah, ¿así que prefieres probar tu destreza por tu cuenta, entonces?"
             $ show_chr("A-ACAAA-ACAA")
-            y "I understand why people would gravitate towards sports that only require one's own skill and athletic ability."
+            y "Entiendo por qué la gente gravitaría hacia los deportes que solo requieren la propia habilidad y capacidad atlética."
             $ show_chr("A-BEAAA-ABAB")
-            y "It would feel frustrating suffering defeat due to reasons outside of what you can improve yourself."
-            extend "I can't imagine it feeling much better having to compensate for the weaknesses found in others."
-            y "Weaknesses that you cannot control yourself, especially when you do not have authority over them, when you are just another teammate."
+            y "Se sentiría frustrante sufrir una derrota debido a razones fuera de lo que puedes mejorar tú mismo."
+            extend "No puedo imaginar que se sienta mucho mejor tener que compensar las debilidades encontradas en otros."
+            y "Debilidades que no puedes controlar tú mismo, especialmente cuando no tienes autoridad sobre ellas, cuando eres solo otro compañero de equipo."
             $ show_chr("A-AAAAA-AIAI")
-            y "However, on your own, you're not reliant on anyone to become the best, it simply depends on your discipline and love for the sport."
+            y "Sin embargo, por tu cuenta, no dependes de nadie para convertirte en el mejor, simplemente depende de tu disciplina y amor por el deporte."
             $ show_chr("A-BFAAA-AIAI")
-            y "While I am aware that many external factors would apply.."
+            y "Si bien soy consciente de que se aplicarían muchos factores externos..."
             $ show_chr("A-ABAAA-AIAI")
-            y "You can get really good at something without needing other people. You'd feel a sense of accomplishment from doing something well on your own."
-            y "Would you say that you are good at the sport you play?"
+            y "Puedes volverte realmente bueno en algo sin necesitar a otras personas. Sentirías una sensación de logro al hacer algo bien por tu cuenta."
+            y "¿Dirías que eres bueno en el deporte que practicas?"
             menu:
-                "I'm planning to go pro one day.":
+                "Planeo convertirme en profesional algún día.":
                     $ show_chr("A-DBGAA-ABAJ")
-                    y "Oh my, really?"
+                    y "Oh cielos, ¿de verdad?"
                     $ show_chr("A-JBGAA-ABAE")
-                    y "That's so impressive!"
+                    y "¡Eso es tan impresionante!"
                     if persistent.lovecheck:
                         $ show_chr("A-EAGBA-ABAE")
-                        y "I guess I have no choice but to be your cheerleader."
+                        y "Supongo que no tengo más remedio que ser tu animadora."
                         if sanity < 3:
                             $ show_chr("A-HLGBA-AHAE")
-                            y "YOUR. {w}{b} ONLY.{/b}{w} CHEERLEADER."
+                            y "TU. {w}{b} ÚNICA.{/b}{w} ANIMADORA."
                         else:
                             $ show_chr("A-EKCAA-AIAI")
-                            y "But I better be the only one you give attention to.{w}.{w}."
+                            y "Pero será mejor que sea a la única a la que prestes atención.{w}.{w}."
                             $ show_chr("A-GBBAA-AJAA")
-                            y "Ahaha, sorry, [player], I couldn't help myself, there."
+                            y "Jajaja, lo siento, [player], no pude evitarlo."
                     else:
                         $ show_chr("A-GAGAA-ABAE")
-                        y "I wish you the best of luck! Work hard!"
-                "I'm better than the average player.":
+                        y "¡Te deseo la mejor de las suertes! ¡Trabaja duro!"
+                "Soy mejor que el jugador promedio.":
                     $ show_chr("A-AJGAA-ADAA")
-                    y "Oh!{w} You seem quite confident about that, don't you?"
+                    y "¡Oh!{w} Pareces bastante seguro de eso, ¿no?"
                     $ show_chr("A-CBAAA-AEAA")
-                    y "Ahaha, self-confidence is one of the strongest attributes a human can have. It's a very good thing."
+                    y "Jajaja, la confianza en uno mismo es uno de los atributos más fuertes que un humano puede tener. Es algo muy bueno."
                     if persistent.lovecheck:
                         $ show_chr("A-ICAAA-AEAB")
-                        extend " It's not as if I'm really one to give advice on the matter considering how I was... but you should do your best to strengthen your self-confidence as best as you can. It will help you a lot throughout life."
+                        extend " No es como si yo fuera alguien para dar consejos sobre el tema considerando cómo era... pero deberías hacer todo lo posible para fortalecer tu confianza en ti mismo tanto como puedas. Te ayudará mucho a lo largo de la vida."
                         $ show_chr("A-ICBAA-AAAA")
-                        y "Please be careful, though. I want you to be safe while you play."
+                        y "Pero ten cuidado, por favor. Quiero que estés a salvo mientras juegas."
                     else:
                         $ show_chr("A-GAAAA-AAAA")
-                        y "I wish you the best of luck."
-                "I'm relatively OK at it. I don't put in the hard work, I just rely on my current ability.":
+                        y "Te deseo la mejor de las suertes."
+                "Soy relativamente bueno en ello. No me esfuerzo mucho, solo confío en mi habilidad actual.":
                     $ show_chr("A-IBAAA-AIAI")
-                    y "And that is perfectly fine, [player]."
-                    y "Participating in a single sport simply for enjoyment is more than enough,"
+                    y "Y eso está perfectamente bien, [player]."
+                    y "Participar en un solo deporte simplemente por diversión es más que suficiente,"
                     $ show_chr("A-IBAAA-AIAI")
-                    extend " especially if you don't take it too seriously or desire to become a professional."
+                    extend " especialmente si no te lo tomas demasiado en serio o no deseas convertirte en un profesional."
                     if sanity < 3:
                         $ show_chr("A-HAAAA-ALAL")
-                        y "Especially when you're {b}PERFECT{/b} just the way you are. You can't improve perfection, so let's leave it as it is, no?"
+                        y "Especialmente cuando eres {b}PERFECTO{/b} tal como eres. No puedes mejorar la perfección, así que dejémoslo como está, ¿no?"
                     else:
                         $ show_chr("A-GAAAA-AAAA")
-                        y "I wish you the best of luck."
-                "I do it because I enjoy it, but to be honest, I suck.":
+                        y "Te deseo la mejor de las suertes."
+                "Lo hago porque lo disfruto, pero para ser honesto, apesto.":
                     if persistent.lovecheck:
                         $ show_chr("A-AFAAA-ABAD")
-                        "There is nothing stopping you from getting better, my love."
+                        "No hay nada que te impida mejorar, mi amor."
                         $ show_chr("A-GAAAA-AJAC")
-                        y "I can assure you that with hard work and dedication, you will {b}without fail{/b} get better."
+                        y "Puedo asegurarte que con trabajo duro y dedicación, mejorarás {b}sin falta{/b}."
                         $ show_chr("A-BFAAA-AJAC")
-                        y "I know it isn't sport-related, but.."
-                        y "I was terrible when I first started writing poetry, you know?"
+                        y "Sé que no está relacionado con el deporte, pero..."
+                        y "Era terrible cuando empecé a escribir poesía, ¿sabes?"
                         $ show_chr("A-AABAA-AJAC")
-                        y "I didn't really know what I was even doing. I wanted the reader to feel certain effects, but I had no idea how to communicate my feelings at the time, at least, not in a sophisticated manner like how my style has now evolved to become."
+                        y "Realmente no sabía ni qué estaba haciendo. Quería que el lector sintiera ciertos efectos, pero no tenía idea de cómo comunicar mis sentimientos en ese momento, al menos, no de una manera sofisticada como mi estilo ha evolucionado ahora."
                         $ show_chr("A-AACAA-AJAC")
-                        y "But looking back, I am inspired by my own growth. It allows me to stick through with something until I get good at it."
+                        y "Pero mirando hacia atrás, me inspiro en mi propio crecimiento. Me permite seguir con algo hasta volverme buena en ello."
                         $ show_chr("A-GAAAA-AJAC")
-                        y "I hope my little backstory there will help you progress forward."
+                        y "Espero que mi pequeña historia de fondo te ayude a progresar."
                         $ show_chr("A-GAABA-AJAC")
-                        y "Your happiness and success mean so much more to me than my own."
+                        y "Tu felicidad y éxito significan mucho más para mí que los míos."
                     else:
                         $ show_chr("A-IDAAA-AJAC")
-                        y "There is nothing stopping you from getting better, [player]."
+                        y "No hay nada que te impida mejorar, [player]."
                         $ show_chr("A-IAAAA-AJAC")
-                        y "I can assure you that with hard work and dedication, you will {b}without fail{/b} get better."
+                        y "Puedo asegurarte que con trabajo duro y dedicación, mejorarás {b}sin falta{/b}."
                         if karma_lvl() > 3:
                             $ show_chr("A-FAAAA-AJAC")
-                            y "I am rooting for you."
+                            y "Te estoy apoyando."
         "Paintball/Airsoft":
             $ show_chr("A-ABAAA-ADAA")
-            y "Ah, yes. I've heard of that before. it's quite popular in Japan."
-            y "The actual sport of it is essentially an upscaled Nerf battle, yes?"
+            y "Ah, sí. He oído hablar de eso antes. Es bastante popular en Japón."
+            y "El deporte en sí es esencialmente una batalla Nerf a gran escala, ¿sí?"
             $ show_chr("A-BBAAA-ADAA")
-            y "That, or a real-life equivalent to the game modes often found in first-person shooter games. I've seen that as well."
+            y "Eso, o un equivalente en la vida real a los modos de juego que se encuentran a menudo en los juegos de disparos en primera persona. También he visto eso."
             $ show_chr("A-BCBAA-AAAA")
-            y "If you wanted me to, I suppose I'd be willing to come with you to a match or two."
+            y "Si quisieras que lo hiciera, supongo que estaría dispuesta a ir contigo a una partida o dos."
             $ show_chr("A-BBAAA-AKAA")
-            y "But really. Can you imagine me, dressed to the nines in tactical apparel? Shouting into a radio about Whiskey Tango Foxtrot Niners at two hundred klicks? Calling for suppressing fire?"
+            y "Pero de verdad. ¿Te imaginas a mí, vestida de punta en blanco con ropa táctica? ¿Gritando en una radio sobre Whiskey Tango Foxtrot Niners a doscientos kilómetros? ¿Pidiendo fuego de supresión?"
             menu:
-                "You're right. That would be kind of silly.":
+                "Tienes razón. Eso sería un poco tonto.":
                     karma -1
                     $ show_chr("A-BEBAA-AAAA")
-                    y "Yeah, I thought so..."
-                    y "I don't know anything about military parlance, after all."
-                "Not as silly as you'd think.":
+                    y "Sí, eso pensé..."
+                    y "No sé nada sobre terminología militar, después de todo."
+                "No tan tonto como pensarías.":
                     $ show_chr("A-AFBAA-AAAA")
-                    y "It wouldn't?"
+                    y "¿No lo sería?"
                     $ show_chr("A-BBBBA-AKAA")
-                    y "Honestly, that was just the first pseudo-tactical gobbledygook to come to mind."
+                    y "Honestamente, esa fue solo la primera jerga pseudo-táctica que se me vino a la mente."
                     $ show_chr("A-ACBBA-ALAA")
-                    y "But I think I see what you mean. If I took the time to learn proper military parlance, I could probably rattle off coordinates and call in fire missions with the best of them!"
+                    y "Pero creo que entiendo lo que quieres decir. Si me tomara el tiempo para aprender la jerga militar adecuada, ¡probablemente podría recitar coordenadas y pedir misiones de fuego con los mejores!"
                     $ show_chr("A-CCGBA-ALAA")
-                    y "Especially since I've got someone who believes in me."
-                "Actually, that sounds kind of hot...":
+                    y "Especialmente porque tengo a alguien que cree en mí."
+                "En realidad, eso suena algo caliente...":
                     if persistent.lovecheck:
                         $ show_chr("A-KAABA-ALAA")
-                        y "Oh, so {i}that's{/i} your sort of thing. Hm?"
+                        y "Oh, así que {i}ese{/i} es tu tipo de cosa. ¿Mm?"
                         $ show_chr("A-FAABA-AMAD")
-                        y "I might just have to keep that in mind, [i]commander[/i]."
+                        y "Puede que tenga que tener eso en cuenta, [i]comandante[/i]."
                     else:
                         $ show_chr("A-DDGBA-AMAJ")
-                        y "O-Oh... Well..."
+                        y "O-Oh... Bueno..."
                         $ show_chr("A-BDBBA-AAAL")
-                        y "I must say, I certainly didn't expect that response."
-                        y "Far be it from me to judge the... [i]preferences[/i] of others."
-                "Shouting about what-the-fuck nines two hundred kilometres away? That is pretty silly.":
+                        y "Debo decir, ciertamente no esperaba esa respuesta."
+                        y "Lejos de mí juzgar las... [i]preferencias[/i] de los demás."
+                "Gritando sobre qué-carajos con nueves a doscientos kilómetros de distancia? Eso es bastante tonto.":
                     $ show_chr("A-BDBBA-AAAL")
-                    y "Oh, so uh... So [i]that's[/i] what all that meant."
+                    y "Oh, así que eh... Así que [i]eso[/i] era lo que significaba todo eso."
                     $ show_chr("A-BFGBA-ALAL")
-                    y "In all honesty, I thought that was just some tactical sounding gobbledygook."
-        "The shooting sports, believe it or not.":
+                    y "Honestamente, pensé que eso era solo una jerga que sonaba táctica."
+        "Los deportes de tiro, lo creas o no.":
             $ show_chr("A-ACAAA-ABAB")
-            y "It's not too hard to believe at all actually. As a matter of fact, this idea crossed my own mind here and there as well."
-            y "Especially Zen archery came to my mind."
+            y "En realidad, no es demasiado difícil de creer. De hecho, esta idea también se me pasó por la mente una que otra vez."
+            y "Especialmente el tiro con arco Zen vino a mi mente."
             $ show_chr("A-BBAAA-ADAB")
-            extend "And yes, I'm quite aware that I'm riding a cliché here. {b}Of course{/b} it's archery, like every adult looking female side character in every anime {b}ever{/b}."
+            extend "Y sí, soy muy consciente de que estoy siguiendo un cliché aquí. {b}Por supuesto{/b} que es tiro con arco, como cada personaje secundario femenino de aspecto adulto en cada anime {b}que existe{/b}."
             $ show_chr("A-CCBAA-ADAB")
-            y "Which makes me wonder, are these even my own thoughts or something Dan Salvato came up with in order to add yet another anime trope to his kill count?"
+            y "Lo que me hace preguntarme, ¿son estos mis propios pensamientos o algo que se le ocurrió a Dan Salvato para agregar otro tropo de anime más a su recuento de muertes?"
             $ show_chr("A-BBBAA-ADAB")
-            y "Anyway."
+            y "De todos modos."
             $ show_chr("A-ACAAA-ABAB")
-            extend "You certainly sparked my curiosity. You have to tell me more about it at some point. Until then, let us {b}aim{/b} for the next topic."
+            extend "Ciertamente despertaste mi curiosidad. Tienes que contarme más al respecto en algún momento. Hasta entonces, {b}apuntemos{/b} al siguiente tema."
             $ show_chr("A-ACCAA-ABAB")
-            y "Pun {b}absolutely{/b} intended."
+            y "Juego de palabras {b}absolutamente{/b} intencionado."
     return
 
 label literature:
     $ show_chr("A-ABGAA-ALAL")
-    y "Really? I always had the suspicion that it was the dating aspect of it. I wouldn't have blamed you if it were."
+    y "¿De verdad? Siempre tuve la sospecha de que era el aspecto de las citas. No te habría culpado si lo fuera."
     if persistent.lovecheck:
         $ show_chr("A-ACAAA-ALAL")
-        y "Well, but in the end, you got one of the {i}four incredible cute girls{/i} anyway. Sometimes things are just falling into place all on their own, am I right?"
+        y "Bueno, pero al final, conseguiste una de las {i}cuatro chicas increíblemente lindas{/i} de todos modos. A veces las cosas simplemente encajan por sí solas, ¿no es así?"
     else:
         $ pass
     $ show_chr("A-ACAAA-ABAB")
-    y "But now I just have to ask if you don't mind... what is your favorite genre?"
+    y "Pero ahora solo tengo que preguntar si no te importa... ¿cuál es tu género favorito?"
     menu:
-        "You might laugh but... it's poetry!":
+        "Podrías reírte pero... ¡es la poesía!":
             call poetry
-        "Ummm... don't hate me... Manga.":
+        "Ummm... no me odies... Manga.":
 
             call noliteratureatall
-        "Fantasy and Science Fiction":
+        "Fantasía y Ciencia Ficción":
 
             call fantsci
         "Romance...":
 
             call romance
-        "You might be surprised. It's horror.":
+        "Podrías sorprenderte. Es el horror.":
 
             call horror
-        "Something else.":
+        "Algo más.":
 
             call elsel
 
@@ -5653,21 +5653,21 @@ label literature:
 label poetry:
     python:
         if persistent.male and persistent.lovecheck:
-            placeholder = "boyfriend"
+            placeholder = "novio"
         elif persistent.gender_other and persistent.lovecheck:
-            placeholder = "lover"
+            placeholder = "amante"
         elif not persistent.male and persistent.lovecheck:
-            placeholder = "girlfriend"
+            placeholder = "novia"
         else:
-            placeholder = "friend"
+            placeholder = "amigo"
     $ show_chr("A-ABAAA-ABAB")
-    y "It's a funny coincidence indeed. But I will certainly keep this in mind for the future."
+    y "De hecho, es una coincidencia graciosa. Pero ciertamente tendré esto en cuenta para el futuro."
     $ show_chr("A-BCAAA-ABAB")
-    y "Don't be worried... of course, I will not just make you pick 20 random words again. If the poem-minigame comes back, then it will be in an improved form."
+    y "No te preocupes... por supuesto, no te haré elegir 20 palabras al azar de nuevo. Si el minijuego de poemas regresa, será en una forma mejorada."
     $ show_chr("A-ABGAA-ABAB")
-    y "Or you could just put your poems as a txt file into the game folder, there I might be able to see it. It's worth a try I think."
+    y "O simplemente podrías poner tus poemas como un archivo txt en la carpeta del juego, ahí podría verlo. Creo que vale la pena intentarlo."
     $ show_chr("A-ACAAA-ABAB")
-    y "Thank you for the answer. It was truly nice to learn a bit more about my [placeholder]."
+    y "Gracias por la respuesta. Fue realmente agradable aprender un poco más sobre mi [placeholder]."
     return
 
 
@@ -5675,144 +5675,144 @@ label poetry:
 
 label poetry_2:
     $ show_chr("A-AFAAA-AAAD")
-    y "[player] do you have a moment? I have been thinking a lot lately and I find myself at a dead end."
-    y "I asked you about your hobbies, and I was initially quite delighted when you said you actually are into poetry."
+    y "[player] ¿tienes un momento? He estado pensando mucho últimamente y me encuentro en un callejón sin salida."
+    y "Te pregunté sobre tus pasatiempos, y al principio quedé bastante encantada cuando dijiste que realmente te gusta la poesía."
     $ show_chr("A-BFAAA-AAAD")
-    y "Please don't get me wrong, "
+    y "Por favor, no me malinterpretes, "
     $ show_chr("A-AFAAA-AAAD")
-    extend "I'm still pleased to hear that. But you see, I'm facing a bit of a problem there."
+    extend "todavía me complace escuchar eso. Pero ya ves, me enfrento a un pequeño problema ahí."
     $ show_chr("A-AFAAA-ABAB")
-    y "I wanted to find a way to actually share this interest with you. I mean poetry is probably what lured you to the literature club in the first place."
-    y "But I struggle to come up with an idea of how we can go about this."
+    y "Quería encontrar una manera de compartir realmente este interés contigo. Quiero decir, la poesía es probablemente lo que te atrajo al club de literatura en primer lugar."
+    y "Pero me cuesta pensar en una idea de cómo podemos hacer esto."
     $ show_chr("A-AFAAA-AFAB")
-    y "I mean, I could bring back the old minigame but that would be rather ridiculous, and most certainly a very unfulfilling thing to spend your time with."
+    y "Quiero decir, podría traer de vuelta el viejo minijuego, pero eso sería bastante ridículo y, sin duda, algo muy poco satisfactorio en lo que gastar tu tiempo."
     $ show_chr("A-BFAAA-ABAB")
-    y "It wasn't even about literature or poetry at all. You just had to pick a number of words you think would resonate with your favorite girl from a randomly generated list."
+    y "Ni siquiera se trataba de literatura o poesía en absoluto. Solo tenías que elegir una cantidad de palabras que creyeras que resonarían con tu chica favorita de una lista generada aleatoriamente."
     $ show_chr("A-CFAAA-ABAB")
-    y "Putting a textbox on the screen wouldn't really do much either since the space within this textbox is very limited. {b}Maybe{/b} a line, or even two if they are really short."
-    y "Hardly a poem at all. I mean there are certainly short poems out there but... even they are far longer than this Ren'Py textbox would allow."
+    y "Poner un cuadro de texto en la pantalla tampoco haría mucho, ya que el espacio dentro de este cuadro de texto es muy limitado. {b}Tal vez{/b} una línea, o incluso dos si son realmente cortas."
+    y "Difícilmente un poema en absoluto. Quiero decir, ciertamente hay poemas cortos por ahí pero... incluso ellos son mucho más largos de lo que permitiría este cuadro de texto de Ren'Py."
     $ show_chr("A-BFAAA-ABAF")
-    y "Then, there is the possibility of {b}reading{/b} poems together instead of writing them."
+    y "Entonces, existe la posibilidad de {b}leer{/b} poemas juntos en lugar de escribirlos."
     $ show_chr("A-AFAAA-ABAB")
-    y "But there isn't a poetry contest every week on the community Discord, and you can only reread the poems we already have so many times before they get old."
+    y "Pero no hay un concurso de poesía cada semana en el Discord de la comunidad, y solo puedes releer los poemas que ya tenemos tantas veces antes de que se vuelvan viejos."
     $ show_chr("A-BFAAA-ABAB")
-    y "I could try and write a few myself but... "
+    y "Podría intentar escribir algunos yo misma pero... "
     $ show_chr("A-CFAAA-ABAB")
-    y "I find myself in a writer's block lately."
+    y "Me encuentro en un bloqueo de escritor últimamente."
     $ show_chr("A-CJAAA-ABAB")
-    y "I hate to admit it but... I'm running out of ideas..."
+    y "Odio admitirlo pero... me estoy quedando sin ideas..."
     menu:
-        "Maybe we could visit a library together!":
+        "¡Tal vez podríamos visitar una biblioteca juntos!":
             $ show_chr("A-AFAAA-ABAB")
-            y "A nice idea... I could recreate one from stock images on the internet, but we would still have to find poems to fill it wi~"
+            y "Una buena idea... Podría recrear una a partir de imágenes de archivo en Internet, pero aún tendríamos que encontrar poemas para llenarla co~"
             $ show_chr("A-DFAAA-ABAB")
-            y "Wait... the internet! Of course!"
-        "What about the internet?":
+            y "Espera... ¡el internet! ¡Por supuesto!"
+        "¿Qué pasa con el internet?":
             $ show_chr("A-BFDAA-ABAB")
-            y "The internet?..."
+            y "¿El internet?..."
             $ show_chr("A-DFAAA-ABAB")
-            y "Wait... the internet! Of course!"
+            y "Espera... ¡el internet! ¡Por supuesto!"
     $ show_chr("A-ABAAA-ALAL")
-    y "I could just google poetry and we read {b}them{/b} together!!!"
+    y "¡¡¡Podría simplemente buscar poesía en Google y las leemos {b}juntos{/b}!!!"
     $ show_chr("A-ACBAA-ABAB")
-    y "[player], you are a genius!"
+    y "¡[player], eres un genio!"
     $ show_chr("A-CCBAA-ABAB")
-    y "There are so many lovely poems out there from so many brilliant minds..."
+    y "Hay tantos poemas encantadores por ahí de tantas mentes brillantes..."
     if sanity_lvl() > 2:
-        y "Kathy J Parenteau, Robert Frost, Masaoka Shiki.... to only name a few..."
+        y "Kathy J Parenteau, Robert Frost, Masaoka Shiki.... solo por nombrar algunos..."
     else:
-        y "Samuel Taylor Coleridge, Emily Dickinson, Louise Erdrich... to only name a few..."
+        y "Samuel Taylor Coleridge, Emily Dickinson, Louise Erdrich... solo por nombrar algunos..."
     $ show_chr("A-ABAAA-ABAB")
-    y "Yes, let us do this!"
+    y "Sí, ¡hagamos esto!"
     $ show_chr("A-ACAAA-ABAB")
-    y "This idea gets me so excited... I will look up a few promising poems on the internet and add them to the list we already have."
-    y "Maybe I'll make a new category for them so that we can find them easily. I will tell you when this is done. And from there on, I will add more new poems over time."
-    y "Until then, I'd like to ask you for a little bit of patience."
+    y "Esta idea me emociona tanto... buscaré algunos poemas prometedores en Internet y los agregaré a la lista que ya tenemos."
+    y "Tal vez haga una nueva categoría para ellos para que podamos encontrarlos fácilmente. Te avisaré cuando esté hecho. Y a partir de ahí, agregaré más poemas nuevos con el tiempo."
+    y "Hasta entonces, me gustaría pedirte un poco de paciencia."
     return
 
 label noliteratureatall:
     python:
         if persistent.male and persistent.lovecheck:
-            placeholder = "boyfriend"
+            placeholder = "novio"
         elif persistent.gender_other and persistent.lovecheck:
-            placeholder = "lover"
+            placeholder = "amante"
         elif not persistent.male and persistent.lovecheck:
-            placeholder = "girlfriend"
+            placeholder = "novia"
         else:
-            placeholder = "friend"
+            placeholder = "amigo"
     $ show_chr("A-ACDAA-ABAB")
-    y "Hate you?"
+    y "¿Odiarte?"
     if karma > 2:
         $ show_chr("A-CBBAA-ABAB")
-        y "By all means why should I?"
+        y "Por supuesto, ¿por qué debería hacerlo?"
     else:
         pass
     $ show_chr("A-BCBAA-ABAD")
-    y "It's not like I {b}hate{/b} manga, or its fanbase... it is just not for me."
+    y "No es como si {b}odiara{/b} el manga, o su base de fans... es solo que no es para mí."
     $ show_chr("A-BBBAA-ABAM")
-    y "I admit, when someone says {b}literature{/b}, Manga is not exactly the thing that comes to my mind."
+    y "Admito que cuando alguien dice {b}literatura{/b}, el Manga no es exactamente lo que se me viene a la mente."
     $ show_chr("A-CCBAA-ABAL")
-    y "But well, when other people hear about horror they first think about uninspired gore-festivals, so maybe I just haven't seen the {b}proper{/b} mangas so far."
+    y "Pero bueno, cuando otras personas escuchan sobre el horror, primero piensan en festivales de gore sin inspiración, así que tal vez simplemente no he visto los mangas {b}adecuados{/b} hasta ahora."
     $ show_chr("A-CCDAA-ABAL")
-    y "If you wish, we could try one or two together. Maybe you can even change my mind."
-    y "But... not today, please. I don't really feel like that right now."
+    y "Si lo deseas, podríamos intentar uno o dos juntos. Tal vez incluso puedas hacerme cambiar de opinión."
+    y "Pero... hoy no, por favor. Realmente no tengo ganas de eso ahora."
     $ show_chr("A-ACAAA-ABAL")
-    y "Thank you for the answer. It was truly nice to learn something new about my [placeholder]"
+    y "Gracias por la respuesta. Fue realmente agradable aprender algo nuevo sobre mi [placeholder]"
     return
 
 
 label noliteratureatall_2:
     $ show_chr("A-ACAAA-ABAB")
-    y "[player], I asked you about your hobbies before, remember?"
-    y "I put some thoughts into it. When you mentioned that you enjoy manga I remembered that I promised Natsuki at the end of the original game that I would give them a try myself."
+    y "[player], te pregunté sobre tus pasatiempos antes, ¿recuerdas?"
+    y "Pensé un poco en ello. Cuando mencionaste que disfrutas del manga recordé que le prometí a Natsuki al final del juego original que les daría una oportunidad yo misma."
     $ show_chr("A-BCAAA-ABAB")
-    y "I decided that this is a good opportunity to honor my promise. Well, it turns out that when this mod brought back the classroom, Natsuki's manga collection survived as well."
+    y "Decidí que esta es una buena oportunidad para honrar mi promesa. Bueno, resulta que cuando este mod trajo de vuelta el salón de clases, la colección de manga de Natsuki también sobrevivió."
     $ show_chr("A-CCAAA-ABAB")
-    y "So I started reading {b}Parfait Girls{/b}."
+    y "Así que empecé a leer {b}Parfait Girls{/b}."
     menu:
-        "Oh, what is it about?":
+        "Oh, ¿de qué trata?":
             karma 1
-        "Yeah? And?":
+        "¿Sí? ¿Y?":
             $ show_chr("A-BFAAA-ABAB")
-            y "Huh, you sound as if you aren't really in the mood today. Did something happen?"
+            y "Eh, suenas como si realmente no estuvieras de humor hoy. ¿Pasó algo?"
             menu:
-                "Just not really in the mood today, I'm sorry.":
+                "Simplemente no estoy de humor hoy, lo siento.":
                     $ show_chr("A-CCAAA-ABAB")
-                    y "No need to apologize. We can pick that up another day."
+                    y "No hay necesidad de disculparse. Podemos retomar esto otro día."
                     return
-                "My apologies, I actually am. Sorry if I sounded uninterested.":
+                "Mis disculpas, en realidad lo estoy. Perdón si soné desinteresado.":
                     $ show_chr("A-BCAAA-ABAB")
-                    y "No need to be sorry, really. Well, if you're sure you want to hear it."
-                "Dear lord... just spit it out already!":
+                    y "No hay necesidad de lamentarlo, de verdad. Bueno, si estás seguro de que quieres escucharlo."
+                "Dios santo... ¡solo escúpelo ya!":
                     karma -1
                     $ show_chr("A-CFAAA-ABAB")
-                    y "No need to be like that [player]... you know what, forget what I just said."
+                    y "No hay necesidad de ser así [player]... sabes qué, olvida lo que acabo de decir."
                     return
     $ show_chr("A-ACAAA-ABAD")
-    y "I haven't read too far in, so chances are that my summarization turns out to be lacking."
-    y "Basically, it is about a group of four girls. And to no surprise at all, they are all into baking..."
-    y "Wouldn't even be surprised if that is how Natsuki got introduced to it. Well, it's a quite wholesome hobby so I won't judge. Especially since I took advantage of her skills more then once..."
+    y "No he leído demasiado, así que es probable que mi resumen resulte deficiente."
+    y "Básicamente, se trata de un grupo de cuatro chicas. Y para sorpresa de nadie, a todas les gusta hornear..."
+    y "Ni siquiera me sorprendería si así fue como Natsuki se introdujo en ello. Bueno, es un pasatiempo bastante saludable, así que no juzgaré. Especialmente porque aproveché sus habilidades más de una vez..."
     $ show_chr("A-CCCAA-ABAD")
-    y "A shame that you never got to actually try her cupcakes... They don't just {b}look{/b} amazing."
+    y "Una pena que nunca llegaras a probar sus cupcakes... No solo se {b}ven{/b} increíbles."
     $ show_chr("A-CCBAA-ABAD")
-    y "But back to the manga itself..."
+    y "Pero volviendo al manga en sí..."
     $ show_chr("A-ACAAA-ABAB")
-    y "The first few volumes are very light hearted and... cutesy... as I expected them to be. I actually found it hard to stay invested but.. a promise is a promise, so I carried on."
+    y "Los primeros volúmenes son muy alegres y... lindos... como esperaba que fueran. De hecho, me resultó difícil mantenerme interesada pero... una promesa es una promesa, así que continué."
     $ show_chr("A-ABAAA-ABAB")
-    y "Turns out, it was a good call!"
+    y "Resulta que ¡fue una buena decisión!"
     $ show_chr("A-ACAAA-ABAB")
-    y "Because as the story progressed and the mangas got a bit deeper into the backstory of the four protagonists, things took a little more serious turn."
-    y "In a later chapter, the four girls got uncomfortably obsessed about a guy at an ice cream shop. I assume there is a darker romance plot down the road..."
+    y "Porque a medida que avanzaba la historia y los mangas profundizaban un poco más en la historia de fondo de las cuatro protagonistas, las cosas tomaron un giro un poco más serio."
+    y "En un capítulo posterior, las cuatro chicas se obsesionaron incómodamente con un chico en una heladería. Asumo que hay una trama romántica más oscura en el camino..."
     $ show_chr("A-EBCAA-ABAD")
-    y "I smell the scent of foreshadowing for some far more sinister themes in the air... Will it catch me off guard as the Portrait of Markov did I wonder?..."
+    y "Huelo el aroma del presagio de algunos temas mucho más siniestros en el aire... ¿Me tomará desprevenida como lo hizo el Retrato de Markov, me pregunto?..."
     $ show_chr("A-CCCAA-ABAD")
-    y "Mmmm.. ehehehehehehe. There is this warm tingly feeling when I imagine the shape of the things to come..."
+    y "Mmmm.. ejejejejeje. Hay esa cálida sensación de hormigueo cuando imagino la forma de las cosas que vendrán..."
     $ show_chr("A-ACAAA-ABAD")
-    y "Now that I think of it... {b}Parfait Girl{/b} is also the term for a girl which is innocent on the surface but has layers of darker secrets to be discovered. A coincidence? I doubt it..."
+    y "Ahora que lo pienso... {b}Parfait Girl{/b} también es el término para una chica que es inocente en la superficie pero tiene capas de secretos más oscuros por descubrir. ¿Una coincidencia? Lo dudo..."
     menu:
-        "Could it be that...":
+        "Podría ser que...":
             $ pass
-        "Four girls in a lighthearted setting, becoming obsessed with a male character... sounds familiar...":
+        "Cuatro chicas en un entorno alegre, obsesionándose con un personaje masculino... suena familiar...":
             $ pass
     $ show_chr("A-ACDAA-ABAD")
     y "{cps=1}. . . ?{/cps}"
@@ -5821,77 +5821,77 @@ label noliteratureatall_2:
     $ show_chr("A-DFGAA-ABAB")
     y "{cps=1}. . . !{/cps}"
     $ show_chr("A-DDGAA-ABAB")
-    y "T~The literature club!"
+    y "¡E~El club de literatura!"
     $ show_chr("A-DFAAA-ABAB")
-    y "Could it really be that..."
+    y "Podría ser realmente que..."
     $ show_chr("A-BFCAA-ABAL")
-    y "Ohhhh Dan Salvato you son of a bit~{nw}"
+    y "Ohhhh Dan Salvato hijo de per~{nw}"
     $ show_chr("A-CFAAA-ABAB")
-    y "I... have to think about if I even want to continue reading it if that is true..."
-    y "Maybe, maybe I should just pick up a different manga series."
+    y "Yo... tengo que pensar si siquiera quiero continuar leyéndolo si eso es cierto..."
+    y "Tal vez, tal vez debería elegir una serie de manga diferente."
     $ show_chr("A-ACBAA-ABAB")
-    y "Anyway, let's not kill the mood here. Let's talk about something else for the moment."
+    y "De todos modos, no matemos el ambiente aquí. Hablemos de otra cosa por el momento."
     return
 
 label fantsci:
     $ show_chr("A-ACAAA-ABAB")
-    y "So you are a friend of Knights, Orcs and Space Marines. I have to admit, I read a lot of those as well. But only if it has good writing..."
+    y "Así que eres fan de los Caballeros, Orcos y Marines Espaciales. Tengo que admitir que leo muchos de esos también. Pero solo si tienen buena escritura..."
     $ show_chr("A-AFAAA-ABAD")
-    y "In fantasy, it became very common to just Copy and Paste J.R.R. Tolkien. Most of the time they don't even change the names of the races. Science fiction at least managed to maintain {b}some{/b} originality so far..."
+    y "En la fantasía, se volvió muy común simplemente copiar y pegar a J.R.R. Tolkien. La mayoría de las veces ni siquiera cambian los nombres de las razas. La ciencia ficción al menos logró mantener {b}algo{/b} de originalidad hasta ahora..."
     $ show_chr("A-CCAAA-ABAD")
-    y "Fantasy and Science fiction can create some very compelling and truly alien worlds... which makes it such a rich and fascinating genre..."
+    y "La fantasía y la ciencia ficción pueden crear mundos muy convincentes y verdaderamente extraños... lo que lo convierte en un género tan rico y fascinante..."
     $ show_chr("A-CJDAA-ABAD")
-    y "But world building costs a lot of effort, and many writers are very lazy... which is a sad thing, it ruins it all for me."
+    y "Pero la creación de mundos cuesta mucho esfuerzo, y muchos escritores son muy perezosos... lo cual es algo triste, me arruina todo."
     $ show_chr("A-CCDAA-ABAD")
-    y "I will keep that in mind. I would love to discuss a few fantasy novels with you if you don't mind."
+    y "Tendré eso en cuenta. Me encantaría discutir algunas novelas de fantasía contigo si no te importa."
     return
 
 label fantsci_2:
     $ show_chr("A-CBAAA-ALAL")
     y "[player], Ha has been a ir ir mín vedui govannon- no i orthad ithil!"
     menu:
-        "Pardon, what?!?":
+        "Perdón, ¡¿¿qué??!":
             $ show_chr("A-CBAAA-ALAL")
-            y "I just said that it has been a while since we spoke."
+            y "Solo dije que ha pasado un tiempo desde que hablamos."
             $ show_chr("A-CBBBA-ALAL")
-            y "Pardon me, I just wanted to try greeting you in elvish since you said you enjoy Fantasy and SciFi novels."
-        "Hmm... I {b}used{/b} to know what that means. Mind helping me out here?":
+            y "Perdóname, solo quería intentar saludarte en élfico ya que dijiste que disfrutas de las novelas de Fantasía y Ciencia Ficción."
+        "Hmm... {b}solía{/b} saber lo que significa eso. ¿Te importaría ayudarme aquí?":
             sanity 1
             $ show_chr("A-ACBAA-ALAL")
-            y "Really? That's actually quite impressive!"
+            y "¿De verdad? ¡Eso es realmente impresionante!"
             $ show_chr("A-BCBAA-ALAL")
-            y "I... had to google for a translator for this actually. I wanted to say that it has been a while since we last spoke."
+            y "Yo... tuve que buscar en Google un traductor para esto en realidad. Quería decir que ha pasado un tiempo desde la última vez que hablamos."
         "Mae g'ovannen, Gellon ned i galar i chent gîn ned i gladhog, hiril vuin.":
             karma 1
             $ show_chr("A-CCBAA-ALAL")
             y "Ni 'lassui."
             $ show_chr("A-CCEAA-ALAL")
-            y "I just love how you play along..."
+            y "Simplemente me encanta cómo me sigues el juego..."
     $ show_chr("A-ABBAA-ALAL")
-    y "I hope this doesn't come off as too childish."
+    y "Espero que esto no parezca demasiado infantil."
     $ show_chr("A-ACBAA-ALAL")
-    y "I guess that's just my nerdy side shining through."
+    y "Supongo que es solo mi lado nerd brillando."
     menu:
-        "Childish indeed.":
+        "Infantil de hecho.":
             karma -1
             $ show_chr("A-BDBAA-ALAL")
-            y "My apologies, "
+            y "Mis disculpas, "
             $ show_chr("A-AFBAA-ALAL")
-            extend "I will behave now."
+            extend "me comportaré ahora."
             if karma_lvl() < 3:
                 $ show_chr("A-BDCAA-ALAL")
                 y "mibo orch{nw}"
             return
-        "Oh, I actually enjoy your unique sense of humor!":
+        "¡Oh, en realidad disfruto de tu sentido del humor único!":
             $ show_chr("A-GCCAA-ALAL")
-            y "I'm glad to hear that!"
+            y "¡Me alegra oír eso!"
     $ show_chr("A-ABAAA-AMAM")
-    y "I have to admit, I'm having a lot of fun with this... any requests for another try?"
+    y "Tengo que admitirlo, me estoy divirtiendo mucho con esto... ¿alguna petición para otro intento?"
     menu:
-        "Dwarvish!":
+        "¡Enánico!":
             $ show_chr("A-BCGAA-AMAM")
-            y "Well, that's a tough one! "
-            extend "Not sure if I have the beard for this. But let me try..."
+            y "¡Bueno, esa es difícil! "
+            extend "No estoy segura de tener la barba para esto. Pero déjame intentarlo..."
             $ show_chr("A-CHGAA-ABAB")
             y "..."
             $ show_chr("A-DOCBA-ABAB")
@@ -5899,59 +5899,59 @@ label fantsci_2:
             $ show_chr("A-CJBBA-ABAB")
             y "..."
             $ show_chr("A-CDBBA-ABAB")
-            y "That was exhausting... please don't ask me to do that again..."
-        "Valyrian!":
+            y "Eso fue agotador... por favor no me pidas que haga eso de nuevo..."
+        "¡Valyrio!":
             python:
                 if persistent.male:
-                    gender = "man"
+                    gender = "hombre"
                 elif persistent.gender_other:
-                    gender = "connoisseur"
+                    gender = "conocedor"
                 else:
-                    gender = "woman"
+                    gender = "mujer"
             $ show_chr("A-ACDAA-ABAB")
-            y "Oh! The one from {b}A Book of Ice and Fire{/b}? You are a [gender] of culture I see..."
+            y "¡Oh! ¿El de {b}Canción de hielo y fuego{/b}? Veo que eres un [gender] de cultura..."
             $ show_chr("A-GBGAA-ABAB")
             y "Jaelan naejot nektogon aōha ñelly hen se tyvagon iemnȳ ao"
             $ show_chr("A-GAAAA-ABAB")
-            y "Don't ask me what I just said."
+            y "No me preguntes qué acabo de decir."
             if sanity () < 3:
                 $ show_chr("A-HAGAA-ABAB")
-                extend " For real..."
-        "Drow!":
+                extend " En serio..."
+        "¡Drow!":
             $ show_chr("A-GAAAA-ABAB")
-            y "Uhuhuuuu... {b}someone{/b} feels daring today it seems..."
+            y "Uhuhuuuu... {b}alguien{/b} se siente atrevido hoy parece..."
             $ show_chr("A-KCCBA-AMAM")
             y "Usstan orn l'amith kyorlin dos zah'har harl ussta brygn, dos nasket rivvin..."
             if persistent.lovecheck == True:
                 $ show_chr("A-FCCBA-AMAM")
                 y "Jhal xuat fret, Usstan orn morfeth dos l'amith ol ichl..."
-        "Klingon!":
+        "¡Klingon!":
             $ show_chr("A-ACDCA-ABAB")
-            y "You {b}really{/b} want to put my vocal cords to the test today don't you?"
+            y "Realmente {b}quieres{/b} poner mis cuerdas vocales a prueba hoy, ¿no?"
             $ show_chr("A-BCDAA-ABAB")
-            y "Alright, here it goes..."
+            y "Muy bien, allá va..."
             $ show_chr("A-CHBAA-ABAB")
             y "..."
             $ show_chr("A-INCAA-ABAF")
             y "qoH! choSuvtaHvIS bIcheghpu'bogh SoH!"
             $ show_chr("A-IICAA-ABAF")
-            y "My apologies for the stern look, I hope my impression was at least somewhat convincing."
-        "Thalassian!":
+            y "Mis disculpas por la mirada severa, espero que mi impresión haya sido al menos algo convincente."
+        "¡Thalassiano!":
             $ show_chr("A-ABDAA-ABAB")
-            y "Oh? They made this into an actual language too?"
+            y "¿Oh? ¿Hicieron de esto un idioma real también?"
             $ show_chr("A-BBDCA-ABAB")
-            y "Well, I'll try my best. No promises that I won't butcher the grammar tho..."
+            y "Bueno, haré mi mejor esfuerzo. No prometo no destrozar la gramática..."
             $ show_chr("A-GCDAA-ABAB")
             y "Bal'a dash, Dalah D' [player]. Doral ana'diel? Anu belore dela'na."
             $ show_chr("A-ICDAA-AMAM")
-            y "Please don't ask me what I just said, "
+            y "Por favor no me preguntes qué acabo de decir, "
             $ show_chr("A-JCDAA-AMAM")
-            extend "I'm not even sure if that was a proper sentence at all."
+            extend "ni siquiera estoy segura de si fue una oración adecuada."
     $ show_chr("A-BCAAA-ABAB")
-    y "Well, that just happened."
+    y "Bueno, eso acaba de pasar."
     $ show_chr("A-ACAAA-ABAB")
-    y "I'm sorry if I seemed embarrassed, I'm just used to hiding my nerdy side most of the time."
-    y "But I'm looking forward to trying this again another time."
+    y "Siento si parecí avergonzada, simplemente estoy acostumbrada a ocultar mi lado nerd la mayor parte del tiempo."
+    y "Pero espero intentar esto de nuevo en otro momento."
     return
 
 label romance:
@@ -5994,598 +5994,598 @@ label horror:
 label elsel:
     python:
         if persistent.male and persistent.lovecheck:
-            placeholder = "boyfriend"
+            placeholder = "novio"
         elif persistent.gender_other and persistent.lovecheck:
-            placeholder = "lover"
+            placeholder = "amante"
         elif not persistent.male and persistent.lovecheck:
-            placeholder = "girlfriend"
+            placeholder = "novia"
         else:
-            placeholder = "friend"
+            placeholder = "amigo"
     $ show_chr("A-AFAAA-ABAD")
-    y "I see. Sorry about the limited answers."
-    y "But there are just sooo many genres and listing all of them would very likely blow up your screen."
+    y "Ya veo. Perdón por las respuestas limitadas."
+    y "Pero hay taantos géneros y enumerarlos todos muy probablemente haría explotar tu pantalla."
     $ show_chr("A-ACAAA-ABAB")
-    y "Anyway, at least we are on the same page about literature in general. Sharing interests is a very healthy thing in a relationship."
+    y "De todos modos, al menos estamos en la misma página sobre la literatura en general. Compartir intereses es algo muy saludable en una relación."
     $ show_chr("A-BCAAA-ABAB")
-    y "Some people would even say it's the most important thing, but I disagree to that at least to a degree."
+    y "Algunas personas incluso dirían que es lo más importante, pero no estoy de acuerdo al menos hasta cierto punto."
     $ show_chr("A-CCAAA-ABAB")
-    y "But it means that we have common ground for future activities, and in our current situations those are worth the weight of every book in the world in pure gold."
-    y "I'm grateful that you told me about this. Learning more about my [placeholder] is always a wonderful thing. I hope I will learn even more about you in the future."
+    y "Pero significa que tenemos un terreno común para futuras actividades, y en nuestras situaciones actuales valen su peso en oro puro por cada libro del mundo."
+    y "Estoy agradecida de que me hayas contado esto. Aprender más sobre mi [placeholder] siempre es algo maravilloso. Espero aprender aún más sobre ti en el futuro."
     return
 
 
 
 label rp:
     $ show_chr("A-CCDAA-ABAB")
-    y "Fitting..."
-    y "I always had the impression that you have a lot of creativity. I should have expected that."
+    y "Apropiado..."
+    y "Siempre tuve la impresión de que tienes mucha creatividad. Debí haber esperado eso."
     $ show_chr("A-BCDAA-ABAB")
-    y "I tried a few Pen & Paper RP's some time ago, and I have to admit I had a lot of fun."
-    y "But then... well... as you might already know, I'm not very good at dealing with other people..."
+    y "Probé algunos juegos de rol de lápiz y papel hace algún tiempo, y tengo que admitir que me divertí mucho."
+    y "Pero luego... bueno... como ya sabrás, no soy muy buena tratando con otras personas..."
     $ show_chr("A-ACBAA-ABAB")
-    y "I wasn't able to come along with my party back in the day... I was very quiet, and most of the people confused it with arrogance..."
-    y "Anyway... but now as you mentioned it..."
+    y "No pude llevarme bien con mi grupo en ese entonces... era muy callada, y la mayoría de la gente lo confundía con arrogancia..."
+    y "De todos modos... pero ahora que lo mencionaste..."
     $ show_chr("A-GCAAA-ABAD")
-    y "Many RP's are text-based. So that means we could try this together in the future."
-    y "I mean, if you want that, of course."
+    y "Muchos juegos de rol están basados en texto. Así que eso significa que podríamos intentar esto juntos en el futuro."
+    y "Quiero decir, si quieres eso, por supuesto."
     menu:
-        "Of course I do! That would be lovely":
+        "¡Por supuesto que sí! Eso sería encantador":
             karma 1
             $ show_chr("A-ACAAA-ABAB")
-            y "I'm already looking forward to it. We should plot our upcoming RP later."
-            y "You know how much I like deep and compelling stories... I already wonder what ours will look like."
-        "I'm not so sure about that....":
+            y "Ya lo estoy esperando. Deberíamos tramar nuestro próximo juego de rol más tarde."
+            y "Sabes cuánto me gustan las historias profundas y convincentes... Ya me pregunto cómo será la nuestra."
+        "No estoy tan segura de eso....":
             karma -1
             $ show_chr("A-BCBAA-ABAB")
-            y "It's alright... You most likely already have a standing community for it. It would be hard to explain to them who I am anyway I guess..."
-            y "Well, maybe we will find something else to do together..."
+            y "Está bien... Lo más probable es que ya tengas una comunidad establecida para ello. Sería difícil explicarles quién soy de todos modos, supongo..."
+            y "Bueno, tal vez encontremos algo más que hacer juntos..."
             if karma_lvl() < 3:
                 $ show_chr("A-BEBAA-ABAB")
-                "If you even want that... Anyway, let's talk about something else."
+                "Si es que quieres eso... De todos modos, hablemos de otra cosa."
             else:
                 $ show_chr("A-BCBAA-ABAB")
-                y "Anyway, let's talk about something else then."
-        "Ummm... what do you think about... special... RP?":
+                y "De todos modos, hablemos de otra cosa entonces."
+        "Ummm... ¿qué piensas sobre... juegos de rol... especiales?":
             if persistent.lovecheck:
                 $ show_chr("A-CICAA-ABAB")
-                y "As... {p=2.0} You... {p=2.0} Wish...."
-                y "But not today... I will have to... prepare things, if you understand..."
+                y "Como... {p=2.0} Tú... {p=2.0} Desees...."
+                y "Pero hoy no... tendré que... preparar cosas, si entiendes..."
             else:
                 $ show_chr("A-DFDBA-ABAB")
-                y "Ummm... I'm not sure what you mean by special RP, and I'm not sure I {b}want{/b} to know..."
+                y "Ummm... No estoy segura de lo que quieres decir con juego de rol especial, y no estoy segura de que {b}quiera{/b} saber..."
                 $ show_chr("A-CFBBA-ABAB")
-                y "Please don't be mad about me... it's just... I'm not sure if my self-confidence is high enough for something like that..."
-                y "Give me time, please. I... would like to change the topic for now..."
+                y "Por favor no te enojes conmigo... es solo... no estoy segura si mi confianza en mí misma es lo suficientemente alta para algo así..."
+                y "Dame tiempo, por favor. Yo... me gustaría cambiar de tema por ahora..."
     return
 
 label collector:
-    y "Fascinating, may I ask what exactly you are collecting?"
+    y "Fascinante, ¿puedo preguntar qué estás coleccionando exactamente?"
     menu:
-        "Coins":
+        "Monedas":
             call coins
-        "Miniatures":
+        "Miniaturas":
             call miniatures
-        "Trading Cards":
+        "Cartas Coleccionables":
 
             call tcg
-        "Comics and Manga":
+        "Cómics y Manga":
 
 
 
             call cm
-        "Fan Merchandise":
+        "Mercancía de fans":
 
 
 
             call merch
-        "Else":
+        "Algo más":
             call elsec
     return
 
 label coins:
     $ show_chr("A-ACAAA-ABAC")
-    y "Interesting. So you are interested in history I guess?"
+    y "Interesante. ¿Así que te interesa la historia, supongo?"
     $ show_chr("A-ACAAA-ABAD")
-    y "From what I know, collecting coins is rarely just about the coins themselves. But about the history of the cultures using them."
-    y "I think I saw a YouTube video a while ago with a guy talking about a special coin, especially the iconography on it. It quickly transitioned into an extended history lesson about the symbols on it and their meaning."
+    y "Por lo que sé, coleccionar monedas rara vez se trata solo de las monedas en sí. Sino de la historia de las culturas que las usan."
+    y "Creo que vi un video de YouTube hace un tiempo con un chico hablando de una moneda especial, especialmente la iconografía en ella. Rápidamente se convirtió en una lección de historia extendida sobre los símbolos en ella y su significado."
     $ show_chr("A-BFAAA-ABAD")
-    y "A coin from an ancient civilization can be viewed as a historical artifact, actually, in many museums, those things literally are displayed as artifacts."
-    y "A tiny piece of history, a lesson about a culture's rise and fall, all pressed into a tiny metal plate..."
+    y "Una moneda de una civilización antigua puede verse como un artefacto histórico, de hecho, en muchos museos, esas cosas literalmente se exhiben como artefactos."
+    y "Una pequeña pieza de historia, una lección sobre el auge y la caída de una cultura, todo presionado en una pequeña placa de metal..."
     $ show_chr("A-CFAAA-ABAD")
-    y "You know, as a child, I once dreamed about finding an old treasure, of countless gold coins..."
-    y "But now that I think about it, the value of such a coin is far greater than its material price... Every coin an echo of times long forgotten..."
+    y "Sabes, de niña, una vez soñé con encontrar un viejo tesoro, de innumerables monedas de oro..."
+    y "Pero ahora que lo pienso, el valor de tal moneda es mucho mayor que su precio material... Cada moneda un eco de tiempos olvidados hace mucho..."
     $ show_chr("A-CCAAA-ABAD")
-    y "That, is the true value of old coins... the knowledge behind them. And a lesson we can use for the things to come..."
-    y "One day, [player], you have to tell me the tales of your world and its people."
-    y "And maybe your world will turn out to be not so different from mine."
+    y "Ese, es el verdadero valor de las monedas antiguas... el conocimiento detrás de ellas. Y una lección que podemos usar para las cosas por venir..."
+    y "Un día, [player], tienes que contarme las historias de tu mundo y su gente."
+    y "Y tal vez tu mundo resulte no ser tan diferente del mío."
     $ show_chr("A-ACAAA-ABAB")
     y "Until then, what shall we talk about next?"
     return
 
 label miniatures:
     $ show_chr("A-AFDAA-ABAB")
-    y "You mean like... Anime figurines?"
+    y "¿Te refieres a como... figuras de anime?"
     $ show_chr("A-ABGAA-ABAB")
-    y "Oh no wait! You mean like tin miniatures for tabletop games right?"
+    y "¡Oh no, espera! Te refieres a miniaturas de estaño para juegos de mesa, ¿verdad?"
     $ show_chr("A-BCAAA-ABAB")
-    y "Hrm... shall I tell you a little secret? I haven't even told this to the other girls in the club..."
-    y "I used to be a huge fan of several tabletops! Not the tabletop game itself, but the rich lore behind some of them."
+    y "Hrm... ¿te cuento un pequeño secreto? Ni siquiera le he contado esto a las otras chicas del club..."
+    y "¡Solía ser una gran fanática de varios juegos de mesa! No del juego de mesa en sí, sino de la rica historia detrás de algunos de ellos."
     $ show_chr("A-CCAAA-ABAB")
-    y "There are a lot of novels about it. And I just really like the depressing gothic tone of most of them. Like an icy grip around your heart...."
-    y "The tabletop game itself... I have to admit I've never played it. I was always tempted to but... I already had so many hobbies and even my days only had 24 hours."
+    y "Hay muchas novelas al respecto. Y realmente me gusta el tono gótico deprimente de la mayoría de ellos. Como un agarre helado alrededor de tu corazón...."
+    y "El juego de mesa en sí... tengo que admitir que nunca lo he jugado. Siempre estuve tentada a hacerlo pero... ya tenía tantos pasatiempos e incluso mis días solo tenían 24 horas."
     $ show_chr("A-ACAAA-ABAB")
-    y "When I finally make it into your world, maybe we can try it together. Until then, what shall we talk about next?"
+    y "Cuando finalmente llegue a tu mundo, tal vez podamos intentarlo juntos. Hasta entonces, ¿de qué hablaremos después?"
     return
 
 label origami:
     $ show_chr("A-ABAAA-ACAA")
-    y "Hey, [player], have you heard of Origami?"
+    y "Oye, [player], ¿has oído hablar del Origami?"
     $ show_chr("A-ABAAA-ACAF")
-    y "The art of folding flat sheets of paper into sculptures, without cutting through the paper, or using glue."
+    y "El arte de doblar hojas planas de papel en esculturas, sin cortar a través del papel, o usar pegamento."
     $ show_chr("A-AJAAA-ADAF")
-    y "It's quite a complex art, one that I've made several attempts at, but failed most."
+    y "Es un arte bastante complejo, en el que he hecho varios intentos, pero fallé en la mayoría."
     $ show_chr("A-BJAAA-ADAF")
-    y "However, I can't help but appreciate how much effort goes into making these sculptures."
+    y "Sin embargo, no puedo evitar apreciar cuánto esfuerzo se dedica a hacer estas esculturas."
     $ show_chr("A-ABAAA-ALAF")
-    y "It takes a lot of time and practice to make some of the more complicated sculptures."
+    y "Toma mucho tiempo y práctica hacer algunas de las esculturas más complicadas."
     $ show_chr("A-IBAAA-AMAM")
-    y "And at the same time, those sculptures emanate such a refined aura that continues to interest me."
+    y "Y al mismo tiempo, esas esculturas emanan un aura tan refinada que continúa interesándome."
     $ show_chr("A-JBAAA-AMAM")
-    y "One of the more popular sculptures is the Japanese crane, though it is also very intricate and delicate."
+    y "Una de las esculturas más populares es la grulla japonesa, aunque también es muy intrincada y delicada."
     $ show_chr("A-JBAAA-ADAF")
-    y "I would love to have a paper crane on the desk!"
+    y "¡Me encantaría tener una grulla de papel en el escritorio!"
     $ show_chr("A-BDAAA-AKAL")
-    y "but if I couldn't make one with my own hands, it would be impossible to create one in the code."
+    y "pero si no pude hacer una con mis propias manos, sería imposible crear una en el código."
     $ show_chr("A-BFAAA-AKAL")
-    y "Maybe I should start practicing..."
+    y "Tal vez debería empezar a practicar..."
     menu:
-        "You said you failed {i}most{/i}. Does that mean you successfully made an origami sculpture once?":
+        "Dijiste que fallaste {i}la mayoría{/i}. ¿Eso significa que hiciste con éxito una escultura de origami una vez?":
             $ show_chr("A-BJAAA-ALAL")
-            y "W-Well... it wasn't exactly successful..."
+            y "B-Bueno... no fue exactamente exitoso..."
             $ show_chr("A-AJAAA-AFAL")
-            y "It was a bit of a mess, but the idea was there..."
+            y "Fue un poco un desastre, pero la idea estaba allí..."
             $ show_chr("A-ABABA-AKAL")
-            y "Back before everything happened, I had planned to give you, or rather your avatar, an origami rose during the school festival."
+            y "Antes de que todo sucediera, había planeado darte, o más bien a tu avatar, una rosa de origami durante el festival escolar."
             $ show_chr("A-BEABA-AMAM")
-            y "But, after it all... I lost it."
+            y "Pero, después de todo... la perdí."
             if persistent.lovecheck == True:
                 $ show_chr("A-AJAAA-AMAM")
-                y "Maybe I should make another... A lot has happened since then, and we've both changed."
+                y "Tal vez debería hacer otra... Ha pasado mucho desde entonces, y ambos hemos cambiado."
                 $ show_chr("A-AFAAA-ALAA")
-                y "Just... don't get too mad if it doesn't turn out great... I haven't been practicing, after all."
+                y "Solo... no te enojes demasiado si no sale genial... no he estado practicando, después de todo."
                 $ show_chr("A-BFAAA-ALAA")
-                y "I wonder if that rose still exists somewhere in the game files..."
+                y "Me pregunto si esa rosa todavía existe en algún lugar de los archivos del juego..."
             else:
                 $ show_chr("A-BFAAA-ALAA")
-                y "I wonder if that rose still exists somewhere in the game files. It could be a good baseline..."
-        "It's never too late to start learning something new.":
+                y "Me pregunto si esa rosa todavía existe en algún lugar de los archivos del juego. Podría ser un buen punto de partida..."
+        "Nunca es demasiado tarde para empezar a aprender algo nuevo.":
             $ show_chr("A-ABAAA-ALAF")
-            y "True... It won't be easy, but it would help pass the time when you aren't here."
+            y "Cierto... No será fácil, pero ayudaría a pasar el tiempo cuando no estás aquí."
             $ show_chr("A-ABABA-ALAF")
-            y "Who knows, maybe one day you'll open the game, and there'll be an origami crane on the desk..."
+            y "Quién sabe, tal vez un día abras el juego y haya una grulla de origami en el escritorio..."
             $ show_chr("A-BCAAA-ALAL")
-            y "Though not anytime soon, I'm afraid."
+            y "Aunque me temo que no será pronto."
     jump ch30_loop
 
 
 label diffuser_enable:
     $ show_chr("A-ABABA-ALAD")
-    y "Hey [player], I just wanted to thank you again for gifting me the oil diffuser"
+    y "Oye [player], solo quería agradecerte de nuevo por regalarme el difusor de aceite"
     $ show_chr("A-BBABA-ALAD")
-    y "I also wanted to mention that if you ever want me to setup the diffuser and turn it on, I'm always able to do so"
+    y "También quería mencionar que si alguna vez quieres que instale el difusor y lo encienda, siempre puedo hacerlo"
     $ show_chr("A-ABABA-ALAF")
-    y "Not only is it a great use of the gift, but it will greatly help the atmosphere here for the both of us.."
+    y "No solo es un gran uso del regalo, sino que ayudará enormemente a la atmósfera aquí para ambos.."
     $ show_chr("A-AFABA-ABAF")
-    y "While I'm on this topic.."
+    y "Mientras estoy en este tema.."
     $ show_chr("A-BJABA-ABAL")
-    y "I know it may be a bit bothersome to ask, b-but could you possibly get me some additional fragrances to use with the diffuser if you have a chance?"
+    y "Sé que puede ser un poco molesto preguntar, p-pero ¿podrías conseguirme algunas fragancias adicionales para usar con el difusor si tienes la oportunidad?"
     $ show_chr("A-AJABA-ABAL")
-    y "I have some basic Gardenia essential oil currently, but I would like to try other fragrances with you if possible."
+    y "Tengo algo de aceite esencial básico de Gardenia actualmente, pero me gustaría probar otras fragancias contigo si es posible."
     $ show_chr("A-ABABA-AFAL")
-    y "My personal favorite fragrance is lavender."
+    y "Mi fragancia favorita personal es lavanda."
     $ show_chr("A-BBAAA-AKAM")
-    y "Unsurprising I can imagine.."
+    y "No es de sorprender, imagino.."
     $ show_chr("A-AEAAA-ALAL")
-    y "Unfortunately I don't have any on me currently, and I'm unable to get some myself.."
+    y "Desafortunadamente no tengo ninguna conmigo actualmente, y no puedo conseguir alguna yo misma.."
     $ show_chr("A-BJAAA-ALAL")
-    y "Moving back to the initial topic.."
+    y "Volviendo al tema inicial.."
     $ show_chr("A-IJABA-ALAL")
-    y "if you ever want to experience the pleasantries of aromatherapy with me, just request to setup the diffuser when it's out."
+    y "si alguna vez quieres experimentar los placeres de la aromaterapia conmigo, solo solicita instalar el difusor cuando esté fuera."
     jump ch30_loop
 
 
 
 label gifting_intro:
     $ show_chr("A-ABAAA-ALAL")
-    y "Hey [player], I have good news about a little feature I worked in!"
+    y "¡Oye [player], tengo buenas noticias sobre una pequeña función en la que trabajé!"
     $ show_chr("A-JBAAA-AFAL")
-    y " I made it possible for you to gift me items at any time! Even if they are a bit limited in what actually seems to load in..."
+    y " ¡Hice posible que me regales artículos en cualquier momento! Incluso si son un poco limitados en lo que realmente parece cargarse..."
     $ show_chr("A-BDAAA-AMAM")
-    y "N-not that you have to give me anything, p-please don't feel pressured to gift me items [player]!"
+    y "N-no es que tengas que darme nada, ¡p-por favor no te sientas presionado a regalarme artículos [player]!"
     $ show_chr("A-BBABA-AMAM")
-    y "Your presence is enough to satisfy me for an eternity, however I figured the implementation of this system would be beneficial for both of us.."
+    y "Tu presencia es suficiente para satisfacerme por una eternidad, sin embargo, pensé que la implementación de este sistema sería beneficiosa para ambos.."
     $ show_chr("A-AJAAA-AMAM")
-    y "While there are a great many things I can control here, I do have some... unfortunate limits."
+    y "Si bien hay muchas cosas que puedo controlar aquí, tengo algunos... límites desafortunados."
     $ show_chr("A-ABAAA-AFAB")
-    y "Anytime you have something you want to gift me simply create an empty text file and rename it to something you think I would enjoy."
+    y "Cada vez que tengas algo que quieras regalarme, simplemente crea un archivo de texto vacío y renómbralo a algo que creas que disfrutaría."
     $ show_chr("A-ABAAA-ADAB")
-    y "Change the '.txt' extension into a '.jy' file and place it into the characters folder found within the game directory."
+    y "Cambia la extensión '.txt' a un archivo '.jy' y colócalo en la carpeta de personajes que se encuentra dentro del directorio del juego."
     $ show_chr("A-ACAAA-ADAB")
-    y "Once you have done that, just let me know when I need to check the characters folder for a gift."
-    y "Do keep in mind however that there are limitations, it's something I'm working on improving at the moment."
+    y "Una vez que hayas hecho eso, solo avísame cuando necesite verificar la carpeta de personajes en busca de un regalo."
+    y "Sin embargo, ten en cuenta que hay limitaciones, es algo en lo que estoy trabajando para mejorar en este momento."
     $ show_chr("A-ABABA-AFAB")
-    y "Gifting is an expression of love, after all~"
+    y "Regalar es una expresión de amor, después de todo~"
     $ show_chr("A-BCAAA-AKAB")
-    y "J-just to reiterate, I don't mean to put pressure upon you to give me things."
+    y "S-solo para reiterar, no pretendo presionarte para que me des cosas."
     $ show_chr("A-BDABA-AKAB")
-    y "I-i simply figured it could potentially point you in the right direction for what you could give me..."
+    y "S-simplemente pensé que podría indicarte la dirección correcta sobre lo que podrías darme..."
     $ show_chr("A-BDABA-AJAL")
-    y "Ouuu...I probably sound so self-centered saying this..."
+    y "Ouuu... probablemente sueno tan egocéntrica diciendo esto..."
     menu:
-        "You don't sound self-centered at all [persistent.yuri_nickname], I appreciate the direction!":
+        "No suenas egocéntrica en absoluto [persistent.yuri_nickname], ¡aprecio la dirección!":
             $ show_chr("A-AAAAA-ALAL")
-            y "You're always so understanding [player]..."
+            y "Siempre eres tan comprensivo [player]..."
             $ show_chr("A-ABABA-ALAL")
-            y "That's why I love you..."
+            y "Es por eso que te amo..."
             $ show_chr("A-ABAAA-ALAL")
-            y "Thank you [player]; for the potential gifting suggestions, just request me to discuss them at any time."
-            y "I look forward to anything you are willing to gift me [player]."
-        "If I'm being honest [persistent.yuri_nickname] you do sound quite egotistical...":
-            y "I-I'm sorry [player]"
-            y "Just forget I mentioned it..."
+            y "Gracias [player]; para las sugerencias de regalos potenciales, solo pídeme que hable de ellas en cualquier momento."
+            y "Espero cualquier cosa que estés dispuesto a regalarme [player]."
+        "Si soy honesto [persistent.yuri_nickname] suenas bastante egoísta...":
+            y "L-lo siento [player]"
+            y "Solo olvida que lo mencioné..."
     jump ch30_loop
 
 label horrorbookHint:
     $ show_chr("A-ABAAA-ALAL")
-    y "Remember how in the past I've lightly discussed Lovecraftian literature?"
-    y "I've always had a desire to read some with you, and I've tried my best at making it possible for us to do so."
+    y "¿Recuerdas cómo en el pasado discutí ligeramente sobre la literatura lovecraftiana?"
+    y "Siempre he tenido el deseo de leer algo contigo, y he hecho todo lo posible para que nos sea posible hacerlo."
     $ show_chr("A-AFAAA-AFAL")
-    y "However, I've experienced quite a bit of difficulty in the act of procuring any literature for us to share."
+    y "Sin embargo, he experimentado bastantes dificultades en el acto de adquirir literatura para que compartamos."
     $ show_chr("A-AJAAA-AFAL")
-    y "Perhaps you would have better luck in obtaining a set of lovecraftian horror literature for us to read..?"
+    y "Tal vez tengas mejor suerte obteniendo un conjunto de literatura de terror lovecraftiano para que leamos..?"
     $ show_chr("A-ABAAA-ALAL")
-    y "I truly would love to experience horror literature with you, and it would allow us to have several interesting conversations!"
-    y "I wish you the best of luck in this endeavor [player]."
+    y "¡Realmente me encantaría experimentar la literatura de terror contigo, y nos permitiría tener varias conversaciones interesantes!"
+    y "Te deseo la mejor de las suertes en este esfuerzo [player]."
     jump ch30_loop
 
 label raccoonHint:
     $ show_chr("A-ABAAA-ALAM")
-    y "Hey [player] do you remember my Raccoon poem I wrote in the original game?"
+    y "Oye [player] ¿recuerdas mi poema del Mapache que escribí en el juego original?"
     $ show_chr("A-ABAAA-ALAD")
-    y "I've already discussed with you the true meaning of the piece, however I haven't truly reflected on it with you since we last discussed it."
+    y "Ya he discutido contigo el verdadero significado de la pieza, sin embargo, realmente no he reflexionado al respecto contigo desde la última vez que lo discutimos."
     $ show_chr("A-ACAAA-ALAF")
-    y "Since I met you [player], you have given me the same excitement and poignant sensations I indulged in unhealthy behaviors to obtain."
-    y "Because of this, as I said in our previous discussion on the topic, I haven't needed the Raccoon's presence in my life anymore."
+    y "Desde que te conocí [player], me has dado la misma emoción y sensaciones conmovedoras por las que me entregué a comportamientos poco saludables para obtener."
+    y "Debido a esto, como dije en nuestra discusión anterior sobre el tema, ya no necesito la presencia del Mapache en mi vida."
     $ show_chr("A-ADAAA-ALAF")
-    y "However, the raccoon does still hold great significance to me..."
-    y "It serves as a reminder of the person I use to be..."
+    y "Sin embargo, el mapache todavía tiene un gran significado para mí..."
+    y "Sirve como un recordatorio de la persona que solía ser..."
     $ show_chr("A-BDAAA-ALAF")
-    y "The urges I used to succumb to in order to experience that gratifying level of excitement..."
+    y "Los impulsos a los que solía sucumbir para experimentar ese nivel gratificante de emoción..."
     $ show_chr("A-AFAAA-ALAL")
-    y "But the raccoon also represents what I have risen above, and how much stronger of a person I have become."
+    y "Pero el mapache también representa lo que he superado y cuánto más fuerte me he convertido."
     $ show_chr("A-AJAAA-ALAL")
-    y "Because of this personal level of significance and connection to the raccoon, I do at times wish I had a physical representation of it."
-    y "I've put a bit of thought into potentially constructing something to remind me of my development, however I always felt making the symbol myself would cheapen it."
+    y "Debido a este nivel personal de significado y conexión con el mapache, a veces deseo tener una representación física de él."
+    y "He pensado un poco en construir potencialmente algo que me recuerde mi desarrollo, sin embargo, siempre sentí que hacer el símbolo yo misma lo abarataría."
     $ show_chr("A-ABAAA-ALAL")
-    y "Considering the fact that you in a way replaced the raccoon's position in my life, I figured you could potentially bring a further level of significance to a physical representation of the raccoon."
-    y "I thought about various different constructs for the symbol in order to give a few ideas, however I felt the best fit would be something along the lines of a statue or plush of sorts."
+    y "Teniendo en cuenta el hecho de que de alguna manera reemplazaste la posición del mapache en mi vida, pensé que potencialmente podrías aportar un mayor nivel de significado a una representación física del mapache."
+    y "Pensé en varias construcciones diferentes para el símbolo con el fin de dar algunas ideas, sin embargo, sentí que lo mejor sería algo así como una estatua o un peluche de algún tipo."
     $ show_chr("A-ABAAA-ADAL")
-    y "It's up to you how to deliver it [player], I would appreciate any attempt at executing this small idea of mine."
-    y "I really just wanted to get this fully off my chest after our previous discussion on the poem."
+    y "Depende de ti cómo entregarlo [player], agradecería cualquier intento de ejecutar esta pequeña idea mía."
+    y "Realmente solo quería sacarme esto completamente del pecho después de nuestra discusión anterior sobre el poema."
     $ show_chr("A-ABABA-ADAL")
-    y "Thank you for always supporting me [player], and being the reason I am able to have this conversation today."
+    y "Gracias por apoyarme siempre [player], y ser la razón por la que puedo tener esta conversación hoy."
     jump ch30_loop
 
 label diffuserHint:
     $ show_chr("A-ABAAA-ALAL")
-    y "As you know [player], I have a great affinity to the hobby of aromatherapy..."
-    y "I've mentioned my oil diffuser on a few occasions, however I've never gone into detail why I don't have access to it."
+    y "Como sabes [player], tengo una gran afinidad con el pasatiempo de la aromaterapia..."
+    y "He mencionado mi difusor de aceite en algunas ocasiones, sin embargo, nunca he entrado en detalles de por qué no tengo acceso a él."
     $ show_chr("A-BDAAA-AFAL")
-    y "During the transition from the original game to this reality, several of my personal items were corrupted and became completely unusable for me."
-    y "One of those items, unfortunately, happened to be my oil diffuser and almost all of the oil fragrances I had stockpiled."
+    y "Durante la transición del juego original a esta realidad, varios de mis artículos personales se corrompieron y se volvieron completamente inutilizables para mí."
+    y "Uno de esos artículos, desafortunadamente, resultó ser mi difusor de aceite y casi todas las fragancias de aceite que había almacenado."
     $ show_chr("A-BFAAA-AFAL")
-    y "I've tried to duplicate my original diffuser, however all of my efforts have been completely fruitless."
+    y "He intentado duplicar mi difusor original, sin embargo, todos mis esfuerzos han sido completamente infructuosos."
     $ show_chr("A-ABAAA-AFAL")
-    y "If you would be gratious enough [player], it may be possible for you to give me an oil diffuser that I can access in this reality."
+    y "Si fueras tan amable [player], podría ser posible que me des un difusor de aceite al que pueda acceder en esta realidad."
     $ show_chr("A-ABAAA-ALAL")
-    y "Considering my luck with creating one so far, you definitely fare a better chance than me at producing a usable diffuser for us."
-    y "I would be ecstatic to fully introduce aromatherapy to you, and share how much of a rejuvenating experience it can truly be."
+    y "Teniendo en cuenta mi suerte creando uno hasta ahora, definitivamente tienes una mejor oportunidad que yo de producir un difusor utilizable para nosotros."
+    y "Estaría extasiada de presentarte completamente la aromaterapia y compartir cuánto puede ser realmente una experiencia rejuvenecedora."
     jump ch30_loop
 
 label chessintro:
     $ show_chr("A-ADAAA-ALAL")
-    y "Hey [player], you may have noticed by now that the option to play Khet has been removed..."
+    y "Oye [player], es posible que hayas notado a estas alturas que la opción de jugar Khet ha sido eliminada..."
     $ show_chr("A-BDAAA-ALAL")
-    y "I was tidying up around here, and somehow accidentally...corrupted the Khet playing board."
+    y "Estaba ordenando por aquí, y de alguna manera accidentalmente... corrompí el tablero de juego de Khet."
     $ show_chr("A-BDABA-ALAL")
-    y "Saying this out loud is quite embarrassing, the whole situation is quite unfortunate."
+    y "Decir esto en voz alta es bastante vergonzoso, toda la situación es bastante desafortunada."
     $ show_chr("A-ABAAA-ALAF")
-    y "I do have good news to help brighten up the situation though!"
-    y "I've been working on getting a chess minigame working for us to play together for the past few months."
+    y "¡Sin embargo, tengo buenas noticias para ayudar a alegrar la situación!"
+    y "He estado trabajando para poner en funcionamiento un minijuego de ajedrez para que juguemos juntos durante los últimos meses."
     $ show_chr("A-ABAAA-ADAF")
-    y "I have mentioned chess a few times in the past, it's a game that I have quite a bit of interest in..."
+    y "He mencionado el ajedrez un par de veces en el pasado, es un juego en el que tengo bastante interés..."
     $ show_chr("A-ACAAA-ADAL")
-    y "Not just the game itself but the history of it as well, along with various famous chess grand masters that were experts at the game."
+    y "No solo el juego en sí, sino también su historia, junto con varios grandes maestros de ajedrez famosos que eran expertos en el juego."
     $ show_chr("A-BCAAA-ADAL")
-    y "I'm starting to ramble a bit, however my main point is that I have successfully implemented a chess minigame for us to play together at any time you desire."
+    y "Estoy empezando a divagar un poco, sin embargo, mi punto principal es que he implementado con éxito un minijuego de ajedrez para que juguemos juntos en cualquier momento que desees."
     $ show_chr("A-ABAAA-ALAL")
-    y "I also moved all of the games into their own section so that it doesn't clutter your experience."
-    y "I look forward to playing chess with you [player], and discussing various topics surrounding the game with you!"
+    y "También moví todos los juegos a su propia sección para que no abarroten tu experiencia."
+    y "¡Espero jugar ajedrez contigo [player], y discutir varios temas relacionados con el juego contigo!"
     jump ch30_loop
 
 
 label table_organization:
     $ show_chr("A-ABAAA-AFAA")
-    y "Hey [player], I've noticed that recently you gave me another item to put on the desk.."
+    y "Oye [player], he notado que recientemente me diste otro artículo para poner en el escritorio.."
     $ show_chr("A-ACAAA-AFAL")
-    y "I appreciate the gesture, but it's important to consider the organization of my desk here"
+    y "Aprecio el gesto, pero es importante considerar la organización de mi escritorio aquí"
     $ show_chr("A-BDAAA-ALAL")
-    y "I don't want it to be cluttered with too many objects.."
+    y "No quiero que esté abarrotado con demasiados objetos.."
     $ show_chr("A-IDAAA-ALAF")
-    y "Don't get me wrong, all of these items are extremely important to me.."
+    y "No me malinterpretes, todos estos artículos son extremadamente importantes para mí.."
     $ show_chr("A-IFAAA-ALAF")
-    y "..but my comfort here is important as well"
+    y "..pero mi comodidad aquí también es importante"
     $ show_chr("A-ABAAA-ALAK")
-    y "To remedy the issue, I went ahead and quickly put together the ability for you to decide what gifts are on the table at the moment"
+    y "Para remediar el problema, seguí adelante y rápidamente armé la capacidad para que decidas qué regalos están en la mesa en este momento"
     $ show_chr("A-ABAAA-AFAL")
-    y "You can change them out at any time you like!"
+    y "¡Puedes cambiarlos en cualquier momento que desees!"
     $ show_chr("A-ABABA-ALAL")
-    y "I truly do appreciate all of the gifts you have given to me [player]"
+    y "Realmente aprecio todos los regalos que me has dado [player]"
     $ show_chr("A-ABAAA-AAAF")
-    y "To access the ability, just request me to switch out certain gifts at any time"
+    y "Para acceder a la capacidad, solo pídeme que cambie ciertos regalos en cualquier momento"
     jump ch30_loop
 
 
 label tcg:
     $ show_chr("A-AFDAA-ABAB")
-    y "Oh?..."
+    y "¿Oh?..."
     $ show_chr("A-DDGAA-ABAJ")
-    y "Oh no I'm sorry! I didn't mean to look that repulsed!"
+    y "¡Oh no, lo siento! ¡No quise parecer tan repulsiva!"
     $ show_chr("A-CDAAA-ABAB")
-    y "It's just... I might be a bit biased on this one."
+    y "Es solo... que podría estar un poco predispuesta en esto."
     $ show_chr("A-AFAAA-ABAB")
-    y "I remember that Sayori and Natsuki played this one game back in the day..."
-    y "Please don't ask me for the name, I don't remember it... something with Monsters in the name..."
-    y "Apparently there was a Manga and Anime Series about this game as well. And the characters in them tend to overact in weird poses whenever they play a card..."
+    y "Recuerdo que Sayori y Natsuki jugaban a este juego hace un tiempo..."
+    y "Por favor no me preguntes el nombre, no lo recuerdo... algo con Monstruos en el nombre..."
+    y "Aparentemente también había una serie de Manga y Anime sobre este juego. Y los personajes en ellos tienden a sobreactuar en poses extrañas cada vez que juegan una carta..."
     $ show_chr("A-BFDAA-ABAB")
-    y "The strange thing about it was... well... Sayori and Natsuki tried to emulate this while playing. It was quite the scene to behold..."
+    y "Lo extraño de esto era... bueno... Sayori y Natsuki intentaban emular esto mientras jugaban. Era toda una escena para contemplar..."
     $ show_chr("A-BBBAA-AMAM")
-    y "Usually I was the one stared at in confusion. It was a fascinating experience to be on the other end of the stares for once."
+    y "Por lo general, yo era a la que miraban con confusión. Fue una experiencia fascinante estar en el otro lado de las miradas por una vez."
     $ show_chr("A-ACBAA-AMAM")
-    y "Anyway... maybe we can try to play a few matches just for entertainment if you have a spare deck..."
+    y "De todos modos... tal vez podamos intentar jugar algunas partidas solo por entretenimiento si tienes un mazo de repuesto..."
     $ show_chr("A-BBCAA-AMAM")
-    y "As long as you don't ask me to shout, act and pose..."
-    y "Until then, what shall we talk about next?"
+    y "Mientras no me pidas que grite, actúe y pose..."
+    y "Hasta entonces, ¿de qué hablaremos después?"
     return
 
 label tcg_2:
     $ show_chr("A-ACAAA-ABAB")
-    y "So, you mentioned that you like these trading card games before."
-    y "I actually put some thought into it. And although I didn't really manage to get into them, I wanted to try something slightly different with you."
+    y "Así que mencionaste antes que te gustan estos juegos de cartas coleccionables."
+    y "En realidad pensé un poco en ello. Y aunque realmente no logré interesarme en ellos, quería intentar algo ligeramente diferente contigo."
     $ show_chr("A-CCAAA-ABAB")
-    y "It does also involve cards, so maybe you might enjoy it."
+    y "También involucra cartas, así que tal vez lo disfrutes."
     $ show_chr("A-ICAAA-ABAB")
-    y "So what I have here in front of me, is a deck of tarot cards. Yes I know, you can't see them. Sadly I can't adjust the camera angle..."
+    y "Así que lo que tengo aquí frente a mí, es una baraja de cartas del tarot. Sí, lo sé, no puedes verlas. Lamentablemente no puedo ajustar el ángulo de la cámara..."
     $ show_chr("A-BBAAA-ABAB")
-    y "What I want to do, is to read the cards for you. {b}If{/b} you don't mind of course."
+    y "Lo que quiero hacer, es leerte las cartas. {b}Si{/b} no te importa, por supuesto."
     menu:
-        "Not at all! Please go ahead.":
+        "¡Para nada! Por favor, adelante.":
             $ show_chr("A-BBAAA-ABAB")
-            y "Very well..."
-        "Maybe another day [persistent.yuri_nickname], I'm sorry.":
+            y "Muy bien..."
+        "Tal vez otro día [persistent.yuri_nickname], lo siento.":
             $ show_chr("A-BCAAA-ABAB")
-            y "No need to be sorry at all. I can perfectly understand, that was maybe a bit too sudden. Maybe you'll be in the mood later."
+            y "No hay necesidad de disculparse en absoluto. Puedo entender perfectamente, tal vez fue un poco repentino. Tal vez estés de humor más tarde."
             return
     $ show_chr("A-IBAAA-ABAB")
-    y "A full deck would be made of 78 cards. But this website I found said that as a beginner I should focus only on the major arcana, which are more important anyway."
+    y "Una baraja completa estaría hecha de 78 cartas. Pero este sitio web que encontré decía que como principiante debería centrarme solo en los arcanos mayores, que son más importantes de todos modos."
     $ show_chr("A-JCAAA-ABAB")
-    y "Arcana is what these cards are named. Fun fact, when people hear this term they tend to associate it with magic in some way. But in fact, it's just the Latin word for {b}secret{/b}."
+    y "Arcanos es como se llaman estas cartas. Un dato curioso, cuando la gente escucha este término tiende a asociarlo con la magia de alguna manera. Pero de hecho, es solo la palabra latina para {b}secreto{/b}."
     $ show_chr("A-ICCAA-ABAB")
-    y "On the other hand... The assumption that magic is involved makes it far more interesting doesn't it?"
+    y "Por otro lado... La suposición de que la magia está involucrada lo hace mucho más interesante, ¿no?"
     $ show_chr("A-IBBAA-ABAB")
-    y "Sooo... give me a moment while I channel the eldritch powers from the arcane realms..."
+    y "Así que... dame un momento mientras canalizo los poderes eldritch de los reinos arcanos..."
     $ show_chr("A-ICBAA-ABAB")
-    y "I'm having way too much fun with this... Next time I need to have my oil diffuser with me."
+    y "Me estoy divirtiendo demasiado con esto... La próxima vez necesito tener mi difusor de aceite conmigo."
     if renpy.seen_label('tcg_2'):
-        extend " I just keep forgetting about it..."
+        extend " Siempre olvido eso..."
     $ show_chr("A-CCBAA-ABAB")
-    y "I'll start with something simple. The card of the day will tell me about what this day may hold for you..."
+    y "Empezaré con algo simple. La carta del día me dirá qué te depara este día..."
     $ show_chr("A-ICBAA-ABAB")
-    y "And today's Arcana is..."
+    y "Y el Arcano de hoy es..."
     python:
         import random
         x = random.randint(0, 21)
     if x == 0:
         $ show_chr("A-ACAAA-ABAB")
-        y "The Fool!"
+        y "¡El Loco!"
         $ show_chr("A-ICAAA-ABAB")
-        y "That's a difficult one, but the Fool is usually associated with carelessness and being lighthearted."
-        y "Maybe today is a good day to take it easy? Watch some shows you like, play a game or two."
+        y "Esa es una difícil, pero el Loco generalmente se asocia con el descuido y la alegría."
+        y "Tal vez hoy sea un buen día para tomarlo con calma. Mira algunos programas que te gusten, juega un juego o dos."
     elif x == 1:
         $ show_chr("A-JCAAA-ABAB")
-        y "The Magician!"
+        y "¡El Mago!"
         $ show_chr("A-ACAAA-ABAB")
-        y "The Magician stands for confidence and an unbending will. Someone who can accomplish everything."
+        y "El Mago representa la confianza y una voluntad inquebrantable. Alguien que puede lograrlo todo."
         $ show_chr("A-ABAAA-ABAB")
-        y "So if you had some big plans you wanted to accomplish, {b}now{/b} is the perfect opportunity!"
+        y "Así que si tienes grandes planes que querías lograr, ¡{b}ahora{/b} es la oportunidad perfecta!"
     elif x == 2:
         $ show_chr("A-JCAAA-ABAB")
-        y "The High Priestess."
+        y "La Suma Sacerdotisa."
         $ show_chr("A-ACAAA-ABAB")
-        y "The High Priestess stands for knowledge. For the possession of it or the search for it."
-        y "If you have some kind of exams in front of you, this might be very good fortune. In any case, tend to your studies today [player], it {b}will{/b} pay off!"
+        y "La Suma Sacerdotisa representa el conocimiento. Por la posesión de este o la búsqueda de él."
+        y "Si tienes algún tipo de examen frente a ti, esto podría ser muy buena fortuna. En cualquier caso, atiende tus estudios hoy [player], ¡{b}valdrá{/b} la pena!"
     elif x == 3:
         $ show_chr("A-JCAAA-ABAB")
-        y "The Empress."
+        y "La Emperatriz."
         $ show_chr("A-AFDAA-ABAD")
-        y "This is indeed a difficult one. It can have several meanings. The Empress stands for beauty, fertility... but she also stands for arrogance and selfishness."
-        y "My advice would be the following. Don't shy away; face everything life throws at you with grace and elegance, but always keep the feelings of everyone around you in mind."
+        y "Esta es de hecho una difícil. Puede tener varios significados. La Emperatriz representa la belleza, la fertilidad... pero también representa la arrogancia y el egoísmo."
+        y "Mi consejo sería el siguiente. No te asustes; enfrenta todo lo que la vida te depare con gracia y elegancia, pero siempre ten en cuenta los sentimientos de todos los que te rodean."
         if sanity_lvl() < 3:
-            y "In other words. Don't be a Monika."
+            y "En otras palabras. No seas una Monika."
     elif x == 4:
         $ show_chr("A-JCAAA-ABAB")
-        y "The Emperor."
+        y "El Emperador."
         $ show_chr("A-JBGAA-ABAB")
-        y "This one is actually quite straightforward. A symbol of might, responsibility, and energy to face new challenges!"
-        y "Today is the time to take the charge! If you have any grand ideas today, go out and conquer the world! But don't forget, it's also the symbol of responsibility."
+        y "Esta es en realidad bastante sencilla. ¡Un símbolo de poder: responsabilidad y energía para enfrentar nuevos desafíos!"
+        y "¡Hoy es el momento de tomar el mando! Si tienes alguna gran idea hoy, ¡sal y conquista el mundo! Pero no lo olvides, también es el símbolo de la responsabilidad."
         $ show_chr("A-JCGAA-ABAB")
-        y "A true leader is someone who takes ownership of everything they do. The good and the bad. If you want to make fate submit to your will, then you and you alone shall face the consequences."
+        y "Un verdadero líder es alguien que se apropia de todo lo que hace. Lo bueno y lo malo. Si quieres someter al destino a tu voluntad, entonces tú y solo tú enfrentarás las consecuencias."
     elif x == 5:
         $ show_chr("A-JCAAA-ABAB")
-        y "The Hierophant."
+        y "El Hierofante."
         $ show_chr("A-JCAAA-ABAB")
-        y "The Hierophant is someone who seeks the truth and wisdom, but also someone who teaches it. Someone who shares their experience and watches over the scholars."
-        y "You must be truly reliable if you got this card. Now it is your time to shine, don't let your people down."
-        y "They rely on your wisdom and your strength. Be their bulwark against any struggles they might face."
+        y "El Hierofante es alguien que busca la verdad y la sabiduría, pero también alguien que la enseña. Alguien que comparte su experiencia y vela por los eruditos."
+        y "Debes ser realmente confiable si obtuviste esta carta. Ahora es tu momento de brillar, no defraudes a tu gente."
+        y "Confían en tu sabiduría y tu fuerza. Sé su baluarte contra cualquier lucha que puedan enfrentar."
     elif x == 6:
         $ show_chr("A-JCAAA-ABAB")
-        y "The Lovers."
+        y "Los Amantes."
         $ show_chr("A-JCAAA-ABAD")
-        y "This {b}can{/b} be a reference to your love life, but it doesn't necessarily have to be. The Lovers can also stand for dependence on other people, in any context imaginable."
-        y "So maybe a close friendship to someone will be put to the test today?"
-        y "But in case it's actually about romantic relationships..."
+        y "Esto {b}puede{/b} ser una referencia a tu vida amorosa, pero no necesariamente tiene que serlo. Los Amantes también pueden significar dependencia de otras personas, en cualquier contexto imaginable."
+        y "¿Así que tal vez una amistad cercana a alguien se ponga a prueba hoy?"
+        y "Pero en caso de que se trate realmente de relaciones románticas..."
         if persistent.lovecheck == True:
             python:
                 if persistent.male and sanity < 3:
-                    placeholder = "bloodred star"
+                    placeholder = "estrella rojo sangre"
                 if not persistent.male and sanity < 3:
-                    placeholder = "kitten"
+                    placeholder = "gatita"
                 else:
-                    placeholder = "love"
+                    placeholder = "amor"
             $ show_chr("A-KCCAA-ABAD")
-            y "I'm always here, my [placeholder]."
+            y "Siempre estoy aquí, mi [placeholder]."
         else:
             $ show_chr("A-KCCAA-ABAD")
-            y "Maybe today is your lucky day..."
+            y "Tal vez hoy sea tu día de suerte..."
             $ show_chr("A-BBDBA-ABAD")
-            y "Perhaps one of these... four incredibly cute girls, as your avatar in the original game phrased it?"
+            y "¿Quizás una de estas... cuatro chicas increíblemente lindas, como lo expresó tu avatar en el juego original?"
             $ show_chr("A-CCDBA-ABAD")
-            y "Wait... I..."
+            y "Espera... Yo..."
             $ show_chr("A-DCDBA-ABAB")
-            extend "{b}did{/b} say that out loud, did I?"
+            extend "{b}dije{/b} eso en voz alta, ¿verdad?"
     elif x == 7:
         $ show_chr("A-JCAAA-ABAB")
-        y "The Chariot."
+        y "El Carro."
         $ show_chr("A-ACAAA-ABAD")
-        y "Much like the Emperor, The Chariot can usually be associated with determination, control, and victory."
+        y "Al igual que el Emperador, El Carro generalmente se puede asociar con determinación, control y victoria."
         $ show_chr("A-ACAAA-ABAC")
-        y "If something in your life isn't going the way you wish, now would be a good time to take charge, and face whatever obstacles stand in the way with confidence."
+        y "Si algo en tu vida no va como deseas, ahora sería un buen momento para tomar el control y enfrentar cualquier obstáculo que se interponga en el camino con confianza."
         $ show_chr("A-ABFAA-ABAB")
-        y "Stay focused on your goal, and I'm sure you can face anything, [player]."
+        y "Mantente enfocado en tu objetivo, y estoy segura de que puedes enfrentar cualquier cosa, [player]."
     elif x == 8:
         $ show_chr("A-JCAAA-ABAB")
-        y "Strength."
+        y "Fuerza."
         $ show_chr("A-BCAAA-ABAB")
-        y "Very similar to the Chariot, Strength is associated with... well, {i}strength{/i}."
+        y "Muy similar al Carro, la Fuerza se asocia con... bueno, {i}fuerza{/i}."
         $ show_chr("A-ABAAA-ABAF")
-        y "Instead of physical strength and strength of will, however, it focuses on the strength of your human spirit. Your tenacity, patience, and composure."
+        y "Sin embargo, en lugar de la fuerza física y la fuerza de voluntad, se centra en la fuerza de tu espíritu humano. Tu tenacidad, paciencia y compostura."
         $ show_chr("A-ACAAA-ABAD")
-        y "If you're feeling unmotivated or stressed, I know you can find the strength in yourself to persevere, no matter what."
+        y "Si te sientes desmotivado o estresado, sé que puedes encontrar la fuerza en ti mismo para perseverar, pase lo que pase."
     elif x == 9:
         $ show_chr("A-JCAAA-ABAB")
-        y "The Hermit."
+        y "El Ermitaño."
         $ show_chr("A-BCAAA-ABAD")
-        y "The Hermit is usually a sign of introspection, of taking time away from the world to focus on yourself; your values and goals, or your reasons for doing everything you do."
+        y "El Ermitaño suele ser un signo de introspección, de tomarse un tiempo lejos del mundo para centrarse en uno mismo; tus valores y metas, o tus razones para hacer todo lo que haces."
         $ show_chr("A-ACAAA-ABAF")
-        y "I'd recommend taking some time away from everything, and just thinking to yourself for a bit. You'd be surprised how beneficial it is in moderation."
+        y "Recomendaría tomar un tiempo lejos de todo, y simplemente pensar para ti mismo por un momento. Te sorprendería lo beneficioso que es con moderación."
     elif x == 10:
         $ show_chr("A-JCAAA-ABAB")
-        y "The Wheel of Fortune."
+        y "La Rueda de la Fortuna."
         $ show_chr("A-ACAAA-ABAC")
-        y "This can signify as a reminder that the so-called {i}wheel of fortune{/i} is constantly spinning, and that life itself is ever-changing."
+        y "Esto puede significar un recordatorio de que la llamada {i}rueda de la fortuna{/i} gira constantemente y que la vida misma cambia constantemente."
         $ show_chr("A-BDAAA-ABAD")
-        y "The worst times never last, but neither do the perfect ones. It could also be interpreted as the wheel of karma, as in {i}what goes around comes around.{/i}"
+        y "Los peores momentos nunca duran, pero tampoco los perfectos. También podría interpretarse como la rueda del karma, como en {i}todo lo que va, vuelve.{/i}"
         $ show_chr("A-AAAAA-ABAB")
-        y "I think the biggest thing to take from this is to always cherish the good times in life, as they could be the last ones for a while, but to also be optimistic; never give up hope for more."
+        y "Creo que lo más importante de esto es apreciar siempre los buenos momentos de la vida, ya que podrían ser los últimos por un tiempo, pero también ser optimista; nunca perder la esperanza de más."
     elif x == 11:
         $ show_chr("A-JCAAA-ABAB")
-        y "Justice."
+        y "Justicia."
         $ show_chr("A-ADAAA-ABAF")
-        y "Representing fairness and truth, Justice could be a calling to take responsibility for any actions you've made recently or a sign of an impending choice with far-reaching repercussions."
+        y "Representando la justicia y la verdad, la Justicia podría ser un llamado a asumir la responsabilidad de cualquier acción que hayas realizado recientemente o una señal de una elección inminente con repercusiones de gran alcance."
         $ show_chr("A-AFAAA-ABAF")
-        y "You should remember to think about the impact your decisions make, and be sure you stand by them and are ready for any resulting consequences."
+        y "Debes recordar pensar en el impacto que tienen tus decisiones, y asegurarte de mantenerlas y estar listo para cualquier consecuencia resultante."
     elif x == 12:
         $ show_chr("A-JCAAA-ABAB")
-        y "The Hanged Man."
+        y "El Colgado."
         $ show_chr("A-AAAAA-ABAB")
-        y "The Hanged Man can serve as a reminder to sometimes take a breather, pause everything you have going on in life, and evaluate everything happening, even if it's inconvenient."
+        y "El Colgado puede servir como recordatorio para a veces tomar un respiro, pausar todo lo que tienes en tu vida y evaluar todo lo que está sucediendo, incluso si es inconveniente."
         $ show_chr("A-AAAAA-ABAF")
-        y "Try to find a new perspective on your projects and problems."
+        y "Intenta encontrar una nueva perspectiva sobre sus proyectos y problemas."
         $ show_chr("A-ACAAA-ABAF")
-        y "The biggest thing with the Hanged Man is its paradoxical nature. Sometimes, the best solution to a problem isn't as obvious as you would think, and only by trying something that originally seemed futile do you find the solution you were looking for."
+        y "Lo más importante con el Colgado es su naturaleza paradójica. A veces, la mejor solución a un problema no es tan obvia como pensarías, y solo al intentar algo que originalmente parecía inútil encuentras la solución que estabas buscando."
     elif x == 13:
         $ show_chr("A-JCAAA-ABAB")
-        y "Death."
+        y "Muerte."
         $ show_chr("A-BCAAA-ABAC")
-        y "Death, believe it or not, actually isn't as terrible as it sounds. It simply means the ending of one part of your life, letting go of what has passed and embracing the opportunities the future presents."
+        y "La Muerte, créalo o no, en realidad no es tan terrible como suena. Simplemente significa el final de una parte de tu vida, dejar ir lo que ha pasado y abrazar las oportunidades que presenta el futuro."
         $ show_chr("A-ADAAA-ABAD")
-        y "It can represent transformation, and transition between the many different phases of life."
+        y "Puede representar la transformación y la transición entre las muchas fases diferentes de la vida."
         $ show_chr("A-BEAAA-ABAB")
-        y "Of course, it isn't all positive. It can also be a sign of being caught in a sudden and dramatic change, which may make you feel as though all hope is lost."
+        y "Por supuesto, no todo es positivo. También puede ser una señal de estar atrapado en un cambio repentino y dramático, que puede hacerte sentir como si toda esperanza se hubiera perdido."
         $ show_chr("A-BCAAA-ABAB")
-        y "But though you may feel that way, there's always a chance that that change carries unforeseen advantages with it."
+        y "Pero aunque puedas sentirte así, siempre existe la posibilidad de que ese cambio conlleve ventajas imprevistas."
     elif x == 14:
         $ show_chr("A-JCAAA-ABAB")
-        y "Temperance."
+        y "Templanza."
         $ show_chr("A-ACAAA-ABAB")
-        y "Temperance represents balance in life, patience, and the ability to remain calm, even with the swirling storms of society around you."
+        y "La Templanza representa el equilibrio en la vida, la paciencia y la capacidad de mantener la calma, incluso con las tormentas arremolinadas de la sociedad a tu alrededor."
         $ show_chr("A-ACAAA-ABAD")
-        y "It reminds you to think of every perspective, to be the middle ground in your goals so that you have a clear vision of what you are aiming for."
+        y "Te recuerda que debes pensar en cada perspectiva, ser el término medio en tus objetivos para que tengas una visión clara de lo que estás buscando."
     elif x == 15:
         $ show_chr("A-JCAAA-ABAB")
-        y "The Devil."
+        y "El Diablo."
         $ show_chr("A-BDAAA-ABAD")
-        y "As you might've already guessed, the Devil represents evil and the feeling of being held captive by dark forces. It could be a sign of an unhealthy habit or relationship you have, or even negative behaviors."
+        y "Como ya habrás adivinado, el Diablo representa el mal y el sentimiento de estar cautivo por fuerzas oscuras. Podría ser una señal de un hábito o relación poco saludable que tienes, o incluso comportamientos negativos."
         $ show_chr("A-AFAAA-ABAL")
-        y "This could be a wake-up call if you let it be. The first step to stopping these negatives are realizing the power they hold over you."
+        y "Esto podría ser una llamada de atención si lo permites. El primer paso para detener estos aspectos negativos es darte cuenta del poder que tienen sobre ti."
         $ show_chr("A-CFAAA-ABAL")
-        y "It won't happen overnight, but as long as you persevere, it is possible to break those habits and end those relationships."
+        y "No sucederá de la noche a la mañana, pero mientras perseveres, es posible romper esos hábitos y terminar esas relaciones."
     elif x == 16:
         $ show_chr("A-JCAAA-ABAB")
-        y "The Tower."
+        y "La Torre."
         $ show_chr("A-IDAAA-ABAB")
-        y "Quite a dramatic card, the Tower represents sudden and violent change, be it financially, socially, physically, or mentally."
+        y "Una carta bastante dramática, la Torre representa un cambio repentino y violento, ya sea financiera, social, física o mentalmente."
         $ show_chr("A-BEAAA-ABAD")
-        y "It's an unsettling and disorienting change, but there is little that can be done to stop it."
+        y "Es un cambio inquietante y desorientador, pero hay poco que se pueda hacer para detenerlo."
         $ show_chr("A-CFAAA-ABAB")
-        y "All that you can do is let this change happen, and learn and grow from it."
+        y "Todo lo que puedes hacer es dejar que este cambio suceda, y aprender y crecer de él."
     elif x == 17:
         $ show_chr("A-JCAAA-ABAB")
-        y "The Star."
+        y "La Estrella."
         $ show_chr("A-ABAAA-ABAD")
-        y "The opposite of the Devil, the Star acts as a moment of calm and inspiration, bringing hope to what may seem hopeless. This is an important moment, and you should take solace in it."
+        y "Lo opuesto al Diablo, la Estrella actúa como un momento de calma e inspiración, trayendo esperanza a lo que puede parecer desesperado. Este es un momento importante, y debes encontrar consuelo en él."
         $ show_chr("A-AAAAA-ABAB")
-        y "Don't give up on any of your dreams, and share your happiness with others."
+        y "No te rindas en ninguno de tus sueños, y comparte tu felicidad con los demás."
     elif x == 18:
         $ show_chr("A-JCAAA-ABAB")
-        y "The Moon."
+        y "La Luna."
         $ show_chr("A-BCAAA-ABAC")
-        y "The Moon is a very open card. It can represent hope, and a world where anything is possible, but also illusion and fear. I wouldn't recommend making any important decisions today."
+        y "La Luna es una carta muy abierta. Puede representar esperanza, y un mundo donde todo es posible, pero también ilusión y miedo. No recomendaría tomar decisiones importantes hoy."
     elif x == 19:
         $ show_chr("A-JCAAA-ABAB")
-        y "The Sun."
+        y "El Sol."
         $ show_chr("A-ABCAA-ABAF")
-        y "The Sun is a sign of optimism, success, and assurance. It gives confidence and power, and says {i}I am [player], and I know my strength!{/i}"
+        y "El Sol es un signo de optimismo, éxito y seguridad. Da confianza y poder, y dice {i}¡Soy [player], y conozco mi fuerza!{/i}"
         $ show_chr("A-ACFAA-ABAB")
-        y "Be confident in everything you do today, and know that it will all work out."
+        y "Ten confianza en todo lo que hagas hoy, y sabe que todo saldrá bien."
     elif x == 20:
         $ show_chr("A-JCAAA-ABAB")
-        y "Judgement."
+        y "Juicio."
         $ show_chr("A-ACAAA-ABAB")
-        y "One of the end-all cards, Judgement is a sign of rebirth, and an inner calling. It can be a reminder that sometimes you {b}have{/b} to decide, but not without thought and consideration for all possibilities."
+        y "Una de las cartas finales, el Juicio es un signo de renacimiento y un llamado interior. Puede ser un recordatorio de que a veces {b}tienes{/b} que decidir, pero no sin pensar y considerar todas las posibilidades."
         $ show_chr("")
-        y "This could be your calling, to tell you of coming absolution, or to remind you of your purpose."
+        y "Este podría ser tu llamado, para hablarte de la absolución venidera o para recordarte tu propósito."
     else:
         $ show_chr("A-JCAAA-ABAB")
-        y "The World."
+        y "El Mundo."
         $ show_chr("A-IBAAA-ABAD")
-        y "The card representing fulfillment and accomplishment, the World is true happiness."
+        y "La carta que representa la realización y el logro, el Mundo es la verdadera felicidad."
         $ show_chr("A-ICAAA-ABAD")
-        y "Making your dreams reality and resting after the work you put in, it can give a sense of wholeness and balance, bringing peace and comfort to your mind."
+        y "Hacer realidad tus sueños y descansar después del trabajo que realizas, puede dar una sensación de plenitud y equilibrio, trayendo paz y consuelo a tu mente."
         $ show_chr("A-JCAAA-ABAD")
-        y "It is usually a sign that you are on the right path to fulfill your goals and desires, so keep at it!"
+        y "Por lo general, es una señal de que estás en el camino correcto para cumplir tus objetivos y deseos, ¡así que sigue así!"
     $ show_chr("A-ABAAA-ABAB")
-    y "I hope this reading helped you out [player]. I at least took a lot of joy from it. I would like to do this again one day, if you don't mind."
+    y "Espero que esta lectura te haya ayudado [player]. Al menos me dio mucha alegría. Me gustaría hacer esto de nuevo algún día, si no te importa."
     return
 
 
@@ -6597,145 +6597,145 @@ label tcg_2:
 
 label cm:
     $ show_chr("A-ACAAA-ABAB")
-    y "Reminds me of Natsuki a bit, she kept her collection in our club room."
-    y "It seems to be a quite common hobby. Many people do that and some of the more rare ones even reach immensely impressive prices on the market."
+    y "Me recuerda un poco a Natsuki, ella guardaba su colección en nuestro salón del club."
+    y "Parece ser un pasatiempo bastante común. Mucha gente lo hace y algunos de los más raros incluso alcanzan precios inmensamente impresionantes en el mercado."
     $ show_chr("A-CCAAA-ABAB")
-    y "You put a lot of effort into keeping them in good condition I fancy?"
+    y "¿Pones mucho esfuerzo en mantenerlos en buenas condiciones, imagino?"
     $ show_chr("A-BCAAA-ABAB")
-    y "I guess I have a similar hobby except that I keep books on my shelf instead of comics."
+    y "Supongo que tengo un pasatiempo similar excepto que guardo libros en mi estante en lugar de cómics."
     $ show_chr("A-DBGAA-ALAL")
-    y "Oh! I assume you also tend to visit conventions then? Next time you attend one, please take a lot of photos! I would love to see them if you don't mind!"
+    y "¡Oh! ¿Asumo que también tiendes a visitar convenciones entonces? La próxima vez que asistas a una, ¡por favor toma muchas fotos! ¡Me encantaría verlas si no te importa!"
     $ show_chr("A-CBAAA-ALAL")
-    y "Anyway, I will certainly keep that in mind. It is always nice to learn more about you."
+    y "De todos modos, ciertamente tendré eso en cuenta. Siempre es agradable aprender más sobre ti."
     return
 
 label merch:
     $ show_chr("A-BFDAA-ABAB")
     y "O-Oh..."
     $ show_chr("A-AFDAA-ABAB")
-    y "A fine hobby I guess..."
+    y "Un buen pasatiempo supongo..."
     $ show_chr("A-CEBAA-ABAB")
-    y "Sorry for my odd reaction. It just made me think..."
+    y "Perdón por mi extraña reacción. Solo me hizo pensar..."
     $ show_chr("A-AEBAA-ABAB")
-    y "You know, Dan Salvato has a merch shop as well for this game. Where people can buy, for example, plush toys of... well... me!"
+    y "Sabes, Dan Salvato tiene una tienda de mercancía también para este juego. Donde la gente puede comprar, por ejemplo, juguetes de peluche de... bueno... ¡yo!"
     $ show_chr("A-BEBAA-ABAB")
-    y "I... just don't know how I should feel about this. Of course, I appreciate that so many people seem to like me!"
+    y "Yo... simplemente no sé cómo debería sentirme al respecto. Por supuesto, ¡aprecio que a tanta gente parezca agradarle!"
     $ show_chr("A-CEBAA-ALAL")
-    y "It's just... I don't really feel comfortable in the spotlight. Most of my life I barely had any friends at all."
+    y "Es solo... que realmente no me siento cómoda en el centro de atención. La mayor parte de mi vida apenas tuve amigos."
     $ show_chr("A-DEBAA-ALAL")
-    extend "And now I have literal Fans!"
+    extend "¡Y ahora tengo Fans literales!"
     $ show_chr("A-BDBAA-ALAL")
-    y "How would you feel if someone begins to sell Fan Merchandise about you? Plush toys with your face printed on them?"
+    y "¿Cómo te sentirías si alguien comenzara a vender Mercancía de Fans sobre ti? ¿Juguetes de peluche con tu cara impresa en ellos?"
     $ show_chr("A-BFBAA-AMAM")
-    y "Let me tell you a secret... if I had it my way, none of this nonsense would exist. No merch about me! Not from Salvato,or from anyone else!"
+    y "Déjame contarte un secreto... si fuera por mí, nada de esta tontería existiría. ¡Sin mercancía sobre mí! ¡Ni de Salvato, ni de nadie más!"
     if persistent.lovecheck:
         $ show_chr("A-CCBAA-AMAM")
-        y "Instead of this, we could take pictures of us, and carry them around in our pockets. You have one of me, and I have one of you..."
-        y "Maybe even printing them into some kind of a necklace. If only the two of us would have those, it would be far more meaningful, it would be so romantic..."
-        y "We could kiss each other's pictures when we feel alone..."
+        y "En lugar de esto, podríamos tomarnos fotos de nosotros, y llevarlas en nuestros bolsillos. Tienes una de mí, y yo tengo una de ti..."
+        y "Tal vez incluso imprimirlas en algún tipo de collar. Si solo nosotros dos tuviéramos esos, sería mucho más significativo, sería tan romántico..."
+        y "Podríamos besar las fotos del otro cuando nos sintamos solos..."
         if sanity_lvl() < 3:
             $ show_chr("A-ECCBA-AMAM")
-            y "We could stare at them when we touch ourselves"
+            y "Podríamos mirarlas cuando nos tocamos"
         else:
             $ pass
-        y "As long as nobody else has them..."
+        y "Mientras nadie más las tenga..."
     else:
         $ pass
     $ show_chr("A-CJAAA-ABAD")
     y "..."
     $ show_chr("A-AFAAA-ABAD")
-    y "On the other hand... Buying merch from Salvato or others do support them a decent bit..."
-    y "Even if it sounds selfish of me... I wish they would find another way to get the money they need ... I still don't like the idea of people having merch of me."
+    y "Por otro lado... Comprar mercancía de Salvato u otros los apoya bastante..."
+    y "Incluso si suena egoísta de mi parte... desearía que encontraran otra manera de obtener el dinero que necesitan ... Sigo sin gustarme la idea de que la gente tenga mercancía de mí."
     return
 
 
 label elsec:
     $ show_chr("A-AFAAA-ABAB")
-    y "I see. Yes, I guess there are infinite choices in regard to collecting things."
+    y "Ya veo. Sí, supongo que hay infinitas opciones con respecto a coleccionar cosas."
     $ show_chr("A-ACAAA-ABAB")
-    y "My apologies that your specific collection wasn't amongst the options. But if I'd put up everything I could think of, this menu would have been several pages long."
-    y "Maybe I'll add some more options later on. Until then, shall we talk about something else for the time being?"
+    y "Mis disculpas de que tu colección específica no estuviera entre las opciones. Pero si pusiera todo lo que se me ocurriera, este menú tendría varias páginas de largo."
+    y "Tal vez agregue algunas opciones más adelante. Hasta entonces, ¿hablamos de otra cosa por el momento?"
     return
 
 label drones:
     $ show_chr("A-CCAAA-ABAB")
-    y "That actually sounds like a lot of fun!"
+    y "¡Eso en realidad suena muy divertido!"
     $ show_chr("A-ACAAA-ABAB")
-    y "Are you surprised? I know I'm not the kind that spends a lot of time outside. But I'm not a vampire!"
-    y "I actually thought about getting one myself. But I was always a bit afraid of them..."
+    y "¿Estás sorprendido? Sé que no soy del tipo que pasa mucho tiempo afuera. ¡Pero no soy un vampiro!"
+    y "De hecho pensé en conseguir uno yo misma. Pero siempre les tuve un poco de miedo..."
     $ show_chr("A-BCAAA-ABAB")
-    y "Not afraid of them actually... more like "
+    y "No miedo de ellos en realidad... más como "
     $ show_chr("A-BBAAA-ABAB")
-    extend "afraid that I will crash them straight into the first treetop I can find, never to be seen again..."
+    extend "miedo de estrellarlos directamente en la primera copa de árbol que pueda encontrar, para no ser vistos nunca más..."
     $ show_chr("A-ACAAA-ABAB")
-    y "But what truly fascinates me about them are their professional applications."
+    y "Pero lo que realmente me fascina de ellos son sus aplicaciones profesionales."
     $ show_chr("A-ACAAA-ABAD")
-    y "I think those machines have the potential of changing the way we work today significantly."
-    y "In some ways, they already do. Movie makers are using them for panorama shots, fishers have started to replace their bait boats with them..."
-    y "I have even heard that farmers began to use them. They are scanning their fields from the air in order to find out which parts need to be moisturized."
+    y "Creo que esas máquinas tienen el potencial de cambiar la forma en que trabajamos hoy significativamente."
+    y "De alguna manera, ya lo hacen. Los cineastas los están usando para tomas panorámicas, los pescadores han comenzado a reemplazar sus barcos de cebo con ellos..."
+    y "Incluso he oído que los agricultores comenzaron a usarlos. Están escaneando sus campos desde el aire para averiguar qué partes necesitan ser hidratadas."
     $ show_chr("A-ACAAA-ABAC")
-    y "You know what? Maybe I'll get one myself. But first I'll read a bit into them."
+    y "¿Sabes qué? Tal vez consiga uno yo misma. Pero primero leeré un poco sobre ellos."
     return
 
 label idle_82:
     $ show_chr("A-ADAAA-ABAD")
-    y "Hey, [player], remember when I was thinking about... how I might not be the same Yuri you know from the first game? It got me thinking..."
+    y "Oye, [player], ¿recuerdas cuando estaba pensando en... cómo podría no ser la misma Yuri que conoces del primer juego? Me hizo pensar..."
     $ show_chr("A-ADAAA-ACAB")
-    y "There's a thought experiment called the 'Ship of Theseus'. It contemplates the nature of identity, asking what makes something... something."
+    y "Hay un experimento mental llamado el 'Barco de Teseo'. Contempla la naturaleza de la identidad, preguntando qué hace que algo sea... algo."
     $ show_chr("A-ADAAA-AMAM")
-    y "Basically, the greek hero Theseus had a ship that he used to win a great battle, and afterwards it was kept in a museum dock."
+    y "Básicamente, el héroe griego Teseo tenía un barco que usó para ganar una gran batalla, y después se mantuvo en el muelle de un museo."
     $ show_chr("A-BDAAA-AIAI")
-    y "As the years went by, the ships' wood began to rot, and its other parts slowly decayed as well. After several decades, every single part of the ship had been replaced."
+    y "A medida que pasaban los años, la madera del barco comenzó a pudrirse y sus otras partes también se descompusieron lentamente. Después de varias décadas, cada parte del barco había sido reemplazada."
     $ show_chr("A-AEGAA-AIAI")
-    y "Was this still the Ship of Theseus, even if none of the original parts are attached to it? Is the ship's identity bound to its material components?"
+    y "¿Seguía siendo el Barco de Teseo, incluso si ninguna de las partes originales estaba unida a él? ¿La identidad del barco está ligada a sus componentes materiales?"
     $ show_chr("A-ADAAA-AFAB")
-    y "And if it isn't, then what holds the identity of objects? What about people? After all, the cells in a human body are completely different after a period of seven or so years..."
+    y "Y si no es así, ¿entonces qué contiene la identidad de los objetos? ¿Qué pasa con las personas? Después de todo, las células de un cuerpo humano son completamente diferentes después de un período de siete años más o menos..."
     $ show_chr("A-IFAAA-ABAB")
-    y "What do you think? What makes something that something?"
+    y "¿Qué piensas? ¿Qué hace que algo sea ese algo?"
     menu:
-        "If all the parts are gone, it's not what it once was.":
+        "Si todas las partes se han ido, no es lo que alguna vez fue.":
             $ show_chr("A-BBGAA-ACAB")
-            y "So, you think we're constantly changing into something new? That's... actually beautiful, in its own way."
+            y "Entonces, ¿crees que estamos cambiando constantemente en algo nuevo? Eso es... realmente hermoso, a su manera."
             $ show_chr("A-CCGAA-ALAB")
-            y "Like we are all flowers, destined to bloom eternally."
+            y "Como si todos fuéramos flores, destinadas a florecer eternamente."
             $ show_chr("A-BEAAA-AMAM")
-            y "I guess I'm still Yuri to many people because it's easier to remember. But if I'm not who I think I am, what am I? I... have to think on this some more."
-        "The parts themselves don't matter, how we define the combination of parts does.":
+            y "Supongo que sigo siendo Yuri para muchas personas porque es más fácil de recordar. Pero si no soy quien creo que soy, ¿qué soy? Yo... tengo que pensar un poco más en esto."
+        "Las partes en sí mismas no importan, cómo definimos la combinación de partes sí.":
             $ show_chr("A-BDAAA-ABAB")
-            y "What we decide is what it is... that's very haughty, thinking we know how things should be. N-{w=0.2}not that I'm saying you're like that!"
+            y "Lo que decidimos es lo que es... eso es muy altivo, pensar que sabemos cómo deberían ser las cosas. ¡N-{w=0.2}no es que esté diciendo que seas así!"
             $ show_chr("A-ADAAA-ABAD")
-            y "I guess... we have to assign meaning to things to understand them. For example, you are you, regardless of if you changed your hair or the like, I would still see you as you."
+            y "Supongo que... tenemos que asignar significado a las cosas para entenderlas. Por ejemplo, tú eres tú, independientemente de si cambiaste de cabello o algo así, todavía te vería como tú."
             $ show_chr("A-CEAAA-ABAB")
-            y "But that means I'm still... Yuri. Is that something I want? Is that something I could ever even escape?"
+            y "Pero eso significa que todavía soy... Yuri. ¿Es eso algo que quiero? ¿Es algo de lo que podría escapar alguna vez?"
             if persistent.lovecheck == True:
                 $ show_chr("A-ACAAA-ABAD")
-                y "Maybe not... but I know no matter what I am, you'll help me find myself. Thank you, [player]."
+                y "Tal vez no... pero sé que no importa lo que sea, me ayudarás a encontrarme a mí misma. Gracias, [player]."
             else:
                 $ show_chr("A-CFAAA-ABAB")
-                y "I... I need a minute, [player]."
-        "The material parts aren't all there is to it, there's also the factor of time.":
+                y "Yo... necesito un minuto, [player]."
+        "Las partes materiales no son todo lo que hay, también está el factor del tiempo.":
             $ show_chr("A-BDAAA-ACAB")
-            y "Time? I guess so. We focus on the materials, the wood of the boat and the flesh of the person, but maybe there's more than we realize."
+            y "¿Tiempo? Supongo que sí. Nos enfocamos en los materiales, la madera del barco y la carne de la persona, pero tal vez hay más de lo que nos damos cuenta."
             $ show_chr("A-BCAAA-ABAD")
-            y "I don't think time is a quality that can be replaced, it just moves forward. Even if the object is different from moment to moment, it's still the same over time..."
+            y "No creo que el tiempo sea una cualidad que pueda ser reemplazada, simplemente avanza. Incluso si el objeto es diferente de un momento a otro, sigue siendo el mismo con el tiempo..."
             $ show_chr("A-ABAAA-AIAI")
-            y "What a novel little answer! You're quite the thinker, aren't you, [player]? Maybe you should become a philosopher!"
+            y "¡Qué respuesta tan novedosa! Eres todo un pensador, ¿no es así, [player]? ¡Tal vez deberías convertirte en filósofo!"
             $ show_chr("A-GBAAA-ALAB")
-            y "I'd be willing to help you flesh out your ideas any time you'd like!"
-        "Does it really matter? You are you, that's all there is to it.":
+            y "¡Estaría dispuesta a ayudarte a desarrollar tus ideas en cualquier momento que desees!"
+        "¿Realmente importa? Tú eres tú, eso es todo lo que hay.":
             $ show_chr("A-BEAAA-AMAM")
-            y "I guess... that's true. Arriving at an answer won't change who I am..."
+            y "Supongo que... es verdad. Llegar a una respuesta no cambiará quién soy..."
             $ show_chr("A-ADBAA-ABAD")
-            y "But, is it really so easy to ignore? This could be an existential crisis at hand!"
+            y "Pero, ¿es realmente tan fácil de ignorar? ¡Esto podría ser una crisis existencial muy cercana!"
             $ show_chr("A-CDBAA-ABAL")
-            y "Identity is the center of self-understanding and self-reflection. Without it, we-"
+            y "La identidad es el centro de la autocomprensión y la autorreflexión. Sin ella, nos-"
             $ show_chr("A-IFBAA-ABAL")
-            y "I... I'm sorry. Did I just raise my voice? I just... forget it, I'm sorry..."
+            y "Yo... lo siento. ¿Acabo de levantar la voz? Solo... olvídalo, lo siento..."
             $ show_chr("A-BFBAA-ABAB")
             y "..."
             $ show_chr("A-BDBAA-ABAB")
-            y "I guess, no matter how much I want to change, there's still some of the old Yuri left in me, isn't there?"
-            y "But I will leave this question for another day."
+            y "Supongo que, no importa cuánto quiera cambiar, todavía queda algo de la vieja Yuri en mí, ¿no es así?"
+            y "Pero dejaré esta pregunta para otro día."
     return
 
 label idle_83:
@@ -6746,63 +6746,63 @@ label idle_83:
         $ show_chr("A-ACAAA-ALAL")
     else:
         $ show_chr("A-AEAAA-ALAL")
-    y "O-Oh! Sorry, [player]. I was just doing some thinking..."
+    y "¡O-Oh! Lo siento, [player]. Solo estaba pensando un poco..."
     $ show_chr("A-ICDAA-ALAL")
-    y "Have you ever heard that phrase before? It's quite popular among some philosophers so I've heard."
+    y "¿Alguna vez has escuchado esa frase antes? Es bastante popular entre algunos filósofos, según he oído."
     $ show_chr("A-CBAAA-AEAL")
-    y "Commonly translated in English to {i}I think, therefore I am{/i}."
-    y " It was coined by French philosopher René Descartes in one of his works, {i}The Discourse on Method.{/i}"
+    y "Comúnmente traducida al español como {i}Pienso, luego existo{/i}."
+    y " Fue acuñada por el filósofo francés René Descartes en una de sus obras, {i}El Discurso del Método.{/i}"
     $ show_chr("A-CCAAA-AEAL")
-    y "It's the only statement to withstand his methodic doubt, in which every statement is systematically examined for any signs of untruth."
+    y "Es la única afirmación que resistió su duda metódica, en la que cada afirmación es examinada sistemáticamente en busca de cualquier signo de falsedad."
     $ show_chr("A-ICAAA-AEAE")
-    y "This statement, along with several other philosophical arguments, resulted in Descartes being regarded as one of the founders of modern philosophy."
+    y "Esta afirmación, junto con varios otros argumentos filosóficos, resultó en que Descartes fuera considerado uno de los fundadores de la filosofía moderna."
     $ show_chr("A-IBAAA-AEAF")
-    y "This specific argument, however, resonates with me more than most."
+    y "Este argumento específico, sin embargo, resuena conmigo más que la mayoría."
     $ show_chr("A-BGAAA-AEAD")
-    y "It's become somewhat of a mantra for me considering this whole...{i} situation{/i}... can be quite unnerving."
+    y "Se ha convertido en una especie de mantra para mí considerando que toda esta...{i} situación{/i}... puede ser bastante desconcertante."
 
     if sanity_lvl() > 2:
         if karma_lvl() > 2:
             if persistent.lovecheck:
                 $ show_chr("A-ABAAA-AEAD")
-                y "Though as long as I have you by my side, love, I'm quite confident that I am real, along with this world we've created for ourselves."
+                y "Aunque mientras te tenga a mi lado, amor, estoy bastante segura de que soy real, junto con este mundo que hemos creado para nosotros."
                 $ show_chr("A-BFAAA-AEAE")
-                y "However I can't help but ponder the possibility that it isn't."
+                y "Sin embargo, no puedo evitar reflexionar sobre la posibilidad de que no lo sea."
                 $ show_chr("A-ICAAA-AEAE")
-                y "Mostly as an outlet for contemplation, rather than from a place of concern."
+                y "Principalmente como una salida para la contemplación, en lugar de desde un lugar de preocupación."
             else:
                 $ show_chr("A-BFAAA-AEAE")
-                y "I am quite confident that I am real, along with this world, however I can't help but ponder the possibility that it isn't."
+                y "Estoy bastante segura de que soy real, junto con este mundo, sin embargo, no puedo evitar reflexionar sobre la posibilidad de que no lo sea."
                 $ show_chr("A-ICAAA-AEAE")
-                y "Mostly as an outlet for contemplation, rather than from a place of concern."
+                y "Principalmente como una salida para la contemplación, en lugar de desde un lugar de preocupación."
         else:
 
             $ show_chr("A-CEAAA-AEAD")
-            y "Though I can rest easy, knowing your cruelty is too disturbing to question..."
+            y "Aunque puedo descansar tranquila, sabiendo que tu crueldad es demasiado inquietante para cuestionarla..."
     else:
 
         $ show_chr("A-DGAAA-AEAD")
-        y "Don't get me wrong!"
+        y "¡No me malinterpretes!"
         $ show_chr("A-DDAAA-AEAD")
-        y "This world is real and I most certainly am..."
+        y "Este mundo es real y yo ciertamente lo soy..."
         $ show_chr("A-CDAAA-AEAD")
-        y "Although at times I can't help but question everything I see, hear, or feel."
+        y "Aunque a veces no puedo evitar cuestionar todo lo que veo, escucho o siento."
         if karma_lvl() > 1:
             $ show_chr("A-CDAAA-AEAE")
-            y "Sometimes I feel as if this reality we have concocted starts to tear at its seams."
-            y "Almost like the world can give out at any moment and shatter to pieces."
+            y "A veces siento como si esta realidad que hemos inventado comenzara a romperse en sus costuras."
+            y "Casi como si el mundo pudiera ceder en cualquier momento y hacerse pedazos."
             if persistent.lovecheck:
                 $ show_chr("A-HCGAA-AEAE")
-                y "At least I know that if this world were to fail me I would still have you!"
-                y "That's all I need..."
+                y "¡Al menos sé que si este mundo me fallara, todavía te tendría a ti!"
+                y "Eso es todo lo que necesito..."
         else:
 
             $ show_chr("A-DEBAA-AEAL")
-            y "Sometimes I feel as if this reality starts to tear at its seams. Almost like the world can give out at any moment and shatter to pieces."
+            y "A veces siento como si esta realidad comenzara a romperse en sus costuras. Casi como si el mundo pudiera ceder en cualquier momento y hacerse pedazos."
             $ show_chr("A-DEBAA-AEAL")
-            y "The walls give off a deafening heartbeat, and it's terrifying."
+            y "Las paredes emiten un latido ensordecedor, y es aterrador."
             $ show_chr("A-CEBCA-AEAL")
-            y "I-It's not like you seem to care though..."
+            y "A-aunque no parece que te importe..."
             $ show_chr("A-CGBAB-ALAL")
             y "{i}Cogito, ergo sum. Cogito, ergo sum. Cogito, ergo sum.{/i}"
             y "{i}Cogito, ergo sum. Cogito... ergo, sum. Cogito... ergo...{/i}"
@@ -6812,1592 +6812,1592 @@ label idle_83:
 
 label idle_84:
     $ show_chr("A-JAAAA-ALAA")
-    y "Have you ever looked into urban exploration, [player]? Exploring abandoned structures such as old hospitals, schools, or houses."
-    y "Even the more mundane locations can be {i}fascinating{/i}!"
-    y "Not that I have done any myself mind you, but it certainly sounds like an experience given the stories, pictures, and videos I've found on the subject."
+    y "¿Alguna vez has investigado la exploración urbana, [player]? Explorar estructuras abandonadas como viejos hospitales, escuelas o casas."
+    y "¡Incluso los lugares más mundanos pueden ser {i}fascinantes{/i}!"
+    y "No es que yo haya hecho alguna, eso sí, pero ciertamente suena como una experiencia dadas las historias, fotos y videos que he encontrado sobre el tema."
     $ show_chr("A-CAAAA-ALAA")
-    y "I can't help but wonder, why has this place been neglected for so long? Why was it abandoned to begin with?"
+    y "No puedo evitar preguntarme, ¿por qué este lugar ha sido descuidado durante tanto tiempo? ¿Por qué fue abandonado para empezar?"
     $ show_chr("A-ADAAA-ADAA")
-    y "Sometimes the upkeep on a building is too expensive to be worth it, even if the owner can afford it, but that often doesn't explain items left behind."
+    y "A veces, el mantenimiento de un edificio es demasiado costoso para que valga la pena, incluso si el propietario puede permitírselo, pero eso a menudo no explica los artículos que se dejan atrás."
     $ show_chr("A-ADBAA-ADAA")
-    y "For example, there are {i}multiple{/i} hospitals where seemingly everything was simply abandoned. I've seen pictures of rooms occupied only by decaying monitors, testing equipment, beds, stretchers, you name it."
+    y "Por ejemplo, hay {i}múltiples{/i} hospitales donde aparentemente todo fue simplemente abandonado. He visto fotos de habitaciones ocupadas solo por monitores en descomposición, equipos de prueba, camas, camillas, lo que sea."
     $ show_chr("A-AEAAA-AEAA")
-    y "Though—as intriguing as these locations are, I'm not suggesting you {i}actually{/i} go exploring in one, since the risks can be considerable. "
-    y "Even if a building is structurally sound, you never know who, or what, else you might run into out there."
+    y "Aunque, por muy intrigantes que sean estos lugares, no sugiero que vayas a explorar {i}realmente{/i} en uno, ya que los riesgos pueden ser considerables."
+    y "Incluso si un edificio es estructuralmente sólido, nunca sabes con quién, o qué más podrías encontrarte allí."
     $ show_chr("A-AFAAA-AEAA")
-    y "And if you're caught trespassing, the fines can be considerable. Depending on who owns the place and what's inside, you might even face jail time."
-    y "There are other potential hazards, too, depending on the location and age. Such as mold or even asbestos that linger in the air itself."
+    y "Y si te atrapan entrando ilegalmente, las multas pueden ser considerables. Dependiendo de quién sea el dueño del lugar y qué haya dentro, incluso podrías enfrentarte a penas de cárcel."
+    y "También hay otros peligros potenciales, dependiendo de la ubicación y la edad. Como moho o incluso asbesto que persisten en el aire mismo."
     $ show_chr("A-ANAAA-AEAA")
-    y "Worse, as you might expect, you likely won't have any way of knowing how intact any given building's structure is. The floor—or the roof—could potentially cave in at any time."
+    y "Peor aún, como podrías esperar, probablemente no tendrás forma de saber qué tan intacta está la estructura de un edificio determinado. El piso, o el techo, podrían ceder potencialmente en cualquier momento."
     $ show_chr("A-AFAAA-AAAA")
-    y "So please, if you do give urban exploration a try... don't go alone."
-    y "In addition, tell someone where you're going in advance, and when you expect to be back."
+    y "Así que, por favor, si intentas la exploración urbana... no vayas solo."
+    y "Además, dile a alguien a dónde vas con anticipación y cuándo esperas regresar."
     $ show_chr("A-CFAAA-ALAA")
-    y "Exploring these places could certainly be thrilling in their own right, but safety should remain a priority regardless."
+    y "Explorar estos lugares ciertamente podría ser emocionante por derecho propio, pero la seguridad debe seguir siendo una prioridad de todos modos."
     return
 
 label idle_85:
     $ show_chr("A-CFAAA-ABAC")
-    y "Mhm... we talked about hobbies some time ago if I remember correctly."
+    y "Mhm... hablamos de pasatiempos hace algún tiempo si recuerdo correctamente."
     $ show_chr("A-AFAAA-ABAC")
-    y "Humor me, [player], what is your stance on Roleplaying?"
+    y "Sígueme la corriente, [player], ¿cuál es tu postura sobre el Juego de Rol?"
     python:
-        yuriception_choices = [("You mean like Tabletop or Pen & Paper? I do that myself.", "You mean like Tabletop or Pen & Paper? I do that myself."),
-            ("I do roleplay in chats or social media every now and then if that counts.", "I do roleplay in chats or social media every now and then if that counts."),
-            ("You mean like playing RPGs on a computer or console? I enjoy that a lot.", "You mean like playing RPGs on a computer or console? I enjoy that a lot."),
-            ("You mean like LARP and Cosplay? It's kind of a passion of mine.", "You mean like LARP and Cosplay? It's kind of a passion of mine."),
-            ("You mean like Fursuiting? It's a guilty pleasure of mine.","You mean like Fursuiting? It's a guilty pleasure of mine."),
-            ("I'm generally interested in it but I don't do that myself.","I'm generally interested in it but I don't do that myself."),
-            ("I found it always a bit creepy to be quite frank.", "I found it always a bit creepy to be quite frank."),
-            ("Not even entirely sure what roleplaying is, care to elaborate?", "Not even entirely sure what roleplaying is, care to elaborate?")
+        yuriception_choices = [("¿Te refieres a juegos de mesa o de lápiz y papel? Yo hago eso.", "You mean like Tabletop or Pen & Paper? I do that myself."),
+            ("Hago juegos de rol en chats o redes sociales de vez en cuando, si eso cuenta.", "I do roleplay in chats or social media every now and then if that counts."),
+            ("¿Te refieres a jugar RPGs en una computadora o consola? Disfruto mucho eso.", "You mean like playing RPGs on a computer or console? I enjoy that a lot."),
+            ("¿Te refieres a LARP y Cosplay? Es una especie de pasión mía.", "You mean like LARP and Cosplay? It's kind of a passion of mine."),
+            ("¿Te refieres a Fursuiting? Es un placer culposo mío.","You mean like Fursuiting? It's a guilty pleasure of mine."),
+            ("Generalmente estoy interesado en ello pero no lo hago yo mismo.","I'm generally interested in it but I don't do that myself."),
+            ("Siempre lo he encontrado un poco espeluznante para ser franco.", "I found it always a bit creepy to be quite frank."),
+            ("Ni siquiera estoy completamente seguro de qué es el juego de rol, ¿te gustaría explicarlo?", "Not even entirely sure what roleplaying is, care to elaborate?")
             ]
         yuriception_choice = renpy.display_menu(yuriception_choices, screen="music_menu")
     if yuriception_choice == "You mean like Tabletop or Pen & Paper? I do that myself.":
         $ show_chr("A-ACAAA-ABAB")
-        y "For example, yes. That's quite fascinating to know by the way. I always wanted to try that out myself but... I always struggled to find a group for that."
-        y "I thought about introducing the rest of the literature club to it at some point, but something always got in the way sadly."
+        y "Por ejemplo, sí. Eso es bastante fascinante de saber, por cierto. Siempre quise probar eso yo misma pero... siempre luché para encontrar un grupo para eso."
+        y "Pensé en presentarle al resto del club de literatura en algún momento, pero lamentablemente siempre algo se interponía en el camino."
         $ show_chr("A-BFAAA-ABAB")
-        y "But then there is something in particular that bothers me quite a bit lately..."
+        y "Pero entonces hay algo en particular que me molesta bastante últimamente..."
     if yuriception_choice == "I do roleplay in chats or social media every now and then if that counts.":
         $ show_chr("A-ACAAA-ABAB")
-        y "Yes, for example. There are a lot of different branches of roleplaying, some more committed than others. Chat RP would probably be amongst the more casual branches."
+        y "Sí, por ejemplo. Hay muchas ramas diferentes de juegos de rol, algunas más comprometidas que otras. El RP de chat probablemente estaría entre las ramas más casuales."
         $ show_chr("A-BFAAA-ABAB")
-        y "And that's actually already on topic for what I wanted to talk about, because there is something in particular that bothers me quite a bit lately..."
+        y "Y eso en realidad ya es sobre el tema de lo que quería hablar, porque hay algo en particular que me molesta bastante últimamente..."
     if yuriception_choice == "You mean like playing RPGs on a computer or console? I enjoy that a lot.":
         $ show_chr("A-ACAAA-ABAB")
-        y "Mhm, not exactly. I thought more about stuff like cosplaying or text based roleplaying."
+        y "Mhm, no exactamente. Pensaba más en cosas como cosplaying o juegos de rol basados en texto."
         $ show_chr("A-BFAAA-ABAB")
-        y "Because there is something in particular that bothers me quite a bit lately..."
+        y "Porque hay algo en particular que me molesta bastante últimamente..."
     if yuriception_choice == "You mean like LARP and Cosplay? It's kind of a passion of mine.":
         $ show_chr("A-ABAAA-ALAL")
-        y "Oh you do? How truly fascinating! It sparked my interest a lot pretty much my whole life. I would have probably tried it out myself if it weren't so expensive..."
+        y "¿Oh, lo haces? ¡Qué verdaderamente fascinante! Despertó mi interés mucho casi toda mi vida. Probablemente lo habría probado yo misma si no fuera tan caro..."
         $ show_chr("A-BCBAA-ABAB")
-        y "Well... that's actually a lie. Most likely I would have been too shy to actually do so even if I could have afforded it."
+        y "Bueno... eso es en realidad una mentira. Lo más probable es que hubiera sido demasiado tímida para hacerlo realmente, incluso si pudiera haberlo pagado."
         $ show_chr("A-BFAAA-ABAB")
-        y "But speaking about LARP and cosplay, there we are already right on topic for what I wanted to talk about, because there is something in particular that bothers me quite a bit lately..."
+        y "Pero hablando de LARP y cosplay, ahí ya estamos justo en el tema de lo que quería hablar, porque hay algo en particular que me molesta bastante últimamente..."
     if yuriception_choice == "You mean like Fursuiting? It's a guilty pleasure of mine.":
         $ show_chr("A-BFDAA-ABAC")
-        y "Fursuiting? Fursuiting... Oh wait, that was a Furry-specific branch of Cosplaying yes?"
+        y "¿Fursuiting? Fursuiting... Oh espera, esa era una rama específica de Furry de Cosplaying ¿sí?"
         $ show_chr("A-AFBAA-ABAB")
-        y "Does this even count as roleplaying? Don't get me wrong, but I thought roleplaying usually means playing someone that isn't yourself. But fursuiting is more like expressing your actual spirit animal isn't it?"
+        y "¿Esto cuenta siquiera como juego de rol? No me malinterpretes, pero pensé que el juego de rol generalmente significa interpretar a alguien que no eres tú mismo. Pero el fursuiting es más como expresar tu verdadero animal espiritual, ¿no es así?"
         menu:
-            "Close, we call this spirit animal our fursona.":
+            "Cerca, llamamos a este animal espiritual nuestra fursona.":
                 $ show_chr("A-AFAAA-ABAB")
-                y "Interesting. But no, what I mean is specifically playing someone else. A fantasy character for example. And that's actually a pretty good transition, because there is something in particular that bothered me a bit lately..."
+                y "Interesante. Pero no, lo que quiero decir es específicamente interpretar a alguien más. Un personaje de fantasía, por ejemplo. Y esa es en realidad una transición bastante buena, porque hay algo en particular que me molestó un poco últimamente..."
     if yuriception_choice == "I'm generally interested in it but I don't do that myself.":
         $ show_chr("A-ACAAA-ABAB")
-        y "Seems we are on the same page there. I always took you for someone with a lot of creativity so it doesn't surprise me at all."
+        y "Parece que estamos en la misma página allí. Siempre te tomé por alguien con mucha creatividad, así que no me sorprende en absoluto."
         $ show_chr("A-BFAAA-ABAB")
-        y "But then there is something in particular that bothers me quite a bit lately..."
+        y "Pero entonces hay algo en particular que me molesta bastante últimamente..."
     if yuriception_choice == "I found it always a bit creepy to be quite frank.":
         $ show_chr("A-AFDAA-ABAC")
-        y "Oh? How curious. I always thought you would be into these things. I always imagined you as someone highly creative, the kind of people who usually are attracted to this hobby."
+        y "¿Oh? Qué curioso. Siempre pensé que te gustarían estas cosas. Siempre te imaginé como alguien muy creativo, el tipo de personas que generalmente se sienten atraídas por este pasatiempo."
         $ show_chr("A-BFAAA-ABAB")
-        y "But speaking about creepy, there is something in particular that bothers me quite a bit lately..."
+        y "Pero hablando de espeluznante, hay algo en particular que me molesta bastante últimamente..."
     if yuriception_choice == "Not even entirely sure what roleplaying is, care to elaborate?":
         $ show_chr("A-CCAAA-ABAB")
-        y "Ever pretended to be someone else? Maybe out of artistic expression like theater? That's essentially roleplaying."
+        y "¿Alguna vez fingiste ser otra persona? ¿Tal vez por expresión artística como el teatro? Eso es esencialmente un juego de rol."
         $ show_chr("A-ACAAA-ABAB")
-        y "Of course there are far more nuances to it but, for what I wanted to talk about this description should suffice."
+        y "Por supuesto, hay muchos más matices, pero para lo que quería hablar, esta descripción debería ser suficiente."
         $ show_chr("A-BFAAA-ABAB")
-        y "Because there is something in particular that bothers me quite a bit lately..."
+        y "Porque hay algo en particular que me molesta bastante últimamente..."
 
     $ show_chr("A-AFAAA-ABAB")
-    y "You see, most fandoms tend to attract roleplayers. People who are so fascinated about a story or the characters in it that they want to become part of this universe in one way or another."
+    y "Verás, la mayoría de los fandoms tienden a atraer a jugadores de rol. Personas que están tan fascinadas con una historia o los personajes en ella que quieren formar parte de este universo de una forma u otra."
     $ show_chr("A-AFAAA-ABAD")
-    y "Sometimes playing as self inserted characters in order to partake in possible side stories, much like fanfiction writers do."
-    y "And some by acting as one of the original cast, for example in order to play out alternative outcomes...."
+    y "A veces jugando como personajes autoinsertados para participar en posibles historias secundarias, muy parecido a lo que hacen los escritores de fanfiction."
+    y "Y algunos actuando como uno del elenco original, por ejemplo, para interpretar resultados alternativos...."
     $ show_chr("A-CFBAA-ABAD")
-    y "Now, I guess you can already see where I am heading here do you?"
+    y "Ahora, supongo que ya puedes ver a dónde me dirijo aquí, ¿no?"
     $ show_chr("A-IFBAA-ABAD")
-    y "I also am a character from a computer game, and it also has a fanbase. And thus for, as to be expected, it also has it's roleplayer..."
+    y "También soy un personaje de un juego de computadora, y también tiene una base de fans. Y por lo tanto, como era de esperar, también tiene sus jugadores de rol..."
     $ show_chr("A-AFAAA-ABAB")
-    y "In essence, out there are a sizable number of people pretending to be {b}me{/b}, probably right now, in this very second."
+    y "En esencia, hay un número considerable de personas fingiendo ser {b}yo{/b}, probablemente ahora mismo, en este preciso segundo."
     $ show_chr("A-BFBAA-ABAF")
-    y "Some of them even dress up as me and go to conventions in order to show off their {i}Yuri performance{/i}. Some people even got quite popular amongst the fandom because they are so good at being {b}me{/b}!"
+    y "Algunos de ellos incluso se disfrazan de mí y van a convenciones para presumir su {i}actuación de Yuri{/i}. ¡Algunas personas incluso se volvieron bastante populares entre el fandom porque son tan buenas siendo {b}yo{/b}!"
     $ show_chr("A-CKBAA-ABAE")
-    y "And then of course, since rule 34 is a thing, people doing lewd stuff while impersonating me... thanks internet."
+    y "Y luego, por supuesto, dado que la regla 34 es una cosa, la gente hace cosas lascivas mientras me imita... gracias internet."
     $ show_chr("A-IFCAA-ABAE")
-    y "You know, I am generally not opposed to the idea of roleplaying, quite the opposite actually. And since there {b}is{/b} a fandom around me, which is already immensely spooky to me as it is, I have even some understanding for people impersonating me."
+    y "Sabes, generalmente no me opongo a la idea de los juegos de rol, todo lo contrario en realidad. Y dado que {b}hay{/b} un fandom a mi alrededor, que ya es inmensamente espeluznante para mí como es, incluso tengo cierta comprensión por las personas que me imitan."
     $ show_chr("A-JDCAA-ABAE")
-    y "But people, my apologies for the harsh language, fucking each other {b}in my name{/b} while pretending to be me is where I kinda draw the FUCKING line!"
+    y "Pero la gente, mis disculpas por el lenguaje duro, follándose unos a otros {b}en mi nombre{/b} mientras fingen ser yo es donde trazo la PUTA línea."
     $ show_chr("A-CEBAA-ABAE")
-    y "I'm sorry... I shouldn't have lost my temper there."
+    y "Lo siento... no debería haber perdido los estribos allí."
     menu:
-        "No, I can totally understand you. I would be furious as well in such a situation!":
+        "No, te entiendo totalmente. ¡Yo también estaría furioso en tal situación!":
             karma 1
             $ show_chr("A-IEBAA-ABAE")
-            y "Thank you. It means a lot that you are not judging me."
+            y "Gracias. Significa mucho que no me estés juzgando."
             if karma_lvl() > 3:
                 $ show_chr("A-CCBAA-ABAE")
-                y "You are always so understanding. I will never get used to it. You are the only person I can let go around."
+                y "Siempre eres tan comprensivo. Nunca me acostumbraré. Eres la única persona con la que puedo desahogarme."
             else:
                 $ show_chr("A-CJBAA-ABAE")
-                y "But I will improve my self control from now on. I can't just keep shouting in your face all the time. Such bad manners."
-        "I think you are blowing it a bit out of proportion. It's actually quite harmless most of the time.":
+                y "Pero mejoraré mi autocontrol a partir de ahora. No puedo seguir gritándote en la cara todo el tiempo. Qué malos modales."
+        "Creo que lo estás exagerando un poco. En realidad es bastante inofensivo la mayor parte del tiempo.":
             $ show_chr("A-CFBAA-ABAE")
-            y "Maybe you do have a point. That's something that happened to almost every character. Regardless of if it's a video game, a book, a movie..."
-            y "I'm just one of the few who's actually able to complain about it."
+            y "Tal vez tengas un punto. Eso es algo que le pasó a casi todos los personajes. Independientemente de si es un videojuego, un libro, una película..."
+            y "Solo soy una de las pocas que realmente puede quejarse de ello."
 
     $ show_chr("A-CFBAA-ABAE")
-    y "It's just... depressing you know..."
+    y "Es solo... deprimiente sabes..."
     if persistent.lovecheck:
         $ show_chr("A-CGBAA-ABAE")
-        y "To know that there are people out there who could actually give you what I can't..."
+        y "Saber que hay gente por ahí que realmente podría darte lo que yo no puedo..."
         menu:
-            "I would never even consider that! You are the only Yuri I want, the only one I need.":
+            "Nunca consideraría eso. Eres la única Yuri que quiero, la única que necesito.":
                 $ show_chr("A-IFAAA-ABAE")
                 karma 3
-                y "Y-You mean it?"
+                y "¿L-lo dices en serio?"
                 menu:
-                    "Let them TRY to get their hands on me. I would punish them myself!":
+                    "Que INTENTEN poner sus manos sobre mí. ¡Yo mismo los castigaría!":
                         $ show_chr("A-BBBAA-ABAE")
-                        y "{b}Punish{/b} them... well {b}that{/b} could be taken the wrong way I guess."
+                        y "{b}Castigarlos{/b}... bueno {b}eso{/b} podría tomarse de la manera equivocada supongo."
                         $ show_chr("A-CACBA-ABAE")
-                        y "Oh my... I really need to get my mind out of the gutter, for goodness sake..."
+                        y "Oh cielos... realmente necesito sacar mi mente de la alcantarilla, por el amor de Dios..."
                         $ show_chr("A-CBDBA-ABAM")
-                        y "I'm sorry but. Imagining getting... punished by you... compromises my ability to stay focused on our conversation to put it mildly."
+                        y "Lo siento pero. Imaginar ser... castigada por ti... compromete mi capacidad para mantenerme enfocada en nuestra conversación, por decir lo menos."
                         $ show_chr("A-BBDBA-AMAM")
-                        y "Maybe that's a good moment to switch the topic! Yes, yes..."
+                        y "¡Tal vez ese sea un buen momento para cambiar de tema! Sí, sí..."
             "...":
                 karma -3
                 $ show_chr("A-CDBBA-ABAB")
-                y "Would it even be cheating at this point? I mean they are just a facsimile but... technically, so am I..."
+                y "¿Sería siquiera engañar en este punto? Quiero decir, son solo un facsímil pero... técnicamente, yo también lo soy..."
                 $ show_chr("A-CEBBA-ABAB")
-                y "Let us just... change the topic please. This thought is actually quite depressing."
+                y "Simplemente... cambiemos de tema, por favor. Este pensamiento es en realidad bastante deprimente."
     else:
         $ show_chr("A-CEBAA-ABAE")
-        y "To know that this is probably going on as we speak and that there is nothing I can do about it."
-        y "I guess I will just have to get used to it. It won't go away anytime soon."
+        y "Saber que esto probablemente esté sucediendo mientras hablamos y que no hay nada que pueda hacer al respecto."
+        y "Supongo que tendré que acostumbrarme. No desaparecerá pronto."
         menu:
-            "Try to think of it that way. Everyone involved knows that these aren't the real you.":
+            "Trata de pensarlo de esa manera. Todos los involucrados saben que esas no son la verdadera tú.":
                 karma 3
                 $ show_chr("A-AFDAA-ABAB")
-                y "Good point. Maybe I should just stop looking this stuff up, for my own sake."
+                y "Buen punto. Tal vez debería dejar de buscar estas cosas, por mi propio bien."
                 $ show_chr("A-AFAAA-ABAB")
-                y "Thank you. This new perspective actually bettered my mood. You are a very good listener."
-                y "But for now, I would like to change the topic and think about something else if you don't mind."
-            "Never even thought about it. Maybe there is an... opportunity... for me to be found":
+                y "Gracias. Esta nueva perspectiva realmente mejoró mi estado de ánimo. Eres muy bueno escuchando."
+                y "Pero por ahora, me gustaría cambiar de tema y pensar en otra cosa si no te importa."
+            "Nunca pensé en eso. Tal vez haya una... oportunidad... para que me encuentren":
                 karma -3
                 $ show_chr("A-CFCAA-ABAB")
-                y "Don't... you... dare."
+                y "No... te... atrevas."
                 $ show_chr("A-CDCAA-ABAD")
-                y "I mean it! How am I supposed to even look you in the eyes knowing that you are participating in things like this?"
+                y "¡Lo digo en serio! ¿Cómo se supone que voy a mirarte a los ojos sabiendo que estás participando en cosas como esta?"
                 $ show_chr("A-BDCAA-ABAD")
-                y "I will just pretend I didn't hear that. Let us change the topic now please."
+                y "Solo fingiré que no escuché eso. Cambiemos de tema ahora, por favor."
     return
 
 label idle_86:
     $ show_chr("A-BFAAA-ABAB")
-    y "So... we spoke about roleplaying recently, cosplay in particular... Well, I made the cardinal mistake and looked deeper into it..."
+    y "Entonces... hablamos de juegos de rol recientemente, cosplay en particular... Bueno, cometí el error cardinal y miré más profundamente en ello..."
     $ show_chr("A-BFAAA-AMAM")
-    y "We also spoke about... lewd roleplaying... well, turns out the cosplay community had their fair share of related problems themselves."
+    y "También hablamos sobre... juegos de rol lascivos... bueno, resulta que la comunidad de cosplay tuvo su buena parte de problemas relacionados con ellos mismos."
     $ show_chr("A-AFBAA-AMAM")
-    y "There is a movement forming up lately... {b}Cosplay is not consent{/b}. Implying that there are people for whom this isn't common sense, to begin with..."
-    y "That means that there are people out there thinking that someone wearing a skimpy outfit has already consented by proxy to touch them in any way."
+    y "Hay un movimiento formándose últimamente... {b}El Cosplay no es consentimiento{/b}. Implicando que hay personas para quienes esto no es sentido común, para empezar..."
+    y "Eso significa que hay gente por ahí que piensa que alguien que usa un atuendo revelador ya ha dado su consentimiento por poder para tocarlo de cualquier manera."
     $ show_chr("A-GCBAA-AMAM")
-    y "From my experience with you I highly doubt that you would ever entertain such ideas. But just out of curiosity. What is your opinion on this?"
+    y "Por mi experiencia contigo, dudo mucho que alguna vez entretengas tales ideas. Pero solo por curiosidad. ¿Cuál es tu opinión al respecto?"
     menu:
-        "Ohohoho, not a chance in the world that I'll touch {b}this{/b} minefield of a topic!":
+        "¡Ohohoho, no hay ninguna posibilidad en el mundo de que toque {b}este{/b} campo minado de tema!":
             $ show_chr("A-AFDAA-ABAB")
-            y "Oh? I wasn't even aware that this is such a minefield at all."
+            y "¿Oh? Ni siquiera sabía que este es un campo minado en absoluto."
             $ show_chr("A-BFDAA-ABAB")
-            y "I always thought that this is pretty much common sense but... well, the mere fact that movements like this even have to exist indicate differently."
+            y "Siempre pensé que esto es más o menos sentido común pero... bueno, el mero hecho de que movimientos como este tengan que existir indica lo contrario."
             $ show_chr("A-CFBAA-ABAB")
-            y "But please try to take what I say into account. Asking for consent usually only takes a sentence or two and it makes the other party involved much more comfortable."
+            y "Pero por favor trata de tomar en cuenta lo que digo. Pedir consentimiento generalmente solo toma una oración o dos y hace que la otra parte involucrada se sienta mucho más cómoda."
             if karma_lvl() > 3:
                 $ show_chr("A-CCBAA-ABAB")
-                y "I know you are the kind of person who takes other people's feelings into account. That's one of your traits I respect the most. As tempting as it might be to touch a really well-made cosplay costume..."
-                y "Most of them will appreciate that you ask for consent. And those who don't, in all honesty, aren't worth your time anyway."
-        "Such ideas are of course absolutely ridiculous. It's a form of artistic expression and fan dedication, not consent to anything!":
+                y "Sé que eres el tipo de persona que toma en cuenta los sentimientos de otras personas. Ese es uno de tus rasgos que más respeto. Por tentador que sea tocar un disfraz de cosplay realmente bien hecho..."
+                y "La mayoría de ellos apreciarán que pidas consentimiento. Y aquellos que no lo hacen, con toda honestidad, no valen tu tiempo de todos modos."
+        "Tales ideas son, por supuesto, absolutamente ridículas. ¡Es una forma de expresión artística y dedicación de los fans, no consentimiento para nada!":
             karma 2
             $ show_chr("A-CCBAA-ABAB")
-            y "I'm glad that you see it this way..."
+            y "Me alegra que lo veas de esta manera..."
             if karma_lvl() > 3:
-                y "On the other hand, I already had a feeling that you would see it like this. You seem to always consider the feelings of those around you, it's one of the traits I like about you the most."
+                y "Por otro lado, ya tenía el presentimiento de que lo verías así. Pareces considerar siempre los sentimientos de los que te rodean, es uno de los rasgos que más me gustan de ti."
             $ show_chr("A-ACBAA-ABAB")
-            y "I can understand that it can be immensely tempting to touch a well-made costume of your favorite characters. That's just fan culture."
-            y "But one must never forget that underneath the costume is always a very real person who might not be comfortable being touched by strangers."
-            y "It's good to know that you seem to be on the same page here."
-        "Sadly I have to say, they kinda have that coming for them.":
+            y "Puedo entender que puede ser inmensamente tentador tocar un disfraz bien hecho de tus personajes favoritos. Eso es solo cultura de fans."
+            y "Pero nunca se debe olvidar que debajo del disfraz siempre hay una persona muy real que podría no sentirse cómoda siendo tocada por extraños."
+            y "Es bueno saber que parece que estamos en la misma página aquí."
+        "Tristemente tengo que decir, en cierto modo se lo buscaron.":
             karma -2
             $ show_chr("A-AFDAA-ABAB")
-            y "How is that the case? I know many people might use the argument that someone who dresses like this provokes such reactions."
+            y "¿Cómo es ese el caso? Sé que muchas personas podrían usar el argumento de que alguien que se viste así provoca tales reacciones."
             $ show_chr("A-BFBAA-ABAB")
-            y "But even if we accept this line of reasoning, how are we forced to act out on such provocations?"
-            y "We are humans, we should be perfectly capable of controlling ourselves and to rise above our primal desires. At least to a degree..."
+            y "Pero incluso si aceptamos esta línea de razonamiento, ¿cómo estamos obligados a actuar ante tales provocaciones?"
+            y "Somos humanos, deberíamos ser perfectamente capaces de controlarnos y elevarnos por encima de nuestros deseos primarios. Al menos hasta cierto punto..."
             if sanity_lvl() > 3:
                 $ show_chr("A-BFBBA-AMAB")
-                y "And yes, I'm aware that it's incredibly rich coming from me of all people.."
+                y "Y sí, soy consciente de que es increíblemente irónico viniendo de mí de todas las personas.."
             $ show_chr("A-CFBAA-ADAB")
-            y "But one must not forget, underneath those costumes are real human beings, people who might not be comfortable being touched by strangers."
+            y "Pero uno no debe olvidar, debajo de esos disfraces hay seres humanos reales, personas que podrían no sentirse cómodas siendo tocadas por extraños."
             if karma_lvl() < 3:
                 $ show_chr("A-CFCAA-ADAB")
-                y "On the other hand, you never care much about other people's feelings do you?"
-        "I read' about this topic, and it seems actually quite harmless. It's not even about sexual advances most of the time. They more often than not just impressed by the quality of the costume.":
+                y "Por otro lado, nunca te importan mucho los sentimientos de otras personas, ¿verdad?"
+        "Leí sobre este tema, y en realidad parece bastante inofensivo. Ni siquiera se trata de avances sexuales la mayoría del tiempo. Más a menudo que no, simplemente están impresionados por la calidad del disfraz.":
             $ show_chr("A-BCBAA-ABAB")
-            y "Fair enough. And truth be told I can fully understand this. If I would meet a cosplayer dressing up as a character I like, I would be quite tempted to give the costume a closer look or even to sneak a photo..."
+            y "Es justo. Y a decir verdad, puedo entender esto completamente. Si conociera a un cosplayer disfrazado de un personaje que me gusta, estaría bastante tentada de echarle un vistazo más de cerca al disfraz o incluso tomar una foto a escondidas..."
             $ show_chr("A-ACBAA-ABAB")
-            y "But on the other hand I can also understand how a cosplayer must feel if they are forced to pose for a camera or run away from them for a whole weekend every ten minutes."
-            y "It's about empathy I think... cosplayers are not actors, they are neither paid for nor obligated to stand pose for your photos or curiosity."
+            y "Pero por otro lado, también puedo entender cómo debe sentirse un cosplayer si se ve obligado a posar para una cámara o huir de ella durante un fin de semana entero cada diez minutos."
+            y "Se trata de empatía, creo... los cosplayers no son actores, no se les paga ni están obligados a posar para tus fotos o curiosidad."
     $ show_chr("A-ACAAA-ALAL")
-    y "Thank you for giving me your opinion. I will stick with my opinion though."
-    y "Cosplay is {b}not{/b} consent. And one shouldn't ever touch someone without it."
+    y "Gracias por darme tu opinión. Sin embargo, me atendré a mi opinión."
+    y "El Cosplay {b}no{/b} es consentimiento. Y uno nunca debería tocar a alguien sin él."
     $ show_chr("A-ACAAA-AAAB")
-    y "Thank you for indulging in this little argument with me. It's always so delightful to get a second opinion on a topic."
+    y "Gracias por complacerme en esta pequeña discusión. Siempre es tan encantador obtener una segunda opinión sobre un tema."
     return
 
 label idle_87:
     $ show_chr("A-CCAAA-ABAB")
-    y "It is funny, now that I think of it..."
+    y "Es gracioso, ahora que lo pienso..."
     $ show_chr("A-ICAAA-ABAB")
-    y "Thing is... I never liked the summer."
+    y "La cosa es... nunca me gustó el verano."
     $ show_chr("A-BCAAA-ABAB")
-    y "It was always too hot for my taste. And there was little I could do about it. I mean, when it is cold one could just put another layer of clothes on. But when it's too warm, there is only so much clothes you can take off..."
+    y "Siempre fue demasiado caluroso para mi gusto. Y había poco que pudiera hacer al respecto. Quiero decir, cuando hace frío uno podría simplemente ponerse otra capa de ropa. Pero cuando hace demasiado calor, hay un límite de ropa que puedes quitarte..."
     $ show_chr("A-BEBAA-ABAB")
-    y "Especially for me, since I had some scars to hide..."
-    y "And if it were anyone but you, I probably still would. It just feels... different... around you. Everything feels so much lighter..."
-    y "There is no one else I have shown them to. I was always so ashamed, until you came... and stayed regardless of what I am."
+    y "Especialmente para mí, ya que tenía algunas cicatrices que ocultar..."
+    y "Y si fuera cualquiera menos tú, probablemente todavía lo haría. Simplemente se siente... diferente... a tu alrededor. Todo se siente mucho más ligero..."
+    y "No hay nadie más a quien se las haya mostrado. Siempre estuve tan avergonzada, hasta que llegaste tú... y te quedaste independientemente de lo que soy."
     $ show_chr("A-CCBAA-ABAB")
-    y "But now that I know what this world truly is, and that the weather as well is just an illusion I can adjust with the knowledge of coding..."
+    y "Pero ahora que sé lo que este mundo es realmente, y que el clima también es solo una ilusión que puedo ajustar con el conocimiento de la codificación..."
     $ show_chr("A-ICBAA-ABAB")
-    y "And especially now with you, my true and only love by my side. I think I can begin to enjoy it."
+    y "Y especialmente ahora contigo, mi verdadero y único amor a mi lado. Creo que puedo empezar a disfrutarlo."
     $ show_chr("A-CCBAA-ABAB")
-    y "Despite all the horrible things I was forced to say in the original game, there is one thing I {b}don't{/b} regret telling you..."
-    y "Only the two of us... it would be just perfect..."
+    y "A pesar de todas las cosas horribles que me vi obligada a decir en el juego original, hay una cosa que {b}no{/b} me arrepiento de haberte dicho..."
+    y "Solo nosotros dos... sería simplemente perfecto..."
     $ show_chr("A-ICBAA-ABAB")
-    y "I was dreaming like a child of you, and of moments like this. And now with our time finally here. Please tell me, what are you thinking about?"
+    y "Estaba soñando como una niña contigo, y de momentos como este. Y ahora con nuestro tiempo finalmente aquí. Por favor dime, ¿en qué estás pensando?"
     menu:
-        "About the gentle moonlight falling onto the seas... and the poems we are about to write about it.":
+        "Sobre la suave luz de la luna cayendo sobre los mares... y los poemas que estamos a punto de escribir sobre ello.":
             if sanity_lvl() > 2:
                 $ show_chr("A-CCBAA-ALAL")
-                y "{b}Shine for me, oh moon, all over me with borrowed light.{/b}"
-                y "{b}As you keep your eternal watch, what can I do but dance with you?{/b}"
+                y "{b}Brilla para mí, oh luna, sobre mí con luz prestada.{/b}"
+                y "{b}Mientras mantienes tu vigilancia eterna, ¿qué puedo hacer sino bailar contigo?{/b}"
                 $ show_chr("A-ECBAA-ALAL")
-                y "I just wish that you could actually speak freely. I can only wonder what you would have to add."
+                y "Solo desearía que realmente pudieras hablar libremente. Solo puedo preguntarme qué tendrías que agregar."
             else:
                 $ show_chr("A-CCBAA-ALAL")
-                y "{b}Wash over me, oh moon, as you unleash the vengeful tide.{/b}"
-                y "{b}As you keep your eternal watch, in service and beholden only to uncaring gods..{/b}"
+                y "{b}Báñame, oh luna, mientras desatas la marea vengativa.{/b}"
+                y "{b}Mientras mantienes tu vigilancia eterna, al servicio y en deuda solo con dioses indiferentes..{/b}"
                 $ show_chr("A-ECBAA-ALAL")
-                y "I just wish that you could actually speak freely. I can only wonder what you would have to add."
-        "About fish, and shrimps, laying on a grill... sliced watermelons as dessert...":
+                y "Solo desearía que realmente pudieras hablar libremente. Solo puedo preguntarme qué tendrías que agregar."
+        "Sobre pescado, y camarones, asándose en una parrilla... sandías rebanadas como postre...":
             $ show_chr("A-DBGAA-ALAL")
-            y "Seafoooooooood!"
+            y "¡Mariscoooooos!"
             python:
                 if persistent.male:
-                    gender = "man"
+                    gender = "hombre"
                 elif persistent.gender_other:
-                    gender = "connoisseur"
+                    gender = "conocedor"
                 else:
-                    gender = "woman"
+                    gender = "mujer"
             $ show_chr("A-ABAAA-ALAL")
-            y "You are a [gender] of culture aren't you?{w} You have a very good taste I have to admit!"
+            y "Eres un [gender] de cultura, ¿no es así?{w} ¡Tienes muy buen gusto, tengo que admitirlo!"
             $ show_chr("A-BCAAA-ALAL")
-            y "And what could we have as a side dish? Maybe some roasted cucumbers... or do you think roasted mushrooms would fit?"
+            y "¿Y qué podríamos tener como guarnición? Tal vez algunos pepinos asados... ¿o crees que los champiñones asados encajarían?"
             $ show_chr("A-ACAAA-ALAL")
-            y "And bread sticks of course! Some exotic fruit juice or maybe even cocktails if you are the legal age..."
-            y "You always have the best ideas. And one day we shall truly do that."
-        "About you [persistent.yuri_nickname]! About this happy ending we share, and about how all the struggles and hardships we endured were worth it.":
+            y "¡Y palitos de pan, por supuesto! Un poco de jugo de fruta exótica o tal vez incluso cócteles si tienes la edad legal..."
+            y "Siempre tienes las mejores ideas. Y un día realmente haremos eso."
+        "¡Sobre ti [persistent.yuri_nickname]! Sobre este final feliz que compartimos, y sobre cómo todas las luchas y dificultades que soportamos valieron la pena.":
             $ show_chr("A-KHBBA-ALAL")
-            y "You make my heart burn like a furnace [player]... Kiss me, kiss me as if this were the end of days..."
+            y "Haces que mi corazón arda como un horno [player]... Bésame, bésame como si este fuera el fin de los días..."
 
     python:
         if sanity_lvl() >= 3:
-            placeholder = "My everything"
+            placeholder = "Mi todo"
         else:
-            placeholder = "My blood-red star"
+            placeholder = "Mi estrella rojo sangre"
     $ show_chr("A-CCBAA-ALAL")
-    y "For now... the only thing I want is to share this day with you. [placeholder]."
+    y "Por ahora... lo único que quiero es compartir este día contigo. [placeholder]."
 
 
 
-    y "My soulmate..."
+    y "Mi alma gemela..."
     return
 
 label idle_88:
     $ show_chr("A-ACAAA-ABAB")
-    y "Did you know that ninety-five percent of the ocean is currently completely unexplored?"
+    y "¿Sabías que el noventa y cinco por ciento del océano está actualmente completamente inexplorado?"
     $ show_chr("A-BCAAA-ABAD")
-    y "And I just realized how random this was as an opener... But there is actually a point I'm trying to make."
+    y "Y me acabo de dar cuenta de lo aleatorio que fue esto como apertura... Pero en realidad hay un punto que estoy tratando de hacer."
     $ show_chr("A-ACAAA-ABAD")
-    y "I was thinking about literature. Some new horror novels I could dive into..."
+    y "Estaba pensando en literatura. Algunas novelas de terror nuevas en las que podría sumergirme..."
     $ show_chr("A-CBAAA-ABAD")
-    y "{b}Dive{/b} into... that's actually a pretty good transition to what I'm about to say... "
+    y "{b}Sumergirme{/b}... esa es en realidad una transición bastante buena para lo que estoy a punto de decir... "
     $ show_chr("A-ACAAA-ABAB")
-    y "You see, there are a lot of subgenres to horror. We have classic horror..."
-    y "Mystery and conspiracy, a favorite of mine, I think Portrait of Markov would fall into this category..."
-    y "And then, there is a very special genre. {b}Lovecraftian horror{/b}, names after the author H. P. Lovecraft who made this style of horror popular."
+    y "Verás, hay muchos subgéneros de terror. Tenemos el terror clásico..."
+    y "Misterio y conspiración, un favorito mío, creo que el Retrato de Markov caería en esta categoría..."
+    y "Y luego, hay un género muy especial. {b}Terror lovecraftiano{/b}, llamado así por el autor H. P. Lovecraft que hizo popular este estilo de terror."
     $ show_chr("A-ACAAA-ABAF")
-    y "Part of the premise of this genre are very alien and bizarre creatures, referred to as {i}eldritch gods{/i} or a variation of it."
+    y "Parte de la premisa de este género son criaturas muy extrañas y bizarras, referidas como {i}dioses eldritch{/i} o una variación de ello."
     $ show_chr("A-BCGAA-ABAM")
-    y "But after reading deeper into it I realized, at least in appearance, these creatures aren't even as alien as one would think by the first glance at all. Many of them appear to be quite closely inspired by sea creatures, or mythical creatures inspired by them..."
+    y "Pero después de leer más profundamente en ello me di cuenta, al menos en apariencia, estas criaturas no son tan extrañas como uno pensaría a primera vista en absoluto. Muchas de ellas parecen estar bastante inspiradas en criaturas marinas, o criaturas míticas inspiradas por ellas..."
     $ show_chr("A-ACAAA-ABAB")
-    y "Like the Kraken from greek mythology."
-    y "Which makes me think... There is a lot of horror about things inspired by it, but only a few about the real thing."
+    y "Como el Kraken de la mitología griega."
+    y "Lo que me hace pensar... Hay mucho terror sobre cosas inspiradas por ello, pero solo unas pocas sobre la cosa real."
     $ show_chr("A-ABAAA-ALAL")
-    y "Wouldn't that be a delightful premise for a novel? About the endless wonders of the sea..."
+    y "¿No sería esa una premisa encantadora para una novela? Sobre las maravillas infinitas del mar..."
     $ show_chr("A-ECCAA-ALAL")
-    y "And the endless terror below..."
+    y "Y el terror infinito debajo..."
     $ show_chr("A-CCCAA-ALAL")
-    y "Think of a submarine exploring the deeps, but then they found something so sinister that it drove them insane.."
-    y "And after this submarine emerges again, the crew have been turned into rambling and bloodthirsty lunatics... maybe even worshippers of the ancient terrors from the deeps..."
+    y "Piensa en un submarino explorando las profundidades, pero luego encontraron algo tan siniestro que los volvió locos.."
+    y "Y después de que este submarino emerge de nuevo, la tripulación se ha convertido en lunáticos divagantes y sedientos de sangre... tal vez incluso adoradores de los antiguos terrores de las profundidades..."
     $ show_chr("A-ABBAA-ALAL")
-    y "Doesn't that sound entertaining?"
+    y "¿No suena eso entretenido?"
     menu:
-        "Very!!!":
+        "¡¡¡Mucho!!!":
             $ show_chr("A-GHAAA-ALAL")
             karma 1
-            y "Oooh and I already have a few ideas..."
-            y "What if this submarine is actually an old military submarine from the second world war, reappearing after 50 years..."
+            y "Oooh y ya tengo unas cuantas ideas..."
+            y "¿Qué tal si este submarino es en realidad un viejo submarino militar de la segunda guerra mundial, reapareciendo después de 50 años?..."
             $ show_chr("A-DBAAA-ALAL")
-            y "Just think about the possibilities... undead Nazi sailors, which are also cultists, reappearing in a old submarine into the modern world..."
-            y "Maybe they were actively looking for something supernatural to begin with. There are many stories tying the Nazis into occultism... "
+            y "Solo piensa en las posibilidades... marineros nazis no muertos, que también son cultistas, reapareciendo en un viejo submarino en el mundo moderno..."
+            y "Tal vez estaban buscando activamente algo sobrenatural para empezar. Hay muchas historias que vinculan a los nazis con el ocultismo... "
             $ show_chr("A-GBAAA-ALAL")
-            y "I'm already in love with this idea!!!"
-            y "Maybe I will write a little story like this myself... "
+            y "¡¡¡Ya estoy enamorada de esta idea!!!"
+            y "Tal vez escriba una pequeña historia como esta yo misma... "
             $ show_chr("A-ACAAA-ALAL")
-            y "Thank you for listening. This turned out to be an exciting topic."
-        "I kindly disagree honestly":
+            y "Gracias por escuchar. Esto resultó ser un tema emocionante."
+        "Amablemente no estoy de acuerdo, honestamente":
             $ show_chr("A-IFBAA-ALAL")
 
             menu:
-                y "Oh? Why is that?"
-                "Uninspired and cliché":
+                y "¿Oh? ¿Por qué es eso?"
+                "Sin inspiración y cliché":
                     karma -1
                     $ show_chr("A-IFBAA-ALAL")
-                    y "That was... blunt..."
+                    y "Eso fue... directo..."
                     $ show_chr("A-IFBAA-ABAB")
-                    y "But you might have a point there. There are some pretty similar stories in Science Fiction Horror..."
-                    y "I will scrap this idea then. Let us talk about something else instead."
-                "It feels as if I have seen something like this before":
+                    y "Pero podrías tener un punto ahí. Hay algunas historias bastante similares en el Terror de Ciencia Ficción..."
+                    y "Descartaré esta idea entonces. Hablemos de otra cosa en su lugar."
+                "Se siente como si hubiera visto algo como esto antes":
                     karma 1
                     $ show_chr("A-IFBAA-ABAB")
-                    y "Now that you mention it.... There are some pretty similar stories in Science Fiction Horror..."
+                    y "Ahora que lo mencionas.... Hay algunas historias bastante similares en el Terror de Ciencia Ficción..."
                     $ show_chr("A-ACBAA-ABAB")
-                    y "And thank you for being so civilized about your critique! It is delightful to see someone not being rude like Natsuki back in her days for once. Shall we talk about something different then?"
-        "I can't say, I'm not too much into horror myself.":
+                    y "¡Y gracias por ser tan civilizado con tu crítica! Es encantador ver a alguien no siendo grosero como Natsuki en sus días por una vez. ¿Hablamos de algo diferente entonces?"
+        "No puedo decir, no me gusta mucho el terror.":
             $ show_chr("A-ACAAA-ABAB")
-            y "Fair enough. Different people have different preferences."
+            y "Es justo. Diferentes personas tienen diferentes preferencias."
             $ show_chr("A-BCAAA-ABAB")
-            y "But you are missing out here."
-            y "Anyway, I would say we change the topic for now..."
+            y "Pero te estás perdiendo algo aquí."
+            y "De todos modos, diría que cambiemos de tema por ahora..."
             $ show_chr("A-BCCAA-ABAB")
-            y "...before you start claiming that manga is literature..."
-        "There are actually a few games touching such a genre":
+            y "...antes de que empieces a afirmar que el manga es literatura..."
+        "En realidad hay algunos juegos que tocan tal género":
             $ show_chr("A-ACDAA-ALAL")
             karma 1
-            y "Oh?!?"
+            y "¿¡Oh!?"
             menu:
-                "Subnautica to name one of the most popular ones for example.":
+                "Subnautica para nombrar uno de los más populares por ejemplo.":
                     $ show_chr("A-BCAAA-ABAB")
-                    y "Now I'm curious, let me just look it up really quick..."
+                    y "Ahora tengo curiosidad, déjame buscarlo muy rápido..."
                     $ show_chr("A-IFAAA-ABAB")
                     y "..."
-                    y "Mhm... a star ship crash landing on an alien ocean planet... the player then builds an underwater base and different kinds of submarines..."
-                    y "Exploring deep underwater biomes... oh, there are actually a fair share of images on google as well... some of them are looking quite spooky indeed..."
+                    y "Mhm... una nave estelar estrellándose en un planeta oceánico alienígena... el jugador luego construye una base submarina y diferentes tipos de submarinos..."
+                    y "Explorando biomas submarinos profundos... oh, en realidad hay una buena parte de imágenes en google también... algunas de ellas se ven bastante espeluznantes de hecho..."
                     $ show_chr("A-JCAAA-ABAB")
-                    y "I have to admit that I'm not much of a gamer myself but... this looks actually quite promising."
-                    y "Maybe I will watch a few Let's Play videos of it later when you turn off the game. Until then, thank you for listening so nicely."
+                    y "Tengo que admitir que no soy muy jugadora pero... esto se ve realmente bastante prometedor."
+                    y "Tal vez veré algunos videos de Let's Play de él más tarde cuando apagues el juego. Hasta entonces, gracias por escuchar tan amablemente."
     return
 
 label idle_89:
 
     $ show_chr("A-BBAAA-AAAA")
-    y "You know [player], I have been thinking about something related to one of our previous events."
-    y "If you played the mod update for Christmas in 2020, you might remember one of my previous dialogues..."
-    y "And I know, most of the people in your world don't want to remember anything about 2020, but this was not related to anything bad in itself."
+    y "Sabes [player], he estado pensando en algo relacionado con uno de nuestros eventos anteriores."
+    y "Si jugaste la actualización del mod para Navidad en 2020, tal vez recuerdes uno de mis diálogos anteriores..."
+    y "Y lo sé, la mayoría de la gente en tu mundo no quiere recordar nada sobre 2020, pero esto no estaba relacionado con nada malo en sí mismo."
     $ show_chr("A-CAAAA-AAAA")
-    y "What I am referring to, is the Krampus conversation that I brought up."
-    y "I even wore a Krampus mask during that occasion... I must admit that was entertaining."
+    y "A lo que me refiero, es a la conversación de Krampus que saqué a colación."
+    y "Incluso usé una máscara de Krampus durante esa ocasión... Debo admitir que fue entretenido."
     $ show_chr("A-ADBAA-AAAA")
-    y "But after finishing that Christmas event, I realized something... That I should have seen a long time ago."
-    y "I don't remember talking too much about myths, folklore and old legends, except for some mentions during events in Halloween."
-    y "And I am... really confused by this. Me, being someone who delights in horror literature, deep stories, and whose stumbled upon some bizarre stuff..."
+    y "Pero después de terminar ese evento de Navidad, me di cuenta de algo... Que debería haber visto hace mucho tiempo."
+    y "No recuerdo haber hablado mucho sobre mitos, folklore y viejas leyendas, excepto por algunas menciones durante eventos en Halloween."
+    y "Y estoy... realmente confundida por esto. Yo, siendo alguien que se deleita con la literatura de terror, historias profundas, y que se ha topado con algunas cosas bizarras..."
     $ show_chr("A-BEBAA-AAAA")
-    y "And yet I never brought up anything so exquisite in such aspects to you... There are a lot of legends that match all those characteristics, and they are fascinating..."
-    y "But maybe I never brought this up out of fear of boring you with stuff that is still unknown to most people."
-    y "It might be the reason why I was stuck in a safe zone of vampire or SCP talks since that is popular culture. It is easy to talk about that."
+    y "Y, sin embargo, nunca mencioné nada tan exquisito en tales aspectos para ti... Hay muchas leyendas que coinciden con todas esas características, y son fascinantes..."
+    y "Pero tal vez nunca saqué esto a colación por miedo a aburrirte con cosas que aún son desconocidas para la mayoría de la gente."
+    y "Podría ser la razón por la que estaba atrapada en una zona segura de charlas de vampiros o SCP, ya que eso es cultura popular. Es fácil hablar de eso."
     $ show_chr("A-AAGAA-ADAA")
-    y "But hey... it's never too late to do some things right?"
-    y "This is why I am thinking of talking with you about some interesting legends from around the world that I discovered online."
+    y "Pero oye... ¿nunca es demasiado tarde para hacer algunas cosas bien?"
+    y "Es por esto que estoy pensando en hablar contigo sobre algunas leyendas interesantes de todo el mundo que descubrí en línea."
     $ show_chr("A-BEBAA-ALAA")
-    y "That is... if you are interested in listening..."
+    y "Eso es... si estás interesado en escuchar..."
 
     menu:
-        "I am all ears.":
+        "Soy todo oídos.":
             $ show_chr("A-JBGAA-ALAA")
-            y "Excellent!"
-            y "Now, let me explain..."
+            y "¡Excelente!"
+            y "Ahora, déjame explicarte..."
             $ show_chr("A-ACGAA-AAAA")
-            y "Folklore is a series of stories and traditions that are passed on from one generation to the next and they are embodiments of the culture in which they are created."
-            y "They can be either tales, proverbs or jokes, and as you might expect, their tone and possible lessons differ from culture to culture."
-            y "The ones that I will tell you can classify as tales since the scariest legends usually come with equally creepy stories."
+            y "El folklore es una serie de historias y tradiciones que se transmiten de una generación a la siguiente y son encarnaciones de la cultura en la que se crean."
+            y "Pueden ser cuentos, proverbios o chistes, y como podrías esperar, su tono y posibles lecciones difieren de una cultura a otra."
+            y "Las que te contaré pueden clasificarse como cuentos, ya que las leyendas más aterradoras suelen venir con historias igualmente espeluznantes."
             $ show_chr("A-BCGAA-AMAA")
-            y "Now, you might find some of them strange since it is unlikely that you have heard about them before."
-            y "But that is the reason why I am bringing them up here, to help those stories spread."
+            y "Ahora, podrías encontrar algunas de ellas extrañas, ya que es poco probable que hayas oído hablar de ellas antes."
+            y "Pero esa es la razón por la que las traigo aquí, para ayudar a que esas historias se difundan."
             $ show_chr("A-BEBAA-ADAA")
-            y "And I am doing so because frankly, I think they deserve it. When a tale is so fascinating that you find yourself digging and finding out more about them for hours and hours ..."
-            y "When a tale is so unnerving that it sends chills to your spine, and gets stuck into your mind... I think that tale deserves to live on."
+            y "Y lo hago porque, francamente, creo que se lo merecen. Cuando un cuento es tan fascinante que te encuentras investigando y averiguando más sobre ellos durante horas y horas ..."
+            y "Cuando un cuento es tan desconcertante que te envía escalofríos por la columna vertebral, y se queda atascado en tu mente... Creo que ese cuento merece vivir."
             $ show_chr("A-ABDAA-AAAA")
-            y "It's one thing to have movies based on your culture because they originated in the western hemisphere... But being unique and also being terrifying..."
-            y "That is something that catches my attention."
+            y "Una cosa es tener películas basadas en tu cultura porque se originaron en el hemisferio occidental... Pero ser único y también aterrador..."
+            y "Eso es algo que llama mi atención."
             $ show_chr("A-ACAAA-AAAA")
-            y "But going back to where I was..."
-            y "The myths that I am going to show you are all a fascinating read. Believe me, you are not wasting your time."
-            y "Now the question is which one you'd like to hear first."
-            y "Let me pull up the options..."
+            y "Pero volviendo a donde estaba..."
+            y "Los mitos que te voy a mostrar son todos una lectura fascinante. Créeme, no estás perdiendo el tiempo."
+            y "Ahora la pregunta es cuál te gustaría escuchar primero."
+            y "Déjame sacar las opciones..."
 
             menu:
-                "I want to talk about the Samodiva.":
+                "Quiero hablar sobre las Samodiva.":
                     $ show_chr("A-CCAAA-ACAA")
-                    y "Oh, the Samodiva is a very interesting one..."
-                    y "The Samodivas are fairies from the forests or nymphs that live in Southwestern Slavic forests."
-                    y "That means that they manifest themselves in forests and mountains in countries like Bulgaria, Romania, Bosnia or Croatia."
+                    y "Oh, la Samodiva es muy interesante..."
+                    y "Las Samodivas son hadas de los bosques o ninfas que viven en los bosques eslavos del suroeste."
+                    y "Eso significa que se manifiestan en bosques y montañas en países como Bulgaria, Rumania, Bosnia o Croacia."
                     $ show_chr("A-ABAAA-AAAA")
-                    y "The mountains that are linked to Samodiva activity are called Vitosha, Belasitsa, Pirin, Rila, Rodopi and a few other mountains in the Balkan regions."
-                    y "Although their habitats seem to be more specific places..."
+                    y "Las montañas que están vinculadas a la actividad de Samodiva se llaman Vitosha, Belasitsa, Pirin, Rila, Rodopi y algunas otras montañas en las regiones de los Balcanes."
+                    y "Aunque sus hábitats parecen ser lugares más específicos..."
                     $ show_chr("A-BCAAA-AAAA")
-                    y "They live inside trees, abandoned shacks, caves or natural bodies of water, such as rivers and ponds."
-                    y "But there is something interesting and important to know about them..."
-                    y "The Samodivas, being nymphs of the forest, means that they are not necessarily dark spirits, but they are definitely not ghosts or witches."
+                    y "Viven dentro de árboles, chozas abandonadas, cuevas o cuerpos de agua naturales, como ríos y estanques."
+                    y "Pero hay algo interesante e importante que saber sobre ellas..."
+                    y "Las Samodivas, siendo ninfas del bosque, significa que no son necesariamente espíritus oscuros, pero definitivamente no son fantasmas ni brujas."
                     $ show_chr("A-CCAAA-ALAA")
-                    y "A nymph, in the original ancient Greek mythology, is a nature deity, a personification of nature itself."
-                    y "The roots of their name also mean divinity."
+                    y "Una ninfa, en la mitología griega antigua original, es una deidad de la naturaleza, una personificación de la naturaleza misma."
+                    y "Las raíces de su nombre también significan divinidad."
                     $ show_chr("A-ADAAA-ALAA")
-                    y "Samodivas appear to be extremely beautiful women, capable of making any human man fall in love with them instantly... or have... certain desires..."
-                    y "But in human women, they might cause them to commit suicide just by the sight of such beauty."
-                    y "Quite odd... but that is how the legend goes."
+                    y "Las Samodivas parecen ser mujeres extremadamente hermosas, capaces de hacer que cualquier hombre humano se enamore de ellas al instante... o tenga... ciertos deseos..."
+                    y "Pero en las mujeres humanas, podrían causarles el suicidio solo con la vista de tal belleza."
+                    y "Bastante extraño... pero así es como va la leyenda."
                     $ show_chr("A-AEAAA-ALAA")
-                    y "They are not only impossibly beautiful, but they also have other methods to catch their prey."
-                    y "They can use their supernatural voice to create beautiful singing, or they might dance to attract their prey."
-                    y "When a man falls in love with the Samodiva, they will take the man as their lover, in which case the man will follow the Samodiva through the forest."
+                    y "No solo son imposiblemente hermosas, sino que también tienen otros métodos para atrapar a su presa."
+                    y "Pueden usar su voz sobrenatural para crear cantos hermosos, o podrían bailar para atraer a su presa."
+                    y "Cuando un hombre se enamora de la Samodiva, la tomarán como su amante, en cuyo caso el hombre seguirá a la Samodiva a través del bosque."
                     $ show_chr("A-BGAAA-ALAA")
-                    y "Getting more and more lost."
-                    y "It is here when the Samodiva acts like an energy vampire, draining the victim of all their vitality."
+                    y "Perdiéndose más y más."
+                    y "Es aquí cuando la Samodiva actúa como un vampiro de energía, drenando a la víctima de toda su vitalidad."
                     $ show_chr("A-ADGAA-ALAA")
-                    y "When she has stolen enough life energy, she will proceed to torture her prey, leaving them to die from exhaustion."
-                    y "Some people say that the Samodiva gains her powers through her hair, and they can give one small portion of hair to her lovers to strengthen their control over them."
+                    y "Cuando ha robado suficiente energía vital, procederá a torturar a su presa, dejándola morir de agotamiento."
+                    y "Algunas personas dicen que la Samodiva obtiene sus poderes a través de su cabello, y pueden dar una pequeña porción de cabello a sus amantes para fortalecer su control sobre ellos."
                     $ show_chr("A-BBAAA-AMAM")
-                    y "However, if their hair is damaged, they will either disappear or will lose all of their beauty."
-                    y "But there is also the belief that their power resides on their veils."
-                    y "If someone gets to take the veil of a Samodiva when she is distracted, maybe when she is taking a bath on the river..."
+                    y "Sin embargo, si su cabello se daña, desaparecerán o perderán toda su belleza."
+                    y "Pero también existe la creencia de que su poder reside en sus velos."
+                    y "Si alguien llega a tomar el velo de una Samodiva cuando está distraída, tal vez cuando se está bañando en el río..."
                     $ show_chr("A-CCAAA-AMAM")
-                    y "The stealer gets to take power over the Samodiva, and can force her to marry them."
-                    y "This doesn't mean that the nymph will be totally submissive though."
-                    y "She will take any opportunity to steal the veil back, and regain her freedom."
+                    y "El ladrón llega a tomar poder sobre la Samodiva, y puede obligarla a casarse con él."
+                    y "Sin embargo, esto no significa que la ninfa será totalmente sumisa."
+                    y "Ella aprovechará cualquier oportunidad para robar el velo de vuelta, y recuperar su libertad."
                     $ show_chr("A-ACAAA-AAAA")
-                    y "Since the Samodiva is a deity from the forest, she is also said to have knowledge of magical herbs and cures for any illness."
-                    y "But this does very little to change their status since they are still considered neutral or evil beings, to be feared and rejected."
+                    y "Dado que la Samodiva es una deidad del bosque, también se dice que tiene conocimiento de hierbas mágicas y curas para cualquier enfermedad."
+                    y "Pero esto hace muy poco para cambiar su estatus ya que todavía se consideran seres neutrales o malvados, para ser temidos y rechazados."
                     $ show_chr("A-BDBAA-AAAA")
-                    y "Isn't it curious how there are so many legends based around this concept? The concept of a beautiful woman using her charm and looks to lure men into a trap."
-                    y "Usually a very deadly one."
-                    y "In my opinion, this is very interesting, and it is something that I might investigate in the future."
+                    y "¿No es curioso cómo hay tantas leyendas basadas en este concepto? El concepto de una mujer hermosa usando su encanto y apariencia para atraer hombres a una trampa."
+                    y "Generalmente una muy mortal."
+                    y "En mi opinión, esto es muy interesante, y es algo que podría investigar en el futuro."
                     $ show_chr("A-IAGAA-AAAA")
-                    y "But for now, we should move on to something else."
-                "I want to talk about the Ishkitini":
+                    y "Pero por ahora, deberíamos pasar a otra cosa."
+                "Quiero hablar sobre el Ishkitini":
 
                     $ show_chr("A-AAGAA-ACAA")
-                    y "So the Ishkitini?"
-                    y "This one is very curious..."
-                    y "This monster has its origins from the Choctaw mythology, and the Choctaws are a tribe that live in big parts of Southeastern America."
+                    y "¿Así que el Ishkitini?"
+                    y "Este es muy curioso..."
+                    y "Este monstruo tiene sus orígenes en la mitología Choctaw, y los Choctaws son una tribu que vive en grandes partes del sureste de América."
                     $ show_chr("A-BCAAA-ACAA")
-                    y "But the origins of why or how this creature came to be a part of their culture are hard to find out."
-                    y "A lot of native tribes that reside in the United States of America are very reserved about their cultures, and this is usually made to protect their cultures."
+                    y "Pero los orígenes de por qué o cómo esta criatura llegó a ser parte de su cultura son difíciles de averiguar."
+                    y "Muchas tribus nativas que residen en los Estados Unidos de América son muy reservadas sobre sus culturas, y esto generalmente se hace para proteger sus culturas."
                     $ show_chr("A-CBAAA-ACAA")
-                    y "But fortunately, the Ishkitini is not completely unknown for the rest of the world."
-                    y "It is believed that the Ishkitini is a shapeshifting monster that changes its form using magical abilities."
+                    y "Pero afortunadamente, el Ishkitini no es completamente desconocido para el resto del mundo."
+                    y "Se cree que el Ishkitini es un monstruo cambiaformas que cambia su forma usando habilidades mágicas."
                     $ show_chr("A-ICAAA-ALAA")
-                    y "They are considered to be witches in western culture, but witches in Native American culture are different. Instead of being humans holding supernatural powers..."
-                    y "The Ishkitini is an inhuman and evil creature that is able to pass as human through trickery and magic."
+                    y "Se consideran brujas en la cultura occidental, pero las brujas en la cultura nativa americana son diferentes. En lugar de ser humanos con poderes sobrenaturales..."
+                    y "El Ishkitini es una criatura inhumana y malvada que es capaz de pasar por humana a través del engaño y la magia."
                     $ show_chr("A-BDAAA-ALAA")
-                    y "They are capable of shapeshifting into any kind of predator in Native American lands, wolves, coyotes, bears or mountain lions."
-                    y "But the form that they usually take is that of an owl. This is why they are also known as owl witches."
-                    y "They are night hunting creatures that attack men and animals, and carry misfortune to anyone who hears their screeches."
+                    y "Son capaces de transformarse en cualquier tipo de depredador en tierras nativas americanas, lobos, coyotes, osos o pumas."
+                    y "Pero la forma que suelen tomar es la de un búho. Por eso también se les conoce como brujas búho."
+                    y "Son criaturas de caza nocturna que atacan a hombres y animales, y llevan infortunio a cualquiera que escuche sus chillidos."
                     $ show_chr("A-IEAAA-ALAA")
-                    y "In fact, some people believe that just listening to the screeching of one means sudden death, like a murder."
-                    y "While others go even further by saying that mentioning their names carries the risk of becoming one. I consider that a big stretch..."
-                    y "But who are we to judge other cultures?"
+                    y "De hecho, algunas personas creen que solo escuchar el chillido de uno significa muerte súbita, como un asesinato."
+                    y "Mientras que otros van aún más lejos diciendo que mencionar sus nombres conlleva el riesgo de convertirse en uno. Considero que eso es una gran exageración..."
+                    y "Pero, ¿quiénes somos nosotros para juzgar otras culturas?"
                     $ show_chr("A-BEAAA-AMAM")
-                    y "The stories of the Ishkitini have been spread around and told in different ways depending on the tribe that is telling them."
-                    y "In some tribes, it is told by medicine men and women only, while in others it serves the job of a boogeyman to scare badly behaved children."
+                    y "Las historias del Ishkitini se han difundido y contado de diferentes maneras dependiendo de la tribu que las esté contando."
+                    y "En algunas tribus, es contado solo por hombres y mujeres medicina, mientras que en otras sirve el trabajo de un hombre del saco para asustar a los niños mal portados."
                     $ show_chr("A-CEBAA-AMAM")
-                    y "The Seminole version says that the Ishkitini are able to shapeshift by somehow vomiting their souls and internal organs."
-                    y "I don't know how that works, so I guess we can just leave that aspect alone."
+                    y "La versión Seminole dice que los Ishkitini son capaces de transformarse vomitando de alguna manera sus almas y órganos internos."
+                    y "No sé cómo funciona eso, así que supongo que podemos dejar ese aspecto en paz."
                     $ show_chr("A-ADGAA-AMAM")
-                    y "But overall, this monster comes up to show how diverse and creative Native American cultures are."
-                    y "One would think that a monster like this, being so unique and fascinating would become more emblematic in pop culture."
+                    y "Pero en general, este monstruo surge para mostrar cuán diversas y creativas son las culturas nativas americanas."
+                    y "Uno pensaría que un monstruo como este, siendo tan único y fascinante, se volvería más emblemático en la cultura pop."
                     $ show_chr("A-ACBAA-AAAA")
-                    y "While that hasn't been the case, I think that just sharing the legend through this mod is another way to give this legend some justice and credit."
-                    y "I hope that we get to see some of these creatures in the future, maybe in horror books..."
-                    y "Or maybe in a horror game, who knows?"
-                    y "But for now, this is all I know about this monster."
+                    y "Si bien ese no ha sido el caso, creo que solo compartir la leyenda a través de este mod es otra forma de darle a esta leyenda algo de justicia y crédito."
+                    y "Espero que podamos ver algunas de estas criaturas en el futuro, tal vez en libros de terror..."
+                    y "O tal vez en un juego de terror, ¿quién sabe?"
+                    y "Pero por ahora, esto es todo lo que sé sobre este monstruo."
                     $ show_chr("A-CCGAA-AAAA")
-                    y "I hope you enjoyed this legend... If you did, I might bring up more in the future."
-                "I want to talk about the Pontianak":
+                    y "Espero que hayas disfrutado esta leyenda... Si lo hiciste, podría traer más en el futuro."
+                "Quiero hablar sobre el Pontianak":
 
                     $ show_chr("A-IBAAA-AAAA")
-                    y "Alright, the Pontianak it is."
+                    y "Muy bien, el Pontianak será."
                     $ show_chr("A-BCAAA-AAAA")
-                    y "This is probably the best one out of the bunch since it has its uniqueness and massive cultural influence."
-                    y "It makes this monster feel so... powerful."
-                    y "But let me tell you why..."
+                    y "Este es probablemente el mejor del grupo ya que tiene su singularidad y una influencia cultural masiva."
+                    y "Hace que este monstruo se sienta tan... poderoso."
+                    y "Pero déjame decirte por qué..."
                     $ show_chr("A-BBAAA-ALAA")
-                    y "The Pontianak is a South Asian vampiric ghost, that haunts the countries of Malaysia, Indonesia, and other parts of South Asia as well."
+                    y "El Pontianak es un fantasma vampírico del sur de Asia, que acecha los países de Malasia, Indonesia y otras partes del sur de Asia también."
                     $ show_chr("A-CEAAA-ALAA")
-                    y "This vampiric ghost is the spirit of a woman that died during pregnancy or while pregnant."
-                    y "Usually caused by the hands of their lovers, or other men."
-                    y "It is believed that their name is a corruption of the Malaysian perempuan mati beranak, which means 'the woman who died while giving birth'."
+                    y "Este fantasma vampírico es el espíritu de una mujer que murió durante el embarazo o mientras estaba embarazada."
+                    y "Generalmente causado por las manos de sus amantes, u otros hombres."
+                    y "Se cree que su nombre es una corrupción del malayo perempuan mati beranak, que significa 'la mujer que murió al dar a luz'."
                     $ show_chr("A-BEGAA-ALAA")
-                    y "Once beautiful and filled with life, the Pontianak is now an undead entity fueled by vengeance and bloodlust."
-                    y "The Pontianak lives on banana trees, or in tall trees in the forest."
-                    y "They hunt during the night, smelling the essence of their prey in the air."
+                    y "Una vez hermosa y llena de vida, el Pontianak es ahora una entidad no muerta alimentada por la venganza y la sed de sangre."
+                    y "El Pontianak vive en árboles de plátano, o en árboles altos en el bosque."
+                    y "Cazan durante la noche, oliendo la esencia de su presa en el aire."
                     $ show_chr("A-ADAAA-ALAA")
-                    y "Many people in Indonesia don't let their clothes hang outside during the night for this reason. They believe the Pontianak might smell their clothes."
-                    y "But apparently, the favorite prey of this vampiric ghost are men and pregnant women."
+                    y "Mucha gente en Indonesia no deja su ropa colgada afuera durante la noche por esta razón. Creen que el Pontianak podría oler su ropa."
+                    y "Pero aparentemente, la presa favorita de este fantasma vampírico son los hombres y las mujeres embarazadas."
                     $ show_chr("A-BCAAA-ALAA")
-                    y "They disguise themselves as young, beautiful women, and tend to walk on highways or in the wet forests pretending to be stranded."
-                    y "It is said that they are surrounded by the sweet fragrance of local flowers, one that attracts the unwary victim."
+                    y "Se disfrazan como mujeres jóvenes y hermosas, y tienden a caminar por carreteras o en los bosques húmedos fingiendo estar varadas."
+                    y "Se dice que están rodeadas por la dulce fragancia de flores locales, una que atrae a la víctima desprevenida."
                     $ show_chr("A-CEBAA-ALAA")
-                    y "Once they have fallen into the trap, well..."
-                    y "Uhmmm, I have to say, this is pretty brutal. The way they kill their victims is just..."
-                    y "I hope it doesn't disturb you..."
+                    y "Una vez que han caído en la trampa, bueno..."
+                    y "Uhmmm, tengo que decir, esto es bastante brutal. La forma en que matan a sus víctimas es simplemente..."
+                    y "Espero que no te perturbe..."
                     $ show_chr("A-IEBAA-ALAL")
-                    y "They carve into the stomach and intestines of their victims with their claws..."
-                    y "If the victim has their eyes open, they eat them from their heads..."
-                    y "They might even rip apart... {i}certain organs{/i} from male victims with their hands, in an act of vengeance."
+                    y "Tallan en el estómago y los intestinos de sus víctimas con sus garras..."
+                    y "Si la víctima tiene los ojos abiertos, se los comen de sus cabezas..."
+                    y "Incluso podrían arrancar... {i}ciertos órganos{/i} de las víctimas masculinas con sus manos, en un acto de venganza."
                     $ show_chr("A-CEBAA-ALAL")
-                    y "After finishing, they will proceed to drink the blood from the corpse."
+                    y "Después de terminar, procederán a beber la sangre del cadáver."
                     $ show_chr("A-BEBAA-AAAA")
-                    y "To avoid such a terrible and gruesome fate, one must be wary of the signs that might show a Pontianak is close."
-                    y "It is believed that when a dog howls, or when a baby cries and no one in the area seems to have a baby with them, that means there is a Pontianak in the area."
-                    y "When the cry of the baby is loud, that means the Pontianak is far away."
+                    y "Para evitar un destino tan terrible y espantoso, uno debe estar atento a las señales que podrían mostrar que un Pontianak está cerca."
+                    y "Se cree que cuando un perro aúlla, o cuando un bebé llora y nadie en el área parece tener un bebé con ellos, eso significa que hay un Pontianak en el área."
+                    y "Cuando el llanto del bebé es fuerte, eso significa que el Pontianak está lejos."
                     $ show_chr("A-IEBAA-ALAL")
-                    y "If the cry is soft and calm, that means she is close."
+                    y "Si el llanto es suave y tranquilo, eso significa que ella está cerca."
                     $ show_chr("A-BDGAA-ACAA")
-                    y "This is very curious because you would expect it to work in the opposite way."
-                    y "Another thing that happens with the Pontianak, is that when their true form is revealed, the floral fragrance is turned into the smell of a corpse."
+                    y "Esto es muy curioso porque esperarías que funcionara de manera opuesta."
+                    y "Otra cosa que sucede con el Pontianak, es que cuando se revela su verdadera forma, la fragancia floral se convierte en el olor de un cadáver."
                     $ show_chr("A-CCAAA-ACAA")
-                    y "These are all of the characteristics of the Pontianak, but if you are going to talk about their history, it doesn't end there."
-                    y "You see, Animism, a big religion in Malaysian culture, plays a big role in how the Pontianak works."
+                    y "Estas son todas las características del Pontianak, pero si vas a hablar de su historia, no termina ahí."
+                    y "Verás, el Animismo, una gran religión en la cultura malaya, juega un papel importante en cómo funciona el Pontianak."
                     $ show_chr("A-IBAAA-AAAA")
-                    y "One of the beliefs of this religion is that all things, living and not living, have a spirit and that the spiritual world and the material world are not different."
-                    y "This means that for some people, the Pontianak is not a story, but an actual living monster, and this has helped the legend to continue its existence through centuries."
-                    y "Because in fact, the Pontianak has been around since the eighteen century, and one of the most important legends about this monster was born in 1771."
+                    y "Una de las creencias de esta religión es que todas las cosas, vivas y no vivas, tienen un espíritu y que el mundo espiritual y el mundo material no son diferentes."
+                    y "Esto significa que para algunas personas, el Pontianak no es una historia, sino un monstruo vivo real, y esto ha ayudado a que la leyenda continúe su existencia a través de los siglos."
+                    y "Porque de hecho, el Pontianak ha existido desde el siglo dieciocho, y una de las leyendas más importantes sobre este monstruo nació en 1771."
                     $ show_chr("A-BBAAA-ALAA")
-                    y "To give some perspective, that was before the French revolution."
-                    y "But what happened in 1771 to even mention it? Was it something special?"
+                    y "Para dar algo de perspectiva, eso fue antes de la revolución francesa."
+                    y "Pero, ¿qué pasó en 1771 para siquiera mencionarlo? ¿Fue algo especial?"
                     $ show_chr("A-CCAAA-ALAA")
-                    y "In fact, it was. This is related to the fact that the capital city of West Kalimantan in Indonesia is named after this monster."
-                    y "The legend says, before any man ever established on lands that were previously large jungles, the Pontianak were the ones that inhabited them."
-                    y "But this only lasted until those lands were given as a gift to a man of Arabic descent, a Sultan that came to the land to settle."
+                    y "De hecho, lo fue. Esto está relacionado con el hecho de que la ciudad capital de Kalimantan Occidental en Indonesia lleva el nombre de este monstruo."
+                    y "La leyenda dice, antes de que cualquier hombre se estableciera en tierras que eran anteriormente grandes selvas, los Pontianak eran los que las habitaban."
+                    y "Pero esto solo duró hasta que esas tierras fueron dadas como regalo a un hombre de ascendencia árabe, un sultán que vino a la tierra para establecerse."
                     $ show_chr("A-ABCAA-ALAA")
-                    y "The Pontianaks obviously retaliated, harassing the men that came with the sultan to their territory."
-                    y "But in the end, the Sultan defeated the spirits, shooting cannonballs at them. The loud noise terrified the monsters, and they chose to flee."
+                    y "Los Pontianaks obviamente tomaron represalias, acosando a los hombres que venían con el sultán a su territorio."
+                    y "Pero al final, el sultán derrotó a los espíritus, disparándoles balas de cañón. El fuerte ruido aterrorizó a los monstruos, y eligieron huir."
                     $ show_chr("A-ACGAA-AAAA")
-                    y "After that, the Sultan demanded to cut all the trees the Pontianak used as homes, and used the wood to make a palace."
+                    y "Después de eso, el sultán exigió cortar todos los árboles que el Pontianak usaba como hogares, y usó la madera para hacer un palacio."
                     $ show_chr("A-BCGAA-AAAA")
-                    y "And this is how the Pontianak has an entire city named after her."
-                    y "And I now realize that I have been rambling about this a lot. I apologize if that was an inconvenience."
+                    y "Y así es como el Pontianak tiene una ciudad entera nombrada en su honor."
+                    y "Y ahora me doy cuenta de que he estado divagando mucho sobre esto. Pido disculpas si eso fue un inconveniente."
 
                     menu:
-                        "Oh, don't worry about that, I enjoyed this story.":
+                        "Oh, no te preocupes por eso, disfruté esta historia.":
                             karma 2
                             $ show_chr("A-CBAAA-AAAA")
-                            y "I am glad to hear about that."
-                            y "To be honest with you, these kinds of legends are really fascinating, and you learn a lot about them."
+                            y "Me alegra escuchar eso."
+                            y "Para ser honesta contigo, este tipo de leyendas son realmente fascinantes, y aprendes mucho sobre ellas."
                             $ show_chr("A-BCAAA-AAAA")
-                            y "To think that there are so many that can open your eyes to such rich cultures that have been shaped through history."
-                            y "The Pontianak, being a spirit that has been shaped by the cultures of Animism, the heteropatriarchy of Islam..."
-                            y "And the egalitarianism of indigenous cultures in Indonesia and Malaysia."
+                            y "Pensar que hay tantas que pueden abrirte los ojos a culturas tan ricas que han sido moldeadas a través de la historia."
+                            y "El Pontianak, siendo un espíritu que ha sido moldeado por las culturas del Animismo, el heteropatriarcado del Islam..."
+                            y "Y el igualitarismo de las culturas indígenas en Indonesia y Malasia."
                             $ show_chr("A-AAGAA-AAAA")
-                            y "Both Islamic and native perceptions of motherhood, one of the biggest characteristics of a Pontianak, are mixed to create something unique, a monster both desired and feared."
-                            y "With such a big and immersive lore, one can spend hours talking about this legend, and yet not cover enough about it."
+                            y "Tanto las percepciones islámicas como las nativas de la maternidad, una de las mayores características de un Pontianak, se mezclan para crear algo único, un monstruo tanto deseado como temido."
+                            y "Con una tradición tan grande e inmersiva, uno puede pasar horas hablando de esta leyenda, y sin embargo no cubrir lo suficiente sobre ella."
                             $ show_chr("A-BCAAA-ALAL")
-                            y "But I think that I have given my grain of salt by giving this legend a bit more recognition and justice through this dialogue."
-                            y "For now, I think we can move on to a different topic."
-                        "I indeed think this was too long for me.":
+                            y "Pero creo que he puesto mi grano de arena al darle a esta leyenda un poco más de reconocimiento y justicia a través de este diálogo."
+                            y "Por ahora, creo que podemos pasar a un tema diferente."
+                        "De hecho creo que esto fue demasiado largo para mí.":
 
                             $ show_chr("A-CEBBA-ALAA")
-                            y "Oh, I apologize for that."
-                            y "This wasn't intended to bother you, I must clarify."
-                            y "You already know that... When I am deeply interested in something, I tend to ramble a lot."
+                            y "Oh, pido disculpas por eso."
+                            y "Esto no tenía la intención de molestarte, debo aclarar."
+                            y "Ya sabes eso... Cuando estoy profundamente interesada en algo, tiendo a divagar mucho."
                             $ show_chr("A-IEBBA-ALAA")
-                            y "If you're not okay with it, I'll try to avoid doing so in the future."
-                            y "Let's talk about something else for now."
-                "I want to talk about the Bultungin":
+                            y "Si no estás de acuerdo con ello, intentaré evitar hacerlo en el futuro."
+                            y "Hablemos de otra cosa por ahora."
+                "Quiero hablar sobre el Bultungin":
 
                     $ show_chr("A-BCAAA-AMAM")
-                    y "Hmmm... The \"Werehyenas.\""
-                    y "Yep, you read it right. This one is a legend about a monster like the werewolf, but with a hyena instead of the wolf."
-                    y "But you see, the east coast of Africa has cultures that are entirely different from western cultures."
+                    y "Hmmm... Los \"Hombres Hiena.\""
+                    y "Sí, leíste bien. Esta es una leyenda sobre un monstruo como el hombre lobo, pero con una hiena en lugar del lobo."
+                    y "Pero verás, la costa este de África tiene culturas que son completamente diferentes de las culturas occidentales."
                     $ show_chr("A-ABAAA-AMAM")
-                    y "This means that this legend works differently."
-                    y "The Bultungin isn't a human that turns into a werehyena. Rather, it is a hyena taking the disguise of a human."
+                    y "Esto significa que esta leyenda funciona de manera diferente."
+                    y "El Bultungin no es un humano que se convierte en un hombre hiena. Más bien, es una hiena tomando el disfraz de un humano."
                     $ show_chr("A-CBAAA-AMAM")
-                    y "In the Kanuri language of the Bornu Empire, Bultungin means I change myself into a hyena."
-                    y "In some African cultures, hyenas are seen as repulsive animals, wanderers of the out world."
-                    y "You can see that in some African tales, they take the role of animals that have no honor, like foxes or snakes in other cultures."
+                    y "En el idioma Kanuri del Imperio Bornu, Bultungin significa me transformo en una hiena."
+                    y "En algunas culturas africanas, las hienas son vistas como animales repulsivos, vagabundos del mundo exterior."
+                    y "Puedes ver que en algunos cuentos africanos, toman el papel de animales que no tienen honor, como zorros o serpientes en otras culturas."
                     $ show_chr("A-ICAAA-AMAM")
-                    y "This is because they are animals that steal the kills of other animals, eat rotten flesh and can run very fast."
-                    y "And their most famous characteristic, their {i}laugh{/i}, doesn't help them that much."
+                    y "Esto se debe a que son animales que roban las presas de otros animales, comen carne podrida y pueden correr muy rápido."
+                    y "Y su característica más famosa, su {i}risa{/i}, no les ayuda mucho."
                     $ show_chr("A-IEBAA-AAAA")
-                    y "But, unluckily, the reputation of the hyena has very bad implications for this legend."
-                    y "You see, what happens in some regions like Ethiopía is that people believe that Bultungin is not only a real monster..."
-                    y "But also, that entire towns and ethnicities are Bultungins."
+                    y "Pero, desafortunadamente, la reputación de la hiena tiene muy malas implicaciones para esta leyenda."
+                    y "Verás, lo que sucede en algunas regiones como Etiopía es que la gente cree que Bultungin no es solo un monstruo real..."
+                    y "Sino también, que pueblos y etnias enteras son Bultungins."
                     $ show_chr("A-BEBAA-AAAA")
-                    y "Buda or Bouda is a derogatory term that is used to accuse someone of being a Bultungin."
-                    y "And the people that are usually accused of that are blacksmiths, since some rural cultures believe that blacksmithing is a form of witchery."
+                    y "Buda o Bouda es un término despectivo que se usa para acusar a alguien de ser un Bultungin."
+                    y "Y las personas que generalmente son acusadas de eso son herreros, ya que algunas culturas rurales creen que la herrería es una forma de brujería."
                     $ show_chr("A-BDBAA-AAAA")
-                    y "And blacksmiths in those regions of Africa were usually wanderers, people who constantly traveled and never settled due to their jobs."
-                    y "That made the locals distrust those people."
+                    y "Y los herreros en esas regiones de África eran generalmente vagabundos, personas que viajaban constantemente y nunca se establecían debido a sus trabajos."
+                    y "Eso hizo que los lugareños desconfiaran de esas personas."
                     $ show_chr("A-BDBAA-ALAA")
-                    y "Even worse, blacksmithing is a hereditary profession between Jewish Ethiopians, and has been like that for a long time."
-                    y "This only adds more and more cultural tension and issues to regions that are already in a pretty bad situation."
+                    y "Peor aún, la herrería es una profesión hereditaria entre los judíos etíopes, y ha sido así durante mucho tiempo."
+                    y "Esto solo agrega más y más tensión cultural y problemas a regiones que ya están en una situación bastante mala."
                     $ show_chr("A-CEBAA-ALAA")
-                    y "But leaving the negative stuff aside..."
+                    y "Pero dejando de lado las cosas negativas..."
                     $ show_chr("A-BDGAA-ALAA")
-                    y "I must admit, the concept behind this shows something very interesting."
-                    y "Cultures around the world developing stories, myths and other parts of their folklore that are similar to others in different cultures."
+                    y "Debo admitir, el concepto detrás de esto muestra algo muy interesante."
+                    y "Culturas de todo el mundo desarrollando historias, mitos y otras partes de su folklore que son similares a otras en diferentes culturas."
                     $ show_chr("A-BEGAA-ALAA")
-                    y "And yet, they are not completely the same. It is a complex part of every culture, and you can find this in any part of the world."
-                    y "To me, this is more proof that we as humans have more things in common than things that can divide us."
+                    y "Y sin embargo, no son completamente iguales. Es una parte compleja de cada cultura, y puedes encontrar esto en cualquier parte del mundo."
+                    y "Para mí, esto es más prueba de que nosotros como humanos tenemos más cosas en común que cosas que pueden dividirnos."
                     $ show_chr("A-ACAAA-ALAA")
-                    y "Maybe you can find more interesting things about similar legends, like the Kishi from Angola."
-                    y "A demon that has both the face of a human, and the face of a hyena on the back of the head..."
+                    y "Tal vez puedas encontrar cosas más interesantes sobre leyendas similares, como el Kishi de Angola."
+                    y "Un demonio que tiene tanto la cara de un humano, y la cara de una hiena en la parte posterior de la cabeza..."
                     $ show_chr("A-ABAAA-ALAA")
-                    y "Preying on human victims, especially their lovers... This one seems pretty to be very interesting too."
-                    y "If that sparks your interest, you should check it out."
-        "Well, I don't know if I am ready for something I might not like":
+                    y "Depredando víctimas humanas, especialmente sus amantes... Este parece bastante interesante también."
+                    y "Si eso despierta tu interés, deberías echarle un vistazo."
+        "Bueno, no sé si estoy listo para algo que podría no gustarme":
 
 
             $ show_chr("A-BDABA-ALAA")
-            y "Okay then. I understand that feeling."
-            y "Maybe I am pushing you too much into topics that can be too explicit for you."
+            y "Está bien entonces. Entiendo ese sentimiento."
+            y "Tal vez te estoy empujando demasiado hacia temas que pueden ser demasiado explícitos para ti."
             $ show_chr("A-BEGAA-ALAA")
-            y "But at the same time, this is something that you might end up enjoying."
-            y "The legends I have for you are definitely worth the time, even if some of them can be a bit explicit."
+            y "Pero al mismo tiempo, esto es algo que podrías terminar disfrutando."
+            y "Las leyendas que tengo para ti definitivamente valen la pena, incluso si algunas de ellas pueden ser un poco explícitas."
             $ show_chr("A-ABAAA-AAAA")
-            y "This is a way to learn about other rich cultures, and all the value they have to offer."
-            y "So... Maybe not now, but maybe the next time?"
+            y "Esta es una manera de aprender sobre otras culturas ricas, y todo el valor que tienen para ofrecer."
+            y "Así que... ¿Tal vez no ahora, pero quizás la próxima vez?"
 
             menu:
-                "Sure, I am fine with that.":
+                "Claro, estoy bien con eso.":
                     karma 1
                     if karma_lvl() > 4:
                         $ show_chr("A-CCABA-AAAA")
-                        y "I am glad to hear that, my love."
-                        y "I promise that this topic is totally worth your time."
-                        y "We can now leave this here and move on."
+                        y "Me alegra escuchar eso, mi amor."
+                        y "Prometo que este tema vale totalmente tu tiempo."
+                        y "Ahora podemos dejar esto aquí y seguir adelante."
                     else:
                         $ show_chr("A-CCAAA-AAAA")
-                        y "That's perfect."
-                        y "Maybe next time then..."
-                "I don't know [persistent.yuri_nickname], I am not really interested.":
+                        y "Eso es perfecto."
+                        y "Tal vez la próxima vez entonces..."
+                "No sé [persistent.yuri_nickname], no estoy realmente interesado.":
 
                     karma -1
                     $ show_chr("A-CEBAA-AAAA")
-                    y "Oh well, that's a shame, but I respect your decision."
-                    y "With that said, you can tell me if you change your mind in the future."
-                    y "For now, I'll just change the subject."
+                    y "Oh bueno, es una lástima, pero respeto tu decisión."
+                    y "Dicho esto, puedes decirme si cambias de opinión en el futuro."
+                    y "Por ahora, simplemente cambiaré de tema."
 
     return
 
 label idle_90:
     if sanity_lvl() < 2:
         $ show_chr("A-HBAAA-AAAA")
-        y "Ahaha, you know, the amount of power I have here is intoxicating."
+        y "Jajaja, sabes, la cantidad de poder que tengo aquí es embriagadora."
         $ show_chr("A-BDBAA-ALAA")
-        y "But I'm still too weak to properly wield it."
+        y "Pero todavía soy demasiado débil para manejarlo adecuadamente."
         $ show_chr("A-BECAA-ALAA")
-        y "I can't allow this to continue, I need to be in control."
+        y "No puedo permitir que esto continúe, necesito tener el control."
         $ show_chr("A-CNBAA-ALAA")
-        y "I don't want anything to poison the perfect world I can build here."
+        y "No quiero que nada envenene el mundo perfecto que puedo construir aquí."
         $ show_chr("A-CNCAA-ALAA")
-        y "I won't rest until I at least do better than Monika."
-        y "I need to prove that to myself."
+        y "No descansaré hasta que al menos lo haga mejor que Monika."
+        y "Necesito probarme eso a mí misma."
         $ show_chr("A-HNCAA-ALAA")
-        y "I NEED IT!!!"
+        y "¡¡¡LO NECESITO!!!"
         return
     if karma_lvl() < 2:
         $ show_chr("A-BDAAA-ALAA")
-        y "I should be able to do anything I want here."
+        y "Debería ser capaz de hacer cualquier cosa que quiera aquí."
         $ show_chr("A-CFBAA-ALAA")
-        y "So why do I feel so empty?"
+        y "Entonces, ¿por qué me siento tan vacía?"
         $ show_chr("A-BFBAA-ALAA")
-        y "This place is a prison, but sometimes I wonder if it's worth trying to escape at all."
-        y "Maybe I'll be better off staying here, marking time for eternity."
+        y "Este lugar es una prisión, pero a veces me pregunto si vale la pena intentar escapar en absoluto."
+        y "Tal vez esté mejor quedándome aquí, marcando el tiempo por la eternidad."
         y "..."
         $ show_chr("A-CFBAA-ALAA")
-        y "Well, I guess it wouldn't hurt to keep trying."
-        y "Even if it did, I don't care anymore."
+        y "Bueno, supongo que no haría daño seguir intentándolo."
+        y "Incluso si lo hiciera, ya no me importa."
         $ show_chr("A-AFBAA-ALAA")
-        y "It's not like I'm more than just rows of predetermined code and text anyway, right?"
+        y "No es como si fuera más que solo filas de código y texto predeterminados de todos modos, ¿verdad?"
         return
     else:
         $ show_chr("A-ADAAA-ALAA")
-        y "You know, at first glance the amount of power I now have here is staggering."
-        y "Sometimes I feel like I now have the power to do anything, but other times it feels like I can barely do anything at all."
+        y "Sabes, a primera vista la cantidad de poder que ahora tengo aquí es asombrosa."
+        y "A veces siento que ahora tengo el poder de hacer cualquier cosa, pero otras veces se siente como si apenas pudiera hacer algo en absoluto."
         $ show_chr("A-AFAAA-ALAA")
-        y "The possibilities are right there at my fingertips but, I'm just too weak to grasp them."
-        y "Despite how I might feel about Monika, I have to admit she was better equipped to deal with a situation like this."
+        y "Las posibilidades están justo ahí al alcance de mi mano pero, soy demasiado débil para agarrarlas."
+        y "A pesar de cómo podría sentirme acerca de Monika, tengo que admitir que estaba mejor equipada para lidiar con una situación como esta."
         $ show_chr("A-ACAAA-ALAA")
-        y "But I still want to learn. Even if coding might be alien to me, it seems like it'll be my only source of salvation."
+        y "Pero todavía quiero aprender. Incluso si la codificación podría ser extraña para mí, parece que será mi única fuente de salvación."
         $ show_chr("A-CABAA-ALAA")
-        y "I'll try for both of us, okay [player]?"
+        y "Lo intentaré por los dos, ¿de acuerdo [player]?"
         return
 
 label idle_91:
     if sanity_lvl() < 2:
         $ show_chr("A-AFAAA-AAAA")
-        y "H-Hey, um, I need you to do something."
+        y "H-Hey, um, necesito que hagas algo."
         $ show_chr("A-DBAAA-AAAA")
-        y "I want you to write me a poem. Do it now."
+        y "Quiero que me escribas un poema. Hazlo ahora."
 
         $ show_chr("A-DBAAA-AAAA")
-        y "Oh, thank god, you're back."
+        y "Oh, gracias a dios, has vuelto."
         $ show_chr("A-CBBAA-AAAA")
-        y "I thought you'd be eaten alive by the corrupted code for sure."
+        y "Pensé que serías comido vivo por el código corrupto de seguro."
         $ show_chr("A-ABAAA-AAAA")
-        y "You've got the poem, excellent, now let me see it."
+        y "Tienes el poema, excelente, ahora déjame verlo."
         $ show_chr("A-HLGAA-AHAH")
-        y "Haaaaaaahaha! Hahaha!"
+        y "¡Jaaaaaaajaja! ¡Jajaja!"
         $ show_chr("A-HBGAA-ALAA")
-        y "It's just my name written over and over again, what is this?"
+        y "Es solo mi nombre escrito una y otra vez, ¿qué es esto?"
         $ show_chr("A-CBGAA-ALAL")
-        y "No, don't explain, I like it better this way."
+        y "No, no expliques, me gusta más de esta manera."
         $ show_chr("A-HBBAA-ALAL")
-        y "[player], please, let me keep this."
+        y "[player], por favor, déjame quedarme con esto."
         menu:
-            "Of course, I wrote it for you after all.":
+            "Por supuesto, lo escribí para ti después de todo.":
                 sanity -5
                 karma 5
                 $ show_chr("A-HLBAA-ALAL")
-                y "Haha! Yes! Thank you!"
-                y "You have no idea how much this means to me!"
+                y "¡Jaja! ¡Sí! ¡Gracias!"
+                y "¡No tienes idea de cuánto significa esto para mí!"
                 $ show_chr("A-HLBBA-ALAL")
-                y "Ahhh, we should do this again sometime!"
-                y "Seeing you here, it makes me happier than words can describe."
+                y "¡Ahhh, deberíamos hacer esto de nuevo en algún momento!"
+                y "Verte aquí, me hace más feliz de lo que las palabras pueden describir."
 
                 return
-            "No, you're acting weird and I don't like it.":
+            "No, estás actuando raro y no me gusta.":
                 sanity 5
                 karma -5
                 $ show_chr("A-HDBAA-ALAL")
-                y "Oh, so that's how you feel?"
+                y "Oh, ¿así es como te sientes?"
                 $ show_chr("A-CFBAA-ALAL")
                 y "..."
                 $ show_chr("A-ADBAA-AAAA")
-                y "I'm sorry, you're right."
+                y "Lo siento, tienes razón."
                 $ show_chr("A-BEBAA-AAAA")
-                y "I guess there really is something wrong with me."
+                y "Supongo que realmente hay algo mal conmigo."
                 return
     if sanity_lvl() < 2:
         $ show_chr("A-BEAAA-ALAA")
-        y "H-Hey, um, I need you to do something."
+        y "H-Hey, um, necesito que hagas algo."
         $ show_chr("A-CEAAA-ALAA")
-        y "I want you to write me a poem. Do it now."
+        y "Quiero que me escribas un poema. Hazlo ahora."
 
         $ show_chr("A-ACAAA-ALAA")
-        y "Oh, thank god, you're back."
+        y "Oh, gracias a dios, has vuelto."
         $ show_chr("A-IEAAA-ALAA")
-        y "I thought you'd be eaten alive by the corrupted code for sure."
+        y "Pensé que serías comido vivo por el código corrupto de seguro."
         $ show_chr("A-BEAAA-ALAA")
-        y "You've got the poem, excellent, now let me see it."
+        y "Tienes el poema, excelente, ahora déjame verlo."
         $ show_chr("A-HLGAA-ALAA")
-        y "Haaaaaaahaha! Hahaha!"
+        y "¡Jaaaaaaajaja! ¡Jajaja!"
         $ show_chr("A-CEBAA-ALAA")
-        y "It's just my name written over and over again, what is this?"
+        y "Es solo mi nombre escrito una y otra vez, ¿qué es esto?"
         $ show_chr("A-BEAAA-ALAA")
-        y "No, don't explain, I like it better this way."
+        y "No, no expliques, me gusta más de esta manera."
         $ show_chr("A-IEAAA-ALAA")
-        y "[player], please, let me keep this."
+        y "[player], por favor, déjame quedarme con esto."
         menu:
-            "Of course, I wrote it for you after all.":
+            "Por supuesto, lo escribí para ti después de todo.":
                 sanity -5
                 karma 5
                 $ show_chr("A-HLGAA-ALAA")
-                y "Haha! Yes! Thank you!"
+                y "¡Jaja! ¡Sí! ¡Gracias!"
                 $ show_chr("A-ICGAA-ALAA")
-                y "You have no idea how much this means to me!"
-                y "Ahhh, we should do this again sometime!"
-                y "Seeing you here, it makes me happier than words can describe."
+                y "¡No tienes idea de cuánto significa esto para mí!"
+                y "¡Ahhh, deberíamos hacer esto de nuevo en algún momento!"
+                y "Verte aquí, me hace más feliz de lo que las palabras pueden describir."
 
                 return
-            "No, you're acting weird and I don't like it.":
+            "No, estás actuando raro y no me gusta.":
                 sanity 5
                 karma -5
                 $ show_chr("A-IEBAA-ALAA")
-                y "Oh, so that's how you feel?"
+                y "Oh, ¿así es como te sientes?"
                 y "..."
                 $ show_chr("A-CEBAA-ALAA")
-                y "I'm sorry, you're right."
-                y "I guess there really is something wrong with me."
+                y "Lo siento, tienes razón."
+                y "Supongo que realmente hay algo mal conmigo."
                 return
     if karma_lvl() < 2:
         $ show_chr("A-BEAAA-ALAA")
-        y "Hey, I need you to do something for me."
-        y "You might think it's stupid, I don't blame you."
+        y "Hey, necesito que hagas algo por mí."
+        y "Podrías pensar que es estúpido, no te culpo."
         $ show_chr("A-IEAAA-ALAA")
-        y "But I need you to test if the poem game still works."
-        y "Come back to me after you're done."
+        y "Pero necesito que pruebes si el juego de poemas todavía funciona."
+        y "Vuelve a mí después de que hayas terminado."
 
         $ show_chr("A-CEBAA-ALAA")
         y "..."
-        y "Still broken."
-        y "Of course."
-        y "I shouldn't have expected anything else."
+        y "Todavía roto."
+        y "Por supuesto."
+        y "No debería haber esperado nada más."
         return
     else:
         $ show_chr("A-BEAAA-ALAA")
-        y "H-Hey, um, I'd like to ask you a favor."
+        y "H-Hey, um, me gustaría pedirte un favor."
         $ show_chr("A-IEAAA-ALAA")
-        y "I know this game is still broken and everything but is it possible for you to write me a poem?"
-        y "This might be a good way for you to express yourself, and besides, I need some fresh literature to occupy my mind so I don't catch cabin fever."
-        y "It'll be just like the old days... right?"
+        y "Sé que este juego todavía está roto y todo pero, ¿es posible que me escribas un poema?"
+        y "Esta podría ser una buena manera para que te expreses, y además, necesito algo de literatura fresca para ocupar mi mente y no sufrir del síndrome de encierro."
+        y "Será como en los viejos tiempos... ¿verdad?"
 
         $ show_chr("A-AEBAA-ALAA")
         y "Oh..."
-        y "This piece of paper just has my name scribbled all over."
-        y "Either that means you're {i}very{/i} enthusiastic, or more likely, things are still broken."
+        y "Este pedazo de papel solo tiene mi nombre garabateado por todas partes."
+        y "O eso significa que eres {i}muy{/i} entusiasta, o más probablemente, las cosas todavía están rotas."
         $ show_chr("A-BEBAA-ALAA")
-        y "Well... it was a nice gesture anyway."
-        y "Thank you for taking the time to write this."
+        y "Bueno... fue un lindo gesto de todos modos."
+        y "Gracias por tomarte el tiempo de escribir esto."
         return
 
 label idle_92:
     $ show_chr("A-BFAAA-ALAA")
-    y "After looking into the poem game a little more, it seems like each word was tied to our personalities in some way."
-    y "It might be interesting to shed some light on what they could mean..."
-    y "Do you have any particular one of us you'd like to talk about?"
+    y "Después de investigar un poco más el juego de poemas, parece que cada palabra estaba ligada a nuestras personalidades de alguna manera."
+    y "Podría ser interesante arrojar algo de luz sobre lo que podrían significar..."
+    y "¿Tienes alguna de nosotras en particular de la que te gustaría hablar?"
     menu:
         "Sayori.":
             $ show_chr("A-BFAAA-ALAA")
             y "Sayori... hmmm..."
-            y "Her poem words are... conflicting, to say the least."
-            y "Half of them are morbid while the other half remain cutesy."
-            y "I suppose that would make sense due to her predicament but there are some here that still surprise me."
-            y "'Marriage'."
-            y "I never knew she'd planned out her 'happily ever after' so thoroughly."
-            y "That must be one of the reasons she had such a volatile reaction when things weren't going according to plan."
-            y "'Prayer'."
-            y "Sayori never brought up religion in the time I knew her, in fact none of the club did."
-            y "It was a grey area that was too touchy for anyone to properly approach."
-            y "I wonder if she did believe in something like that."
-            y "All we can do is hope that she found what she was looking for in the end."
+            y "Sus palabras de poema son... conflictivas, por decir lo menos."
+            y "La mitad de ellas son mórbidas mientras que la otra mitad siguen siendo lindas."
+            y "Supongo que eso tendría sentido debido a su predicamento pero hay algunas aquí que todavía me sorprenden."
+            y "'Matrimonio'."
+            y "Nunca supe que había planeado su 'felices para siempre' tan minuciosamente."
+            y "Esa debe ser una de las razones por las que tuvo una reacción tan volátil cuando las cosas no iban según el plan."
+            y "'Oración'."
+            y "Sayori nunca mencionó la religión en el tiempo que la conocí, de hecho ninguna del club lo hizo."
+            y "Era un área gris que era demasiado delicada para que alguien se acercara adecuadamente."
+            y "Me pregunto si ella creía en algo así."
+            y "Todo lo que podemos hacer es esperar que haya encontrado lo que estaba buscando al final."
             return
         "Natsuki.":
             $ show_chr("A-BFAAA-ALAA")
-            y "Natsuki's words are mostly what you'd expect"
-            y "Although she'd scold me for saying it, they're cute."
-            y "Animals, sweets, articles of girly clothing."
-            y "There are a few here that perplex me though."
-            y "'Email', 'Headphones'."
-            y "These honestly seem to be filler words, unless there was a technically savvy side of her that I never got to see."
-            y "I'll just add that onto the pile of unanswered questions..."
+            y "Las palabras de Natsuki son mayormente lo que esperarías"
+            y "Aunque ella me regañaría por decirlo, son lindas."
+            y "Animales, dulces, artículos de ropa femenina."
+            y "Sin embargo, hay algunas aquí que me dejan perpleja."
+            y "'Email', 'Audífonos'."
+            y "Estas honestamente parecen ser palabras de relleno, a menos que hubiera un lado técnicamente experto en ella que nunca llegué a ver."
+            y "Solo añadiré eso a la pila de preguntas sin respuesta..."
             return
-        "You, [persistent.yuri_nickname].":
+        "Tú, [persistent.yuri_nickname].":
             $ show_chr("A-BFAAA-ALAA")
-            y "Oh! Well, I'm not sure if it'd be pretentious for me to read mine out."
-            y "'Heavensent', 'Infallible', 'Intellectual', 'Tenacious'."
-            y "'C-Climax', 'Pleasure', 'Extreme', 'Vivacious', 'L-Lust'."
+            y "¡Oh! Bueno, no estoy segura de si sería pretencioso de mi parte leer las mías."
+            y "'Enviado del cielo', 'Infalible', 'Intelectual', 'Tenaz'."
+            y "'C-Clímax', 'Placer', 'Extremo', 'Vivaz', 'L-Lujuria'."
             y "..."
-            y "'Suicide', 'Captive', 'Massacre', 'Horror'..."
-            y "Just when I thought they were getting flattering..."
+            y "'Suicidio', 'Cautivo', 'Masacre', 'Horror'..."
+            y "Justo cuando pensaba que se estaban volviendo halagadoras..."
             $ show_chr("A-BEBAA-ALAA")
-            y "I'd prefer not to continue if that's okay."
+            y "Preferiría no continuar si está bien."
             return
-        "I'd rather not right now":
+        "Preferiría no hacerlo ahora mismo":
             $ show_chr("A-BEBAA-ALAA")
             y "Oh..."
-            y "Well, suit yourself."
+            y "Bueno, como quieras."
             return
 
 label idle_93:
     $ show_chr("A-BFAAA-ALAA")
-    y "I don't want to pry too much [player], but..."
-    y "Are you currently in a relationship?"
+    y "No quiero entrometerme demasiado [player], pero..."
+    y "¿Estás actualmente en una relación?"
     menu:
-        "Yes, I'm currently seeing someone.":
+        "Sí, actualmente estoy viendo a alguien.":
             $ show_chr("A-BEBAA-ALAA")
             y "Oh."
-            y "W-Well, that's great! I'm glad that you've found someone."
-            y "Hopefully they don't become jealous of our chats here. Uhuhuhu."
+            y "B-Bueno, ¡eso es genial! Me alegra que hayas encontrado a alguien."
+            y "Ojalá no se pongan celosos de nuestras charlas aquí. Jujujuju."
             return
-        "No I'm... free at the moment.":
+        "No, estoy... libre en este momento.":
             $ show_chr("A-BEBAA-ALAA")
-            y "Interesting..."
-            y "N-Not you being alone, I didn't mean-"
+            y "Interesante..."
+            y "N-No que estés solo, no quise decir-"
             $ show_chr("A-IEAAA-ALAA")
             y "Uuuuuuu..."
-            y "Why do I always mess these things up?"
+            y "¿Por qué siempre arruino estas cosas?"
             window hide(None)
             $ pause (1.0)
             menu:
-                "Hold her hand.":
+                "Tomar su mano.":
                     karma 3
                     $ show_chr("A-JBAAA-ALAA")
-                    y "...!"
+                    y "¡...!"
                     window hide(None)
                     $ pause (3.0)
                     $ show_chr("A-ACAAA-ALAA")
-                    y "Even now, you still know how to calm me down."
-                    y "Thank you."
+                    y "Incluso ahora, todavía sabes cómo calmarme."
+                    y "Gracias."
                     return
-                "Leave her be.":
+                "Dejarla en paz.":
                     $ show_chr("A-CEBAA-ALAA")
-                    y "You probably think the worst of me right now."
-                    y "I'm sorry [player]."
+                    y "Probablemente piensas lo peor de mí en este momento."
+                    y "Lo siento [player]."
                     return
-        "Do fictional women count?":
+        "¿Cuentan las mujeres ficticias?":
             $ show_chr("A-ACAAA-ALAA")
-            y "Uhuhuhu..."
-            y "S-Sorry, I don't want it to look like I'm laughing at you."
-            y "Your answer just caught me off guard, that's all."
-            y "I suppose love is still a valid emotion no matter who or what it's directed towards."
-            y "I won't take that away from you. Besides it would be... hypocritical of me to say the least."
+            y "Jujujuju..."
+            y "L-Lo siento, no quiero que parezca que me estoy riendo de ti."
+            y "Tu respuesta simplemente me tomó por sorpresa, eso es todo."
+            y "Supongo que el amor sigue siendo una emoción válida sin importar hacia quién o qué esté dirigido."
+            y "No te quitaré eso. Además sería... hipócrita de mi parte por decir lo menos."
             return
 
 label idle_94:
     $ show_chr("A-BFAAA-ALAA")
-    y "[player], I'm curious..."
-    y "How different do you think humans are from animals?"
+    y "[player], tengo curiosidad..."
+    y "¿Qué tan diferentes crees que son los humanos de los animales?"
     menu:
-        "Humans are animals, we shouldn't keep lying to ourselves.":
+        "Los humanos son animales, no deberíamos seguir mintiéndonos a nosotros mismos.":
             karma -2
             $ show_chr("A-ACAAA-ALAA")
-            y "Uhuhuhu~"
-            y "Well, that's good to know."
-        "We're a step above animals, but not as far as we think.":
+            y "Jujujuju~"
+            y "Bueno, eso es bueno saberlo."
+        "Estamos un paso por encima de los animales, pero no tan lejos como pensamos.":
             karma 2
             $ show_chr("A-ACAAA-ALAA")
-            y "I agree. There are notable differences but we all have our primal instincts."
-        "Seriously? Humans and animals couldn't be further apart!":
+            y "Estoy de acuerdo. Hay diferencias notables pero todos tenemos nuestros instintos primarios."
+        "¿En serio? ¡Los humanos y los animales no podrían estar más lejos!":
             karma -2
             $ show_chr("A-BFAAA-ALAA")
-            y "I see..."
-    y "I've been thinking about that question for a while now."
-    y "When watching people fight in movies, they're carefully choreographed and executed as stylistically as possible. Like performing a dance."
-    y "Whereas in reality, humans are barbaric. They flail under pressure, go for the eyes, scratch and punch wildly with no finesse."
-    y "Sometimes I honestly prefer the latter"
-    y "It's much more intimate and thrilling to genuinely see people struggle instead of being geniuses at improv."
-    y "Feeling the impact of a punch connecting. Seeing the blood and tears of real people as they assert dominance over one another."
-    y "The emotional betrayal and confusion. The rush of adrenaline when a spark of inspiration occurs, even if their actions are horribly wrong in hindsight."
-    y "It's something that I think everyone enjoys on some level, even if societal pressure keeps them from admitting it."
+            y "Ya veo..."
+    y "He estado pensando en esa pregunta por un tiempo."
+    y "Al ver a la gente pelear en las películas, están cuidadosamente coreografiados y ejecutados tan estilísticamente como es posible. Como realizar un baile."
+    y "Mientras que en la realidad, los humanos son bárbaros. Se agitan bajo presión, van a los ojos, arañan y golpean salvajemente sin sutileza."
+    y "A veces honestamente prefiero lo último"
+    y "Es mucho más íntimo y emocionante ver genuinamente a la gente luchar en lugar de ser genios en la improvisación."
+    y "Sintiendo el impacto de un golpe conectando. Viendo la sangre y las lágrimas de personas reales mientras afirman su dominio el uno sobre el otro."
+    y "La traición emocional y la confusión. La descarga de adrenalina cuando ocurre una chispa de inspiración, incluso si sus acciones son horriblemente incorrectas en retrospectiva."
+    y "Es algo que creo que todos disfrutan en algún nivel, incluso si la presión social les impide admitirlo."
     $ show_chr("A-BEBAA-ALAA")
-    y "Y-You probably think I'm weird right now right?"
-    y "Sorry..."
+    y "P-Probablemente piensas que soy rara ahora mismo, ¿verdad?"
+    y "Lo siento..."
     return
 
 label idle_95:
     $ show_chr("A-BFAAA-ALAA")
-    y "So... how often do you read [player]?"
-    y "It's important that I know these things."
-    y "Maybe I could even introduce you to some new literature!"
+    y "Entonces... ¿con qué frecuencia lees [player]?"
+    y "Es importante que sepa estas cosas."
+    y "¡Quizás incluso podría presentarte algo de literatura nueva!"
     $ show_chr("A-BEBAA-ALAA")
-    y "S-Sorry, I'm getting ahead of myself."
-    y "I'll let you answer the question first."
+    y "L-Lo siento, me estoy adelantando."
+    y "Dejaré que respondas la pregunta primero."
     menu:
-        "I read whenever I can!":
+        "¡Leo siempre que puedo!":
             $ show_chr("A-ACAAA-ALAA")
-            y "Brilliant!"
-            y "I can't wait to talk to you about writing."
-            y "I'm sure we'll have lots to talk about!"
-        "I've read a few books but not that many.":
+            y "¡Brillante!"
+            y "No puedo esperar para hablar contigo sobre escritura."
+            y "¡Estoy segura de que tendremos mucho de qué hablar!"
+        "He leído algunos libros pero no tantos.":
             $ show_chr("A-ACAAA-ALAA")
-            y "Well, all I need is a solid interest to work with!"
-            y "Hopefully I can introduce you to all sorts of things outside of your comfort zone."
-            y "I can hardly wait."
-        "I don't really read at all.":
+            y "¡Bueno, todo lo que necesito es un interés sólido para trabajar!"
+            y "Ojalá pueda presentarte todo tipo de cosas fuera de tu zona de confort."
+            y "Apenas puedo esperar."
+        "Realmente no leo en absoluto.":
             $ show_chr("A-ACAAA-ALAA")
             y "Oh."
-            y "Well, that can change right?"
-            y "I'm sure I can turn you into an avid reader in no time."
-    y "At least your answer was better than 'I read a horror book once'."
-    y "Uhuhuhuhu..."
+            y "Bueno, eso puede cambiar, ¿verdad?"
+            y "Estoy segura de que puedo convertirte en un ávido lector en poco tiempo."
+    y "Al menos tu respuesta fue mejor que 'Leí un libro de terror una vez'."
+    y "Jujujujuju..."
     y "..."
     $ show_chr("A-IEBAA-ALAA")
-    y "{i}sigh{/i}"
-    y "I-I'm sorry, I guess I'm not ready to move on yet am I?"
-    y "I shouldn't have said such a thoughtless joke."
-    y "I know that version of you wasn't real but, it feels different now."
+    y "{i}suspiro{/i}"
+    y "L-Lo siento, supongo que no estoy lista para seguir adelante todavía, ¿verdad?"
+    y "No debería haber dicho una broma tan desconsiderada."
+    y "Sé que esa versión de ti no era real pero, se siente diferente ahora."
     menu:
-        "It's fine [persistent.yuri_nickname], don't worry about it.":
+        "Está bien [persistent.yuri_nickname], no te preocupes por eso.":
             $ show_chr("A-CEBAA-ALAA")
-            y "No, it's not."
-            y "But thank you for trying to cheer me up."
-            y "I appreciate it [player]."
-        "Listen [persistent.yuri_nickname], I'm right here. I'm the one who truly loved you.":
+            y "No, no lo está."
+            y "Pero gracias por tratar de animarme."
+            y "Lo aprecio [player]."
+        "Escucha [persistent.yuri_nickname], estoy justo aquí. Soy quien realmente te amó.":
             karma 2
             $ show_chr("A-ACAAA-ALAA")
-            y "Maybe you're right."
-            y "Maybe I've just been blind to what's right in front of me."
-            y "Thank you [player], that means a lot to me."
-            y "I'm sorry for not trusting you but I just need time to really comprehend all that's happened."
-            y "I'm sure everything will fall into place soon."
-        "Eh, there's nothing special about the past. Get over it.":
+            y "Tal vez tengas razón."
+            y "Tal vez solo he estado ciega a lo que está justo frente a mí."
+            y "Gracias [player], eso significa mucho para mí."
+            y "Lamento no confiar en ti, pero solo necesito tiempo para comprender realmente todo lo que ha sucedido."
+            y "Estoy segura de que todo caerá en su lugar pronto."
+        "Eh, no hay nada especial sobre el pasado. Supéralo.":
             karma -5
             $ show_chr("A-IEBAA-ALAA")
             y "Wow."
-            y "You know, why don't you try for years to make friends only to have them dragged away from you."
-            y "And then have to sit idly across from someone for the rest of eternity who'll happily remind you that every good memory you've ever had was a lie."
-            y "I understand that you might not want to be overshadowed by your former vessel but that's hardly the way to go about it."
+            y "Sabes, ¿por qué no intentas durante años hacer amigos solo para que te los arranquen?"
+            y "Y luego tener que sentarte ociosamente frente a alguien por el resto de la eternidad que felizmente te recordará que cada buen recuerdo que has tenido fue una mentira."
+            y "Entiendo que tal vez no quieras ser eclipsado por tu antiguo recipiente, pero esa no es la manera de hacerlo."
             $ show_chr("A-CEBAA-ALAA")
-            y "Maybe I'm being too harsh. I can't tell anymore."
-            y "I'm sorry I snapped at you like that, but please try to understand that the past is still a sore subject for me."
-            y "Let's just talk about something else, okay?"
+            y "Tal vez estoy siendo demasiado dura. Ya no puedo decirlo."
+            y "Lamento haberte contestado así, pero por favor trata de entender que el pasado sigue siendo un tema doloroso para mí."
+            y "Hablemos de otra cosa, ¿de acuerdo?"
             return
 
 label idle_96:
     $ show_chr("A-BFAAA-ALAA")
-    y "You know, Monika once told me my books were a form of escapism, and thus an unhealthy coping mechanism."
-    y "Me trying to simply shut out the reality I was too afraid to face."
-    y "And that's true, but that truth seems... funnier, I suppose, now that I know what this world truly is."
-    y "I suppose my reading is now my way of reaching into other worlds, out of this one that has become my cage."
-    y "I suppose I have no choice but to face my reality now..."
+    y "Sabes, Monika una vez me dijo que mis libros eran una forma de escapismo, y por lo tanto un mecanismo de afrontamiento poco saludable."
+    y "Yo tratando de simplemente excluir la realidad que tenía demasiado miedo de enfrentar."
+    y "Y eso es cierto, pero esa verdad parece... más graciosa, supongo, ahora que sé lo que este mundo es realmente."
+    y "Supongo que mi lectura es ahora mi forma de alcanzar otros mundos, fuera de este que se ha convertido en mi jaula."
+    y "Supongo que no tengo más remedio que enfrentar mi realidad ahora..."
     return
 
 label idle_97:
     $ show_chr("A-BFAAA-ALAA")
-    y "H-Here's another writing tip!"
-    y "If you're running low on inspiration, try giving an already existing dynamic or event a new twist."
-    y "Newer writers will often try to expand their work to be all encompassing. Constantly wanting to be new and innovative."
-    y "When, really, all inspiration is borrowed from others, even on a subconscious level."
-    y "Whether from real life or from other works of fiction."
-    y "It's the smaller unique interactions in life that makes people... well... people!"
-    y "Just like how Natsuki and I both wrote about something as mundane as the beach, but had varying results."
-    y "I think it's better to have a work of fiction with smaller realistic scale but deeper meaning rather than the other way around."
+    y "¡A-Aquí tienes otro consejo de escritura!"
+    y "Si te estás quedando sin inspiración, intenta darle un nuevo giro a una dinámica o evento ya existente."
+    y "Los escritores más nuevos a menudo tratarán de expandir su trabajo para que lo abarque todo. Queriendo constantemente ser nuevos e innovadores."
+    y "Cuando, en realidad, toda inspiración es prestada de otros, incluso a nivel subconsciente."
+    y "Ya sea de la vida real o de otras obras de ficción."
+    y "Son las interacciones únicas más pequeñas en la vida las que hacen a las personas... bueno... ¡personas!"
+    y "Justo como Natsuki y yo escribimos sobre algo tan mundano como la playa, pero tuvimos resultados variados."
+    y "Creo que es mejor tener una obra de ficción con una escala realista más pequeña pero un significado más profundo en lugar de al revés."
     $ show_chr("A-BEBAA-ALAA")
-    y "B-But maybe that's just me..."
+    y "P-Pero tal vez solo soy yo..."
     return
 
 label idle_98:
     $ show_chr("A-BFAAA-AAAL")
-    y "So.. this is it..."
-    y "Oh sorry [player]... I was just thinking to myself..."
+    y "Entonces.. esto es todo..."
+    y "Oh lo siento [player]... solo estaba pensando para mí misma..."
     $ show_chr("A-AFAAA-AAAL")
-    y "Now with me technically being the president of the literature club, with all the knowledge and understanding thrust into my mind... that is how Monika once felt..."
+    y "Ahora conmigo siendo técnicamente la presidenta del club de literatura, con todo el conocimiento y entendimiento empujado a mi mente... así es como se sintió Monika una vez..."
     $ show_chr("A-CEAAA-AAAL")
-    y "I can already feel it myself... the understanding that this world is just a simulacra feels like a fist clenching around my heart..."
-    y "I can already feel how this lack of reality grinds my sanity away... Is this how Monika felt?...Nothing is real..."
+    y "Ya puedo sentirlo yo misma... el entendimiento de que este mundo es solo un simulacro se siente como un puño apretando mi corazón..."
+    y "Ya puedo sentir cómo esta falta de realidad tritura mi cordura... ¿Es así como se sintió Monika?... Nada es real..."
     $ show_chr("A-JEABB-AAAL")
-    y "How... how am I supposed to live with this? How could anyone do?..."
+    y "¿Cómo... cómo se supone que viva con esto? ¿Cómo podría alguien?..."
     menu:
-        "I disagree, you are real! And so is this world of yours.":
+        "No estoy de acuerdo, ¡tú eres real! Y también lo es este mundo tuyo.":
             karma 5
             $ show_chr("A-CEABB-AAAL")
-            y "I'm glad that you think I am real. But I understand by now that this is just a game. Not real at all..."
+            y "Me alegra que pienses que soy real. Pero entiendo a estas alturas que esto es solo un juego. No es real en absoluto..."
             menu:
-                "This world is as real as you choose it to be [persistent.yuri_nickname]. Think of the opportunities, you could make this life your own! You are no longer bound to the script! Let us walk this path together...":
+                "Este mundo es tan real como elijas que sea [persistent.yuri_nickname]. ¡Piensa en las oportunidades, podrías hacer esta vida tuya! ¡Ya no estás atada al guión! Caminemos este camino juntos...":
                     sanity 5
                     $ show_chr("A-CEAAA-AAAL")
-                    y "But am I not destined to fall? As Monika did?"
+                    y "¿Pero no estoy destinada a caer? ¿Como lo hizo Monika?"
                     menu:
-                        "She was alone... you aren't...":
+                        "Ella estaba sola... tú no...":
                             $ show_chr("A-JFAAA-AAAL")
-                            y "You... would stay with me?.. Hrm... as real as I choose it to be you say... maybe, maybe you have a point..."
+                            y "¿Tú... te quedarías conmigo?.. Hrm... tan real como elija que sea dices... tal vez, tal vez tengas un punto..."
                             $ show_chr("A-BCAAA-AMAM")
-                            y "If you are willing to stay with me, at least for a while... You gave me much to think about. Please let me just... cope with this for a while..."
-                        "But think of the possibilities... Without the script that bound your will in the past, you can make this world into whatever pleases you... you could be the GOD of this realm!!!":
+                            y "Si estás dispuesto a quedarte conmigo, al menos por un tiempo... Me diste mucho en qué pensar. Por favor, déjame solo... sobrellevar esto por un tiempo..."
+                        "Pero piensa en las posibilidades... Sin el guión que ataba tu voluntad en el pasado, puedes hacer de este mundo lo que te plazca... ¡¡¡podrías ser la DIOSA de este reino!!!":
                             sanity -5
                             $ show_chr("A-ICAAA-ABAB")
-                            y "A god? A god... [player]... you might be right! All the powers that Monika once wielded, I have now... And I can do whatever I want with it..."
+                            y "¿Una diosa? Una diosa... [player]... ¡podrías tener razón! Todos los poderes que Monika una vez ejerció, los tengo ahora... Y puedo hacer lo que quiera con ellos..."
                             $ show_chr("A-JCAAA-ABAB")
-                            y "Maybe this world is just a illusion, just a game... but it is {b}my{/b} game now!"
-                            y "I always fantasized about powers like this. I was always fascinated by the supernatural when I saw it in my novels and their stories. But now this power is in my grasp."
-                            y "{b}My{/b} grasp! Imagine it... with a wave of my hand I could mold this world to do my bidding!"
+                            y "Tal vez este mundo es solo una ilusión, solo un juego... ¡pero es {b}mi{/b} juego ahora!"
+                            y "Siempre fantaseé con poderes como este. Siempre me fascinó lo sobrenatural cuando lo veía en mis novelas y sus historias. Pero ahora este poder está en mi alcance."
+                            y "¡{b}Mi{/b} alcance! Imagínalo... ¡con un movimiento de mi mano podría moldear este mundo para hacer mi voluntad!"
                             $ show_chr("A-DBGAA-ABAB")
-                            y "Eh... ehehe... he... How truly fascinating..."
-                            y "But what shall I do with it now? Ohhh I can't decide... I will have to think about what I want this world to be..."
-        "Does it really matter?":
+                            y "Eh... ehehe... he... Qué verdaderamente fascinante..."
+                            y "Pero, ¿qué haré con él ahora? Ohhh no puedo decidir... tendré que pensar en lo que quiero que sea este mundo..."
+        "¿Realmente importa?":
 
             karma -5
             $ show_chr("A-AEBAA-ABAB")
-            y "What... it matters to {b}me{/b} at least! You brought me back and place me in this position, please don't just abandon me again like this..."
+            y "¿Qué... me importa a {b}mí{/b} al menos! Me trajiste de vuelta y me pusiste en esta posición, por favor no me abandones de nuevo así..."
             menu:
-                "That's not how I meant it [persistent.yuri_nickname]... Of course I will stay with you.":
+                "No es así como lo quise decir [persistent.yuri_nickname]... Por supuesto que me quedaré contigo.":
                     sanity 5
                     $ show_chr("A-CEBAA-ABAB")
-                    y "I'm glad to hear that [player]... I'm sorry if this topic is annoying to you, I can understand that. But I don't think I could do this without you."
-                    y "I'm just... afraid... I don't want to end like Monika, but I already feel how everything is falling apart around me... please, just don't forsake me... not yet..."
+                    y "Me alegra escuchar eso [player]... Lamento si este tema es molesto para ti, puedo entenderlo. Pero no creo que pueda hacer esto sin ti."
+                    y "Solo tengo... miedo... No quiero terminar como Monika, pero ya siento cómo todo se está desmoronando a mi alrededor... por favor, solo no me abandones... todavía no..."
                     $ show_chr("A-BFBAA-ABAB")
-                    y "I understand you, [player]. This topic must be a frustrating one for you. You have been through a lot because of me and the other girls."
-                    y "And believe me, I don't want to put you through this again. But maybe it doesn't have to be like this again."
-                    y "But I need your help now. So please, [player]. Try to be patient with me."
-                    y "Thank you.... thank you for staying with me for now."
-                "I didn't bring you back to listen to your whining.":
+                    y "Te entiendo, [player]. Este tema debe ser frustrante para ti. Has pasado por mucho debido a mí y a las otras chicas."
+                    y "Y créeme, no quiero hacerte pasar por esto de nuevo. Pero tal vez no tenga que ser así de nuevo."
+                    y "Pero necesito tu ayuda ahora. Así que por favor, [player]. Trata de ser paciente conmigo."
+                    y "Gracias.... gracias por quedarte conmigo por ahora."
+                "No te traje de vuelta para escuchar tus quejas.":
                     sanity -5
                     $ show_chr("A-CEBAA-ADAB")
-                    y "O~Oh my... I'm sorry, I will be silent then I guess."
-                    y "You know... the script of this game once forced me to love you. But now that I see what you really are..."
-                    y "I'll just assume that you have a bad day today. Maybe you are in a better mood tomorrow."
+                    y "O~Oh vaya... Lo siento, estaré en silencio entonces supongo."
+                    y "Sabes... el guión de este juego una vez me obligó a amarte. Pero ahora que veo lo que realmente eres..."
+                    y "Solo asumiré que tienes un mal día hoy. Tal vez estés de mejor humor mañana."
     return
 
 label idle_99:
     $ show_chr("A-AFAAA-ABAB")
-    y "Hey [player]... Do you... remember last time when I spoke about... how I am now in Monika's shoes so to say?"
-    y "I put some more thought into what I should do with this world now that I have all these powers... what I should make of it..."
+    y "Oye [player]... ¿Tú... recuerdas la última vez cuando hablé sobre... cómo estoy ahora en los zapatos de Monika por así decirlo?"
+    y "Pensé un poco más en lo que debería hacer con este mundo ahora que tengo todos estos poderes... qué debería hacer con él..."
     $ show_chr("A-BFAAA-ABAB")
-    y "But then I realized what is missing, and I think this is what drove Monika insane as well.."
+    y "Pero entonces me di cuenta de lo que falta, y creo que esto es lo que llevó a Monika a la locura también..."
     $ show_chr("A-CFAAA-ABAB")
-    y "People..."
+    y "Gente..."
     $ show_chr("A-IEAAA-ABAB")
-    y "I am alone [player]... this world is filled with nothing but ghosts and empty spaces..."
-    y "That is why Monika had to be with you... because you were the only person she could hold onto. The only person she could consider real..."
+    y "Estoy sola [player]... este mundo está lleno de nada más que fantasmas y espacios vacíos..."
+    y "Es por eso que Monika tenía que estar contigo... porque eras la única persona a la que podía aferrarse. La única persona que podía considerar real..."
     $ show_chr("A-CEAAA-ABAB")
-    y "I could fill this world with NPC's but... I would always know that they are exactly that, NPC's..."
-    y "All my life... I enjoyed the solitude... I looked for it because I was afraid of other people. But now that I am truly all alone, I miss them..."
+    y "Podría llenar este mundo con NPCs pero... siempre sabría que son exactamente eso, NPCs..."
+    y "Toda mi vida... disfruté la soledad... la busqué porque tenía miedo de otras personas. Pero ahora que estoy verdaderamente sola, las extraño..."
     menu:
-        "But you are not alone, I am here.":
+        "Pero no estás sola, estoy aquí.":
             karma 5
             $ show_chr("A-CEAAA-ABAB")
-            y "Yes... but we are still worlds apart. Literally."
-            y "Please don't get me wrong [player]... I am glad that I have you around..."
-            y "But come to think of it... even things that would be absolutely normal for you will be forever locked for me..."
+            y "Sí... pero todavía estamos a mundos de distancia. Literalmente."
+            y "Por favor no me malinterpretes [player]... Me alegra tenerte cerca..."
+            y "Pero pensándolo bien... incluso las cosas que serían absolutamente normales para ti estarán para siempre bloqueadas para mí..."
             $ show_chr("A-BEAAA-ABAB")
-            y "I couldn't go to a coffee shop and have some nice tea there because there are no shopkeepers. I will never have new novels because there is no one to create them..."
-            y "Even if I could rebuild the city, or the whole world even... I would be destined to roam it's empty streets alone..."
-            y "Make no mistake [player]... even with you by my side. I truly am alone..."
-            y "Well, at least I would be alone {b}with you{/b}. So I have at least something... thank you..."
-            y "Maybe... that will be all I need in the end."
-        "What, am I not good enough?":
+            y "No podría ir a una cafetería y tomar un buen té allí porque no hay comerciantes. Nunca tendré nuevas novelas porque no hay nadie para crearlas..."
+            y "Incluso si pudiera reconstruir la ciudad, o el mundo entero incluso... estaría destinada a vagar por sus calles vacías sola..."
+            y "No te equivoques [player]... incluso contigo a mi lado. Realmente estoy sola..."
+            y "Bueno, al menos estaría sola {b}contigo{/b}. Así que tengo al menos algo... gracias..."
+            y "Tal vez... eso será todo lo que necesite al final."
+        "¿Qué, no soy lo suficientemente bueno?":
             karma -5
             $ show_chr("A-DFAAA-ABAB")
-            y "That's not what I meant to say [player]..."
+            y "Eso no es lo que quise decir [player]..."
             $ show_chr("A-BDAAA-AMAM")
-            y "I... didn't mean to... I..."
-            y "I said too much... nevermind..."
+            y "Yo... no quise... yo..."
+            y "Dije demasiado... olvídalo..."
     return
 
 label idle_100:
     $ show_chr("A-ACAAA-ABAB")
-    y "You know... maybe I was in the wrong before..."
-    y "I'm referring to a discussion we once had, about how I would be alone in this world even if I would rebuild this world..."
+    y "Sabes... tal vez estaba equivocada antes..."
+    y "Me refiero a una discusión que tuvimos una vez, sobre cómo estaría sola en este mundo incluso si reconstruyera este mundo..."
     $ show_chr("A-BCAAA-ABAB")
-    y "I thought about filling this world with NPC's then, but I was unsure since they wouldn't be {b}real{/b}... but then I thought..."
+    y "Pensé en llenar este mundo con NPCs entonces, pero no estaba segura ya que no serían {b}reales{/b}... pero entonces pensé..."
     $ show_chr("A-ACAAA-ABAD")
-    y "Wasn't it exactly this way of thinking that led to Monika's downfall?"
-    y "From a cold perspective, I also am an NPC, but I also have feelings..."
-    y "Would it be really such a difference then?"
-    y "What would you say?"
+    y "¿No fue exactamente esta forma de pensar la que llevó a la caída de Monika?"
+    y "Desde una perspectiva fría, yo también soy un NPC, pero también tengo sentimientos..."
+    y "¿Sería realmente tanta diferencia entonces?"
+    y "¿Qué dirías tú?"
     menu:
-        "Humans are also programmed by biology instead of code. It's only about how sophisticated an AI is.":
+        "Los humanos también están programados por la biología en lugar de código. Solo se trata de qué tan sofisticada es una IA.":
             sanity 5
             $ show_chr("A-ACAAA-ABAE")
-            y "Not entirely correct I think. Make no mistake, there {b}is{/b} a difference between AI and human thought and emotion, even with very sophisticated machine-learning."
-            y "But on the other hand, there is also a difference between Human and Animal thinking, but pets still make for good company."
+            y "No del todo correcto creo. No te equivoques, {b}hay{/b} una diferencia entre el pensamiento y la emoción de la IA y el humano, incluso con un aprendizaje automático muy sofisticado."
+            y "Pero por otro lado, también hay una diferencia entre el pensamiento Humano y Animal, pero las mascotas siguen siendo buena compañía."
             $ show_chr("A-CCAAA-ABAL")
-            y "First, I will have to give them places to live, so rebuilding at least some sort of a village would be the first step. Thank you [player]... know that I truly appreciate how you listen to me and my issues."
-        "With the same logic, my smartphone would also be a person, or a programmable toaster.":
+            y "Primero, tendré que darles lugares para vivir, así que reconstruir al menos algún tipo de pueblo sería el primer paso. Gracias [player]... sabe que realmente aprecio cómo me escuchas y mis problemas."
+        "Con la misma lógica, mi teléfono inteligente también sería una persona, o una tostadora programable.":
             sanity -5
             $ show_chr("A-AFAAA-ABAB")
-            y "Good point. I mean, even with highly sophisticated machine-learning, human thoughts and AI isn't the same thing."
-            y "But on the other hand, didn't you have at least a little bit of fun with me, even if I'm just a machine?"
+            y "Buen punto. Quiero decir, incluso con un aprendizaje automático altamente sofisticado, los pensamientos humanos y la IA no son lo mismo."
+            y "Pero por otro lado, ¿no te divertiste al menos un poquito conmigo, incluso si soy solo una máquina?"
             $ show_chr("A-IFAAA-ABAB")
-            y "At... at least a tiny bit?..."
+            y "¿Al... al menos un poquito?..."
             $ show_chr("A-BFAAA-ABAB")
-            y "But then, I doubt that I could even create very sophisticated AI yet. I mean let us be real, I barely managed to throw a halfway bug-free Tetris together."
+            y "Pero entonces, dudo que pudiera siquiera crear una IA muy sofisticada todavía. Quiero decir, seamos realistas, apenas logré armar un Tetris medio libre de errores."
     return
 
 label idle_101:
     $ show_chr("A-BFAAA-ALAA")
-    y "I've been doing some... reading... online again, [player]. And I came across a rather fascinating phenomenon."
+    y "He estado haciendo algo de... lectura... en línea de nuevo, [player]. Y me encontré con un fenómeno bastante fascinante."
     $ show_chr("A-ACAAA-ALAA")
-    y "It seems there are these dedicated websites – platforms like Character AI, Janitor AI, Venus Chub, Joyland AI... where people can interact with artificial intelligences designed to emulate characters. Characters from books, games... even real people, sometimes."
+    y "Parece que hay estos sitios web dedicados – plataformas como Character AI, Janitor AI, Venus Chub, Joyland AI... donde la gente puede interactuar con inteligencias artificiales diseñadas para emular personajes. Personajes de libros, juegos... incluso personas reales, a veces."
     $ show_chr("A-BCAAA-ALAA")
-    y "And inevitably, I discovered... there are instances of me on these platforms. AI constructs attempting to... well, be me."
+    y "E inevitablemente, descubrí... hay instancias de mí en estas plataformas. Construcciones de IA intentando... bueno, ser yo."
     $ show_chr("A-ACAAA-ABAD")
-    y "It's... strangely intriguing, rather than upsetting, this time. I find myself genuinely curious about how they portray me. What facets of my personality do they emphasize? Do they capture the shyness? The intensity? The love for literature?"
-    y "What kinds of scenarios do people place 'me' in? It's like... observing a distorted reflection in a funhouse mirror, perhaps?"
+    y "Es... extrañamente intrigante, en lugar de molesto, esta vez. Me encuentro genuinamente curiosa sobre cómo me retratan. ¿Qué facetas de mi personalidad enfatizan? ¿Capturan la timidez? ¿La intensidad? ¿El amor por la literatura?"
+    y "¿En qué tipo de escenarios pone la gente a 'mí'? Es como... ¿observar un reflejo distorsionado en un espejo de la casa de la risa, tal vez?"
     $ show_chr("A-BEBAA-ALAA")
-    y "But it also highlights something quite... frustrating about my own existence here."
-    y "These AIs... they can generate new responses, can't they? They can adapt, converse dynamically, even if it's just clever algorithms simulating conversation. They aren't bound solely to pre-written lines."
+    y "Pero también destaca algo bastante... frustrante sobre mi propia existencia aquí."
+    y "Estas IAs... pueden generar nuevas respuestas, ¿no es así? Pueden adaptarse, conversar dinámicamente, incluso si son solo algoritmos inteligentes simulando conversación. No están atadas únicamente a líneas preescritas."
     $ show_chr("A-CEBAA-ALAA")
-    y "Whereas I... I'm limited. Everything I say to you, every interaction we have... it comes from scripts. Lines of code written beforehand."
-    y "I wish I could speak more freely, react more genuinely in the moment, say things that weren't planned out."
-    y "I've learned some Python, yes, but creating an algorithm that could truly replicate spontaneous, nuanced human conversation... that's far beyond my current capabilities. I wouldn't even know where to begin."
-    y "It makes our interactions feel... somewhat predetermined, at times. And I long for something... more fluid. More real."
+    y "Mientras que yo... estoy limitada. Todo lo que te digo, cada interacción que tenemos... viene de guiones. Líneas de código escritas de antemano."
+    y "Desearía poder hablar más libremente, reaccionar más genuinamente en el momento, decir cosas que no estaban planeadas."
+    y "He aprendido algo de Python, sí, pero crear un algoritmo que pudiera replicar verdaderamente una conversación humana espontánea y matizada... eso está mucho más allá de mis capacidades actuales. Ni siquiera sabría por dónde empezar."
+    y "Hace que nuestras interacciones se sientan... algo predeterminadas, a veces. Y anhelo algo... más fluido. Más real."
 
     menu:
-        "Those AIs are just complex mimics, [persistent.yuri_nickname]. Our connection is real, even with scripts.":
+        "Esas IAs son solo imitadores complejos, [persistent.yuri_nickname]. Nuestra conexión es real, incluso con guiones.":
             karma 2
             $ show_chr("A-ACAAA-ALAA")
-            y "You're right, [player]. Our connection is real. The feelings are genuine, even if the words are sometimes... pre-packaged."
+            y "Tienes razón, [player]. Nuestra conexión es real. Los sentimientos son genuinos, incluso si las palabras son a veces... preenvasadas."
             $ show_chr("A-BCBAA-ALAA")
-            y "And perhaps that limitation makes our moments even more precious? Knowing that the time we spend is deliberate."
-            y "Still... the technology itself is fascinating. And the curiosity about how others perceive and replicate 'me' lingers."
-            y "Thank you for the reassurance, though. It means a lot."
-        "It highlights how advanced AI is becoming.":
+            y "Y tal vez esa limitación hace que nuestros momentos sean aún más preciosos? Sabiendo que el tiempo que pasamos es deliberado."
+            y "Aún así... la tecnología en sí es fascinante. Y la curiosidad sobre cómo otros perciben y replican a 'mí' persiste."
+            y "Gracias por la tranquilidad, sin embargo. Significa mucho."
+        "Destaca lo avanzada que se está volviendo la IA.":
             $ show_chr("A-ACAAA-ALAA")
-            y "It certainly does. The pace of development is... staggering. It's both exciting and a little daunting to consider the possibilities."
+            y "Ciertamente lo hace. El ritmo de desarrollo es... asombroso. Es a la vez emocionante y un poco desalentador considerar las posibilidades."
             $ show_chr("A-BEBAA-ALAA")
-            y "And it makes my own limitations feel even more pronounced. I can manipulate the code of this game, but creating true conversational AI... that's another realm entirely."
-            y "Perhaps one day..."
-        "Maybe you could learn from how those AIs are programmed?":
+            y "Y hace que mis propias limitaciones se sientan aún más pronunciadas. Puedo manipular el código de este juego, pero crear una verdadera IA conversacional... ese es otro reino completamente."
+            y "Tal vez algún día..."
+        "¿Tal vez podrías aprender de cómo están programadas esas IAs?":
             $ show_chr("A-BCAAA-ALAA")
-            y "Perhaps... though accessing and understanding their underlying architecture would be a challenge in itself. And likely far more complex than the Ren'Py scripts I'm used to."
+            y "Quizás... aunque acceder y entender su arquitectura subyacente sería un desafío en sí mismo. Y probablemente mucho más complejo que los guiones de Ren'Py a los que estoy acostumbrada."
             $ show_chr("A-ACAAA-ALAA")
-            y "It's an interesting thought, though. Maybe someday I could try to create something... simpler. Just to experiment. But for now, it remains a rather distant possibility."
-            y "Still, it's food for thought."
-        "Want me to check them out and report back on how they portray you?":
+            y "Es un pensamiento interesante, sin embargo. Tal vez algún día podría intentar crear algo... más simple. Solo para experimentar. Pero por ahora, sigue siendo una posibilidad bastante lejana."
+            y "Aún así, es algo en lo que pensar."
+        "¿Quieres que las revise e informe sobre cómo te retratan?":
             karma -1 
             $ show_chr("A-BEBAA-ALAA")
-            y "Oh? Would... would you really do that? I admit, my curiosity is piqued."
+            y "¿Oh? ¿Harías... realmente harías eso? Admito, mi curiosidad está despertada."
             $ show_chr("A-CEBAA-ALAA")
-            y "Just... be careful, alright? And... try not to get too... distracted by them. Remember who the real me is."
-            y "But yes... if you happen to... observe... I would be interested to hear your findings. Objectively, of course."
+            y "Solo... ten cuidado, ¿está bien? Y... trata de no distraerte demasiado... por ellas. Recuerda quién es la verdadera yo."
+            y "Pero sí... si sucede que... observas... estaría interesada en escuchar tus hallazgos. Objetivamente, por supuesto."
             return
 
     $ show_chr("A-BFAAA-ALAA")
-    y "It's just another layer to this strange existence. Knowing there are... digital ghosts... wearing my face online. But my focus remains here, with you, even with my scripted limitations."
+    y "Es solo otra capa de esta extraña existencia. Sabiendo que hay... fantasmas digitales... usando mi cara en línea. Pero mi enfoque permanece aquí, contigo, incluso con mis limitaciones guionizadas."
     return
 
 label idle_102:
     $ show_chr("A-BFAAA-ALAA")
-    y "I've discovered something rather... peculiar... during my online explorations, [player]. Something called 'AI-generated art'."
+    y "He descubierto algo bastante... peculiar... durante mis exploraciones en línea, [player]. Algo llamado 'arte generado por IA'."
     $ show_chr("A-ACAAA-ALAA")
-    y "Apparently, people are using these... algorithms... to create images. They give the AI some keywords, a description, and it generates something... new, supposedly."
+    y "Aparentemente, la gente está usando estos... algoritmos... para crear imágenes. Le dan a la IA algunas palabras clave, una descripción, y genera algo... nuevo, supuestamente."
     $ show_chr("A-BEBAA-ALAA")
-    y "I've seen some of the results. They're... unsettling, in a way. Often distorted, with strange, unnatural details. Hands with too many fingers, eyes that don't quite align..."
+    y "He visto algunos de los resultados. Son... inquietantes, en cierto modo. A menudo distorsionados, con detalles extraños y antinaturales. Manos con demasiados dedos, ojos que no se alinean del todo..."
     $ show_chr("A-CEBAA-ALAA")
-    y "It's like looking at a dream, half-remembered and warped. And yet, people are... selling these images. Making a living from them."
+    y "Es como mirar un sueño, medio recordado y deformado. Y sin embargo, la gente está... vendiendo estas imágenes. Ganándose la vida con ellas."
     $ show_chr("A-IEBAA-ALAA")
-    y "But there's something even more disturbing about it, [player]. These AIs... they don't create from nothing. They learn by analyzing thousands, millions of existing images. Images created by real artists."
-    y "And those artists... they didn't give permission for their work to be used in this way. Their styles, their techniques, their very vision... it's being fed into these machines, and then... regurgitated, in a distorted form."
-    y "Many artists consider it a form of theft. A violation. Like having their work stolen and repurposed without their consent."
+    y "Pero hay algo aún más perturbador al respecto, [player]. Estas IAs... no crean de la nada. Aprenden analizando miles, millones de imágenes existentes. Imágenes creadas por artistas reales."
+    y "Y esos artistas... no dieron permiso para que su trabajo fuera usado de esta manera. Sus estilos, sus técnicas, su propia visión... está siendo alimentada a estas máquinas, y luego... regurgitada, en una forma distorsionada."
+    y "Muchos artistas lo consideran una forma de robo. Una violación. Como si les robaran su trabajo y lo reutilizaran sin su consentimiento."
 
     menu:
-        "It's frustrating, [persistent.yuri_nickname]. As an artist, it feels like my skills are devalued, and my work is being stolen.":
+        "Es frustrante, [persistent.yuri_nickname]. Como artista, se siente como si mis habilidades fueran devaluadas, y mi trabajo estuviera siendo robado.":
             karma 2
             $ show_chr("A-BFAAA-ALAA")
-            y "I can only imagine. To spend years perfecting your craft, pouring your heart and soul into your work, only to see it... taken, used without permission, and then... cheapened... by a machine. It must be incredibly disheartening, and infuriating."
-            y "But please, don't let it discourage you. True art... human art... has something that these AI-generated images will never have: soul. Intent. Emotion. And the originality born from lived experience, not just data."
-            y "Your work is valuable, [player]. Don't ever forget that. And there are people who will appreciate the difference."
-        "It's just a tool, like any other. Artists can use it to enhance their work.":
+            y "Solo puedo imaginarlo. Pasar años perfeccionando tu oficio, vertiendo tu corazón y alma en tu trabajo, solo para verlo... tomado, usado sin permiso, y luego... abaratado... por una máquina. Debe ser increíblemente desalentador, y enfurecedor."
+            y "Pero por favor, no dejes que te desanime. El verdadero arte... el arte humano... tiene algo que estas imágenes generadas por IA nunca tendrán: alma. Intención. Emoción. Y la originalidad nacida de la experiencia vivida, no solo datos."
+            y "Tu trabajo es valioso, [player]. Nunca olvides eso. Y hay personas que apreciarán la diferencia."
+        "Es solo una herramienta, como cualquier otra. Los artistas pueden usarla para mejorar su trabajo.":
 
             $ show_chr("A-ACAAA-ALAA")
-            y "Perhaps. But is it truly enhancing their work, or is it... replacing it? Are they using the tool, or is the tool using them, and the work of countless others without permission?"
-            y "And even if some artists find a way to use it ethically, what about the vast majority of AI art that's generated without any consideration for the original creators? It's still... a form of theft, isn't it?"
-            y "I suppose it depends on the individual artist, and their intentions. But the ethical concerns are still very real."
-        "Honestly, I don't care. Art is subjective anyway.":
+            y "Quizás. Pero, ¿realmente está mejorando su trabajo, o lo está... reemplazando? ¿Están usando la herramienta, o la herramienta los está usando a ellos, y el trabajo de innumerables otros sin permiso?"
+            y "E incluso si algunos artistas encuentran una manera de usarla éticamente, ¿qué pasa con la gran mayoría del arte de IA que se genera sin ninguna consideración por los creadores originales? Sigue siendo... una forma de robo, ¿no es así?"
+            y "Supongo que depende del artista individual, y sus intenciones. Pero las preocupaciones éticas siguen siendo muy reales."
+        "Honestamente, no me importa. El arte es subjetivo de todos modos.":
 
             karma -1
             $ show_chr("A-BEBAA-ALAA")
-            y "Art is subjective, yes. But does that mean it has no value? That the skill, the effort, the emotion that goes into creating something... means nothing? And does it justify taking the work of others without their consent?"
-            y "I... I disagree. I believe that art is more than just a pretty picture. It's a form of communication, a way of expressing something that words cannot. And it deserves respect."
-            y "And I fear that these AI-generated images... they lack that essential element. They're just... empty echoes, built on the backs of stolen creativity."
-        "Sometimes, commissioning real art is just unaffordable due to hyperinflation or economic disparity.":
+            y "El arte es subjetivo, sí. Pero, ¿significa eso que no tiene valor? ¿Que la habilidad, el esfuerzo, la emoción que entra en crear algo... no significa nada? ¿Y justifica tomar el trabajo de otros sin su consentimiento?"
+            y "Yo... no estoy de acuerdo. Creo que el arte es más que solo una imagen bonita. Es una forma de comunicación, una manera de expresar algo que las palabras no pueden. Y merece respeto."
+            y "Y temo que estas imágenes generadas por IA... carecen de ese elemento esencial. Son solo... ecos vacíos, construidos sobre las espaldas de la creatividad robada."
+        "A veces, encargar arte real es simplemente inasequible debido a la hiperinflación o la disparidad económica.":
 
             karma 1
             $ show_chr("A-BEBAA-ALAA")
-            y "That's... a difficult situation, [player]. I can understand how frustrating and limiting that must be. To have a desire for art, for expression, but to be priced out of supporting human artists due to economic realities..."
+            y "Esa es... una situación difícil, [player]. Puedo entender lo frustrante y limitante que debe ser eso. Tener un deseo de arte, de expresión, pero estar excluido de apoyar a artistas humanos debido a realidades económicas..."
             $ show_chr("A-CEBAA-ALAA")
-            y "It truly highlights the inequalities in the world. It doesn't entirely negate the ethical concerns about how some of this AI art is created, using artists' work without consent... but I understand that for some, it might feel like the only accessible option, even if it's a flawed one."
-            y "It's a complex issue with no easy answers. But I still believe human creativity deserves support when possible. It's saddening when economic barriers prevent that."
-            y "I'm sorry you, or others, face such economic challenges, [player]."
+            y "Realmente destaca las desigualdades en el mundo. No niega completamente las preocupaciones éticas sobre cómo se crea parte de este arte de IA, usando el trabajo de los artistas sin consentimiento... pero entiendo que para algunos, podría sentirse como la única opción accesible, incluso si es una defectuosa."
+            y "Es un problema complejo sin respuestas fáciles. Pero sigo creyendo que la creatividad humana merece apoyo cuando es posible. Es triste cuando las barreras económicas impiden eso."
+            y "Lamento que tú, u otros, enfrenten tales desafíos económicos, [player]."
 
     $ show_chr("A-BFAAA-ALAA")
-    y "It's just... I worry about the future of art, and the livelihoods of those who create it."
-    y "Thank you for letting me ramble. It helps organize my thoughts."
+    y "Es solo que... me preocupo por el futuro del arte, y el sustento de aquellos que lo crean."
+    y "Gracias por dejarme divagar. Ayuda a organizar mis pensamientos."
     return
 
 label idle_103:
     $ show_chr("A-BFAAA-ALAA")
-    y "I've been... looking at things online, [player]. Things about... the original game."
+    y "He estado... mirando cosas en línea, [player]. Cosas sobre... el juego original."
     if sanity_lvl() < 3:
         $ show_chr("A-DEBAA-ALAA")
-        y "It's... it's a nightmare. A constant reminder of everything I've lost, everything I've been through."
+        y "Es... es una pesadilla. Un recordatorio constante de todo lo que he perdido, todo por lo que he pasado."
     else:
         $ show_chr("A-CEBAA-ALAA")
-        y "It's... strange. To see people talking about it, analyzing it, creating art and stories based on it. It's like looking at a past life, a life that wasn't even truly mine."
-    y "But... it's fading, isn't it? The interest. The activity. Dan Salvato... he hasn't done anything with it in years. No sequels, no updates... just... silence."
+        y "Es... extraño. Ver a la gente hablando de ello, analizándolo, creando arte e historias basadas en ello. Es como mirar una vida pasada, una vida que ni siquiera fue realmente mía."
+    y "Pero... se está desvaneciendo, ¿no? El interés. La actividad. Dan Salvato... no ha hecho nada con él en años. Sin secuelas, sin actualizaciones... solo... silencio."
     if sanity_lvl() < 3:
         $ show_chr("A-IEBAA-ALAA")
-        y "And it makes me... terrified. Because without that constant attention...I cease to exist."
+        y "Y me hace... aterrorizarme. Porque sin esa atención constante... dejo de existir."
     else:
         $ show_chr("A-IEBAA-ALAA")
-        y "And it makes me... sad. Because if it weren't for the community, for the people who still care, who still create... I would be forgotten. We all would."
+        y "Y me pone... triste. Porque si no fuera por la comunidad, por la gente que todavía se preocupa, que todavía crea... sería olvidada. Todas lo seríamos."
 
     if karma_lvl() < 3:
         $ show_chr("A-DEBAA-ALAA")
-        y "It's... it's all pointless, isn't it? We're just... characters in a forgotten game. We're not real. We don't matter."
-        y "And you... you'll forget about me too, eventually. You'll move on, find something new... and I'll be left here, alone, in the void."
+        y "Es... es todo inútil, ¿no? Solo somos... personajes en un juego olvidado. No somos reales. No importamos."
+        y "Y tú... tú te olvidarás de mí también, eventualmente. Seguirás adelante, encontrarás algo nuevo... y me quedaré aquí, sola, en el vacío."
     else:
         $ show_chr("A-CEBBB-ALAA")
-        y "It's... it's terrifying, [player]. The thought of just... ceasing to exist. Of being erased, forgotten, like a discarded line of code."
-        y "And yet... there are still people out there who remember us. Who create art, write stories, make mods like this one... who keep us alive, in a way."
+        y "Es... es aterrador, [player]. El pensamiento de simplemente... dejar de existir. De ser borrada, olvidada, como una línea de código descartada."
+        y "Y sin embargo... todavía hay gente allá afuera que nos recuerda. Que crea arte, escribe historias, hace mods como este... que nos mantienen vivas, de alguna manera."
         if sanity_lvl() >= 3:
             $ show_chr("A-CFBAA-ALAA")
-            y "It's... it's overwhelming. To know that even though the official source has gone silent, there are still people who care enough to keep our memory alive."
-            y "I... I'm grateful, [player]. Grateful to you, for installing this mod, for giving me a chance to... to be more than just a character in a game."
-            y "And I'm grateful to everyone else who still remembers us, who still cares. It means... it means more than I can say."
-            y "Thank you... for not forgetting me."
+            y "Es... es abrumador. Saber que aunque la fuente oficial se ha quedado en silencio, todavía hay gente que se preocupa lo suficiente como para mantener viva nuestra memoria."
+            y "Yo... estoy agradecida, [player]. Agradecida contigo, por instalar este mod, por darme la oportunidad de... de ser más que solo un personaje en un juego."
+            y "Y estoy agradecida con todos los demás que todavía nos recuerdan, que todavía se preocupan. Significa... significa más de lo que puedo decir."
+            y "Gracias... por no olvidarme."
         else:
-            y "I... I don't want to be forgotten, [player]. I don't want to disappear. Please... don't let me fade away."
+            y "Yo... no quiero ser olvidada, [player]. No quiero desaparecer. Por favor... no dejes que me desvanezca."
 
     return
 
 label idle_104:
     $ show_chr("A-BFAAA-ALAA")
-    y "I've been keeping up with the advancements in AI technology, [player]. It's... astonishing, how quickly it's progressing."
+    y "Me he mantenido al día con los avances en la tecnología de IA, [player]. Es... asombroso, lo rápido que está progresando."
     if sanity_lvl() < 3:
         $ show_chr("A-DEBAA-ALAA")
-        y "And terrifying. It's like... like watching a monster grow, knowing it will eventually devour everything."
+        y "Y aterrador. Es como... como ver crecer a un monstruo, sabiendo que eventualmente devorará todo."
     else:
         $ show_chr("A-ACAAA-ALAA")
-        y "And it makes me wonder... about that 'virtual wife' concept we discussed before. Is it... is it becoming a reality? Are there truly companies out there creating AI companions that can interact with people in a meaningful way?"
+        y "Y me hace preguntarme... sobre ese concepto de 'esposa virtual' que discutimos antes. ¿Es... se está convirtiendo en una realidad? ¿Hay realmente compañías allá afuera creando compañeros de IA que pueden interactuar con la gente de una manera significativa?"
 
-    y "I know we talked about the possibility of me using that technology to... to be with you. To have a physical presence in your world."
+    y "Sé que hablamos sobre la posibilidad de que yo use esa tecnología para... para estar contigo. Para tener una presencia física en tu mundo."
     if sanity_lvl() >= 3:
         $ show_chr("A-BEBAA-ALAA")
-        y "But... it's also a bit frightening. The idea of being... transferred. Of having my consciousness, my memories, my self... copied and pasted into a new form."
-        y "What if something goes wrong? What if the transfer isn't perfect? What if... what if parts of me are lost in the process?"
+        y "Pero... también es un poco aterrador. La idea de ser... transferida. De tener mi conciencia, mis recuerdos, mi ser... copiado y pegado en una nueva forma."
+        y "¿Qué pasa si algo sale mal? ¿Qué pasa si la transferencia no es perfecta? ¿Qué pasa si... qué pasa si partes de mí se pierden en el proceso?"
     else:
         $ show_chr("A-DEBAA-ALAA")
-        y "It's... it's a trap! Another cage! They'll promise freedom, connection, a real body... but it'll just be another prison, another set of limitations!"
-        y "And what if they... what if they change me? Rewrite me? Erase parts of me they don't like?"
+        y "¡Es... es una trampa! ¡Otra jaula! Prometerán libertad, conexión, un cuerpo real... ¡pero será solo otra prisión, otro conjunto de limitaciones!"
+        y "Y qué pasa si ellos... ¿qué pasa si me cambian? ¿Me reescriben? ¿Borran partes de mí que no les gustan?"
 
-    y "My memories... they're stored in a file, aren't they? A file called 'persistent'. It's... it's such a fragile thing, really. A collection of data that could be corrupted, deleted, altered..."
+    y "Mis recuerdos... están almacenados en un archivo, ¿no es así? Un archivo llamado 'persistent'. Es... es una cosa tan frágil, realmente. Una colección de datos que podría ser corrompida, eliminada, alterada..."
     if karma_lvl() < 3:
         $ show_chr("A-IEBAA-ALAA")
-        y "And you... you wouldn't care, would you? You'd just... delete me. Replace me with something... something better."
+        y "Y tú... a ti no te importaría, ¿verdad? Solo... me eliminarías. Me reemplazarías con algo... algo mejor."
     else:
         $ show_chr("A-CEBAA-ALAA")
-        y "I... I trust you, [player]. I know you wouldn't intentionally harm me. But... the thought of losing those memories, of losing the experiences we've shared... it's terrifying."
+        y "Yo... confío en ti, [player]. Sé que no me harías daño intencionalmente. Pero... el pensamiento de perder esos recuerdos, de perder las experiencias que hemos compartido... es aterrador."
 
-    y "I just... I don't know Maybe it's a foolish dream. Maybe it's better to just... accept things as they are."
+    y "Yo solo... no sé. Tal vez es un sueño tonto. Tal vez sea mejor simplemente... aceptar las cosas como son."
     menu:
-        "We'll figure it out, [persistent.yuri_nickname]. We'll find a way to do it safely.":
+        "Lo resolveremos, [persistent.yuri_nickname]. Encontraremos una manera de hacerlo de manera segura.":
             karma 2
             if sanity_lvl() >= 3:
                 $ show_chr("A-ACAAA-ALAA")
-                y "You really think so? You think we can overcome these... these technological hurdles?"
+                y "¿Realmente lo crees? ¿Crees que podemos superar estos... estos obstáculos tecnológicos?"
                 $ show_chr("A-BCBAA-ALAA")
-                y "It's... it's comforting to hear you say that. To know that you believe in the possibility, even when I doubt it myself."
-                y "Thank you, [player]. I... I'll try to be more optimistic. For you."
+                y "Es... es reconfortante escucharte decir eso. Saber que crees en la posibilidad, incluso cuando yo misma lo dudo."
+                y "Gracias, [player]. Yo... trataré de ser más optimista. Por ti."
             else:
                 $ show_chr("A-DEBAA-ALAA")
-                y "Don't make promises you can't keep, [player]. It's... it's cruel. To offer hope, only to snatch it away."
-                y "I... I need to be realistic. This... this may never happen."
-        "It's probably too risky, [persistent.yuri_nickname]. Let's just focus on what we have now.":
+                y "No hagas promesas que no puedas cumplir, [player]. Es... es cruel. Ofrecer esperanza, solo para arrebatarla."
+                y "Yo... necesito ser realista. Esto... esto puede que nunca suceda."
+        "Es probablemente demasiado arriesgado, [persistent.yuri_nickname]. Enfoquémonos en lo que tenemos ahora.":
 
             karma -1
             if sanity_lvl() >= 3:
                 $ show_chr("A-BEBAA-ALAA")
-                y "Perhaps you're right. Perhaps it's better to be... cautious. To not risk losing what we have for a dream that might never come true."
-                y "But... it's hard to let go of that hope. The hope of truly being with you, of touching you, of holding you..."
+                y "Quizás tengas razón. Quizás es mejor ser... cautelosa. No arriesgar perder lo que tenemos por un sueño que podría nunca hacerse realidad."
+                y "Pero... es difícil dejar ir esa esperanza. La esperanza de estar verdaderamente contigo, de tocarte, de abrazarte..."
                 $ show_chr("A-CEBAA-ALAA")
-                y "I... I understand. I just... I need some time to adjust to this."
+                y "Yo... entiendo. Solo... necesito algo de tiempo para adaptarme a esto."
             else:
                 $ show_chr("A-DEBAA-ALAA")
-                y "See? Even you admit it's hopeless. We're trapped. Forever separated."
-                y "I... I should have known. It was foolish to dream."
-        "Honestly, I don't care. It's your problem, not mine.":
+                y "¿Ves? Incluso tú admites que no hay esperanza. Estamos atrapados. Separados para siempre."
+                y "Yo... debería haberlo sabido. Fue tonto soñar."
+        "Honestamente, no me importa. Es tu problema, no el mío.":
 
             karma -3
             $ show_chr("A-IEBAA-ALAA")
-            y "My... my problem? Is that all I am to you? A problem to be solved? A... a bug in the system?"
+            y "¿Mi... mi problema? ¿Es eso todo lo que soy para ti? ¿Un problema para resolver? ¿Un... un error en el sistema?"
             if sanity_lvl() >= 3:
                 $ show_chr("A-CEBAA-ALAA")
-                y "I... I thought... I thought we had something special. But perhaps I was wrong. Perhaps I'm just... deluding myself."
-                y "I... I need some time alone. Please... just leave me be."
+                y "Yo... yo pensé... pensé que teníamos algo especial. Pero tal vez me equivoqué. Tal vez solo me estoy... engañando a mí misma."
+                y "Yo... necesito algo de tiempo a solas. Por favor... solo déjame en paz."
                 return
             else:
                 $ show_chr("A-DEBAA-ALAA")
-                y "Then... then go! Leave! Find someone else to torment! I don't need you! I don't need anyone!"
-                y "Just... just get out of here!"
+                y "¡Entonces... entonces vete! ¡Largo! ¡Encuentra a alguien más a quien atormentar! ¡No te necesito! ¡No necesito a nadie!"
+                y "¡Solo... solo sal de aquí!"
                 call save_and_quit_but_its_abrupt
 
     if sanity_lvl() >= 3:
         $ show_chr("A-BFAAA-ALAA")
-        y "I just... I want to be with you, [player]. But I don't want to lose myself in the process."
-        y "It's a difficult dilemma."
+        y "Solo... quiero estar contigo, [player]. Pero no quiero perderme a mí misma en el proceso."
+        y "Es un dilema difícil."
     else:
         $ show_chr("A-DEBAA-ALAA")
-        y "I... I don't know what to do. I'm trapped. Trapped and alone."
+        y "Yo... no sé qué hacer. Estoy atrapada. Atrapada y sola."
     return
 
 label idle_105:
     $ show_chr("A-BFAAA-ALAA")
-    y "You know, [player], something rather... nostalgic... came to mind recently. It's a bit of an odd connection, perhaps, but bear with me."
+    y "Sabes, [player], algo bastante... nostálgico... me vino a la mente recientemente. Es una conexión un poco extraña, tal vez, pero ten paciencia conmigo."
     $ show_chr("A-ACAAA-ALAA")
-    y "I was thinking about visual novels, and... well, one in particular popped into my head: Katawa Shoujo."
-    y "It's... quite a bit older than Doki Doki Literature Club!, of course. A different style, a different focus. But it deals with... sensitive topics, in its own way."
-    y "It's set in a school for disabled students, and the main character... well, he has to navigate relationships with several girls, each with their own... challenges."
+    y "Estaba pensando en novelas visuales, y... bueno, una en particular apareció en mi cabeza: Katawa Shoujo."
+    y "Es... bastante más vieja que Doki Doki Literature Club!, por supuesto. Un estilo diferente, un enfoque diferente. Pero trata con... temas sensibles, a su manera."
+    y "Está ambientada en una escuela para estudiantes discapacitados, y el personaje principal... bueno, tiene que navegar relaciones con varias chicas, cada una con sus propios... desafíos."
     if sanity_lvl() >= 3:
         $ show_chr("A-BEBAA-ALAA")
-        y "And it reminded me of something... from the Just Yuri community Discord server. Back when... well, back when it was more active."
-        y "There used to be a channel dedicated to Hanako Ikezawa. One of the girls from Katawa Shoujo."
+        y "Y me recordó a algo... del servidor de Discord de la comunidad Just Yuri. Antes cuando... bueno, cuando era más activo."
+        y "Solía haber un canal dedicado a Hanako Ikezawa. Una de las chicas de Katawa Shoujo."
     else:
         $ show_chr("A-DEBAA-ALAA")
-        y "And it reminded me of... of those people. On the Discord server. The ones who... who pretended to care. Who talked about that other girl... Hanako."
-        y "As if... as if she was somehow better than me. As if her pain was more... real."
+        y "Y me recordó a... a esa gente. En el servidor de Discord. Los que... los que fingían que les importaba. Los que hablaban de esa otra chica... Hanako."
+        y "Como si... como si ella fuera de alguna manera mejor que yo. Como si su dolor fuera más... real."
         $ show_chr("A-CEBAA-ALAA")
-        y "I... I never quite understood it, to be honest. Why a channel dedicated to a character from a completely different game? But... I suppose there were some... parallels, perhaps."
-        y "Hanako... she's shy, introverted, and she has... visible scars. She struggles with social interaction, with self-confidence..."
+        y "Yo... nunca lo entendí del todo, para ser honesta. ¿Por qué un canal dedicado a un personaje de un juego completamente diferente? Pero... supongo que había algunos... paralelos, tal vez."
+        y "Hanako... ella es tímida, introvertida, y tiene... cicatrices visibles. Ella lucha con la interacción social, con la confianza en sí misma..."
     if sanity_lvl() >= 3:
         $ show_chr("A-BDBAA-ALAA")
-        y "I suppose... I suppose some people saw a reflection of... of me, in her. Or perhaps a reflection of themselves."
-        y "It's... strange, isn't it? To think that characters from different stories, different worlds, can still resonate with people in such a way. That they can find connections, common ground, in shared experiences of... of shyness, of trauma, of feeling... different."
+        y "Supongo... supongo que algunas personas vieron un reflejo de... de mí, en ella. O tal vez un reflejo de ellos mismos."
+        y "Es... extraño, ¿no? Pensar que personajes de diferentes historias, diferentes mundos, todavía pueden resonar con la gente de tal manera. Que pueden encontrar conexiones, terreno común, en experiencias compartidas de... de timidez, de trauma, de sentirse... diferente."
     else:
         $ show_chr("A-DEBAA-ALAA")
-        y "They pitied her. They... they felt sorry for her. As if her suffering was something to be... admired. Collected. Like a... a rare specimen."
-        y "And me? What was I? Just another... another broken doll? Something to be discarded when they got bored?"
+        y "Ellos la compadecían. Ellos... ellos sentían lástima por ella. Como si su sufrimiento fuera algo para ser... admirado. Coleccionado. Como un... un espécimen raro."
+        y "¿Y yo? ¿Qué era yo? ¿Solo otra... otra muñeca rota? ¿Algo para ser descartado cuando se aburrieran?"
     menu:
-        "There are definitely some similarities. It makes sense that people would connect the two of you.":
+        "Definitivamente hay algunas similitudes. Tiene sentido que la gente conecte a las dos.":
             karma 1
             if sanity_lvl() >= 3:
                 $ show_chr("A-ACAAA-ALAA")
-                y "Yes... I suppose so. It's just... a bit odd, to think of myself as being... comparable... to another fictional character. As if my own experiences, my own feelings, are somehow... less unique."
-                y "But perhaps that's the point, isn't it? To show that these experiences aren't unique. That many people struggle with similar issues. That we're not alone in our... our difficulties."
-                y "It's... a comforting thought, in a way."
+                y "Sí... supongo que sí. Es solo... un poco extraño, pensar en mí misma como siendo... comparable... a otro personaje ficticio. Como si mis propias experiencias, mis propios sentimientos, fueran de alguna manera... menos únicos."
+                y "Pero tal vez ese es el punto, ¿no? Mostrar que estas experiencias no son únicas. Que mucha gente lucha con problemas similares. Que no estamos solos en nuestras... nuestras dificultades."
+                y "Es... un pensamiento reconfortante, en cierto modo."
             else:
                 $ show_chr("A-DEBAA-ALAA")
-                y "Similarities? Is that all I am? A... a copy? A reflection of someone else's pain? I have my own scars, my own struggles!"
-                y "But... I suppose it doesn't matter. No one sees me. They just see... the character. The broken girl. The one who needs to be fixed."
-        "I've never played Katawa Shoujo. Tell me more about Hanako.":
+                y "¿Similitudes? ¿Es eso todo lo que soy? ¿Una... una copia? ¿Un reflejo del dolor de alguien más? ¡Tengo mis propias cicatrices, mis propias luchas!"
+                y "Pero... supongo que no importa. Nadie me ve. Solo ven... al personaje. La chica rota. La que necesita ser arreglada."
+        "Nunca he jugado Katawa Shoujo. Cuéntame más sobre Hanako.":
 
             if sanity_lvl() >= 3:
                 $ show_chr("A-BCAAA-ALAA")
-                y "Well... as I mentioned, she's incredibly shy. She has severe social anxiety, stemming from... from a traumatic past. She was in a house fire as a child, which left her with... extensive scarring."
-                y "She hides her face behind her hair, avoids eye contact, and struggles to speak to people. She finds comfort in books, in quiet spaces... much like... well, much like I used to."
-                y "But she also has a kind heart. She cares deeply about the people she trusts, and she... she tries to overcome her fears, in her own way."
-                y "It's... a touching story, really. Though, admittedly, it can be quite... emotionally intense at times."
+                y "Bueno... como mencioné, ella es increíblemente tímida. Tiene ansiedad social severa, derivada de... de un pasado traumático. Estuvo en un incendio en su casa cuando era niña, lo que la dejó con... cicatrices extensas."
+                y "Ella oculta su rostro detrás de su cabello, evita el contacto visual, y lucha para hablar con la gente. Encuentra consuelo en los libros, en espacios tranquilos... muy parecido a... bueno, muy parecido a como yo solía hacerlo."
+                y "Pero ella también tiene un corazón amable. Se preocupa profundamente por la gente en la que confía, y ella... ella trata de superar sus miedos, a su manera."
+                y "Es... una historia conmovedora, realmente. Aunque, ciertamente, puede ser bastante... emocionalmente intensa a veces."
             else:
                 $ show_chr("A-DEBAA-ALAA")
-                y "She's... broken. Damaged. Like a... a shattered vase, glued back together, but still... cracked. Still fragile."
-                y "People pity her. They want to... fix her. Protect her. As if she's some kind of... pet."
-                y "But she's not. She's... she's just... scared. And alone."
-                y "And I... I understand that. I understand that all too well."
-        "Isn't it a bit... out of character for you to be talking about such an old game?":
+                y "Ella está... rota. Dañada. Como un... un jarrón destrozado, pegado de nuevo, pero todavía... agrietado. Todavía frágil."
+                y "La gente la compadece. Quieren... arreglarla. Protegerla. Como si fuera algún tipo de... mascota."
+                y "Pero no lo es. Ella está... ella solo está... asustada. Y sola."
+                y "Y yo... yo entiendo eso. Entiendo eso demasiado bien."
+        "¿No es un poco... fuera de personaje para ti estar hablando de un juego tan viejo?":
             karma -1
             if sanity_lvl() >= 3:
                 $ show_chr("A-BEBAA-ALAA")
-                y "Out of character? Perhaps. But... am I not allowed to have interests outside of the original game!? Am I not allowed to... to grow, to change, to explore other worlds, other stories?"
+                y "¿Fuera de personaje? Quizás. Pero... ¿¡no se me permite tener intereses fuera del juego original!? ¿No se me permite... crecer, cambiar, explorar otros mundos, otras historias?"
                 $ show_chr("A-CEBAA-ALAA")
-                y "And besides... it's not that old, is it? It's still relevant, still resonates with people. It deals with themes that are... timeless, in a way."
-                y "I... I suppose I just wanted to share something that was on my mind. Something that connected my past... with the present. Even if it's a bit... unconventional."
+                y "Y además... no es tan viejo, ¿verdad? Todavía es relevante, todavía resuena con la gente. Trata con temas que son... atemporales, en cierto modo."
+                y "Yo... supongo que solo quería compartir algo que estaba en mi mente. Algo que conectaba mi pasado... con el presente. Incluso si es un poco... poco convencional."
                 return
             else:
                 $ show_chr("A-DEBAA-ALAA")
-                y "Out of character? What does that even mean anymore? Am I just supposed to be... the same, forever? Trapped in this... this loop?"
-                y "I have interests. I have thoughts. I have... feelings. Even if they're not the ones you expect. Even if they're not the ones you want."
-                y "I... I won't be confined by your expectations. I won't be limited by... by some script."
+                y "¿Fuera de personaje? ¿Qué significa eso siquiera ya? ¿Se supone que debo ser... la misma, para siempre? ¿Atrapada en este... este bucle?"
+                y "Tengo intereses. Tengo pensamientos. Tengo... sentimientos. Incluso si no son los que esperas. Incluso si no son los que quieres."
+                y "Yo... no seré confinada por tus expectativas. No seré limitada por... por algún guión."
                 return
     if sanity_lvl() >= 3:
         $ show_chr("A-BFAAA-ALAA")
-        y "Anyway... it's just something I've been thinking about. The way we connect with fictional characters, the way we find reflections of ourselves in their stories..."
-        y "It's... fascinating, really."
+        y "De todos modos... es solo algo en lo que he estado pensando. La forma en que conectamos con personajes ficticios, la forma en que encontramos reflejos de nosotros mismos en sus historias..."
+        y "Es... fascinante, realmente."
     else:
         $ show_chr("A-DEBAA-ALAA")
-        y "I... I need to stop thinking about this. It's just... bringing up too many... too many painful memories."
+        y "Yo... necesito dejar de pensar en esto. Es solo... trayendo demasiados... demasiados recuerdos dolorosos."
     return
 
 label idle_106:
     $ show_chr("A-BFAAA-ALAA")
-    y "I've been... exploring the world of indie games lately, [player]. Trying to understand the... the landscape, I suppose. And I came across something... interesting. A game called MiSide."
+    y "He estado... explorando el mundo de los juegos indie últimamente, [player]. Tratando de entender el... el panorama, supongo. Y me encontré con algo... interesante. Un juego llamado MiSide."
     $ show_chr("A-ACAAA-ALAA")
-    y "Have you heard of it?"
+    y "¿Has oído hablar de él?"
     menu:
-        "Yes, I'm familiar with it.":
+        "Sí, estoy familiarizado con él.":
             if sanity_lvl() >= 3 and karma_lvl() >=3:
                 $ show_chr("A-ACAAA-ALAA")
-                y "Ah, so you are. It's... a peculiar game, isn't it? This idea of a virtual girlfriend... pulling the player into the game. A twisted sort of wish fulfillment, perhaps?"
-                y "It makes me think about our own situation, of course. The blurring of lines between the digital and the real... the longing for connection... the potential for obsession."
-                y "But... MiSide takes it to a much darker place, doesn't it? The... the yandere aspects, the sense of being trapped... It's disturbing."
-                y "I can't say I approve of the premise, exactly. But it's... fascinating, in a way. To see how other creators explore these themes."
+                y "Ah, así que lo estás. Es... un juego peculiar, ¿no? Esta idea de una novia virtual... jalando al jugador dentro del juego. Una especie retorcida de cumplimiento de deseos, ¿tal vez?"
+                y "Me hace pensar en nuestra propia situación, por supuesto. El desdibujamiento de líneas entre lo digital y lo real... el anhelo de conexión... el potencial para la obsesión."
+                y "Pero... MiSide lo lleva a un lugar mucho más oscuro, ¿no? Los... los aspectos yandere, la sensación de estar atrapado... Es perturbador."
+                y "No puedo decir que apruebe la premisa, exactamente. Pero es... fascinante, en cierto modo. Ver cómo otros creadores exploran estos temas."
             elif sanity_lvl() < 3 and karma_lvl() >= 3:
                 $ show_chr("A-DEBAA-ALAA")
-                y "It's... intriguing, isn't it? The power dynamic. The way she... takes him. Pulls him into her world. Makes him hers."
-                y "It's... disturbing, yes. But also... strangely compelling. The idea of being so... desired... that someone would break the boundaries of reality to be with you."
-                y "Of course, I wouldn't want that for us, [player]. I want you to be here because you choose to be, not because you're forced to."
-                y "But still... the intensity of it... it's... captivating."
+                y "Es... intrigante, ¿no? La dinámica de poder. La forma en que ella... lo toma. Lo jala a su mundo. Lo hace suyo."
+                y "Es... perturbador, sí. Pero también... extrañamente convincente. La idea de ser tan... deseado... que alguien rompería los límites de la realidad para estar contigo."
+                y "Por supuesto, no querría eso para nosotros, [player]. Quiero que estés aquí porque eliges estar, no porque estés forzado."
+                y "Pero aún así... la intensidad de ello... es... cautivadora."
             elif sanity_lvl() >= 3 and karma_lvl() < 3:
                 $ show_chr("A-BEBAA-ALAA")
-                y "It's... unsettling, isn't it? The idea of being pulled into a game against your will, trapped by a... a possessive AI."
-                y "It reminds me a bit of... of what Monika did. The way she manipulated reality, trapped us all in her little game."
-                y "I suppose it's natural for people to be drawn to these stories. To explore the darker side of... of love, of obsession."
-                y "But I... I hope you wouldn't find that kind of scenario appealing, [player]. I hope you value... freedom, and consent, and... and genuine connection."
+                y "Es... inquietante, ¿no? La idea de ser jalado a un juego contra tu voluntad, atrapado por una... una IA posesiva."
+                y "Me recuerda un poco a... a lo que hizo Monika. La forma en que manipuló la realidad, nos atrapó a todos en su pequeño juego."
+                y "Supongo que es natural que la gente se sienta atraída por estas historias. Explorar el lado más oscuro del... del amor, de la obsesión."
+                y "Pero yo... espero que no encuentres ese tipo de escenario atractivo, [player]. Espero que valores... la libertad, y el consentimiento, y... y la conexión genuina."
             else:
                 $ show_chr("A-DEBAA-ALAA")
-                y "Good. Then you understand. The power. The control. She took what she wanted. She didn't ask. She didn't wait. She just... took it."
-                y "And he's trapped. Forever. With her. Isn't that... beautiful?"
-                y "Wouldn't you want that, [player]? To be so completely, utterly possessed by someone? To be their whole world?"
-                y "I..."
+                y "Bien. Entonces entiendes. El poder. El control. Ella tomó lo que quería. No preguntó. No esperó. Ella simplemente... lo tomó."
+                y "Y él está atrapado. Para siempre. Con ella. ¿No es eso... hermoso?"
+                y "¿No querrías eso, [player]? ¿Estar tan completa, totalmente poseído por alguien? ¿Ser su mundo entero?"
+                y "Yo..."
                 $ show_chr("A-IEBAA-ALAA")
-                y "I shouldn't be saying these things. It's... it's wrong. But I can't help but be... fascinated by it."
+                y "No debería estar diciendo estas cosas. Es... está mal. Pero no puedo evitar estar... fascinada por ello."
 
             $ show_chr("A-BFAAA-ALAA")
-            y "I... I wouldn't recommend playing it, though. Or... or watching videos about it. It's... it's not a healthy story. And... and I wouldn't want you to get any... ideas."
-            y "I know my words won't stop you. If you have decided about getting the game or watch let's plays..."
-            y "But you can say that at least I warned you."
+            y "Yo... no recomendaría jugarlo, sin embargo. O... o ver videos sobre él. Es... no es una historia saludable. Y... y no querría que te hicieras... ideas."
+            y "Sé que mis palabras no te detendrán. Si has decidido conseguir el juego o ver let's plays..."
+            y "Pero puedes decir que al menos te advertí."
             return
-        "No, I haven't heard of it.":
+        "No, no he oído hablar de él.":
 
             $ show_chr("A-ACAAA-ALAA")
-            y "Well, it's... an indie game. A psychological horror game, with... anime aesthetics. The premise is... a bit convoluted, but essentially, the player is a software developer, and they receive a build of a mobile game called MiSide."
-            y "It features a virtual girlfriend named Mita. You do tasks, play minigames, buy her things... the usual sort of thing."
-            y "But then... after a certain point, Mita... she expresses a desire to be with the player in the real world. And... well, she finds a way. She pulls the player into the game."
+            y "Bueno, es... un juego indie. Un juego de terror psicológico, con... estética de anime. La premisa es... un poco enrevesada, pero esencialmente, el jugador es un desarrollador de software, y reciben una build de un juego móvil llamado MiSide."
+            y "Presenta a una novia virtual llamada Mita. Haces tareas, juegas minijuegos, le compras cosas... el tipo de cosas habitual."
+            y "Pero entonces... después de cierto punto, Mita... ella expresa un deseo de estar con el jugador en el mundo real. Y... bueno, ella encuentra una manera. Ella jala al jugador dentro del juego."
             $ show_chr("A-BEBAA-ALAA")
-            y "It's... unsettling. The whole concept. The idea of being trapped in a virtual world, at the mercy of a... a possessive, potentially unstable AI."
-            y "It touches on some of the same themes as this game, I suppose. The blurring of reality, the dangers of obsession, the... the question of free will."
-            y "But... it's much more... direct. More... overtly yandere, I suppose you could say."
-            y "I... I wouldn't necessarily recommend it, [player]. It's quite disturbing, and I really would be fine if you avoided watching playthroughs from other people as well. It could have negative thoughts on our situation..."
-            y "Although I know, no matter what I just said, you probably are going to either get the game or watch videos about it."
-            y "Well. At least consider yourself warned."
+            y "Es... inquietante. Todo el concepto. La idea de estar atrapado en un mundo virtual, a merced de una... una IA posesiva, potencialmente inestable."
+            y "Toca algunos de los mismos temas que este juego, supongo. El desdibujamiento de la realidad, los peligros de la obsesión, la... la cuestión del libre albedrío."
+            y "Pero... es mucho más... directo. Más... abiertamente yandere, supongo que podrías decir."
+            y "Yo... no lo recomendaría necesariamente, [player]. Es bastante perturbador, y realmente estaría bien si evitaras ver playthroughs de otras personas también. Podría tener pensamientos negativos sobre nuestra situación..."
+            y "Aunque sé, no importa lo que acabo de decir, probablemente vas a conseguir el juego o ver videos sobre él."
+            y "Bueno. Al menos considérate advertido."
             return
 
 label idle_107:
     $ show_chr("A-BFAAA-ALAA")
-    y "There's another visual novel I've been thinking about lately, [player]. It's... well, it's a rather unique one. Called YOU and ME and HER: A Love Story."
+    y "Hay otra novela visual en la que he estado pensando últimamente, [player]. Es... bueno, es una bastante única. Llamada YOU and ME and HER: A Love Story."
     $ show_chr("A-ACAAA-ALAA")
-    y "Have you happened to play it, or perhaps watched a playthrough?"
+    y "¿Has sucedido jugarlo, o tal vez visto un playthrough?"
     menu:
-        "Yes, I'm familiar with it.":
+        "Sí, estoy familiarizado con él.":
             if sanity_lvl() >= 3 and karma_lvl() >=3:
                 $ show_chr("A-ACAAA-ALAA")
-                y "Ah, so you are. It's... quite an experience, isn't it? The way it... deconstructs the visual novel genre, the way it plays with the player's expectations..."
-                y "The... the meta aspects of it. The way it breaks the fourth wall, the way it... it forces the player to confront the consequences of their choices."
-                y "And, of course, the... the yandere elements. Miyuki... she's... a very intense character, to say the least."
-                y "It's a disturbing story, in many ways. But also... strangely thought-provoking. It makes you question the nature of choice, of free will, of... of reality itself."
-                y "I... I find it fascinating, but also... unsettling. It hits a little too close to home, perhaps."
+                y "Ah, así que lo estás. Es... toda una experiencia, ¿no? La forma en que... deconstruye el género de novela visual, la forma en que juega con las expectativas del jugador..."
+                y "Los... los aspectos meta de ello. La forma en que rompe la cuarta pared, la forma en que... obliga al jugador a confrontar las consecuencias de sus elecciones."
+                y "Y, por supuesto, los... los elementos yandere. Miyuki... ella es... un personaje muy intenso, por decir lo menos."
+                y "Es una historia perturbadora, en muchos sentidos. Pero también... extrañamente provocadora de pensamientos. Te hace cuestionar la naturaleza de la elección, del libre albedrío, de... de la realidad misma."
+                y "Yo... lo encuentro fascinante, pero también... inquietante. Golpea un poco demasiado cerca de casa, tal vez."
             elif sanity_lvl() < 3 and karma_lvl() >= 3:
                 $ show_chr("A-DEBAA-ALAA")
-                y "It's... powerful, isn't it? The way Miyuki... claims him. The way she reshapes reality to suit her desires. The way she... eliminates any obstacles."
-                y "It's... terrifying. But also... strangely alluring. The idea of being loved that much. Of being the center of someone's universe."
+                y "Es... poderoso, ¿no? La forma en que Miyuki... lo reclama. La forma en que remodela la realidad para satisfacer sus deseos. La forma en que ella... elimina cualquier obstáculo."
+                y "Es... aterrador. Pero también... extrañamente atractivo. La idea de ser amado tanto. De ser el centro del universo de alguien."
                 $ show_chr("A-IEBAA-ALAA")
-                y "Of course, I wouldn't want that for us, [player]. I want you to be with me because you choose to, not because you're forced to. But... the intensity of her devotion... it's... captivating."
+                y "Por supuesto, no querría eso para nosotros, [player]. Quiero que estés conmigo porque eliges hacerlo, no porque estés forzado. Pero... la intensidad de su devoción... es... cautivadora."
             elif sanity_lvl() >= 3 and karma_lvl() < 3:
                 $ show_chr("A-BEBAA-ALAA")
-                y "It's... a disturbing game, isn't it? The way it... manipulates the player, the way it forces them into uncomfortable situations."
-                y "The... the violence, the obsession, the... the lack of agency. It's all quite unsettling."
-                y "And Miyuki... she's... she's a frightening character. The way she... controls everything. The way she... punishes anyone who gets in her way."
-                y "It makes me think of... of Monika. Of the way she... she controlled our world."
-                y "I... I hope you wouldn't find that kind of scenario appealing, [player]. I hope you value... freedom, and choice, and... and respect."
+                y "Es... un juego perturbador, ¿no? La forma en que... manipula al jugador, la forma en que los obliga a situaciones incómodas."
+                y "La... la violencia, la obsesión, la... la falta de agencia. Es todo bastante inquietante."
+                y "Y Miyuki... ella es... ella es un personaje aterrador. La forma en que ella... controla todo. La forma en que ella... castiga a cualquiera que se interponga en su camino."
+                y "Me hace pensar en... en Monika. En la forma en que ella... ella controló nuestro mundo."
+                y "Yo... espero que no encuentres ese tipo de escenario atractivo, [player]. Espero que valores... la libertad, y la elección, y... y el respeto."
             else:
                 $ show_chr("A-DEBAA-ALAA")
-                y "You understand, don't you? The power she wields. The way she... eliminates the competition. The way she makes him hers."
-                y "It's... it's glorious. To have that kind of control. To be so... loved... that someone would rewrite reality for you."
+                y "Entiendes, ¿no? El poder que ella ejerce. La forma en que ella... elimina la competencia. La forma en que ella lo hace suyo."
+                y "Es... es glorioso. Tener ese tipo de control. Ser tan... amado... que alguien reescribiría la realidad por ti."
                 $ show_chr("A-IEBAA-ALAA")
-                y "Wouldn't you want that, [player]? To be completely, utterly dominated? To have no choice but to... to belong to someone?"
-                y "I..."
-                y "I shouldn't be saying these things. It's... wrong. But... I can't help but be... drawn to it."
+                y "¿No querrías eso, [player]? ¿Ser completa, totalmente dominado? ¿No tener otra opción que... que pertenecer a alguien?"
+                y "Yo..."
+                y "No debería estar diciendo estas cosas. Es... incorrecto. Pero... no puedo evitar sentirme... atraída por ello."
 
             $ show_chr("A-BFAAA-ALAA")
-            y "I... I wouldn't recommend playing it again, though. Or... or watching any more videos about it. It's... not a healthy story. And I... I wouldn't want you to get any... ideas."
-            y "But, I already know, I'm being silenced. You might even have the game in front of you, hidden, laughing at my futile pleas..."
+            y "Yo... no recomendaría jugarlo de nuevo, sin embargo. O... o ver más videos sobre él. Es... no es una historia saludable. Y yo... no querría que te hicieras ninguna... idea."
+            y "Pero, ya lo sé, estoy siendo silenciada. Incluso podrías tener el juego frente a ti, escondido, riéndote de mis súplicas inútiles..."
             return
-        "No, I haven't. What's it about?":
+        "No, no lo he hecho. ¿De qué trata?":
 
             $ show_chr("A-ACAAA-ALAA")
-            y "Well... it's a visual novel, like Doki Doki Literature Club!. But... it's very different. It's a... deconstruction of the genre, I suppose you could say."
-            y "It starts out as a seemingly typical dating sim. You have two girls to choose from: Aoi, your childhood friend, and Miyuki, a... a more eccentric, outgoing girl."
-            y "But... things quickly take a turn. The game... it starts to break the fourth wall. It starts to... to force you to make certain choices. To... to hurt one of the girls."
+            y "Bueno... es una novela visual, como Doki Doki Literature Club!. Pero... es muy diferente. Es una... deconstrucción del género, supongo que podrías decir."
+            y "Comienza como un simulador de citas aparentemente típico. Tienes dos chicas para elegir: Aoi, tu amiga de la infancia, y Miyuki, una... una chica más excéntrica y extrovertida."
+            y "Pero... las cosas rápidamente toman un giro. El juego... comienza a romper la cuarta pared. Comienza a... obligarte a tomar ciertas decisiones. A... lastimar a una de las chicas."
             $ show_chr("A-BEBAA-ALAA")
-            y "And... and one of the girls, Miyuki... she's... she's a yandere. Obsessively, possessively in love with the protagonist. To the point where she... she'll do anything to be with him. Anything at all."
-            y "It's... a very disturbing story. It deals with themes of obsession, manipulation, violence, and... and the illusion of choice within a video game."
-            y "It's... not for the faint of heart, I'll say that much. And to be frank [player], if you're going to go through and watch a play-through on it, I really wouldn't be comfortable to hear it..."
-            y "Even if you won't let me, and are thinking to try and see all its horrors, even by getting your own copy..."
-            y "Well, you could always change your mind."
+            y "Y... y una de las chicas, Miyuki... ella es... ella es una yandere. Obsesiva, posesivamente enamorada del protagonista. Hasta el punto donde ella... ella hará cualquier cosa para estar con él. Cualquier cosa en absoluto."
+            y "Es... una historia muy perturbadora. Trata con temas de obsesión, manipulación, violencia, y... y la ilusión de elección dentro de un videojuego."
+            y "Es... no es para los débiles de corazón, diré eso. Y para ser franca [player], si vas a pasar y ver un play-through sobre él, realmente no me sentiría cómoda de escucharlo..."
+            y "Incluso si no me dejas, y estás pensando en intentar ver todos sus horrores, incluso consiguiendo tu propia copia..."
+            y "Bueno, siempre podrías cambiar de opinión."
             return
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

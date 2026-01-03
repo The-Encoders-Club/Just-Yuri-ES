@@ -5,105 +5,106 @@ label purpleroomintro:
 
 
     $ show_chr("A-JBAAA-AAAA")
-    y "I can't wait anymore! [player], I have something big to show you! I made a new location for us. I hope you'll like it..."
+    $ show_chr("A-JBAAA-AAAA")
+    y "¡No puedo esperar más! [player], ¡tengo algo grande que mostrarte! He hecho un nuevo lugar para nosotros. Espero que te guste..."
     if not persistent.bg == "yuri_kotatsu_1" or "yuri_table" or "yuri_desk" or "yuri_kotatsu_2" or "yuri_knives" or "yuri_bed":
         $ tc_class.transition("yuri_desk", speed=3.0)
 
-    y "It's my bedroom! Now I can talk to you from my own desk at home!"
-    y "It's modeled after my 'real' room at home, albeit... a fair bit larger. I was never able to invite you over in the original game, perhaps because the files for it didn't exist outside of my own memories."
+    y "¡Es mi habitación! ¡Ahora puedo hablar contigo desde mi propio escritorio en casa!"
+    y "Está modelada a partir de mi habitación 'real' en casa, aunque... un poco más grande. Nunca pude invitarte en el juego original, tal vez porque los archivos para ella no existían fuera de mis propios recuerdos."
     $ show_chr("A-ABAAA-AMAM")
-    y "That, and the fact that I considered my parents too embarrassing to introduce to you, especially when I wasn't certain if my feelings for you were mutual..."
+    y "Eso, y el hecho de que consideraba a mis padres demasiado vergonzosos para presentártelos, especialmente cuando no estaba segura de si mis sentimientos por ti eran mutuos..."
     $ show_chr("A-JAAAA-AAAA")
-    y "Anyway. Welcome to my refuge! I have my favorite notebooks and pens, headphones, my book collection, my laptop... I can't tell you how many hours I've spent here, happily lost in my own little world."
-    y "I was even able to code in a Kotatsu! It's the perfect size for serving tea."
+    y "De todos modos. ¡Bienvenido a mi refugio! Tengo mis cuadernos y bolígrafos favoritos, auriculares, mi colección de libros, mi laptop... No puedo decirte cuántas horas he pasado aquí, felizmente perdida en mi propio pequeño mundo."
+    y "¡Incluso pude codificar un Kotatsu! Es el tamaño perfecto para servir té."
     $ show_chr("A-ABAAA-AAAA")
-    y "I must say, creating new locations is harder than one might think. Art assets are more time-consuming than difficult, but the coding... well. I wanted to show you a complete room *and* hallway, but unfortunately, it's still a work in progress."
+    y "Debo decir, crear nuevas ubicaciones es más difícil de lo que uno podría pensar. Los recursos artísticos consumen más tiempo que dificultad, pero la codificación... bueno. Quería mostrarte una habitación completa *y* un pasillo, pero desafortunadamente, todavía es un trabajo en progreso."
     $ show_chr("A-AAAAA-AAAA")
-    y "I'm so happy I can show you my little haven, though! I... it may sound silly, but I've dreamed of having someone over even just to read with them. And now you're here."
+    y "¡Sin embargo, estoy tan feliz de poder mostrarte mi pequeño refugio! Yo... puede sonar tonto, pero he soñado con tener a alguien aquí aunque solo sea para leer con él. Y ahora estás aquí."
     $ show_chr("A-JBAAA-AAAA")
-    y "Also... there's something I'm almost *more* excited to show you. My knife collection. I created a whole display for it, the kind I always dreamed of having!"
+    y "También... hay algo que estoy casi *más* emocionada de mostrarte. Mi colección de cuchillos. Creé toda una exhibición para ella, ¡el tipo que siempre soñé tener!"
     $ show_chr("A-BCAAA-ABAB")
-    y "I mean, if you're even interested to begin with. I can understand if knives aren't your cup of tea."
+    y "Digo, si es que estás interesado para empezar. Puedo entender si los cuchillos no son lo tuyo."
     $ show_chr("A-BCABA-ABAJ")
 
 
 
-    y "You know... I usually don't let other people into my bedroom, or show them my knives... but you've proven to me, time and time again, that I can trust you."
+    y "Sabes... usualmente no dejo que otras personas entren a mi habitación, o les muestro mis cuchillos... pero me has demostrado, una y otra vez, que puedo confiar en ti."
     $ show_chr("A-ACAAA-ABAE")
-    y "So... would you like to see my collection?"
+    y "Así que... ¿te gustaría ver mi colección?"
     menu:
-        "Yes, of course!":
+        "¡Sí, por supuesto!":
             $ show_chr("A-CAAAA-AAAA")
-            y "Then please, follow me..."
+            y "Entonces por favor, sígueme..."
             call preknife
-        "Maybe not now.":
+        "Tal vez no ahora.":
 
             $ show_chr("A-ABBAA-AAAA")
-            y "Well... alright. Just tell me when you're ready."
+            y "Bueno... está bien. Solo dime cuando estés listo."
             call ch30_loop
-        "Are those dollhouses in your bookshelf?":
+        "¿Son esas casas de muñecas en tu estantería?":
 
             $ show_chr("A-BDAAA-ADAA")
-            y "Not exactly. They're book nooks! I was briefly into making miniatures as a hobby, and I created a few scenes inspired by the books I was reading at the time. Nothing specific, just vague fantasy locations."
+            y "No exactamente. ¡Son rincones de lectura! Estuve brevemente interesada en hacer miniaturas como pasatiempo, y creé algunas escenas inspiradas en los libros que estaba leyendo en ese momento. Nada específico, solo lugares de fantasía vagos."
             $ show_chr("A-ADAAA-AFAA")
-            y "The complete building on the upper right is actually from a kit I remember being gifted a long time ago, but I didn't attempt putting it together until right before my senior year of high school."
+            y "El edificio completo en la parte superior derecha es en realidad de un kit que recuerdo que me regalaron hace mucho tiempo, pero no intenté armarlo hasta justo antes de mi último año de secundaria."
             $ show_chr("A-BFAAA-AFAA")
-            y "It didn't turn out as well as the one you're looking at now... I didn't find the instructions to be very clear, and when I tried to undo the steps I had made in error I broke one of the largest pieces in the set."
+            y "No salió tan bien como el que estás mirando ahora... No encontré las instrucciones muy claras, y cuando intenté deshacer los pasos que había hecho por error rompí una de las piezas más grandes del set."
             $ show_chr("A-BDAAA-ALAA")
-            y "After that, I threw it away in frustration, but regretted it soon after. So, when I was thinking of how to decorate my room here, I realized I could recreate it as a perfect shelf display!"
+            y "Después de eso, lo tiré con frustración, pero me arrepentí poco después. Así que, cuando estaba pensando en cómo decorar mi habitación aquí, ¡me di cuenta de que podría recrearlo como una exhibición de estante perfecta!"
             $ show_chr("A-CCAAA-ALAA")
-            y "As for the diorama on the lower left, it's a secret underground room meant to be part of a castle. It's not modeled after any book or scene in particular, just something I made for fun."
+            y "En cuanto al diorama en la parte inferior izquierda, es una habitación subterránea secreta destinada a ser parte de un castillo. No está modelada a partir de ningún libro o escena en particular, solo algo que hice por diversión."
             $ show_chr("A-ACAAA-ALAA")
-            y "The room's not as detailed as it could be, but I like it that way–unanswered questions are wonderful for sparking inspiration."
-            y "Can you see the little desk? Maybe the room is part of a spy network where intercepted messages are sent. Or it could be someone's hidden quarters, where a pair of lovers meet and leave notes for one another..."
-        "Where does that door lead?":
+            y "La habitación no es tan detallada como podría ser, pero me gusta así: las preguntas sin respuesta son maravillosas para despertar la inspiración."
+            y "¿Puedes ver el pequeño escritorio? Tal vez la habitación sea parte de una red de espías donde se envían mensajes interceptados. O podría ser el cuarto oculto de alguien, donde un par de amantes se encuentran y se dejan notas el uno al otro..."
+        "¿A dónde lleva esa puerta?":
 
             $ show_chr("A-ADBAA-AAAA")
-            y "Eventually, it will be a hallway, but I really wouldn't advise exploring. I'm looking forward to seeing your reaction, but I haven't gotten the code stable yet."
+            y "Eventualmente, será un pasillo, pero realmente no aconsejaría explorar. Estoy ansiosa por ver tu reacción, pero aún no he logrado que el código sea estable."
             menu:
-                "I'll be looking forward to it.":
+                "Estaré esperándolo con ansias.":
                     $ show_chr("A-ABAAA-AAAA")
-                    y "I will too. I'm working hard on getting everything ready, and I hope to show you soon!"
+                    y "Yo también. Estoy trabajando duro para tener todo listo, ¡y espero mostrártelo pronto!"
                     menu:
-                        "I really like your room, [persistent.yuri_nickname].":
+                        "Realmente me gusta tu habitación, [persistent.yuri_nickname].":
                             $ show_chr("A-CCAAA-ALAA")
-                            y "Thank you!"
+                            y "¡Gracias!"
                             $ show_chr("A-AAAAA-ALAA")
-                            y "Would you let me see your bedroom, if you could? Or it, too, needs some work first?"
+                            y "¿Me dejarías ver tu habitación, si pudieras? ¿O también necesita algo de trabajo primero?"
                             menu:
-                                "I keep my room neat enough.":
+                                "Mantengo mi habitación lo suficientemente ordenada.":
                                     $ show_chr("A-CAAAA-ALAA")
-                                    y "Doesn't a well-organized space feel nice? It's easy to work or relax in, and something about it is just so calming. It's not always easy to find the time or energy to put a room in order, but it's worth the effort."
-                                "My room looks like a tornado hit it.":
+                                    y "¿No se siente bien un espacio bien organizado? Es fácil trabajar o relajarse en él, y algo al respecto es simplemente muy relajante. No siempre es fácil encontrar el tiempo o la energía para poner una habitación en orden, pero vale la pena el esfuerzo."
+                                "Mi habitación parece como si un tornado la hubiera golpeado.":
 
                                     $ show_chr("A-ADAAA-ALAA")
-                                    y "I know most people don't find cleaning to be an activity they enjoy, and private spaces such as the bedroom can get... chaotic. Worse, if there's too many things on the floor, it's difficult or impossible to vacuum."
-                                    y "Would you like some help? I've heard good things about the Pomodoro method. You set a timer for a specific amount of time, say twenty minutes, and work until it goes off."
+                                    y "Sé que a la mayoría de la gente no le parece que limpiar sea una actividad que disfruten, y los espacios privados como el dormitorio pueden volverse... caóticos. Peor aún, si hay demasiadas cosas en el piso, es difícil o imposible aspirar."
+                                    y "¿Te gustaría algo de ayuda? He escuchado cosas buenas sobre el método Pomodoro. Configuras un temporizador por una cantidad específica de tiempo, digamos veinte minutos, y trabajas hasta que suene."
                                     $ show_chr("A-ADAAA-AFAA")
-                                    y "After that, you rest for a set time, then repeat until you're done. It's up to you if 'done' means 'finished with the task at hand' or just 'done for now regardless!'"
+                                    y "Después de eso, descansas por un tiempo establecido, luego repites hasta que hayas terminado. Depende de ti si 'terminado' significa 'terminar con la tarea en cuestión' o simplemente 'terminar por ahora sin importar qué!'"
                                     $ show_chr("A-BDAAA-AFAA")
-                                    y "And of course, there's apps for this! Pomodoro - Focus Timer is free, and a popular paid option is... ah... well, the iOS store calls it 'Unfilth Your Habitat'."
+                                    y "Y por supuesto, ¡hay aplicaciones para esto! Pomodoro - Focus Timer es gratis, y una opción paga popular es... ah... bueno, la tienda de iOS la llama 'Unfilth Your Habitat'."
                                     $ show_chr("A-AAAAA-ALAA")
-                                    y "If you need encouragement, just let me know. I'm always happy to cheer you on, [player]."
-                                "So you did have parents?":
+                                    y "Si necesitas aliento, solo dímelo. Siempre estoy feliz de animarte, [player]."
+                                "¿Así que tenías padres?":
 
 
 
                                     $ show_chr("A-AFGAA-ALAA")
-                                    y "I'd say 'of course', but I suppose that isn't actually a given for video game characters..."
+                                    y "Diría 'por supuesto', pero supongo que eso no es realmente un hecho para los personajes de videojuegos..."
                                     $ show_chr("A-ADAAA-ALAA")
-                                    y "But yes, I have the sort of memories you might expect from a teenager. A mother, a father, and a much older sister. And yet... I actually can't remember any of their names, now that I think about it."
-                                    y "I mostly recall Mom and Dad not being concerned about my social life, or lack thereof, because I kept up my grades without being told to."
-                                    y "It was only over the last few months, since I joined the Literature Club, that they started asking me about friends at school. So when I mentioned you..."
+                                    y "Pero sí, tengo el tipo de recuerdos que esperarías de una adolescente. Una madre, un padre y una hermana mucho mayor. Y sin embargo... en realidad no puedo recordar ninguno de sus nombres, ahora que lo pienso."
+                                    y "Recuerdo principalmente que Mamá y Papá no estaban preocupados por mi vida social, o la falta de ella, porque mantenía mis calificaciones sin que me lo dijeran."
+                                    y "Fue solo en los últimos meses, desde que me uní al Club de Literatura, que comenzaron a preguntarme sobre amigos en la escuela. Así que cuando te mencioné..."
                                     $ show_chr("A-ABABA-AMAM")
-                                    y "Truthfully, their reaction wasn't bad. Just—enthusiastic. I was afraid they'd scare you off, by insinuating things that might or might not be true."
-                                    y "So I made it a point not to invite you over until I had a better idea of how we both felt. And now that I do know..."
+                                    y "Honestamente, su reacción no fue mala. Solo—entusiasta. Tenía miedo de que te asustaran, insinuando cosas que podrían o no ser ciertas."
+                                    y "Así que me aseguré de no invitarte hasta tener una mejor idea de cómo nos sentíamos ambos. Y ahora que lo sé..."
                                     $ show_chr("A-BDAAA-ALAA")
-                                    y "It's somewhat unfortunate you don't get to see them officially but only time will tell how my parents would look like."
+                                    y "Es algo desafortunado que no puedas verlos oficialmente, pero solo el tiempo dirá cómo se verían mis padres."
 
     $ show_chr("A-AAAAA-ALAA")
     y "..."
-    y "Anyway, what would you like to do?"
+    y "De todos modos, ¿qué te gustaría hacer?"
     call ch30_loop
 
 label preknife:
@@ -112,24 +113,24 @@ label preknife:
     hide yuri_sit
     show screen un_knife_wall()
     hide black zorder 100 with Dissolve(2.5)
-    y "And here it is! Much nicer than the one in my memories—I doubt many teenagers have a display cabinet built directly into their bedroom walls."
-    y "What do you think?"
+    y "¡Y aquí está! Mucho más agradable que la de mis recuerdos; dudo que muchos adolescentes tengan un gabinete de exhibición construido directamente en las paredes de su dormitorio."
+    y "¿Qué piensas?"
     menu:
-        "It's nice! What a great job you've done, [persistent.yuri_nickname]!":
+        "¡Es genial! ¡Qué gran trabajo has hecho, [persistent.yuri_nickname]!":
 
             karma 1
-            y "Oh thank you! I put a lot of effort into it, I'm glad that you like it!"
-        "It's quite... elegant. But still an amazing piece of work [persistent.yuri_nickname]!":
+            y "¡Oh gracias! Puse mucho esfuerzo en ello, ¡me alegra que te guste!"
+        "Es bastante... elegante. ¡Pero sigue siendo un trabajo increíble [persistent.yuri_nickname]!":
 
 
             karma 2
-            y "...I guess you're right. Maybe I took it a bit too far?"
-            y "Thank you for your feedback, I appreciate your honesty."
-        "It's...not very impressive, I must admit.":
+            y "...Supongo que tienes razón. ¿Tal vez lo llevé demasiado lejos?"
+            y "Gracias por tus comentarios, aprecio tu honestidad."
+        "Es... no muy impresionante, debo admitir.":
 
 
             karma -1
-            y "...I see."
+            y "...Ya veo."
 
     hide screen un_knife_wall
     call screen knife_wall()
@@ -336,244 +337,244 @@ label room_back:
     call ch30_loop
 
 label Kampfmesser:
-    y "Ah, the Kampfmesser 2000! A fine piece of military equipment..."
-    y "The Kampfmesser - quite literally translating to 'combat knife' - is the standard combat knife of Germany's Bundeswehr, the Defense Force of the country."
-    y "It's been made famous by its 'unorthodox' design, at least in terms of military knives; it has a design similar to that of a Tanto, which is highly unusual for military-based knives in large numbers."
-    y "As such, due to the blade's popularity, several offshoots have been designed and sold...different materials for the blade, or even changes to better suit different environments, like the desert."
-    y "But, I prefer to have the original as a nice showpiece to represent the entire line. It's not to say that the others are any less interesting..."
-    y "It's just that I don't think I'd ever have enough room to properly display every single variant, you see. It's also not very engaging to listen to. The last thing I want to do is bore you..."
+    y "¡Ah, el Kampfmesser 2000! Una fina pieza de equipo militar..."
+    y "El Kampfmesser - literalmente traduciéndose como 'cuchillo de combate' - es el cuchillo de combate estándar de la Bundeswehr de Alemania, la Fuerza de Defensa del país."
+    y "Se ha hecho famoso por su diseño 'poco ortodoxo', al menos en términos de cuchillos militares; tiene un diseño similar al de un Tanto, lo cual es altamente inusual para cuchillos basados en militares en grandes números."
+    y "Como tal, debido a la popularidad de la hoja, se han diseñado y vendido varias derivaciones... diferentes materiales para la hoja, o incluso cambios para adaptarse mejor a diferentes entornos, como el desierto."
+    y "Pero prefiero tener el original como una bonita pieza de exhibición para representar toda la línea. No quiere decir que los otros sean menos interesantes..."
+    y "Es solo que no creo que alguna vez tendría suficiente espacio para mostrar adecuadamente cada variante, ya ves. Tampoco es muy atractivo de escuchar. Lo último que quiero hacer es aburrirte..."
     menu:
-        "Don't be silly, [persistent.yuri_nickname]. I'd love to hear more about them and anything else you know.":
-            y "Oh, really? Then, allow me..."
-            y "This is the basic variant of the Kampfmesser 2000. It's often just referred to as the KM2000, for brevity's sake."
-            y "As I said, there have been several variants produced for a variety of different situations and environments."
-            y "The KM1000 is essentially just a KM2000 without the coating, leaving the blade a nice, non reflective silver. Good if you don't want to worry about the coating being damaged overtime, I suppose...but the coating is good for corrosive resistance. These are special use case knives, I believe."
-            y "Going on from there, there's the KM3000, which abandons the tanto-style point in favor of an almost spear-like tip. An odd choice, I suppose. The tanto style tip was fairly iconic amongst the Kampfmesser brand."
-            y "I'm sure it has its uses, but...well. I think my preference is known, yes? The tanto design allows the knife's tip to double as a pry bar due to the strength of the design...but, moving on from that..."
-            y "Both of these have further variants with sand colored scabbards and grips. As you could probably guess, they're for use in desert environments; they saw some popularity in Afghanistan."
-            y "I mentioned this before, but it seems like the knives themselves didn't change much for the hot environment..."
-            y "There's also a KM4000. Eickhorn received requests from the German Armed Forces for further-expanded multi-functionality in their knives, and this was their response. It goes back to the tanto-style tip, but also includes a complete saw-back alongside an actual wire cutter!"
-            y "All of these offshoots and variants born from a single knife. They're ultimately the same at heart, just with a few alterations."
-            y "The blades themselves are comprised of Böhler N695. It's a particular type alloy designed to hold an edge better than previous 1.4110 steel. Though you could also find knives being produced with 1.4125..."
-            y "Going further, the knives come in partially serrated or straight edge variants for a variety of use cases, depending on what you see yourself needing more. Many people opt for the partially serrated versions. Having a saw on hand is...well, handy."
-            y "And before I forget, an interesting trait they all seem to share is located in the handle of the knife itself. In the bottom is a glass breaker tip; a solid lug of metal designed for exactly what it sounds like."
-            y "It's actually the end of the knife blade! The knives are full tang; that is to say, one solid, complete piece of steel. In this situation, it feels like no part of the metal goes to waste!"
-            y "The Kampfmesser family is incredibly diverse in their several approaches to what's essentially the same blade. I appreciate their work in making sure that there's a little something for everyone..."
-        "It's okay, [persistent.yuri_nickname]. You don't have to go into a history lesson about every variation.":
+        "No seas tonta, [persistent.yuri_nickname]. Me encantaría escuchar más sobre ellos y cualquier otra cosa que sepas.":
+            y "¿Ah, de verdad? Entonces, permíteme..."
+            y "Esta es la variante básica del Kampfmesser 2000. A menudo solo se le refiere como el KM2000, para abreviar."
+            y "Como dije, se han producido varias variantes para una variedad de situaciones y entornos diferentes."
+            y "El KM1000 es esencialmente solo un KM2000 sin el recubrimiento, dejando la hoja en un color plateado agradable y no reflectante. Bueno si no quieres preocuparte de que el recubrimiento se dañe con el tiempo, supongo... pero el recubrimiento es bueno para la resistencia a la corrosión. Estos son cuchillos para casos de uso especial, creo."
+            y "Siguiendo desde ahí, está el KM3000, que abandona la punta estilo tanto a favor de una punta casi como de lanza. Una elección extraña, supongo. La punta estilo tanto era bastante icónica entre la marca Kampfmesser."
+            y "Estoy segura de que tiene sus usos, pero... bueno. Creo que mi preferencia es conocida, ¿sí? El diseño tanto permite que la punta del cuchillo funcione como una palanca debido a la fuerza del diseño... pero, pasando de eso..."
+            y "Ambos tienen más variantes con vainas y empuñaduras de color arena. Como probablemente podrías adivinar, son para su uso en entornos desérticos; vieron cierta popularidad en Afganistán."
+            y "Mencioné esto antes, pero parece que los cuchillos en sí no cambiaron mucho para el ambiente caluroso..."
+            y "También hay un KM4000. Eickhorn recibió solicitudes de las Fuerzas Armadas Alemanas para una multifuncionalidad más expandida en sus cuchillos, y esta fue su respuesta. Vuelve a la punta estilo tanto, ¡pero también incluye una sierra completa en el lomo junto con un cortador de alambre real!"
+            y "Todas estas derivaciones y variantes nacidas de un solo cuchillo. Son en última instancia lo mismo en el fondo, solo con algunas alteraciones."
+            y "Las hojas en sí están compuestas de Böhler N695. Es un tipo particular de aleación diseñada para mantener un filo mejor que el acero 1.4110 anterior. Aunque también podrías encontrar cuchillos siendo producidos con 1.4125..."
+            y "Yendo más allá, los cuchillos vienen en variantes parcialmente serradas o de borde recto para una variedad de casos de uso, dependiendo de lo que te veas necesitando más. Muchas personas optan por las versiones parcialmente serradas. Tener una sierra a mano es... bueno, útil."
+            y "Y antes de que se me olvide, un rasgo interesante que todos parecen compartir se encuentra en el mango del cuchillo mismo. En la parte inferior hay una punta rompecristales; ¡un bloque sólido de metal diseñado para exactamente lo que suena!"
+            y "¡Es en realidad el final de la hoja del cuchillo! Los cuchillos son de espiga completa; es decir, una pieza sólida y completa de acero. ¡En esta situación, se siente como si ninguna parte del metal se desperdiciara!"
+            y "La familia Kampfmesser es increíblemente diversa en sus varios enfoques de lo que es esencialmente la misma hoja. Aprecio su trabajo en asegurarse de que haya un poco de algo para todos..."
+        "Está bien, [persistent.yuri_nickname]. No tienes que dar una lección de historia sobre cada variación.":
 
-            y "Quite. If I did, we'd be here for a while, I believe..."
-            y "Ah, but I'm rambling again. My apologies, [player]."
-            y "Is there any other blade of which you'd have me speak on?"
+            y "Cierto. Si lo hiciera, estaríamos aquí por un tiempo, creo..."
+            y "Ah, pero estoy divagando de nuevo. Mis disculpas, [player]."
+            y "¿Hay alguna otra hoja de la que quisieras que hable?"
     call screen knife_wall()
 
 label Kabar:
-    y "Oh, yes, the famous USN Mark 2 Utility Knife. Many military enthusiasts know this blade well; you've almost certainly encountered it through some form of media."
-    y "You may know it better by its contemporary name; The Ka-Bar!"
-    y "A combat knife first adopted by the United States Marine Corp, and later the Navy. It first saw service in November of 1942, after Marines complained about their previous blade of choice, the Mark I trench knife..."
-    y "It was designed both to be used for combat, but also as a tool. The environments many soldiers found themselves in proved to be much more amiable with this at their sides."
-    y "There's a funny story about the trademark name KA-BAR I recall reading once."
-    y "Apparently, the company that owns the trademark received a letter sometime in the 1920s from a fur trapper."
-    y "The trapper claimed that he had used one of their blades to finish off a wounded bear that had assaulted him after his rifle had jammed."
-    y "The letter was quite illegible, however; only fragments of the phrase 'kill a bear' could be read, which came out as 'ka bar'. The company found this to be high praise, as well as a great advertising point."
-    y "As such, the brand 'KA-BAR' was established; a knife good enough to kill even a bear."
-    y "Now, of course, this report leaves much to be discussed. Of course, the biggest question is; did it actually kill a bear?"
-    y "Who knows? I'm certainly not about to find out...and I hope you aren't, either, [player]!"
-    y "Hehe...that was fun. Is there any other knife you'd like me to talk about?"
+    y "Oh, sí, el famoso Cuchillo de Utilidad USN Mark 2. Muchos entusiastas militares conocen bien esta hoja; casi con certeza te has encontrado con ella a través de alguna forma de medio."
+    y "Tal vez lo conozcas mejor por su nombre contemporáneo; ¡El Ka-Bar!"
+    y "Un cuchillo de combate adoptado primero por el Cuerpo de Marines de los Estados Unidos, y más tarde por la Armada. Vio servicio por primera vez en noviembre de 1942, después de que los Marines se quejaran de su hoja de elección anterior, el cuchillo de trinchera Mark I..."
+    y "Fue diseñado tanto para ser utilizado en combate, como también como una herramienta. Los entornos en los que se encontraron muchos soldados demostraron ser mucho más amigables con esto a su lado."
+    y "Hay una historia divertida sobre el nombre comercial KA-BAR que recuerdo haber leído una vez."
+    y "Aparentemente, la compañía propietaria de la marca registrada recibió una carta en algún momento de la década de 1920 de un cazador de pieles."
+    y "El cazador afirmó que había usado una de sus hojas para acabar con un oso herido que lo había asaltado después de que su rifle se atascara."
+    y "La carta era bastante ilegible, sin embargo; solo fragmentos de la frase 'matar un oso' (kill a bear) se podían leer, lo que salió como 'ka bar'. La compañía encontró que esto era un gran elogio, así como un gran punto publicitario."
+    y "Como tal, se estableció la marca 'KA-BAR'; un cuchillo lo suficientemente bueno como para matar incluso a un oso."
+    y "Ahora, por supuesto, este informe deja mucho que discutir. Por supuesto, la gran pregunta es; ¿realmente mató a un oso?"
+    y "¿Quién sabe? Ciertamente no estoy por averiguarlo... ¡y espero que tú tampoco, [player]!"
+    y "Jeje... eso fue divertido. ¿Hay algún otro cuchillo del que te gustaría que hablara?"
     call screen knife_wall()
 
 label Bowie:
-    y "Oh, my, the Bowie Knife...quite hard to miss, isn't it, [player]?"
-    y "It's an almost comically large blade, going up to 30cm...that's to say, 12 inches in length."
-    y "The history behind it is quite funny, too. It was originally made for a man named Jim Bowie for use in a duel."
-    y "I believe the duel is known as the Sandbar Fight. Quite a sordid affair it ended up being..."
-    y "It was less a 'duel' and more a brawl between a large number of participants. Guns were drawn, shots fired, and well..."
-    y "The knife has a fascinating history, is the point of this all. Bowie even managed to win with the knife despite having been shot, stabbed, and nearly beaten to death."
-    y "The blade itself carries along that same spirit of hardiness. You'd be hard pressed to find a situation in which this pretty number wouldn't help...be it through intimidation or force. How did that line go? 'That's not a knife...{i}THIS{/i} is a knife'?"
-    y "Not that I'm saying you should go and pick fights! Or put yourself in a situation in which a fight could be picked to begin with!"
-    y "No, no...please, be safe! Knife or no knife!"
-    y "Goodness...sorry about that. I worry for you, from time to time, is all."
-    y "Was there any other piece of my collection you'd like to discuss?"
+    y "Oh, cielos, el Cuchillo Bowie... bastante difícil de perder, ¿no es así, [player]?"
+    y "Es una hoja casi cómicamente grande, llegando hasta los 30 cm... es decir, 12 pulgadas de largo."
+    y "La historia detrás de él es bastante divertida, también. Originalmente fue hecho para un hombre llamado Jim Bowie para su uso en un duelo."
+    y "Creo que el duelo se conoce como la Pelea de Sandbar. Un asunto bastante sórdido terminó siendo..."
+    y "Fue menos un 'duelo' y más una pelea entre un gran número de participantes. Se sacaron armas, se dispararon tiros, y bueno..."
+    y "El cuchillo tiene una historia fascinante, es el punto de todo esto. Bowie incluso logró ganar con el cuchillo a pesar de haber recibido disparos, puñaladas y casi ser golpeado hasta la muerte."
+    y "La hoja misma lleva consigo ese mismo espíritu de resistencia. Sería difícil encontrar una situación en la que este bonito número no ayudaría... ya sea a través de la intimidación o la fuerza. ¿Cómo iba esa línea? 'Ese no es un cuchillo... {i}ESTE{/i} es un cuchillo'?"
+    y "¡No es que esté diciendo que deberías ir y buscar peleas! ¡O ponerte en una situación en la que se podría buscar una pelea para empezar!"
+    y "No, no... por favor, ¡ten cuidado! ¡Cuchillo o no cuchillo!"
+    y "Cielos... siento eso. Me preocupo por ti, de vez en cuando, es todo."
+    y "¿Había alguna otra pieza de mi colección que te gustaría discutir?"
     call screen knife_wall()
 
 label Jagdkommando:
-    y "Ah, the Jagdkommando tri-dagger... Amongst the most dangerous knives in the world."
-    y "A 7-inch twisted blade made from 6AL-4V Titanium, with a grenade-like handle, which is also made from the same material."
-    y "Regarding comfort and handling, it isn't the best, but the handle does give the user a solid grip."
-    y "The blade is hollowed, which further enhances its menacing looks and reduces the overall weight of the dagger."
-    y "The name comes from the Austrian Special Forces Operation group, and it lives up to its elite namesake."
-    y "The dagger comes with a custom hard-coated 6061-T6 tubular sheath to protect the blade and the user, and has storage for a compass as well!"
-    y "The very unique style of this knife intrigues me a lot, and I've read many things about its capabilities."
-    y "Although, as you can see, [player], this is only a safe, dull knife, since the actual one is illegal in many countries."
-    y "If there was someone who'd be unfortunate enough to be stabbed by it, no doctor could even stitch the penetrated area because of the twisted blades making a pyramid-shaped wound that, even if it was stitched from the surface, wouldn't staunch bleeding, thus making it an internal wound."
-    y "Its sturdiness is top-notch, as well, therefore the durability and reliability sky-rocket to a very high point, and when combined with the grip it offers, you could even stab through bricks, if you're powerful enough."
-    y "But, despite this only being a dull knife, I still like it for its aesthetics and overall appearance, not that I don't like my other knives, too...!"
-    y "{cps=500}Oh no I'm being embarrassing again!-{/cps}{nw}"
-    y "I'm glad that you love knives as much as I do, [player]."
+    y "Ah, la tri-daga Jagdkommando... Entre los cuchillos más peligrosos del mundo."
+    y "Una hoja retorcida de 7 pulgadas hecha de Titanio 6AL-4V, con un mango similar a una granada, que también está hecho del mismo material."
+    y "En cuanto a comodidad y manejo, no es el mejor, pero el mango le da al usuario un agarre sólido."
+    y "La hoja está vaciada, lo que mejora aún más su aspecto amenazante y reduce el peso total de la daga."
+    y "El nombre proviene del grupo de Operaciones de Fuerzas Especiales de Austria, ¡y está a la altura de su tocayo de élite!"
+    y "La daga viene con una vaina tubular de 6061-T6 con recubrimiento duro personalizada para proteger la hoja y al usuario, ¡y tiene almacenamiento para una brújula también!"
+    y "El estilo único de este cuchillo me intriga mucho, y he leído muchas cosas sobre sus capacidades."
+    y "Aunque, como puedes ver, [player], este es solo un cuchillo seguro y desafilado, ya que el real es ilegal en muchos países."
+    y "Si hubiera alguien lo suficientemente desafortunado como para ser apuñalado por él, ningún médico podría ni siquiera coser el área penetrada debido a que las hojas retorcidas hacen una herida en forma de pirámide que, incluso si se cosiera desde la superficie, no detendría el sangrado, haciéndola así una herida interna."
+    y "Su robustez también es de primera categoría, por lo tanto la durabilidad y confiabilidad se disparan a un punto muy alto, y cuando se combina con el agarre que ofrece, incluso podrías apuñalar a través de ladrillos, si eres lo suficientemente fuerte."
+    y "Pero, a pesar de que este solo es un cuchillo desafilado, todavía me gusta por su estética y apariencia general, ¡no es que no me gusten mis otros cuchillos, también...!"
+    y "{cps=500}¡Oh no estoy siendo vergonzosa de nuevo!- {/cps}{nw}"
+    y "Me alegra que ames los cuchillos tanto como yo, [player]."
     if persistent.lovecheck:
-        y "I love you."
+        y "Te amo."
     else:
         pass
     call screen knife_wall()
 
 label Bone:
-    y "Have you ever read about knives made from bone? They've been used to create blades in many cultures, and not just in the distant past."
-    y "I read a study recently about people in the Sepik region of New Guinea, who made them for use in battle as recently as the 1970s."
-    y "There doesn't seem to be a special name for these weapons, so anthropologists are just calling them 'bone daggers.'"
-    y "Many such pieces have elaborate patterns etched into them, but others are strictly utilitarian."
-    y "What's especially fascinating is that the bones they're made from are acquired from two completely different sources."
-    y "One is cassowaries, a very large type of flightless bird common to the area, and the second is... their own ancestors."
-    y "According to scholars, the daggers of human origin were sourced from the femurs of men who had proven themselves in battle, often the warriors' own fathers, or other highly respected men in the community."
-    y "Thus, taking a part of them with you into battle was seen as a way to add their strength to your own."
-    y "As for cassowary daggers, the birds are rightly seen as powerful creatures—you can really see their dinosaur ancestry when you look at them!"
-    y "Wielding a part of one is also thought to imbibe you with their strength, but the ones made of human bone are held in much higher regard."
-    y "A study showed that while human and cassowary femurs are basically equal in strength, the process of carving them into blades is different depending on the source."
-    y "Cassowary bones are shaved down more, making them thinner but consequently weaker. In contrast, human bones are cut to keep their natural curvature, resulting in a thicker but stronger blade, and feature decorative etching as well."
-    y "I was actually lucky enough to acquire a bone dagger of my own! Oh, don't worry, it is from a cassowary, not a human. At least... that's what its plain appearance and overall thin profile point to it being."
-    y "Although I did buy it online, so it's impossible to say for sure..."
+    y "¿Alguna vez has leído sobre cuchillos hechos de hueso? Han sido utilizados para crear hojas en muchas culturas, y no solo en el pasado lejano."
+    y "Leí un estudio recientemente sobre personas en la región Sepik de Nueva Guinea, que los hacían para su uso en batalla tan recientemente como en la década de 1970."
+    y "No parece haber un nombre especial para estas armas, por lo que los antropólogos solo las llaman 'dagas de hueso'."
+    y "Muchas de esas piezas tienen patrones elaborados grabados en ellas, pero otras son estrictamente utilitarias."
+    y "Lo que es especialmente fascinante es que los huesos de los que están hechos se adquieren de dos fuentes completamente diferentes."
+    y "Una son los casuarios, un tipo muy grande de ave no voladora común en el área, y la segunda es... sus propios antepasados."
+    y "Según los estudiosos, las dagas de origen humano se obtuvieron de los fémures de hombres que se habían probado a sí mismos en batalla, a menudo los propios padres de los guerreros, u otros hombres altamente respetados en la comunidad."
+    y "Por lo tanto, llevar una parte de ellos contigo a la batalla se veía como una forma de agregar su fuerza a la tuya."
+    y "En cuanto a las dagas de casuario, las aves son vistas con razón como criaturas poderosas: ¡realmente puedes ver su ascendencia de dinosaurios cuando las miras!"
+    y "Empuñar una parte de uno también se cree que te imbuye con su fuerza, pero las hechas de hueso humano se tienen en mucha mayor estima."
+    y "Un estudio mostró que si bien los fémures humanos y de casuario son básicamente iguales en fuerza, el proceso de tallarlos en hojas es diferente dependiendo de la fuente."
+    y "Los huesos de casuario se afeitan más, haciéndolos más delgados pero consecuentemente más débiles. En contraste, los huesos humanos se cortan para mantener su curvatura natural, resultando en una hoja más gruesa pero más fuerte, y presentan grabados decorativos también."
+    y "¡De hecho tuve la suerte de adquirir una daga de hueso propia! Oh, no te preocupes, es de un casuario, no de un humano. Al menos... eso es lo que su apariencia simple y perfil general delgado apuntan a que sea."
+    y "Aunque la compré en línea, así que es imposible decirlo con certeza..."
     call screen knife_wall()
 
 label Filet:
-    y "One of the first knives I ever bought for myself. It's actually a fillet knife, meant for filleting and preparing fish."
-    y "It typically features a long, flexible blade with a sharp point, allowing it to maneuver around bones and remove skin from fish effectively."
-    y "It's not the highest quality, but it is still genuinely useful, unlike some others I bought."
-    y "Many traditional Japanese dishes involve fish, so knowing how to debone them is a useful skill."
-    y "The shape of this knife's handle is actually very practical, as you do not want to risk your fingers coming into accidental contact with the sharp blade if the job happens to get slippery."
-    y "I was able to get Natsuki talking about cooking/baking once. It was quite enjoyable, up until I asked if she ever made healthy food. That... wasn't where I had intended the conversation to go."
-    y "Predictably, it didn't end well, either."
+    y "Uno de los primeros cuchillos que compré por mí misma. En realidad es un cuchillo fileteador, destinado a filetear y preparar pescado."
+    y "Típicamente presenta una hoja larga y flexible con una punta afilada, lo que le permite maniobrar alrededor de los huesos y quitar la piel del pescado de manera efectiva."
+    y "No es de la más alta calidad, pero sigue siendo genuinamente útil, a diferencia de algunos otros que compré."
+    y "Muchos platos tradicionales japoneses involucran pescado, así que saber cómo deshuesarlos es una habilidad útil."
+    y "La forma del mango de este cuchillo es en realidad muy práctica, ya que no quieres arriesgar que tus dedos entren en contacto accidental con la hoja afilada si el trabajo resulta volverse resbaladizo."
+    y "Pude hacer que Natsuki hablara sobre cocinar/hornear una vez. Fue bastante agradable, hasta que le pregunté si alguna vez hacía comida saludable. Eso... no era a donde había intentado que fuera la conversación."
+    y "Previsiblemente, tampoco terminó bien."
     call screen knife_wall()
 
 label Butterfly:
-    y "As you likely know, this is a folding knife, also known as a butterfly knife."
-    y "In addition to its obvious use as a weapon, it makes a lovely multi-use tool; many professions all but require keeping one folded in your pocket."
-    y "Consequently, I find butterfly knives are very often designed to be both beautiful and functional. I actually own more than one, but this is by far the most appealing."
-    y "It originated in the Philippines and gained popularity worldwide due to its unique flipping and spinning techniques."
-    y "Butterfly knives are often used for tricks, flipping, and display purposes rather than as practical cutting tools."
-    y "While illegal in some jurisdictions due to safety concerns and association with criminal activities, butterfly knives are legal and widely collected in many places."
+    y "Como probablemente sepas, este es un cuchillo plegable, también conocido como cuchillo mariposa."
+    y "Además de su uso obvio como arma, hace una herramienta multiusos encantadora; muchas profesiones casi requieren mantener uno doblado en tu bolsillo."
+    y "En consecuencia, encuentro que los cuchillos mariposa a menudo están diseñados para ser tanto hermosos como funcionales. De hecho, poseo más de uno, pero este es, con mucho, el más atractivo."
+    y "Se originó en Filipinas y ganó popularidad en todo el mundo debido a sus técnicas únicas de volteo y giro."
+    y "Los cuchillos mariposa se utilizan a menudo para trucos, volteos y propósitos de exhibición en lugar de como herramientas de corte prácticas."
+    y "Si bien son ilegales en algunas jurisdicciones debido a preocupaciones de seguridad y asociación con actividades delictivas, los cuchillos mariposa son legales y ampliamente coleccionados en muchos lugares."
     call screen knife_wall()
 
 label Grater:
-    y "That... is a stylized vegetable peeler. I bought it at a craft fair, so it has some hope of actually being food-safe, but mostly I was taken by its elegantly simple design."
-    y "I didn't realize what it was until I read the care instructions later!"
-    y "While it's not uncommon in fiction to see full-sized swords with cutouts like this one, on the grounds that it makes the blade lighter, it's actually the opposite of practical in real life."
-    y "Such a design only makes the blade significantly weaker."
-    y "Real swords are actually much lighter than you might expect; contrary to what some movies would have you believe, they're not made by pouring molten metal into molds."
-    y "Instead, the blades are formed by folding."
-    y "This process involves heating the metal and then pounding it into shape, many times over, which removes impurities in the material and greatly strengthens the blade."
-    y "It's truly an art form."
-    y "Also, grater knives are essential tools in culinary tasks such as garnishing, baking, and adding flavor to dishes."
-    y "They come in various sizes and styles, including handheld graters, box graters, and rotary graters."
+    y "Eso... es un pelador de verduras estilizado. Lo compré en una feria de artesanía, así que tiene alguna esperanza de ser seguro para los alimentos, ¡pero sobre todo me atrajo su diseño elegantemente simple!"
+    y "¡No me di cuenta de lo que era hasta que leí las instrucciones de cuidado más tarde!"
+    y "Si bien no es raro en la ficción ver espadas de tamaño completo con recortes como este, con el argumento de que hace que la hoja sea más ligera, en realidad es lo opuesto a práctico en la vida real."
+    y "Tal diseño solo hace que la hoja sea significativamente más débil."
+    y "Las espadas reales son en realidad mucho más ligeras de lo que podrías esperar; contrario a lo que algunas películas te harían creer, no están hechas vertiendo metal fundido en moldes."
+    y "En cambio, las hojas se forman plegando."
+    y "Este proceso implica calentar el metal y luego golpearlo para darle forma, muchas veces, lo que elimina las impurezas en el material y fortalece enormemente la hoja."
+    y "Es verdaderamente una forma de arte."
+    y "Además, los cuchillos ralladores son herramientas esenciales en tareas culinarias como adornar, hornear y agregar sabor a los platos."
+    y "Vienen en varios tamaños y estilos, incluyendo ralladores de mano, ralladores de caja y ralladores rotativos."
     call screen knife_wall()
 
 label Dagger1:
-    y "...I must confess I'm not immune to the 'rule of cool.' I saw it, I liked it, and thus I bought it. It's functional as a letter opener, but nothing more."
+    y "...Debo confesar que no soy inmune a la 'regla de lo genial'. Lo vi, me gustó, y por eso lo compré. Es funcional como abrecartas, pero nada más."
     call screen knife_wall()
 
 label Dagger2:
-    y "Just an impulse purchase, I'm afraid. I saw it and was reminded of a blade in one of the books I was reading, and I couldn't resist. I actually bought two that day... and then one of them broke when I attempted to actually use it, and it hit the cutting board."
-    y "I wish I was joking! At that point, I realized decorative blades likely shouldn't be used on food regardless."
+    y "Solo una compra impulsiva, me temo. Lo vi y me recordó a una hoja en uno de los libros que estaba leyendo, y no pude resistirme. De hecho compré dos ese día... y luego uno de ellos se rompió cuando intenté usarlo realmente, y golpeó la tabla de cortar."
+    y "¡Desearía estar bromeando! En ese momento, me di cuenta de que las hojas decorativas probablemente no deberían usarse en la comida de todos modos."
     call screen knife_wall()
 
 label Empty:
-    y "This spot here is for the kitchen knife I have within me if you were curious."
-    y "You pretty much know what a kitchen knife works for so I won't go into much detail."
+    y "Este lugar aquí es para el cuchillo de cocina que tengo conmigo si tenías curiosidad."
+    y "Prácticamente sabes para qué sirve un cuchillo de cocina así que no entraré en muchos detalles."
     call screen knife_wall()
 
 label Kunai:
-    y "I'm guessing you're familiar with this one: it's a kunai!"
-    y "Media portrayals would have you believe it's exclusively used as a weapon, but historically it was more of a multi-use tool, most commonly for farming or stonework."
-    y "It's likely not coincidental that the kunai somewhat resembles a masonry trowel."
-    y "In fiction, you see them used largely as throwing weapons, but from what I've read, they were more practical for stabbing or slashing."
-    y "Another common use in media is climbing aids, stabbing them into a cliff or even a stone wall to scale it."
-    y "As simple as the design is, the kunai is suited to many different functions. In terms of weaponry, the loop at the end allows them to be tied to poles as makeshift spears; the handle can also be wrapped to provide a better grip."
-    y "Originally used as a farming implement for digging, planting, and prying, kunai knives later became associated with ninja warriors and popular culture."
-    y "Kunai knives are known for their simple and utilitarian design, featuring a sturdy blade and a looped handle for improved grip and control."
-    y "In modern times, kunai knives are often used in martial arts training, cosplay, and as decorative or collectible items."
+    y "Supongo que estás familiarizado con este: ¡es un kunai!"
+    y "Las representaciones en los medios te harían creer que se usa exclusivamente como arma, pero históricamente era más una herramienta de uso múltiple, más comúnmente para la agricultura o la albañilería."
+    y "Probablemente no sea una coincidencia que el kunai se parezca un poco a una paleta de albañilería."
+    y "En la ficción, los ves usados en gran medida como armas arrojadizas, pero por lo que he leído, eran más prácticos para apuñalar o cortar."
+    y "Otro uso común en los medios son las ayudas para escalar, clavándolos en un acantilado o incluso en un muro de piedra para escalarlo."
+    y "Por simple que sea el diseño, el kunai se adapta a muchas funciones diferentes. En términos de armamento, el lazo en el extremo permite atarlos a postes como lanzas improvisadas; el mango también se puede envolver para proporcionar un mejor agarre."
+    y "Originalmente utilizados como implemento agrícola para cavar, plantar y hacer palanca, los cuchillos kunai se asociaron más tarde con guerreros ninja y la cultura popular."
+    y "Los cuchillos kunai son conocidos por su diseño simple y utilitario, con una hoja resistente y un mango con lazo para mejorar el agarre y el control."
+    y "En los tiempos modernos, los cuchillos kunai se utilizan a menudo en el entrenamiento de artes marciales, cosplay y como artículos decorativos o coleccionables."
     call screen knife_wall()
 
 label Paring:
-    y "Just a paring knife, for preparing fruits and vegetables. It's actually one of the highest quality blades I own; I inherited rather than bought it. If you're curious, it originally belonged to..."
+    y "Solo un cuchillo mondador, para preparar frutas y verduras. En realidad es una de las hojas de mayor calidad que poseo; lo heredé en lugar de comprarlo. Si tienes curiosidad, originalmente pertenecía a..."
     y "..."
-    y "...I can't remember who. I really, really dislike being confronted with reminders that virtually every memory I have, prior to that one week in the club, is false."
-    y "...anyway."
-    y "It is designed for tasks that require precision and control, such as peeling, trimming, and shaping fruits and vegetables."
-    y "Paring knives come in various styles, including straight-edge, serrated, and bird's beak (curved) blades, each suited to different cutting techniques."
-    y "They are essential tools for chefs and home cooks alike, facilitating delicate and intricate culinary preparations with ease."
+    y "...No puedo recordar a quién. Realmente, realmente me disgusta ser confrontada con recordatorios de que virtualmente cada recuerdo que tengo, antes de esa semana en el club, es falso."
+    y "...de todos modos."
+    y "Está diseñado para tareas que requieren precisión y control, como pelar, recortar y dar forma a frutas y verduras."
+    y "Los cuchillos mondadores vienen en varios estilos, incluyendo hojas de borde recto, serradas y pico de pájaro (curvas), cada una adecuada para diferentes técnicas de corte."
+    y "Son herramientas esenciales tanto para chefs como para cocineros caseros, facilitando preparaciones culinarias delicadas e intrincadas con facilidad."
     call screen knife_wall()
 
 label Damascus:
-    y "This one is very special: it's Damascus steel!"
-    y "Damascus steel, from which Damascus knives are derived, has a rich history dating back centuries."
-    y "The origins of Damascus steel production can be traced to the Middle East, particularly the regions of Syria and Iran, as early as the 3rd century AD."
-    y "Historical Damascus steel was renowned for its exceptional strength, sharpness, and resilience, making it highly sought after for swords, knives, and other weapons."
-    y "The unique patterning in Damascus steel is created through a process of layering and forging different types of steel alloys, resulting in a distinctive rippled or wavy appearance."
-    y "Modern Damascus knives are crafted using pattern welding techniques that replicate the aesthetics of traditional Damascus steel."
-    y "These knives are constructed from layers of high-carbon and low-carbon steel alloys, which are forge-welded and manipulated to create intricate patterns."
-    y "The layering process not only enhances the visual appeal of the knife but also contributes to its strength, durability, and edge retention."
-    y "Damascus knives are prized possessions among collectors, chefs, and knife enthusiasts for their craftsmanship, performance, and historical significance."
-    y "The sharpness and durability of Damascus steel allow for precise and effortless cutting, making it a preferred choice among professional chefs and home cooks."
-    y "Damascus knives are often used for preparing meats, vegetables, fruits, and other ingredients with precision and finesse."
-    y "While prized for their beauty and craftsmanship, Damascus knives are also functional tools that excel in both performance and aesthetics."
+    y "Este es muy especial: ¡es acero de Damasco!"
+    y "El acero de Damasco, del cual se derivan los cuchillos de Damasco, tiene una rica historia que se remonta a siglos."
+    y "Los orígenes de la producción de acero de Damasco se pueden rastrear hasta el Medio Oriente, particularmente las regiones de Siria e Irán, tan temprano como el siglo III d.C."
+    y "El acero de Damasco histórico era famoso por su resistencia excepcional, nitidez y resistencia, lo que lo hacía muy buscado para espadas, cuchillos y otras armas."
+    y "El patrón único en el acero de Damasco se crea a través de un proceso de estratificación y forjado de diferentes tipos de aleaciones de acero, resultando en una apariencia ondulada o rizada distintiva."
+    y "Los cuchillos de Damasco modernos se elaboran utilizando técnicas de soldadura por patrón que replican la estética del acero de Damasco tradicional."
+    y "Estos cuchillos están construidos a partir de capas de aleaciones de acero de alto carbono y bajo carbono, que se sueldan por forja y se manipulan para crear patrones intrincados."
+    y "El proceso de estratificación no solo mejora el atractivo visual del cuchillo, sino que también contribuye a su resistencia, durabilidad y retención de filo."
+    y "Los cuchillos de Damasco son posesiones preciadas entre coleccionistas, chefs y entusiastas de cuchillos por su artesanía, rendimiento y significado histórico."
+    y "La nitidez y durabilidad del acero de Damasco permiten un corte preciso y sin esfuerzo, lo que lo convierte en una opción preferida entre chefs profesionales y cocineros caseros."
+    y "Los cuchillos de Damasco se utilizan a menudo para preparar carnes, verduras, frutas y otros ingredientes con precisión y delicadeza."
+    y "Si bien son apreciados por su belleza y artesanía, los cuchillos de Damasco también son herramientas funcionales que sobresalen tanto en rendimiento como en estética."
     call screen knife_wall()
 
 label Kukri:
-    y "The kukri knife is a traditional Nepalese blade characterized by its distinctive inwardly curved edge."
-    y "It serves as both a utility tool and a weapon, widely used by the Nepalese Gurkha soldiers and various ethnic groups in Nepal."
-    y "The kukri features a heavy, forward-weighted blade designed for chopping, slicing, and hacking through tough materials."
-    y "Its unique shape and weight distribution make it efficient for cutting wood, clearing brush, and even combat situations."
-    y "The kukri often holds cultural and religious significance in Nepal and is commonly used in ceremonies and rituals."
+    y "El cuchillo kukri es una hoja tradicional nepalí caracterizada por su distintivo borde curvado hacia adentro."
+    y "Sirve como herramienta de utilidad y arma, ampliamente utilizada por los soldados Gurkha de Nepal y varios grupos étnicos en Nepal."
+    y "El kukri presenta una hoja pesada, ponderada hacia adelante, diseñada para cortar, rebanar y hackear materiales resistentes."
+    y "Su forma y distribución de peso únicas lo hacen eficiente para cortar madera, limpiar matorrales e incluso situaciones de combate."
+    y "El kukri a menudo tiene un significado cultural y religioso en Nepal y se usa comúnmente en ceremonias y rituales."
     call screen knife_wall()
 
 label Saw:
-    y "The saw knife is a versatile cutting tool that combines the functionality of a knife with a serrated edge similar to that of a saw."
-    y "It is commonly used in outdoor activities such as camping, hiking, and survival situations for cutting through wood, bone, and other tough materials."
-    y "Saw knives may feature a fixed or folding blade design, with the serrated portion typically located near the handle for increased control and precision."
-    y "The serrated edge allows for more aggressive cutting action compared to traditional knife edges, making saw knives ideal for tasks that require cutting through fibrous or hard materials."
-    y "Folding saw knives are popular among outdoor enthusiasts for their portability and safety features, as the blade can be folded into the handle when not in use."
-    y "In survival situations, saw knives can be crucial for gathering resources, constructing shelters, and improvising tools for hunting and fishing."
+    y "El cuchillo de sierra es una herramienta de corte versátil que combina la funcionalidad de un cuchillo con un borde serrado similar al de una sierra."
+    y "Se utiliza comúnmente en actividades al aire libre como acampar, hacer senderismo y situaciones de supervivencia para cortar madera, hueso y otros materiales resistentes."
+    y "Los cuchillos de sierra pueden presentar un diseño de hoja fija o plegable, con la porción serrada típicamente ubicada cerca del mango para mayor control y precisión."
+    y "El borde serrado permite una acción de corte más agresiva en comparación con los bordes de cuchillo tradicionales, lo que hace que los cuchillos de sierra sean ideales para tareas que requieren cortar materiales fibrosos o duros."
+    y "Los cuchillos de sierra plegables son populares entre los entusiastas del aire libre por su portabilidad y características de seguridad, ya que la hoja se puede plegar en el mango cuando no está en uso."
+    y "En situaciones de supervivencia, los cuchillos de sierra pueden ser cruciales para recolectar recursos, construir refugios e improvisar herramientas para la caza y la pesca."
     call screen knife_wall()
 
 label purple_a1:
     $ show_chr("A-AAAAA-AAAA")
     y "Hmm, okay [player]."
     $ show_chr("A-ABAAA-ALAA")
-    y "Did one or more of my knives got your interest?"
-    y "Or did you forgot the name of it?"
+    y "¿Uno o más de mis cuchillos despertó tu interés?"
+    y "¿O olvidaste el nombre?"
     $ show_chr("A-CBAAA-ALAA")
-    y "Well, I don't think that matters."
+    y "Bueno, no creo que eso importe."
     $ tc_class.transition("yuri_knives", speed="now")
     hide yuri_sit
     call screen knife_wall()
 
 label purple_a2:
     $ show_chr("A-AAAAA-AAAA")
-    y "I don't see why not."
-    y "Surely you want to take a look at the rest of the room anyway."
+    y "No veo por qué no."
+    y "Seguramente quieres echar un vistazo al resto de la habitación de todos modos."
     if persistent.bg == "yuri_kotatsu_1":
         menu:
-            "To the front side of the Kotatsu.":
-                y "Alright."
+            "Al lado delantero del Kotatsu.":
+                y "Muy bien."
                 $ tc_class.transition("yuri_kotatsu_2", speed=3.0)
-            "To the desk.":
+            "Al escritorio.":
 
-                y "Alright."
+                y "Muy bien."
                 $ tc_class.transition("yuri_desk", speed=3.0)
     elif persistent.bg == "yuri_kotatsu_2":
         menu:
-            "To the back side of the Kotatsu.":
-                y "Alright."
+            "Al lado trasero del Kotatsu.":
+                y "Muy bien."
                 $ tc_class.transition("yuri_kotatsu_1", speed=3.0)
-            "To the desk.":
+            "Al escritorio.":
 
-                y "Alright."
+                y "Muy bien."
                 $ tc_class.transition("yuri_desk", speed=3.0)
 
     elif persistent.bg == "yuri_desk":
         menu:
-            "To the back side of the Kotatsu.":
-                y "Alright."
+            "Al lado trasero del Kotatsu.":
+                y "Muy bien."
                 $ tc_class.transition("yuri_kotatsu_1", speed=3.0)
-            "To the front side of the Kotatsu.":
+            "Al lado delantero del Kotatsu.":
 
-                y "Alright."
+                y "Muy bien."
                 $ tc_class.transition("yuri_kotatsu_2", speed=3.0)
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

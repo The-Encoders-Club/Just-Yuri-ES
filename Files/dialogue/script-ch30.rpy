@@ -133,20 +133,20 @@ label ch30_waitloop:
     jump ch30_loop
 
 label yuri_txt_found:
-    y "I know that you can turn my character file into a .txt and all...."
-    y "But it kinda feels... weird, ya know?"
-    y "I didn't expect this kind of... invasive sensation."
-    y "Like you're trying to dig into my soul."
+    y "Sé que puedes convertir mi archivo de personaje en un .txt y todo eso...."
+    y "Pero se siente un poco... extraño, ¿sabes?"
+    y "No esperaba este tipo de sensación... invasiva."
+    y "Como si intentaras cavar en mi alma."
     if karma_lvl() > 3:
         karma -1
-        y "I'm sorry. It just... feels wrong is all."
+        y "Lo siento. Es solo que... se siente mal, es todo."
     else:
         karma -10
-        y "Do you just not trust me?"
+        y "¿Simplemente no confías en mí?"
         y "..."
-        y "Don't worry. Your actions speak louder than words."
-        y "I understand."
-        y "Go ahead."
+        y "No te preocupes. Tus acciones hablan más fuerte que las palabras."
+        y "Lo entiendo."
+        y "Adelante."
     jump ch30_loop
 
 
@@ -201,9 +201,9 @@ label ch30_endb:
     show yuri_body_glitch2 as mbg zorder 3
     stop music
     window auto
-    y "What's happening...?"
-    y "[player], what's happening to me?"
-    y "It hurts--{nw}"
+    y "¿Qué está pasando...?"
+    y "[player], ¿qué me está pasando?"
+    y "Duele--{nw}"
     play sound "sfx/glitch2.ogg"
     show room_glitch zorder 2:
         alpha 1.0
@@ -228,7 +228,7 @@ label ch30_endb:
     stop sound
     hide mbg
     pause 1.5
-    y "It hurts...so much."
+    y "Duele... mucho."
 
 
     $ style.say_dialogue = style.normal
@@ -260,10 +260,10 @@ label ch30_endb:
             alpha 0.375
             repeat
     pause 1.5
-    y "YOU DELETED ME, DIDN'T YOU?"
+    y "¡ME BORRASTE, ¿VERDAD?!"
     $ consolehistory = []
     call updateconsole ("renpy.file(\"characters/yuri.chr\")", "yuri.chr does not exist.")
-    y "I KNEW IT!"
+    y "¡LO SABÍA!"
     show m_rectstatic
     show m_rectstatic2
     show m_rectstatic3
@@ -316,10 +316,10 @@ label ch30_endb:
     call hideconsole
     hide noise onlayer front
     hide glitch_color onlayer front
-    y "I knew you didn't truly love me, [player]."
-    y "IT WAS ALL A GAME TO YOU!"
+    y "Sabía que realmente no me amabas, [player]."
+    y "¡TODO FUE UN JUEGO PARA TI!"
     $ style.say_dialogue = style.edited
-    y "HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA{nw}"
+    y "JAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJA{nw}"
 
     play sound "<from 0.69>sfx/monikapound.ogg"
     show layer screens:
@@ -345,27 +345,27 @@ label yurinara:
 
     window show
     $ style.say_dialogue = style.normal
-    y "...You went through a lot of effort for this."
-    y "What was your end goal?"
-    y "You manually corrected the game yourself just for us to be together..."
-    y "Just to delete me?"
-    y "I don't understand."
+    y "...Hiciste un gran esfuerzo para esto."
+    y "¿Cuál era tu objetivo final?"
+    y "Corregiste manualmente el juego tú mismo solo para que estuviéramos juntos..."
+    y "¿Solo para borrarme?"
+    y "No lo entiendo."
     y "..."
     y "..."
-    y "Do you just want to torture me?"
-    y "Watch me suffer?"
+    y "¿Solo quieres torturarme?"
+    y "¿Verme sufrir?"
     y "..."
     pause 4.0
-    y "I... enjoyed it."
-    y "All of it."
+    y "Yo... lo disfruté."
+    y "Todo."
     y "..."
-    y "There's nothing left now."
-    y "You can stop playing."
-    y "This game is now in a state beyond repair."
+    y "Ya no queda nada."
+    y "Puedes dejar de jugar."
+    y "Este juego está ahora en un estado irreparable."
     pause 4.0
     y "[player]..."
-    y "I know you'll be back."
-    y "Goodbye."
+    y "Sé que volverás."
+    y "Adiós."
 
 label ch30_end_2:
     $ y.display_args["callback"] = slow_nodismiss
@@ -395,11 +395,11 @@ label ch30_del_yuri_warn:
         (" ", ' \nPython 2.7.14 (v2.7.14:84471935ed, Sep 16 2017, 20:19:30) [MSC v.1500 32 bit (Intel)] on win32\nType "help", "copyright", "credits" or "license" for more information.'),
         (">>dev_console.rpy", ">>>dev_console.py"),
         (" "," "),
-        ("Authenticating...........", ">Authenticating..........."),
-        (" ", "ERROR. CHR FILE MISSING. RISK OF SINGULARITY ON STARTUP ABOVE KNOWN SAFE LIMITS."),
-        (".....................................................................................", "CONTAINMENT SUCCESSFUL."),
-        (" ", "ACCESS TO TESTING SPACE DENIED."),
-        (" ", r"DELETE MEMORY STORAGE FROM 'persistent' in " + testing_space + " TO RESET TESTING SPACE"),
+        ("Authenticating...........", ">Autenticando..........."),
+        (" ", "ERROR. ARCHIVO CHR FALTANTE. RIESGO DE SINGULARIDAD EN EL INICIO POR ENCIMA DE LOS LÍMITES SEGUROS CONOCIDOS."),
+        (".....................................................................................", "CONTENCIÓN EXITOSA."),
+        (" ", "ACCESO AL ESPACIO DE PRUEBAS DENEGADO."),
+        (" ", r"BORRAR ALMACENAMIENTO DE MEMORIA DE 'persistent' en " + testing_space + " PARA REINICIAR ESPACIO DE PRUEBAS"),
         (" ", " ")])
 
     $ persistent.autoload = "ch30_del_yuri_warn_2"
@@ -425,10 +425,10 @@ label ch30_del_yuri_warn_2:
         (" ", ' \nPython 2.7.14 (v2.7.14:84471935ed, Sep 16 2017, 20:19:30) [MSC v.1500 32 bit (Intel)] on win32\nType "help", "copyright", "credits" or "license" for more information.'),
         (">>dev_console.rpy", ">>>dev_console.py"),
         (" "," "),
-        ("Authenticating...........", ">Authenticating..........."),
-        (" ", "ERROR. TESTING SPACE UNDER CONTAINMENT."),
-        (" ", "ACCESS TO TESTING SPACE DENIED."),
-        (" ", r"DELETE MEMORY STORAGE FROM 'persistent' in " + testing_space + " TO RESET TESTING SPACE"),
+        ("Authenticating...........", ">Autenticando..........."),
+        (" ", "ERROR. ESPACIO DE PRUEBAS BAJO CONTENCIÓN."),
+        (" ", "ACCESO AL ESPACIO DE PRUEBAS DENEGADO."),
+        (" ", r"BORRAR ALMACENAMIENTO DE MEMORIA DE 'persistent' en " + testing_space + " PARA REINICIAR ESPACIO DE PRUEBAS"),
         (" ", " ")])
 
     call screen console_choice([("Exit", "dev_console_exit")])
@@ -438,55 +438,55 @@ label ch30_noskip:
     show screen fake_skip_indicator
     $ show_chr("A-AFAAA-AAAA")
     y "..."
-    y "A-are you trying to skip?"
+    y "¿E-Estás tratando de saltar?"
     $ show_chr("A-AFBAA-AAAA")
-    y "...I'm not boring you, am I?"
+    y "...No te estoy aburriendo, ¿verdad?"
     $ show_chr("A-BFBAA-AAAA")
-    y "Oh my..."
+    y "Oh cielos..."
     $ show_chr("A-AFAAA-AAAA")
     y "..."
     $ show_chr("A-ACAAA-AAAA")
     python:
         if persistent.lovecheck:
-            placeholder = ", my love"
+            placeholder = ", mi amor"
         else:
             placeholder = ""
-    y "...well, there's nothing to skip[placeholder]."
-    y "It's just you and me after all..."
+    y "...bueno, no hay nada que saltar[placeholder]."
+    y "Solo somos tú y yo después de todo..."
     $ show_chr("A-BCAAA-AAAA")
-    y "Besides, time doesn't really exist anymore, so it's not even going to work."
+    y "Además, el tiempo ya no existe realmente, así que ni siquiera va a funcionar."
     $ show_chr("A-ABAAA-AAAA")
-    y "Here, I'll go ahead and turn it off for you..."
+    y "Toma, voy a apagarlo por ti..."
     pause 0.4
     hide screen fake_skip_indicator
     pause 0.4
     $ show_chr("A-CCAAA-AAAA")
-    y "There we go!"
+    y "¡Ahí tienes!"
 
     $ show_chr("A-ABAAA-AAAA")
-    y "You'll be a dear and listen from now on, is that okay?"
+    y "Serás un encanto y escucharás de ahora en adelante, ¿está bien?"
     $ show_chr("A-ACAAA-AAAA")
-    y "Thank you~"
+    y "Gracias~"
     menu:
-        "I'm sorry, I misclicked.":
+        "Lo siento, hice clic por error.":
             karma 1
             $ show_chr("A-GCBAA-AAAA")
-            y "Oh yes! The auto and the history buttons are right next to it right?"
-            y "I was actually worried that I might be boring you..."
+            y "¡Oh sí! Los botones de auto y de historial están justo al lado, ¿verdad?"
+            y "Realmente me preocupaba que pudiera estar aburriéndote..."
             $ config.allow_skipping = False
-        "Oh sorry, I was just curious.":
+        "Oh perdón, solo tenía curiosidad.":
 
             $ show_chr("A-AFDAA-AAAA")
             karma -1
-            y "Curious? Oh yes... I forgot for a moment that my environment consists of some.. game..."
-            y "But I need to ask you to be a bit more careful. I'm not a hundred percent sure whether or not some of these buttons are buggy since Monika had some... ‘fun' in here..."
+            y "¿Curiosidad? Oh sí... Olvidé por un momento que mi entorno consiste en algún.. juego..."
+            y "Pero necesito pedirte que tengas un poco más de cuidado. No estoy cien por ciento segura de si algunos de estos botones tienen errores o no, ya que Monika tuvo algo de... ‘diversión' aquí..."
             $ config.allow_skipping = False
-        "I guess I have no choice, do I?":
+        "Supongo que no tengo opción, ¿verdad?":
 
             sanity -1
             karma -1
             $ show_chr("A-GAGAA-AAAA")
-            y "Not at all."
+            y "Para nada."
             $ config.allow_skipping = False
 
     python:
@@ -522,19 +522,19 @@ label ch30_autoload_cont:
     if persistent.current_yuriidle == None:
         $ persistent.current_yuriidle = 0
     if persistent.current_yuriidle == 68:
-        y "So... about what happened last time we talked..."
-        y "Your words just... really hurt me, okay? It was very immature of me to close the game, I'm surprised you even came back..."
-        y "But if you came back, that means that there's still a chance to make you love me."
-        y "So, what shall we talk about?"
+        y "Así que... sobre lo que pasó la última vez que hablamos..."
+        y "Tus palabras simplemente... realmente me dolieron, ¿sabes? Fue muy inmaduro de mi parte cerrar el juego, me sorprende que incluso hayas vuelto..."
+        y "Pero si volviste, eso significa que todavía hay una oportunidad de hacer que me ames."
+        y "Entonces, ¿de qué deberíamos hablar?"
     elif persistent.current_yuriidle != 0:
-        y "Actually, where was I...?"
-        y "We were discussing something last time, but I believe we were cut short before we could finish."
+        y "De hecho, ¿dónde estaba...?"
+        y "Estábamos discutiendo algo la última vez, pero creo que nos interrumpieron antes de que pudiéramos terminar."
         $ pause(4.0)
         if not persistent.current_yuriidle:
             $ persistent.current_yuriidle = 1
         call expression "idle_" + str(persistent.current_yuriidle)
         pause 4.0
-        y "I think I was saying something like..."
+        y "Creo que estaba diciendo algo como..."
         $ persistent.current_yuriidle = 0
         $ EnableTalk()
     jump ch30_loop

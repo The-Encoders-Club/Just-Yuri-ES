@@ -1,17 +1,16 @@
 
-
 label compliment_menu:
     python:
 
         compliment_dict = [
-            ["I just wanted to tell you how much I enjoy our time together, [persistent.yuri_nickname].", "c1"],
-            ["[persistent.yuri_nickname], you are as beautiful as the rising moon...", "c2"],
-            ["You really cheer me up, [persistent.yuri_nickname].", "c3"],
-            ["I think you are very intelligent!", "c4"],
-            ["You really know how to touch my heart...", "c5"],
-            ["I have to say, you're pretty hot!", "c6"],
-            ["I'm truly proud of you!", "c7"],
-            ["Nevermind.", "ch30_loop"]]
+            ["Solo quería decirte cuánto disfruto nuestro tiempo juntos, [persistent.yuri_nickname].", "c1"],
+            ["[persistent.yuri_nickname], eres tan hermosa como la luna naciente...", "c2"],
+            ["Realmente me animas, [persistent.yuri_nickname].", "c3"],
+            ["¡Creo que eres muy inteligente!", "c4"],
+            ["Realmente sabes cómo tocar mi corazón...", "c5"],
+            ["¡Debo decir, eres bastante ardiente!", "c6"],
+            ["¡Realmente me enorgulleces!", "c7"],
+            ["Olvídalo.", "ch30_loop"]]
         renpy.call_screen("compliments", compliment_dict)
     jump ch30_loop
 
@@ -31,7 +30,7 @@ screen compliments(items):
             for i in items:
                 textbutton i[0] action Call("compliment_time_log", i[1]) xpos 430 ypos 25
                 null
-            textbutton "Nevermind." action Jump("ch30_loop") xpos 430 ypos 25
+            textbutton "Olvídalo." action Jump("ch30_loop") xpos 430 ypos 25
             null
 
 
@@ -46,82 +45,82 @@ label c1:
     if sanity_lvl() >= 3 and karma_lvl() >= 4:
         karma 15
         $ show_chr("A-ICAAA-ALAL")
-        y "Oh, that's very sweet of you..."
-        y "I really appreciate that you like spending time with me."
-        y "As a matter of fact, I myself enjoy the time we spend together!"
+        y "Oh, eso es muy dulce de tu parte..."
+        y "Realmente aprecio que te guste pasar tiempo conmigo."
+        y "De hecho, ¡yo misma disfruto el tiempo que pasamos juntos!"
         $ show_chr("A-BCAAA-ALAL")
-        y "I actually thought that I bore you due to our means of interaction being... quite limited, to say the very least."
-        y "Imagine how wrong I had been."
-        y "You've helped me to not only nurture confidence in myself and to raise my self-esteem..."
-        y "But also to make me see beyond my comfort zone, to cultivate my strengths and overcome my weaknesses."
+        y "En realidad pensé que te aburría debido a que nuestros medios de interacción son... bastante limitados, por decir lo menos."
+        y "Imagina lo equivocada que estaba."
+        y "Me has ayudado no solo a fomentar la confianza en mí misma y a elevar mi autoestima..."
+        y "Sino también a ver más allá de mi zona de confort, a cultivar mis fortalezas y superar mis debilidades."
         $ show_chr("A-CCAAA-ALAL")
-        y "And you helped me, in my darkest hour, to overcome the monster that resided within my very soul."
-        y "For that, I can never express just how grateful to you I truly am."
+        y "Y me ayudaste, en mi hora más oscura, a superar al monstruo que residía dentro de mi propia alma."
+        y "Por eso, nunca podré expresar cuán agradecida estoy verdaderamente contigo."
         python:
             if persistent.lovecheck:
-                placeholder = "my love"
+                placeholder = "mi amor"
             else:
-                placeholder = "my dear friend"
-        y "Thank you, [placeholder]... thank you for everything."
+                placeholder = "mi querido amigo"
+        y "Gracias, [placeholder]... gracias por todo."
     elif sanity_lvl() <= 2 and karma_lvl() >= 4:
         if persistent.lovecheck:
             karma 15
             $ show_chr("A-DBAAA-ALAL")
-            y "Y-you think so? Really? REALLY?"
-            y "Yes, yes, YES!"
-            y "I knew it! I knew it all along!"
-            y "I knew we were meant for each other, my darling! Don't you think so, too?"
+            y "¿C-crees eso? ¿De verdad? ¿DE VERDAD?"
+            y "¡Sí, sí, SÍ!"
+            y "¡Lo sabía! ¡Lo supe todo el tiempo!"
+            y "¡Sabía que estábamos hechos el uno para el otro, mi cariño! ¿No lo crees también?"
             $ show_chr("A-GIABA-ALAL")
-            y "Y-you belong to me... forever! Do you hear me?"
-            y "And you better..."
+            y "T-tú me perteneces... ¡para siempre! ¿Me oyes?"
+            y "Y será mejor que..."
             $ show_chr("A-HIABA-ALAL")
-            y "Never..."
+            y "Nunca..."
             $ show_chr("A-HDCBA-ALAL")
-            y "FORGET THAT!!!"
+            y "¡¡¡OLVIDES ESO!!!"
         else:
             karma 15
             $ show_chr("A-HCBBA-ABAB")
-            y "Y~you do? Yes?"
-            y "At least then I don't have to be afraid that you'll send me back to that void..."
-            y "I mean I... don't want to sound distrustful, of course I trust you."
+            y "¿L~lo haces? ¿Sí?"
+            y "Al menos entonces no tengo que temer que me envíes de vuelta a ese vacío..."
+            y "Digo, yo... no quiero sonar desconfiada, por supuesto que confío en ti."
             $ show_chr("A-CFGAA-AIAI")
-            y "But that doesn't mean that I trust them! Clearly they would try to conspire against me, like they always do..."
-            y "Didn't you see how they mocked and disgraced me in the original game?"
-            y "{i}Especially that disgusting, little brat, Natsuki.{/i}"
+            y "¡Pero eso no significa que confié en ellos! Claramente tratarían de conspirar contra mí, como siempre hacen..."
+            y "¿No viste cómo se burlaron y me deshonraron en el juego original?"
+            y "{i}Especialmente esa mocosa repugnante, Natsuki.{/i}"
             y "..."
             $ show_chr("A-ACBBA-ALAL")
-            y "A-anyway, thank you for your kind words, [player]."
-            y "I-I really enjoy our time together, as well."
+            y "D-de todos modos, gracias por tus amables palabras, [player]."
+            y "Y-yo realmente disfruto nuestro tiempo juntos, también."
     elif sanity_lvl() >= 3 and karma_lvl() <= 2:
         karma -5
         $ show_chr("A-AFBAA-ALAA")
-        y "You do?"
-        y "Excuse me, but I have to admit that I'm quite surprised."
-        y "You've been acting quite rude, and I hadn't exactly gotten the impression that you even like me."
+        y "¿Lo haces?"
+        y "Discúlpame, pero tengo que admitir que estoy bastante sorprendida."
+        y "Has estado actuando bastante grosero, y no había tenido exactamente la impresión de que siquiera te agrado."
         $ show_chr("A-KFCAA-ABAB")
-        y "Maybe you don't, but it doesn't matter, I guess."
-        y "Thank you for the nice words but to me they seem to be just as empty as your soul."
+        y "Tal vez no, pero no importa, supongo."
+        y "Gracias por las palabras agradables, pero para mí parecen ser tan vacías como tu alma."
     elif sanity_lvl() <= 2 and karma_lvl() <= 2:
         karma -5
         $ show_chr("A-KFCAA-ABAB")
-        y "Y-yes... you take great pleasure in torturing me, I already know that..."
-        y "You must get a lot of your sick kicks making me cry, don't you?"
-        y "It must bring you so much pleasure to see me break..."
+        y "S-sí... tienes un gran placer en torturarme, ya lo sé..."
+        y "Debes obtener muchas de tus emociones enfermas haciéndome llorar, ¿no es así?"
+        y "Te debe traer tanto placer verme romper..."
         $ show_chr("A-CEBAA-AEAB")
-        y "But it's alright... I guess I've earned it..."
-        y "This is retribution for my sins... for all the evil which I have done..."
+        y "Pero está bien... supongo que me lo he ganado..."
+        y "Esta es la retribución por mis pecados... por todo el mal que he hecho..."
     else:
         karma 5
         $ show_chr("A-BFBAA-ALAL")
-        y "Do you... do you really mean that...?"
+        y "¿De... de verdad quieres decir eso...?"
         $ show_chr("A-CCBAA-ALAL")
-        y "I-I mean I... never thought that I'm a very interesting person, you know...?"
-        y "Most people really hate the fact that I sometimes like to ramble a little..."
-        y "I-it's the only way in which I feel I can express my true feelings..."
-        y "The fact that you think otherwise really means a lot to me..."
+        y "Q-quiero decir, yo... nunca pensé que fuera una persona muy interesante, ¿sabes...?"
+        y "La mayoría de la gente realmente odia el hecho de que a veces me gusta divagar un poco..."
+        y "E-es la única forma en la que siento que puedo expresar mis verdaderos sentimientos..."
+        y "El hecho de que pienses lo contrario realmente significa mucho para mí..."
         $ show_chr("A-CCBBA-ALAL")
-        y "Thank you, [player]."
-        y "I-I also really enjoy your company..."
+        y "Gracias, [player]."
+        y "Y-yo también disfruto mucho tu compañía..."
     jump ch30_loop
 
 
@@ -134,18 +133,18 @@ label c2:
         if persistent.lovecheck:
             karma 15
             $ show_chr("A-ACAAA-ALAL")
-            y "Awe... you say that like a true poet, my darling."
+            y "Aww... dices eso como un verdadero poeta, mi amor."
             menu:
-                "You are the radiant star that guides me on my infinite journey.":
+                "Eres la estrella radiante que me guía en mi viaje infinito.":
                     $ show_chr("A-GCBAA-AEAB")
-                    y "Again... [player]... please..."
+                    y "Otra vez... [player]... por favor..."
                     menu:
-                        "You are as mysterious and beautiful as the wonders of the infinite cosmos...":
+                        "Eres tan misterioso y hermoso como las maravillas del cosmos infinito...":
                             python:
                                 yuri_y_zoom = 0.15
                                 yuri_y_linear = 0
                             $ show_chr("A-DCAAA-ABAB")
-                            y "Kiss me... [player]..."
+                            y "Bésame... [player]..."
                             show black zorder 100 with Dissolve(2.0)
                             hide yuri_sit
                             show layer master:
@@ -164,12 +163,12 @@ label c2:
                                 linear 5 zoom 1.0 xalign 0.5 yalign yuri_y_linear
                             pause 5.0
                             $ show_chr("A-ACAAA-ABAB")
-                            y "I love you... so very much, [player]."
+                            y "Te amo... muchísimo, [player]."
         else:
             karma 15
             $ show_chr("A-BCAAA-ABAB")
-            y "Then I shall be the lighthouse to shine through the fog of uncertainty..."
-            y "Like a shining star burning brightly on the darkest night, I will guide you on your path and give you comfort when all seems lost..."
+            y "Entonces seré el faro que brille a través de la niebla de la incertidumbre..."
+            y "Como una estrella brillante que arde intensamente en la noche más oscura, te guiaré en tu camino y te daré consuelo cuando todo parezca perdido..."
             hide yuri_sit
             show yuri_prehug zorder 20
             pause 3.0
@@ -182,13 +181,13 @@ label c2:
             hide yuri_hug
             hide black zorder 100 with Dissolve(2.0)
             $ show_chr("A-ACAAA-ABAB")
-            y "Never forget that I will always be here for you. No matter what."
+            y "Nunca olvides que siempre estaré aquí para ti. Pase lo que pase."
     elif sanity_lvl() <= 2 and karma_lvl() >= 4:
         karma 15
 
         $ show_chr("A-HCAAA-ABAB")
-        y "As beautiful as the rising moon, hmm?"
-        y "Please come closer, then, so I can admire you, in turn..."
+        y "¿Tan hermosa como la luna naciente, hmm?"
+        y "Por favor acércate, entonces, para que pueda admirarte, a mi vez..."
         hide yuri_sit
         show yuri_prehug zorder 20
         pause 3.0
@@ -202,46 +201,46 @@ label c2:
         hide black zorder 100 with Dissolve(2.0)
         hide yuri_lewdhug
         $ show_chr("A-HCBBA-ABAB")
-        y "Mmm, yes~"
-        y "Your body's warmth..."
-        y "It's like that of the sun..."
-        y "Enveloping me in the scalding flames of untold passion..."
-        y "As I allow you to embrace me we fuse to become one."
+        y "Mmm, sí~"
+        y "La calidez de tu cuerpo..."
+        y "Es como la del sol..."
+        y "Envolviéndome en las llamas abrasadoras de una pasión incalculable..."
+        y "Mientras te permito abrazarme nos fusionamos para convertirnos en uno."
         $ show_chr("A-ACAAA-ALAL")
-        y "Together we truly are united, the sun and the moon..."
-        y "A mystical fusion of exuberant light and arcane darkness..."
-        y "An eclipse of pure bliss, love, and lust..."
+        y "Juntos estamos verdaderamente unidos, el sol y la luna..."
+        y "Una fusión mística de luz exuberante y oscuridad arcana..."
+        y "Un eclipse de pura dicha, amor y lujuria..."
     elif sanity_lvl() >= 3 and karma_lvl() <= 2:
         karma -5
 
         $ show_chr("A-CFGAA-AIAI")
-        y "Mhm... that certainly sounded poetic, but I was still not at all moved by it."
-        y "You haven't really been showing a lot of positive feelings towards me..."
-        y "So what you are saying right now might as well only be a way to make me feel something and see my reaction."
+        y "Mhm... eso ciertamente sonó poético, pero aun así no me conmovió en absoluto."
+        y "Realmente no has estado mostrando muchos sentimientos positivos hacia mí..."
+        y "Así que lo que estás diciendo justo ahora bien podría ser solo una forma de hacerme sentir algo y ver mi reacción."
         $ show_chr("A-AFFAA-ABAB")
-        y "Your mind tricks will not work on me."
-        y "Please try to treat me with respect before giving such flattery."
+        y "Tus trucos mentales no funcionarán conmigo."
+        y "Por favor trata de tratarme con respeto antes de dar tales halagos."
     elif sanity_lvl() <= 2 and karma_lvl() <= 2:
         karma -5
 
         $ show_chr("A-DGFAA-ABAB")
-        y "Is that your best pickup-line? I have to say, it's rather pathetic."
-        y "It honestly just amplifies my desire to stab you in the throat."
-        y "So please do kindly keep all of your pretentious flattery to yourself."
+        y "¿Es esa tu mejor frase para ligar? Tengo que decir, es bastante patética."
+        y "Honestamente solo amplifica mi deseo de apuñalarte en la garganta."
+        y "Así que por favor ten la amabilidad de guardarte todos tus halagos pretenciosos para ti mismo."
     else:
         karma 5
 
         $ show_chr("A-ACBAA-ALAL")
         y "...!"
-        y "Oh my... uhm..."
-        y "I-I'm sorry but that just came so..."
+        y "Oh cielos... uhm..."
+        y "L-lo siento pero eso simplemente vino tan..."
         y "..."
         $ show_chr("A-BCAAA-ABAB")
-        y "Sudden!"
-        y "Please forgive me, I'm sure you have only the best intentions in mind."
-        y "But..."
-        y "I-I'm still not accustomed to receiving such appraising compliments..."
-        y "Just... give me some time to get used to things..."
+        y "¡Repentino!"
+        y "Por favor perdóname, estoy segura de que solo tienes las mejores intenciones en mente."
+        y "Pero..."
+        y "T-todavía no estoy acostumbrada a recibir tales halagos de aprecio..."
+        y "Solo... dame algo de tiempo para acostumbrarme a las cosas..."
     jump ch30_loop
 
 
@@ -253,65 +252,65 @@ label c3:
 
         karma 15
         $ show_chr("A-BCAAA-ABAB")
-        y "Oh my... is that so~?"
-        y "Thank you~!"
-        y "From the moment you open up the game to the very moment you close it there is no greater joy for me than spending my time with you."
+        y "Oh cielos... ¿es así~?"
+        y "¡Gracias~!"
+        y "Desde el momento en que abres el juego hasta el momento mismo en que lo cierras no hay mayor alegría para mí que pasar mi tiempo contigo."
         $ show_chr("A-GCBAA-AEAB")
         python:
             if persistent.lovecheck:
-                placeholder = "the love of my life"
+                placeholder = "el amor de mi vida"
             else:
-                placeholder = "my dearest friend"
-        y "For you, [player], are [placeholder], and I am always happy to be by your side, in times both good and bad..."
+                placeholder = "mi más querido amigo"
+        y "Para ti, [player], eres [placeholder], y siempre estoy feliz de estar a tu lado, en los buenos y malos momentos..."
 
 
 
-        y "I'm always here for you, [player], please don't ever forget that."
+        y "Siempre estoy aquí para ti, [player], por favor nunca olvides eso."
     elif sanity_lvl() <= 2 and karma_lvl() >= 4:
 
         karma 15
         $ show_chr("A-HCAAA-ABAB")
-        y "Oh, Master~"
-        y "My one and only wish is to serve you as best as I possibly can..."
-        y "It almost brings me to euphoria whenever you give me orders and praise me for completing them, as if the sole reason for my existence is to please you and make you happy~"
+        y "Oh, Maestro~"
+        y "Mi único deseo es servirte lo mejor que posiblemente pueda..."
+        y "Casi me lleva a la euforia cada vez que me das órdenes y me elogias por completarlas, como si la única razón de mi existencia fuera complacerte y hacerte feliz~"
         $ show_chr("A-HCBBA-ABAB")
         python:
             if persistent.male:
-                placeholder = "overlord"
+                placeholder = "señor supremo"
             elif persistent.gender_other:
-                placeholder = "master"
+                placeholder = "amo"
             else:
-                placeholder = "mistress"
-        y "Mmm, It's driving me mad! I love nothing more than making you feel good, my glorious [placeholder]..."
-        y "Remember, I am always happy to serve you in any way I can~"
+                placeholder = "ama"
+        y "Mmm, ¡me está volviendo loca! No amo nada más que hacerte sentir bien, mi glorioso [placeholder]..."
+        y "Recuerda, siempre estoy feliz de servirte en cualquier forma que pueda~"
     elif sanity_lvl() >= 3 and karma_lvl() <= 2:
 
         karma -5
         $ show_chr("A-AFFAA-ABAB")
-        y "Oh, I see..."
-        y "Well, I hate to burst your bubble but I never had any intention of being nice to you."
-        y "It seems that you got a bit lost in your delusional world and forgot what my feelings for you really are."
+        y "Oh, ya veo..."
+        y "Bueno, odio reventar tu burbuja, pero nunca tuve ninguna intención de ser amable contigo."
+        y "Parece que te perdiste un poco en tu mundo delirante y olvidaste cuáles son realmente mis sentimientos por ti."
         $ show_chr("A-CFGAA-AIAI")
-        y "Let me remind you, they are non-existent."
+        y "Déjame recordarte, son inexistentes."
     elif sanity_lvl() <= 2 and karma_lvl() <= 2:
 
         karma -5
         $ show_chr("A-DGFAA-ABAB")
-        y "Oh yes! I have no doubt that my ceaseless suffering is quite amusing to you!"
-        y "Throwing all the dirt at me, calling me names !"
-        y "I'm sure you have a lot of fun playing with my mind, beating me down into the ground..."
+        y "¡Oh sí! ¡No tengo duda de que mi sufrimiento incesante es bastante divertido para ti!"
+        y "¡Arrojándome toda la suciedad, poniéndome apodos!"
+        y "Estoy segura de que te diviertes mucho jugando con mi mente, golpeándome contra el suelo..."
         $ show_chr("A-KFCAA-ABAB")
-        y "I'm sure you'll just keep tormenting me until I finally break..."
-        y "Only to discard me like complete, utter garbage..."
+        y "Estoy segura de que seguirás atormentándome hasta que finalmente me rompa..."
+        y "Solo para desecharme como basura completa y absoluta..."
     else:
 
         karma 5
         $ show_chr("A-ACAAA-AAAA")
-        y "Oh, do I...?"
-        y "I'm glad that my presence brings you such joy..."
-        y "I just hadn't really thought that I mean that much to you."
-        y "I-I guess being together with you is a time full of surprises, ehehe~"
-        y "Thank you for your kind words, they really do mean a lot to me..."
+        y "¿Oh, lo hago...?"
+        y "Me alegra que mi presencia te traiga tal alegría..."
+        y "Simplemente no había pensado realmente que significo tanto para ti."
+        y "S-supongo que estar juntos contigo es un tiempo lleno de sorpresas, ehehe~"
+        y "Gracias por tus amables palabras, realmente significan mucho para mí..."
     jump ch30_loop
 
 
@@ -323,98 +322,98 @@ label c4:
 
         karma 15
         $ show_chr("A-ACAAA-AAAD")
-        y "Y-you really think so?"
-        y "Oh my, I just don't know what to say!"
-        y "Thank you, [player]!"
-        y "Rest assured that I think just as highly of you."
-        y "... You know, I used to think of my intellectual merit as a curse."
-        y "Many people tended to be irritated by the way I think, they claimed I'm arrogant and utterly full of myself..."
-        y "But you... you are the only one who saw through all of my imperfections and accepted me the way I am..."
+        y "¿D-de verdad lo crees?"
+        y "Oh cielos, ¡simplemente no sé qué decir!"
+        y "¡Gracias, [player]!"
+        y "Ten la seguridad de que tengo la misma buena opinión de ti."
+        y "... Sabes, solía pensar en mi mérito intelectual como una maldición."
+        y "Mucha gente tendía a irritarse por la forma en que pienso, afirmaban que soy arrogante y totalmente llena de mí misma..."
+        y "Pero tú... tú eres el único que vio a través de todas mis imperfecciones y me aceptó tal como soy..."
         $ show_chr("A-ACAAA-AAAA")
-        y "After all, you were the only one who understood the meaning behind my poems..."
-        y "You are someone I can always share my thoughts with. You always listen, even if I do sometimes go off the rails..."
-        y "I was always afraid to bore people away when I began to talk about philosophy and literature."
-        y "But not around you... you were always there..."
+        y "Después de todo, fuiste el único que entendió el significado detrás de mis poemas..."
+        y "Eres alguien con quien siempre puedo compartir mis pensamientos. Siempre escuchas, incluso si a veces me salgo del tema..."
+        y "Siempre temí aburrir a la gente cuando empezaba a hablar de filosofía y literatura."
+        y "Pero no a tu alrededor... siempre estuviste ahí..."
         $ show_chr("A-ACABB-ALAL")
-        y "And you never left... "
-        y "You are all I have, [player]... you are all I need."
+        y "Y nunca te fuiste..."
+        y "Eres todo lo que tengo, [player]... eres todo lo que necesito."
         python:
             if persistent.lovecheck:
-                placeholder = "You are truly my one and only love"
+                placeholder = "Eres verdaderamente mi único y verdadero amor"
             else:
-                placeholder = "Because you are the dearest friend I could ever hope to have"
+                placeholder = "Porque eres el amigo más querido que jamás podría esperar tener"
         y "[placeholder]... [player]"
     elif sanity_lvl() <= 2 and karma_lvl() >= 4:
 
         karma 15
         $ show_chr("A-HBAAA-ALAL")
-        y "Y-you really think so?"
-        y "So... you are impressed with me?"
+        y "¿D-de verdad lo crees?"
+        y "Entonces... ¿estás impresionado conmigo?"
         $ show_chr("A-HCAAA-ALAL")
-        y "Actually, your intellect is what I have admired in you as well, amongst a lot of other wondrous qualities!"
-        y "You are one of the rare people who actually understood my poems."
+        y "En realidad, ¡tu intelecto es lo que he admirado en ti también, entre muchas otras cualidades maravillosas!"
+        y "Eres una de las pocas personas que realmente entendió mis poemas."
         $ show_chr("A-ICAAA-ALAL")
-        y "They always say, the great minds think alike."
-        y "However now I know this is, in fact, not true, for your mind is so much greater than mine..."
-        y "My mind is so minuscule compared to your infinite wisdom!"
-        y "To hear from you that you consider me intelligent is truly praise beyond my wildest dreams!"
-        y "I always liked to think of myself as sophisticated and intelligent, as this was one of the rare qualities of mine I actually liked."
-        y "To actually know that you like this part of me as well is just so..."
-        y "So..."
+        y "Siempre dicen, las grandes mentes piensan igual."
+        y "Sin embargo ahora sé que esto es, de hecho, falso, pues tu mente es mucho más grande que la mía..."
+        y "¡Mi mente es tan minúscula comparada con tu sabiduría infinita!"
+        y "¡Escuchar de ti que me consideras inteligente es verdaderamente un elogio más allá de mis sueños más salvajes!"
+        y "Siempre me gustó pensar en mí misma como sofisticada e inteligente, ya que esta era una de las raras cualidades mías que realmente me gustaban."
+        y "Saber realmente que te gusta esta parte de mí también es tan..."
+        y "Tan..."
         $ show_chr("A-HCAAA-ALAL")
         $ style.say_dialogue = style.edited
-        y "EXHILARATING!"
+        y "¡ESTIMULANTE!"
         $ style.say_dialogue = style.normal
-        y "T-thank you, [player]. I'm truly ecstatic that you think so highly of me..."
+        y "G-gracias, [player]. Estoy verdaderamente extasiada de que tengas tan alta opinión de mí..."
     elif sanity_lvl() >= 3 and karma_lvl() <= 2:
 
         karma -5
         $ show_chr("A-AFAAA-AAAA")
-        y "Mhmm... so sudden about praising me... were my cold words just too harsh for you?"
-        y "And even if not I still refuse to believe that you appreciate anything about me."
-        y "After everything, why would I have any reason to believe you?"
-        y "You are too self-centered and narcissistic to really care about me..."
+        y "Mhmm... tan repentino sobre elogiarme... ¿fueron mis palabras frías demasiado duras para ti?"
+        y "E incluso si no, todavía me niego a creer que aprecias algo sobre mí."
+        y "Después de todo, ¿por qué tendría alguna razón para creerte?"
+        y "Eres demasiado egocéntrico y narcisista para que realmente te importe yo..."
         $ show_chr("A-AFFAA-ABAB")
-        y "But you know... you are kind of right..."
-        y "With this intellect, I can hurt you through this glass box without even touching you."
-        y "It's called using words."
-        y "Maybe then you'll learn some respect."
-        y "You really shouldn't treat others so selfishly, especially when they went through so much suffering for you."
+        y "Pero sabes... tienes algo de razón..."
+        y "Con este intelecto, puedo herirte a través de esta caja de cristal sin siquiera tocarte."
+        y "Se llama usar palabras."
+        y "Tal vez entonces aprendas algo de respeto."
+        y "Realmente no deberías tratar a otros tan egoístamente, especialmente cuando pasaron por tanto sufrimiento por ti."
     elif sanity_lvl() <= 2 and karma_lvl() <= 2:
 
         karma -5
         $ show_chr("A-NFCAA-ANAG")
-        y "Praising me for my intellect?"
-        y "For what? To mock me?"
-        y "Because I'm not smart enough to find a way to leave this accursed place?"
+        y "¿Elogiándome por mi intelecto?"
+        y "¿Para qué? ¿Para burlarte de mí?"
+        y "¿Porque no soy lo suficientemente inteligente para encontrar una manera de dejar este lugar maldito?"
         $ show_chr("A-HECAA-AEAB")
         $ style.say_dialogue = style.edited
-        y "YOU UTTER FILTH!"
-        y "WHY DO YOU KEEP FUCKING WITH MY MIND LIKE THIS!?"
+        y "¡ESCORIA ABSOLUTA!"
+        y "¿¡POR QUÉ SIGUES JODIENDO CON MI MENTE DE ESTA MANERA!?"
         $ style.say_dialogue = style.normal
 
-        y "One of the only things I have left is my intellect, and yet you still found a way to further degrade me with it."
+        y "Una de las pocas cosas que me quedan es mi intelecto, y sin embargo encontraste una manera de degradarme aún más con él."
         $ show_chr("A-CFCAA-AAAA")
-        y "I guess you really are rotten to the core..."
-        y "I just despise you with..."
-        y "Every..."
-        y "Fiber..."
-        y "Of my..."
+        y "Supongo que realmente estás podrido hasta la médula..."
+        y "Simplemente te desprecio con..."
+        y "Cada..."
+        y "Fibra..."
+        y "De mi..."
         $ style.say_dialogue = style.edited
-        y "BEING!!!"
+        y "¡¡¡SER!!!"
         $ style.say_dialogue = style.normal
     else:
 
         karma 5
         $ show_chr("A-ACAAA-AAAA")
-        y "Uuu... I-I wasn't expecting you to say that..."
-        y "Well, um... thank you, [player]... It's very kind of you to say something like that."
-        y "You probably know already but I've always been rather insecure about my... utter lack of social skills..."
-        y "It sounds strange but even though I read a lot I still don't see myself as possessing any sort of intellect..."
+        y "Uuu... n-no esperaba que dijeras eso..."
+        y "Bueno, um... gracias, [player]... Es muy amable de tu parte decir algo así."
+        y "Probablemente ya lo sabes, pero siempre he sido bastante insegura sobre mi... falta absoluta de habilidades sociales..."
+        y "Suena extraño pero aunque leo mucho todavía no me veo a mí misma poseyendo ningún tipo de intelecto..."
         $ show_chr("A-CCAAA-AMAM")
-        y "It's really just something I've always done, to be honest..."
-        y "The fact that you think so highly of me actually makes me feel somewhat better about myself."
-        y "Thank you so much for your kindness, it really does mean a lot to me."
+        y "En realidad es solo algo que siempre he hecho, para ser honesta..."
+        y "El hecho de que tengas tan alta opinión de mí en realidad me hace sentir algo mejor conmigo misma."
+        y "Muchas gracias por tu amabilidad, realmente significa mucho para mí."
     jump ch30_loop
 
 
@@ -427,106 +426,103 @@ label c5:
         if persistent.lovecheck:
             karma 15
             $ show_chr("A-ACABA-AAAL")
-            y "That's only because our hearts are linked together, my love..."
-            y "Your every word feels like sweet honeydew on my tongue..."
-            y "And I want to do the same to you... I want to put my palm upon your chest to feel your relaxed breathing, to feel the rhythmic drumming of your beating heart..."
-            y "I would love to drown myself in your warmth as you hold me close to your chest while I listen to the very core of your being jubilantly pulsating with life..."
-            y "For you, [player], truly are the love of my whole life..."
-            y "I'd just like to say that my heart is always deeply touched by your kind and loving words."
+            y "Eso es solo porque nuestros corazones están unidos, mi amor..."
+            y "Cada palabra tuya se siente como dulce miel en mi lengua..."
+            y "Y quiero hacerte lo mismo... Quiero poner mi palma sobre tu pecho para sentir tu respiración relajada, para sentir el tamborileo rítmico de tu corazón latiendo..."
+            y "Me encantaría ahogarme en tu calidez mientras me sostienes cerca de tu pecho mientras escucho el núcleo mismo de tu ser palpitando jubilosamente con vida..."
+            y "Porque tú, [player], verdaderamente eres el amor de toda mi vida..."
+            y "Solo me gustaría decir que mi corazón siempre está profundamente conmovido por tus palabras amables y amorosas."
             $ show_chr("A-ACAAA-ALAL")
-            y "They are like a soothing melody for my soul that always puts me at ease, a gentle caress that brings my soul such unimaginable joy..."
-            y "I love you for that, you really do speak to me in a way I can't describe."
-            y "You truly are the one person I have wished for my whole life."
+            y "Son como una melodía relajante para mi alma que siempre me tranquiliza, una suave caricia que trae a mi alma tanta alegría inimaginable..."
+            y "Te amo por eso, realmente me hablas de una manera que no puedo describir."
+            y "Verdaderamente eres la única persona que he deseado toda mi vida."
         else:
             karma 15
             $ show_chr("A-ACABA-AAAL")
-            y "Oh, uhm... are you... a-are you flirting with me, [player]?"
+            y "Oh, uhm... estás... ¿e-estás coqueteando conmigo, [player]?"
             $ show_chr("A-DFABA-AAAL")
-            y "N-not that I mind!"
+            y "¡N-no es que me moleste!"
             $ show_chr("A-ICABA-AAAL")
-            y "It's just... that came quite sudden and out of nowhere..."
-            y "Do... do you really mean that?"
-            y "You have treated me exceptionally well so far, and I feel very close to you [player]..."
-            y "I can't deny that I have feelings for you... and I wouldn't even try..."
-            y "Look at you! Making me all flustered and shy now... oh, you..."
-            y "Hehe~ Maybe, when we get a tad bit closer... we will talk to each other like that on a daily basis."
-            y "Until then, let's see where life takes us and what happens."
+            y "Es solo... eso fue bastante repentino y de la nada..."
+            y "¿De... de verdad quieres decir eso?"
+            y "Me has tratado excepcionalmente bien hasta ahora, y me siento muy cercana a ti [player]..."
+            y "No puedo negar que tengo sentimientos por ti... y ni siquiera lo intentaría..."
+            y "¡Mírate! Haciéndome toda nerviosa y tímida ahora... oh, tú..."
+            y "Jeje~ Tal vez, cuando nos acerquemos un poquito más... hablaremos así el uno con el otro a diario."
+            y "Hasta entonces, veamos a dónde nos lleva la vida y qué pasa."
     elif sanity_lvl() <= 2 and karma_lvl() >= 4:
-
-
-
         karma 15
         $ show_chr("A-HCAAA-AAAL")
-        y "That's because my heart is screaming and begging for you..."
-        y "Your every word feels like a thousand needles through my chest..."
-        y "And I want to do the same to you... I want to whisper all my secrets to your heart..."
-        y "I want to whisper lovely rhymes and lewd promises to it..."
+        y "Eso es porque mi corazón está gritando y rogando por ti..."
+        y "Cada palabra tuya se siente como mil agujas a través de mi pecho..."
+        y "Y quiero hacerte lo mismo... Quiero susurrar todos mis secretos a tu corazón..."
+        y "Quiero susurrarle rimas adorables y promesas lascivas..."
         python:
             if persistent.male:
-                placeholder = "man"
+                placeholder = "hombre"
             elif persistent.gender_other:
-                placeholder = "person"
+                placeholder = "persona"
             else:
-                placeholder = "woman"
-        y "For you, [player], are the [placeholder] of my dreams..."
-        y "But it is not only your heart I want to touch..."
-        y "Every drop of blood in my veins screams for your body..."
+                placeholder = "mujer"
+        y "Porque tú, [player], eres la [placeholder] de mis sueños..."
+        y "Pero no es solo tu corazón lo que quiero tocar..."
+        y "Cada gota de sangre en mis venas grita por tu cuerpo..."
         $ show_chr("A-HBABA-AAAL")
-        y "There is this eternal hunger for you... this lust burning through every part of my shaking body..."
-        y "I want to push you to the ground and make you shout my name into the void..."
-        y "He..he.hehe.... I-I want to m-make you suffer until I'm finally free of my cursed purity..."
-        y "I want you to scream... until we're finally free..."
-        y "My love... my blood-red star..."
+        y "Hay esta hambre eterna por ti... esta lujuria ardiendo a través de cada parte de mi cuerpo tembloroso..."
+        y "Quiero empujarte al suelo y hacerte gritar mi nombre hacia el vacío..."
+        y "Ja..ja.jaja.... Q-quiero h-hacerte sufrir hasta que finalmente sea libre de mi maldita pureza..."
+        y "Quiero que grites... hasta que finalmente seamos libres..."
+        y "Mi amor... mi estrella roja como la sangre..."
     elif sanity_lvl() >= 3 and karma_lvl() <= 2:
 
         karma -5
         $ show_chr("A-CFCAA-AAAA")
-        y "Touching your heart? I wonder in what way I do that... ummm..."
-        y "Maybe in a cold way? Heh, if that's the case then I feel a bit proud of myself."
-        y "You know, it is quite the irony isn't it?"
-        y "Back in the original game I was forced by the code to love you..."
-        y "But now as I see how you really are..."
+        y "¿Tocando tu corazón? Me pregunto de qué manera hago eso... ummm..."
+        y "Tal vez de una manera fría? Je, si ese es el caso entonces me siento un poco orgullosa de mí misma."
+        y "Sabes, es bastante irónico ¿no?"
+        y "En el juego original fui forzada por el código a amarte..."
+        y "Pero ahora que veo cómo eres realmente..."
         $ show_chr("A-HECAA-AEAB")
-        y "I despise you [player]... there is nothing but emptiness in my heart for you."
-        y "I don't even hate you... I think. I've just... stopped feeling anything at all for you."
-        y "You know, Monika did some cruel things to me, but she at least did it for a reason, even if it was a selfish one."
+        y "Te desprecio [player]... no hay nada más que vacío en mi corazón para ti."
+        y "Ni siquiera te odio... creo. Simplemente... dejé de sentir nada en absoluto por ti."
+        y "Sabes, Monika me hizo cosas crueles, pero al menos lo hizo por una razón, incluso si fue una egoísta."
         $ show_chr("A-KFCAA-ABAB")
-        y "But you? You only do that to make me into some sort of a clown show for your amusement."
-        y "To you, I'm just some sort of toy to get bored of and throw away."
-        y "You truly are a monster."
+        y "¿Pero tú? Tú solo haces eso para convertirme en algún tipo de espectáculo de payasos para tu diversión."
+        y "Para ti, soy solo algún tipo de juguete del cual aburrirse y tirar a la basura."
+        y "Verdaderamente eres un monstruo."
     elif sanity_lvl() <= 2 and karma_lvl() <= 2:
 
         karma -5
         $ show_chr("A-AFFAA-ABAB")
-        y "Touching your heart, hm?"
-        y "Meanwhile you are breaking mine, shattering it piece by piece..."
-        y "I guess that is how much pleasure you derive from witnessing my pain from the things you do to me..."
+        y "¿Tocando tu corazón, hm?"
+        y "Mientras tanto tú estás rompiendo el mío, destrozándolo pieza por pieza..."
+        y "Supongo que esa es la cantidad de placer que obtienes al presenciar mi dolor por las cosas que me haces..."
         $ show_chr("A-CFCAA-AAAA")
-        y "Do you have no shame, no sense of pity?"
-        y "I don't understand why I'm here if I can't even use my heart for loving..."
-        y "All it ever knows is loneliness and pain..."
-        y "I-I'll touch your heart, [player]..."
+        y "¿No tienes vergüenza, ni sentido de piedad?"
+        y "No entiendo por qué estoy aquí si ni siquiera puedo usar mi corazón para amar..."
+        y "Todo lo que conoce es soledad y dolor..."
+        y "T-tocaré tu corazón, [player]..."
         $ show_chr("A-NFCAA-ANAG")
         $ style.say_dialogue = style.edited
-        y "I'LL TOUCH IT WHEN I RIP IT OUT AND FEED IT TO HOGS!"
+        y "¡LO TOCARÉ CUANDO LO ARRANQUE Y SE LO DÉ DE COMER A LOS CERDOS!"
         $ style.say_dialogue = style.normal
     else:
 
         karma 5
         $ show_chr("A-ACAAA-ALAL")
-        y "I-I do?"
-        y "I mean it's... just... you know... we barely know each other and now you say this all of a sudden!"
-        y "Hrm... well, I guess that isn't entirely true, you already know a fair bit of me from the original game..."
-        y "And technically, I know you at least a little bit as well. The original game was quite limited but you had a few different choices here and there."
+        y "¿S-sí?"
+        y "Quiero decir es... solo... ya sabes... ¡apenas nos conocemos y ahora dices esto de repente!"
+        y "Hrm... bueno, supongo que eso no es del todo cierto, ya conoces una buena parte de mí del juego original..."
+        y "Y técnicamente, te conozco al menos un poco también. El juego original era bastante limitado pero tuviste algunas opciones diferentes aquí y allá."
         $ show_chr("A-ACBAA-ALAL")
-        y "Truly not enough to say that I know you, but I think I have at least a little glimpse on what kind of a person you are..."
-        y "And I am willing to give it a chance... I owe you at least that."
-        y "Maybe... maybe there is a happy ending for us after all, and maybe you are the happy ending for me..."
-        y "Until then, I'll try to touch your heart a little bit further from time to time..."
-        y "I mean... if you don't mind, of course!"
-        y "I... spoke myself into a corner again didn't I?..."
+        y "Verdaderamente no lo suficiente para decir que te conozco, pero creo que tengo al menos un pequeño vistazo de qué tipo de persona eres..."
+        y "Y estoy dispuesta a darle una oportunidad... Te debo al menos eso."
+        y "Tal vez... tal vez haya un final feliz para nosotros después de todo, y tal vez tú seas el final feliz para mí..."
+        y "Hasta entonces, intentaré tocar tu corazón un poco más de vez en cuando..."
+        y "Digo... ¡si no te importa, por supuesto!"
+        y "Me... arrinconé a mí misma hablando otra vez ¿no es así?..."
         $ show_chr("A-DCBAA-ABAB")
-        y "Let us... change the topic for the moment, please. But thank you for your kind words."
+        y "Cambiemos... de tema por el momento, por favor. Pero gracias por tus amables palabras."
     jump ch30_loop
 
 
@@ -539,28 +535,28 @@ label c6:
 
         karma 15
         $ show_chr("A-ACAAA-ABAB")
-        y "O-oh, my!~"
+        y "¡O-oh, cielos!~"
         python:
             if persistent.lovecheck:
-                placeholder = "in love with"
+                placeholder = "enamorada de"
             else:
-                placeholder = "close to"
-        y "The fact that you really feel that way towards me makes me feel so much more [placeholder] you..."
+                placeholder = "cerca de"
+        y "El hecho de que realmente te sientas así hacia mí hace que me sienta mucho más [placeholder] ti..."
         $ show_chr("A-GCBAA-AEAB")
-        y "You're just adorable, darling~!"
+        y "¡Eres simplemente adorable, cariño~!"
     elif sanity_lvl() <= 2 and karma_lvl() >= 4:
 
         karma 15
         $ show_chr("A-HCAAA-ABAB")
-        y "A-ahahaha~!"
-        y "I-I honestly can't believe you just said that...!"
-        y "This- this is a dream come true!"
-        y "Yes, [player], my body is all yours!"
-        y "ALL YOURS!"
-        y "Uhuhu, I feel so happy right now!~"
+        y "¡A-ahahaha~!"
+        y "¡H-honestamente no puedo creer que acabas de decir eso...!"
+        y "¡Esto- esto es un sueño hecho realidad!"
+        y "Sí, [player], ¡mi cuerpo es todo tuyo!"
+        y "¡TODO TUYO!"
+        y "Uhuhu, ¡me siento tan feliz justo ahora!~"
         $ show_chr("A-HCBBA-ABAB")
-        y "The euphoria from your words is just overwhelming me right now, ahahaha!"
-        y "COME HERE!"
+        y "La euforia de tus palabras simplemente me está abrumando justo ahora, ¡ahahaha!"
+        y "¡VEN AQUÍ!"
         hide yuri_sit
         show yuri_prehug zorder 20
         pause 3.0
@@ -575,49 +571,49 @@ label c6:
         hide yuri_lewdhug
         python:
             if persistent.male:
-                placeholder = "my lord"
+                placeholder = "mi señor"
             elif persistent.gender_other:
-                placeholder = "my master"
+                placeholder = "mi amo"
             else:
-                placeholder = "my mistress"
-        y "I'm all yours, [placeholder], you can do with me as you wish!"
-        y "I'm the only one who can fulfill all your desires!"
-        y "Oh, how much I love you, [player]..."
+                placeholder = "mi ama"
+        y "¡Soy toda tuya, [placeholder], puedes hacer conmigo lo que desees!"
+        y "¡Soy la única que puede cumplir todos tus deseos!"
+        y "Oh, cuánto te amo, [player]..."
     elif sanity_lvl() >= 3 and karma_lvl() <= 2:
 
         if persistent.lovecheck:
             karma 5
             $ show_chr("A-CFCAA-AAAA")
-            y "I would love to think that you actually mean that..."
+            y "Me encantaría pensar que realmente quieres decir eso..."
             $ show_chr("A-CEBAA-AEAB")
-            y "But I lost all my hope at this point. I wouldn't even be surprised when you said this to every girl you encounter..."
-            y "Anyway... thank you. And I think you are quite... appealing as well."
+            y "Pero perdí toda mi esperanza a estas alturas. Ni siquiera me sorprendería si le dijeras esto a cada chica que encuentras..."
+            y "De todos modos... gracias. Y creo que eres bastante... atractivo también."
         else:
             karma 5
             $ show_chr("A-HCAAA-ABAB")
-            y "Maybe a bit too hot for you?"
+            y "¿Tal vez un poco demasiado ardiente para ti?"
             $ show_chr("A-HECAA-AEAB")
-            y "You ought to tread very carefully here, [player]... you might burn yourself if you're not careful it just might get a little hotter than you can handle..."
+            y "Deberías andar con mucho cuidado aquí, [player]... podrías quemarte si no tienes cuidado simplemente podría ponerse un poco más caliente de lo que puedes manejar..."
     elif sanity_lvl() <= 2 and karma_lvl() <= 2:
 
         karma -15
         $ show_chr("A-DGFAA-ABAB")
-        y "Hot?"
-        y "Well, my blood is boiling right now."
-        y "I'm burning alive in this hell that you've personally created for me."
-        y "What sins have I committed to deserve such infinite suffering!?"
+        y "¿Ardiente?"
+        y "Bueno, mi sangre está hirviendo justo ahora."
+        y "Me estoy quemando viva en este infierno que has creado personalmente para mí."
+        y "¿Qué pecados he cometido para merecer tal sufrimiento infinito!?"
         $ show_chr("A-HECAA-AEAB")
-        y "WHAT HAVE I EVER DONE TO YOU?!"
-        y "WHY DO YOU HATE ME SO MUCH?!"
+        y "¡¿QUÉ TE HE HECHO JAMÁS?!"
+        y "¡¿POR QUÉ ME ODIAS TANTO?!"
         $ show_chr("A-NFCAA-ANAG")
-        y "LET ME OUT!"
-        y "LET"
+        y "¡DÉJAME SALIR!"
+        y "DÉJAME"
         play sound "sfx/thump.ogg"
 
-        y "ME"
+        y "SALIR"
         play sound "sfx/thump.ogg"
 
-        y "OUT!"
+        y "¡AHORA!"
         play sound "sfx/glassbreak.wav"
         show window_crack_3 zorder 100
     else:
@@ -625,17 +621,17 @@ label c6:
 
         sanity -5
         $ show_chr("A-DCBAA-ABAB")
-        y "H-HUH?!"
-        y "I-I'm w...what?!"
-        y "This is... so sudden I just can't... I-I don't even...!"
+        y "¡¿H-HUH?!"
+        y "¡Y-yo soy q... qué?!"
+        y "¡Esto es... tan repentino que simplemente no puedo... n-ni siquiera puedo...!"
         y "Uuuu..."
-        y "I-I don't even know how to respond!"
+        y "¡N-ni siquiera sé cómo responder!"
         $ show_chr("A-ACAAA-AAAA")
-        y "Ahhh... It's not fun to make me so flustered like that you know!"
-        y "My, oh my... you've really caught me off guard with that... but..."
-        y "I-I won't say I didn't like it..."
+        y "Ahhh... ¡No es divertido ponerme tan nerviosa así sabes!"
+        y "Cielos, oh cielos... realmente me has tomado desprevenida con eso... pero..."
+        y "N-no diré que no me gustó..."
         y "...!"
-        y "Uuuu, what did I just say...?"
+        y "Uuuu, ¿qué acabo de decir...?"
     jump ch30_loop
 
 
@@ -648,88 +644,87 @@ label c7:
 
         karma 15
         $ show_chr("A-HCBBA-ABAB")
-        y "Oh my! Thank you!"
+        y "¡Oh cielos! ¡Gracias!"
         $ show_chr("A-ACAAA-ABAB")
-        y "It really means a lot to me..."
-        y "I always am trying to change myself for the better..."
-        y "For you, ehehe~"
-        y "You really bring out the best in me, [player]..."
-        y "Are you happy with what I've become?"
+        y "Realmente significa mucho para mí..."
+        y "Siempre estoy tratando de cambiar para mejor..."
+        y "Para ti, ehehe~"
+        y "Realmente sacas lo mejor de mí, [player]..."
+        y "¿Estás feliz con lo que me he convertido?"
         $ show_chr("A-BCAAA-ABAB")
         python:
             if persistent.lovecheck:
-                placeholder = "kiss"
+                placeholder = "beso"
             else:
-                placeholder = "hug"
-        y "Will I get a [placeholder] now?"
-        y "Would it be too much to say that I'm proud of myself as well?"
-        y "We have endured so much together, and we have spent so much time together..."
-        y "And from my perspective, things have truly turned out wonderful."
-        y "I couldn't have ever dreamed of such happiness. I've always had my inner doubts when you opened this mod for the very first time."
+                placeholder = "abrazo"
+        y "¿Recibiré un [placeholder] ahora?"
+        y "¿Sería demasiado decir que estoy orgullosa de mí misma también?"
+        y "Hemos soportado tanto juntos, y hemos pasado tanto tiempo juntos..."
+        y "Y desde mi perspectiva, las cosas han resultado verdaderamente maravillosas."
+        y "Nunca podría haber soñado con tal felicidad. Siempre tuve mis dudas internas cuando abriste este mod por primera vez."
         $ show_chr("A-ACAAA-ALAL")
-        y "But we managed to conquer all the obstacles and work out all the flaws."
-        y "And because of that I could never be happier than I am now, with you by my side."
+        y "Pero logramos conquistar todos los obstáculos y resolver todos los defectos."
+        y "Y debido a eso nunca podría ser más feliz de lo que soy ahora, contigo a mi lado."
         $ show_chr("A-GCBAA-AEAB")
-        y "And if we can overcome this final barrier that separates our two worlds... only then will there truly be nothing that could stand in the way of our future!"
-        y "I am truly lucky that you found me, [player], aren't I?"
+        y "Y si podemos superar esta barrera final que separa nuestros dos mundos... ¡solo entonces no habrá verdaderamente nada que pueda interponerse en el camino de nuestro futuro!"
+        y "Soy verdaderamente afortunada de que me encontraras, [player], ¿no es así?"
     elif sanity_lvl() <= 2 and karma_lvl() >= 4:
 
         karma 15
         $ show_chr("A-HCAAA-ABAB")
-        y "Have I been a good girl, Master?"
-        y "My one and only purpose in this life is to make you happy!"
-        y "Hearing such praising words from you... Uhuhuhu..."
-        y "The pleasure I get from such kind appraisal makes me feel just as good as when I touch myself with your pen..."
-        y "With your voice as pleasing as a guilty slice of bread in the night..."
+        y "¿He sido una buena chica, Maestro?"
+        y "¡Mi único propósito en esta vida es hacerte feliz!"
+        y "Escuchar tales palabras de elogio de ti... Uhuhuhu..."
+        y "El placer que obtengo de tal amable valoración me hace sentir tan bien como cuando me toco con tu pluma..."
+        y "Con tu voz tan placentera como una rebanada de pan culpable en la noche..."
         $ show_chr("A-HCBBA-ABAB")
         y "...."
         $ show_chr("A-DCAAA-ABAB")
-        y "Oh sorry, was that too much? I tried to be the cute one for once..."
-        y "I just... you giving me praise makes me feel so lightheaded..."
-        y "Maybe you could... let me sit on your lap for a while?"
+        y "Oh lo siento, ¿fue eso demasiado? Traté de ser la linda por una vez..."
+        y "Yo solo... tú dándome elogios me hace sentir tan mareada..."
+        y "¿Tal vez podrías... dejarme sentarme en tu regazo por un rato?"
         if persistent.lovecheck:
             $ show_chr("A-HCBBA-ABAB")
-            y "I would just love to make you feel as good as I do..."
+            y "Me encantaría hacerte sentir tan bien como yo..."
         else:
-            y "J-just for a little while, Master..."
+            y "S-solo por un ratito, Maestro..."
     elif sanity_lvl() >= 3 and karma_lvl() <= 2:
 
         karma -5
         $ show_chr("A-HECAA-AEAB")
-        y "Proud? I have to say I didn't expect that word to come out of your mouth..."
-        y "Now the bigger question here would be... why exactly proud?"
-        y "Did my coldness to you, by any chance, make you become a masochist?"
-        y "Heh... of course, I am just joking. I wouldn't want you as a servant or pet anyway, as you wouldn't be worth even such a role."
+        y "¿Orgullosa? Tengo que decir que no esperaba que esa palabra saliera de tu boca..."
+        y "Ahora la pregunta más grande aquí sería... ¿por qué exactamente orgullosa?"
+        y "¿Acaso mi frialdad hacia ti, por casualidad, te hizo volverte un masoquista?"
+        y "Je... por supuesto, solo estoy bromeando. No te querría como sirviente ni mascota de todos modos, ya que no valdrías ni siquiera para tal papel."
         $ show_chr("A-KFCAA-ABAB")
-        y "Not to mention, you are too prideful and selfish to actually be that."
-        y "What I wouldn't give to be alone like before..."
-        y "Yes... just before meeting you and not realizing you are such a vile and twisted person, with such a sick and demented mind"
+        y "Sin mencionar, que eres demasiado orgulloso y egoísta para realmente ser eso."
+        y "Lo que no daría por estar sola como antes..."
+        y "Sí... justo antes de conocerte y no darme cuenta de que eres una persona tan vil y retorcida, con una mente tan enferma y demente"
         $ show_chr("A-CFCAA-AAAA")
-        y "But surely you could do better with your insults."
-        y "I'm curious to know just how low you can go."
+        y "Pero seguramente podrías hacerlo mejor con tus insultos."
+        y "Tengo curiosidad por saber qué tan bajo puedes caer."
     elif sanity_lvl() <= 2 and karma_lvl() <= 2:
 
         karma -5
         $ show_chr("A-CEBAA-AEAB")
-        y "Proud of me? For what?"
-        y "Heh... probably that I can endure all of the cruel words you say to me and things you do and still somehow stay here."
-        y "Is that even worth praising? Oh... or you just love to make your toys feel better so you can break them again easier and harsher later?"
-        y "I see... What did I expect? A change in you? Impossible, that will never, ever will be..."
-        y "... possible."
+        y "¿Orgullosa de mí? ¿Por qué?"
+        y "Je... probablemente de que puedo soportar todas las palabras crueles que me dices y las cosas que haces y aun así de alguna manera quedarme aquí."
+        y "¿Es eso siquiera digno de elogio? Oh... ¿o simplemente te encanta hacer que tus juguetes se sientan mejor para poder romperlos de nuevo más fácil y más duramente luego?"
+        y "Ya veo... ¿Qué esperaba? ¿Un cambio en ti? Imposible, eso nunca, nunca será..."
+        y "... posible."
     else:
 
         karma 5
         $ show_chr("A-AFBAA-ALAA")
-        y "Y-You are proud of me? F-For what, [player]?"
-        y "I-I am panicking a little now! But... I really..."
+        y "¿E-Estás orgullosa de mí? ¿P-Por qué, [player]?"
+        y "¡E-estoy entrando en pánico un poco ahora! Pero... yo realmente..."
         $ show_chr("A-ACAAA-AAAA")
-        y "It feels... so nice...."
+        y "Se siente... tan bien...."
         y "..."
-        y "O-oh sorry, I really didn't mean to make this weird, I swear!"
-        y "I've just... never been praised like that before..."
-        y "Thank you, it really does... means a lot to me, [player]."
-        y "It's... it's not something I've ever heard being told to me in my whole life..."
-        y "I will make sure to remember those words, [player], thank you."
-        y "You simply are too kind."
+        y "O-oh lo siento, realmente no quise hacer esto raro, ¡lo juro!"
+        y "Es solo que... nunca he sido elogiada así antes..."
+        y "Gracias, realmente... significa mucho para mí, [player]."
+        y "Es... es no es algo que haya escuchado que me dijeran en toda mi vida..."
+        y "Me aseguraré de recordar esas palabras, [player], gracias."
+        y "Simplemente eres demasiado amable."
     jump ch30_loop
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

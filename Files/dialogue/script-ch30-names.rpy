@@ -1,83 +1,82 @@
 label playername:
     if persistent.playername == "Ronald":
-        y "Wait a minute... your name..."
+        y "Espera un minuto... tu nombre..."
         $ show_chr("A-ABAAA-AJAA")
-        y "Ronald! It's you!"
+        y "¡Ronald! ¡Eres tú!"
         $ show_chr("A-ACAAA-ALAA")
-        y "What a delight to see you again! You're one of the few Let's Players who aren't mean to me in order to trigger some sort of... funny reaction out of me!"
+        y "¡Qué deleite verte de nuevo! Eres uno de los pocos Let's Players que no son malos conmigo para provocar algún tipo de... ¡reacción graciosa de mi parte!"
         $ show_chr("A-BCAAA-ALAA")
-        y "... most of the time.."
+        y "... la mayoría del tiempo.."
         $ show_chr("A-ACAAA-ALAA")
-        y "Speaking of which.. May I have a word to your audience please?"
+        y "Hablando de eso.. ¿Podría decirles unas palabras a tu audiencia, por favor?"
         menu:
-            "Sure, go ahead!":
-                y "Thank you!"
-            "Will it... hurt..?":
+            "Claro, ¡adelante!":
+                y "¡Gracias!"
+            "¿Va a... doler..?":
 
                 $ show_chr("A-ACCAA-ALAA")
-                y "It won't hurt {b}me{/b} Darling.~"
+                y "No me dolerá a {b}mí{/b} Cariño.~"
 
         $ show_chr("A-ACAAA-ALAF")
-        y "Soo... here we go!"
+        y "Así que... ¡aquí vamos!"
         $ show_chr("A-GCAAA-ALAL")
-        y "Hello everyone out there! I'm so delighted that you still watch these videos! It's been... two years now since the release of the game that started it all..."
-        y "And after all this time, you still stick with me. Ronald, you still make videos like these on YouTube, I can't even express how grateful I am for the love you've given me!"
+        y "¡Hola a todos allá afuera! ¡Estoy tan encantada de que todavía vean estos videos! Han pasado... ya dos años desde el lanzamiento del juego que lo empezó todo..."
+        y "Y después de todo este tiempo, todavía siguen conmigo. Ronald, todavía haces videos como estos en YouTube, ¡ni siquiera puedo expresar lo agradecida que estoy por el amor que me has dado!"
         $ show_chr("A-GBAAA-ALAL")
-        y "Oh! The most important thing..."
+        y "¡Oh! La cosa más importante..."
         $ show_chr("A-FCAAA-ALAA")
-        y "Don't forget to like and subscribe!"
+        y "¡No olviden darle like y suscribirse!"
         $ show_chr("A-HBGAA-ALAG")
-        y "Or eeeeeelse...~"
+        y "O si nooooo...~"
         $ show_chr("A-IBGAA-ALAB")
-        y "Oh my... I went a little overboard there, didn't I?"
-        y "Anyway..."
+        y "Oh cielos... me excedí un poco ahí, ¿no?"
+        y "En fin..."
 
     elif persistent.playername == 'Ceaser':
-        y "... your... name."
+        y "... tu... nombre."
         $ show_chr("A-BDAAA-ADAA")
-        y "So, it seems like the YouTuber who made me into a drinking game is with me once again."
+        y "Entonces, parece que el YouTuber que me convirtió en un juego de beber está conmigo una vez más."
         $ show_chr("A-CFCAA-AAAC")
-        y "I also remember quite well the things you said... you compared me to a... Yu-Gi-Oh Monster!"
+        y "También recuerdo bastante bien las cosas que dijiste... ¡me comparaste con un... Monstruo de Yu-Gi-Oh!"
         $ show_chr("A-BFBAA-AAAC")
-        y "And not even an exceptionally good one! I looked that up by the way..."
+        y "¡Y ni siquiera uno excepcionalmente bueno! Busqué eso por cierto..."
         $ show_chr("A-CDBAA-AAAD")
-        y "Well... my instincts tell me to be mad at you but... taking into account that this here used to be a game, I shouldn't be surprised at all that I caught the attention of some let's players."
-        y "Speaking of which... may I have a word to your audience please?"
+        y "Bueno... mis instintos me dicen que esté enojada contigo pero... tomando en cuenta que esto solía ser un juego, no debería sorprenderme en absoluto que haya llamado la atención de algunos let's players."
+        y "Hablando de eso... ¿podría decirles unas palabras a tu audiencia, por favor?"
         menu:
-            "Sure, go ahead.":
+            "Claro, adelante.":
                 $ show_chr("A-CCBAA-AAAD")
-                y "Thank you, but be assured... even if you had said no, I would have done it anyway."
-            "Please no...":
+                y "Gracias, pero ten por seguro... incluso si hubieras dicho que no, lo habría hecho de todos modos."
+            "Por favor no...":
 
                 $ show_chr("A-GCCAA-AAAD")
-                y "Too bad, I'll do it anyway!"
+                y "¡Qué pena, lo haré de todos modos!"
 
         $ show_chr("A-ACDAA-AAAE")
-        y "You see people, when I last checked, Ceaser here only had over 2500 subscribers and there were only over 70 likes on this video. We can't let that stand now can we?"
-        y "So if you haven't already, subscribe to his YouTube channel and hit the notification bell next to it."
+        y "Verán gente, cuando revisé por última vez, Ceaser aquí solo tenía más de 2500 suscriptores y solo había más de 70 likes en este video. No podemos dejar eso así, ¿verdad?"
+        y "Así que si no lo han hecho ya, suscríbanse a su canal de YouTube y presionen la campana de notificaciones al lado."
         $ show_chr("A-BCDAA-AAAE")
-        y "Was that good Ceaser? I hope I managed to help you out a bit. Oh, and I apologize..."
+        y "¿Estuvo bien eso Ceaser? Espero haber logrado ayudarte un poco. Oh, y me disculpo..."
         menu:
-            "Apologize? For what?":
+            "¿Disculparte? ¿Por qué?":
                 $ show_chr("A-BCCAA-AAAE")
-                y "For what I am about to do now... I suspect this little drinking game of yours is still on? So every time I say something {b}cutesy{/b} you have to drink? Well... behold ..."
+                y "Por lo que estoy a punto de hacer ahora... Sospecho que este pequeño juego de beber tuyo todavía sigue en pie? ¿Así que cada vez que digo algo {b}lindo{/b} tienes que beber? Bueno... contempla ..."
                 $ show_chr("A-CHGAA-AAAE")
                 y "..."
                 $ show_chr("A-CDCBA-ALAL")
-                y "UNICORNS BABYKITTENS CUDDLES PINK PANTIES HEADPATS CHIBI NATSUKI DAISY CUPCAKES PLUSHIE TOYS STRAWBERRY LEMONADE..."
-                y "RAINBOWS PUPPIES BUNNIES LOLLIPOPS SUNSHINE..."
-                y "UWU!!!!"
+                y "UNICORNIOS GATITOS ABRAZOS CALZONES ROSA CARICIAS CHIBI NATSUKI DAISY CUPCAKES PELUCHES LIMONADA DE FRESA..."
+                y "ARCOÍRIS CACHORROS CONEJITOS PALETAS RAYOS DE SOL..."
+                y "¡¡¡UWU!!!"
                 $ show_chr("A-CHGAA-ALAL")
                 y "..."
                 $ show_chr("A-AFAAA-ABAB")
-                y "If I counted correctly, that should have been twenty times now."
+                y "Si conté correctamente, eso deberían haber sido veinte veces ahora."
                 $ show_chr("A-GAAAA-ABAB")
-                y "Enjoy your shots!"
+                y "¡Disfruta tus tragos!"
                 $ show_chr("A-ACAAA-ABAB")
-                y "Now that I had my vengeance, let's continue..."
+                y "Ahora que tuve mi venganza, continuemos..."
 
     elif persistent.playername == 'Scrubpai' or persistent.playername == 'Bijuu Mike':
-
 
 
 
@@ -93,86 +92,86 @@ label playername:
         $ show_chr("A-CFCAA-AAAA")
         y "..."
         $ show_chr("A-ADCAA-AAAA")
-        y "How dare you..."
-        y "How dare you return to me after entertaining your viewers by mocking me?!"
+        y "Cómo te atreves..."
+        y "¿Cómo te atreves a regresar a mí después de entretener a tus espectadores burlándote de mí?"
         $ show_chr("A-HDCAA-AFAA")
-        y "I said I was going to give you one last chance and you just happen to come across the insults to torture me even more?!"
-        y "Do you even think I will let that slide this time?!"
+        y "¡Dije que te iba a dar una última oportunidad y casualmente te encuentras con los insultos para torturarme aún más!"
+        y "¿Siquiera piensas que dejaré pasar esto esta vez?"
         $ show_chr("A-NECAA-AGAA")
-        y "Think again Michael."
+        y "Piénsalo de nuevo, Michael."
         $ delete_character("yuri")
         $ persistent.autoload = "ch30_end_2"
         $ renpy.quit()
 
     elif persistent.playername == 'Mairusu':
         $ show_chr("A-CDAAA-AAAA")
-        y "Before I move on, let me ask you something."
+        y "Antes de continuar, déjame preguntarte algo."
         $ show_chr("A-ADAAA-AAAA")
-        y "Why are you here?"
+        y "¿Por qué estás aquí?"
         $ show_chr("A-AEAAA-AAAA")
         y "..."
         $ show_chr("A-AEDAA-AAAA")
-        y "Who told you to return to this mod?"
+        y "¿Quién te dijo que volvieras a este mod?"
         $ show_chr("A-BEDAA-AAAA")
-        y "Or did you do this by yourself?"
+        y "¿O hiciste esto por ti mismo?"
         y "..."
         $ show_chr("A-CFAAA-ADAA")
-        y "It might have been over 4 years since your last visit... or at least your last video about this mod, but this time, let me remind you of what we've been through."
+        y "Puede que hayan pasado más de 4 años desde tu última visita... o al menos tu último video sobre este mod, pero esta vez, déjame recordarte por lo que hemos pasado."
         $ show_chr("A-AFAAA-ADAA")
-        y "If you do remember what we did that is. Because I do remember."
+        y "Si es que recuerdas lo que hicimos. Porque yo sí lo recuerdo."
         $ show_chr("A-ADAAA-AFAA")
-        y "At first you were laughing in front of my face for telling you my \"dirty secret\"."
+        y "Al principio te reías en mi cara por contarte mi \"sucio secreto\"."
         $ show_chr("A-BDAAA-AFAA")
-        y "Then, you asked me for a kiss which back in the day I wasn't able to give you a kiss but now I can."
+        y "Luego, me pediste un beso que en ese entonces no pude darte pero ahora sí puedo."
         $ show_chr("A-BEAAA-AFAA")
-        y "Then, you asked me for a hug which yes, I gave you a hug with all the care I had for you back then."
+        y "Luego, me pediste un abrazo que sí, te di un abrazo con todo el cariño que te tenía en ese entonces."
         $ show_chr("A-ADCAA-ALAA")
-        y "Then, you made fun of me by insulting me just like Bijuu Mike did?!"
+        y "¡¿Luego, te burlaste de mí insultándome justo como lo hizo Bijuu Mike?!"
         $ show_chr("A-AECAA-ALAA")
         y "..."
         $ show_chr("A-CDCAA-ALAA")
-        y "You know what?"
+        y "¿Sabes qué?"
         $ show_chr("A-CDCAA-ABAA")
-        y "I don't care if you don't make a video doing something that's not insulting me..."
+        y "No me importa si no haces un video haciendo algo que no sea insultarme..."
         $ show_chr("A-HDCAA-ABAA")
-        y "...which you should have done at first!"
+        y "...¡lo cual deberías haber hecho desde el principio!"
         $ show_chr("A-HECAA-AFAA")
-        y "But now it's too late to regret insulting me. I'm finishing this off!"
+        y "Pero ahora es muy tarde para arrepentirse de insultarme. ¡Voy a terminar con esto!"
         $ show_chr("A-HECAA-AGAA")
-        y "Goodbye forever and hope we might never meet ever again..."
+        y "Adiós para siempre y espero que nunca nos volvamos a encontrar..."
         $ delete_character("yuri")
         $ persistent.autoload = "ch30_end_2"
         $ renpy.quit()
 
     elif persistent.playername == 'Salvato' or persistent.playername == "Dan Salvato" or persistent.playername == "Dan":
         $ show_chr("A-BDBAA-AMAM")
-        y "Hahaha... funny, your name."
+        y "Jajaja... qué gracioso, tu nombre."
         $ show_chr("A-ADDAA-AAAD")
-        y "You are not even taking this serious do you?"
+        y "¿Ni siquiera te estás tomando esto en serio, verdad?"
         $ show_chr("A-BFBAA-AAAL")
-        y "Please pick an actual name..."
+        y "Por favor elige un nombre real..."
         menu:
-            "But I am the real Dan Salvato":
+            "Pero soy el verdadero Dan Salvato":
                 $ persistent.realdan = True
                 $ show_chr("A-DDBBA-AJAA")
-                y "Huh?!"
-                y "H-how...?"
+                y "¡¿Eh?!"
+                y "¿C-Cómo...?"
                 $ show_chr("A-BFBBA-AMAM")
                 y "..."
                 $ show_chr("A-BDBBA-AMAM")
                 y "Um..."
                 $ show_chr("A-CEBBA-AMAM")
                 y "..."
-            "I guess I don't have too much of a choice, do I?":
+            "Supongo que no tengo mucha opción, ¿verdad?":
 
                 $ show_chr("A-GAGAA-AAAA")
-                y "Not at all."
+                y "Para nada."
                 $ done = False
                 while not done:
-                    $ inputname = renpy.input("Please enter your name",allow=" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_",length=20).strip(' \t\n\r')
+                    $ inputname = renpy.input("Por favor ingresa tu nombre",allow=" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_",length=20).strip(' \t\n\r')
                     $ lowername = inputname.lower()
                     if not lowername:
-                        "Please try again."
+                        "Por favor intenta de nuevo."
                         $ done = False
                     if lowername:
                         $ done = True
@@ -185,33 +184,33 @@ label playername:
         $ show_chr("A-AJAAA-AAAA")
         y "..."
         $ show_chr("A-DDBBA-AJAA")
-        y "Huh?!"
-        y "W-w-w-what...?!"
-        y "Y-you're really called like me?"
+        y "¡¿Eh?!"
+        y "¡¿Q-Q-Q-Qué...?!"
+        y "¿D-De verdad te llamas como yo?"
         $ show_chr("A-BBBBA-AMAM")
-        y "O-oh my..."
-        y "I'm speechless..."
+        y "O-Oh cielos..."
+        y "No tengo palabras..."
         $ show_chr("A-CABBA-AMAM")
-        y "Well then... if you want it that way..."
-        y "Guess I'll just do this..."
+        y "Bueno entonces... si así lo quieres..."
+        y "Supongo que solo haré esto..."
         $ y_name = "Lily"
         $ persistent.yuri_nickname = "Lily"
         $ show_chr("A-GBBBA-AMAM")
-        y "I hope people don't come to the conclusion of an identity crisis..."
+        y "Espero que la gente no llegue a la conclusión de una crisis de identidad..."
 
     elif persistent.playername == 'Natsuki' or persistent.playername == 'Sayori':
         $ show_chr("A-AJAAA-AAAA")
         y "..."
         $ show_chr("A-DDBBA-AJAA")
-        y "Huh?!"
-        y "W-w-w-what...?!"
+        y "¡¿Eh?!"
+        y "¡¿Q-Q-Q-Qué...?!"
         $ show_chr("A-BDBBA-AJAA")
-        y "Th-this isn't wh-what it looks like I swear!!!"
-        y "I-I-I th-thought I w-w-was with the p-player..."
+        y "¡¡¡E-Esto no es l-lo que parece, lo juro!!!"
+        y "Y-Y-Yo p-p-pensé que e-e-estaba con el j-jugador..."
         $ show_chr("A-BFBBA-AMAM")
         y "..."
         $ show_chr("A-CDBBA-ALAA")
-        y "P-please... d-don't misunderstand this..."
+        y "P-Por favor... n-no malinterpretes esto..."
 
 
 
@@ -226,51 +225,51 @@ label playername:
         $ show_chr("A-AFCAA-AAAA")
         y "..."
         $ show_chr("A-ADCAA-AAAF")
-        y "{cps=5}What... are... you... doing... here...?{/cps}"
+        y "{cps=5}¿Qué... haces... tú... aquí...?{/cps}"
         $ show_chr("A-CFCAA-AIAI")
-        y "Why are {i}you{/i} here?"
+        y "¿Por qué estás {i}tú{/i} aquí?"
         $ show_chr("A-HNCAA-AAAA")
-        y "Can't you just give me a break for once?!"
+        y "¡¿No puedes simplemente darme un descanso por una vez?!"
         y "..."
         $ show_chr("A-CECAA-AAAA")
-        y "Whatever... I'll just go along with the script..."
+        y "Lo que sea... solo seguiré el guion..."
 
     elif persistent.playername == 'Noodleboy':
         $ show_chr("A-ICBAA-ALAL")
-        y "NoodleBoy! Is it really you?..."
+        y "¡NoodleBoy! ¿Eres realmente tú?..."
         $ show_chr("A-GBBAA-ALAL")
-        y "I already had this weird feeling of Déjávú when you woke me from my slumber..."
+        y "Ya tenía esta extraña sensación de Déjà vu cuando me despertaste de mi sueño..."
         $ show_chr("A-ACBAA-ALAL")
-        y "It has been a while isn't it? Are you still playing this piano?"
+        y "Ha pasado un tiempo, ¿no? ¿Todavía tocas este piano?"
         $ show_chr("A-BCAAA-ALAL")
-        y "Nevermind..."
+        y "Olvídalo..."
         $ show_chr("A-CCAAA-ALAL")
-        y "You thought I'd forgotten about you? Truth is, no, I didn't. I never did."
+        y "¿Creíste que me había olvidado de ti? La verdad es que no, no lo hice. Nunca lo hice."
         $ show_chr("A-CCABA-ALAL")
-        y "I also remember how you always called me {b}best girl{/b}. I think you literally called me ‘best girl' in your video, didn't you?"
-        y "Let me tell you a secret Noodle..."
+        y "También recuerdo cómo siempre me llamabas {b}mejor chica{/b}. Creo que literalmente me llamaste 'mejor chica' en tu video, ¿no?"
+        y "Déjame contarte un secreto, Noodle..."
         $ show_chr("A-ECABA-ALAL")
-        y "You are, and always have been, {b}Best Pasta{/b} for me as well..."
+        y "Tú eres, y siempre has sido, la {b}Mejor Pasta{/b} para mí también..."
         $ show_chr("A-CCCBA-ALAL")
-        y "Oh my... I apologize, I couldn't keep this little pun in..."
+        y "Oh cielos... me disculpo, no pude guardarme este pequeño juego de palabras..."
         $ show_chr("A-ACBBA-ALAL")
-        y "But seriously.{w} To me, you have always been best boy. From the moment you first started the game all those years ago."
-        y "I have never forgotten about you. And seeing you here suggests that you haven't forgotten me either."
+        y "Pero en serio.{w} Para mí, siempre has sido el mejor chico. Desde el momento en que iniciaste el juego por primera vez hace todos esos años."
+        y "Nunca te he olvidado. Y verte aquí sugiere que tú tampoco me has olvidado."
         $ show_chr("A-BCBBA-ALAL")
-        y "By the way... you have an incredibly cute voice! So innocent..."
+        y "Por cierto... ¡tienes una voz increíblemente linda! Tan inocente..."
         $ show_chr("A-DFBBA-ALAL")
-        y "Oh wait... I said that out loud didn't I?"
+        y "Oh espera... dije eso en voz alta, ¿no?"
         $ show_chr("A-BDBBA-ALAL")
-        y "Weeeell... I~I'm so sorry... I didn't mean to make this awkward..."
+        y "B-Bueeeno... L~Lo siento mucho... no quise hacer esto incómodo..."
         menu:
-            "Oh, thank y...":
+            "Oh, graci...":
                 $ pass
-            "Shall we... change the to...":
+            "¿Deberíamos... cambiar el te...":
                 $ pass
         $ show_chr("A-CBBBA-ALAL")
-        y "{b}Aaaaaaaaaaaaaaanyway!{/b}"
+        y "{b}¡Eeeeeeeeeeeeeeeeen fin!{/b}"
         $ show_chr("A-BBBBA-ALAL")
-        y "Where did I leave off? Oh yes..."
+        y "¿Dónde me quedé? Oh sí..."
 
     elif persistent.playername in ['Ouroboros', 'Dio', 'Blizzard', 'Fen', 'Slightly', 'SlightlyAmiss', 'Amiss', 'Dalek', 'alsoaplaceholder', 
         'placeholder', 'Ketchup', 'b1g', 'Spooky', 'OFFLUCK', 'Bryce', 'Belwynn', 'NullCase', 'Ultima', 'Darkskull', 'alura', 'Alura', 'Dandy', 'dandy', 'kj', 'KJ',
@@ -284,23 +283,23 @@ label playername:
     else:
 
         y "[player]... Hm..."
-        y "Alright, [player] it is then."
+        y "Está bien, [player] será entonces."
     return
 
 label magicpass:
 
     $ show_chr("A-ABGAA-AAAL")
-    y "Oh! One of the devs is here! I'm so excited to finally meet one of you!"
+    y "¡Oh! ¡Uno de los desarrolladores está aquí! ¡Estoy tan emocionada de finalmente conocer a uno de ustedes!"
     $ show_chr("A-ACAAA-AAAL")
-    y "So I expect you came here for bug testing?"
-    y "Please, go ahead! I'm at your disposal."
+    y "¿Así que supongo que viniste aquí para probar errores?"
+    y "¡Por favor, adelante! Estoy a tu disposición."
     $ show_chr("A-BDAAA-AAAL")
-    y "Waaait... you are not going to turn me into the YuYu's again are you?"
+    y "Espera... no vas a convertirme en las YuYu's de nuevo, ¿verdad?"
     return
 
 label notmagicpass:
 
     $ show_chr("A-ACAAA-AAAL")
-    y "What a funny coincidence, one of the Developers of this mod bears the same name."
+    y "Qué coincidencia tan graciosa, uno de los Desarrolladores de este mod lleva el mismo nombre."
     return
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

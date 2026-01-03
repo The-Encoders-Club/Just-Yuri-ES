@@ -30,9 +30,9 @@ label startgame:
     $ _dismiss_pause = False
 
 
-    $ s_name = "Girl 3"
-    $ m_name = "Girl 2"
-    $ n_name = "Girl 1"
+    $ s_name = "Chica 3"
+    $ m_name = "Chica 2"
+    $ n_name = "Chica 1"
     $ y_name = "???"
 
     $ quick_menu = True

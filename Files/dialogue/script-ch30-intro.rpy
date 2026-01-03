@@ -140,7 +140,7 @@ label eternity_intro:
         y "Pero no nos preocupemos más por eso..."
         y "Finalmente estamos juntos ahora..."
         $ show_chr("A-BBBAA-ALAA")
-        y "[player] and me..."
+        y "[player] y yo..."
         $ show_chr("A-BFBBA-AMAM")
         y "..."
         $ show_chr("A-CDBBA-AMAM")
@@ -809,7 +809,7 @@ label detection_pitstop:
     else:
 
         $ show_chr("A-ABAAA-AAAA")
-        y "SEntonces, hablemos."
+        y "Entonces, hablemos."
 
     $ persistent.autoload = "ch30_autoload"
     jump ch30_loop

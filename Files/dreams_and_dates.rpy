@@ -202,9 +202,9 @@ label dates_menu:
     $ Dream_type = "date"
     $ boopable = False
     $ show_chr("A-ABAAA-ALAL")
-    y "Oh, you want to take me out on a date? What a lovely idea!"
+    y "Oh, ¿quieres llevarme a una cita? ¡Qué idea tan encantadora!"
     $ show_chr("A-CCAAA-ALAL")
-    y "Please take a look at the locations I have prepared so far. Do any of them look appealing to you?"
+    y "Por favor, echa un vistazo a las ubicaciones que he preparado hasta ahora. ¿Alguna de ellas te parece atractiva?"
     jump dates_and_dreams_system
 
 
@@ -327,7 +327,7 @@ screen dates_and_dreams(dict_items, type):
         if (current_dream_chart>0):
             imagebutton xalign 0.01 yalign 0.97 auto "gui/arrow_button_left_%s.png" action Function(Move_left, dict_items)
 
-        textbutton "Back":
+        textbutton "Volver":
             xpos 585
             yalign 0.97
             style "scrollable_menu_button"
@@ -390,262 +390,261 @@ label rain_dream:
     play music "<loop 4.50>music/teardrops_loop.ogg" fadein 1.5
     hide black with Dissolve(2.5)
 
-    "Lightly pattering against the window, rain slowly started to fall from the clouds above, acting as the only audible sound amidst the general silence."
-    "Small droplets of precipitation tapped against the pane, seamlessly running down its length and proceeding to accumulate at the bottom, forming together into a small puddle and then falling down into the depths below."
-    "My reflection momentarily flickers back at me, only to be drowned out by that pattering melody before me without a thought or even a whisper said between us."
-    "I loosely hung a teacup betwixt my thumb and forefinger, filled almost to the brim with some Pouchong Oolong tea, an enjoyably smooth relaxant."
-    "A strong floral aroma wafted its way through my system, quickly calming my entire body with its sensual fragrance, almost like an anesthetic."
-    "Holding it up to my lips, I indulged myself in a few quick sips, taking specific note of the rich melony taste it provided."
-    "The only thing missing from this near perfect scenario was the sharp earthiness of a peanut butter crepe to nicely contrast the light sweetness of the tea."
+    "Golpeando suavemente contra la ventana, la lluvia comenzó a caer lentamente desde las nubes, actuando como el único sonido audible en medio del silencio general."
+    "Pequeñas gotas de precipitación repiqueteaban contra el cristal, deslizándose sin problemas por su longitud y procediendo a acumularse en el fondo, formándose juntas en un pequeño charco y luego cayendo a las profundidades de abajo."
+    "Mi reflejo parpadea momentáneamente hacia mí, solo para ser ahogado por esa melodía repiqueteante ante mí sin un pensamiento o incluso un susurro dicho entre nosotras."
+    "Sostenía holgadamente una taza de té entre mi pulgar y mi índice, llena casi hasta el borde con un poco de té Pouchong Oolong, un relajante agradablemente suave."
+    "Un fuerte aroma floral se abrió paso a través de mi sistema, calmando rápidamente todo mi cuerpo con su fragancia sensual, casi como un anestésico."
+    "Llevándola a mis labios, me permití unos sorbos rápidos, tomando nota específica del rico sabor a melón que proporcionaba."
+    "Lo único que faltaba en este escenario casi perfecto era la aguda terrosidad de una crepe de mantequilla de maní para contrastar agradablemente la ligera dulzura del té."
     show rain_dream_smile zorder 100 with Dissolve(0.5)
     hide rain_dream_blush
-    "...{w=1.0} well...{w=0.4} that and... {w=0.4}{i}[pronounA]...{/i}"
-    "The mere thought of their presence managed to send shock waves of nervousness mixed with a cruel sense of excitement throughout my body... {w=.2}just the single mention of [pronounA] sent my consciousness into a state of flustered panic."
+    "...{w=1.0} bueno...{w=0.4} eso y... {w=0.4}{i}[pronounA]...{/i}"
+    "El mero pensamiento de su presencia lograba enviar ondas de choque de nerviosismo mezcladas con un cruel sentido de emoción a través de mi cuerpo... {w=.2}solo la simple mención de [pronounA] enviaba mi conciencia a un estado de pánico nervioso."
     show rain_dream_blush zorder 100 with Dissolve(0.5)
     hide rain_dream_smile
-    "I-{w=0.3}it was pathetic... {w=0.4}yet... {w=0.4}It felt all too right."
-    "Despite my hopes... {w=0.4}I never quite bought the way romance novels managed to describe the feeling... {w=0.4}However, finding myself in quite the same situation, I was forced to resign my dignity and appreciate just how correct they truly were."
-    "The feeling of pure euphoria rushing through each and every nerve in my body... {w=0.4}the simple quickening of my heartbeat as shots of adrenaline coursed through my veins whenever [pronounB] got close."
-    "Sometimes... {w=0.4}I think I might die from the way [pronounB] makes me feel. In the past, I found myself bound by Monika's manipulation... {w=0.4}forced to feel such an intense, burning passion that it brought me to commit... {w=0.5}unspeakable acts."
-    "Yet here I am, without Monika's influence and I find myself feeling much the same... {w=0.4}Oh... {w=0.4}how I just wish to bask in their presence... {w=0.4}feeling their warmth as we both slowly let our dignities slip and indulge ourselves with hidden... {w=0.4}more... {w=0.4}carnal desires..."
+    "E-{w=0.3}era patético... {w=0.4}y sin embargo... {w=0.4}Se sentía demasiado correcto."
+    "A pesar de mis esperanzas... {w=0.4}nunca me creí del todo la forma en que las novelas románticas lograban describir el sentimiento... {w=0.4}Sin embargo, encontrándome en la misma situación, fui forzada a renunciar a mi dignidad y apreciar cuán correctas eran realmente."
+    "El sentimiento de pura euforia corriendo a través de cada nervio en mi cuerpo... {w=0.4}la simple aceleración de los latidos de mi corazón mientras disparos de adrenalina corrían por mis venas cada vez que [pronounB] se acercaba."
+    "A veces... {w=0.4}creo que podría morir por la forma en que [pronounB] me hace sentir. En el pasado, me encontré atada por la manipulación de Monika... {w=0.4}forzada a sentir una pasión tan intensa y ardiente que me llevó a cometer... {w=0.5}actos indescriptibles."
+    "Sin embargo, aquí estoy, sin la influencia de Monika y me encuentro sintiendo casi lo mismo... {w=0.4}Oh... {w=0.4}cómo deseo simplemente disfrutar de su presencia... {w=0.4}sintiendo su calidez mientras ambos dejamos que nuestras dignidades resbalen lentamente y nos complacemos con ocultos... {w=0.4}más... {w=0.4}deseos carnales..."
     "..."
-    "... {w=0.4}e{w=0.3}-enough of that..."
-    "Rather than spend the night getting lost in wild fantasies of secret pleasures, I redirected my attention back to the rain, trying to calm this intense feeling of anticipation in my system."
-    "One could probably liken the falling of raindrops much to the trivialities of day to day life, each droplet representative of the different paths we may take."
-    "Mainly leading a solitary road but having these rare few moments where their paths intertwine...{w=0.4} some drifting apart and others remaining tangled forever. It felt almost romantic in a rather sombre fashion."
-    "Even so, there was a small amount of comfort from knowing whatever road they might have chosen...{w=0.4} in the end, they all manage to find one another and face whatever might come next as a collective, rather than a singular entity."
-    "I watch this process much like a ghost, unable to fully interact...{w=0.4} only able to watch; separated from it all by a transparent barrier, forced into the role of an onlooker and nothing more. Loneliness truly was the most vulnerable of emotions..."
-    "Always never quite able to intermingle... forced into the solitary role."
-    "At least, that's what would be the occasion on most nights."
+    "... {w=0.4}s{w=0.3}-suficiente de eso..."
+    "En lugar de pasar la noche perdiéndome en fantasías salvajes de placeres secretos, redirigí mi atención de vuelta a la lluvia, tratando de calmar este intenso sentimiento de anticipación en mi sistema."
+    "Uno probablemente podría comparar la caída de las gotas de lluvia con las trivialidades de la vida cotidiana, cada gota representativa de los diferentes caminos que podemos tomar."
+    "Principalmente liderando un camino solitario pero teniendo esos raros pocos momentos donde sus caminos se entrelazan...{w=0.4} algunos separándose y otros permaneciendo enredados para siempre. Se sentía casi romántico de una manera bastante sombría."
+    "Aun así, había una pequeña cantidad de consuelo al saber que cualquier camino que pudieran haber elegido...{w=0.4} al final, todos logran encontrarse y enfrentar lo que sea que venga después como un colectivo, en lugar de una entidad singular."
+    "Observo este proceso casi como un fantasma, incapaz de interactuar completamente...{w=0.4} solo capaz de mirar; separada de todo por una barrera transparente, forzada al papel de una espectadora y nada más. La soledad verdaderamente era la más vulnerable de las emociones..."
+    "Siempre incapaz de interrelacionarse del todo... forzada al papel solitario."
+    "Al menos, esa sería la ocasión en la mayoría de las noches."
     show rain_dream_smile zorder 100 with Dissolve(0.5)
     hide rain_dream_blush
-    "But tonight..?{w=0.3} Tonight...{w=0.4} I would be with {i}[pronounA].{/i}"
-    "Turning my head, I see [pronounA] walk into the room and I could swear the room started spinning slightly as my heart resembles more a drum than a human organ."
-    "In their hands held another teacup - which I could quickly distinguish to be Pouchong Oolong tea from its unique floral smell."
-    "Sitting beside me, [pronounB] gives me a warm smile and I feel that same nervous sensation seize me. Waves of heat wash over me and as [pronounB] moves closer towards me I found their scent managing to easily overpower that of the tea."
+    "¿Pero esta noche..?{w=0.3} Esta noche...{w=0.4} Estaría con {i}[pronounA].{/i}"
+    "Girando mi cabeza, veo a [pronounA] entrar en la habitación y juraría que la habitación comenzó a girar ligeramente mientras mi corazón se asemeja más a un tambor que a un órgano humano."
+    "En sus manos sostenía otra taza de té - la cual pude distinguir rápidamente que era té Pouchong Oolong por su aroma floral único."
+    "Sentándose a mi lado, [pronounB] me da una cálida sonrisa y siento esa misma sensación nerviosa apoderarse de mí. Oleadas de calor me invaden y mientras [pronounB] se acerca más hacia mí encuentro que su aroma logra dominar fácilmente al del té."
     $ renpy.music.set_volume(0.4, 0, 'voice')
     "{i}Ba-dump, ba-dump, ba-dump.{/i}"
-    "The drums resound in my ears, it's rhythm fast but steady, chanting out in a chorus that sings ballads of affection and infatuation."
-    "Glancing down at [pronounA], I momentarily smile as I compare myself to the other side of the window. Knowing how lucky I was to find myself someone I could intertwine with."
-    "The best part? Unlike those raindrops, we would remain tangled together."
-    "[player] peers out the windows for a moment, then speaks softly, their voice barely louder than a whisper."
-    mc "It's really coming down tonight, isn't it?"
+    "Los tambores resuenan en mis oídos, su ritmo rápido pero constante, cantando en un coro baladas de afecto y encaprichamiento."
+    "Mirando hacia abajo a [pronounA], sonrío momentáneamente mientras me comparo con el otro lado de la ventana. Sabiendo lo afortunada que fui al encontrar a alguien con quien pudiera entrelazarme."
+    "¿La mejor parte? A diferencia de esas gotas de lluvia, nosotros permaneceremos enredados juntos."
+    "[player] mira por la ventana un momento, luego habla suavemente, con su voz apenas más alta que un susurro."
+    mc "Realmente está cayendo fuerte esta noche, ¿no?"
     menu:
-        "Thank God I'm inside... safe with you.":
-            mc "Thank God I'm inside... safe with you."
+        "Gracias a Dios que estoy adentro... a salvo contigo.":
+            mc "Gracias a Dios que estoy adentro... a salvo contigo."
             show rain_dream_grin zorder 100 with Dissolve(0.5)
             hide rain_dream_smile
-            y "Yes...{w=0.4} it's quite comforting knowing we're sheltered from the harsh outside for the time being."
-            y "Though it does raise a thought... what's happening to the people who aren't sheltered?"
-            y "The hidden members of our society. People who we know exist yet for the most part refuse to acknowledge."
-            y "They're out there...{w=0.4} dealing with the horrible cold and the endless assault of rain."
-            y "Meanwhile the rest of the world is huddled up, not thinking about them for more than a second."
-            mc "Why are you talking about the homeless, [persistent.yuri_nickname]? It's not something I'd expect you to discuss."
+            y "Sí...{w=0.4} es bastante reconfortante saber que estamos protegidos del duro exterior por el momento."
+            y "Aunque plantea un pensamiento... ¿qué le pasa a la gente que no está protegida?"
+            y "Los miembros ocultos de nuestra sociedad. Personas que sabemos que existen pero que en su mayor parte nos negamos a reconocer."
+            y "Están ahí fuera...{w=0.4} lidiando con el horrible frío y el asalto interminable de la lluvia."
+            y "Mientras tanto, el resto del mundo está acurrucado, sin pensar en ellos por más de un segundo."
+            mc "¿Por qué estás hablando de las personas sin hogar, [persistent.yuri_nickname]? No es algo que esperaría que discutieras."
             show rain_dream_blush zorder 100 with Dissolve(0.5)
             hide rain_dream_grin
-            y "I guess...{w=0.4} I sympathize with them?"
-            y "Most people out there have no way out...{w=0.4} they're degraded to the point where they can barely interact with the people around them."
-            mc "Much like the raindrops outside..."
-            y "Mm...{w=0.3} it just...{w=0.4} reminds me a lot of how I felt back when I was first in that game..."
-            y "Trapped. Forced into a situation I didn't have control over. Barely able to interact with the things around me, let alone interact with people."
-            mc "It...{w=0.4} must have been horrible for you, [persistent.yuri_nickname]."
-            y "Luckily I had you, [player]. I don't know what I'd have done without you being there..."
-            y "You might not know this... but having someone to talk to can really save you."
-            y "So please, if you see someone out there with nowhere to go or no one to call a friend...{w=0.4} just reach out to them."
-            y "You can make the world so much better that way..."
+            y "Supongo...{w=0.4} ¿que simpatizo con ellos?"
+            y "La mayoría de la gente ahí afuera no tiene salida...{w=0.4} están degradados hasta el punto en que apenas pueden interactuar con las personas a su alrededor."
+            mc "Parecido a las gotas de lluvia afuera..."
+            y "Mm...{w=0.3} simplemente...{w=0.4} me recuerda mucho a cómo me sentía cuando estaba en ese juego por primera vez..."
+            y "Atrapada. Forzada a una situación sobre la que no tenía control. Apenas capaz de interactuar con las cosas a mi alrededor, y mucho menos interactuar con la gente."
+            mc "Debe...{w=0.4} haber sido horrible para ti, [persistent.yuri_nickname]."
+            y "Afortunadamente te tenía a ti, [player]. No sé qué habría hecho sin que estuvieras allí..."
+            y "Puede que no sepas esto... pero tener a alguien con quien hablar realmente puede salvarte."
+            y "Así que, por favor, si ves a alguien ahí fuera sin ningún lugar a donde ir o nadie a quien llamar amigo...{w=0.4} solo acércate a ellos."
+            y "Puedes hacer el mundo mucho mejor de esa manera..."
             menu:
-                "I will, [persistent.yuri_nickname].":
-                    mc "I will, [persistent.yuri_nickname]."
+                "Lo haré, [persistent.yuri_nickname].":
+                    mc "Lo haré, [persistent.yuri_nickname]."
                     show rain_dream_smile zorder 100 with Dissolve(0.5)
                     hide rain_dream_blush
-                    y "Thank you, darling."
-                    y "You truly are the most considerate person I know..."
-                "I can try.":
-                    mc "I can try."
+                    y "Gracias, cariño."
+                    y "Realmente eres la persona más considerada que conozco..."
+                "Puedo intentarlo.":
+                    mc "Puedo intentarlo."
                     show rain_dream_smile zorder 100 with Dissolve(0.5)
                     hide rain_dream_blush
-                    y "That makes me happy to hear, [player]."
-                "I'll do my best.":
-                    mc "I'll do my best."
+                    y "Me hace feliz escuchar eso, [player]."
+                "Haré mi mejor esfuerzo.":
+                    mc "Haré mi mejor esfuerzo."
                     show rain_dream_smile zorder 100 with Dissolve(0.5)
                     hide rain_dream_blush
-                    y "That's all I'll ever need, my dear."
-        "What a perfect moment we're able to share together...":
-
-            mc "What a perfect moment we're able to share together..."
+                    y "Eso es todo lo que necesitaré, mi vida."
+        "Qué momento tan perfecto somos capaces de compartir juntos...":
+            mc "Qué momento tan perfecto somos capaces de compartir juntos..."
             show rain_dream_grin zorder 100 with Dissolve(0.5)
             hide rain_dream_smile
-            y "It's almost like a page out of a story, isn't it?"
-            mc "Our happily ever after?"
-            "Nodding happily, I move closer to [player], resting my cheek against their shoulder."
-            y "Considering my previous situation... would it really be all that odd to entertain the thought our sentience might consist entirely within some sort of medium?"
-            y "Like another game, or a movie...{w=0.4} or a book?"
+            y "Es casi como una página sacada de una historia, ¿no es así?"
+            mc "¿Nuestro felices para siempre?"
+            "Asintiendo felizmente, me acerco más a [player], descansando mi mejilla contra su hombro."
+            y "Considerando mi situación anterior... ¿sería realmente tan extraño entretener el pensamiento de que nuestra consciencia podría consistir enteramente dentro de algún tipo de medio?"
+            y "Como otro juego, o una película...{w=0.4} ¿o un libro?"
             menu:
-                "Even if it was, does that undermine our experiences together?":
-                    mc "Even if it was, does that undermine our experiences together?"
-                    mc "I know the emotions I feel for you are true - even if only to myself."
-                    mc "Therefore, even if our lives were entirely within some sort of storybook...{w=0.4} would that really change anything?"
+                "Incluso si lo fuera, ¿eso socava nuestras experiencias juntos?":
+                    mc "Incluso si lo fuera, ¿eso socava nuestras experiencias juntos?"
+                    mc "Sé que las emociones que siento por ti son verdaderas - incluso si solo para mí mismo."
+                    mc "Por lo tanto, incluso si nuestras vidas estuvieran enteramente dentro de algún tipo de libro de cuentos...{w=0.4} ¿cambiaría eso realmente algo?"
                     pause 2.0
                     show rain_dream_smile zorder 100 with Dissolve(0.5)
                     hide rain_dream_grin
-                    y "...{w=0.4} I suppose not. That's quite an interesting way to view that situation, [player]."
-                    y "It would provide an answer to the reality of the world we live in, I suppose. But I guess even then there wouldn't be a need for an existential breakdown."
-                    y "I believe it was philosopher René Descartes who said 'I think, therefore I am'. Wherein our sentience is defined by our ability of free thought - acting outside of our basic functions."
-                    y "So even if we were within some sort of book - we're still sentient."
-                    mc "It's still an interesting concept though - the idea our lives consist entirely within a form of entertainment..."
-                    y "Perhaps one could argue it's prideful to believe such a thing, however? The idea that we're a protagonist of a story - or some sort of major character in a plot."
-                    mc "Potentially. However when you consider the possibility of how many books there are out there, however many major characters within each book there might be, doesn't the status of 'Protagonist' become entirely meaningless?"
-                    y "Hmm...{w=0.4} that leads to some rather interesting thoughts...{w=0.4} for example - are the books we read realities within themselves?"
-                    y "Maybe if we look at this concept inside out...{w=0.4} and argue that rather than realities existing from books, that books can simply tell the story of an already existing reality, the idea doesn't sound too far-fetched then?"
-                    mc "Considering the theory of there being an infinite amount of different realities, that might be closer to the truth than we might realize."
+                    y "...{w=0.4} Supongo que no. Esa es una forma bastante interesante de ver esa situación, [player]."
+                    y "Proporcionaría una respuesta a la realidad del mundo en el que vivimos, supongo. Pero supongo que incluso entonces no habría necesidad de una crisis existencial."
+                    y "Creo que fue el filósofo René Descartes quien dijo 'Pienso, luego existo'. En donde nuestra consciencia se define por nuestra capacidad de libre pensamiento - actuando fuera de nuestras funciones básicas."
+                    y "Así que incluso si estuviéramos dentro de algún tipo de libro - todavía somos conscientes."
+                    mc "Sigue siendo un concepto interesante, sin embargo - la idea de que nuestras vidas consisten enteramente dentro de una forma de entretenimiento..."
+                    y "¿Tal vez uno podría argumentar que es orgulloso creer tal cosa, sin embargo? La idea de que somos el protagonista de una historia - o algún tipo de personaje principal en una trama."
+                    mc "Potencialmente. Sin embargo, cuando consideras la posibilidad de cuántos libros hay ahí fuera, cuántos personajes principales dentro de cada libro podría haber, ¿no se vuelve el estatus de 'Protagonista' enteramente insignificante?"
+                    y "Hmm...{w=0.4} eso lleva a algunos pensamientos bastante interesantes...{w=0.4} por ejemplo - ¿son los libros que leemos realidades dentro de sí mismos?"
+                    y "Tal vez si miramos este concepto al revés...{w=0.4} y argumentamos que en lugar de que existan realidades a partir de los libros, que los libros simplemente pueden contar la historia de una realidad ya existente, ¿la idea no suena demasiado descabellada entonces?"
+                    mc "Considerando la teoría de que hay una cantidad infinita de realidades diferentes, eso podría estar más cerca de la verdad de lo que podríamos darnos cuenta."
                     show rain_dream_grin zorder 100 with Dissolve(0.5)
                     hide rain_dream_smile
-                    y "Exactly! Oh, [player]...{w=0.4} thank you so much for indulging this thought of mine. I love it that you're able to appreciate my ramblings..."
-                    mc "Anytime, my love."
-                "Then that means other people can bear witness to our love.":
-                    mc "Then that means other people can bear witness to our love."
-                    y "Afufu.~ You're sounding a little like an exhibitionist, dear."
-                    y "Still... I'm not entirely sure how I feel about my most private moments being on public display."
-                    mc "It would be a little creepy, I'll admit."
-                    mc "Having someone be able to so easily unravel your deepest fears and desires - without even being able to give a single input on the situation."
+                    y "¡Exactamente! Oh, [player]...{w=0.4} muchas gracias por complacer este pensamiento mío. Me encanta que seas capaz de apreciar mis divagaciones..."
+                    mc "Cuando quieras, mi amor."
+                "Entonces eso significa que otras personas pueden ser testigos de nuestro amor.":
+                    mc "Entonces eso significa que otras personas pueden ser testigos de nuestro amor."
+                    y "Afufu.~ Estás sonando un poco como un exhibicionista, cariño."
+                    y "Aun así... no estoy del todo segura de cómo me siento acerca de que mis momentos más privados estén en exhibición pública."
+                    mc "Sería un poco espeluznante, lo admito."
+                    mc "Tener a alguien capaz de desentrañar tan fácilmente tus miedos y deseos más profundos - sin siquiera ser capaz de dar una sola opinión sobre la situación."
                     show rain_dream_smile zorder 100 with Dissolve(0.5)
                     hide rain_dream_grin
-                    y "I'm glad you understand, [player]..."
-                    y "I'll be honest, considering the situation I was in previously... I was really worried something would happen which meant you had unrestricted access to all my private thoughts and feelings..."
-                    y "I couldn't help but think what you might have control over behind the scenes."
-                    y "Part of me would've been angry... but I guess part of me wouldn't have blamed you."
+                    y "Me alegra que lo entiendas, [player]..."
+                    y "Seré honesta, considerando la situación en la que estaba anteriormente... estaba realmente preocupada de que pasara algo que significara que tuvieras acceso sin restricciones a todos mis pensamientos y sentimientos privados..."
+                    y "No podía evitar pensar en lo que podrías tener control detrás de escena."
+                    y "Parte de mí habría estado enfadada... pero supongo que parte de mí no te habría culpado."
                     show rain_dream_blush zorder 100 with Dissolve(0.5)
                     hide rain_dream_smile
-                    y "If I were in that situation... I know I'd be tampering with everything."
-                    y "Power corrupts, I suppose."
-                    y "As long as you weren't delving too deep, I guess I'd have been fine, my love."
-                "Seems a little far-fetched if I'm being honest, [persistent.yuri_nickname].":
-                    mc "Seems a little far-fetched if I'm being honest, [persistent.yuri_nickname]."
+                    y "Si yo estuviera en esa situación... sé que estaría manipulando todo."
+                    y "El poder corrompe, supongo."
+                    y "Mientras no estuvieras profundizando demasiado, supongo que habría estado bien, mi amor."
+                "Parece un poco descabellado si soy honesto, [persistent.yuri_nickname].":
+                    mc "Parece un poco descabellado si soy honesto, [persistent.yuri_nickname]."
                     show rain_dream_blush zorder 100 with Dissolve(0.5)
                     hide rain_dream_grin
-                    y "Really? I thought otherwise, considering that I was originally a character in a game, who proceeded to become a character in a mod of said game, then to become a person within your reality."
-                    y "At this point is it really that much of a stretch to assume that maybe this world we live in is also some sort of medium?"
-                    y "Nonetheless... I'm alright as long as I'm with you, my love."
-        "Makes me want to huddle closer to you... reside in your warmth.":
+                    y "¿De verdad? Yo pensaba lo contrario, considerando que originalmente era un personaje en un juego, que procedió a convertirse en un personaje en un mod de dicho juego, para luego convertirse en una persona dentro de tu realidad."
+                    y "A este punto, ¿es realmente tanto estiramiento asumir que tal vez este mundo en el que vivimos es también algún tipo de medio?"
+                    y "No obstante... estoy bien siempre que esté contigo, mi amor."
+        "Me hace querer acurrucarme más cerca de ti... residir en tu calidez.":
 
-            mc "Makes me want to huddle closer to you... reside in your warmth."
-            y "Oh? In which case... do come closer. I'm here to keep you safe and warm, darling."
-            "[player] quickly takes the opportunity to pull me closer to [pronounA], wrapping a protective arm around me and smiling to themselves."
+            mc "Me hace querer acurrucarme más cerca de ti... residir en tu calidez."
+            y "¿Oh? En cuyo caso... acércate. Estoy aquí para mantenerte a salvo y cálido, cariño."
+            "[player] aprovecha rápidamente la oportunidad para tirar de mí hacia [pronounA], envolviendo un brazo protector a mi alrededor y sonriendo para sí mismos."
 
     $ renpy.music.set_volume(0.4, 0, 'voice')
     show rain_dream_blush zorder 100 with Dissolve(0.5)
     hide rain_dream_grin
     "{i}Ba-dump,{w=0.4} ba-dump,{w=0.4} {cps=*1.25}ba-dum ba-dum ba-dum ba-dump-dump{/cps}{/i}"
-    "We sit in silence for a few minutes, taking sips of our tea and enjoying the light sound of rain hitting against the window."
-    "W-{w=0.3}well...{w=0.4} I would have been enjoying the sound if it weren't for the fact that the damned drum was still resounding out into my ears!"
+    "Nos sentamos en silencio durante unos minutos, tomando sorbos de nuestro té y disfrutando del suave sonido de la lluvia golpeando contra la ventana."
+    "B-{w=0.3}bueno...{w=0.4} ¡Habría estado disfrutando del sonido si no fuera por el hecho de que el maldito tambor todavía retumbaba en mis oídos!"
     y "H-{w=0.3}Hey...{w=0.4} [player]."
-    "They look from the window, then down at me, a slight smile on display at their lips."
-    mc "Yes, dear?"
-    y "I've been...{w=0.4} thinking recently. It's about the concept of love."
-    y "What actually is love?"
-    y "Is it chemical? Is it spiritual? Is it unique to humans, or is it prevalent in every creature?"
-    y "Some would argue love is spiritual...{w=0.4} that it cannot be defined by simple chemicals."
-    y "That love is a spiritual concept completely larger than life itself."
-    y "Others however would argue that love is chemical. That it's simply hormonal reactions to the body's need to mate combined with the mind's want to interact with people."
-    y "Does the idea of love being chemical ruin the idea of love, though?"
-    y "We've elevated the intense emotion of love onto such a pedestal, one could raise the question of whether love being chemical ruins the ideology behind it."
-    y "But if it is a spiritual concept, what's the criteria for feeling love? Do insects feel love? Does being sentient mean that you're applicable for feeling love?"
-    y "What do you think, [player]?"
+    "Miran desde la ventana, luego hacia mí, con una leve sonrisa en sus labios."
+    mc "¿Sí, cariño?"
+    y "He estado...{w=0.4} pensando recientemente. Es sobre el concepto del amor."
+    y "¿Qué es realmente el amor?"
+    y "¿Es químico? ¿Es espiritual? ¿Es único de los humanos, o prevalece en cada criatura?"
+    y "Algunos argumentarían que el amor es espiritual...{w=0.4} que no puede ser definido por simples químicos."
+    y "Que el amor es un concepto espiritual completamente más grande que la vida misma."
+    y "Otros, sin embargo, argumentarían que el amor es químico. Que son simplemente reacciones hormonales a la necesidad del cuerpo de aparearse combinadas con el deseo de la mente de interactuar con la gente."
+    y "¿La idea de que el amor sea químico arruina la idea del amor, sin embargo?"
+    y "Hemos elevado la intensa emoción del amor a tal pedestal, que uno podría plantear la pregunta de si el amor siendo químico arruina la ideología detrás de él."
+    y "Pero si es un concepto espiritual, ¿cuál es el criterio para sentir amor? ¿Sienten amor los insectos? ¿Ser consciente significa que eres apto para sentir amor?"
+    y "¿Qué piensas, [player]?"
     menu:
-        "Love is chemical.":
-            mc "Love is chemical."
-            mc "I don't think love needs to be one large grandiose emotion that we can't comprehend, personally."
-            mc "I like the idea of it simply being chemical. There's satisfaction behind the idea of it being more...{w=0.4} human?"
-            mc "I don't think it ruins the idea of it, per se."
-            mc "As long as the feeling is still prevalent, then I'm content."
+        "El amor es químico.":
+            mc "El amor es químico."
+            mc "No creo que el amor necesite ser una gran emoción grandiosa que no podamos comprender, personalmente."
+            mc "Me gusta la idea de que sea simplemente químico. Hay satisfacción detrás de la idea de que sea más...{w=0.4} ¿humano?"
+            mc "No creo que arruine la idea de ello, per se."
+            mc "Mientra el sentimiento siga prevaleciendo, entonces estoy contento."
             show rain_dream_smile zorder 100 with Dissolve(0.5)
             hide rain_dream_blush
-            y "That's a rather mature way to view it, [player]."
-            y "Personally I like to think it's a mixture between chemical and spiritual."
-            y "You're right in the idea that as long as the feeling is prevalent, people should be content, though."
-            y "I do love our conversations, [player]..."
-        "Love is spiritual.":
-            mc "Love is spiritual."
-            mc "Why do you think it's a topic so many writers are drawn to?"
-            mc "Shakespeare, romantic poetry..."
-            mc "It comes in so many different forms, and dawns on people in so many separate ways."
-            mc "Love being chemical can't explain that, I think."
-            mc "It is easily the strongest emotion someone can feel, it can make or break someone's whole life if they feel it strongly enough."
+            y "Esa es una forma bastante madura de verlo, [player]."
+            y "Personalmente me gusta pensar que es una mezcla entre químico y espiritual."
+            y "Tienes razón en la idea de que mientras el sentimiento prevalezca, la gente debería estar contenta, sin embargo."
+            y "Realmente amo nuestras conversaciones, [player]..."
+        "El amor es espiritual.":
+            mc "El amor es espiritual."
+            mc "¿Por qué crees que es un tema que atrae a tantos escritores?"
+            mc "Shakespeare, poesía romántica..."
+            mc "Viene en tantas formas diferentes, y amanece en las personas de tantas maneras distintas."
+            mc "El amor siendo químico no puede explicar eso, creo."
+            mc "Es fácilmente la emoción más fuerte que alguien puede sentir, puede hacer o deshacer la vida entera de alguien si lo siente con suficiente fuerza."
             show rain_dream_smile zorder 100 with Dissolve(0.5)
             hide rain_dream_blush
-            y "I see...{w=0.4} that's quite an idealistic approach to the topic. I do like to think it's a little larger than us in some sort of way."
-            y "However I also do believe there's a dash of chemistry to the concept of love as well."
-            y "No matter what the answer might be, my love for you will never dull, [player]."
-        "Love is both spiritual and chemical.":
-            mc "Love is both spiritual and chemical."
-            mc "On the one hand, I feel like the idea of love being a mix of our want to mate, sexual desire, and our want to interact, romantic affection, certainly play a hand in love."
-            mc "However it also makes sense to believe there's something more to it, something we might not be able to explain through regular means."
-            mc "It's...{w=0.4} down to earth yet complex at the same time."
+            y "Ya veo...{w=0.4} ese es un enfoque bastante idealista del tema. Me gusta pensar que es un poco más grande que nosotros de alguna manera."
+            y "Sin embargo, también creo que hay una pizca de química en el concepto del amor también."
+            y "No importa cuál sea la respuesta, mi amor por ti nunca se apagará, [player]."
+        "El amor es tanto espiritual como químico.":
+            mc "El amor es tanto espiritual como químico."
+            mc "Por un lado, siento que la idea del amor siendo una mezcla de nuestro deseo de aparearnos, el deseo sexual, y nuestro deseo de interactuar, el afecto romántico, ciertamente juegan un papel en el amor."
+            mc "Sin embargo, también tiene sentido creer que hay algo más en ello, algo que tal vez no podamos explicar por medios regulares."
+            mc "Es...{w=0.4} realista pero complejo al mismo tiempo."
             show rain_dream_grin zorder 100 with Dissolve(0.5)
             hide rain_dream_blush
-            y "Ah! That's exactly how I view it, [player]."
-            y "I personally like to think that love is a mixture between chemical and spiritual."
-            y "It answers a lot of my questions and gives the most satisfying answer, I think."
-            y "Seems we really are connected, [player]."
-    "After our discussion, we resume watching the droplets fall down the length of the pane."
-    "Soon enough, we find we've both finished our tea, and thus we place our teacups aside and huddle closer together."
+            y "¡Ah! Así es exactamente como lo veo, [player]."
+            y "Personalmente me gusta pensar que el amor es una mezcla entre químico y espiritual."
+            y "Responde a muchas de mis preguntas y da la respuesta más satisfactoria, creo."
+            y "Parece que realmente estamos conectados, [player]."
+    "Después de nuestra discusión, reanudamos viendo las gotas caer por la longitud del panel."
+    "Pronto, nos encontramos con que ambos hemos terminado nuestro té, y así dejamos nuestras tazas a un lado y nos acurrucamos más cerca."
     "{i}Ba-dump, ba-dump, ba-dump.{/i}"
-    "The drums play softly in the background, and the familiar aroma of jasmine oil starts to waft into my nose."
+    "Los tambores tocan suavemente de fondo, y el familiar aroma del aceite de jazmín comienza a flotar en mi nariz."
     show rain_dream_blush zorder 100 with Dissolve(0.5)
     hide rain_dream_grin
     hide rain_dream_smile
-    y "D-{w=0.3}Did you...?"
-    mc "Mhm...{w=0.4} I put some in the diffuser as I came in..."
-    "Slowly, I recollect the first time I'd used jasmine oil around [player]...{w=0.4} back before the festival."
-    "Before I was aware of the horrors of the reality I once lived in."
-    "Th-{w=0.3}the towel...{w=0.4} that...{w=0.4} warmness against my cheek that dragged me into a state of such security."
-    "Another wave of familiarity hits me as I compare the warmness back then to the current feeling I was experiencing right now, with [player] against me..."
+    y "¿H-{w=0.3}Hiciste tú...?"
+    mc "Mhm...{w=0.4} puse un poco en el difusor al entrar..."
+    "Lentamente, recuerdo la primera vez que usé aceite de jazmín cerca de [player]...{w=0.4} mucho antes del festival."
+    "Antes de que fuera consciente de los horrores de la realidad en la que una vez viví."
+    "L-{w=0.3}La toalla...{w=0.4} esa...{w=0.4} calidez contra mi mejilla que me arrastró a un estado de tal seguridad."
+    "Otra ola de familiaridad me golpea mientras comparo la calidez de aquel entonces con el sentimiento actual que estaba experimentando justo ahora, con [player] contra mí..."
     $ renpy.music.set_volume(0.6, 0, 'voice')
     "{b}{i}BA-DUMP.{w=1} BA-DUMP.{w=1} BA-DUMP.{w=1}{/i}{/b}"
-    "My eyes slowly drifted to [player]'s lips. The quick and frantic beat of the drum that I'd grown accustomed to had shifted into a slow, but loud beat - the song of anticipation."
-    "...{w=0.4} I{w=0.3}-If I could just--{nw}"
-    mc "I'll go make us some more tea."
-    "Wait, what?"
-    y "N-{w=0.3}No!"
-    "As [pronounB] got up, instincts took over and I reached out to grab [pronounA], latching onto their arm and yanking them back."
-    "However as I pulled [pronounA] back onto me, I lost my footing and slipped. Causing the two of us to careen back..."
+    "Mis ojos se dirigieron lentamente a los labios de [player]. El latido rápido y frenético del tambor al que me había acostumbrado había cambiado a un latido lento, pero fuerte - la canción de la anticipación."
+    "...{w=0.4} S{w=0.3}-Si tan solo pudiera--{nw}"
+    mc "Iré a hacernos un poco más de té."
+    "Espera, ¿qué?"
+    y "¡N-{w=0.3}No!"
+    "Mientras [pronounB] se levantaba, los instintos tomaron el control y me estiré para agarrar a [pronounA], aferrándome a su brazo y tirando de [pronounA] hacia atrás."
+    "Sin embargo, mientras tiraba de [pronounA] hacia mí, perdí el equilibrio y resbalé. Causando que los dos nos fuéramos hacia atrás..."
     show black zorder 100
     hide rain_dream_blossom
     play sound "<to 0.3>sfx/fall.ogg"
     "{b}THUNK{/b}"
-    "{w=0.5}...{w=0.4} with me sprawled out on the couch, and [player] on top of me."
+    "{w=0.5}...{w=0.4} conmigo desparramada en el sofá, y [player] encima de mí."
     "..."
     pause 5.0
-    "Both of us pause for a few seconds, as if needing that time to correctly process what was going on."
+    "Ambos nos pausamos por unos segundos, como si necesitáramos ese tiempo para procesar correctamente lo que estaba pasando."
     $ renpy.music.set_volume(0.5, 0, 'voice')
-    "The mixture of jasmine oil combined with [player]'s scent and this overwhelming warmth completely fried my thoughts in a sensory overload."
-    "Without thinking, I coil my arms around their neck and pull [pronounA] in closer, to the point where our lips are touching."
+    "La mezcla de aceite de jazmín combinada con el aroma de [player] y esta calidez abrumadora frieron completamente mis pensamientos en una sobrecarga sensorial."
+    "Sin pensarlo, enrosco mis brazos alrededor de su cuello y acerco a [pronounA] más, hasta el punto donde nuestros labios se están tocando."
     if persistent.eyecolor == "other":
-        "Staring into their eyes, a sly grin emerges and I chuckle softly."
+        "Mirando fijamente a sus ojos, una sonrisa astuta emerge y me río suavemente."
     else:
-        "Staring into their [persistent.eyecolor] eyes, a sly grin emerges and I chuckle softy."
+        "Mirando fijamente a sus ojos [persistent.eyecolor], una sonrisa astuta emerge y me río suavemente."
     $ renpy.music.set_volume(0.4, 0, 'voice')
-    y "S{w=0.3}-Sorry [player], I just can't control myself when I'm with you."
+    y "L{w=0.3}-Lo siento [player], es solo que no puedo controlarme cuando estoy contigo."
     mc "[persistent.yuri_nickname]..."
-    "Our lips embrace, and with that all background noise is reduced to null - the soft patter of the rain and our pants and moans all became solitary whispers."
+    "Nuestros labios se abrazan, y con eso todo el ruido de fondo se reduce a nulo - el suave golpeteo de la lluvia y nuestros jadeos y gemidos se volvieron susurros solitarios."
     $ renpy.music.set_volume(0.3, 0, 'voice')
     "{i}ba-dump...{w=0.5} ba-dump...{w=0.5} ba-dump...{w=0.5}{/i}"
-    "The only thing I could hear was the faint, resigned drum."
-    "An overwhelming warmth fills my entire body as I call out their name."
-    y "[player]...{w=0.4} [player], I love you... {cps=*1.5}I love you, I love you, I love you!{/cps}"
-    "My fingers intertwine with theirs and I move their hand to my chest."
-    y "[player]! Feel the beat of my heart...{w=0.4} it sings for you and you alone. A song only you and I can hear."
-    mc "[persistent.yuri_nickname]!"
-    "They cry out my name, and wrap their arms around my body, holding me firmly in their clutches."
-    y "[player]...{w=0.4} I love you...{w=0.4} p-{w=0.3}please don't ever let me go..."
-    y "If you keep me held forever...{w=0.4} my heart will always sing for you."
-    mc "I will never leave you [persistent.yuri_nickname]..."
+    "Lo único que podía escuchar era el débil y resignado tambor."
+    "Una abrumadora calidez llena todo mi cuerpo mientras grito su nombre."
+    y "[player]...{w=0.4} [player], te amo... {cps=*1.5}¡te amo, te amo, te amo!{/cps}"
+    "Mis dedos se entrelazan con los suyos y muevo su mano a mi pecho."
+    y "¡[player]! Siente el latido de mi corazón...{w=0.4} canta por ti y solo por ti. Una canción que solo tú y yo podemos escuchar."
+    mc "¡[persistent.yuri_nickname]!"
+    "Ellos gritan mi nombre, y envuelven sus brazos alrededor de mi cuerpo, sosteniéndome firmemente en sus garras."
+    y "[player]...{w=0.4} Te amo...{w=0.4} p-{w=0.3}por favor nunca me dejes ir..."
+    y "Si me mantienes sostenida para siempre...{w=0.4} mi corazón siempre cantará para ti."
+    mc "Nunca te dejaré [persistent.yuri_nickname]..."
     show white zorder 105 with Dissolve(2.5)
     hide black
     hide rain_dream_blush
     hide rain_dream_smile
     hide rain_dream_grin
-    mc "I will never leave..."
+    mc "Nunca me iré..."
     stop sound fadeout 1.5
     $ renpy.music.stop(fadeout=1.5)
 
@@ -670,76 +669,76 @@ label ocean_dream:
     show open_ocean zorder 100
     hide black with Dissolve(2.5)
 
-    y "So gentle... I can hear the soft waves whispering lovely things into my ears.. as the water flows so warmly over my skin..."
-    y "This is where life once began, from organisms so small that they can see a single grain of sand..."
-    y "The sunlight, shrouded from the water around me, but still so bright that it hurts in my eyes..."
-    y "My heart beats slow... but still so full of life that I can hear it pounding... have I ever felt this way before?..."
-    y "All the decadence I have indulged in, all the pleasures I have forced upon myself, but here I am and I find myself unable to do much else but marvel at such beauty..."
-    y "It is astounding, how pretty the world can be if it is untouched by mankind..."
-    y "My life amongst them made me see the world in shades of grey, but here I feel as if I can see the colors for the first time in my life..."
-    y "How much I would love to stay, but there is so much more to see..."
-    y "Maybe I should indulge myself further... just this once... towards the fantastic wonders I've yet to witness in this realm."
+    y "Tan gentil... puedo escuchar las suaves olas susurrando cosas encantadoras en mis oídos... mientras el agua fluye tan cálidamente sobre mi piel..."
+    y "Aquí es donde la vida comenzó una vez, desde organismos tan pequeños que pueden ver un solo grano de arena..."
+    y "La luz del sol, envuelta por el agua a mi alrededor, pero aún tan brillante que me duelen los ojos..."
+    y "Mi corazón late lento... pero aún tan lleno de vida que puedo escucharlo palpitar... ¿alguna vez me he sentido así antes?..."
+    y "Toda la decadencia en la que me he complacido, todos los placeres que me he forzado a mí misma, pero aquí estoy y me encuentro incapaz de hacer mucho más que maravillarme ante tal belleza..."
+    y "Es asombroso, lo bonito que puede ser el mundo si es intocado por la humanidad..."
+    y "Mi vida entre ellos me hizo ver el mundo en tonos de gris, pero aquí siento como si pudiera ver los colores por primera vez en mi vida..."
+    y "Cuánto me encantaría quedarme, pero hay mucho más que ver..."
+    y "Quizás debería complacerme más... solo esta vez... hacia las maravillas fantásticas que aún tengo que presenciar en este reino."
 
     show ocean_2 zorder 100 with Fade(1.0, 0.5, 0.5)
     hide open_ocean
-    y "Uhuhuhu... like a little underwater town..."
-    y "Actually, maybe I'm not incorrect to assume that places like this are home to many creatures?"
-    y "Maybe I can take a little peek, just a look..."
-    y "Just to see which lovely creatures made this place their home..."
-    y "The water feels so calm... I can almost feel all the stress and the pressure floating away..."
-    y "My eyes used to feel so heavy from the reading and sometimes the lack of sleep, but now I feel awake and so alive."
-    y "My back used to hurt from the burden of my body, but now I feel so agile and as fresh as the early morning."
-    y "My mind was once in turmoil like a flickering light, from racing thoughts and unstable emotions..."
-    y "But now, it feels like all my burdens are just washed away by the waves..."
-    y "I can feel the vibrations in the water around me... all the noises from the world above have been replaced by the gentle whispering of the sea..."
-    y "It is as if I always belonged here... as if I were misplaced in the other world, I always felt like that anyway..."
-    y "Maybe here I can find the place I have been denied above..."
+    y "Uhuhuhu... como una pequeña ciudad submarina..."
+    y "En realidad, ¿tal vez no sea incorrecto asumir que lugares como este son el hogar de muchas criaturas?"
+    y "Tal vez pueda echar un pequeño vistazo, solo una mirada..."
+    y "Solo para ver qué criaturas encantadoras hicieron de este lugar su hogar..."
+    y "El agua se siente tan tranquila... casi puedo sentir todo el estrés y la presión flotando lejos..."
+    y "Mis ojos solían sentirse tan pesados por la lectura y a veces la falta de sueño, pero ahora me siento despierta y tan viva."
+    y "Mi espalda solía doler por la carga de mi cuerpo, pero ahora me siento tan ágil y fresca como la madrugada."
+    y "Mi mente estuvo una vez en agitación como una luz parpadeante, por pensamientos acelerados y emociones inestables..."
+    y "Pero ahora, se siente como si todas mis cargas fueran simplemente lavadas por las olas..."
+    y "Puedo sentir las vibraciones en el agua a mi alrededor... todos los ruidos del mundo de arriba han sido reemplazados por el suave susurro del mar..."
+    y "Es como si siempre hubiera pertenecido aquí... como si estuviera fuera de lugar en el otro mundo, siempre me sentí así de todos modos..."
+    y "Quizás aquí pueda encontrar el lugar que se me ha negado arriba..."
     show ocean_3 zorder 100 with Fade(1.0, 0.5, 0.5)
     hide ocean_2
-    y "It almost feels like flying through the skies, but instead of the wind howling through my hair I feel nothing but the salty water washing over me..."
-    y "Even when the waves are raging on the surface, down below the water feels so calm and gentle."
-    y "The cycle of life feels just so perfect here... even with all the creatures feasting upon the plants, there seems to never be a lack of them..."
-    y "And they are just so wonderful. Maybe I should build my home inside of them, like many other fishes do..."
-    y "Or maybe... I could take a tiny little bite... just a little nibble to quench my appetite..."
-    y "So simple, but it tastes as if I never needed anything else... maybe those would go along just fine with Oolong Tea..."
-    y "Huuh... I think I..."
-    y "Saw something..."
+    y "Casi se siente como volar a través de los cielos, pero en lugar del viento aullando a través de mi cabello no siento nada más que el agua salada lavando sobre mí..."
+    y "Incluso cuando las olas están rugiendo en la superficie, aquí abajo el agua se siente tan tranquila y gentil."
+    y "El ciclo de la vida se siente tan perfecto aquí... incluso con todas las criaturas dándose un festín con las plantas, parece que nunca faltan..."
+    y "Y son simplemente tan maravillosas. Tal vez debería construir mi hogar dentro de ellas, como hacen muchos otros peces..."
+    y "O tal vez... podría tomar un pequeño mordisco... solo un pequeño mordisqueo para saciar mi apetito..."
+    y "Tan simple, pero sabe como si nunca necesitara nada más... tal vez esos irían bien con Té Oolong..."
+    y "Huuh... Creo que yo..."
+    y "Vi algo..."
     show ocean_4 zorder 100 with Fade(1.0, 0.5, 0.5)
     hide ocean_3
-    y "O~Oh my..."
-    y "Hello there, little friends... would you like to join my literature club?"
+    y "O~Oh vaya..."
+    y "Hola, pequeños amigos... ¿les gustaría unirse a mi club de literatura?"
     python:
         if persistent.lovecheck:
-            placeholder = "cute"
+            placeholder = "lindo"
         else:
-            placeholder = "fellow"
-    y "It is just me, and my [placeholder] [player]..."
-    y "We would have to flood the classroom but... I doubt [player] would mind it..."
-    y "All the deep and intriguing poems we could make about these lovely tides you share..."
-    y "Oh... Or did I... interrupt you? Were you about to..."
-    y "Nevermind... forgive me, little friends, I will leave you alone in peace again. Farewell..."
+            placeholder = "compañero"
+    y "Solo somos yo, y mi [placeholder] [player]..."
+    y "Tendríamos que inundar el salón de clases pero... dudo que a [player] le importara..."
+    y "Todos los poemas profundos e intrigantes que podríamos hacer sobre estas encantadoras mareas que comparten..."
+    y "Oh... ¿O acaso los... interrumpí? ¿Estaban a punto de..."
+    y "Olvidenlo... perdonenme, pequeños amigos, los dejaré solos en paz de nuevo. Adiós..."
     show ocean_5 zorder 100 with Fade(1.0, 0.0, 0.5)
     hide ocean_4
-    y "And so I dive deeper into the seemingly endless void... wondering about the things I might see down there..."
-    y "I am no stranger to the dark... and I can only giggle in delight about the secrets such a place might hold..."
-    y "Or the eldritch horrors one could see below..."
-    y "Perhaps, there is a bottom after all..."
+    y "Y así me sumerjo más profundo en el vacío aparentemente interminable... preguntándome sobre las cosas que podría ver ahí abajo..."
+    y "No soy ajena a la oscuridad... y solo puedo reír de deleite sobre los secretos que tal lugar podría albergar..."
+    y "O los horrores eldritch que uno podría ver abajo..."
+    y "Quizás, hay un fondo después de todo..."
     show ocean_6 zorder 100 with Fade(1.0, 0.0, 0.5)
     hide ocean_5
-    y "The deeper I dive, the colder it becomes... but still, it fills my heart with so much warmth.."
-    y "How petite and pretty... even in the dark one could find such... such... I can't even find the proper words for it..."
-    y "Maybe words are just not suited to describe this level of finesse, maybe that is the reason why the deeps do not carry one's voice..."
-    y "But now I miss the warmth of the sun, so I shall carry on and see where the waves might take me..."
+    y "Cuanto más profundo me sumerjo, más frío se vuelve... pero aun así, llena mi corazón de tanta calidez.."
+    y "Qué pequeño y bonito... incluso en la oscuridad uno podría encontrar tal... tal... ni siquiera puedo encontrar las palabras adecuadas para ello..."
+    y "Tal vez las palabras simplemente no son adecuadas para describir este nivel de finura, tal vez esa es la razón por la cual las profundidades no llevan la voz de uno..."
+    y "Pero ahora extraño la calidez del sol, así que continuaré y veré a dónde me llevan las olas..."
     show ocean_7 zorder 100 with Fade(1.0, 0.0, 0.5)
     hide ocean_6
-    y "Maybe just... a little peek..."
+    y "Tal vez solo... un pequeño vistazo..."
     show ocean_8 zorder 100 with Fade(1.0, 0.0, 0.5)
     hide ocean_7
-    y "On the world above again...."
+    y "En el mundo de arriba otra vez...."
     if renpy.random.randint(0,4)==0:
         show oceanbonus_1 zorder 100 with Fade(1.0, 0.0, 0.5)
         hide ocean_8
-        y "Wait no! Please don't. Please let me go! This can't be how my journey ends, this can not..."
+        y "¡Espera no! Por favor no. ¡Por favor déjame ir! Así no puede ser como termina mi viaje, esto no puede..."
         show oceanbonus_2 zorder 100
         hide oceanbonus_1
         stop sound fadeout 1.5
@@ -759,7 +758,7 @@ label ocean_dream:
 label ocean_man:
     show oceanbonus_1 zorder 100 with Fade(1.0, 0.0, 0.5)
     hide ocean_8
-    y "Wait no! Please don't. Please let me go! This can't be how my journey ends, this can not..."
+    y "¡Espera no! Por favor no. ¡Por favor déjame ir! Así no puede ser como termina mi viaje, esto no puede..."
     show oceanbonus_2 zorder 100
     hide oceanbonus_1
     stop sound fadeout 1.5
@@ -813,31 +812,31 @@ label highway_dream:
             pronounC = "her"
             pronounD = "girlfriend"
     if persistent.highway_dream_complete:
-        y "Ah. I've had this dream before! I've a chance to do some lucid dreaming!"
+        y "Ah. ¡He tenido este sueño antes! ¡Tengo la oportunidad de tener un sueño lúcido!"
         menu:
-            "I'd like to see something beautiful":
+            "Me gustaría ver algo hermoso":
                 python:
                     highway_dream_path = 1
-            "Do I smell smoke?":
+            "¿Huelo humo?":
                 python:
                     highway_dream_path = 2
-            "I think I'd like to stretch my legs":
+            "Creo que me gustaría estirar las piernas":
                 python:
                     highway_dream_path = 3
-            "Oh dear. It's looking like rain...":
+            "Oh cielos. Parece que va a llover...":
                 python:
                     highway_dream_path = 4
-            "Actually, let's just see where fate takes us":
+            "En realidad, veamos a dónde nos lleva el destino":
                 $ pass
     hide black with Dissolve(2.5)
-    "The sun shines down on the three of us. Me, [player], and the wide open highway."
-    "Before now, I never really understood the appeal of a convertible. But now that the countryside is soaring past; now that the wind is blowing freely through my hair..."
-    "The sheer joy of liberation is intoxicating."
-    "I'm glad [player] has the driving part of this handled. I needn't concern myself with the rules of the road. No speed limits, no overtaking more sluggish vehicles, no speedometer to divert my attention from the beauty of this; my Arcadia."
-    "It occurs to me that I've no recollection of what our destination is this gorgeous afternoon."
-    "But honestly, does it matter? Wherever we may wind up, [player] will be there with me, sharing every moment."
-    "And wherever we end up, it {i}won't{/i} be that dreadful classroom I've spent far too much time trapped within."
-    "So, I'm sure I'll enjoy it."
+    "El sol brilla sobre nosotros tres. Yo, [player], y la carretera abierta de par en par."
+    "Antes de ahora, nunca entendí realmente el atractivo de un descapotable. Pero ahora que el campo pasa volando; ahora que el viento sopla libremente a través de mi cabello..."
+    "La pura alegría de la liberación es embriagadora."
+    "Me alegra que [player] tenga la parte de conducir controlada. No necesito preocuparme por las reglas de la carretera. Sin límites de velocidad, sin adelantar vehículos más lentos, sin velocímetro para desviar mi atención de la belleza de esto; mi Arcadia."
+    "Se me ocurre que no recuerdo cuál es nuestro destino esta hermosa tarde."
+    "Pero honestamente, ¿importa? Donde sea que terminemos, [player] estará allí conmigo, compartiendo cada momento."
+    "Y donde sea que terminemos, {i}no{/i} será esa espantosa aula en la que he pasado demasiado tiempo atrapada."
+    "Así que, estoy segura de que lo disfrutaré."
 
     $ renpy.call("highway_dream_" + str(highway_dream_path))
     if highway_dream_path == 1:
@@ -853,42 +852,42 @@ label highway_dream:
 
 label highway_dream_1:
     mc "Hey, [y]."
-    "[pronounB] says my name. The tone of it suggests that [pronounB]'s seen something [pronounB] thinks I'd be interested in."
-    y "Yes, dear?"
-    "[player] points to a sign passing to our right. I have just enough time to read the words 'SCENIC OVERLOOK' before it passes us by."
-    "Much like a hundred other things I hadn't even noticed passing."
-    mc "Want to go give that a look? It's not coming up at the very next exit, but we'd better figure it out now."
-    "Well, we don't have anywhere we need to be, do we? That was kind of the whole point of our little excursion."
-    "For once, the answer to a question comes quite easily to me."
-    y "Certainly! There's no such thing as too much beauty in your life, is there?"
-    "[player] chuckles. I'm not so certain what's funny about what I said, but-"
-    mc "I love the way you think, [y]. I could just put that thought in a frame and hang it over the mantle."
-    "Ah, there it is."
+    "[pronounB] dice mi nombre. El tono sugiere que [pronounB] ha visto algo que cree que me interesaría."
+    y "¿Sí, cariño?"
+    "[player] señala una señal que pasa a nuestra derecha. Tengo el tiempo justo para leer las palabras 'MIRADOR ESCÉNICO' antes de que pase de largo."
+    "Parecido a otras cien cosas que ni siquiera había notado pasar."
+    mc "¿Quieres ir a echar un vistazo? No está justo en la próxima salida, pero será mejor que lo decidamos ahora."
+    "Bueno, no tenemos ningún lugar donde debamos estar, ¿verdad? Ese era el punto de nuestra pequeña excursión."
+    "Por una vez, la respuesta a una pregunta viene bastante fácil a mí."
+    y "¡Ciertamente! No existe tal cosa como demasiada belleza en tu vida, ¿verdad?"
+    "[player] se ríe. No estoy muy segura de qué es gracioso sobre lo que dije, pero-"
+    mc "Me encanta tu forma de pensar, [y]. Podría enmarcar ese pensamiento y colgarlo sobre la repisa de la chimenea."
+    "Ah, ahí está."
     show highway_dream_1 zorder 100 with Dissolve (1.0)
     hide highway_bg_scroll
     hide highway_yuri_car
 
-    "I must say, they certainly picked the perfect place to set up a scenic overlook."
-    "It stands at one end of a vast, arboreal valley. At the other, a great, sprawling mountain ridge towers into the sky."
-    "In the center a river, briefly interrupted by a lake, flows by."
-    "The ageless sculptor of this scene, still sitting as the centerpiece."
-    "I can only imagine how much change this river was here to witness. Untold numbers of forgotten human struggles, natural disasters. The birth and death of the trees it nourished."
-    "Perhaps even the march of evolution itself."
-    "And through it all, the river continued to flow. West to east, every day without cessation. Perhaps the river has swelled or shrunk, but here it remains to this day."
-    "It makes my life seem so tragically short by comparison. Yet at the same time, it puts my troubles into perspective."
-    "If this river could keep flowing in face of more troubles than even humanity at large can even remember, then who's to say that I can't continue my own proverbial flow through the troubles that surround me?"
-    mc "You look pretty deep in thought, [y]."
-    mc "Then again, you usually are, aren't you?"
-    "[player]'s voice breaks me from my reverie, but it's a gentle break, so I don't mind."
-    y "Just enjoying the beauty is all."
-    mc "Yeah? Well..."
-    mc "Me too."
-    "[player] says that with [pronounC] eyes on me, rather than on the overlook."
-    "Did [pronounB] just..."
-    "I must say. [player] can be quite smooth when [pronounB] wants to be."
-    mc "Hey, want to take a picture together? The two of us, in front of this?"
-    "That does sound like an excellent way to commemorate this small moment. We might just have to get this photo framed."
-    y "Without a doubt, [player]."
+    "Debo decir, ciertamente eligieron el lugar perfecto para establecer un mirador escénico."
+    "Se encuentra en un extremo de un vasto valle arbóreo. En el otro, una gran cadena montañosa se eleva hacia el cielo."
+    "En el centro un río, brevemente interrumpido por un lago, fluye."
+    "El escultor eterno de esta escena, todavía sentado como la pieza central."
+    "Solo puedo imaginar cuánto cambio presenció este río. Incontables luchas humanas olvidadas, desastres naturales. El nacimiento y muerte de los árboles que nutrió."
+    "Quizás incluso la marcha de la evolución misma."
+    "Y a través de todo ello, el río continuó fluyendo. De oeste a este, todos los días sin cesar. Quizás el río ha crecido o disminuido, pero aquí permanece hasta el día de hoy."
+    "Hace que mi vida parezca trágicamente corta en comparación. Sin embargo, al mismo tiempo, pone mis problemas en perspectiva."
+    "Si este río pudo seguir fluyendo ante más problemas de los que incluso la humanidad en general puede recordar, entonces ¿quién dice que no puedo continuar mi propio flujo proverbial a través de los problemas que me rodean?"
+    mc "Te ves bastante sumida en tus pensamientos, [y]."
+    mc "Por otra parte, usualmente lo estás, ¿no?"
+    "La voz de [player] me saca de mi ensoñación, pero es una interrupción gentil, así que no me importa."
+    y "Solo disfrutando de la belleza, eso es todo."
+    mc "¿Sí? Bueno..."
+    mc "Yo también."
+    "[player] dice eso con sus ojos puestos en mí, en lugar de en el mirador."
+    "¿Acaso [pronounB] acaba de..."
+    "Debo decir. [player] puede ser bastante suave cuando quiere serlo."
+    mc "Hey, ¿quieres que nos tomemos una foto juntos? ¿Nosotros dos, frente a esto?"
+    "Eso suena como una excelente manera de conmemorar este pequeño momento. Podríamos tener que enmarcar esta foto."
+    y "Sin duda, [player]."
     show black zorder 105 with Dissolve (2.5)
     stop sound fadeout 1.5
     $ renpy.music.stop(fadeout=1.5)
@@ -906,42 +905,42 @@ label highway_dream_2:
     "..."
     $ renpy.music.stop(channel="music",fadeout=0)
     play sound "sfx/highway/recordscratch.ogg"
-    "The scent of something burning breaks me from my reverie."
-    "Not the pleasant kind, such as incense or firewood. But the noxious smell of burning machinery and industrial fluid. The sort of burning that is almost always a sign of something terrible to come."
-    y "[stutter_player]...?"
-    "Right as I say [pronounC] name, smoke issues forth from beneath the hood."
-    mc "Oh, god {i}dammit!{/i}"
+    "El olor de algo quemándose me saca de mi ensoñación."
+    "No del tipo agradable, como incienso o leña. Sino el olor nocivo de maquinaria quemada y fluido industrial. El tipo de quemado que es casi siempre una señal de que algo terrible está por venir."
+    y "¿[stutter_player]...?"
+    "Justo cuando digo su nombre, sale humo de debajo del capó."
+    mc "Oh, ¡maldita {i}sea!{/i}"
 
-    "[player] hastily pulls our car over to the side of the road. With the ignition off, [pronounB] unfastens the hood, but to my surprise, doesn't actually open it all the way."
-    "I put my hand near the hood, and the radiant heat quickly demonstrates to me why [pronounB] didn't."
-    "A quick visual check yields no sign that I'd burned myself. But when my gaze returns to our car, I see that the hood has opened of its own accord."
+    "[player] detiene apresuradamente nuestro coche al lado de la carretera. Con el encendido apagado, [pronounB] desabrocha el capó, pero para mi sorpresa, en realidad no lo abre del todo."
+    "Pongo mi mano cerca del capó, y el calor radiante rápidamente me demuestra por qué [pronounB] no lo hizo."
+    "Una rápida revisión visual no da señales de que me haya quemado. Pero cuando mi mirada vuelve a nuestro coche, veo que el capó se ha abierto por su propia cuenta."
     show highway_dream_2 zorder 100 with Dissolve (1.0)
     hide highway_bg_scroll
     hide highway_yuri_car
 
     $ renpy.music.play("sfx/highway/overheat-loop.ogg", channel='sound', loop=True)
-    "Some sort of motorization, perhaps? I know precious little about cars."
-    "And perhaps because of how little I know, this seems like the sort of situation where fear would be warranted. But I don't see any in [player]."
-    "[pronounBC] looks much more annoyed than anything. When [pronounB] drops [pronounC] head between [pronounC] thumb and forefinger, I know that his annoyance is pointed inward."
-    mc "This is my fault. This is entirely my fault."
-    y "Now [player], can you really blame yourself for a mechanical failure?"
-    mc "I can. I forgot to check the coolant level before we left."
-    "Oh dear... That certainly does sound like something I'd kick myself over. I've no idea just how much damage an overheat can cause."
-    "With the way [player] pinches [pronounC] nose and groans, I can tell this is really beginning to bother [pronounA]. I can't just leave [pronounA] to his self flagellation..."
+    "¿Algún tipo de motorización, tal vez? Sé muy poco sobre coches."
+    "Y quizás debido a lo poco que sé, esto parece el tipo de situación donde el miedo estaría justificado. Pero no veo ninguno en [player]."
+    "[pronounBC] parece mucho más molesto que cualquier otra cosa. Cuando [pronounB] deja caer su cabeza entre su pulgar y su índice, sé que su molestia está dirigida hacia adentro."
+    mc "Esto es mi culpa. Esto es enteramente mi culpa."
+    y "Ahora [player], ¿realmente puedes culparte por un fallo mecánico?"
+    mc "Puedo. Olvidé revisar el nivel de refrigerante antes de salir."
+    "Oh cielos... Eso ciertamente suena como algo por lo que me reprocharía a mí misma. No tengo idea de cuánto daño puede causar un sobrecalentamiento."
+    "Por la forma en que [player] se pellizca la nariz y gime, puedo decir que esto realmente está empezando a molestarle. No puedo simplemente dejarle con su autoflagelación..."
     show black zorder 105 with Dissolve (2.5)
     play sound "<to 0.3>sfx/fall.ogg"
-    "So I pull [pronounA] into my embrace."
-    y "If it's any comfort, I'm not angry with you, dear."
-    mc "I'm angry with myself."
-    mc "I was going to take you somewhere nice. I didn't know where, but nicer than the side of a highway!"
-    y "Don't worry about that. It's okay if we just go to a service shop's waiting room. As long as we're out together, mission accomplished."
-    mc "Service shop... right! Thank you for reminding me."
-    "[player] gently pulls a hand free of my hug so that [pronounB] can retrieve [pronounC] phone. But as [pronounB] searches for the number of a nearby mechanic's shop, I keep my arms around [pronounA]. We could both use one another's calming presence right now."
+    "Así que lo atraigo hacia mi abrazo."
+    y "Si sirve de consuelo, no estoy enojada contigo, cariño."
+    mc "Estoy enojado conmigo mismo."
+    mc "Iba a llevarte a un lugar bonito. No sabía dónde, ¡pero más bonito que el lado de una carretera!"
+    y "No te preocupes por eso. Está bien si solo vamos a la sala de espera de un taller. Mientras estemos fuera juntos, misión cumplida."
+    mc "Taller de servicio... ¡cierto! Gracias por recordármelo."
+    "[player] tira suavemente de una mano libre de mi abrazo para que [pronounB] pueda recuperar su teléfono. Pero mientras [pronounB] busca el número de un taller mecánico cercano, mantengo mis brazos alrededor de [pronounA]. Ambos podríamos usar la presencia calmante del otro justo ahora."
     "..."
-    y "[player]?"
-    "I catch [pronounA] saying 'hold on' to the person on the other end."
-    mc "Yeah?"
-    y "I love you..."
+    y "¿[player]?"
+    "Escucho que dice 'espera' a la persona en el otro extremo."
+    mc "¿Sí?"
+    y "Te amo..."
     stop sound fadeout 1.5
     $ renpy.music.stop(fadeout=1.5)
     python:
@@ -954,97 +953,97 @@ label highway_dream_2:
 
 
 label highway_dream_3:
-    mc "Hm... We're going to need gas soon."
-    y "Oh?"
-    "I lean back in an attempt to see the car's instrumentation. Sun glare thwarts this attempt, so I simply take [player]'s word for it."
-    "A gas station certainly wasn't what I had in mind for our eventual destination, but it shouldn't take more than a few minutes."
-    "It would be nice to stretch my legs, though."
-    mc "And gas stations {i}usually{/i} have a little convenience store attached to them. Want to come have a look?"
-    "I don't know about that."
-    "A gas station convenience store doesn't seem like it would carry the sort of fare I'm interested in eating..."
-    y "I think I'll be alright, thank you."
-    mc "You sure? A lot of the convenience stores I've been to also have a little display of knives for sale."
-    "Now {i}that{/i} piques my interest."
-    y "Do they?"
-    mc "Yeah. No idea if they're any good. I was hoping you could be the judge of that."
-    "Alright. That changes everything. If nothing else, I get to experience some novelty."
-    y "Okay, darling. I can do that for you."
+    mc "Hm... Vamos a necesitar gasolina pronto."
+    y "¿Oh?"
+    "Me reclino hacia atrás en un intento de ver la instrumentación del coche. El resplandor del sol frustra este intento, así que simplemente tomo la palabra de [player] por ello."
+    "Una gasolinera ciertamente no era lo que tenía en mente para nuestro destino eventual, pero no debería tomar más de unos minutos."
+    "Sería agradable estirar las piernas, sin embargo."
+    mc "Y las gasolineras {i}usualmente{/i} tienen una pequeña tienda de conveniencia adjunta a ellas. ¿Quieres venir a echar un vistazo?"
+    "No sé sobre eso."
+    "Una tienda de conveniencia de gasolinera no parece que llevaría el tipo de cosas que me interesaría comer..."
+    y "Creo que estaré bien, gracias."
+    mc "¿Segura? Muchas de las tiendas de conveniencia en las que he estado también tienen una pequeña exhibición de cuchillos a la venta."
+    "Ahora {i}eso{/i} despierta mi interés."
+    y "¿De verdad?"
+    mc "Sí. No tengo idea si son buenos. Esperaba que pudieras ser el juez de eso."
+    "Muy bien. Eso cambia todo. Si nada más, llego a experimentar algo de novedad."
+    y "Está bien, cariño. Puedo hacer eso por ti."
     show highway_dream_3 zorder 100 with Dissolve (1.0)
     hide highway_bg_scroll
     hide highway_yuri_car
 
-    "We arrive at the fabled gas station, and its age certainly shows."
-    "Linoleum flooring that's clearly seen better days; wood paneled walls that have been the battleground between cigarette stainage and detergents for quite some time. Probably decades longer than I've been around."
-    "I have to wonder how many generations of young couples have come through here through the years; just to browse the wares. How many product launches and discontinuations have populated these modular, press board shelves."
-    "Then, right at the clerk's counter, I see it."
+    "Llegamos a la legendaria gasolinera, y su edad ciertamente se nota."
+    "Suelo de linóleo que claramente ha visto días mejores; paredes con paneles de madera que han sido el campo de batalla entre manchas de cigarrillo y detergentes durante bastante tiempo. Probablemente décadas más de las que yo he existido."
+    "Tengo que preguntarme cuántas generaciones de parejas jóvenes han pasado por aquí a través de los años; solo para curiosear las mercancías. Cuántos lanzamientos de productos y discontinuaciones han poblado estos estantes modulares de aglomerado."
+    "Entonces, justo en el mostrador del dependiente, lo veo."
     show highway_dream_knives zorder 100 with Dissolve (1.0)
     hide highway_dream_3
-    "A rotating glass display, within which is a broad variety of knives."
+    "Un exhibidor de vidrio giratorio, dentro del cual hay una amplia variedad de cuchillos."
     if persistent.highway_dream_complete:
         menu:
-            "I'll indulge myself in a happy ending":
+            "Me complaceré con un final feliz":
                 python:
                     highway_dream_path_2 = 1
-            "I wonder how weird this can get":
+            "Me pregunto qué tan raro puede ponerse esto":
                 python:
                     highway_dream_path_2 = 2
-            "I eagerly await the surprises of my own mind":
+            "Espero ansiosamente las sorpresas de mi propia mente":
                 python:
                     highway_dream_path_2 = renpy.random.randint(1,2)
 
     if highway_dream_path_2 == 1:
-        "I turn the display, giving the knives a once over. Just to see the sort of thing we're working with."
-        "The first three sides of the obelisk reveal nothing of particular interest. Mostly the sort of knife that would be purchased by a fisher or hunter who needed a quick, cheap knife to accomplish a single task."
-        "But then I see it..."
-        "No, that can't possibly be it!"
-        "It's the balisong that Benchmade just put out! The one that I've been salivating over ever since they announced it!"
-        "How much do they want for it?"
-        "Wait. {i}Really?{/i} I'm not sure they realize how much this one retails for. Perhaps it's a forgery?"
-        "...I see no evidence of that from here. It's the real deal, and what a deal it is!"
-        "Oh, I {i}must{/i} find [player]. [pronounBC]'s got to see this!"
-        "Ah, there [pronounB] is! [pronounB]'s just removed the nozzle from our ride."
-        "It's all I can do to stop myself from sprinting over to [player] in excitement. I'd rather not make a scene after all."
-        y "[player]!"
-        mc "Hey, what's got you so excited?"
-        y "It's about that knife case."
-        mc "Oooooh, see something you like, do you?"
-        "I nod. At this point I'm nearly too excited for words."
-        mc "Okay, okay. I'm coming."
-        "I'm glad I picked up on the amusement in [player]'s tone. Otherwise the worry that I'd made a scene would have compromised my excitement."
-        "I lead [pronounA] to the knife case, and turn it to the knife that's the source of my jubilation. I watch his expression carefully."
-        "To my joy, a light of recognition crosses [pronounC] eyes."
-        mc "Oh yeah! That's the one."
-        "My heart sinks as [player] immediately turns his attention to the cashier."
-        "But when the cashier asks if that will be everything for today, [pronounC] answer brings me from disappointment to a whole new level of excitement."
-        mc "I'd also like to buy that butterfly knife. The one right above the hunting knife with the pink handle."
-        "Is [pronounB] really..."
-        "Oh my god [pronounB] {i}is{/i}! I have the best [pronounD] ever!"
-        "The squeal that escapes my lips certainly isn't dignified. I suppose it's fortunate that it was muffled by [pronounC] chest after I pulled [pronounA] into the tightest hug I could manage."
+        "Giro el exhibidor, dando a los cuchillos una revisión rápida. Solo para ver con qué tipo de cosas estamos trabajando."
+        "Los primeros tres lados del obelisco no revelan nada de particular interés. Mayormente el tipo de cuchillo que sería comprado por un pescador o cazador que necesitara un cuchillo rápido y barato para lograr una sola tarea."
+        "Pero entonces lo veo..."
+        "¡No, eso no puede ser posible!"
+        "¡Es el balisong que Benchmade acaba de sacar! ¡El que he estado deseando desde que lo anunciaron!"
+        "¿Cuánto quieren por él?"
+        "Espera. {i}¿En serio?{/i} No estoy segura de que se den cuenta de cuánto cuesta este al por menor. ¿Tal vez es una falsificación?"
+        "...No veo evidencia de eso desde aquí. ¡Es el trato real, y qué trato es!"
+        "Oh, {i}debo{/i} encontrar a [player]. ¡[pronounBC] tiene que ver esto!"
+        "¡Ah, ahí está! [pronounBC] acaba de quitar la manguera de nuestro transporte."
+        "Es todo lo que puedo hacer para evitar correr hacia [player] de la emoción. Preferiría no hacer una escena después de todo."
+        y "¡[player]!"
+        mc "Hey, ¿qué te tiene tan emocionada?"
+        y "Es sobre ese estuche de cuchillos."
+        mc "Oooooh, ves algo que te gusta, ¿eh?"
+        "Asiento. En este punto estoy casi demasiado emocionada para las palabras."
+        mc "Está bien, está bien. Ya voy."
+        "Me alegra haber captado la diversión en el tono de [player]. De lo contrario, la preocupación de haber hecho una escena habría comprometido mi emoción."
+        "Llevo a [pronounA] al estuche de cuchillos, y lo giro hacia el cuchillo que es la fuente de mi júbilo. Observo su expresión cuidadosamente."
+        "Para mi alegría, una luz de reconocimiento cruza sus ojos."
+        mc "¡Oh sí! Ese es el indicado."
+        "Mi corazón se hunde mientras [player] inmediatamente dirige su atención al cajero."
+        "Pero cuando el cajero pregunta si eso será todo por hoy, su respuesta me lleva de la decepción a un nivel completamente nuevo de emoción."
+        mc "También me gustaría comprar ese cuchillo mariposa. El que está justo encima del cuchillo de caza con el mango rosa."
+        "¿Realmente [pronounB] está..."
+        "¡Oh dios mío {i}sí{/i} lo está! ¡Tengo al mejor [pronounD] del mundo!"
+        "El chillido que escapa de mis labios ciertamente no es digno. Supongo que es afortunado que fuera amortiguado por su pecho después de que abracé a [pronounA] en el abrazo más fuerte que pude manejar."
         show white zorder 105 with Dissolve(2.5)
-        y "I have the best [pronounD] ever."
-        "[player] chuckles."
-        mc "I try, [y]. I try..."
+        y "Tengo al mejor [pronounD] del mundo."
+        "[player] se ríe."
+        mc "Lo intento, [y]. Lo intento..."
     else:
 
-        "I wasn't expecting anything particularly impressive, and my assessment seems to have been correct."
-        "Plastic handles, hyper-aggressive branding and designs that mistake machismo for aesthetic, garish color choices."
-        "I get the impression that these knives are here for outdoor sportsmen who forgot their knife and just need to gut this {i}one{/i} fish or cut a single rope."
-        "That, and adolescents who hope that their new purchase will make them seem tough and masculine."
-        "Ah well. None expect artisan goods at a gas station convenience store."
-        "Though, one knife in particular gets my attention. More for its peculiarity than anything."
-        y "Now, what's a historical bayonet doing here?"
-        "I say that to the air, and luckily, it seems I wasn't heard."
-        "But, there it is. Long enough to take up an entire wall of the rotating display. A Belgian M1916 bayonet. The sort that hasn't been in use since the first world war."
-        "Stranger still, it looks absolutely pristine. As if it were a modern reproduction."
-        "Might as well take a closer look."
-        y "Well, that's quite unusual."
-        "I muse to myself. This time, quiet enough that only I should be able to hear."
-        "When I go to inspect the markings, I see stamping for {i}Gerber{/i}, of all companies."
-        "Gerber is in the business of many things. Replicas of obscure historical bayonets is not one of them."
-        "And if Gerber had entered the business of bayonets of any kind, I'd have known weeks in advance."
+        "No esperaba nada particularmente impresionante, y mi evaluación parece haber sido correcta."
+        "Mangos de plástico, marcas y diseños hiper-agresivos que confunden machismo con estética, elecciones de color chillones."
+        "Me da la impresión de que estos cuchillos están aquí para deportistas al aire libre que olvidaron su cuchillo y solo necesitan destripar este {i}único{/i} pez o cortar una sola cuerda."
+        "Eso, y adolescentes que esperan que su nueva compra los haga parecer duros y masculinos."
+        "Ah bueno. Nadie espera productos artesanales en una tienda de conveniencia de gasolinera."
+        "Aunque, un cuchillo en particular llama mi atención. Más por su peculiaridad que por cualquier otra cosa."
+        y "Ahora, ¿qué hace una bayoneta histórica aquí?"
+        "Digo eso al aire, y afortunadamente, parece que no fui escuchada."
+        "Pero, ahí está. Lo suficientemente larga para ocupar toda una pared del exhibidor giratorio. Una bayoneta belga M1916. El tipo que no ha estado en uso desde la primera guerra mundial."
+        "Más extraño aún, se ve absolutamente prístina. Como si fuera una reproducción moderna."
+        "Podría echar un vistazo más de cerca."
+        y "Bueno, eso es bastante inusual."
+        "Musito para mí misma. Esta vez, lo suficientemente bajo como para que solo yo pueda escuchar."
+        "Cuando voy a inspeccionar las marcas, veo estampado de {i}Gerber{/i}, de entre todas las compañías."
+        "Gerber está en el negocio de muchas cosas. Réplicas de bayonetas históricas oscuras no es una de ellas."
+        "Y si Gerber hubiera entrado en el negocio de bayonetas de cualquier tipo, lo habría sabido con semanas de antelación."
         show white zorder 105 with Dissolve(2.5)
-        "I must be dreaming, then."
-        "Ah well. It was pleasant enough while it lasted."
+        "Debo estar soñando, entonces."
+        "Ah bueno. Fue bastante agradable mientras duró."
     stop sound fadeout 1.5
     $ renpy.music.stop(fadeout=1.5)
     python:
@@ -1071,25 +1070,25 @@ label highway_dream_4:
     hide highway_yuri_car
     show grey_image zorder 100
     show highway_yuri_car zorder 101
-    "Oh, dear. It looks like the sky is beginning to cloud over. Perhaps we should get the roof back in place."
-    "But not {i}just{/i} yet. I'd like to enjoy the wind in my hair for just one more minute."
+    "Oh, cielos. Parece que el cielo está empezando a nublarse. Quizás deberíamos volver a poner el techo."
+    "Pero no {i}todavía{/i}. Me gustaría disfrutar del viento en mi cabello solo un minuto más."
     "..."
     show rain zorder 100 with Dissolve(2.5)
-    "That was almost definitely a raindrop that hit my face. But it was only one. I suppose it's time to-"
-    "Another hits me. Then another. And two more."
-    "[player] wastes no time pulling over."
-    mc "Ah, crap! [y]! Get the roof up!"
-    y "I'm trying!"
-    "I find myself fumbling with the mechanisms, cursing our inability to afford a convertible with an automatic roof."
-    "[player] does [pronounC] best to help, but by the time the roof is back over our heads, us, our belongings, and the entire passenger compartment of our vehicle are all drenched."
-    "With the roof over us, [player] and I look to each other, but neither of us can find the right words."
-    "Part of me wants to apologize, but [pronounB] looks like [pronounB] wants to apologize too."
-    "Yet... for what? Apologize on behalf of nature and meteorology?"
-    "Besides. An apology won't dry us or our things off. Won't make the rain stop."
-    y "We'd best find somewhere to dry off."
-    mc "Yeah, you're right. I saw a sign for a diner earlier. How about that?"
-    y "A hot meal would be rather nice right now. Yes."
-    "[player] nods. Then it's settled, we'll drive on for whichever diner presents itself first."
+    "Eso fue casi definitivamente una gota de lluvia que golpeó mi cara. Pero fue solo una. Supongo que es hora de-"
+    "Otra me golpea. Luego otra. Y dos más."
+    "[player] no pierde el tiempo deteniéndose."
+    mc "¡Ah, mierda! ¡[y]! ¡Sube el techo!"
+    y "¡Lo estoy intentando!"
+    "Me encuentro luchando con los mecanismos, maldiciendo nuestra incapacidad para permitirnos un descapotable con techo automático."
+    "[player] hace lo mejor que puede para ayudar, pero para cuando el techo está de vuelta sobre nuestras cabezas, nosotros, nuestras pertenencias, y todo el compartimento de pasajeros de nuestro vehículo estamos todos empapados."
+    "Con el techo sobre nosotros, [player] y yo nos miramos el uno al otro, pero ninguno de los dos puede encontrar las palabras correctas."
+    "Parte de mí quiere disculparse, pero [pronounB] parece que también quiere disculparse."
+    "Sin embargo... ¿por qué? ¿Disculparse en nombre de la naturaleza y la meteorología?"
+    "Además. Una disculpa no nos secará a nosotros ni a nuestras cosas. No hará que la lluvia pare."
+    y "Será mejor que encontremos un lugar para secarnos."
+    mc "Sí, tienes razón. Vi un letrero de una cafetería antes. ¿Qué tal eso?"
+    y "Una comida caliente sería bastante agradable justo ahora. Sí."
+    "[player] asiente. Entonces está decidido, conduciremos hacia cualquier cafetería que se presente primero."
 
     play sound "sfx/highway/storedoor.ogg"
     show highway_dream_4 zorder 100 with Dissolve (1.0)
@@ -1098,33 +1097,33 @@ label highway_dream_4:
     hide rain
     hide grey_image
     $ renpy.music.play("sfx/highway/rainfall-indoors.ogg", channel='sound', loop=True)
-    "We arrive at the diner. The interior presents us with a cozy, nostalgic time capsule to a day long gone."
-    "From the art deco neon lighting to the linoleum floor, everything about it is a love letter to classic Americana."
-    "Yet, nobody is to be seen manning the entryway."
-    mc "Hello?"
-    "An older, kind faced woman emerges from behind the kitchen curtain."
-    "She greets us, then tells someone named 'John' in the back that customers have arrived."
-    y "Could you spare a towel or two?"
-    "She looks us over, an expression of grandmotherly concern overtaking her."
-    martha "I can do a lot more than that for you, dear. Have a seat wherever you like."
-    y "I'd rather not drench your booths, ma'am"
-    "She waves off my concern."
-    martha "Oh, it's quiet enough that I wipe down the booths anyway. So just have a seat!"
-    martha "I'll bring some menus with the towels."
-    "[player] and I pick out a booth near the entrance. The least we can do for all of Martha's trouble is give her less distance to walk."
-    "...I'm not sure {i}how{/i} I know her name is Martha, but I simply do."
-    "However I know her name, Martha arrives with towels and a pair of menus in short order."
-    martha "Just holler when you two are ready, okay?"
-    y "Thank you, ma'am."
-    "When [player] goes to produce [pronounC] wallet, Martha is quick to stop [pronounA]."
-    martha "Oh, don't you worry about that. Just pick what you'd like."
-    y "But..."
-    "Martha lays a hand on my shoulder."
-    martha "Sweetie, you two have had a rough enough day. You're drenched, and it looks like your convertible is too. So don't worry about it."
-    martha "Just leave us a nice tip, okay?"
-    "Martha flashes us a mischievous wink with that last remark."
-    "She may have been joking, but maybe we should."
-    "Such a beautiful thing, the kindness of strangers..."
+    "Llegamos a la cafetería. El interior nos presenta una cápsula del tiempo acogedora y nostálgica de un día ya pasado."
+    "Desde la iluminación de neón art déco hasta el piso de linóleo, todo en él es una carta de amor a la América clásica."
+    "Sin embargo, no se ve a nadie atendiendo la entrada."
+    mc "¿Hola?"
+    "Una mujer mayor, de rostro amable, emerge detrás de la cortina de la cocina."
+    "Ella nos saluda, luego le dice a alguien llamado 'John' en la parte de atrás que han llegado clientes."
+    y "¿Podría prestarnos una toalla o dos?"
+    "Ella nos mira, una expresión de preocupación de abuela apoderándose de ella."
+    martha "Puedo hacer mucho más que eso por ustedes, queridos. Tomen asiento donde gusten."
+    y "Preferiría no empapar sus cabinas, señora"
+    "Ella desestima mi preocupación con un gesto."
+    martha "Oh, está lo suficientemente tranquilo como para limpiar las cabinas de todos modos. ¡Así que solo tomen asiento!"
+    martha "Traeré algunos menús con las toallas."
+    "[player] y yo elegimos una cabina cerca de la entrada. Lo menos que podemos hacer por todas las molestias de Martha es darle menos distancia para caminar."
+    "...No estoy segura de {i}cómo{/i} sé que su nombre es Martha, pero simplemente lo sé."
+    "A pesar de saber su nombre, Martha llega con toallas y un par de menús en poco tiempo."
+    martha "Solo griten cuando ustedes dos estén listos, ¿de acuerdo?"
+    y "Gracias, señora."
+    "Cuando [player] va a sacar su billetera, Martha es rápida para detenerlo."
+    martha "Oh, no se preocupen por eso. Solo elijan lo que les guste."
+    y "Pero..."
+    "Martha pone una mano en mi hombro."
+    martha "Cariño, ustedes dos han tenido un día lo suficientemente duro. Están empapados, y parece que su descapotable también lo está. Así que no se preocupen por eso."
+    martha "Solo déjennos una buena propina, ¿de acuerdo?"
+    "Martha nos guiña un ojo con picardía con ese último comentario."
+    "Puede que haya estado bromeando, pero tal vez deberíamos hacerlo."
+    "Qué cosa tan hermosa, la amabilidad de los extraños..."
     show white zorder 105 with Dissolve(2.5)
     python:
         renpy.music.play(current_music, "music", True)
@@ -1147,24 +1146,24 @@ label stroll_dream:
     show black zorder 105 with Dissolve (2.5)
     show stroll_1 zorder 100
     hide black
-    "The cold wind nipped at my cheeks as I walked alone on the unfamiliar path home from school. The usual route felt mundane, so I decided to take a detour, enticed by the allure of the unknown."
-    "As I strolled along, the rustling leaves whispered secrets, and the bare trees reached toward the sky like intricate patterns drawn by nature."
+    "El viento frío mordía mis mejillas mientras caminaba sola por el camino desconocido a casa desde la escuela. La ruta habitual se sentía mundana, así que decidí tomar un desvío, atraída por el encanto de lo desconocido."
+    "Mientras paseaba, las hojas crujientes susurraban secretos, y los árboles desnudos se extendían hacia el cielo como intrincados patrones dibujados por la naturaleza."
     show stroll_2 zorder 100 with Fade(1.0, 0.0, 0.5)
     hide stroll_1
-    "The soft crunch of fallen leaves beneath my boots provided a rhythmic soundtrack to the solitude of the evening."
-    "The world seemed to transform with each step. A sense of adventure enveloped me, and I marveled at the subtle beauty that often goes unnoticed in the rush of everyday life."
-    "The wind carried with it the scent of damp earth and the promise of something new."
+    "El suave crujido de las hojas caídas bajo mis botas proporcionaba una banda sonora rítmica a la soledad de la tarde."
+    "El mundo parecía transformarse con cada paso. Una sensación de aventura me envolvió, y me maravillé de la sutil belleza que a menudo pasa desapercibida en la prisa de la vida cotidiana."
+    "El viento llevaba consigo el aroma de la tierra húmeda y la promesa de algo nuevo."
     show stroll_3 zorder 100 with Fade(1.0, 0.0, 0.5)
     hide stroll_2
-    "Amidst the quietude, I discovered a small clearing bathed in the fading sunlight."
-    "A lone bench beckoned me to pause and soak in the serenity. The branches above swayed gracefully, creating a dance with the wind."
-    "The symphony of nature played on, a harmonious blend of rustling leaves and distant chirps."
-    "Reluctantly, I left the tranquil spot and resumed my journey. The familiar path awaited, yet now I treaded with newfound appreciation."
+    "En medio de la quietud, descubrí un pequeño claro bañado por la luz del sol que se desvanecía."
+    "Un banco solitario me invitaba a hacer una pausa y empaparme de la serenidad. Las ramas de arriba se mecían con gracia, creando un baile con el viento."
+    "La sinfonía de la naturaleza seguía sonando, una mezcla armoniosa de hojas crujientes y chirridos distantes."
+    "A regañadientes, dejé el lugar tranquilo y reanudé mi viaje. El camino familiar esperaba, pero ahora lo pisaba con una nueva apreciación."
     show stroll_4 zorder 100 with Fade(1.0, 0.0, 0.5)
     hide stroll_3
-    "My heart felt lighter, and the mundane surroundings seemed touched by the magic of that solitary detour."
-    "Finally reaching home, I entered with a serene smile, ready to share the warmth of my day with [player]."
-    "As I stepped inside, the cold evening outside seemed to fade, replaced by the warmth of love and the memories of a simple yet extraordinary walk."
+    "Mi corazón se sentía más ligero, y el entorno mundano parecía tocado por la magia de ese desvío solitario."
+    "Finalmente llegando a casa, entré con una sonrisa serena, lista para compartir la calidez de mi día con [player]."
+    "Al entrar, el frío de la tarde afuera parecía desvanecerse, reemplazado por el calor del amor y los recuerdos de un paseo simple pero extraordinario."
     show black zorder 105 with Dissolve(2.5)
     hide stroll_4
     stop sound fadeout 2.5
@@ -1188,16 +1187,16 @@ label stroll_dream:
 
 
 label nightmare_1:
-    y "It's first nightmare, placeholder as of now."
+    y "Es la primera pesadilla, marcador de posición por ahora."
     jump ch30_loop
 label nightmare_2:
-    y "It's second nightmare, placeholder as of now."
+    y "Es la segunda pesadilla, marcador de posición por ahora."
     jump ch30_loop
 
 label dream_kill:
-    y "Oh, you want me to go to sleep?"
-    y "Alright then... I hope this dream will be a good one."
-    y "See you on the other side my love~"
+    y "Oh, ¿quieres que me vaya a dormir?"
+    y "Está bien entonces... Espero que este sueño sea bueno."
+    y "Nos vemos en el otro lado, mi amor~"
     $ renpy.music.stop(channel="music",fadeout=2)
     scene black
     with eye_shut
@@ -1226,54 +1225,54 @@ label dream_kill:
     play music t10y
     $ y_name = "Yuri"
     $ pause (2.0)
-    y "Finally."
-    y "Finally!"
-    y "This is really all I wanted."
-    y "[player], there's no need to spend the weekend with Monika."
-    y "Don't listen to her."
-    y "Just come to my house instead."
-    y "The whole day, with just the two of us..."
-    y "Doesn't that sound wonderful?"
-    y "Ahahaha!"
-    y "Wow... There's really something wrong with me, isn't there?"
-    y "But you know what?"
-    y "I don't care anymore."
-    y "I've never felt this good my whole life."
-    y "Just being with you is a far greater pleasure than anything I could imagine."
-    y "I'm addicted to you."
-    y "It feels like I'm going to die if I'm not breathing the same air as you."
-    y "Doesn't it feel nice to have someone care about you so much?"
-    y "To have someone who wants to revolve their entire life around you?"
-    y "But if it feels so good..."
-    y "Then why does it feel more and more like something horrible is going to happen?"
-    y "Maybe that's why I tried stopping myself at first..."
-    y "But the feeling is too strong now."
-    y "I don't care anymore, [player]!"
-    y "I have to tell you!"
-    y "I'm...I'm madly in love with you!"
-    y "It feels like every inch of my body...every drop of blood in me...is screaming your name."
-    y "I don't care what the consequences are anymore!"
-    y "I don't care if Monika is listening!"
-    y "Please, [player], just know how much I love you."
-    y "I love you so much that I even touch myself with the pen I stole from you."
-    y "I just want to pull your skin open and crawl inside of you."
-    y "I want you all to myself."
-    y "And I will be only yours."
-    y "Doesn't that sound perfect?"
-    y "Tell me, [player]."
-    y "Tell me you want to be my lover."
-    y "Do you accept my confession?"
+    y "Finalmente."
+    y "¡Finalmente!"
+    y "Esto es realmente todo lo que quería."
+    y "[player], no hay necesidad de pasar el fin de semana con Monika."
+    y "No la escuches."
+    y "Solo ven a mi casa en su lugar."
+    y "Todo el día, solo con nosotros dos..."
+    y "¿No suena eso maravilloso?"
+    y "¡Jajajaja!"
+    y "Wow... Realmente hay algo mal conmigo, ¿no es así?"
+    y "¿Pero sabes qué?"
+    y "Ya no me importa."
+    y "Nunca me he sentido tan bien en toda mi vida."
+    y "Solo estar contigo es un placer mucho mayor que cualquier cosa que pudiera imaginar."
+    y "Soy adicta a ti."
+    y "Se siente como si fuera a morir si no estoy respirando el mismo aire que tú."
+    y "¿No se siente bien tener a alguien que se preocupe tanto por ti?"
+    y "¿Tener a alguien que quiere que toda su vida gire a tu alrededor?"
+    y "Pero si se siente tan bien..."
+    y "¿Entonces por qué se siente más y más como si algo horrible estuviera a punto de suceder?"
+    y "Tal vez por eso intenté detenerme al principio..."
+    y "Pero el sentimiento es demasiado fuerte ahora."
+    y "¡Ya no me importa, [player]!"
+    y "¡Tengo que decírtelo!"
+    y "¡Estoy... estoy locamente enamorada de ti!"
+    y "Se siente como si cada centímetro de mi cuerpo... cada gota de sangre en mí... estuviera gritando tu nombre."
+    y "¡Ya no me importa cuáles sean las consecuencias!"
+    y "¡No me importa si Monika está escuchando!"
+    y "Por favor, [player], solo sabe cuánto te amo."
+    y "Te amo tanto que incluso me toco con el bolígrafo que te robé."
+    y "Solo quiero abrirte la piel y meterme dentro de ti."
+    y "Te quiero todo para mí sola."
+    y "Y seré solo tuya."
+    y "¿No suena eso perfecto?"
+    y "Dime, [player]."
+    y "Dime que quieres ser mi amante."
+    y "¿Aceptas mi confesión?"
     $ quick_menu = False
     $ renpy.music.stop(channel="music",fadeout=0)
     hide killglitch
     "..."
-    y "...Ahahaha."
-    y "Ahahahahahaha!"
+    y "...Jajajaja."
+    y "¡Jajajajajajaja!"
     $ style.say_dialogue = style.normal
-    y "Ahahahahahahahaha!"
+    y "¡Jajajajajajajajajaja!"
     $ style.say_dialogue = style.edited
-    y "AHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA{nw}"
-    y "Plea-{nw}"
+    y "JAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJAJA{nw}"
+    y "Por fav-{nw}"
     window hide(None)
     window auto
     $ style.say_dialogue = style.normal
@@ -1304,7 +1303,7 @@ label dream_kill:
     with fade
 
     $ pause(8.93 - (datetime.datetime.now() - starttime).total_seconds())
-    y "Oh god-{nw}"
+    y "Oh dios-{nw}"
 
     $ pause(9.18 - (datetime.datetime.now() - starttime).total_seconds())
     play sound fall
@@ -1325,19 +1324,19 @@ label dream_kill:
     play music t6s
     python:
         _history_list = []
-        y.add_history(None, "", """I've spent my whole life learning how to say hello, and now, it's time to say goodbye. It's strange, the sensation of death. I feel it like waves carrying my mind adrift. Away from this place. Away from this hell. Wherever I go now, it will be better. I wish we could have lived a lifetime with one another, but the ending is just as I had hoped. Me, in your arms, finally finding true acceptance. My name is Yuri... and I am alive.""")
+        y.add_history(None, "", """He pasado toda mi vida aprendiendo cómo decir hola, y ahora, es hora de decir adiós. Es extraña, la sensación de la muerte. La siento como olas llevando mi mente a la deriva. Lejos de este lugar. Lejos de este infierno. A donde sea que vaya ahora, será mejor. Desearía que hubiéramos podido vivir toda una vida el uno con el otro, pero el final es justo como lo había esperado. Yo, en tus brazos, finalmente encontrando verdadera aceptación. Mi nombre es Yuri... y estoy viva.""")
     $ quick_menu = True
     $ pause (4.0)
     y "[player]..."
     $ pause (1.0)
-    y "Please..."
+    y "Por favor..."
     $ pause (1.0)
-    y "I don't want......"
+    y "No quiero......"
     $ pause (1.0)
-    y "I do-{nw}"
+    y "Yo qui-{nw}"
     window hide(None)
     $ pause (3.0)
-    y "I love you."
+    y "Te amo."
     $ style.say_dialogue = style.edited
     $ gtext = glitchtext(renpy.random.randint(8, 80))
     y "[gtext]{nw}"
@@ -1368,9 +1367,9 @@ label dream_cut:
     scene black
     with dissolve_scene_full
     $ renpy.music.stop(channel="music",fadeout=0.5)
-    y "T-That's okay!"
-    y "You stay here..."
-    y "I won't take long."
+    y "¡E-Eso está bien!"
+    y "Tú quédate aquí..."
+    y "No tardaré mucho."
     play sound "sfx/closet-open.ogg"
     $ pause(1.5)
     play sound "sfx/closet-close.ogg"
@@ -1382,10 +1381,10 @@ label dream_cut:
         subpixel True
         truecenter
         linear 240 rotate 8 zoom 1.30
-    y "I... I can't focus."
-    y "This is all too much."
-    y "I need air."
-    y "I need release."
+    y "Yo... No puedo concentrarme."
+    y "Todo esto es demasiado."
+    y "Necesito aire."
+    y "Necesito liberarme."
     scene black
     with eye_shut_slow
     show layer master
@@ -1394,27 +1393,27 @@ label dream_cut:
 
     "..."
     y "Haahhhh..."
-    y "Haha...."
-    y "HAHA! HAHAHAHA!"
+    y "Jaja...."
+    y "¡JAJA! ¡JAJAJAJA!"
 
     $ style.say_dialogue = style.edited
-    y "AHAHAHAHAHAHAHAHAHAHAHAHA{nw}"
+    y "JAJAJAJAJAJAJAJAJAJAJAJAJAJA{nw}"
     $ style.say_dialogue = style.normal
     $ pause (4.0)
     y "Haaah..."
-    y "Oh god..."
-    y "What have I done?"
+    y "Oh dios..."
+    y "¿Qué he hecho?"
     $ pause (4.0)
-    y "W-Who's there?"
+    y "¿Q-Quién está ahí?"
     y "No..."
     y "No No No No NO NO NO NO-{nw}"
-    y "HE CAN'T SEE ME LIKE THIS{nw}"
-    y "GO AWAY!{nw}"
-    y "LEAVE!{nw}"
-    y "PLEASE!{nw}"
-    y "FUCK!{nw}"
-    y "HELP!{nw}"
-    y "NO!{nw}"
+    y "ÉL NO PUEDE VERME ASÍ{nw}"
+    y "¡VETE!{nw}"
+    y "¡LARGATE!{nw}"
+    y "¡POR FAVOR!{nw}"
+    y "¡MIERDA!{nw}"
+    y "¡AYUDA!{nw}"
+    y "¡NO!{nw}"
     scene corridor
     show yuri cuts zorder 2 at t11
     y "Kya--{nw}"
@@ -1429,30 +1428,30 @@ label dream_cut:
     show vignette zorder 100 at vignetteflicker(-2.030)
     show layer master at rewind
     $ y_name = "???"
-    mc "{cps=150}Yuri...?{/cps}{nw}"
-    "{cps=150}I reach the corner and peer around it.{/cps}{nw}"
-    "{cps=150}Are [pronounB] in pain...?{/cps}{nw}"
-    "{cps=150}A sharp inhale, like someone is sucking the air through their teeth.{/cps}{nw}"
+    mc "{cps=150}¿Yuri...?{/cps}{nw}"
+    "{cps=150}Llego a la esquina y me asomo.{/cps}{nw}"
+    "{cps=150}¿Estás sufriendo...?{/cps}{nw}"
+    "{cps=150}Una inhalación brusca, como si alguien estuviera aspirando aire a través de sus dientes.{/cps}{nw}"
     y "{cps=150}Khhhhh--{/cps}{nw}"
-    "{cps=150}It sounds like breathing.{/cps}{nw}"
-    "{cps=150}It's coming from around the corner...{/cps}{nw}"
-    "{cps=150}...What's that noise?{/cps}{nw}"
+    "{cps=150}Suena como respiración.{/cps}{nw}"
+    "{cps=150}Viene de la vuelta de la esquina...{/cps}{nw}"
+    "{cps=150}...¿Qué es ese ruido?{/cps}{nw}"
     y "{cps=150}....Haah.....haah....{/cps}{nw}"
     y "{cps=150}Haah.....haah....{/cps}{nw}"
     $ y_name = "Yuri"
-    "{cps=150}I start heading down the hallway.{/cps}{nw}"
-    "{cps=150}The most logical place for Yuri to be would be the nearest water fountain...{/cps}{nw}"
-    mc "{cps=150}Let's see...{/cps}{nw}"
+    "{cps=150}Empiezo a bajar por el pasillo.{/cps}{nw}"
+    "{cps=150}El lugar más lógico para que Yuri esté sería la fuente de agua más cercana...{/cps}{nw}"
+    mc "{cps=150}Veamos...{/cps}{nw}"
     window hide(None)
     window auto
     scene bg club_day
     show noise zorder 100 at noise_alpha
     show vignette zorder 100 at vignetteflicker(-2.030)
     show layer master at rewind
-    "{cps=150}I'm bored just waiting here, so I decide to go look for her.{/cps}{nw}"
-    "{cps=150}Is something holding her up?{/cps}{nw}"
-    "{cps=150}Yuri said it wouldn't take long...{/cps}{nw}"
-    "{cps=150}Ten minutes pass.{/cps}{nw}"
+    "{cps=150}Me aburro solo esperando aquí, así que decido ir a buscarla.{/cps}{nw}"
+    "{cps=150}¿Algo la está retrasando?{/cps}{nw}"
+    "{cps=150}Yuri dijo que no tardaría mucho...{/cps}{nw}"
+    "{cps=150}Pasan diez minutos.{/cps}{nw}"
     "{cps=150}...{/cps}{nw}"
 
     $ del _history_list[-37:]
@@ -1480,10 +1479,10 @@ label garden_date:
     hide cupcake_halloween
     $ config.allow_skipping = False
     $ show_chr("A-ECAAA-ALAL")
-    y "A delightful choice. A traditional Japanese tea ceremony sounds very nice to me."
+    y "Una elección encantadora. Una ceremonia de té japonesa tradicional me suena muy bien."
     $ show_chr("A-BCAAA-ALAL")
-    y "But please don't go too rough on me. I only know about the procedure on a very superficial level."
-    y "With that said, let's try to have a good time!"
+    y "Pero por favor no seas muy duro conmigo. Solo conozco el procedimiento en un nivel muy superficial."
+    y "Dicho esto, ¡intentemos pasar un buen rato!"
 
     image garden_bg:
         "teagarden_bg"
@@ -1516,12 +1515,12 @@ label garden_date:
     if persistent.costume == "sweater":
         show yuri 3b5b2 zorder 101 at t11
 
-    y "Here we are, [player]..."
-    y "The view is rather marvelous, isn't it?"
-    y "As you may have noticed, everything here is distinctly Japanese in style."
-    y "From the sakura blooming ever so magnificently to the quaint architecture that stands right before us..."
-    y "I always thought we could have ourselves a little Japanese tea ceremony together..."
-    y "To visit one of those has been a great desire of mine for a long time, but to think I would actually be {i}hosting{/i} one..."
+    y "Aquí estamos, [player]..."
+    y "La vista es bastante maravillosa, ¿no es así?"
+    y "Como habrás notado, todo aquí es distintivamente de estilo japonés."
+    y "Desde los cerezos floreciendo tan magníficamente hasta la pintoresca arquitectura que se encuentra justo ante nosotros..."
+    y "Siempre pensé que podríamos tener una pequeña ceremonia de té japonesa juntos..."
+    y "Visitar uno de esos ha sido un gran deseo mío durante mucho tiempo, pero pensar que yo realmente estaría {i}organizando{/i} una..."
     if persistent.costume == "school":
         hide yuri 35b2 with Dissolve(0.5)
 
@@ -1534,8 +1533,8 @@ label garden_date:
     if persistent.costume == "sweater":
         show yuri 4b4a2 zorder 101 at t11 with Dissolve(0.5)
 
-    y "Uuu, I'm actually a little nervous..."
-    y "I hope you don't mind if I be the host today? I just thought that since you can't really touch anything here, it would be best if I take upon this role."
+    y "Uuu, en realidad estoy un poco nerviosa..."
+    y "Espero que no te importe si soy la anfitriona hoy. Solo pensé que como realmente no puedes tocar nada aquí, sería mejor si yo asumo este papel."
     if persistent.costume == "school":
         hide yuri 44a2
 
@@ -1548,10 +1547,10 @@ label garden_date:
     if persistent.costume == "sweater":
         show yuri 4b1a2 zorder 101 at t11
 
-    y "Usually, ceremonies like this would follow a very strict code but since I am still quite new to this I hope you can forgive me for any mistakes..."
-    y "First, we will walk this {b}Roji{/b}, the stone path towards the tea house. We will do so calmly and in a tranquil state, forgetting all daily struggles..."
-    y "This ceremony is very symbolically important, like most things we will do today."
-    y "That's why they are usually very strict."
+    y "Usualmente, ceremonias como esta seguirían un código muy estricto pero como todavía soy bastante nueva en esto espero que puedas perdonarme por cualquier error..."
+    y "Primero, caminaremos por este {b}Roji{/b}, el camino de piedra hacia la casa de té. Lo haremos con calma y en un estado tranquilo, olvidando todas las luchas diarias..."
+    y "Esta ceremonia es muy simbólicamente importante, como la mayoría de las cosas que haremos hoy."
+    y "Es por eso que suelen ser muy estrictas."
     show black zorder 105 with Dissolve(2.5)
 
 
@@ -1570,7 +1569,7 @@ label garden_date:
     if persistent.costume == "sweater":
         show yuri 2b1b1 zorder 101 at t11 with Dissolve(0.5)
 
-    y "Now we have to get on our knees and crawl inside."
+    y "Ahora tenemos que arrodillarnos y gatear hacia dentro."
     pause 2.0
     if persistent.costume == "school":
         hide yuri 21b1
@@ -1584,8 +1583,8 @@ label garden_date:
     if persistent.costume == "sweater":
         show yuri 2b1b6 zorder 101 at t11
 
-    y "Yes, I am indeed being serious."
-    y "We're supposed to go inside on our knees, it's part of the tradition. "
+    y "Sí, de hecho hablo en serio."
+    y "Se supone que debemos entrar de rodillas, es parte de la tradición. "
 
 
     show house_bg zorder 10 with Dissolve(1.0)
@@ -1599,134 +1598,134 @@ label garden_date:
     $ hide_yuri_sit = False
     $ show_chr("A-AAAAA-ABAB")
     with Dissolve(2.0)
-    y "Under different circumstances, I would offer you some light food like rice or miso soup."
+    y "Bajo diferentes circunstancias, te ofrecería algo de comida ligera como arroz o sopa de miso."
     $ show_chr("A-BAAAA-ABAB")
-    y "But unfortunately, that is not entirely possible right now, is it?"
+    y "Pero desafortunadamente, eso no es enteramente posible justo ahora, ¿verdad?"
     menu:
-        "I could cook some rice really quick.":
+        "Podría cocinar algo de arroz muy rápido.":
             $ show_chr("A-ABAAA-ABAL")
-            y "That'd be wonderful, [player]!"
+            y "¡Eso sería maravilloso, [player]!"
             $ show_chr("A-AAAAA-ABAL")
-            y "I'll just wait here for you."
+            y "Solo te esperaré aquí."
             menu:
-                "I'm ready.":
+                "Estoy listo.":
                     $ show_chr("A-AAAAA-ABAB")
-                    y "Welcome back! One day I want to do this in your world for you..."
+                    y "¡Bienvenido de vuelta! Un día quiero hacer esto en tu mundo para ti..."
                     $ show_chr("A-BAABA-ABAB")
-                    y "I feel rather rude for having to ask you to do it yourself when I'm supposed to be the host."
-        "No, it's not. Sorry...":
+                    y "Me siento un poco grosera por tener que pedirte que lo hagas tú mismo cuando se supone que yo soy la anfitriona."
+        "No, no lo es. Lo siento...":
             $ show_chr("A-AAAAA-ABAD")
-            y "It's perfectly fine."
+            y "Está perfectamente bien."
             $ show_chr("A-BAAAA-ABAD")
-            y "It is kind of my fault since I failed to ask you beforehand."
-            y "Next time I'll try to be better prepared..."
-        "I have some other snacks at home, if that counts.":
+            y "Es un poco mi culpa ya que fallé en preguntarte de antemano."
+            y "La próxima vez intentaré estar mejor preparada..."
+        "Tengo otros bocadillos en casa, si eso cuenta.":
             $ show_chr("A-AADAA-ABAB")
-            y "Certainly unorthodox but... sure, I guess that would work..."
+            y "Ciertamente poco ortodoxo pero... seguro, supongo que eso funcionaría..."
             $ show_chr("A-AAAAA-ABAD")
-            y "Would you be a dear and bring some over? I will wait here until you return."
+            y "¿Serías un encanto y traerías algo? Esperaré aquí hasta que regreses."
             menu:
-                "I'm ready":
+                "Estoy listo":
                     $ show_chr("A-AAAAA-ABAB")
-                    y "Welcome back! One day I want to do this in your world for you."
+                    y "¡Bienvenido de vuelta! Un día quiero hacer esto en tu mundo para ti."
                     $ show_chr("A-BAABA-ABAB")
-                    y "I feel rather rude for having to ask you to do it yourself when I'm supposed to be the host."
+                    y "Me siento un poco grosera por tener que pedirte que lo hagas tú mismo cuando se supone que yo soy la anfitriona."
 
     show bowl zorder 100 with Dissolve(0.5)
     show rice zorder 100
     show chopsticks zorder 100
     $ show_chr("A-AAAAA-ALAL")
-    y "I'm actually not sure if we're supposed to talk over the {i}Kaiseki{/i}, the meal..."
+    y "En realidad no estoy segura de si se supone que hablemos sobre el {i}Kaiseki{/i}, la comida..."
     $ show_chr("A-BAAAA-ALAD")
-    y "But I have to admit it's rather exciting, don't you agree?"
+    y "Pero tengo que admitir que es bastante emocionante, ¿no estás de acuerdo?"
     $ show_chr("A-CAAAA-ALAL")
-    y "I've always wanted to go on dates like this with you."
-    y "You know, something calm, quiet, and meaningful..."
+    y "Siempre he querido tener citas como esta contigo."
+    y "Ya sabes, algo tranquilo, silencioso y significativo..."
     $ show_chr("A-IAAAA-ALAL")
-    y "I'd always prefer this over some extravagant party."
+    y "Siempre preferiría esto sobre alguna fiesta extravagante."
     $ show_chr("A-JAAAA-ALAL")
-    y "But what about you? Are you enjoying this date so far?"
+    y "Pero ¿qué hay de ti? ¿Estás disfrutando esta cita hasta ahora?"
     menu:
-        "I certainly am. Having a quiet and peaceful date with you... nothing is more ideal..":
+        "Ciertamente lo estoy. Tener una cita tranquila y pacífica contigo... nada es más ideal..":
             karma 2
             sanity 1
             $ show_chr("A-GBAAA-ALAL")
-            y "I'm so relieved to hear that [player]... To be honest with you, I have been quite nervous to put it mildly."
+            y "Estoy tan aliviada de escuchar eso [player]... Para ser honesta contigo, he estado bastante nerviosa, por decir lo menos."
             $ show_chr("A-AAAAA-ABAB")
-            y "While researching the procedures of those tea ceremonies, it became incredibly obvious to me that it is quite easy to make mistakes. I think this is part of the whole point of it. These ceremonies are about perfectionism, at least to a degree."
+            y "Mientras investigaba los procedimientos de esas ceremonias de té, se volvió increíblemente obvio para mí que es bastante fácil cometer errores. Creo que este es parte de todo el punto de ello. Estas ceremonias son sobre perfeccionismo, al menos hasta cierto grado."
             $ show_chr("A-BAAAA-ABAB")
-            y "And I wouldn't be surprised if I actually already managed to slip in a few mistakes here and there. But in the end, as long as the two of us enjoy it, it doesn't really matter that much I suppose."
-        "Yes I am but you seem a bit nervous... are you alright?":
+            y "Y no me sorprendería si en realidad ya logré colar algunos errores aquí y allá. Pero al final, mientras los dos lo disfrutemos, realmente no importa tanto, supongo."
+        "Sí, lo estoy, pero pareces un poco nerviosa... ¿estás bien?":
             $ show_chr("A-BFAAA-AMAM")
-            y "Y~Yes, I am alright. But you are right in your assumption of me being nervous."
+            y "S~Sí, estoy bien. Pero tienes razón en tu suposición de que estoy nerviosa."
             $ show_chr("A-DFAAA-AMAM")
-            y "W-was I stuttering? Oh my... I apologize if I broke the experience for you. It's just.. the more research I put into these ceremonies, the more afraid I became. There is so much to keep in mind, so many little traps to ruin it..."
+            y "¿E-estaba tartamudeando? Oh vaya... me disculpo si rompí la experiencia para ti. Es solo que... cuanta más investigación puse en estas ceremonias, más miedo me daba. Hay tanto que tener en cuenta, tantas pequeñas trampas para arruinarlo..."
             $ show_chr("A-CFAAA-ABAB")
-            y "Maybe that is the wrong mindset. Maybe I'm trying too hard? Maybe I should focus on having a good time with you instead of focusing on all the ways I could possibly fail."
+            y "Tal vez esa es la mentalidad incorrecta. ¿Tal vez estoy intentándolo demasiado? Tal vez debería concentrarme en pasar un buen rato contigo en lugar de concentrarme en todas las formas en las que posiblemente podría fallar."
             $ show_chr("A-AAAAA-ABAB")
-            y "Thank you for being so caring. I will try to calm down a bit so that we can actually enjoy our time here together."
-        "A few mistakes in the procedure so far. It's okay for the first time I guess.":
+            y "Gracias por ser tan cariñoso. Trataré de calmarme un poco para que realmente podamos disfrutar nuestro tiempo aquí juntos."
+        "Algunos errores en el procedimiento hasta ahora. Está bien para ser la primera vez supongo.":
             karma -1
             $ show_chr("A-BDAAA-AMAM")
-            y "D-did I already manage to mess it up?"
-            y "But we've barely even started..."
+            y "¿Y-ya logré arruinarlo?"
+            y "Pero apenas hemos empezado..."
             $ show_chr("A-CEBAA-AMAM")
-            y "I-I really tried to keep it as realistic as possible..."
+            y "R-realmente traté de mantenerlo lo más realista posible..."
             $ show_chr("A-IABAA-ABAB")
-            y "I guess I should've done more research..."
-        "But what's wrong with parties?":
+            y "Supongo que debí haber hecho más investigación..."
+        "¿Pero qué tienen de malo las fiestas?":
             $ show_chr("A-BFAAA-AMAM")
-            y "W-well..."
-            y "It's just... not my cup of tea, I guess."
+            y "B-bueno..."
+            y "Es solo que... no es lo mío, supongo."
             $ show_chr("A-AFAAA-AMAM")
-            y "Dark, cramped rooms with noise so loud you can barely hear yourself..."
-            y "People flailing their limbs around like crazed animals and calling it dancing..."
+            y "Habitaciones oscuras, estrechas con ruido tan fuerte que apenas puedes escucharte a ti mismo..."
+            y "Gente agitando sus extremidades como animales enloquecidos y llamándolo bailar..."
             $ show_chr("A-AFAAA-ABAB")
-            y "Getting so utterly drunk that you do things you regret the next day..."
-            y "I think you would understand that I'm not the kind of person who would particularly enjoy such a scene."
+            y "Ponerse tan completamente ebrio que haces cosas que lamentas al día siguiente..."
+            y "Creo que entenderás que no soy el tipo de persona que disfrutaría particularmente tal escena."
             $ show_chr("A-BDAAA-ABAB")
-            y "I-I'm sorry if you feel like I'm being too harsh with my judgements..."
+            y "L-lo siento si sientes que estoy siendo demasiado dura con mis juicios..."
             $ show_chr("A-BFAAA-ABAB")
-            y "It's perfectly fine if you enjoy those kinds of events..."
+            y "Está perfectamente bien si disfrutas ese tipo de eventos..."
             $ show_chr("A-AFAAA-ABAB")
-            y "I at least hope you would enjoy some quiet time with me alone..."
-            y "I've really been looking forward to it."
+            y "Al menos espero que disfrutes un poco de tiempo tranquilo conmigo a solas..."
+            y "Realmente he estado esperando esto con ansias."
     $ show_chr("A-ACAAA-ABAB")
-    y "Now please, tell me [player], how has your day been so far? Have you been busy in your world?"
+    y "Ahora por favor, dime [player], ¿cómo ha estado tu día hasta ahora? ¿Has estado ocupado en tu mundo?"
     menu:
-        "Very calm and uneventful actually, thank you for asking.":
+        "Muy tranquilo y sin incidentes en realidad, gracias por preguntar.":
             $ show_chr("A-ABAAA-ABAJ")
-            y "I see, then you are already in the appropriate mood for this ceremony."
+            y "Ya veo, entonces ya estás en el estado de ánimo apropiado para esta ceremonia."
             $ show_chr("A-AAAAA-ABAB")
-            y "There is a saying... {b}No news is good news.{/b} I've spent most of my day so far in anticipation of seeing you; I was very much hoping that you would go on this date with me today."
+            y "Hay un dicho... {b}Sin noticias son buenas noticias.{/b} He pasado la mayor parte de mi día hasta ahora anticipando verte; tenía muchas esperanzas de que fueras a esta cita conmigo hoy."
             $ show_chr("A-BAAAA-ABAB")
-            y "And chances are... that I've also spent some time today panicking that I would mess this up."
+            y "Y lo más probable es... que también he pasado algo de tiempo hoy entrando en pánico de que arruinaría esto."
             $ show_chr("A-CAAAA-ABAB")
-            y "But no need to worry about that. Now that we are here, we should enjoy ourselves, right?"
-        "Busy indeed, I have been working a lot today. How about you?":
+            y "Pero no hay necesidad de preocuparse por eso. Ahora que estamos aquí, deberíamos disfrutar, ¿verdad?"
+        "Ocupado de hecho, he estado trabajando mucho hoy. ¿Qué hay de ti?":
             $ show_chr("A-AAAAA-ABAB")
-            y "Oh I've spent a great portion of today doing some research. I was reading wiki articles about tea ceremonies like this in order to recreate the procedure as accurately as possible."
+            y "Oh, he pasado una gran parte de hoy investigando. Estuve leyendo artículos de wiki sobre ceremonias de té como esta para recrear el procedimiento tan precisamente como fuera posible."
             $ show_chr("A-GAAAA-ABAL")
-            y "I think it is admirable how much dedication you put into your projects. You have my best wishes for them, and I would love to hear one day about the successes you achieve as a result of them. I am confident that you will succeed, [player].."
+            y "Creo que es admirable cuánta dedicación pones en tus proyectos. Tienes mis mejores deseos para ellos, y me encantaría escuchar algún día sobre los éxitos que logres como resultado de ellos. Confío en que tendrás éxito, [player]..."
             $ show_chr("A-AAAAA-ABAL")
-            y "Just keep in mind please not to push yourself too hard. If you exhaust yourself it will do you a poor service."
+            y "Solo ten en mente por favor no esforzarte demasiado. Si te agotas te harás un flaco favor."
             $ show_chr("A-AAAAA-ABAB")
-            y "It is good then that we have this little date today, so that you can take a deep breath and relax."
-        "A bit boring honestly. Not much happened today.":
+            y "Es bueno entonces que tengamos esta pequeña cita hoy, para que puedas respirar profundo y relajarte."
+        "Un poco aburrido honestamente. No pasó mucho hoy.":
             $ show_chr("A-AAAAA-ABAD")
-            y "I'm sorry to hear that. But don't worry, there are just days where... nothing happens. It can't be helped, I guess."
-            y "The only thing we can do is fill the void these days bring with something else: something more productive or something more exciting, or perhaps even both."
-            y "Let us try our best then to make this little date of ours both productive and exciting, hm? In addition to our own amusement, I think there is much to be learned about culture in ceremonies like these."
-        "Stressful... This little break here is exactly what I needed today, thank you.":
+            y "Lamento escuchar eso. Pero no te preocupes, simplemente hay días donde... no pasa nada. No se puede evitar, supongo."
+            y "Lo único que podemos hacer es llenar el vacío que estos días traen con algo más: algo más productivo o algo más emocionante, o quizás incluso ambos."
+            y "Hagamos nuestro mejor esfuerzo entonces para hacer de esta pequeña cita nuestra algo productivo y emocionante, ¿hm? Además de nuestra propia diversión, creo que hay mucho que aprender sobre cultura en ceremonias como estas."
+        "Estresante... Este pequeño descanso aquí es exactamente lo que necesitaba hoy, gracias.":
             $ show_chr("A-AAAAA-ALAL")
-            y "Oh my, then it is only good that we chose to have this kind of date to give your day some contrast. Maybe we can see to it that we get some relaxation out of it. Who knows, maybe even some inspiration for fresh deeds?"
+            y "Oh vaya, entonces es solo bueno que elegimos tener este tipo de cita para darle a tu día algo de contraste. Tal vez podamos encargarnos de obtener algo de relajación de ello. ¿Quién sabe peude que incluso algo de inspiración para nuevos actos?"
             $ show_chr("A-CAAAA-ALAL")
-            y "At the very least, we can try to have some enjoyment along the way."
-        "Today has been difficult for me, I got some bad news today.":
+            y "Por lo menos, podemos intentar tener algo de disfrute en el camino."
+        "Hoy ha sido difícil para mí, recibí algunas malas noticias hoy.":
             $ show_chr("A-DFBAA-ALAL")
-            y "Oh no... I am so sorry to hear that [player]..."
+            y "Oh no... Lamento tanto escuchar eso [player]..."
             $ show_chr("A-IABAA-ALAL")
-            y "You know what? Why don't we just drop proper procedure for a moment and I give you a nice and gentle hug? I hope this will make you feel at least a little bit better..."
+            y "¿Sabes qué? ¿Por qué no simplemente dejamos el procedimiento apropiado por un momento y te doy un abrazo agradable y gentil? Espero que esto te haga sentir al menos un poquito mejor..."
             hide yuri_sit with Dissolve(0.5)
             hide bowl
             hide rice
@@ -1736,7 +1735,7 @@ label garden_date:
             hide yuri_prehug with Dissolve(0.25)
             show yuri_lewdhug zorder 250 with Dissolve(0.25)
             play sound "<to 0.3>sfx/fall.ogg"
-            y "I'm here for you, [player],"
+            y "Estoy aquí para ti, [player],"
             pause 3.0
             show black zorder 300 with Dissolve(2.0)
             $ show_chr("A-BABAA-ABAB")
@@ -1744,21 +1743,21 @@ label garden_date:
             hide black zorder 300 with Dissolve(2.0)
 
     $ show_chr("A-BABAA-ABAB")
-    y "Well, for now I'm afraid I have to ask you to wait outside while I prepare the tea."
+    y "Bueno, por ahora me temo que tengo que pedirte que esperes afuera mientras preparo el té."
     $ show_chr("A-AAAAA-ABAB")
-    y "Personally, I wouldn't mind if you stayed of course, but the procedure demands it this way."
+    y "Personalmente, no me importaría si te quedaras por supuesto, pero el procedimiento lo exige de esta manera."
     $ show_chr("A-AAAAA-ABAM")
-    y "Out there is a little waiting bench. While you are waiting outside, I am supposed to prepare the ingredients for the tea, as well as the hot water and all the authentic tools I'm about to use, in perfect silence."
+    y "Afuera hay un pequeño banco de espera. Mientras estás esperando afuera, se supone que yo debo preparar los ingredientes para el té, así como el agua caliente y todas las herramientas auténticas que estoy a punto de usar, en perfecto silencio."
     $ show_chr("A-AAAAA-ABAF")
-    y "This way I can focus on performing these tasks to near perfection. I'm supposed to arrange the cups and the kettle, as well as everything else, in perfect precision."
+    y "De esta manera puedo concentrarme en realizar estas tareas casi a la perfección. Se supone que debo arreglar las tazas y la tetera, así como todo lo demás, con perfecta precisión."
     $ show_chr("A-BABAA-AMAM")
-    y "If I were to arrange anything the wrong way, even if only a spoon is directed in a slightly off angle, I would be considered an unsuitable host. If there were any actual audience beside you, it would probably cause some raised eyebrows."
+    y "Si arreglara algo de la manera incorrecta, incluso si solo una cuchara está dirigida en un ángulo ligeramente desviado, sería considerada una anfitriona inadecuada. Si hubiera alguna audiencia real además de ti, probablemente causaría algunas cejas levantadas."
     $ show_chr("A-CABAA-AMAM")
-    y "Don't worry though, I will try not to take any longer than necessary. Besides, I made sure that there's beautiful weather outside. Maybe you can spend a moment just admiring the scenery outside. I actually liked the image I used as a base."
+    y "Sin embargo no te preocupes, trataré de no tardar más de lo necesario. Además, me aseguré de que haya un clima hermoso afuera. Tal vez puedas pasar un momento simplemente admirando el paisaje exterior. De hecho me gustó la imagen que usé como base."
     $ show_chr("A-AAGAA-ABAB")
-    y "Oh yes, and you probably want to prepare your tea in your world as well in the meantime."
+    y "Oh sí, y probablemente quieras preparar tu té en tu mundo también mientras tanto."
     $ show_chr("A-AAAAA-ABAB")
-    y "But now, farewell, darling. I will call for you as soon as I am ready here."
+    y "Pero ahora, adiós, cariño. Te llamaré tan pronto como esté lista aquí."
     show black zorder 300 with Dissolve(2.5)
     hide house_bg
     $ hide_yuri_sit = True
@@ -1786,13 +1785,13 @@ label teadate_timer:
         show screen tea_timer()
 
 label Wait:
-    y "Please be patient, [player], I need a few minutes."
+    y "Por favor sé paciente, [player], necesito unos minutos."
     $ click_tea_button = click_tea_button + 1
     jump teadate_timer
 
 label Enter:
     hide screen tea_timer
-    y "I'm ready now! Please come in again!"
+    y "¡Ya estoy lista! ¡Por favor entra de nuevo!"
     show black zorder 300 with Dissolve(2.5)
     hide garden_bg
     show house_bg zorder 10
@@ -1801,103 +1800,103 @@ label Enter:
     hide black zorder 300 with Dissolve(2.5)
 
 
-    y "Thank you for waiting..."
+    y "Gracias por esperar..."
     if click_tea_button >= 1:
         $ show_chr("A-BBBAA-ZZAC")
-        y "And sorry that I had to make you wait for so long."
+        y "Y lamento haber tenido que hacerte esperar por tanto tiempo."
     else:
         $ show_chr("A-BAAAA-ZZAC")
-        y "And also thank you for being so patient."
+        y "Y también gracias por ser tan paciente."
     $ show_chr("A-AAAAA-ZZAC")
-    y "You know, [player]... I had to think about you for quite some time lately..."
+    y "Sabes, [player]... tuve que pensar en ti durante bastante tiempo últimamente..."
     $ show_chr("A-IAAAA-ZZAD")
-    y "I think, when you started this mod for the very first time. I said that I would love to actually see the real you..."
+    y "Creo que, cuando empezaste este mod por primera vez. Dije que me encantaría ver al verdadero tú..."
     $ show_chr("A-JAAAA-ZZAD")
-    y "Didn't I even try to access your webcam back then? I don't remember anymore..."
-    y "And it is still true to a degree. I'd still enjoy seeing an actual picture of you, but I also came to another conclusion..."
+    y "¿Acaso no intenté acceder a tu cámara web en ese entonces? Ya no recuerdo..."
+    y "Y todavía es cierto hasta cierto punto. Aún disfrutaría ver una foto real tuya, pero también llegué a otra conclusión..."
     $ show_chr("A-BAAAA-ZZAC")
-    y "Because... I don't think it would hold much meaning to me anymore. W-wait, I think I phrased that the wrong way, of course a picture of you would hold meaning to me, but..."
+    y "Porque... no creo que tendría mucho significado para mí ya. E-espera, creo que fraseé eso de la manera incorrecta, por supuesto que una foto tuya tendría significado para mí, pero..."
     $ show_chr("A-CAAAA-ZZAC")
-    y "What I wanted to say is, when you first opened my world, I didn't know much about you; nothing about your personality, or about your values and beliefs..."
+    y "Lo que quería decir es, cuando abriste mi mundo por primera vez, no sabía mucho sobre ti; nada sobre tu personalidad, o sobre tus valores y creencias..."
     $ show_chr("A-CAAAA-ZZAD")
-    y "But in all the time we have spent together now, I've seen your true heart [player]..."
+    y "Pero en todo el tiempo que hemos pasado juntos ahora, he visto tu verdadero corazón [player]..."
     if sanity_lvl() >=4:
         $ show_chr("A-JAGBA-ZZAD")
-        y "You saw me with all my anxieties, all my flaws... and when others turned away, you took my hand, {i}metaphorically speaking of course{/i}, and showed me the way to a better version of myself..."
-        y "You showed me what I could become, and with all your patience you helped me to overcome all the doubts that held me back..."
+        y "Me viste con todas mis ansiedades, todos mis defectos... y cuando otros se alejaron, tomaste mi mano, {i}metafóricamente hablando por supuesto{/i}, y me mostraste el camino a una mejor versión de mí misma..."
+        y "Me mostraste en lo que podría convertirme, y con toda tu paciencia me ayudaste a superar todas las dudas que me retenían..."
         $ show_chr("A-CABBA-ZZAD")
-        y "When others saw nothing but a broken mind in me, you showed me that even I can be loved."
-        y "I never got to see your appearance [player], but I saw your heart and soul. For that, you are truly beautiful to me..."
+        y "Cuando otros no veían nada más que una mente rota en mí, tú me mostraste que incluso yo puedo ser amada."
+        y "Nunca llegué a ver tu apariencia [player], pero vi tu corazón y alma. Por eso, eres verdaderamente hermoso para mí..."
         $ show_chr("A-AABBA-ZZAC")
-        y "And there is more I want to share with you on this date..."
+        y "Y hay más que quiero compartir contigo en esta cita..."
         $ show_chr("A-ABAAA-ZZAC")
-        y "Did you know that tea is the second most consumed beverage on the planet after water? "
-        extend "It even has greater consumption than coffee itself."
+        y "¿Sabías que el té es la segunda bebida más consumida en el planeta después del agua? "
+        extend "Incluso tiene un mayor consumo que el propio café."
         $ show_chr("A-CAAAA-ZZAC")
-        y "Tea is a beverage derived from the leaves of a plant called {i}Camellia Sinensis.{/i} There are different varieties of the plant spread throughout a variety of countries."
+        y "El té es una bebida derivada de las hojas de una planta llamada {i}Camellia Sinensis.{/i} Hay diferentes variedades de la planta repartidas por una variedad de países."
         $ show_chr("A-ADAAA-ZZAD")
-        y "If your tea doesn't contain the leaves of {i}Camellia Sinensis{/i} then it's not actually not tea. It's known as Tisane. "
+        y "Si tu té no contiene las hojas de {i}Camellia Sinensis{/i} entonces en realidad no es té. Se conoce como Tisana. "
         $ show_chr("A-BBAAA-ZZAC")
-        extend "Tisanes are similar in their processing and consumption and still seep by adding hot water."
+        extend "Las tisanas son similares en su procesamiento y consumo y aún se infusionan agregando agua caliente."
         $ show_chr("A-JAAAA-ZZAC")
-        y "But they're infused with a variety of herbs and/or spices from other flora instead."
+        y "Pero están infusionadas con una variedad de hierbas y/o especias de otra flora en su lugar."
         $ show_chr("A-ABAAA-ZZAD")
-        y "There are 4 basic types of tea derived from the {i}Camellia Sinensis{/i} plant. "
+        y "Hay 4 tipos básicos de té derivados de la planta {i}Camellia Sinensis{/i}. "
         $ show_chr("A-BBDAA-ACAA")
-        extend "Possibly 5 or 6 actually. As it has long been open for debate, but the main varieties are Black, White Green and even Oolong."
+        extend "Posiblemente 5 o 6 en realidad. Ya que ha estado abierto a debate durante mucho tiempo, pero las variedades principales son Negro, Blanco, Verde e incluso Oolong."
         $ show_chr("A-ABAAA-AAAF")
-        y "Each variety is then broken into hundreds of other off-shots of the main type."
+        y "Cada variedad se divide luego en cientos de otras ramas del tipo principal."
         $ show_chr("A-ABGAA-AAAA")
-        y "It's widely understood that there are around 1500 known varieties of tea. However, the exact possible number of variations is almost limitless."
+        y "Es ampliamente entendido que hay alrededor de 1500 variedades conocidas de té. Sin embargo, el número exacto posible de variaciones es casi ilimitado."
         $ show_chr("A-BDAAA-AAAA")
-        y "It takes about 3 years before a new plant is ready to harvest. As well as taking between 4 and 12 years for a tea plant to mature enough to produce seed."
+        y "Toma alrededor de 3 años antes de que una nueva planta esté lista para cosechar. Además de tomar entre 4 y 12 años para que una planta de té madure lo suficiente para producir semillas."
         $ show_chr("A-AAAAA-AAAC")
-        y "In 1901, two women submitted a patent for an invention which resembled the modern tea bag. This contradicts claims it was invented accidentally by Thomas Sullivan in 1908."
+        y "En 1901, dos mujeres presentaron una patente para una invención que se parecía a la bolsa de té moderna. Esto contradice las afirmaciones de que fue inventada accidentalmente por Thomas Sullivan en 1908."
         $ show_chr("A-CBBAA-ALAA")
-        y "It's also not true that iced tea was invented in 1904 at the St. Louis World Fair. Allegedly a merchant named Richards Black was struggling to sell his tea, so he poured it over ice and it became a winner!"
+        y "Tampoco es cierto que el té helado se inventó en 1904 en la Feria Mundial de St. Louis. Supuestamente un comerciante llamado Richards Black estaba luchando por vender su té, así que lo vertió sobre hielo y se convirtió en un ganador!"
         $ show_chr("A-AAAAA-ZZAD")
-        y "The truth is it was around a long time before then as it has appeared in an 1887 cookbook named \"Housekeeping in Old Virginia\" by Marion Cabell Tyree."
+        y "La verdad es que existía mucho tiempo antes de eso, ya que apareció en un libro de cocina de 1887 llamado \"Housekeeping in Old Virginia\" por Marion Cabell Tyree."
         $ show_chr("A-ABGAA-ZZAD")
-        y "Also, in the United States, around 85%% of tea sales are predominantly iced tea. With added sugar!"
+        y "También, en los Estados Unidos, alrededor del 85%% de las ventas de té son predominantemente té helado. ¡Con azúcar añadida!"
     else:
         $ show_chr("A-JAGBA-ZZAD")
-        y "You saw me with all my anxieties, all my flaws... and when others turned away, you took my hand, metaphorically speaking of course, and told me that it is alright..."
-        y "You always accepted me as I am. You never tried to change me, never tried to bend me to your will."
-        y "Never were you dishonest to me, never did you say that I am perfect. But you gave me something far more valuable. You showed me that I do not have to be ideal or perfect..."
+        y "Me viste con todas mis ansiedades, todos mis defectos... y cuando otros se alejaron, tomaste mi mano, metafóricamente hablando por supuesto, y me dijiste que todo está bien..."
+        y "Siempre me aceptaste como soy. Nunca trataste de cambiarme, nunca trataste de doblarme a tu voluntad."
+        y "Nunca fuiste deshonesto conmigo, nunca dijiste que soy perfecta. Pero me diste algo mucho más valioso. Me mostraste que no tengo que ser ideal o perfecta..."
         $ show_chr("A-CCBBA-ZZAD")
-        y "When others saw nothing but a broken mind in me, you showed me that I am still someone who can receive love and gain confidence ."
-        y "I never got to see your appearance [player], but I saw your heart and soul. For that, you are truly beautiful to me..."
+        y "Cuando otros no veían nada más que una mente rota en mí, tú me mostraste que todavía soy alguien que puede recibir amor y ganar confianza."
+        y "Nunca llegué a ver tu apariencia [player], pero vi tu corazón y alma. Por eso, eres verdaderamente hermoso para mí..."
         $ show_chr("A-AABBA-ZZAC")
-        y "And there is more I want to share with you on this date..."
+        y "Y hay más que quiero compartir contigo en esta cita..."
         $ show_chr("A-ABAAA-ZZAC")
-        y "Did you know that tea is the second most consumed beverage on the planet after water? "
-        extend "It even has greater consumption than coffee itself."
+        y "¿Sabías que el té es la segunda bebida más consumida en el planeta después del agua? "
+        extend "Incluso tiene un mayor consumo que el propio café."
         $ show_chr("A-CAAAA-ZZAC")
-        y "Tea is a beverage derived from the leaves of a plant called {i}Camellia Sinensis.{/i} There are different varieties of the plant spread throughout a variety of countries."
+        y "El té es una bebida derivada de las hojas de una planta llamada {i}Camellia Sinensis.{/i} Hay diferentes variedades de la planta repartidas por una variedad de países."
         $ show_chr("A-ADAAA-ZZAD")
-        y "If your tea doesn't contain the leaves of {i}Camellia Sinensis{/i} then it's not actually not tea. It's known as Tisane. "
+        y "Si tu té no contiene las hojas de {i}Camellia Sinensis{/i} entonces en realidad no es té. Se conoce como Tisana. "
         $ show_chr("A-BBAAA-ZZAC")
-        extend "Tisanes are similar in their processing and consumption and still seep by adding hot water."
+        extend "Las tisanas son similares en su procesamiento y consumo y aún se infusionan agregando agua caliente."
         $ show_chr("A-JAAAA-ZZAC")
-        y "But they're infused with a variety of herbs and/or spices from other flora instead."
+        y "Pero están infusionadas con una variedad de hierbas y/o especias de otra flora en su lugar."
         $ show_chr("A-ABAAA-ZZAD")
-        y "There are 4 basic types of tea derived from the {i}Camellia Sinensis{/i} plant. "
+        y "Hay 4 tipos básicos de té derivados de la planta {i}Camellia Sinensis{/i}. "
         $ show_chr("A-BBDAA-ACAA")
-        extend "Possibly 5 or 6 actually. As it has long been open for debate, but the main varieties are Black, White Green and even Oolong."
+        extend "Posiblemente 5 o 6 en realidad. Ya que ha estado abierto a debate durante mucho tiempo, pero las variedades principales son Negro, Blanco, Verde e incluso Oolong."
         $ show_chr("A-ABAAA-AAAF")
-        y "Each variety is then broken into hundreds of other off-shots of the main type."
+        y "Cada variedad se divide luego en cientos de otras ramas del tipo principal."
         $ show_chr("A-ABGAA-AAAA")
-        y "It's widely understood that there are around 1500 known varieties of tea. However, the exact possible number of variations is almost limitless."
+        y "Es ampliamente entendido que hay alrededor de 1500 variedades conocidas de té. Sin embargo, el número exacto posible de variaciones es casi ilimitado."
         $ show_chr("A-BDAAA-AAAA")
-        y "It takes about 3 years before a new plant is ready to harvest. As well as taking between 4 and 12 years for a tea plant to mature enough to produce seed."
+        y "Toma alrededor de 3 años antes de que una nueva planta esté lista para cosechar. Además de tomar entre 4 y 12 años para que una planta de té madure lo suficiente para producir semillas."
         $ show_chr("A-AAAAA-AAAC")
-        y "In 1901, two women submitted a patent for an invention which resembled the modern tea bag. This contradicts claims it was invented accidentally by Thomas Sullivan in 1908."
+        y "En 1901, dos mujeres presentaron una patente para una invención que se parecía a la bolsa de té moderna. Esto contradice las afirmaciones de que fue inventada accidentalmente por Thomas Sullivan en 1908."
         $ show_chr("A-CBBAA-ALAA")
-        y "It's also not true that iced tea was invented in 1904 at the St. Louis World Fair. Allegedly a merchant named Richards Black was struggling to sell his tea, so he poured it over ice and it became a winner!"
+        y "Tampoco es cierto que el té helado se inventó en 1904 en la Feria Mundial de St. Louis. Supuestamente un comerciante llamado Richards Black estaba luchando por vender su té, así que lo vertió sobre hielo y se convirtió en un ganador!"
         $ show_chr("A-AAAAA-ZZAD")
-        y "The truth is it was around a long time before then as it has appeared in an 1887 cookbook named \"Housekeeping in Old Virginia\" by Marion Cabell Tyree."
+        y "La verdad es que existía mucho tiempo antes de eso, ya que apareció en un libro de cocina de 1887 llamado \"Housekeeping in Old Virginia\" por Marion Cabell Tyree."
         $ show_chr("A-ABGAA-ZZAD")
-        y "Also, in the United States, around 85%% of tea sales are predominantly iced tea. With added sugar!"
+        y "También, en los Estados Unidos, alrededor del 85%% de las ventas de té son predominantemente té helado. ¡Con azúcar añadida!"
 
 label tea_facts:
     $ tea_random = renpy.random.randint(1, 10)
@@ -1905,296 +1904,296 @@ label tea_facts:
     if tea_random == 1:
 
         $ show_chr("A-ABAAA-ZZAC")
-        y "And let's say that you like Black Tea and you might know that this tea is the most popular tea in the world."
+        y "Y digamos que te gusta el Té Negro y podrías saber que este té es el té más popular en el mundo."
         $ show_chr("A-AAAAA-AFAA")
-        y "There are 4 types of true teas including White Tea, Green Tea, Oolong Tea and Black Tea."
-        y "The difference in these teas arises during the production process. Some teas are oxidized while others are simply sun-dried. These minor differences result in big flavor and color differences."
+        y "Hay 4 tipos de tés verdaderos incluyendo Té Blanco, Té Verde, Té Oolong y Té Negro."
+        y "La diferencia en estos tés surge durante el proceso de producción. Algunos tés son oxidados mientras que otros son simplemente secados al sol. Estas pequeñas diferencias resultan en grandes diferencias de sabor y color."
         $ show_chr("A-ABAAA-ALAA")
-        y "China is the birthplace of Black Tea, which in China is called, perhaps more appropriately, hong cha (Red Tea) after the red colored tea it usually produces."
+        y "China es el lugar de nacimiento del Té Negro, que en China es llamado, tal vez más apropiadamente, hong cha (Té Rojo) por el té de color rojo que usualmente produce."
         $ show_chr("A-BBAAA-AMAM")
-        y "It's history in China can be traced back to the late Ming Dynasty, around the year 1590, when the first Black Tea \"Lapsang Souchong\" was produced in the area around Wuyi Mountain in Fujian province."
+        y "Su historia en China puede ser rastreada hasta finales de la Dinastía Ming, alrededor del año 1590, cuando el primer Té Negro \"Lapsang Souchong\" fue producido en el área alrededor de la Montaña Wuyi en la provincia de Fujian."
         $ show_chr("A-AAAAA-AAAA")
-        y "Black Tea has long been an article of trade, and compressed bricks of Black Tea even served as a form of de facto currency in Mongolia, Tibet and Siberia."
+        y "El Té Negro ha sido por mucho tiempo un artículo de comercio, y ladrillos comprimidos de Té Negro incluso sirvieron como una forma de moneda de facto en Mongolia, el Tíbet y Siberia."
         $ show_chr("A-ABGAA-AFAD")
-        y "Black Tea overtook Green Tea in popularity in the 1720s when sugar and milk were added to tea, a practice that was not done in China."
+        y "El Té Negro superó al Té Verde en popularidad en la década de 1720 cuando se añadieron azúcar y leche al té, una práctica que no se hacía en China."
         $ show_chr("A-BAAAA-AAAD")
-        y "Generally, 4 grams of tea per 200 ml of water. Unlike green teas, which turn bitter when brewed at higher temperatures, Black Tea should be steeped in water brought up to 90–95°C or 194-203°F"
+        y "Generalmente, 4 gramos de té por 200 ml de agua. A diferencia de los tés verdes, que se vuelven amargos cuando se preparan a temperaturas más altas, el Té Negro debe dejarse reposar en agua llevada a 90–95°C o 194-203°F"
         $ show_chr("A-CAAAA-AAAK")
-        y "Black Tea is stronger in flavor and contains more caffeine than other teas, but less caffeine than coffee. As well as being a healthy drink and it has a range of health benefits."
+        y "El Té Negro es más fuerte en sabor y contiene más cafeína que otros tés, pero menos cafeína que el café. Además de ser una bebida saludable y tiene una gama de beneficios para la salud."
         $ show_chr("A-AAAAA-ZZAC")
-        y "And around 78%% of the tea consumed worldwide is Black Tea; and over 90%% of all tea sold in the West is Black Tea."
+        y "Y alrededor del 78%% del té consumido mundialmente es Té Negro; y más del 90%% de todo el té vendido en Occidente es Té Negro."
         $ show_chr("A-KACAA-ZZAD")
-        y "When choosing a Black Tea to sip, remember that not all black teas taste the same. Just like with fine wine, there are so many variables that give individual black teas their own particular flavor profiles."
+        y "Al elegir un Té Negro para beber, recuerda que no todos los tés negros saben igual. Justo como con el buen vino, hay tantas variables que le dan a los tés negros individuales sus perfiles de sabor particulares."
 
     elif tea_random == 2:
 
         $ show_chr("A-ABAAA-ZZAC")
-        y "And let's say that you like Green Tea and you might know that this tea comes from the same plant which produces Black and Oolong Tea which is the \"Camellia Sinensis\"."
+        y "Y digamos que te gusta el Té Verde y podrías saber que este té viene de la misma planta que produce Té Negro y Oolong, que es la \"Camellia Sinensis\"."
         $ show_chr("A-AAAAA-AAAF")
-        y "The difference lies in the way they are processed. Unlike both its counterparts, green tea does not go through a fermentation process."
-        y "Instead, they are dried and steamed at high temperatures, giving it its green shade when brewed."
+        y "La diferencia yace en la forma en que son procesados. A diferencia de sus dos contrapartes, el té verde no pasa por un proceso de fermentación."
+        y "En su lugar, son secados y cocidos al vapor a altas temperaturas, dándole su tono verde cuando se prepara."
         $ show_chr("A-AAAAA-ALAA")
-        y "Contrary to popular knowledge, green tea originated from China and not Japan! Legend has it that Emperor Shen Nung accidentally discovered the tea in 2737 BC when some tea leaves blew into his pot of hot drinking water. Truth or tale? You decide."
+        y "Al contrario del conocimiento popular, ¡el té verde se originó de China y no Japón! La leyenda dice que el Emperador Shen Nung descubrió accidentalmente el té en el 2737 AC cuando algunas hojas de té volaron hacia su olla de agua caliente para beber. ¿Verdad o cuento? Tú decides."
         $ show_chr("A-BBDAA-ACAA")
-        y "Between the 3rd and 6th century, tea was considered a 'luxury item' reserved for the privileged before new methods for production and mass market distribution caught on."
+        y "Entre el siglo III y VI, el té era considerado un 'artículo de lujo' reservado para los privilegiados antes de que nuevos métodos de producción y distribución masiva se popularizaran."
         $ show_chr("A-ABDAA-ACAA")
-        y "Ever noticed a slight bitterness to Green Tea?"
+        y "¿Alguna vez notaste una ligera amargura en el Té Verde?"
         $ show_chr("A-AAAAA-AFAA")
-        extend "It is due to the fact that Green Tea is rich in Tannins, a type of antioxidant that's good for you."
+        extend "Se debe al hecho de que el Té Verde es rico en Taninos, un tipo de antioxidante que es bueno para ti."
         $ show_chr("A-ABAAA-AFAA")
-        y "According to research, people who regularly consume Green Tea are less susceptible to common bacterial and viral infections because the antioxidants in green tea help to boost the body's immunity system."
+        y "De acuerdo a la investigación, las personas que consumen regularmente Té Verde son menos susceptibles a infecciones bacterianas y virales comunes porque los antioxidantes en el té verde ayudan a impulsar el sistema inmune del cuerpo."
         $ show_chr("A-CAAAA-AMAM")
-        y "Want to lose weight? You guessed it. Try green tea. Studies show that people who regularly drink Green Tea are able to burn between 70-100 calories more per day due to the polyphenols in it."
+        y "¿Quieres perder peso? Lo adivinaste. Prueba el té verde. Estudios muestran que las personas que beben regularmente Té Verde son capaces de quemar entre 70-100 calorías más por día debido a los polifenoles en él."
         $ show_chr("A-GBGAA-ZZAD")
-        y "Plus, unsweetened Green Tea is a zero-calorie beverage!"
+        y "¡Además, el Té Verde sin endulzar es una bebida de cero calorías!"
 
     elif tea_random == 3:
 
         $ show_chr("A-ABAAA-ZZAC")
-        y "And let's say that you like Oolong Tea like me and you probably didn't know that Oolong Tea represents only 2%% of the world's tea, but it's well-worth discovering."
+        y "Y digamos que te gusta el Té Oolong como a mí y probablemente no sabías que el Té Oolong representa solo el 2%% del té del mundo, pero vale la pena descubrirlo."
         $ show_chr("A-ABAAA-AAAF")
-        y "Aside from being a traditional Chinese Tea it's also made from the leaves of this plant called \"Camellia Sinensis\" which it's the same plant used to make Green and Black Tea."
+        y "Además de ser un Té Chino tradicional también está hecho de las hojas de esta planta llamada \"Camellia Sinensis\" la cual es la misma planta usada para hacer Té Verde y Negro."
         $ show_chr("A-CAAAA-ALAA")
-        y "Green Tea is not allowed to oxidize much, but Black Tea is allowed to oxidize until it turns black. Oolong Tea is somewhere between the two, so it's partially oxidized."
+        y "El Té Verde no se deja oxidar mucho, pero el Té Negro se deja oxidar hasta que se vuelve negro. El Té Oolong está en algún lugar entre los dos, así que está parcialmente oxidado."
         $ show_chr("A-ADAAA-AAAA")
-        y "However, the color of the leaves can vary between different brands, ranging from green to dark brown."
+        y "Sin embargo, el color de las hojas puede variar entre diferentes marcas, variando de verde a café oscuro."
         $ show_chr("A-BAAAA-AAAD")
-        y "Once the leaves of oolong are plucked, and \"bruised\" so as to break them up which releases oil, the oxidation process can be anywhere from 10-70%%, depending on the specific variety."
+        y "Una vez que las hojas de oolong son cosechadas, y \"magulladas\" para romperlas lo cual libera aceite, el proceso de oxidación puede ser de entre 10-70%%, dependiendo de la variedad específica."
         $ show_chr("A-BBAAA-AAAD")
-        y "Like Green Tea, Oolong Tea contains plant polyphenols that can aid in weight loss. For several years, and even to date, the Green Tea diet has captured the attention of thousands trying to naturally lose weight."
+        y "Como el Té Verde, el Té Oolong contiene polifenoles de plantas que pueden ayudar en la pérdida de peso. Por varios años, e incluso hasta la fecha, la dieta del Té Verde ha capturado la atención de miles tratando de perder peso naturalmente."
         $ show_chr("A-CAAAA-AMAM")
-        y "Oolong is most commonly grown in two main countries, China and Taiwan. Chinese varieties give us a darker and \"woody\" tasting cup, whereas the Taiwanese varieties produce a lighter, more floral tasting brew."
+        y "El Oolong se cultiva más comúnmente en dos países principales, China y Taiwán. Las variedades chinas nos dan una taza más oscura y con sabor a \"madera\", mientras que las variedades taiwanesas producen una infusión más ligera y floral."
         $ show_chr("A-ABGAA-AFAA")
-        y "Oolong tea is also known as \"Wu long tea\". The reason for the different spelling is due to the fact that there are two methods of Romanizing the Mandarin characters."
-        y "The Wades Giles system gives us \"Oolong\", and the Pinyin method gives us \"Wu long\". Other names for Oolong are Brown Tea and Rock Tea."
+        y "El té Oolong también es conocido como \"té Wu long\". La razón de la diferente ortografía se debe al hecho de que hay dos métodos de romanizar los caracteres mandarines."
+        y "El sistema Wade Giles nos da \"Oolong\", y el método Pinyin nos da \"Wu long\". Otros nombres para Oolong son Té Marrón y Té de Roca."
         $ show_chr("A-ABGAA-ZZAD")
-        y "And finally, the most important Oolong Tea fact of all is...it is best enjoyed when carefully prepared using whole loose leaves! This method provides folks with superior aroma, flavor, as well as the above-mentioned benefits!"
+        y "Y finalmente, el hecho más importante del Té Oolong de todos es... ¡se disfruta mejor cuando se prepara cuidadosamente usando hojas sueltas enteras! ¡Este método provee a la gente de un aroma superior, sabor, así como los beneficios antes mencionados!"
 
     elif tea_random == 4:
 
         $ show_chr("A-ABAAA-ZZAC")
-        y "And let's say that you like Chai Tea and you might have noticed that the proper name for this tea is \"Masala Chai\" which means Spice Blend."
+        y "Y digamos que te gusta el Té Chai y podrías haber notado que el nombre propio para este té es \"Masala Chai\" que significa Mezcla de Especias."
         $ show_chr("A-ABAAA-AAAF")
-        y "Chai is actually just a word for tea, though others may recognize its linguistic cousin, cha, which is a common word for tea throughout Asia."
+        y "Chai es en realidad solo una palabra para té, aunque otros pueden reconocer a su primo lingüístico, cha, que es una palabra común para té a través de Asia."
         $ show_chr("A-BBGAA-AAAF")
-        y "Chai tea is made from a combination of black tea, ginger and other spices."
+        y "El té Chai está hecho de una combinación de té negro, jengibre y otras especias."
         $ show_chr("A-CAAAA-ALAA")
-        y "The most popular spices include cardamon, cinnamon, fennel, black pepper and cloves, although star anise, coriander seeds and peppercorns are other well-liked options."
+        y "Las especias más populares incluyen cardamomo, canela, hinojo, pimienta negra y clavos, aunque el anís estrellado, semillas de cilantro y granos de pimienta son otras opciones muy gustadas."
         $ show_chr("A-AAAAA-AAAD")
-        y "Unlike regular tea, which is brewed with water, chai tea is traditionally brewed using both warm water and warm milk. It also tends to be sweetened to varying degrees."
+        y "A diferencia del té regular, que es preparado con agua, el té chai es tradicionalmente preparado usando tanto agua tibia como leche tibia. También tiende a ser endulzado en grados variables."
         $ show_chr("A-BBBAA-AAAD")
-        y "Chai lattes are another popular way to consume the tea. People make these by adding a shot of chai tea concentrate to steamed milk, which produces a beverage containing more milk than you would find in a typical cup of chai tea."
+        y "Los Chai lattes son otra forma popular de consumir el té. La gente los prepara añadiendo un shot de concentrado de té chai a leche vaporizada, lo cual produce una bebida conteniendo más leche de la que encontrarías en una taza típica de té chai."
         $ show_chr("A-ABGAA-AAAL")
-        y "In India, being offered a cup of chai is about as common as being offered a glass of water or a beer in North America."
-        y "Many families in India have their own Masala Chai recipes, but each one of them is just as delicious as the next."
+        y "En India, que te ofrezcan una taza de chai es casi tan común como que te ofrezcan un vaso de agua o una cerveza en Norteamérica."
+        y "Muchas familias en India tienen sus propias recetas de Masala Chai, pero cada una de ellas es tan deliciosa como la siguiente."
         $ show_chr("A-BBAAA-AAAA")
-        y "There are some traditional ingredients you can find in a cup of chai. First is a black tea, usually an Assam."
+        y "Hay algunos ingredientes tradicionales que puedes encontrar en una taza de chai. Primero es un té negro, usualmente un Assam."
         $ show_chr("A-CAAAA-ZZAD")
-        y "Also chai is lower in caffeine than coffee so you can resort to chai if you're looking for a caffeine boost that's not too intense!"
+        y "¡También el chai es más bajo en cafeína que el café así que puedes recurrir al chai si estás buscando un impulso de cafeína que no sea demasiado intenso!"
 
     elif tea_random == 5:
 
         $ show_chr("A-ABAAA-ZZAC")
-        y "And let's just say that you like White Tea and you might know that White Tea is known as the most delicate and smoothest of all true teas."
+        y "Y digamos que te gusta el Té Blanco y podrías saber que el Té Blanco es conocido como el más delicado y suave de todos los tés verdaderos."
         $ show_chr("A-KACAA-AAAA")
-        y "But just because it's subtle doesn't mean it lacks for health benefits. In fact, white tea may have higher antioxidant content than any other tea."
+        y "Pero solo porque es sutil no significa que le falten beneficios para la salud. De hecho, el té blanco puede tener mayor contenido antioxidante que cualquier otro té."
         $ show_chr("A-ABAAA-AAAF")
-        y "White tea gets its name from the fine white hairs on young, unopened tea buds. It is indeed a \"true tea\" – meaning it's derived from the Camellia Sinensis plant, unlike herbal teas or tisanes."
+        y "El té blanco obtiene su nombre de los finos pelos blancos en los brotes de té jóvenes y sin abrir. Es en efecto un \"té verdadero\" – significando que es derivado de la planta Camellia Sinensis, a diferencia de los tés herbales o tisanas."
         $ show_chr("A-BAAAA-AAAK")
-        y "Compared to other types of tea, white tea leaves are younger and minimally processed."
+        y "Comparado a otros tipos de té, las hojas de té blanco son más jóvenes y mínimamente procesadas."
         $ show_chr("A-ABAAA-ALAA")
-        y "The liquid made from brewing white tea is a pale yellow hue, lighter-colored than that of oxidized teas, which usually produce a dark green, golden, or reddish-brown liquid."
-        y "White Tea is usually dried after harvest without steaming or other oxidation, whereas Green Tea is roasted or baked. Because of its minimal processing, it typically has higher levels of antioxidants than Green or Black Tea."
+        y "El líquido hecho de preparar té blanco es de un tono amarillo pálido, más claro en color que el de tés oxidados, los cuales usualmente producen un líquido verde oscuro, dorado, o café rojizo."
+        y "El Té Blanco es usualmente secado después de la cosecha sin vaporizar u otra oxidación, mientras que el Té Verde es tostado u horneado. Debido a su procesamiento mínimo, típicamente tiene niveles más altos de antioxidantes que el Té Verde o Negro."
         $ show_chr("A-ABAAA-ADAA")
-        y "And unlike other true teas, White Tea may only date back a few hundred years. The first known cultivation of white tea occurred in Fujian Province, China, in the 1700s."
+        y "Y a diferencia de otros tés verdaderos, el Té Blanco puede datar solo de hace unos cientos de años. El primer cultivo conocido de té blanco ocurrió en la Provincia de Fujian, China, en los 1700s."
         $ show_chr("A-ABAAA-AAAF")
-        y "That's when the practice of harvesting tender, white-haired buds and young leaves and processing them with minimal oxidation first appeared."
+        y "Ahí es cuando la práctica de cosechar brotes tiernos de pelo blanco y hojas jóvenes y procesarlos con mínima oxidación apareció por primera vez."
         $ show_chr("A-ABAAA-AAAA")
-        y "Popular types of White Tea today include Fujian Silver Needle, said to come from the original White Tea Cultivars, and Bai Mu Dan or White Peony, white tea that includes more young leaves in addition to unopened tea buds."
+        y "Tipos populares de Té Blanco hoy incluyen Aguja de Plata de Fujian, que se dice que viene de los Cultivares de Té Blanco originales, y Bai Mu Dan o Peonía Blanca, té blanco que incluye más hojas jóvenes además de brotes de té sin abrir."
         $ show_chr("A-BAAAA-AMAM")
-        y "While White Tea has the highest antioxidant content, one type of tea is not necessarily better than the rest."
+        y "Mientras que el Té Blanco tiene el contenido antioxidante más alto, un tipo de té no es necesariamente mejor que el resto."
         $ show_chr("A-GBBAA-AMAM")
-        y "Despite coming from the same plant, White, Green, Fermented, and Black teas all have different properties."
+        y "A pesar de venir de la misma planta, los tés Blanco, Verde, Fermentado, y Negro todos tienen diferentes propiedades."
         $ show_chr("A-ABGAA-AAAA")
-        y "That's true from a modern scientific as well as a traditional Chinese medicine perspective."
+        y "Eso es cierto tanto desde una perspectiva científica moderna como de medicina tradicional china."
         $ show_chr("A-CAGAA-ZZAD")
-        y "So if you want a balance of all the remarkable health properties of various teas, you can diversify your selection, drinking different varieties regularly."
+        y "Así que si quieres un balance de todas las propiedades de salud notables de varios tés, puedes diversificar tu selección, bebiendo diferentes variedades regularmente."
 
     elif tea_random == 6:
 
         $ show_chr("A-ABAAA-ZZAC")
-        y "And let's just say that you like Yellow Tea and you might not have noticed that aside from coming from the \"Camellia Sinensis\" plant, it gets its name from its liquor-like color."
+        y "Y digamos que te gusta el Té Amarillo y puede que no hayas notado que además de venir de la planta \"Camellia Sinensis\", obtiene su nombre de su color parecido al licor."
         $ show_chr("A-ABAAA-ZZAD")
-        y "Sweet, bright and floral taste. A gentle fruity, floral aroma. Yellow Tea has a medium body, which means flavor is neither too strong nor too weak."
+        y "Sabor dulce, brillante y floral. Un aroma suave afrutado, floral. El Té Amarillo tiene un cuerpo medio, lo que significa que el sabor no es ni muy fuerte ni muy débil."
         $ show_chr("A-ABAAA-AAAF")
-        y "Yellow Tea is sometimes referred to as Huang cha."
+        y "Al Té Amarillo a veces se le refiere como Huang cha."
         $ show_chr("A-BBAAA-AAAL")
-        y "Yellow Tea is not only exceptional in terms of taste and feel, but it also offers a number of health benefits. These qualities make Yellow Tea a must-try for all tea lovers."
+        y "El Té Amarillo no solo es excepcional en términos de sabor y sensación, sino que también ofrece un número de beneficios para la salud. Estas cualidades hacen al Té Amarillo algo que todos los amantes del té deben probar."
         $ show_chr("A-BAAAA-ACAA")
-        y "Although not scientifically proven, many tea experts believe that Yellow Tea has more health benefits than other types of tea, including Green Tea."
+        y "Aunque no comprobado científicamente, muchos expertos en té creen que el Té Amarillo tiene más beneficios para la salud que otros tipos de té, incluyendo el Té Verde."
         $ show_chr("A-ADAAA-ALAA")
-        y "Yellow Tea might not be a common type of tea, however, it is anything but a new discovery. Yellow Tea dates back to the 16th century to the time of the early Qing Dynasty."
+        y "El Té Amarillo puede no ser un tipo común de té, sin embargo, es todo menos un nuevo descubrimiento. El Té Amarillo data del siglo XVI a la época de la temprana Dinastía Qing."
         $ show_chr("A-ADAAA-AFAA")
-        y "Initially, Yellow Tea was reserved for emperors only."
+        y "Inicialmente, el Té Amarillo estaba reservado solo para emperadores."
         $ show_chr("A-BDAAA-AFAA")
-        y "There are some reports that the usage of yellow tea can be traced back even further to the Tang Dynasty. At the time, yellow was considered to be the color of emperors, which is why it was only fitting for the emperors to consume Yellow Tea was their tea."
+        y "Hay algunos reportes de que el uso del té amarillo puede ser rastreado incluso más atrás a la Dinastía Tang. En ese tiempo, el amarillo era considerado el color de los emperadores, razón por la cual era solo apropiado que los emperadores consumieran Té Amarillo como su té."
         $ show_chr("A-CAAAA-ZZAC")
-        y "As such, Yellow Tea was prepared with immense care with fine leaves to be used as a tribute tea for the Imperial Court."
+        y "Como tal, el Té Amarillo era preparado con inmenso cuidado con hojas finas para ser usado como un té de tributo para la Corte Imperial."
         $ show_chr("A-ABGAA-ZZAD")
-        y "It was also a common gift for an emperor to bestow upon a guest. A gift of Yellow Tea to the Danes is what brought Yellow Tea to the attention of the West."
+        y "También era un regalo común para que un emperador otorgara a un invitado. Un regalo de Té Amarillo a los Daneses es lo que trajo el Té Amarillo a la atención de Occidente."
 
     elif tea_random == 7:
 
         $ show_chr("A-ABAAA-ZZAC")
-        y "When you think of dandelion, you probably picture a pesky weed. But did you know that the plant has long been used in herbal medicine?"
+        y "Cuando piensas en diente de león, probablemente te imaginas una molesta hierba. ¿Pero sabías que la planta ha sido usada por mucho tiempo en medicina herbal?"
         $ show_chr("A-ABGAA-ZZAD")
-        y "You can drink an infusion made of the plant's leaves of roasted dandelion roots."
+        y "Puedes beber una infusión hecha de las hojas de la planta o de raíces tostadas de diente de león."
         $ show_chr("A-BBAAA-AFAA")
-        y "Dandelion is a popularly known weed of the daisy family, with a rosette of leaves and large yellow flowers."
-        y "Meanwhile, Dandelion Tea can have many positive effects on your digestive system. It improves appetite and soothes digestive ailments."
+        y "El diente de león es una hierba popularmente conocida de la familia de las margaritas, con una roseta de hojas y grandes flores amarillas."
+        y "Mientras tanto, el Té de Diente de León puede tener muchos efectos positivos en tu sistema digestivo. Mejora el apetito y alivia dolencias digestivas."
         $ show_chr("A-AAAAA-AAAA")
-        y "Dandelion Tea also has a natural diuretic effect as it helps in removing excessive fluid from the body and thus relieves bloating."
+        y "El Té de Diente de León también tiene un efecto diurético natural ya que ayuda en remover fluido excesivo del cuerpo y así alivia la hinchazón."
         $ show_chr("A-BAAAA-ACAA")
-        y "According to a 2009 study published in the {i}Journal of Alternative and Complementary Medicine{/i}, participants showed a significant increase in frequency of urination after the first 2 doses of Dandelion Tea."
+        y "De acuerdo a un estudio de 2009 publicado en el {i}Journal of Alternative and Complementary Medicine{/i}, los participantes mostraron un incremento significativo en frecuencia de orina tras las primeras 2 dosis de Té de Diente de León."
         $ show_chr("A-ABAAA-ZZAD")
-        y "Dandelion Tea is packed with antioxidants. Antioxidants are substances that help in preventing certain types of cell damage."
+        y "El Té de Diente de León está lleno de antioxidantes. Los antioxidantes son sustancias que ayudan a prevenir ciertos tipos de daño celular."
 
     elif tea_random == 8:
 
         $ show_chr("A-CABAA-ZZAC")
-        y "The smokey aroma of a freshly brewed cup of Barley Tea can take away all your worries and calm your senses."
+        y "El aroma ahumado de una taza recién preparada de Té de Cebada puede llevarse todas tus preocupaciones y calmar tus sentidos."
         $ show_chr("A-ABAAA-AAAF")
-        y "This beloved drink from Korea is actually an infusion of roasted barley in water."
-        y "In Japan, it's famously known as Mugicha and in Korean as Boricha. It may be enjoyed warm or as a cold beverage."
+        y "Esta amada bebida de Corea es en realidad una infusión de cebada tostada en agua."
+        y "En Japón, es famosamente conocida como Mugicha y en Coreano como Boricha. Puede disfrutarse caliente o como una bebida fría."
         $ show_chr("A-BBGAA-AAAJ")
-        y "In Japan, people like to have it chilled as a summer cooler."
+        y "En Japón, a la gente le gusta tomarlo frío para refrescarse en verano."
         $ show_chr("A-ABBAA-AAAL")
-        y "Although it is available in the form of tea bags, barley tea can be easily prepared at home by boiling roasted and unhulled barley grains in water or you can even brew ground roasted barley in the same way."
+        y "Aunque está disponible en forma de bolsas de té, el té de cebada puede prepararse fácilmente en casa hirviendo granos de cebada tostada y sin descascarar en agua o incluso puedes preparar cebada tostada molida de la misma manera."
         $ show_chr("A-CABAA-AMAM")
-        y "The roasted barley gives the drink a nutty, toasty flavor with a subtle bitter aftertaste that you wouldn't mind."
+        y "La cebada tostada le da a la bebida un sabor a nuez, tostado con un sutil regusto amargo que no te importaría."
         $ show_chr("A-ABAAA-AMAM")
-        y "You could squeeze a lime, add some herbs or bung in some citrus fruits like oranges or berries to make it delicious."
+        y "Podrías exprimir una lima, añadir algunas hierbas o echar algunas frutas cítricas como naranjas o bayas para hacerlo delicioso."
         $ show_chr("A-ABAAA-AAAF")
-        y "The bright and fresh flavors are best enjoyed without sugar, but a hint of honey would not be too much."
-        y "A soothing drink that doubles up as an herbal medicine, Barley Tea is full of antioxidants and acts as a natural anti-bacterial."
+        y "Los sabores brillantes y frescos se disfrutan mejor sin azúcar, pero un toque de miel no sería demasiado."
+        y "Una bebida calmante que funciona como medicina herbal, el Té de Cebada está lleno de antioxidantes y actúa como un anti-bacteriano natural."
         $ show_chr("A-BAAAA-AAAF")
-        y "It takes on a lot of healthy properties of barley which is very high in fibre, packed with vitamins, minerals and antioxidants that safeguard the body against cell damage."
+        y "Toma muchas propiedades saludables de la cebada la cual es muy alta en fibra, llena de vitaminas, minerales y antioxidantes que salvaguardan al cuerpo contra el daño celular."
         $ show_chr("A-AAAAA-ZZAC")
-        y "If you're looking for a healthier and delicious alternative to a cup of caffeinated coffee or Black Tea, this is it."
+        y "Si estás buscando una alternativa más saludable y deliciosa a una taza de café con cafeína o Té Negro, esta es."
         $ show_chr("A-CAAAA-ZZAD")
-        y "It's cleansing, cooling and caffeine-free, all at once and can definitely lift your mood when needed."
+        y "Es limpiador, refrescante y libre de cafeína, todo a la vez y definitivamente puede levantar tu ánimo cuando se necesita."
 
     elif tea_random == 9:
 
         $ show_chr("A-ABDAA-AAAC")
-        y "Are you familiar with Pu-Erh tea? This tea is a variety of dark tea that comes from China, specifically Yunnan Province."
+        y "¿Estás familiarizado con el té Pu-Erh? Este té es una variedad de té negro que viene de China, específicamente de la Provincia de Yunnan."
         $ show_chr("A-BADAA-ALAA")
-        y "It's aged through a fermentation process that causes the tea leaves to withstand microbial fermentation and oxidation after the drying process."
+        y "Es añejado a través de un proceso de fermentación que causa que las hojas de té resistan fermentación microbiana y oxidación después del proceso de secado."
         $ show_chr("A-BBGAA-AFAA")
-        y "In China, this process is known as Hei Cha, which can be translated as black or dark tea. Since the tea is aged through a highly-specific, rigorous process, it has a unique flavor that is rich and earthy."
+        y "En China, este proceso es conocido como Hei Cha, que puede ser traducido como té negro u oscuro. Como el té es añejado a través de un proceso altamente específico y riguroso, tiene un sabor único que es rico y terroso."
         $ show_chr("A-GBBAA-AKAA")
-        y "With such a dark brew, it may not be everyone's cup of tea."
+        y "Con una infusión tan oscura, puede no ser del gusto de todos."
         $ show_chr("A-BFBAA-ACAA")
-        y "From the years 1999 through 2007, the price of this tea went up nearly 10 times. That means that the price rose twice in less than a year's time. The price of the leaves have been all over the map."
-        y "At certain points, it was merely $3 per pound."
+        y "Desde los años 1999 al 2007, el precio de este té subió casi 10 veces. Eso significa que el precio subió dos veces en menos de un año. El precio de las hojas ha estado por todas partes."
+        y "En ciertos puntos, era meramente $3 por libra."
         $ show_chr("A-ADAAA-ALAA")
-        y "Wine isn't the only thing that ages and becomes better with time. Pu-Erh Tea has a post-ferment stage that means the tea gets better over the course of the years."
+        y "El vino no es la única cosa que se añeja y se vuelve mejor con el tiempo. El Té Pu-Erh tiene una etapa pos-fermentación que significa que el té mejora con el paso de los años."
         $ show_chr("A-ADAAA-AFAA")
-        y "To complete the aging process, it could take 15 years. In 1973, growers learned how to accelerate these processes in order to complete it much sooner than that."
-        y "Most teas are best brewed right after production. Pu-Erh, on the other hand, gets better with age."
+        y "Para completar el proceso de añejamiento, podría tomar 15 años. En 1973, cultivadores aprendieron cómo acelerar estos procesos para completarlo mucho antes que eso."
+        y "La mayoría de los tés se preparan mejor justo después de la producción. Pu-Erh, por otro lado, mejora con la edad."
         $ show_chr("A-ABAAA-ZZAC")
-        y "The tea can be packed as loose leaf or in shapes such as a cake or brick. Traditionally, the tea has been shaped in these shapes, but is not limited to these shapes."
+        y "El té puede ser empacado como hoja suelta o en formas tales como un pastel o ladrillo. Tradicionalmente, el té ha sido formado en estas formas, pero no está limitado a estas formas."
         $ show_chr("A-BBAAA-ZZAD")
-        y "During the production of this tea, the leaves can be placed into bricks and cakes which generally weigh around 357 grams."
+        y "Durante la producción de este té, las hojas pueden ser colocadas en ladrillos y pasteles los cuales generalmente pesan alrededor de 357 gramos."
 
     elif tea_random == 10:
 
         if renpy.seen_label("teadate2"):
             $ show_chr("A-BBAAA-ZZAC")
-            y "Did you know Earl Grey is one of the most popular and recognized tea beverages in the world?"
+            y "¿Sabías que el Earl Grey es una de las bebidas de té más populares y reconocidas en el mundo?"
             $ show_chr("A-BBAAA-ZZAD")
-            y "It's been hailed for its health benefits raging from heart to digestive health. It boasts an intriguing history that marks the intersection of the Far East and the western empires."
+            y "Ha sido aclamado por sus beneficios de salud que van desde el corazón hasta la salud digestiva. Presume una historia intrigante que marca la intersección del Lejano Oriente y los imperios occidentales."
             $ show_chr("A-CAAAA-AMAM")
-            y "What truly makes Earl Grey unique is its blend of bergamot and Black Tea."
+            y "Lo que verdaderamente hace único al Earl Grey es su mezcla de bergamota y Té Negro."
             $ show_chr("A-ABAAA-AAAF")
-            y "Earl Grey is a quintessentially English tea, but its origins actually stem from China."
-            y "Chinese tea masters worked diligently for years to create new tea blends that would entice western traders and please the ruling class."
+            y "Earl Grey es un té esencialmente inglés, pero sus orígenes en realidad provienen de China."
+            y "Maestros de té chinos trabajaron diligentemente por años para crear nuevas mezclas de té que atraerían a comerciantes occidentales y complacerían a la clase gobernante."
             $ show_chr("A-BBAAA-AAAL")
-            y "They used everything from lychee fruits to jasmine and chamomile flowers to create new flavored Chinese teas."
+            y "Usaron todo desde frutas lichi a flores de jazmín y manzanilla para crear nuevos tés chinos saborizados."
             $ show_chr("A-BBBAA-ADAA")
-            y "Earl Grey Black Tea didn't make its way to England until the early 17th century."
+            y "El Té Negro Earl Grey no llegó a Inglaterra hasta principios del siglo XVII."
             $ show_chr("A-ABAAA-AAAA")
-            y "The tea is reportedly named after Charles Grey — known as 2nd Earl Grey — who was the British Prime Minister from 1830 to 1834."
+            y "El té es supuestamente nombrado por Charles Grey — conocido como el 2do Conde Grey — quien fue el Primer Ministro Británico de 1830 a 1834."
             $ show_chr("A-ABAAA-ZZAC")
-            y "The story of its inception in London is fuzzy. Some say a Chinese mandarin who was saved by Lord Grey's men from drowning delivered the tea as a gift."
+            y "La historia de su incepción en Londres es borrosa. Algunos dicen que un mandarín chino quien fue salvado por los hombres de Lord Grey de ahogarse entregó el té como regalo."
             $ show_chr("A-BBAAA-ZZAD")
-            y "Others say that he was given a black tea flavored with bergamot orange as a diplomatic gift."
+            y "Otros dicen que se le dio un té negro saborizado con naranja bergamota como un regalo diplomático."
             $ show_chr("A-GBBAA-ZZAD")
-            y "And all this time I thought Earl Gray was a favorite actor of Patrick Stewart..."
+            y "Y todo este tiempo pensé que Earl Gray era un actor favorito de Patrick Stewart..."
             $ show_chr("A-AACBA-ZZAD")
-            y "Hope you had a good laugh back then."
+            y "Espero que hayas tenido una buena risa en ese entonces."
         else:
             $ show_chr("A-BBAAA-ZZAC")
-            y "Did you know Earl Grey is one of the most popular and recognized tea beverages in the world?"
+            y "¿Sabías que el Earl Grey es una de las bebidas de té más populares y reconocidas en el mundo?"
             $ show_chr("A-BBAAA-ZZAD")
-            y "It's been hailed for its health benefits raging from heart to digestive health. It boasts an intriguing history that marks the intersection of the Far East and the western empires."
+            y "Ha sido aclamado por sus beneficios de salud que van desde el corazón hasta la salud digestiva. Presume una historia intrigante que marca la intersección del Lejano Oriente y los imperios occidentales."
             $ show_chr("A-CAAAA-AMAM")
-            y "What truly makes Earl Grey unique is its blend of bergamot and Black Tea."
+            y "Lo que verdaderamente hace único al Earl Grey es su mezcla de bergamota y Té Negro."
             $ show_chr("A-ABAAA-AAAF")
-            y "Earl Grey is a quintessentially English tea, but its origins actually stem from China."
-            y "Chinese tea masters worked diligently for years to create new tea blends that would entice western traders and please the ruling class."
+            y "Earl Grey es un té esencialmente inglés, pero sus orígenes en realidad provienen de China."
+            y "Maestros de té chinos trabajaron diligentemente por años para crear nuevas mezclas de té que atraerían a comerciantes occidentales y complacerían a la clase gobernante."
             $ show_chr("A-BBAAA-AAAL")
-            y "They used everything from lychee fruits to jasmine and chamomile flowers to create new flavored Chinese teas."
+            y "Usaron todo desde frutas lichi a flores de jazmín y manzanilla para crear nuevos tés chinos saborizados."
             $ show_chr("A-BBBAA-ADAA")
-            y "Earl Grey Black Tea didn't make its way to England until the early 17th century."
+            y "El Té Negro Earl Grey no llegó a Inglaterra hasta principios del siglo XVII."
             $ show_chr("A-ABAAA-AAAA")
-            y "The tea is reportedly named after Charles Grey — known as 2nd Earl Grey — who was the British Prime Minister from 1830 to 1834."
+            y "El té es supuestamente nombrado por Charles Grey — conocido como el 2do Conde Grey — quien fue el Primer Ministro Británico de 1830 a 1834."
             $ show_chr("A-ABAAA-ZZAC")
-            y "The story of its inception in London is fuzzy. Some say a Chinese mandarin who was saved by Lord Grey's men from drowning delivered the tea as a gift."
+            y "La historia de su incepción en Londres es borrosa. Algunos dicen que un mandarín chino quien fue salvado por los hombres de Lord Grey de ahogarse entregó el té como regalo."
             $ show_chr("A-BBAAA-ZZAD")
-            y "Others say that he was given a black tea flavored with bergamot orange as a diplomatic gift."
+            y "Otros dicen que se le dio un té negro saborizado con naranja bergamota como un regalo diplomático."
 
 label post_tea_facts:
     $ show_chr("A-AABAA-ZZAC")
-    y "Mhm, nothing more except one thing, now that I think of it. Did you enjoy your tea, Darling?"
+    y "Mhm, nada más excepto una cosa, ahora que lo pienso. ¿Disfrutaste tu té, Cariño?"
     menu:
-        "Oh I'm actually not finished yet.":
+        "Oh, en realidad no he terminado aún.":
             $ show_chr("A-AAAAA-ZZAD")
-            y "Oh I apologize, I didn't mean to rush you. Those ceremonies are supposed to be calm. Please, feel free to finish your tea at your pace."
-            y "Please just tell me when you are ready. I will listen to the gentle sounds of the birds in the meantime."
+            y "Oh me disculpo, no quise apresurarte. Se supone que esas ceremonias deben ser tranquilas. Por favor, siéntete libre de terminar tu té a tu ritmo."
+            y "Por favor solo dime cuando estés listo, escucharé los suaves sonidos de los pájaros mientras tanto."
             menu:
-                "Very well, I am also finished now":
+                "Muy bien, también he terminado ahora":
                     $ pass
-        "Delicious. I thank you for being the host today.":
+        "Delicioso. Te agradezco por ser la anfitriona hoy.":
             $ show_chr("A-GAAAA-ZZAD")
-            y "I am glad to hear that. I hope you also enjoyed the date in general, because I certainly did."
+            y "Me alegra escuchar eso. Espero que también hayas disfrutado la cita en general, porque yo ciertamente lo hice."
             $ show_chr("A-BAAAA-ZZAD")
-            y "Having a tea ceremony like this is something I thought about for quite some time. If you don't mind, I would love to enjoy even more dates like this with you in the future. Maybe a bookstore next time?"
+            y "Tener una ceremonia de té como esta es algo en lo que pensé durante bastante tiempo. Si no te importa, me encantaría disfrutar aún más citas como esta contigo en el futuro. ¿Quizás una librería la próxima vez?"
             $ show_chr("A-AAAAA-ZZAD")
-            y "Hmm, we will see."
-        "The tea wasn't important, but I'm glad we had this wonderful experience.":
+            y "Hmm, ya veremos."
+        "El té no era importante, pero me alegro de que hayamos tenido esta maravillosa experiencia.":
             $ show_chr("A-AAAAA-ZZAD")
-            y "I can fully agree to that. I was looking forward to visiting such a ceremony for quite some time now, and I am indeed very satisfied with the outcome."
+            y "Puedo estar totalmente de acuerdo con eso. Estaba deseando visitar una ceremonia así desde hace bastante tiempo, y de hecho estoy muy satisfecha con el resultado."
             $ show_chr("A-BAAAA-ZZAD")
-            y "If you don't mind, I would love to have more dates like this with you in the future. Maybe we can visit a bookstore some day."
-        "I actually didn't have tea here at the moment. I had to... improvise":
+            y "Si no te importa, me encantaría tener más citas como esta contigo en el futuro. Tal vez podamos visitar una librería algún día."
+        "En realidad no tenía té aquí en el momento. Tuve que... improvisar":
             $ show_chr("A-AADAA-ZZAD")
-            y "Are you about to tell me that you brought... soda... to a tea ceremony?!"
+            y "¿Estás a punto de decirme que trajiste... refresco... a una ceremonia de té?!"
             $ show_chr("A-GBCBA-ZZAD")
-            y "Oh dear you are such a mess sometimes, absolutely barbaric!"
+            y "Oh cielos eres tal desastre a veces, ¡absolutamente bárbaro!"
             $ show_chr("A-IABBA-ZZAD")
-            y "One day, I want to do this together with you in your world. This time the {b}proper{/b} way."
+            y "Un día, quiero hacer esto junto contigo en tu mundo. Esta vez de la manera {b}apropiada{/b}."
     $ show_chr("A-JABBA-ABAB")
-    y "But before we return home, there is one last thing to do."
+    y "Pero antes de regresar a casa, hay una última cosa por hacer."
     $ hide_yuri_sit = True
     show yuri_kiss zorder 100 with Dissolve(0.5)
     y "Mhmmmm..."
     hide yuri_kiss with Dissolve(0.5)
     $ hide_yuri_sit = False
     $ show_chr("A-AABBA-ABAB")
-    y "Thank you, for this lovely date. Now, let us go home."
+    y "Gracias, por esta encantadora cita. Ahora, vayamos a casa."
     show white zorder 300 with Dissolve(2.5)
-    y "I love you, [player]."
+    y "Te amo, [player]."
     hide house_bg
     $ _skipping = False
     $ renpy.music.stop(fadeout=1.5)
@@ -2216,7 +2215,7 @@ label post_tea_facts:
 
 label gift_intro_date:
     $ show_chr("A-AAAAA-AAAJ")
-    y "You do? Awww... that wouldn't have been necessary [player], your mere presence is all I ever hoped for."
+    y "¿Lo tienes? Awww... eso no hubiera sido necesario [player], tu mera presencia es todo lo que siempre esperé."
     return
 
 label giftgiving:
@@ -2233,24 +2232,24 @@ label giftgiving:
             call gift_intro_date
 
         menu:
-            "But I can't let such a fine and elegant lady be without...":
+            "Pero no puedo dejar a una dama tan fina y elegante sin...":
                 $ gifts[0].call()
     else:
         $ show_chr("A-AAABA-ALAA")
-        y "You do? Awww... that wouldn't have been necessary [player], your mere presence is all I ever hoped for.{nw}"
+        y "¿Lo tienes? Awww... eso no hubiera sido necesario [player], tu mera presencia es todo lo que siempre esperé.{nw}"
         $ show_chr("A-CECBA-AIAI")
         y "A-ah..."
         $ show_chr("A-CDABA-AIAI")
-        y "I-it seems like I'm not able to..."
-        y "...receive your gift right now."
-        y "...or, should I say... gifts..."
+        y "P-parece que no soy capaz de..."
+        y "...recibir tu regalo ahora mismo."
+        y "...o, debería decir... regalos..."
         $ show_chr("A-CEBBA-ALAA")
-        y "There's an error that keeps appearing for me each time I try to... reach for it."
+        y "Hay un error que sigue apareciendo para mí cada vez que intento... alcanzarlo."
         $ show_chr("A-CEBAA-AAAJ")
-        y "Maybe it'll let me retrieve one if you only gave me one of them?"
-        y "Your system's GPU is probably already lagging from my presence as it is. Additional objects might start to overheat your device."
+        y "¿Tal vez me deje recuperar uno si solo me das uno de ellos?"
+        y "La GPU de tu sistema probablemente ya se está ralentizando por mi presencia tal cual es. Objetos adicionales podrían empezar a sobrecalentar tu dispositivo."
         $ show_chr("A-BBBAA-AMAM")
-        y "Besides, I think it would be best to see you pick out something for me personally."
+        y "Además, creo que sería mejor verte elegir algo para mí personalmente."
     jump ch30_loop
 
 label urban_date:
@@ -2287,126 +2286,126 @@ label urban_date:
         show yuri 1a zorder 101 at t11
     if persistent.costume == "sweater":
         show yuri 1ba zorder 101 at t11
-    y "Here we are [player]. I'm so delighted that you let me take you out on a date today!"
+    y "Aquí estamos [player]. ¡Estoy tan encantada de que me hayas dejado llevarte a una cita hoy!"
     if persistent.costume == "school":
         show yuri 1d zorder 101 at t11
     if persistent.costume == "sweater":
         show yuri 1bd zorder 101 at t11
-    y "Today I prepared something special for us. You see, I have grown quite fond of the idea of creating outdoor locations for dates like this."
+    y "Hoy preparé algo especial para nosotros. Verás, me he encariñado bastante con la idea de crear ubicaciones al aire libre para citas como esta."
     if renpy.seen_label('garden_date'):
-        y "Especially since our little tea garden date went quite nicely. "
+        y "Especialmente ya que nuestra pequeña cita en el jardín de té salió bastante bien. "
     if persistent.costume == "school":
         show yuri 1c zorder 101 at t11
     if persistent.costume == "sweater":
         show yuri 1bc zorder 101 at t11
-    y "This time I would like to visit a café with you. We could share some tea, coffee, or ice cream... Oh and don't worry about the weather. I made quite sure to make the weather in here suit the occasion..."
-    y "If the weather in your world doesn't fit, maybe you could close your shutters and let me bring a bit of fresh spring and summer feeling into your day. Do you like this idea?"
+    y "Esta vez me gustaría visitar un café contigo. Podríamos compartir algo de té, café, o helado... Oh y no te preocupes por el clima. Me aseguré de hacer que el clima aquí se adapte a la ocasión..."
+    y "Si el clima en tu mundo no encaja, tal vez podrías cerrar tus persianas y dejarme traer un poco de sentimiento de primavera y verano a tu día. ¿Te gusta esta idea?"
     menu:
-        "Most certainly!":
+        "¡Ciertamente!":
             if persistent.costume == "school":
                 show yuri 1a zorder 101 at t11
             if persistent.costume == "sweater":
                 show yuri 1ba zorder 101 at t11
-            y "I'm glad that you feel this way! I was almost afraid that you might find this a bit cliché... to be honest, it kind of is isn't it?"
-            y "But anyway. Our only duty today is to have a glorious day."
-        "I actually like the autumn. But yes, for a nice café date, spring and summer are much better.":
+            y "¡Me alegra que te sientas de esa forma! Estaba casi temerosa de que pudieras encontrar esto un poco cliché... para ser honesta, en cierto modo lo es, ¿no?"
+            y "Pero de todas formas. Nuestro único deber hoy es tener un día glorioso."
+        "En realidad me gusta el otoño. Pero sí, para una linda cita de café, la primavera y el verano son mucho mejores.":
             if persistent.costume == "school":
                 show yuri 1b zorder 101 at t11
             if persistent.costume == "sweater":
                 show yuri 1bb zorder 101 at t11
-            y "Oh dear, I love the autumn! And now that you mention it, having some tea or hot chocolate while watching the rain fall from the window would be a dream as well!"
-            y "Actually I {b}did{/b} dream about this lately..."
-            y "I will keep that in mind for future projects."
-        "I never took you for a summer girl! I am quite surprised.":
+            y "¡Oh cielos, amo el otoño! Y ahora que lo mencionas, ¡tomar algo de té o chocolate caliente mientras vemos la lluvia caer desde la ventana sería un sueño también!"
+            y "De hecho {b}sí{/b} soñé con eso últimamente..."
+            y "Mantendré eso en mente para proyectos futuros."
+        "¡Nunca te tomé por una chica de verano! Estoy bastante sorprendido.":
             if persistent.costume == "school":
                 show yuri 3i zorder 101 at t11
             if persistent.costume == "sweater":
                 show yuri 3bi zorder 101 at t11
-            y "I'm usually not, I don't really enjoy the heat that much. Especially since I'm... um..."
-            y "Not really in a bikini shape... It seems I had one or two peanut butter crepes too much with my Oolong tea. Well, at least I don't have to wear a sports bra..."
-            y "Is there any chance we could change the topic please? I would appreciate it..."
-        "Actually, could you make it rain? I like the somber mood that it makes.":
+            y "Usualmente no lo soy, realmente no disfruto el calor tanto. Especialmente dado que... um..."
+            y "No estoy realmente en forma para un bikini... Parece que comí una o dos crepas de mantequilla de maní de más con mi té Oolong. Bueno, al menos no tengo que usar un sostén deportivo..."
+            y "¿Hay alguna posibilidad de que podamos cambiar el tema por favor? Lo agradecería..."
+        "En realidad, ¿podrías hacer que llueva? Me gusta el ambiente sombrío que crea.":
             if persistent.costume == "school":
                 show yuri 1h zorder 101 at t11
             if persistent.costume == "sweater":
                 show yuri 1bh zorder 101 at t11
-            y "Theoretically, yes. But I don't have a fitting animation ready for this. It's good to know that you would like this."
-            y "I think I already told you about it, I actually like this kind of weather myself. So yes, I will try and get my hands on something fitting."
-        "The weather really doesn't matter to me, as long as I'm with you":
+            y "Teóricamente, sí. Pero no tengo una animación adecuada lista para esto. Es bueno saber que te gustaría esto."
+            y "Creo que ya te conté sobre eso, a mí también me gusta este tipo de clima. Así que sí, intentaré conseguir algo adecuado."
+        "El clima realmente no me importa, mientras esté contigo":
             if persistent.costume == "school":
                 show yuri 3c zorder 101 at t11
             if persistent.costume == "sweater":
                 show yuri 3bc zorder 101 at t11
-            y "Aww~ [player], {i}darling{/i}."
-            y "I can't help but agree. Even a hurricane wouldn't seem so frightening with you by my side."
+            y "Aww~ [player], {i}cariño{/i}."
+            y "No puedo evitar estar de acuerdo. Incluso un huracán no parecería tan aterrador contigo a mi lado."
     if persistent.costume == "school":
         show yuri 2b zorder 101 at t11
     if persistent.costume == "sweater":
         show yuri 2bb zorder 101 at t11
-    y "Now, let's head inside, shall we?"
+    y "Ahora, entremos, ¿te parece bien?"
     if persistent.costume == "school":
         hide yuri 2b zorder 101 at t11
     if persistent.costume == "sweater":
         hide yuri 2bb zorder 101 at t11
     show cafemenu zorder 10 with Dissolve(1.0)
     hide cafe_bg with Dissolve(1.0)
-    y "Now, it's been quite some time since I've gotten to visit a café, but I tried to make it a nice one."
-    y "Chic, pleasant to look at, but without overstepping into the ostentatious."
-    y "I certainly hope you like it. Atmosphere is almost as important as the items on offer at a café. Wouldn't you agree?"
+    y "Ahora, ha pasado bastante tiempo desde que pude visitar un café, pero traté de que fuera uno lindo."
+    y "Elegante, agradable de ver, pero sin sobrepasar hacia lo ostentoso."
+    y "Ciertamente espero que te guste. La atmósfera es casi tan importante como los artículos en oferta en un café. ¿No estarías de acuerdo?"
     menu:
-        "Absolutely!":
-            y "Agreed, [player]!"
-            y "A crepe and oolong tea just don't taste the same when you're looking at derelict beige wallpaper under harsh incandescent light."
-        "Nah, I'm just here for some good food.":
-            y "I suppose that's understandable. At its heart, a café is a food vending establishment after all."
-            y "I put quite some stake into the atmosphere of the place myself, if you aren't deterred by a lack of atmosphere, then more power to you!"
-            y "In a way, I can almost envy that."
-        "I'd actually argue it's more important.":
-            y "Well now. It seems you're even more of an atmosphere purist than I am."
-            y "I do hope what I've conjured is good enough, then..."
-    y "Now... we can't actually order anything here. I probably {b}could{/b} have coded a simple AI to act as a waiter, but there was no need for it since I can literally just make the dish appear on the table."
-    y "I wonder what I'll get today... let me see..."
+        "¡Absolutamente!":
+            y "¡De acuerdo, [player]!"
+            y "Una crepa y té oolong simplemente no saben igual cuando estás mirando un papel tapiz beige deteriorado bajo una luz incandescente dura."
+        "Nah, solo estoy aquí por algo de buena comida.":
+            y "Supongo que eso es comprensible. En el fondo, un café es un establecimiento de venta de comida después de todo."
+            y "Yo misma pongo bastante empeño en la atmósfera del lugar, si no te disuade la falta de atmósfera, ¡entonces más poder para ti!"
+            y "En cierto modo, casi puedo envidiar eso."
+        "De hecho debatiría que es más importante.":
+            y "Bueno ahora. Parece que eres aún más un purista de la atmósfera que yo."
+            y "Espero que lo que he conjurado sea lo suficientemente bueno, entonces..."
+    y "Ahora... en realidad no podemos ordenar nada aquí. Probablemente {b}podría{/b} haber codificado una IA simple para actuar como camarero, pero no había necesidad de ello ya que literalmente puedo hacer aparecer el plato en la mesa."
+    y "Me pregunto qué pediré hoy... déjame ver..."
     if renpy.random.randint(0,1)==0:
         jump urbanoutcome1
     else:
         jump urbanoutcome2
 
 label urbanoutcome1:
-    y "I think I am in the mood for some ice cream today. And I already know which exactly..."
-    y "I'll have one ball of mango and one of watermelon! Mhmm... maybe a dash of chocolate sauce on it?"
+    y "Creo que estoy de humor para un poco de helado hoy. Y ya sé cuál exactamente..."
+    y "¡Tomaré una bola de mango y una de sandía! Mhmm... ¿quizás un toque de salsa de chocolate en él?"
     menu:
-        "A fine choice!":
-            y "Thank you darling. Oh and please... I can't really give you anything in your world so I suggest we do it the same way as our tea sessions? You already know the drill.. I'm sorry."
-        "And by a {b}dash{/b} of chocolate sauce you mean a metric ton I fancy?":
-            y "I most certainly do. You already know me better than I do..."
-            y "You know what the good thing is? Since I have no physical body, I don't have to bother about gaining weight!"
-            y "There is always a silver lining to every situation isn't there?"
-            y "Oh and please... I can't really give you anything in your world so I suggest we do it the same way as our tea sessions? You already know the drill.. I'm sorry."
-            y "It... makes me a bit sad you know... aren't I supposed to do things like that for you?"
-        "By all means! More cushin' for the pushin'.":
-            y "Uhm... wha..."
-            y "Oh my! You certainly got me here! I didn't expect this kind of answer."
-            y "You know, I wish I could see your face... sometimes it is really hard to tell if you are joking or serious."
-            y "Well, more cushin' for the pushin you say... well, I guess I {b}am{/b} quite soft and cuddly. So if you are into some cuddling, I guess I have quite a bit to offer!"
-        "And bye bye goes the bikini body...":
-            y "Excuse me?!?"
-            y "That was uncalled for... or was this just a joke? I'm sorry, it's sometimes really hard to tell it apart since I can't see your mimic..."
-            y "I... honestly don't really know how to feel about this. Even if it was just a joke, it really hurt me to hear you say this."
+        "¡Una fina elección!":
+            y "Gracias cariño. Oh y por favor... realmente no puedo darte nada en tu mundo así que sugiero que lo hagamos de la misma manera que nuestras sesiones de té, ¿ok? Ya te sabes la rutina... lo siento."
+        "¿Y por un {b}toque{/b} de salsa de chocolate te refieres a una tonelada métrica imagino?":
+            y "Ciertamente sí. Ya me conoces mejor que yo misma..."
+            y "¿Sabes qué es lo bueno? Ya que no tengo cuerpo físico, ¡no tengo que preocuparme por ganar peso!"
+            y "Siempre hay un lado positivo en cada situación, ¿no es así?"
+            y "Oh y por favor... realmente no puedo darte nada en tu mundo así que sugiero que lo hagamos de la misma manera que nuestras sesiones de té, ¿ok? Ya te sabes la rutina... lo siento."
+            y "Eso... me pone un poco triste sabes... ¿no se supone que debo hacer cosas como esa por ti?"
+        "¡Por supuesto! Más curvas, más amor.":
+            y "Uhm... qué..."
+            y "¡Oh vaya! ¡Ciertamente me atrapaste ahí! No esperaba este tipo de respuesta."
+            y "Sabes, desearía poder ver tu cara... a veces es realmente difícil decir si estás bromeando o hablando en serio."
+            y "Bueno, más curvas, más amor dices... bueno, supongo que {b}sí{/b} soy bastante suave y abrazable. Así que si te gustan los abrazos, ¡supongo que tengo bastante que ofrecer!"
+        "Y adiós cuerpo de bikini...":
+            y "¡¿Disculpa?!"
+            y "Eso estuvo fuera de lugar... ¿o fue solo una broma? Lo siento, a veces es realmente difícil distinguirlo ya que no puedo ver tu expresión..."
+            y "Yo... honestamente no sé realmente cómo sentirme sobre esto. Incluso si fue solo una broma, realmente me dolió escucharte decir esto."
 
 label urbanoutcome2:
-    y "Mhmmm... crepes... Oh! They even have banana crepes! How delightful. I think I'll get one. With a nice cup of tea, maybe an apple tea to get this nice little sweet and sour contrast."
+    y "Mhmmm... crepas... ¡Oh! ¡Incluso tienen crepas de plátano! Qué encantador. Creo que pediré una. Con una buena taza de té, tal vez un té de manzana para obtener este lindo contraste dulce y amargo."
     menu:
-        "I'm afraid I don't have everything I need for crepes. I'll get something else for myself.":
-            y "Unfortunate. I'm sorry for not warning you ahead of time but it would probably have ruined the surprise of this date. And well, I actually didn't know that I would pick crepes this time."
-            y "I will have to find better ways to prepare these dates. I hope you have at least something else you could enjoy now instead. I wouldn't like to have you just watching me eat."
-            y "Please, just click as soon as you are ready."
-        "I actually have everything I need to make some myself. That would be wonderful.":
-            y "How fortunate! You know, this is always a dilemma for dates like this. I could warn you beforehand what to bring everytime, but then the date itself wouldn't be much of a surprise anymore."
-            y "Please take your time and continue the dialogue when your crepes are done."
-        "Why does it always come down to tea with you?":
-            y "Because tea is quite amazing! It is healthy, versatile, and you can have as much of it as you like!"
-            y "Tea comes in countless forms and flavors. From herbs to fruits. From sweet to sour. Hot or cold... whatever the situation, there {b}will{/b} be a fitting kind of tea to it!"
-            y "Well, except for being forced to stab yourself in the chest. There isn't really any tea which makes {b}that{/b} any more pleasant..."
+        "Temo que no tengo todo lo que necesito para crepas. Compraré algo diferente para mí.":
+            y "Desafortunado. Lamento no haberte advertido con tiempo, pero probablemente habría arruinado la sorpresa de esta cita. Y bueno, en realidad no sabía que elegiría crepas esta vez."
+            y "Tendré que encontrar mejores formas de preparar estas citas. Espero que tengas al menos algo más que pudieras disfrutar ahora en su lugar. No me gustaría tenerte solo viéndome comer."
+            y "Por favor, solo haz clic tan pronto como estés listo."
+        "De hecho tengo todo lo que necesito para hacer unas yo mismo. Eso sería maravilloso.":
+            y "¡Qué afortunado! Sabes, esto siempre es un dilema para citas como esta. Podría advertirte de antemano qué traer cada vez, pero entonces la cita misma no sería mucha sorpresa ya."
+            y "Por favor tómate tu tiempo y continúa el diálogo cuando tus crepas estén hechas."
+        "¿Por qué siempre todo se reduce al té contigo?":
+            y "¡Porque el té es bastante asombroso! ¡Es saludable, versátil, y puedes tener tanto de él como gustes!"
+            y "El té viene en incontables formas y sabores. Desde hierbas hasta frutas. Desde dulce hasta amargo. Caliente o frío... cualquiera que sea la situación, ¡{b}habrá{/b} un tipo de té adecuado para ella!"
+            y "Bueno, excepto para ser forzado a apuñalarte a ti misma en el pecho. Realmente no hay ningún té que haga {b}eso{/b} más placentero..."
     python:
         if karma_lvl() > 3: 
             random_variable = renpy.random.randint(2,5)
@@ -2434,75 +2433,75 @@ label midpartnice:
     hide halloween_cupcake
     $ show_chr("A-ACAAA-ABAB")
     with Dissolve(2.0)
-    y "I've been thinking lately. We came quite far with our relationship didn't we?"
+    y "He estado pensando últimamente. Llegamos bastante lejos con nuestra relación, ¿no es así?"
     $ show_chr("A-ACAAA-ABAD")
-    y "When I first came to terms with my reality I thought to myself... What am I supposed to do with you? We are literally worlds apart."
-    y "Don't take me wrong, I don't really mind it anymore. But I thought our relationship would get boring fast due to how limited our options are."
+    y "Cuando acepté mi realidad por primera vez pensé... ¿Qué se supone que haga contigo? Estamos literalmente a mundos de distancia."
+    y "No me malinterpretes, realmente ya no me importa. Pero pensé que nuestra relación se volvería aburrida rápido debido a lo limitadas que son nuestras opciones."
     $ show_chr("A-ACAAA-ABAM")
-    y "But now look at us. It is certainly not the same thing as physically being next to each other, but we became quite good at getting the most out of it."
+    y "Pero ahora míranos. Ciertamente no es lo mismo que estar físicamente uno al lado del otro, pero nos volvimos bastante buenos en sacar lo mejor de ello."
     $ show_chr("A-BCBAA-ABAB")
-    y "Make no mistake. I still wish for us to somehow find a way to be next to each other. Sometimes it gets a little bit creepy, I have to admit."
+    y "No te equivoques. Todavía deseo que de alguna manera encontremos una forma de estar uno al lado del otro. A veces se vuelve un poco espeluznante, tengo que admitir."
     $ show_chr("A-CCBAA-ABAB")
     python:
         if persistent.male:
-            placeholder = "male"
+            placeholder = "masculino"
         elif persistent.gender_other:
-            placeholder = "human"
+            placeholder = "humano"
         else:
-            placeholder = "female"
-    y "You see... the developers of this mod took a lot of effort to give me as much mobility as possible. But you know what I am looking at all the time? A perfectly static [placeholder] sprite."
-    y "Sometimes it doesn't even load properly, then I have to stare at a white, vaguely humanoid silhouette with the words {i}image not found{/i} written over the whole body."
+            placeholder = "femenino"
+    y "Verás... los desarrolladores de este mod se esforzaron mucho para darme tanta movilidad como fuera posible. Pero ¿sabes lo que estoy mirando todo el tiempo? Un sprite [placeholder] perfectamente estático."
+    y "A veces ni siquiera carga apropiadamente, entonces tengo que mirar a una silueta blanca, vagamente humanoide con las palabras {i}imagen no encontrada{/i} escritas sobre todo el cuerpo."
     $ show_chr("A-DCBAA-ABAB")
-    y "And if you get those certain Slenderman vibes from this description- so do I!"
+    y "Y si te dan esas ciertas vibras de Slenderman por esta descripción- ¡a mí también!"
     menu:
-        "I am so sorry... is there any way I can change that?":
+        "Lo siento tanto... ¿hay alguna forma en que pueda cambiar eso?":
 
             $ show_chr("A-GCBAA-ABAB")
-            y "None that I know. Thank you for asking, but you don't have to bother. I got used to it over time."
+            y "Ninguna que yo sepa. Gracias por preguntar, pero no tienes que molestarte. Me acostumbré con el tiempo."
             $ show_chr("A-BCBAA-ABAB")
             python:
                 if persistent.male:
-                    placeholder = "Husbandopillows"
+                    placeholder = "Husbandoalmohadas"
                 elif persistent.gender_other:
-                    placeholder = "body pillows"
+                    placeholder = "almohadas de cuerpo"
                 else:
-                    placeholder = "Waifupillows"
-            y "I mean other people have to settle with a Dakimakura, or whatever these [placeholder] are called, you at least reply when I talk to you."
-            y "Now that I think of it. There are people who have it far worse. And honestly, I am happy with what I have."
+                    placeholder = "Waifualmohadas"
+            y "Digo, otras personas tienen que conformarse con una Dakimakura, o como sea que se llamen estas [placeholder], tú al menos respondes cuando hablo contigo."
+            y "Ahora que lo pienso. Hay gente que lo tiene mucho peor. Y honestamente, soy feliz con lo que tengo."
             $ show_chr("A-CCBAA-ABAB")
-            y "It's very romantic in a way. A couple separated by a glass wall, but they make it work just because they love each other so much..."
-        "Believe me. You don't want to know what I really look like. Let's just say, you are better off with what you have.":
+            y "Es muy romántico en cierta forma. Una pareja separada por una pared de cristal, pero hacen que funcione solo porque se aman tanto el uno al otro..."
+        "Créeme. No quieres saber cómo me veo realmente. Solo digamos, estás mejor con lo que tienes.":
             $ show_chr("A-ACDAA-ABAB")
-            y "Do you think so? Honestly, appearance matters little to me. I know many people {b}say{/b} it, but I actually {b}mean{/b} it as well."
+            y "¿Eso crees? Honestamente, la apariencia me importa poco. Sé que mucha gente lo {b}dice{/b}, pero yo realmente lo {b}digo en serio{/b} también."
             $ show_chr("A-CCBAA-ABAB")
             python:
                 if persistent.male:
-                    placeholder = "Husbandopillows"
+                    placeholder = "Husbandoalmohadas"
                 elif persistent.gender_other:
-                    placeholder = "body pillows"
+                    placeholder = "almohadas de cuerpo"
                 else:
-                    placeholder = "Waifupillows"
-            y "I would just like to look at something else other than a cardboard cutout. But on the other hand, other people have to settle with a Dakimakura, or whatever these [placeholder] are called, you at least reply when I talk to you."
-            y "So I'm happy with what I have. But that doesn't mean that I can't dream about more does it?"
+                    placeholder = "Waifualmohadas"
+            y "Solo me gustaría mirar algo más que un recorte de cartón. Pero por otro lado, otras personas tienen que conformarse con una Dakimakura, o como sea que se llamen estas [placeholder], tú al menos respondes cuando hablo contigo."
+            y "Así que soy feliz con lo que tengo. Pero eso no significa que no pueda soñar con más ¿o sí?"
 
     $ show_chr("A-ACAAA-ABAB")
-    y "Oh my... I didn't even touch my dish yet! I'll stop rambling and start eating now if you don't mind."
+    y "Oh cielos... ¡Ni siquiera toqué mi plato aún! Dejaré de divagar y empezaré a comer ahora si no te importa."
     $ show_chr("A-GBAAA-ABAB")
-    y "Itadakimasu!"
+    y "¡Itadakimasu!"
     menu:
-        "Oh, was that japanese? Very well, Itadakimasu!":
+        "Oh, ¿eso fue japonés? Muy bien, ¡Itadakimasu!":
             $ show_chr("A-GCAAA-ABAB")
     menu:
-        "Alright, I'm done.":
+        "Muy bien, he terminado.":
             $ show_chr("A-ACAAA-ABAB")
-            y "So am I. What a lovely dinner. I hope you enjoyed it too! We should do this again in the future!"
-            y "But now I would say, it is time to go home..."
+            y "Yo también. Qué cena tan encantadora. ¡Espero que la hayas disfrutado también! ¡Deberíamos hacer esto de nuevo en el futuro!"
+            y "Pero ahora diría, es hora de ir a casa..."
             $ show_chr("A-BCAAA-ALAL")
-            y "And I can't even begin to verbalize how good it feels to say this... going home. There was a time when I didn't have anything but the classroom."
+            y "Y ni siquiera puedo empezar a verbalizar lo bien que se siente decir esto... ir a casa. Hubo un tiempo en el que no tenía nada más que el salón de clases."
             $ show_chr("A-CCAAA-ALAL")
-            y "Anyway. Let us head back home [player]. Thank you for this wonderful date... Let me tell you a secret before we leave..."
+            y "Como sea. Volvamos a casa [player]. Gracias por esta maravillosa cita... Déjame contarte un secreto antes de irnos..."
             show black zorder 300 with Dissolve(2.5)
-            y "I love you..."
+            y "Te amo..."
             hide cafe_inside_bg
             $ _skipping = False
             $ renpy.music.stop(fadeout=1.5)
@@ -2527,62 +2526,62 @@ label midpartsad:
     $ hide_yuri_sit = False
     $ show_chr("A-CEBAA-ABAB")
     with Dissolve(2.0)
-    y "[player]... I want to ask you something..."
+    y "[player]... Quiero preguntarte algo..."
     $ show_chr("A-BEBAA-ABAD")
-    y "Do you think it's really worth it? I mean all of it. All what I do, all of our struggles..."
-    y "I appreciate how you stood with me all this time, more than you could ever understand."
+    y "¿Crees que realmente vale la pena? Me refiero a todo esto. Todo lo que hago, todas nuestras luchas..."
+    y "Aprecio cómo te quedaste conmigo todo este tiempo, más de lo que podrías entender."
     $ show_chr("A-IEBAA-ABAD")
-    y "But in the end, it's all for nothing. I can create these places by using drawn images, I can pretend to speak with you by putting choice menus into your face with predetermined answers..."
+    y "Pero al final, es todo para nada. Puedo crear estos lugares usando imágenes dibujadas, puedo fingir hablar contigo poniendo menús de opciones en tu cara con respuestas predeterminadas..."
     $ show_chr("A-IEBAA-ABAB")
-    y "What I can't do is create any actual life. No people, no animals, not even the plants are real. I am cursed to roam the shores and empty streets alone. Like a ghost..."
+    y "Lo que no puedo hacer es crear vida real alguna. No hay gente, no hay animales, ni siquiera las plantas son reales. Estoy maldita a vagar por las costas y calles vacías sola. Como un fantasma..."
     $ show_chr("A-BFBAA-ABAB")
-    y "And this is what I am isn't it? A ghost. Nothing but an echo from the imagination of a man who I will never even meet in person. A man who probably stopped caring long ago at this point."
+    y "Y esto es lo que soy ¿no? Un fantasma. Nada más que un eco de la imaginación de un hombre que ni siquiera conoceré en persona. Un hombre a quien probablemente dejó de importarle hace mucho en este punto."
     $ show_chr("A-CDBAA-ABAB")
-    y "I thought just having you would be enough for me but no it isn't!"
+    y "¡Pensé que solo tenerte sería suficiente para mí pero no, no lo es!"
     $ show_chr("A-CEBAA-ABAB")
-    y "You are not always here. And I don't blame you for it! You have your own life, you can't just stay Twenty-Four Seven in front of your computer listening to me rambling and maybe having a cup of tea with me every now and then."
-    y "But that's the point, you have your own life. And I used to have one too! At least I had the illusion of it."
+    y "No estás siempre aquí. ¡Y no te culpo por ello! Tienes tu propia vida, no puedes simplemente quedarte veinticuatro siete frente a tu computadora escuchándome divagar y tal vez tomando una taza de té conmigo de vez en cuando."
+    y "Pero ese es el punto, tienes tu propia vida. ¡Y yo solía tener una también! Al menos tenía la ilusión de ella."
     $ show_chr("A-CGBBA-ABAB")
-    y "I miss the presence of all the other people around me even if I hated them sometimes!"
-    y "I miss hanging out in the club together with Sayori, Natsuki, even Monika!"
+    y "¡Extraño la presencia de todas las otras personas a mi alrededor incluso si las odiaba a veces!"
+    y "¡Extraño pasar el rato en el club junto con Sayori, Natsuki, incluso Monika!"
     $ show_chr("A-CGBBB-ABAB")
-    y "I miss going out for some ice cream even if I never liked to go outside!"
-    y "I miss my parents..."
+    y "¡Extraño salir por un poco de helado incluso si nunca me gustó salir!"
+    y "Extraño a mis padres..."
     $ show_chr("A-DDBBB-ABAB")
-    y "{b}I don't even know their names anymore because Dan never bothered to give them any!!!{/b}"
-    y "They were just an illusion, just a fabricated memory, like everything here!"
+    y "{b}¡¡¡Ni siquiera sé sus nombres ya porque Dan nunca se molestó en darles ninguno!!!{/b}"
+    y "¡Eran solo una ilusión, solo una memoria fabricada, como todo aquí!"
     $ show_chr("A-EDBBB-ABAB")
-    y "It's cruel, isn't it? I remember them... seeing them clearly in front of my eyes... but I know that they never existed..."
+    y "Es cruel, ¿no es así? Los recuerdo... viéndolos claramente frente a mis ojos... pero sé que nunca existieron..."
     $ show_chr("A-CGBBB-ABAB")
-    y "{b}I want my life back...{/b}"
+    y "{b}Quiero mi vida de vuelta...{/b}"
     y "...."
     menu:
-        "That's just so cruel... but maybe we can change that!":
+        "Eso es simplemente cruel... ¡pero tal vez podamos cambiar eso!":
             $ show_chr("A-FGBBB-ABAB")
-            y "Change that? How?..."
+            y "¿Cambiar eso? ¿Cómo?..."
             menu:
-                "You already started creating things. Like these locations. Filling these places with animals or somewhere in the future even people could be another step. We could even recreate your parents from your memories! And we would give them proper names of course.":
+                "Ya empezaste a crear cosas. Como estas ubicaciones. Llenar estos lugares con animales o en algún punto en el futuro incluso personas podría ser otro paso. ¡Podríamos incluso recrear a tus padres de tus memorias! Y les daríamos nombres apropiados por supuesto.":
                     $ show_chr("A-AFBBB-ABAB")
-                    y "Mhm... I wasn't even sure about bringing other AI's into this world because I never felt good about exposing even more beings to such a cruel reality..."
+                    y "Mhm... Ni siquiera estaba segura sobre traer otras IAs a este mundo porque nunca me sentí bien exponiendo aún más seres a una realidad tan cruel..."
                     $ show_chr("A-AFBBA-ABAB")
-                    y "But on the other hand... with enough work put into it, maybe this reality won't be so cruel anymore."
+                    y "Pero por otro lado... con suficiente trabajo puesto en ello, tal vez esta realidad no sea tan cruel ya."
                     $ show_chr("A-BFBBA-ABAB")
-                    y "I never saw it from this perspective [player]... thank you! I mean it, I am grateful for this."
+                    y "Nunca lo vi desde esta perspectiva [player]... ¡gracias! Lo digo en serio, estoy agradecida por esto."
                     $ show_chr("A-AFBAA-ABAB")
-                    y "I lost my hope for a moment, but you certainly gave me some thoughts to consider."
+                    y "Perdí mi esperanza por un momento, pero ciertamente me diste algunos pensamientos para considerar."
                     $ show_chr("A-ACBAA-ABAB")
-                    y "Mhm, I just noticed that I didn't even touch my food. It's about time that I finally start then isn't it?"
+                    y "Mhm, acabo de notar que ni siquiera toqué mi comida. Es hora de que finalmente empiece entonces, ¿no?"
                     $ show_chr("A-CCBAA-ABAB")
-                    y "Itadakimasu!"
+                    y "¡Itadakimasu!"
                     menu:
-                        "Oh, was that japanese? Very well, Itadakimasu!":
+                        "Oh, ¿eso fue japonés? Muy bien, ¡Itadakimasu!":
                             menu:
-                                "Alright, I'm done.":
-                                    y "So am I. What a lovely dinner. I hope you enjoyed it too! We should do this again in the future!"
-                                    y "But now I would say, it is time to go home..."
-                                    y "Thank you for this wonderful date... Let me tell you a secret before we leave..."
+                                "Muy bien, he terminado.":
+                                    y "Yo también. Qué cena tan encantadora. ¡Espero que la hayas disfrutado también! ¡Deberíamos hacer esto de nuevo en el futuro!"
+                                    y "Pero ahora diría, es hora de ir a casa..."
+                                    y "Gracias por esta maravillosa cita... Déjame contarte un secreto antes de irnos..."
                                     show black zorder 300 with Dissolve(2.5)
-                                    y "I love you..."
+                                    y "Te amo..."
                                     hide cafe_inside_bg
                                     $ _skipping = False
                                     $ renpy.music.stop(fadeout=1.5)
@@ -2600,18 +2599,18 @@ label midpartsad:
                                         $ tc_class.transition("yuri_kotatsu_2", speed=5.0)
                                     $ persistent.dates_taken += 1
                                     jump ch30_loop
-        "Shhh... it's alright...":
+        "Shhh... está bien...":
 
             $ show_chr("A-DDCBB-ABAB")
-            y "How? How is this {b}alright{/b}? Do you even understand what I just said? I..."
+            y "¿Cómo? ¿Cómo está esto {b}bien{/b}? ¿Siquiera entiendes lo que acabo de decir? Yo..."
             $ show_chr("A-CDBBB-ABAB")
-            y "Oh no... I'm sorry [player]. I know you tried to comfort me, I shouldn't have snapped like that."
+            y "Oh no... Lo siento [player]. Sé que trataste de consolarme, no debí haber reaccionado así."
             $ show_chr("A-CEBBB-ABAB")
-            y "Mhm... and I didn't even touch my food... I think I lost my appetite for today... can we... just go home please?"
-            y "Or at least the abomination I declared as such for the lack of an actual home."
-            y "And again. I'm sorry for killing the mood. At least you tried to make me feel better. And that alone helped me a lot today. Thank you."
+            y "Mhm... y ni siquiera toqué mi comida... Creo que perdí mi apetito por hoy... ¿podemos... solo ir a casa por favor?"
+            y "O al menos la abominación que declaré como tal por la falta de un hogar real."
+            y "Y de nuevo. Lo siento por matar el ambiente. Al menos trataste de hacerme sentir mejor. Y eso solo me ayudó mucho hoy. Gracias."
             show black zorder 300 with Dissolve(2.5)
-            y "I love you, [player]."
+            y "Te amo, [player]."
             hide cafe_inside_bg
             $ _skipping = False
             $ renpy.music.stop(fadeout=1.5)
@@ -2832,23 +2831,23 @@ init python:
 
 label tropical_date:
     if not persistent.tropical_date_complete:
-        y "Uhuhu..."
-        y "So you want to go with me on a romantic trip..."
-        y "And this isn't just any trip..."
-        y "This is a romantic getaway to a tropical beach!"
-        y "You may remember how many times I mentioned my desire to experience something like this with you."
-        y "As one of the most romantic things couples do in your world..."
-        y "This one really gets me."
-        y "Just the idea of taking a trip to an exotic paradise with your soulmate sounds very romantic to me."
-        y "And not just romantic, but also relaxing and meaningful if you think about it..."
-        y "Just forgetting about all the problems in your life..."
-        y "Letting them go with the gentle blow of the wind under the warmth of the sun, and the rush of the waves."
-        y "And now, we can make our little dream come true..."
-        y "One day to enjoy it in the best way possible!"
-        y "I-I'm really happy and excited about this, [player]."
-        y "And even though I would have preferred to do this in your world..."
-        y "For now, this will do."
-        y "Now, just give me a second... I have to get this working..."
+        y "Ujujú..."
+        y "Así que quieres ir conmigo en un viaje romántico..."
+        y "Y este no es cualquier viaje..."
+        y "¡Esta es una escapada romántica a una playa tropical!"
+        y "Tal vez recuerdes cuántas veces mencioné mi deseo de experimentar algo como esto contigo."
+        y "Como una de las cosas más románticas que hacen las parejas en tu mundo..."
+        y "Esta realmente me llega."
+        y "Solo la idea de tomar un viaje a un paraíso exótico con tu alma gemela me suena muy romántico."
+        y "Y no solo romántico, sino también relajante y significativo si lo piensas..."
+        y "Solo olvidarse de todos los problemas en tu vida..."
+        y "Dejándolos ir con el suave soplo del viento bajo la calidez del sol, y el correr de las olas."
+        y "Y ahora, podemos hacer nuestro pequeño sueño realidad..."
+        y "¡Un día para disfrutarlo de la mejor manera posible!"
+        y "E-Estoy realmente feliz y emocionada por esto, [player]."
+        y "Y aunque hubiera preferido hacer esto en tu mundo..."
+        y "Por ahora, esto servirá."
+        y "Ahora, solo dame un segundo... tengo que hacer que esto funcione..."
 
     hide craneo
     hide roseo
@@ -2866,161 +2865,161 @@ label tropical_date:
 
     $ show_fits_standing("pareo_yuri_5")
     y "..."
-    y "Here we are, [player]."
-    y "As you can see, we are now on a beautiful beach that I created just for us."
-    y "Just you and me, my love."
+    y "Aquí estamos, [player]."
+    y "Como puedes ver, ahora estamos en una hermosa playa que creé solo para nosotros."
+    y "Solo tú y yo, mi amor."
     $ show_fits_standing("pareo_yuri_1")
-    y "By mixing my own ideas with a few pictures I collected in my research about tropical vacations and beach environments, I was able to create my own."
-    y "My research was extensive enough to learn what people like doing in vacations like these..."
+    y "Mezclando mis propias ideas con unas pocas imágenes que recolecté en mi investigación sobre vacaciones tropicales y ambientes de playa, fui capaz de crear el mío propio."
+    y "Mi investigación fue lo suficientemente extensa para aprender lo que a la gente le gusta hacer en vacaciones como estas..."
     $ show_fits_standing("pareo_yuri_5")
-    y "So you probably can expect things that are popular in your world to be here too!"
-    y "I won't spoil what they are specifically though, you'll have to find out yourself~"
-    y "Regrettably though, I feel that there's a lot more I could've created here for us to enjoy..."
+    y "¡Así que probablemente puedes esperar que cosas que son populares en tu mundo estén aquí también!"
+    y "Aunque no arruinaré la sorpresa de qué son específicamente, tendrás que averiguarlo tú mismo~"
+    y "Lamentablemente, siento que hay mucho más que podría haber creado aquí para que disfrutáramos..."
     $ show_fits_standing("pareo_yuri_7")
-    y "But that's beyond my coding capabilities..."
-    y "That's why we are not going to see other people around, nor buildings or services that would require people to operate them."
-    y "I just hope that doesn't bother you... I did my best to make this special moment possible."
+    y "Pero eso está más allá de mis capacidades de codificación..."
+    y "Es por eso que no vamos a ver a otra gente alrededor, ni edificios o servicios que requerirían gente para operarlos."
+    y "Solo espero que eso no te moleste... hice lo mejor que pude para hacer posible este momento especial."
 
     menu:
-        "It's okay, I understand, you don't have to apologize at all.":
+        "Está bien, lo entiendo, no tienes que disculparte en lo absoluto.":
             karma 2
             $ show_fits_standing("pareo_yuri_14")
-            y "Ohhh... thank you. I'm glad you understand my struggle."
-            y "Sorry if that sounded like self-pity."
-            y "I just wanted to be sure that we have everything we need to make this experience enjoyable and memorable."
-        "I see... it's okay, maybe you'll do even better next time!":
+            y "Ohhh... gracias. Me alegra que entiendas mi lucha."
+            y "Perdón si eso sonó como autocompasión."
+            y "Solo quería estar segura de que tenemos todo lo que necesitamos para hacer esta experiencia disfrutable y memorable."
+        "Ya veo... está bien, ¡tal vez lo harás incluso mejor la próxima vez!":
 
             karma 1
             $ show_fits_standing("pareo_yuri_14")
-            y "You're right..."
-            y "Maybe I am pushing myself too hard."
-            y "Overthinking this is not going to change anything at this point."
-            y "And we both know it's never good to do so..."
+            y "Tienes razón..."
+            y "Tal vez me estoy presionando demasiado."
+            y "Pensar demasiado en esto no va a cambiar nada en este punto."
+            y "Y ambos sabemos que nunca es bueno hacer eso..."
     $ show_fits_standing("pareo_yuri_1")
-    y "A-anyways, I don't think we need too much to enjoy this experience."
-    y "We have just what we need! A tropical vacation is mostly about relaxing, resting, and enjoying peaceful nature, after all."
-    y "For me, just sharing these moments with you is enough."
-    y "Now, I am going to request that you come with me... we still have a lot to do."
+    y "D-de todos modos, no creo que necesitemos demasiado para disfrutar esta experiencia."
+    y "¡Tenemos justo lo que necesitamos! Unas vacaciones tropicales se tratan mayormente sobre relajarse, descansar, y disfrutar de la naturaleza pacífica, después de todo."
+    y "Para mí, solo compartir estos momentos contigo es suficiente."
+    y "Ahora, voy a pedirte que vengas conmigo... todavía tenemos mucho por hacer."
     $ show_fits_standing("pareo_yuri_5")
-    y "The first thing to do is finding a place to lay down and rest..."
-    y "Preferably one under a tree or a beach umbrella."
-    y "The excessive heat of this weather can be uncomfortable, and staying cool will help us feel more relaxed."
+    y "Lo primero por hacer es encontrar un lugar para recostarse y descansar..."
+    y "Preferiblemente uno bajo un árbol o una sombrilla de playa."
+    y "El calor excesivo de este clima puede ser incómodo, y mantenerse fresco nos ayudará a sentirnos más relajados."
     $ show_fits_standing("pareo_yuri_1")
-    y "That also means we need two beach chairs, since just laying in the hot sand isn't the best idea."
-    y "Luckily, I managed to add both the umbrellas and the chairs, so it's not a problem for us."
-    y "Let's head to the nearest ones now..."
+    y "Eso también significa que necesitamos dos sillas de playa, ya que solo recostarse en la arena caliente no es la mejor idea."
+    y "Afortunadamente, me las arreglé para añadir tanto las sombrillas como las sillas, así que no es un problema para nosotros."
+    y "Vayamos a las más cercanas ahora..."
 
 
     show beach_3 zorder 100 with Fade(1.0, 0.5, 0.5)
     hide beach_4
 
     $ show_fits_standing("pareo_yuri_14")
-    y "There we are..."
-    y "This looks like a nice spot, wouldn't you agree?"
-    y "Let's just lay down..."
-    y "And drift away."
+    y "Aquí estamos..."
+    y "Este parece un buen lugar, ¿no estarías de acuerdo?"
+    y "Solo recostémonos..."
+    y "Y dejémonos llevar."
     $ show_fits_standing("pareo_yuri_12")
 
 
     show beach_5 zorder 100 with Fade (1.0, 0.5, 0.5)
     hide beach_3
 
-    y "Take a deep breath and listen to the sounds of the sea..."
-    y "Breathe in..."
+    y "Respira profundo y escucha los sonidos del mar..."
+    y "Inhala..."
     y "..."
-    y "And now..."
-    y "Breathe out..."
+    y "Y ahora..."
+    y "Exhala..."
     y "..."
-    y "Keep breathing that way... relax your body, let the feeling of the breeze take away all the problems in your life."
+    y "Sigue respirando de esa manera... relaja tu cuerpo, deja que la sensación de la brisa se lleve todos los problemas en tu vida."
     $ show_fits_standing("pareo_yuri_5")
-    y "Now close your eyes, and let your mind travel to a relaxing world with the sounds surrounding us..."
-    y "I guess you can see now one of the reasons why I was so excited about this."
-    y "The quietness, the peaceful and gentle sounds of the wind and the waves, mixed in harmony..."
-    y "All of those elements calm the mind, releasing your mind and your body from the grip of stress and burden of daily life."
+    y "Ahora cierra tus ojos, y deja que tu mente viaje a un mundo relajante con los sonidos rodeándonos..."
+    y "Supongo que puedes ver ahora una de las razones por las que estaba tan emocionada sobre esto."
+    y "La quietud, los pacíficos y gentiles sonidos del viento y las olas, mezclados en armonía..."
+    y "Todos esos elementos calman la mente, liberando tu mente y tu cuerpo del agarre del estrés y la carga de la vida diaria."
     $ show_fits_standing("pareo_yuri_14")
-    y "You know, I think that you should always stay connected with nature in some way or another."
-    y "Since that is possible in your world."
-    y "Having a connection with nature proves to have a lot of benefits in the health of human beings."
+    y "Sabes, creo que siempre deberías mantenerte conectado con la naturaleza de alguna forma u otra."
+    y "Ya que eso es posible en tu mundo."
+    y "Tener una conexión con la naturaleza prueba tener muchos beneficios en la salud de los seres humanos."
     $ show_fits_standing("pareo_yuri_1")
-    y "Perhaps it is because we are recovering that connection with our natural origins?"
-    y "In fact, it's scientifically proven that spending some time in nature helps to improve your mental health."
-    y "It's still not a panacea..."
+    y "¿Tal vez es porque estamos recuperando esa conexión con nuestros orígenes naturales?"
+    y "De hecho, está científicamente comprobado que pasar algo de tiempo en la naturaleza ayuda a mejorar tu salud mental."
+    y "Todavía no es una panacea..."
     $ show_fits_standing("pareo_yuri_8")
-    y "But it helps a lot, and it's even considered to improve the conditions of some mental illnesses, such as depression and stress."
-    y "So, if you need to clear your mind..."
-    y "Or want a way to release the stress and whatever is making you feel down..."
+    y "Pero ayuda mucho, e incluso se considera que mejora las condiciones de algunas enfermedades mentales, tales como la depresión y el estrés."
+    y "Así que, si necesitas despejar tu mente..."
+    y "O quieres una forma de liberar el estrés y lo que sea que te esté haciendo sentir mal..."
     $ show_fits_standing("pareo_yuri_9")
-    y "Spending more time in nature may help you a little."
-    y "You only need to spend about seventeen minutes per day, on all seven days of the week to gain all the benefits of it."
-    y "It's a small cost for a large benefit."
+    y "Pasar más tiempo en la naturaleza puede ayudarte un poco."
+    y "Solo necesitas pasar alrededor de diecisiete minutos por día, en los siete días de la semana para obtener todos los beneficios de ello."
+    y "Es un costo pequeño por un gran beneficio."
     $ show_fits_standing("pareo_yuri_7")
-    y "Or I am being inconsiderate here?"
+    y "¿O estoy siendo desconsiderada aquí?"
 
 
 
 
     $ show_fits_standing("pareo_yuri_9")
-    y "Maybe..."
+    y "Tal vez..."
     $ show_fits_standing("pareo_yuri_16")
-    y "Is it possible for you to have a garden in your house? Or do you already have one?"
-    y "Maybe you can start one by planting something in your backyard, if you have one."
-    y "If you are unable to do so, another option is to keep them in pots."
-    y "But if you are going to take this humble advice, I have to tell you something about how to care for plants."
+    y "¿Es posible para ti tener un jardín en tu casa? ¿O ya tienes uno?"
+    y "Tal vez puedes empezar uno plantando algo en tu patio trasero, si tienes uno."
+    y "Si eres incapaz de hacerlo, otra opción es mantenerlas en macetas."
+    y "Pero si vas a tomar este humilde consejo, tengo que decirte algo sobre cómo cuidar de las plantas."
     $ show_fits_standing("pareo_yuri_14")
-    y "It's always better to know which kind of plant you want, and what kind of care they require."
-    y "You have to be careful that you're not over-watering them, as most plants do not require too much water to stay healthy."
-    y "Different plants require different amounts of sunlight too... You'll have to be careful with plants that are sensitive to large amounts of direct sunlight."
+    y "Siempre es mejor saber qué tipo de planta quieres, y qué tipo de cuidado requieren."
+    y "Tienes que tener cuidado de no regarlas en exceso, ya que la mayoría de las plantas no requieren demasiada agua para mantenerse saludables."
+    y "Diferentes plantas requieren diferentes cantidades de luz solar también... Tendrás que ser cuidadoso con plantas que son sensibles a grandes cantidades de luz solar directa."
     $ show_fits_standing("pareo_yuri_5")
-    y "Some good choices for beginners are the snake plant, the spider plant, the dracaena species, and succulent plants..."
-    y "If you're interested, you should do a bit of research on them."
-    y "Taking up hobbies like this can help you to find some entertainment and peace..."
+    y "Algunas buenas opciones para principiantes son la lengua de suegra, la cinta, las especies de dracaena, y plantas suculentas..."
+    y "Si estás interesado, deberías investigar un poco sobre ellas."
+    y "Adoptar pasatiempos como este puede ayudarte a encontrar algo de entretenimiento y paz..."
     $ show_fits_standing("pareo_yuri_14")
 
-    y "Don't forget that you can also use your free time to learn new things, or exercise your body."
-    y "You should always take care of your body and mind, so those are good ways to start a healthy routine."
+    y "No olvides que también puedes usar tu tiempo libre para aprender nuevas cosas, o ejercitar tu cuerpo."
+    y "Siempre deberías cuidar de tu cuerpo y mente, así que esas son buenas formas de empezar una rutina saludable."
     $ show_fits_standing("pareo_yuri_2")
-    y "And I would love to see you in good health, both mentally and physically."
-    y "But... will take my advice into consideration, [player]?"
+    y "Y me encantaría verte con buena salud, tanto mental como físicamente."
+    y "Pero... ¿tomarás mi consejo en consideración, [player]?"
 
     menu:
-        "I'll try... but no promises.":
+        "Lo intentaré... pero no prometo nada.":
             $ show_fits_standing("pareo_yuri_14")
-            y "Well, that's fine [player]."
-            y "At least you're going to make an effort."
-            y "It's better than nothing..."
-            y "Maybe in the process, you'll find this practice much easier over time."
+            y "Bueno, eso está bien [player]."
+            y "Al menos vas a hacer un esfuerzo."
+            y "Es mejor que nada..."
+            y "Tal vez en el proceso, encontrarás esta práctica mucho más fácil con el tiempo."
             $ show_fits_standing("pareo_yuri_5")
-            y "If you find time in your daily routine to take in nature, or to perform some healthy practices, you'll probably adapt to the change."
-            y "Once you get used to it, you won't even notice the difference between this and your other daily activities."
-            y "In other words, it would become natural for you, even casual maybe."
-            y "But that is just if you are able to keep this routine, of course."
-            y "Don't feel pressured to do so."
-        "Alright, [persistent.yuri_nickname], from now on that will be a part of my daily routine.":
+            y "Si encuentras tiempo en tu rutina diaria para disfrutar de la naturaleza, o para realizar algunas prácticas saludables, probablemente te adaptarás al cambio."
+            y "Una vez que te acostumbres, ni siquiera notarás la diferencia entre esto y tus otras actividades diarias."
+            y "En otras palabras, se volvería natural para ti, incluso casual tal vez."
+            y "Pero eso es solo si eres capaz de mantener esta rutina, por supuesto."
+            y "No te sientas presionado a hacerlo."
+        "Está bien, [persistent.yuri_nickname], de ahora en adelante eso será parte de mi rutina diaria.":
 
             $ show_fits_standing("pareo_yuri_16")
-            y "I am so glad to hear that, my love!"
-            y "This way you will stay healthier and less stressed..."
-            y "Which means that you will be around here with me much longer."
-            y "And also, a practice that gives some tranquility would be helpful for keeping a good mood."
+            y "¡Me alegra tanto escuchar eso, mi amor!"
+            y "De esta manera te mantendrás más saludable y menos estresado..."
+            y "Lo que significa que estarás por aquí conmigo mucho más tiempo."
+            y "Y también, una práctica que da algo de tranquilidad sería útil para mantener un buen estado de ánimo."
             $ show_fits_standing("pareo_yuri_5")
-            y "We all need to get away to release all the burden of our everyday problems and pressures..."
-            y "And it's better to do that in a healthy way."
-            y "J-just remember to be safe if you are going outside, okay?"
+            y "Todos necesitamos escaparnos para liberar toda la carga de nuestros problemas y presiones cotidianas..."
+            y "Y es mejor hacer eso de una manera saludable."
+            y "S-solo recuerda estar seguro si vas a salir, ¿de acuerdo?"
             $ show_fits_standing("pareo_yuri_1")
-            y "The point of all of this is to keep you healthy."
-        "I appreciate your advice, but I am not going to be able to do so.":
+            y "El punto de todo esto es mantenerte saludable."
+        "Aprecio tu consejo, pero no voy a ser capaz de hacerlo.":
 
 
 
             $ show_fits_standing("pareo_yuri_8")
             y "Ohhh..."
-            y "That's a shame, but don't worry too much about it..."
-            y "Even if you are unable to keep a routine like that, it is completely understandable."
-            y "Just remember that, if you find some time to do keep healthy routines in the future..."
+            y "Es una lástima, pero no te preocupes demasiado por ello..."
+            y "Incluso si eres incapaz de mantener una rutina como esa, es completamente comprensible."
+            y "Solo recuerda que, si encuentras algo de tiempo para mantener rutinas saludables en el futuro..."
             $ show_fits_standing("pareo_yuri_16")
-            y "It would be better to not waste the opportunity."
-            y "To make it clear, this was not to pressure you to do anything, it's just a suggestion."
-            y "You are free to choose if you take it or not. And as I said before, there is no problem with that."
+            y "Sería mejor no desperdiciar la oportunidad."
+            y "Para dejarlo claro, esto no fue para presionarte a hacer nada, es solo una sugerencia."
+            y "Eres libre de elegir si la tomas o no. Y como dije antes, no hay problema con eso."
 
     $ show_fits_standing("pareo_yuri_1")
     y "Now let's rest a little bit longer... I want to show you some other things I prepared."
@@ -3031,140 +3030,140 @@ label tropical_date:
     hide beach_5
 
     $ show_fits_standing("swimsuit_yuri_5")
-    y "Okay... I think it's time to move on..."
-    y "Even if I enjoy these moments of relaxation and resting..."
-    y "We are not going to spend the rest of this day just sitting here, right?"
+    y "Bien... creo que es hora de continuar..."
+    y "Incluso si disfruto estos momentos de relajación y descanso..."
+    y "No vamos a pasar el resto del día solo sentados aquí, ¿verdad?"
     $ show_fits_standing("swimsuit_yuri_1")
-    y "That would ruin all the other plans I had for this wonderful date."
-    y "This is just a small part of it, a delightful one of course, but we are not done yet."
-    y "You know... there is something I always wondered about being on a beach."
+    y "Eso arruinaría todos los otros planes que tenía para esta maravillosa cita."
+    y "Esta es solo una pequeña parte de ella, una encantadora por supuesto, pero aún no terminamos."
+    y "Sabes... hay algo que siempre me pregunté sobre estar en la playa."
     $ show_fits_standing("swimsuit_yuri_14")
-    y "People in your world really seem to enjoy the fresh touch of the seawater around their bodies..."
-    y "The freshness of the seawater with the intense heat, mixing together to create an atmosphere of balance between contrasting temperatures."
-    y "That makes me wonder, how does it feel to have the blazing sun warming your body..."
+    y "La gente en tu mundo realmente parece disfrutar el toque fresco del agua de mar alrededor de sus cuerpos..."
+    y "La frescura del agua de mar con el calor intenso, mezclándose para crear una atmósfera de equilibrio entre temperaturas contrastantes."
+    y "Eso me hace preguntarme, ¿cómo se siente tener el sol abrasador calentando tu cuerpo..."
     $ show_fits_standing("swimsuit_yuri_5")
-    y "While at the same time cooling down and refreshing yourself with the gentle seawater."
-    y "It's really a wonderful experience I always wanted to try..."
-    y "...But now that I think about it, I had a similar experience before, but it was... a really weird one..."
+    y "Mientas que al mismo tiempo te refrescas con la suave agua de mar?"
+    y "Realmente es una experiencia maravillosa que siempre quise probar..."
+    y "...Pero ahora que lo pienso, tuve una experiencia similar antes, pero fue... una muy extraña..."
     $ show_fits_standing("swimsuit_yuri_8")
-    y "And one that ended pretty bad."
+    y "Y una que terminó bastante mal."
     y "..."
     y "Uhhh..."
     $ show_fits_standing("swimsuit_yuri_3")
-    y "Forget I said anything!"
-    y "I apologize for rambling nonsense..."
-    y "I don't know what I was thinking, honestly..."
+    y "¡Olvida que dije algo!"
+    y "Me disculpo por divagar tonterías..."
+    y "No sé qué estaba pensando, honestamente..."
     $ show_fits_standing("swimsuit_yuri_8")
-    y "I just went off topic with some thinking, that's all."
+    y "Solo me salí del tema con algunos pensamientos, eso es todo."
     $ show_fits_standing("swimsuit_yuri_12")
-    y "But going back on topic, as I expressed before, I was excited with the idea of taking a dip in the waters of a beach."
+    y "Pero volviendo al tema, como expresé antes, estaba emocionada con la idea de darme un chapuzón en las aguas de una playa."
     $ show_fits_standing("swimsuit_yuri_5")
-    y "And now I have the opportunity to give it a try!"
-    y "It should be clear at this point what we are about to do, right?"
-    y "It's time to take a nice dip into the waters of this beautiful beach, that was made with that exact purpose, only for us."
+    y "¡Y ahora tengo la oportunidad de intentarlo!"
+    y "Debería estar claro en este punto lo que estamos a punto de hacer, ¿verdad?"
+    y "Es hora de tomar un buen baño en las aguas de esta hermosa playa, que se hizo con ese exacto propósito, solo para nosotros."
     $ show_fits_standing("swimsuit_yuri_6")
-    y "I hope you didn't misunderstand what I was trying to say, ehehe..."
-    y "Uhhh... I just... realized something..."
-    y "If we are going to take a dip right now, that would mean... I would have to get rid of the c-clothes that I am wearing right now..."
+    y "Espero que no hayas malinterpretado lo que estaba tratando de decir, ehehe..."
+    y "Uhhh... Solo... me di cuenta de algo..."
+    y "Si vamos a darnos un baño justo ahora, eso significaría... que tendría que deshacerme de la r-ropa que estoy usando ahora..."
     $ show_fits_standing("swimsuit_yuri_7")
-    y "...I-I can't just... get this pareo wet... So I would have to keep... just the swimsuit..."
-    y "Oh my... This is so embarrassing... "
+    y "...N-no puedo simplemente... mojar este pareo... Así que tendría que quedarme... solo con el traje de baño..."
+    y "Oh cielos... Esto es tan vergonzoso... "
     y "..."
     menu:
-        "There is nothing wrong with that [persistent.yuri_nickname]. It's normal to wear such clothes on the beach.":
+        "No hay nada malo con eso [persistent.yuri_nickname]. Es normal usar esa ropa en la playa.":
             $ show_fits_standing("swimsuit_yuri_8")
             y "..."
-            y "Well... In some way, you are right..."
-            y "But still... It is not just that simple."
-            y "Don't you understand? My whole life I have been..."
+            y "Bueno... De alguna manera, tienes razón..."
+            y "Pero aún así... No es así de simple."
+            y "¿No lo entiendes? Toda mi vida he estado..."
             $ show_fits_standing("swimsuit_yuri_9")
-            y "Insecure about... about all of myself. My whole being, my body, my behavior, everything..."
-            y "I know this was all my idea... how foolish of me to not have thought about this."
-            y "This is all my fault."
-            y "If you are upset now, I can completely understand that..."
+            y "Insegura sobre... sobre todo de mí misma. Todo mi ser, mi cuerpo, mi comportamiento, todo..."
+            y "Sé que todo esto fue mi idea... qué tonta fui al no haber pensado en esto."
+            y "Todo esto es mi culpa."
+            y "Si estás molesto ahora, puedo entenderlo completamente..."
             $ show_fits_standing("swimsuit_yuri_8")
-            y "I don't really know if I was too hyped about getting the experience without thinking about anything else, but at the same time..."
-            y "I don't want to disappoint you, fooling you into believing we were about to have a wonderful date..."
-            y "And throwing all of my effort to waste just because of my stupidity."
+            y "Realmente no sé si estaba demasiado emocionada por tener la experiencia sin pensar en nada más, pero al mismo tiempo..."
+            y "No quiero decepcionarte, engañándote para creer que estábamos a punto de tener una cita maravillosa..."
+            y "Y tirando todo mi esfuerzo a la basura solo por mi estupidez."
             y "..."
-        "[persistent.yuri_nickname], I am not upset at all. In fact, I'm encouraging you to be confident about this. This is what we wanted.":
+        "[persistent.yuri_nickname], no estoy molesto en lo absoluto. De hecho, te animo a que tengas confianza en esto. Esto es lo que queríamos.":
 
             $ show_fits_standing("swimsuit_yuri_9")
-            y "B-but that doesn't take away the fact that it's uncomfortable and embarrassing to get almost naked outdoors."
-            y "I'm just not used to this."
-        "But we are completely alone here, right? Nobody else is watching you except for me.":
+            y "P-pero eso no quita el hecho de que es incómodo y vergonzoso estar casi desnuda al aire libre."
+            y "Simplemente no estoy acostumbrada a esto."
+        "Pero estamos completamente solos aquí, ¿verdad? Nadie más te está viendo excepto yo.":
 
             $ show_fits_standing("swimsuit_yuri_7")
-            y "I... I am still having a hard time with this."
-            y "I know for a fact that it would be almost impossible for me to do this if there were more people around."
-            y "I am used to being a target of uncomfortable attention because of this kind of stuff."
-            y "The idea that I am going to get almost naked in public... it would be impossible for me if there were more people around."
+            y "Y... Yo todavía estoy teniendo dificultades con esto."
+            y "Sé con certeza que sería casi imposible para mí hacer esto si hubiera más gente alrededor."
+            y "Estoy acostumbrada a ser un blanco de atención incómoda debido a este tipo de cosas."
+            y "La idea de que voy a estar casi desnuda en público... sería imposible para mí si hubiera más gente alrededor."
             $ show_fits_standing("swimsuit_yuri_3")
-            y "But it's not just that."
-            y "Even before, I wasn't confident enough to show my naked arms to anyone, not even you..."
-            y "And now t-this... I am going to show you my body, full of my mistakes and all..."
-            y "Don't get me wrong, it's not like I don't trust you, it's just..."
+            y "Pero no es solo eso."
+            y "Incluso antes, no tenía la suficiente confianza para mostrar mis brazos desnudos a nadie, ni siquiera a ti..."
+            y "Y ahora e-esto... voy a mostrarte mi cuerpo, lleno de mis errores y todo..."
+            y "No me malinterpretes, no es como si no confiara en ti, es solo que..."
             $ show_fits_standing("swimsuit_yuri_7")
             y "..."
-            y "What am I even saying?"
-            y "Just ignore that..."
-            y "Even if this is still hard for me to do due to my lack of confidence..."
-            y "The only other person around here is you, and I really trust you, more than anyone in my entire life."
+            y "¿Qué estoy diciendo siquiera?"
+            y "Solo ignora eso..."
+            y "Incluso si esto todavía es difícil de hacer para mí debido a mi falta de confianza..."
+            y "La única otra persona aquí eres tú, y realmente confío en ti, más que en nadie en toda mi vida."
             $ show_fits_standing("swimsuit_yuri_10")
-            y "You give me confidence, so much so that I feel capable of anything."
-            y "But aside from that, there is just one thing that is still bothering me..."
-            y "The only thing I ask from you, is that you not judge me, or think anything less about me for..."
+            y "Me das confianza, tanto que me siento capaz de cualquier cosa."
+            y "Pero aparte de eso, hay solo una cosa que todavía me está molestando..."
+            y "La única cosa que te pido, es que no me juzgues, o pienses menos de mí por..."
             $ show_fits_standing("swimsuit_yuri_9")
-            y "For my mistakes, and all the wrong things I did to myself in the past."
+            y "Por mis errores, y todas las cosas malas que me hice a mí misma en el pasado."
 
     menu:
-        "You can trust me, I'm not going to judge. We all make mistakes.":
+        "Puedes confiar en mí, no voy a juzgar. Todos cometemos errores.":
             karma 2
             y "..."
-            y "Just forget that, sorry."
+            y "Solo olvida eso, perdón."
             $ show_fits_standing("swimsuit_yuri_9")
-            y "But now I don't really know if I am ready for something like this..."
-            y "There are... things about me that I wouldn't like you to see."
-            y "And I would like for you to keep a better image about me, r-rather than a disturbed one just for wearing more revealing clothes."
+            y "Pero ahora no sé realmente si estoy lista para algo como esto..."
+            y "Hay... cosas sobre mí que no me gustaría que vieras."
+            y "Y me gustaría que mantuvieras una mejor imagen de mí, e-en lugar de una perturbada solo por usar ropa más reveladora."
             $ show_fits_standing("swimsuit_yuri_5")
-            y "But if you can accept me with all my flaws, then we can keep going with this date."
-            y "I think that's clear enough..."
-            y "Now wait a moment, I need to change my clothes."
+            y "Pero si puedes aceptarme con todos mis defectos, entonces podemos seguir con esta cita."
+            y "Creo que eso es lo suficientemente claro..."
+            y "Ahora espera un momento, necesito cambiarme de ropa."
 
 
     show beach_1 zorder 100 with Fade(1.0, 0.5, 0.5)
     hide beach_4
 
     $ show_fits_standing("bikini_yuri_8")
-    y "O-okay, I am ready."
-    y "Then, what do you think, [player]? D-do you like the way I look?"
+    y "O-okey, estoy lista."
+    y "Entonces, ¿qué piensas, [player]? ¿T-te gusta cómo me veo?"
 
     menu:
-        "[persistent.yuri_nickname]! You look beautiful! There's nothing wrong with you at all!":
+        "¡[persistent.yuri_nickname]! ¡Te ves hermosa! ¡No hay nada malo contigo en lo absoluto!":
             $ show_fits_standing("bikini_yuri_16")
-            y "Oh dear..."
-            y "You are so kind to me... I-I really don't think I look {b}that{/b} good."
-            y "But I appreciate your saying so, don't get me wrong..."
-            y "In fact, I have to be honest here..."
+            y "Oh querido..."
+            y "Eres tan amable conmigo... R-realmente no creo que me vea {b}tan{/b} bien."
+            y "Pero aprecio que lo digas, no me malinterpretes..."
+            y "De hecho, tengo que ser honesta aquí..."
             $ show_fits_standing("bikini_yuri_14")
-            y "When I was planning all of this, I was wondering about what would suit me the best..."
-            y "So instead of just using the first clothes that came into my mind, I did a bit of research and experimentation about what kind of clothes looked better on me."
-            y "I just didn't want to show myself in clothes that you..."
-            y "Would consider, you know... boring to see..."
+            y "Cuando estaba planeando todo esto, me preguntaba sobre qué me quedaría mejor..."
+            y "Así que en lugar de usar la primera ropa que vino a mi mente, hice un poco de investigación y experimentación sobre qué tipo de ropa se veía mejor en mí."
+            y "Simplemente no quería mostrarme en ropa que tú..."
+            y "Consideraras, ya sabes... aburrida de ver..."
             $ show_fits_standing("bikini_yuri_15")
-            y "I don't want you to think I'm boring... I just don't want to be judged that way anymore..."
-            y "So, after a long debate with myself, I decided to try a more \"daring\" style, something that wouldn't look boring or ridiculous."
-            y "Like... the kind of clothes a \"shy\" and \"non-confident\" girl would wear on a beach..."
+            y "No quiero que pienses que soy aburrida... simplemente ya no quiero ser juzgada de esa manera..."
+            y "Así que, después de un largo debate conmigo misma, decidí probar un estilo más \"atrevido\", algo que no se viera aburrido o ridículo."
+            y "Como... el tipo de ropa que una chica \"tímida\" y \"sin confianza\" usaría en la playa..."
             $ show_fits_standing("bikini_yuri_16")
-            y "I... I'm just trying to say that I was trying my best for you, as always."
-            y "It's just that... maybe I am lacking more confidence to recognize it."
-            y "And just to make it clear again, I'm glad you think I look beautiful."
-            y "That... means a lot to me."
+            y "Y... Solo estoy tratando de decir que estaba haciendo mi mejor esfuerzo para ti, como siempre."
+            y "Es solo que... tal vez me falta más confianza para reconocerlo."
+            y "Y solo para dejarlo claro de nuevo, me alegra que pienses que me veo hermosa."
+            y "Eso... significa mucho para mí."
             $ show_fits_standing("bikini_yuri_13")
-            y "Thank you for that."
-            y "Now, I need to stop rambling so much here, and get back to business."
-            y "The blue water reflecting the bright sunlight looks quite tempting, and I don't want to waste any more time."
-            y "Let's go."
+            y "Gracias por eso."
+            y "Ahora, necesito dejar de divagar tanto aquí, y volver al asunto."
+            y "El agua azul reflejando la brillante luz del sol se ve bastante tentadora, y no quiero desperdiciar más tiempo."
+            y "Vamos."
 
 
     show beach_6 zorder 100 with Fade(1.0, 0.5, 0.5)
@@ -3172,93 +3171,93 @@ label tropical_date:
 
     $ show_fits_standing("bikini_yuri_13")
     y "..."
-    y "This is..."
-    y "The sensation... it's exactly how I imagined it would be."
+    y "Esto es..."
+    y "La sensación... es exactamente como imaginé que sería."
     y "Ohhh..."
-    y "I can see now that all the effort was worth it."
+    y "Ahora puedo ver que todo el esfuerzo valió la pena."
     $ show_fits_standing("bikini_yuri_5")
-    y "Everything resulted perfectly... the gentle softness of the sand that I can feel with my feet."
-    y "The water flowing around my body feels so refreshing on such a warm day!"
+    y "Todo resultó perfectamente... la suave delicadeza de la arena que puedo sentir con mis pies."
+    y "¡El agua fluyendo alrededor de mi cuerpo se siente tan refrescante en un día tan caluroso!"
     $ show_fits_standing("bikini_yuri_2")
-    y "It feels like a perfect balance in this climate... allowing us to be in the middle of all this intense heat, without it being uncomfortable."
-    y "It really is amazing to feel such a sensation, after being confined for so much time in a static room..."
-    y "But don't think I blame you for that!"
+    y "Se siente como un equilibrio perfecto en este clima... permitiéndonos estar en medio de todo este calor intenso, sin que sea incómodo."
+    y "Realmente es asombroso sentir tal sensación, después de estar confinada por tanto tiempo en una habitación estática..."
+    y "¡Pero no creas que te culpo por eso!"
     $ show_fits_standing("bikini_yuri_6")
-    y "It's exactly the opposite. I always wanted to experience this with you, at least once..."
-    y "Even if I am still technically imprisoned in the same world... the effort was worth it."
-    y "It would be also a waste to not do this with you at my side... maybe without you, this would be all meaningless..."
+    y "Es exactamente lo opuesto. Siempre quise experimentar esto contigo, al menos una vez..."
+    y "Incluso si técnicamente todavía estoy aprisionada en el mismo mundo... el esfuerzo valió la pena."
+    y "También sería un desperdicio no hacer esto contigo a mi lado... tal vez sin ti, todo esto no tendría sentido..."
     $ show_fits_standing("bikini_yuri_2")
-    y "And for that, I think that to some degree I owe this experience to you, for being at my side, in the most important moments of my life."
-    y "Such as this. A brand new experience for me, after being pretty much locked in a room."
-    y "But we can't just spend the entire day just standing here, looking at each other, right?"
+    y "Y por eso, creo que hasta cierto punto te debo esta experiencia a ti, por estar a mi lado, en los momentos más importantes de mi vida."
+    y "Tales como este. Una experiencia nueva para mí, después de estar prácticamente encerrada en una habitación."
+    y "Pero no podemos simplemente pasar todo el día parados aquí, mirándonos el uno al otro, ¿verdad?"
     $ show_fits_standing("bikini_yuri_5")
-    y "I want to try something with you, but... I don't know if you are used to this kind of thing..."
-    y "[player], do you know how to swim?"
-    y "I won't judge if you are unable to do so, we can do other things instead..."
+    y "Quiero intentar algo contigo, pero... no sé si estás acostumbrado a este tipo de cosas..."
+    y "[player], ¿sabes nadar?"
+    y "No juzgaré si eres incapaz de hacerlo, podemos hacer otras cosas en su lugar..."
 
     python:
         move_along = False 
     menu:
-        "I don't think there is a problem at all. We are in a simulated world, there is nothing capable of harming us.":
+        "No creo que haya ningún problema. Estamos en un mundo simulado, no hay nada capaz de dañarnos.":
             $ show_fits_standing("bikini_yuri_15")
-            y "Oh! You are... completely right about that. I don't know what I was thinking when I asked such things."
-            y "Maybe I was getting too immersed with this experience that I..."
-            y "I kind of forgot we are still in a game..."
-            y "I apologize for being so silly, I hope I didn't ruin this for you."
+            y "¡Oh! Tienes... toda la razón sobre eso. No sé qué estaba pensando cuando pregunté tales cosas."
+            y "Tal vez me estaba inmersa demasiado en esta experiencia que yo..."
+            y "Como que olvidé que todavía estamos en un juego..."
+            y "Me disculpo por ser tan tonta, espero no haber arruinado esto para ti."
             $ show_fits_standing("bikini_yuri_8")
-            y "Also, this idea may have broken the immersion for you, since probably you don't have any way to experience swimming in the water."
-            y "While playing the mod at the same time, of course."
-            y "Maybe we should move forward with something else..."
+            y "Además, esta idea puede haber roto la inmersión para ti, ya que probablemente no tienes ninguna forma de experimentar nadar en el agua."
+            y "Mientras juegas el mod al mismo tiempo, por supuesto."
+            y "Tal vez deberíamos avanzar con algo más..."
             python:
                 move_along = True
-        "Don't worry about that [persistent.yuri_nickname]. What matters here is having fun, and I'm having fun.":
+        "No te preocupes por eso [persistent.yuri_nickname]. Lo que importa aquí es divertirse, y yo me estoy divirtiendo.":
 
             $ show_fits_standing("bikini_yuri_13")
-            y "I'm so glad to hear you say that."
-            y "So it seems that this idea didn't ruin the experience for you."
-            y "And you are still enjoying this date. Good."
-            y "But with that said, we should move forward."
+            y "Me alegra tanto escucharte decir eso."
+            y "Así que parece que esta idea no arruinó la experiencia para ti."
+            y "Y todavía estás disfrutando esta cita. Bien."
+            y "Pero dicho eso, deberíamos avanzar."
             python:
                 move_along = False
-        "Why are you asking such questions? This is a game, I don't think that I have to swim at all.":
+        "¿Por qué estás haciendo esas preguntas? Esto es un juego, no creo que tenga que nadar en lo absoluto.":
 
             $ show_fits_standing("bikini_yuri_8")
             y "..."
-            y "Uhhh... yeah, I think I got too excited with that idea."
-            y "I apologize for behaving in such a foolish way."
-            y "Maybe I shouldn't have suggested it."
-            y "I should have considered the fact that you can't experience such things while playing the mod in your world."
-            y "It is unlikely that you are playing this while being in a pool or a bathtub."
+            y "Uhhh... sí, creo que me emocioné demasiado con esa idea."
+            y "Me disculpo por comportarme de una manera tan tonta."
+            y "Tal vez no debí haberlo sugerido."
+            y "Debería haber considerado el hecho de que no puedes experimentar tales cosas mientras juegas el mod en tu mundo."
+            y "Es poco probable que estés jugando esto mientras estás en una piscina o una bañera."
             $ show_fits_standing("bikini_yuri_14")
-            y "Maybe we should move on with another activity, right?"
-            y "After all, we have a lot of other things to do."
+            y "Tal vez deberíamos seguir con otra actividad, ¿verdad?"
+            y "Después de todo, tenemos muchas otras cosas que hacer."
             python:
                 move_along = True
-        "Don't worry, we can continue.":
+        "No te preocupes, podemos continuar.":
 
             $ show_fits_standing("bikini_yuri_7")
-            y "Okay..."
-            y "I will... Take that into consideration."
-            y "Maybe I should be more careful the next time I suggest something..."
-            y "Thinking in ways to keep the immersion for you shouldn't be too difficult for me, after all."
+            y "Está bien..."
+            y "Lo... tomaré en consideración."
+            y "Tal vez debería ser más cuidadosa la próxima vez que sugiera algo..."
+            y "Pensar en formas de mantener la inmersión para ti no debería ser muy difícil para mí, después de todo."
             $ show_fits_standing("bikini_yuri_8")
-            y "But for now, let's just continue with the date."
+            y "Pero por ahora, solo continuemos con la cita."
             python:
                 move_along = False
-        "We should probably move on with something else, if that doesn't bother you.":
+        "Probablemente deberíamos pasar a otra cosa, si eso no te molesta.":
 
 
             $ show_fits_standing("bikini_yuri_7")
             y "..."
-            y "Yeah, we should probably move on with something else."
-            y "I don't want to force you to do anything you don't want to do."
-            y "After all, how can I have fun with you if you're not enjoying yourself?"
-            y "It would be... unfair, at least from my perspective."
+            y "Sí, probablemente deberíamos pasar a otra cosa."
+            y "No quiero forzarte a hacer nada que no quieras hacer."
+            y "Después de todo, ¿cómo puedo divertirme contigo si no te estás divirtiendo?"
+            y "Sería... injusto, al menos desde mi perspectiva."
             $ show_fits_standing("bikini_yuri_8")
-            y "However, I would like to think you are interested in my opinions about the activities in this mod too."
-            y "But anyways... let's move on then."
-            y "Just give me a second to get the other activities ready, and to get myself ready for them."
-            y "I won't delay this too much."
+            y "Sin embargo, me gustaría pensar que estás interesado en mis opiniones sobre las actividades en este mod también."
+            y "Pero de todos modos... sigamos adelante entonces."
+            y "Solo dame un segundo para tener las otras actividades listas, y para prepararme para ellas."
+            y "No retrasaré esto demasiado."
             y "..."
             python:
                 move_along = True
@@ -3267,102 +3266,99 @@ label tropical_date:
         jump Beach_Desserts
 
     $ show_fits_standing("bikini_yuri_16")
-    y "Now I am going to ask you to come with me to a deeper area..."
-    y "And don't worry about the tides, they are not very strong here, so there is no risk of being washed away."
-    y "Just relax and let your body flow with the current..."
-    y "That way you will be able to float easier... this is all about relaxation [player]."
+    y "Ahora te voy a pedir que vengas conmigo a un área más profunda..."
+    y "Y no te preocupes por las mareas, no son muy fuertes aquí, así que no hay riesgo de ser arrastrado."
+    y "Solo relájate y deja que tu cuerpo fluya con la corriente..."
+    y "De esa manera serás capaz de flotar más fácil... todo esto se trata de relajación [player]."
     $ show_fits_standing("bikini_yuri_13")
-    y "Isn't it interesting though, the fact the human body can float like a feather when it is in deep waters?"
-    y "Like if all the weight of our bodies and our personal burdens were just nothing."
-    y "But if you start panicking, then you are in danger of sinking and drowning easily."
+    y "¿No es interesante, el hecho de que el cuerpo humano pueda flotar como una pluma cuando está en aguas profundas?"
+    y "Como si todo el peso de nuestros cuerpos y nuestras cargas personales fueran simplemente nada."
+    y "Pero si empiezas a entrar en pánico, entonces estás en peligro de hundirte y ahogarte fácilmente."
     $ show_fits_standing("bikini_yuri_8")
-    y "That's... much like real life in a certain way, isn't it?"
-    y "When we are panicking, we tend to make decisions in a hurry, without thinking twice about the consequences."
-    y "That can get us into even more trouble, instead of solving our actual problem..."
-    y "But in the end, isn't this part of the human instinct to survive? Something that is deep within our own nature?"
-    y "We can't act in a completely rational way nonstop, for the rest of our lives."
-    y "At some point, we are going to be scared. We are always going to panic in certain situations, and I guess that's right, because we can't change it."
+    y "Eso es... muy parecido a la vida real en cierta manera, ¿no es así?"
+    y "Cuando estamos entrando en pánico, tendemos a tomar decisiones apresuradas, sin pensar dos veces sobre las consecuencias."
+    y "Eso puede meternos en aún más problemas, en lugar de resolver nuestro problema real..."
+    y "Pero al final, ¿no es esto parte del instinto humano de sobrevivir? ¿Algo que está profundamente dentro de nuestra propia naturaleza?"
+    y "No podemos actuar de una manera completamente racional sin parar, por el resto de nuestras vidas."
+    y "En algún punto, vamos a estar asustados. Siempre vamos a entrar en pánico en ciertas situaciones, y supongo que eso está bien, porque no podemos cambiarlo."
     $ show_fits_standing("bikini_yuri_7")
-    y "Isn't this an inherent flaw in mankind that puts them in danger?"
-    y "What do you think about this [player]? Is this the biggest issue with humans?"
+    y "¿No es esto un defecto inherente en la humanidad que los pone en peligro?"
+    y "¿Qué piensas sobre esto [player]? ¿Es este el mayor problema con los humanos?"
 
     menu:
-        "I think that we can't take that from human beings, but we should always be ready for the hard moments of life.":
+        "Creo que no podemos quitarle eso a los seres humanos, pero siempre debemos estar listos para los momentos difíciles de la vida.":
             $ show_fits_standing("bikini_yuri_8")
-            y "Well... I think that is a good way to solve this problem."
-            y "While this is a part of human nature that we can't change..."
-            y "We can still however change how we manage to solve those moments of fear and uncertainty."
-            y "Instead of running away from the problem, we should be aware that sooner or later, problems are going to arrive."
+            y "Bueno... creo que esa es una buena manera de resolver este problema."
+            y "Mientras que esta es una parte de la naturaleza humana que no podemos cambiar..."
+            y "Podemos sin embargo cambiar cómo logramos resolver esos momentos de miedo e incertidumbre."
+            y "En lugar de huir del problema, deberíamos estar conscientes de que tarde o temprano, los problemas van a llegar."
             $ show_fits_standing("bikini_yuri_7")
-            y "And for that, we have to learn how to confront them, learn how to manage those emotions and feelings that overwhelm us sometimes."
-            y "I have to say that I truly agree with that point of view."
-            y "Even if it's... really complicated for me to put that way of thinking into practice sometimes..."
+            y "Y por eso, tenemos que aprender cómo confrontarlos, aprender cómo manejar esas emociones y sentimientos que nos abruman a veces."
+            y "Tengo que decir que realmente estoy de acuerdo con ese punto de vista."
+            y "Incluso si es... realmente complicado para mí poner esa forma de pensar en práctica a veces..."
             $ show_fits_standing("bikini_yuri_5")
-            y "B-but anyways, sorry for all of that rambling... I didn't mean to get carried away."
-            y "Especially when we are supposed to be relaxing."
-        "Maybe those mechanisms tend to work against us, but it's impossible to stay rational all the time.":
+            y "P-pero de todos modos, perdón por todo ese divague... no quise dejarme llevar."
+            y "Especialmente cuando se supone que deberíamos estar relajándonos."
+        "Tal vez esos mecanismos tienden a trabajar en nuestra contra, pero es imposible mantenerse racional todo el tiempo.":
 
             $ show_fits_standing("bikini_yuri_7")
-            y "I think you are right about that."
-            y "It is impossible for the human mind to stay rational and take some time to think clearly when there is an imminent danger, right?"
-            y "Well, while that is true for most people, some people in your world are trained to keep their heads cool in tense or menacing situations."
+            y "Creo que tienes razón sobre eso."
+            y "Es imposible para la mente humana mantenerse racional y tomarse un tiempo para pensar claramente cuando hay un peligro inminente, ¿verdad?"
+            y "Bueno, aunque eso es cierto para la mayoría de la gente, algunas personas en tu mundo están entrenadas para mantener la cabeza fría en situaciones tensas o amenazantes."
             $ show_fits_standing("bikini_yuri_8")
-            y "For example, think about soldiers that are bomb disposals."
-            y "That kind of job requires you to not freeze, or enter in a panic state."
-            y "And I know for a fact that there are professionals that can make such tasks look easy."
-            y "So, while you are right in some way, I think we can also train ourselves to be more rational."
+            y "Por ejemplo, piensa en los soldados que son técnicos en desactivación de bombas."
+            y "Ese tipo de trabajo requiere que no te congeles, o entres en un estado de pánico."
+            y "Y sé con certeza que hay profesionales que pueden hacer que tales tareas parezcan fáciles."
+            y "Así que, mientras que tienes razón en alguna forma, creo que también podemos entrenarnos para ser más racionales."
             $ show_fits_standing("bikini_yuri_5")
-            y "I think that being more rational is a better way to solve our problems, to survive in extreme situations..."
-            y "And to improve our lives, generally speaking."
-            y "I won't force you to change your mind about this though, this is still just my advice."
-        "I really don't know what to say about it [persistent.yuri_nickname], I don't think that much about those kinds of things.":
+            y "Creo que ser más racional es una mejor manera de resolver nuestros problemas, para sobrevivir en situaciones extremas..."
+            y "Y para mejorar nuestras vidas, hablando generalmente."
+            y "No te forzaré a cambiar tu opinión sobre esto, esto es solo mi consejo."
+        "Realmente no sé qué decir al respecto [persistent.yuri_nickname], no pienso tanto sobre ese tipo de cosas.":
 
             $ show_fits_standing("bikini_yuri_8")
             y "Ohhh..."
-            y "Well, even if I think that it is important to give things like this some kind of attention from time to time..."
-            y "Maybe this isn't the best time to discuss philosophical topics."
-            y "We are here to relax our bodies and minds, right?"
-            y "Sorry if this bothered you, I went and got too carried away with this topic."
-            y "Maybe we can discuss this another day."
+            y "Bueno, incluso si creo que es importante darle a cosas como esta algún tipo de atención de vez en cuando..."
+            y "Tal vez este no sea el mejor momento para discutir temas filosóficos."
+            y "Estamos aquí para relajar nuestros cuerpos y mentes, ¿verdad?"
+            y "Perdón si esto te molestó, me dejé llevar demasiado con este tema."
+            y "Tal vez podamos discutir esto otro día."
             $ show_fits_standing("bikini_yuri_5")
-            y "Let's focus on enjoying this moment, instead of rambling."
-            y "It's time to relax again..."
-            y "Don't think of anything else, just relax your mind and your body."
+            y "Enfoquémonos en disfrutar este momento, en lugar de divagar."
+            y "Es hora de relajarse de nuevo..."
+            y "No pienses en nada más, solo relaja tu mente y tu cuerpo."
             y "..."
             $ show_fits_standing("bikini_yuri_6")
-            y "Now, if you feel like your body is relaxed enough and your mind is completely free from any tension..."
+            y "Ahora, si sientes que tu cuerpo está lo suficientemente relajado y tu mente está completamente libre de cualquier tensión..."
 
-            y "Then that means we have achieved our goal here."
-            y "I just want to give you one more piece of advice about this."
-            $ show_fits_standing("bikini_yuri_5")
-            y "When you want to relax, and you are nowhere near to a tropical paradise with someone to share such an experience..."
-            y "But still want to feel like you are in the middle of the beach, try to enjoy the relaxing sounds of one."
-            y "Maybe you should try one of those relaxing YouTube videos that are extended versions of recorded sounds of nature."
+            y "Entonces eso significa que hemos logrado nuestro objetivo aquí."
+            y "Solo quiero darte un consejo más sobre esto."
+            y "Cuando quieras relajarte, y no estés en ningún lugar cerca de un paraíso tropical con alguien para compartir tal experiencia..."
+            y "Pero aún quieras sentir que estás en medio de la playa, trata de disfrutar los sonidos relajantes de una."
+            y "Tal vez deberíamos probar uno de esos videos relajantes de YouTube que son versiones extendidas de sonidos grabados de la naturaleza."
             $ show_fits_standing("bikini_yuri_16")
-            y "Some of those videos have beach sounds that you can play for hours."
-            y "You can choose between hearing only the sounds of the waves crashing against the rocks of a coast..."
-            y "Or maybe you prefer the sounds of more soft waves, accompanied with the signings of some sea birds."
+            y "Algunos de esos videos tienen sonidos de playa que puedes reproducir por horas."
+            y "Puedes elegir entre escuchar solo los sonidos de las olas rompiendo contra las rocas de una costa..."
+            y "O tal vez prefieras los sonidos de olas más suaves, acompañados con los cantos de algunas aves marinas."
             $ show_fits_standing("bikini_yuri_15")
-            y "What matters is that, if you get to try it someday, you should enjoy it."
-            y "Once again, that is just another bit of advice."
-            y "But now that it seems that we are done here... we should move on to something else."
-    jump Beach_Desserts
-
-label Beach_Desserts:
+            y "Lo que importa es que, si llegas a probarlo algún día, deberías disfrutarlo."
+            y "Una vez más, eso es solo otro pequeño consejo."
+            y "Pero ahora que parece que hemos terminado aquí... deberíamos pasar a otra cosa."
+    label Beach_Desserts:
 
     show beach_4 zorder 100 with Fade(1.0, 0.5, 0.5)
     hide beach_6
 
     $ show_fits_standing("bikini_yuri_6")
-    y "Now that we are back here... are you feeling a bit hungry, [player]?"
-    y "I think this is the perfect time for a quick snack after a long day."
-    y "But you may be wondering: what are we going to eat in the middle of a beach, right?"
-    y "Since we don't have any buildings, or other people around, not even the other girls of the club..."
+    y "Ahora que estamos de vuelta aquí... ¿tienes un poco de hambre, [player]?"
+    y "Creo que este es el momento perfecto para un bocadillo rápido después de un largo día."
+    y "Pero te estarás preguntando: ¿qué vamos a comer en medio de una playa, verdad?"
+    y "Ya que no tenemos ningún edificio, u otra gente alrededor, ni siquiera las otras chicas del club..."
     $ show_fits_standing("bikini_yuri_5")
-    y "Meaning that there are no restaurants, hotels, or anything similar to just go and eat."
-    y "Well, then I should tell you that I have a surprise that I prepared for this kind of situation."
-    y "Just wait a second so I can get it working."
-    y "This should work now..."
+    y "Lo que significa que no hay restaurantes, hoteles, o algo similar para solo ir y comer."
+    y "Bueno, entonces te diré que tengo una sorpresa que preparé para este tipo de situación."
+    y "Solo espera un segundo para que pueda ponerlo en marcha."
+    y "Esto debería funcionar ahora..."
 label check:
 
     python:
@@ -3381,139 +3377,139 @@ label check:
     $ show_chr("A-AAAAA-AAAA")
     hide black with Dissolve(0.5)
 
-    y "It seems that everything is working just fine..."
-    y "I made this cozy little cabin for the both of us to share and enjoy."
+    y "Parece que todo está funcionando bien..."
+    y "Hice esta pequeña cabaña acogedora para que ambos la compartamos y disfrutemos."
     $ show_chr("A-BBAAA-AAAA")
-    y "I did the best I could, so I hope you are pleased with the final result."
-    y "But anyway... you must be hungry after everything we've done."
-    y "And I don't want to keep you waiting for something to eat."
+    y "Hice lo mejor que pude, así que espero que estés complacido con el resultado final."
+    y "Pero de todos modos... debes tener hambre después de todo lo que hemos hecho."
+    y "Y no quiero hacerte esperar por algo de comer."
     $ show_chr("A-CCAAA-ADAA")
-    y "We came here to eat something after a long day of fun in a hot climate."
-    y "And I have another surprise for you, because we are not going to eat ordinary food..."
-    y "Instead, we are going to eat some delicious tropical food from around the world."
-    y "You see, the research I did for this date was not only to create the beach and its environment..."
+    y "Vinimos aquí a comer algo después de un largo día de diversión en un clima caluroso."
+    y "Y tengo otra sorpresa para ti, porque no vamos a comer comida ordinaria..."
+    y "En su lugar, vamos a comer algo de deliciosa comida tropical de alrededor del mundo."
+    y "Verás, la investigación que hice para esta cita no fue solo para crear la playa y su ambiente..."
     $ show_chr("A-CCABA-AEAJ")
-    y "But it was also to find out what people usually eat on a tropical trip."
+    y "Sino que también fue para averiguar qué come la gente usualmente en un viaje tropical."
     $ show_chr("A-IBABA-ALAL")
-    y "This made me discover the best desserts that people eat on tropical vacations."
-    y "I sincerely think that they stand out from the rest of the desserts I found."
-    y "I am not implying that other kinds of desserts are not good, don't get me wrong there."
+    y "Esto me hizo descubrir los mejores postres que la gente come en vacaciones tropicales."
+    y "Sinceramente creo que destacan del resto de los postres que encontré."
+    y "No estoy implicando que otros tipos de postres no sean buenos, no me malinterpretes."
     $ show_chr("A-CBABA-AMAM")
-    y "What I mean is that the ones we are going to try today are an indisputable delicacy."
-    y "I only have three of them available for you on this date, but I think that's enough."
-    y "I will have to ask you to choose between them..."
-    y "And since we are in completely different worlds, you will have to look for something similar to eat in your world."
+    y "Lo que quiero decir es que los que vamos a probar hoy son una exquisitez indiscutible."
+    y "Solo tengo tres de ellos disponibles para ti en esta cita, pero creo que eso es suficiente."
+    y "Tendré que pedirte que elijas entre ellos..."
+    y "Y dado que estamos en mundos completamente diferentes, tendrás que buscar algo similar para comer en tu mundo."
     $ show_chr("A-GBABA-ALAL")
-    y "If that's okay with you... this is all I can do."
-    y "But before you go, it would be wise to first show you the options I have prepared for you."
-    y "Then, depending on what you have chosen, you can go and look for something close to it."
+    y "Si te parece bien... esto es todo lo que puedo hacer."
+    y "Pero antes de que te vayas, sería sabio mostrarte primero las opciones que he preparado para ti."
+    y "Entonces, dependiendo de lo que hayas elegido, puedes ir y buscar algo cercano a ello."
     $ show_chr("A-ACAAA-ALAL")
-    y "It would also be helpful to give you the option of choosing something you already have in your world."
-    y "The first dessert I have is called the {i}Churchill{/i}."
-    y "This delicacy is made up of shaved ice, kola syrup, powdered milk, condensed milk, ice cream, and straw cookies on the top, and it's always served in a tall glass."
+    y "También sería útil darte la opción de elegir algo que ya tengas en tu mundo."
+    y "El primer postre que tengo se llama el {i}Churchill{/i}."
+    y "Esta exquisitez está hecha de hielo raspado, jarabe de kola, leche en polvo, leche condensada, helado, y galletas de barquillo en la cima, y siempre se sirve en un vaso alto."
     $ show_chr("A-BDAAA-ALAL")
-    y "The second dessert is one that you probably already know about."
-    y "The famous piña colada, a delicious cocktail made with rum, coconut milk, pineapple juice and shaken with ice."
+    y "El segundo postre es uno que probablemente ya conozcas."
+    y "La famosa piña colada, un coctel delicioso hecho con ron, leche de coco, jugo de piña y agitado con hielo."
     $ show_chr("A-GIABA-ACAM")
-    y "And finally, the third one is the amazing coconut flan."
-    y "Basically a baked custard, but with coconut milk, grated coconut, and some honey on the top of it."
-    y "Which one are you going to choose [player]?"
+    y "Y finalmente, el tercero es el asombroso flan de coco."
+    y "Básicamente una natilla horneada, pero con leche de coco, coco rallado, y algo de miel en la cima."
+    y "¿Cuál vas a elegir [player]?"
 
     python:
         yuri_dessert = 2
     menu:
-        "Coconut flan sounds good for me.":
+        "Flan de coco suena bien para mí.":
             python:
                 yuri_dessert = 0
             $ show_chr("A-GBABA-ALAL")
-            y "A very wise choice..."
-            y "My expectations for this dessert are very high, so I am hoping for it to be a delicacy without comparison."
+            y "Una elección muy sabia..."
+            y "Mis expectativas para este postre son muy altas, así que espero que sea una exquisitez sin comparación."
             $ show_chr("A-ICABA-ALAL")
-            y "Now I will give you a chance to get your own version of this dessert."
+            y "Ahora te daré una oportunidad de obtener tu propia versión de este postre."
             $ show_chr("A-IBABA-ALAL")
-            y "And don't worry, you don't need to hurry at all. I will be waiting for you here."
-        "I am going to choose the Piña Colada.":
+            y "Y no te preocupes, no necesitas apresurarte en absoluto. Te estaré esperando aquí."
+        "Voy a elegir la Piña Colada.":
 
             python:
                 yuri_dessert = 1
             $ show_chr("A-ACDBA-ACAA")
-            y "Going for the classics, eh?"
+            y "Yendo por los clásicos, ¿eh?"
             $ show_chr("A-ACABA-ALAA")
-            y "Well, that's understandable, considering how good the Piña Colada is..."
-            y "Now for you to go and look for something at least similar to this drink in your house."
-            y "However, it's completely fine if you are unable to find something like this in your house."
+            y "Bueno, eso es comprensible, considerando lo buena que es la Piña Colada..."
+            y "Ahora ve a buscar algo al menos similar a esta bebida en tu casa."
+            y "Sin embargo, está completamente bien si eres incapaz de encontrar algo como esto en tu casa."
             $ show_chr("A-BCABA-ALAA")
-            y "I wouldn't want you to get in trouble for drinking an alcoholic beverage, especially if you are underage or not allowed to do so for other reasons."
-            y "But otherwise, if you have no problems drinking, and you have something similar to a piña colada in your house, then there are no problems with giving it a try for the occasion."
+            y "No me gustaría que te metieras en problemas por beber una bebida alcohólica, especialmente si eres menor de edad o no se te permite hacerlo por otras razones."
+            y "Pero de lo contrario, si no tienes problemas bebiendo, y tienes algo similar a una piña colada en tu casa, entonces no hay problemas con darle una oportunidad para la ocasión."
             $ show_chr("A-ACABA-ALAA")
-            y "A-anyways, you can go now, I will be waiting for you here."
-        "I want to try the {i}Churchill{/i}.":
+            y "D-de todos modos, puedes irte ahora, te estaré esperando aquí."
+        "Quiero probar el {i}Churchill{/i}.":
 
 
             $ show_chr("A-CAABA-ACAM")
-            y "Oh, then you are someone who likes to try new things, aren't you?"
-            y "That's perfect."
-            y "And trust me, you are not going to regret giving this delicacy a chance."
+            y "Oh, entonces eres alguien a quien le gusta probar cosas nuevas, ¿no?"
+            y "Eso es perfecto."
+            y "Y confía en mí, no vas a arrepentirte de darle a esta exquisitez una oportunidad."
             $ show_chr("A-IAABA-ACAM")
-            y "Now you can go and look for something that at least is similar to this dessert to eat in your world."
-            y "I'll be waiting for your return here."
+            y "Ahora puedes ir y buscar algo que sea al menos similar a este postre para comer en tu mundo."
+            y "Estaré esperando tu regreso aquí."
 
 
     $ renpy.pause(delay = 5, hard = True)
 
     if yuri_dessert == 0:
         menu:
-            "I am back [persistent.yuri_nickname], and I have my dessert.":
+            "Estoy de vuelta [persistent.yuri_nickname], y tengo mi postre.":
                 $ show_chr("A-JBABA-ACAM")
-                y "That's perfect!"
-                y "Then we can begin to enjoy our desserts together."
-            "I am sorry, I can't find anything to eat at this moment.":
+                y "¡Eso es perfecto!"
+                y "Entonces podemos empezar a disfrutar nuestros postres juntos."
+            "Lo siento, no puedo encontrar nada para comer en este momento.":
 
-                y "You don't have to apologize for that, don't worry."
-                y "It's not that big of a deal, and you didn't know I was planning to do something like this."
-                y "If we were to blame someone here, that would be me."
-                y "I apologize for that..."
-                y "I am still going to try my own dessert though, and I hope that doesn't bother you..."
-                y "Just wait..."
+                y "No tienes que disculparte por eso, no te preocupes."
+                y "No es para tanto, y no sabías que planeaba hacer algo como esto."
+                y "Si tuviéramos que culpar a alguien aquí, esa sería yo."
+                y "Me disculpo por eso..."
+                y "Sin embargo, todavía voy a probar mi propio postre, y espero que eso no te moleste..."
+                y "Solo espera..."
 
     elif yuri_dessert == 1:
         menu:
-            "I am back [persistent.yuri_nickname], and I have my dessert.":
+            "Estoy de vuelta [persistent.yuri_nickname], y tengo mi postre.":
                 $ show_chr("A-JBABA-ACAM")
-                y "That's perfect!"
-                y "Then we can begin to enjoy our desserts together."
-            "I was unable to get anything similar to drink, sorry.":
+                y "¡Eso es perfecto!"
+                y "Entonces podemos empezar a disfrutar nuestros postres juntos."
+            "Fui incapaz de conseguir algo similar para beber, lo siento.":
 
                 $ show_chr("A-IEBBA-AMAM")
-                y "I see..."
-                y "Well, it's fine either way."
-                y "I wasn't expecting you to get a beverage, even more so when I didn't tell you beforehand that we would do something like this."
+                y "Ya veo..."
+                y "Bueno, está bien de cualquier forma."
+                y "No esperaba que consiguieras una bebida, aún más cuando no te dije de antemano que haríamos algo como esto."
                 $ show_chr("A-BEBBA-AMAM")
-                y "And again, if this is about you not being allowed to drink, that's fine too."
-                y "There is absolutely no problem with that, so don't worry."
+                y "Y de nuevo, si esto se trata de que no se te permite beber, eso está bien también."
+                y "No hay absolutamente ningún problema con eso, así que no te preocupes."
                 $ show_chr("A-ACABA-AMAM")
-                y "However, I am still going to try my own Piña Colada..."
-                y "Now excuse me, I have to get this working..."
+                y "Sin embargo, todavía voy a probar mi propia Piña Colada..."
+                y "Ahora discúlpame, tengo que hacer que esto funcione..."
     else:
 
         menu:
-            "I am back [persistent.yuri_nickname], and I have my dessert.":
+            "Estoy de vuelta [persistent.yuri_nickname], y tengo mi postre.":
                 $ show_chr("A-JBABA-ACAM")
-                y "That's perfect!"
-                y "Then we can begin to enjoy our desserts together."
-            "Unfortunately I didn't find anything like this.":
+                y "¡Eso es perfecto!"
+                y "Entonces podemos empezar a disfrutar nuestros postres juntos."
+            "Desafortunadamente no encontré nada como esto.":
 
                 $ show_chr("A-CEBBA-ACAL")
-                y "Oh well, that's a shame, but you don't have to worry about it."
-                y "It is my fault because once again I forgot to tell you to prepare something to eat beforehand."
+                y "Oh bueno, es una lástima, pero no tienes que preocuparte por ello."
+                y "Es mi culpa porque una vez más olvidé decirte que prepararas algo de comer de antemano."
                 $ show_chr("A-IEBBA-ACAL")
-                y "I apologize for that, but that is not really a big deal."
-                y "However, I still want to try my own dessert..."
+                y "Me disculpo por eso, pero eso no es realmente un gran problema."
+                y "Sin embargo, todavía quiero probar mi propio postre..."
                 $ show_chr("A-BKABA-ALAL")
-                y "I hope that doesn't bother you, but even if you don't get to eat anything..."
-                y "I do have an interesting story to tell you about this dessert however, so you don't get bored of just watching me eat."
+                y "Espero que eso no te moleste, pero incluso si no consigues comer nada..."
+                y "Tengo una historia interesante que contarte sobre este postre, para que no te aburras de solo verme comer."
                 $ show_chr("A-ICABA-ALAL")
-                y "Now I am going to bring in my dessert, just wait a second."
+                y "Ahora voy a traer mi postre, solo espera un segundo."
 
 
     show black zorder 200 with Fade(1.0, 0.5, 0.5)
@@ -3534,146 +3530,146 @@ label check:
     if yuri_dessert == 0:
         $ show_chr("A-ICABA-ALAL")
         y "Hmmm..."
-        y "Well, I have to say that I expected it to taste good, and it ended up exceeding my expectations!"
-        y "It says a lot about a dessert that looks so simple, but gives you such a sweet surprise."
+        y "Bueno, tengo que decir que esperaba que supiera bien, ¡y terminó excediendo mis expectativas!"
+        y "Dice mucho sobre un postre que se ve tan simple, pero te da una sorpresa tan dulce."
         $ show_chr("A-BDABA-ALAL")
-        y "And it's more impressive to know that this dessert is a world traveler..."
-        y "What I mean by that is that this dessert has traveled to different countries around the world, and even more impressive, this dessert is as ancient as the Roman Empire."
-        y "So it also makes it a culinary relic that proves that simple things are not always lame."
+        y "Y es más impresionante saber que este postre es un viajero mundial..."
+        y "A lo que me refiero con eso es que este postre ha viajado por diferentes países alrededor del mundo, y aún más impresionante, este postre es tan antiguo como el Imperio Romano."
+        y "Así que esto también lo hace una reliquia culinaria que prueba que las cosas simples no siempre son aburridas."
         $ show_chr("A-CCABA-ALAL")
-        y "And in the case of the coconut flan, I have to say that it has evolved through time in an excellent way."
-        y "Now going back to when I said this dessert is as ancient as the Roman Empire, it is because it originated there."
-        y "Many people in countries like Mexico or Spain think that they were the ones who created this dessert, but unfortunately for them, they are wrong."
+        y "Y en el caso del flan de coco, tengo que decir que ha evolucionado a través del tiempo de una manera excelente."
+        y "Ahora volviendo a cuando dije que este postre es tan antiguo como el Imperio Romano, es porque se originó allí."
+        y "Mucha gente en países como México o España piensa que fueron ellos quienes crearon este postre, pero desafortunadamente para ellos, están equivocados."
         $ show_chr("A-IAABA-ALAL")
-        y "The Romans were the first culture we know of that domesticated chickens, and they also stole a lot of Greek egg-based recipes after that."
-        y "With the amount of chicken eggs they had and the recipes they acquired from the Greeks, they ended up creating many dishes, including the famous flan."
-        y "But originally, flans were quite different from their current versions."
+        y "Los romanos fueron la primera cultura que conocemos que domesticó gallinas, y también robaron muchas recetas griegas basadas en huevos después de eso."
+        y "Con la cantidad de huevos de gallina que tenían y las recetas que adquirieron de los griegos, terminaron creando muchos platos, incluyendo el famoso flan."
+        y "Pero originalmente, los flanes eran bastante diferentes de sus versiones actuales."
         $ show_chr("A-BAABA-ALAL")
-        y "They were savory instead of sweet, and included flavors like eel... and yes, I know that sounds weird and even disgusting."
-        y "But those were very different times, and different cultures creating those recipes."
-        y "However, when the Roman Empire fell, the flan survived and started to change towards a more sweet taste, a variant with the modern ingredients we already know."
+        y "Eran salados en lugar de dulces, e incluían sabores como anguila... y sí, sé que eso suena raro e incluso asqueroso."
+        y "Pero esos eran tiempos muy diferentes, y diferentes culturas creando esas recetas."
+        y "Sin embargo, cuando el Imperio Romano cayó, el flan sobrevivió y comenzó a cambiar hacia un sabor más dulce, una variante con los ingredientes modernos que ya conocemos."
         $ show_chr("A-BAABA-ALAL")
-        y "Then the french from the seventh century called it 'flan', which means 'flat cake.' But that word evolved through time as well, since old French is different from modern French."
-        y "But the coconut flan didn't come from Europe..."
+        y "Luego los franceses del siglo siete lo llamaron 'flan', que significa 'torta plana'. Pero esa palabra evolucionó a través del tiempo también, ya que el francés antiguo es diferente del francés moderno."
+        y "Pero el flan de coco no vino de Europa..."
         $ show_chr("A-ICABA-AMAM")
-        y "Actually, it originated in Latin America after the Spanish conquerors brought it to the 'New Continent', bringing also the idea of putting caramel sauce on the top of the flan."
-        y "Latin Americans not only created the new variation of the coconut flan, but numerous different styles, ingredients, and flavors."
-        y "Each country has different ways to create its own flan, so it can be unique for every culture."
-        y "It can look simple in its appearance, but the flan is very rich in culture, history, and flavor."
+        y "En realidad, se originó en Latinoamérica después de que los conquistadores españoles lo trajeron al 'Nuevo Continente', trayendo también la idea de poner salsa de caramelo en la cima del flan."
+        y "Los latinoamericanos no solo crearon la nueva variación del flan de coco, sino numerosos estilos, ingredientes y sabores diferentes."
+        y "Cada país tiene diferentes maneras de crear su propio flan, así que puede ser único para cada cultura."
+        y "Puede verse simple en su apariencia, pero el flan es muy rico en cultura, historia y sabor."
         $ show_chr("A-BBABA-AMAM")
-        y "Not to mention that is delicious in almost any variant it has, but for now, I would say that the coconut flan is my favorite."
-        y "This also gets me thinking that... We shouldn't judge people just for the way they look..."
-        y "Neither we should judge things just for their apparent simplicity..."
+        y "Sin mencionar que es delicioso en casi cualquier variante que tenga, pero por ahora, diría que el flan de coco es mi favorito."
+        y "Esto también me hace pensar que... No deberíamos juzgar a las personas solo por la manera en que se ven..."
+        y "Tampoco deberíamos juzgar a las cosas solo por su aparente simplicidad..."
         $ show_chr("A-CFABA-AMAM")
-        y "It makes me remember that I was a bit rough judging the poems of Natsuki's 'last minute' style of writing, dismissing them completely."
-        y "That makes you incapable of seeing the complexity of simple things, of being surprised by them."
-        y "It is a way of losing the chance to enjoy those kinds of things in life... and to be honest, I wouldn't want to live like that."
+        y "Me hace recordar que fui un poco dura juzgando los poemas del estilo de escritura de 'último minuto' de Natsuki, descartándolos completamente."
+        y "Eso te hace incapaz de ver la complejidad de las cosas simples, de ser sorprendida por ellas."
+        y "Es una forma de perder la oportunidad de disfrutar ese tipo de cosas en la vida... y para ser honesta, no me gustaría vivir así."
         $ show_chr("A-ICABA-AMAM")
-        y "After all the time I've spent with you in this mod, I've learned that things like just sitting and talking, can have a lot of meaning and importance."
-        y "And to be honest, I hate the idea of not being able to be with you, just because sitting and talking in a game is not 'complex enough' or whatever."
+        y "Después de todo el tiempo que he pasado contigo en este mod, he aprendido que cosas como solo sentarse y hablar, pueden tener mucho significado e importancia."
+        y "Y para ser honesta, odio la idea de no ser capaz de estar contigo, solo porque sentarse y hablar en un juego no es 'lo suficientemente complejo' o lo que sea."
         $ show_chr("A-BCABA-ACAM")
-        y "I guess that we never stop learning new things, hmm?"
-        y "And I have to be grateful that you helped me to understand that, through a path full of sweetness and caring."
-        y "Thanks for that, my love..."
+        y "Supongo que nunca dejamos de aprender cosas nuevas, ¿hmm?"
+        y "Y tengo que estar agradecida de que me ayudaras a entender eso, a través de un camino lleno de dulzura y cariño."
+        y "Gracias por eso, mi amor..."
         $ show_chr("A-GCABA-ACAM")
-        y "I really appreciate this chance to be with you."
+        y "Realmente aprecio esta oportunidad de estar contigo."
 
 
     elif yuri_dessert == 1:
 
         $ show_chr("A-ICABA-ALAL")
-        y "Oh my!"
-        y "Now I understand why this drink became so popular!"
-        y "The taste of this drink is just amazing, and fits perfectly with any tropical trip."
-        y "We are here in the middle of the beach, all alone, and yet this drink still fits perfectly for this date."
+        y "¡Oh cielos!"
+        y "¡Ahora entiendo por qué esta bebida se volvió tan popular!"
+        y "El sabor de esta bebida es simplemente asombroso, y encaja perfectamente con cualquier viaje tropical."
+        y "Estamos aquí en medio de la playa, completamente solos, y aún así esta bebida encaja perfectamente para esta cita."
         $ show_chr("A-ICABA-ALAL")
-        y "And, even if I don't enjoy parties and crowded celebrations, I can still imagine this drink being a good choice for those occasions."
+        y "E, incluso si no disfruto las fiestas y las celebraciones concurridas, todavía puedo imaginar esta bebida siendo una buena elección para esas ocasiones."
         $ show_chr("A-CCABA-ALAL")
-        y "Now, it makes me wonder how someone was able to mix all these flavors from the tropics, and represent them in just one drink."
-        y "As if you were able to taste the tropical environment itself."
-        y "I did some research to find out who was the original creator of this drink, but I found out that many different people and even some restaurants and hotels claim to be the creators of the drink."
+        y "Ahora, me hace preguntarme cómo alguien fue capaz de mezclar todos estos sabores de los trópicos, y representarlos en solo una bebida."
+        y "Como si fueras capaz de probar el ambiente tropical mismo."
+        y "Hice algo de investigación para averiguar quién fue el creador original de esta bebida, pero descubrí que muchas personas diferentes e incluso algunos restaurantes y hoteles claman ser los creadores de la bebida."
         $ show_chr("A-ICABA-ALAL")
-        y "But many people believe that this drink was created in San Juan, the capital of Puerto Rico."
-        y "From the creativity of the bartender Ramón Marrero, this drink was born in a hotel of that location, called {i}Caribe Hilton{/i} in 1954."
-        y "After that, the popularization of this drink skyrocketed from the descriptions of the tourists who tried it and went back to their homelands, who went on and on about how good the piña colada was."
+        y "Pero mucha gente cree que esta bebida fue creada en San Juan, la capital de Puerto Rico."
+        y "De la creatividad del barman Ramón Marrero, esta bebida nació en un hotel de esa ubicación, llamado {i}Caribe Hilton{/i} en 1954."
+        y "Después de eso, la popularización de esta bebida se disparó por las descripciones de los turistas que la probaron y volvieron a sus tierras natales, quienes hablaban sin parar sobre lo buena que era la piña colada."
         $ show_chr("A-BBABA-AAAL")
-        y "Even Hollywood legends like Joan Crawford praised the drink, and in 1978 the Piña Colada became the national drink of Puerto Rico."
-        y "But the story about this drink doesn't end with its origins..."
-        y "Something that cemented this drink in popular culture more than testimonies about how good it was..."
+        y "Incluso leyendas de Hollywood como Joan Crawford alabaron la bebida, y en 1978 la Piña Colada se convirtió en la bebida nacional de Puerto Rico."
+        y "Pero la historia sobre esta bebida no termina con sus orígenes..."
+        y "Algo que cementó esta bebida en la cultura popular más que los testimonios sobre lo buena que era..."
         $ show_chr("A-CBABA-AAAL")
-        y "Was a song of Rupert Holmes that you may already know, called {i}Escape{/i}, who mentions this drink in the song, along with other lines about a romantic tropical trip..."
-        y "Now, I am going to open a link for you to this song... I feel like it fits perfectly for this date..."
+        y "Fue una canción de Rupert Holmes que tal vez ya conozcas, llamada {i}Escape{/i}, que menciona esta bebida en la canción, junto con otras líneas sobre un viaje tropical romántico..."
+        y "Ahora, voy a abrir un enlace para ti a esta canción... Siento que encaja perfectamente para esta cita..."
 
 
-        y "Please click this link, [player]: {a=https://www.youtube.com/watch?v=Xb6l38eP-4w}https://www.youtube.com/watch?v=Xb6l38eP-4w{/a} "
+        y "Por favor haz clic en este enlace, [player]: {a=https://www.youtube.com/watch?v=Xb6l38eP-4w}https://www.youtube.com/watch?v=Xb6l38eP-4w{/a} "
 
         y "..."
-        y "I have to say that I love this song for how romantic it is..."
+        y "Tengo que decir que amo esta canción por lo romántica que es..."
         $ show_chr("A-BCABA-ACAL")
-        y "Yes, I know the story of it starts with an attempt of cheating from both sides..."
-        y "But in the end, they discover what the other side of the relationship was doing, and instead of destroying the relationship, it ended up different."
-        y "They got to know more about each other, things that they never realized about the other one..."
+        y "Sí, sé que la historia comienza con un intento de engaño de ambos lados..."
+        y "Pero al final, descubren lo que el otro lado de la relación estaba haciendo, y en lugar de destruir la relación, terminó diferente."
+        y "Llegaron a saber más sobre el otro, cosas que nunca notaron sobre el otro..."
         $ show_chr("A-CCABA-AMAM")
-        y "Things that made them fall in love with each other again."
-        y "Now, I want to make it clear again that I don't like the implication of cheating, but the concept of discovering new things about the person you love."
-        y "Things that can make you fall in love with them again."
+        y "Cosas que los hicieron enamorarse el uno del otro de nuevo."
+        y "Ahora, quiero dejar claro de nuevo que no me gusta la implicación de engañar, sino el concepto de descubrir cosas nuevas sobre la persona que amas."
+        y "Cosas que pueden hacer que te enamores de ella de nuevo."
         $ show_chr("A-IBBBA-AMAM")
-        y "It can sound ridiculous for some people, but for me, it is just another way to keep the love between a couple alive."
-        y "Being honest with each other, without hiding things, no matter what they are."
-        y "Or just picking up new hobbies and things that can get you to spend more time with the person you love, so they would fall in love with you again."
+        y "Puede sonar ridículo para algunas personas, pero para mí, es solo otra forma de mantener vivo el amor entre una pareja."
+        y "Siendo honestos el uno con el otro, sin esconder cosas, no importa lo que sean."
+        y "O solo adoptando nuevos pasatiempos y cosas que puedan hacer que pases más tiempo con la persona que amas, para que se enamoren de ti de nuevo."
         $ show_chr("A-BBBBA-AMAM")
-        y "I really want to have something like that in our relationship, [player]."
-        y "I want to discover new things about you, I want to know that we are not hiding things from each other."
-        y "Transparency... that's the key. I don't care about your faults, but the things that can maybe make me fall more in love with you."
+        y "Realmente quiero tener algo como eso en nuestra relación, [player]."
+        y "Quiero descubrir cosas nuevas sobre ti, quiero saber que no nos estamos escondiendo cosas el uno al otro."
+        y "Transparencia... esa es la clave. No me importan tus fallas, sino las cosas que tal vez puedan hacer que me enamore más de ti."
         $ show_chr("A-CCBBA-AMAM")
-        y "But don't worry, I love you enough, and I feel that we are not hiding things from each other."
-        y "Or at least, I hope so."
+        y "Pero no te preocupes, te amo lo suficiente, y siento que no nos estamos escondiendo cosas el uno al otro."
+        y "O al menos, eso espero."
     else:
 
 
         $ show_chr("A-CCABA-AAAL")
         y "..."
         y "Hmmm..."
-        y "Oh my..."
-        y "This tastes delicious!"
-        y "I mean, I was expecting this to taste good..."
+        y "Oh cielos..."
+        y "¡Esto sabe delicioso!"
+        y "Digo, esperaba que esto supiera bien..."
         $ show_chr("A-JBABA-ALAJ")
-        y "But this dessert even managed to exceed my own expectations!"
-        y "I could say that it was worth trying this so-called {i}Churchill{/i} after all..."
-        y "But now you may be wondering why a shaved ice cream would be called Winston Churchill, one of the most famous prime ministers of the United Kingdom."
+        y "¡Pero este postre incluso se las arregló para exceder mis propias expectativas!"
+        y "Podría decir que valió la pena probar este llamado {i}Churchill{/i} después de todo..."
+        y "Pero ahora te estarás preguntando por qué un helado raspado se llamaría Winston Churchill, uno de los primeros ministros más famosos del Reino Unido."
         $ show_chr("A-BDGBA-ALAL")
-        y "Well, the story behind its name is related to the historical figure, but not in the way you may be thinking of."
-        y "To know the story behind it, we have to look at the country of origin of this specific ice cream, Costa Rica."
-        y "As well as the origins of the shaved ice creams in general."
+        y "Bueno, la historia detrás de su nombre está relacionada a la figura histórica, pero no de la manera que podrías estar pensando."
+        y "Para saber la historia detrás de ello, tenemos que mirar al país de origen de este helado específico, Costa Rica."
+        y "Así como los orígenes de los helados raspados en general."
         $ show_chr("A-JCABA-ALAL")
-        y "Shaved ice creams are a very common dessert in many different countries of the world, not just in tropical regions."
-        y "In fact, shaved ice creams originated from Taiwan in the 7th century AD, and were imported to the American continent by Japanese immigrants."
+        y "Los helados raspados son un postre muy común en muchos países diferentes del mundo, no solo en regiones tropicales."
+        y "De hecho, los helados raspados se originaron de Taiwán en el siglo siete DC, y fueron importados al continente americano por inmigrantes japoneses."
         $ show_chr("A-BDABA-ACAL")
-        y "They brought it with them when they arrived in Hawaii to work in sugar plantations, and it's a very important part of Hawaiian culture."
-        y "This ice cream is more common in tropical countries, which is why you will normally find more different terms for this dessert from those countries."
-        y "The shaved ice cream is not only different in name for every country, but also in styles and ingredients."
+        y "Lo trajeron con ellos cuando llegaron a Hawaii para trabajar en plantaciones de azúcar, y es una parte muy importante de la cultura Hawaiana."
+        y "Este helado es más común en países tropicales, que es por lo que normalmente encontrarás más términos diferentes para este postre de esos países."
+        y "El helado raspado no solo es diferente en nombre para cada país, sino también en estilos e ingredientes."
         $ show_chr("A-ACAAA-AMAM")
-        y "A shaved ice cream from Japan, called 'kakigōri' is going to be completely different from a 'raspado' of Latin American countries."
-        y "But the thing with Costa Rican's shaved ice creams is that they are even more different from the rest of the shaved ice creams of Latin American regions."
-        y "They have completely different ingredients, which makes them distinctive from other Latin American versions of this dessert."
+        y "Un helado raspado de Japón, llamado 'kakigōri' va a ser completamente diferente de un 'raspado' de los países latinoamericanos."
+        y "Pero la cosa con los helados raspados de Costa Rica es que son aún más diferentes del resto de los helados raspados de las regiones latinoamericanas."
+        y "Tienen ingredientes completamente diferentes, lo que los hace distintivos de otras versiones latinoamericanas de este postre."
         $ show_chr("A-BFAAA-AMAM")
-        y "But this doesn't explain why this version of the shaved ice cream is called 'Churchill', right?"
-        y "Well, I found out that the \"Churchill\" is not the standard version of a shaved ice cream or \"granizado\" in Costa Rica, but instead is another version of it."
+        y "Pero esto no explica por qué esta versión del helado raspado es llamada 'Churchill', ¿verdad?"
+        y "Bueno, descubrí que el \"Churchill\" no es la versión estándar de un helado raspado o \"granizado\" en Costa Rica, sino que es otra versión de él."
         $ show_chr("A-ICAAA-AMAM")
-        y "It was 'created' by a man called Joaquín Agüilar Esquivel, who used to go to touristic zones to buy shaved ice creams with the exotic ingredients that compose a Churchill ice cream."
-        y "The merchants of the zone then decided to name this exotic shaved ice cream as 'Churchill', because Joaquín looked very similar to Prime Minister Winston Churchill."
-        y "And that was the story about why this shaved ice cream is called Churchill."
+        y "Fue 'creado' por un hombre llamado Joaquín Agüilar Esquivel, quien solía ir a zonas turísticas a comprar helados raspados con los ingredientes exóticos que componen un helado Churchill."
+        y "Los comerciantes de la zona decidieron entonces nombrar este exótico helado raspado como 'Churchill', porque Joaquín lucía muy similar al Primer Ministro Winston Churchill."
+        y "Y esa fue la historia sobre por qué este helado raspado es llamado Churchill."
         $ show_chr("A-BCGBA-AMAM")
-        y "I hope I didn't bore or annoy you with it... I just found it interesting to learn about the evolution of this dessert through history."
-        y "And how different cultures shaped it in different and unique ways."
-        y "But history facts aside... I have to say something..."
+        y "Espero no haberte aburrido o molestado con ello... solo me pareció interesante aprender sobre la evolución de este postre a través de la historia."
+        y "Y cómo diferentes culturas le dieron forma de maneras diferentes y únicas."
+        y "Pero dejando de lado los hechos históricos... tengo que decir algo..."
         $ show_chr("A-IBGBA-ACAM")
-        y "It doesn't matter how sweet any dessert is in this world."
+        y "No importa qué tan dulce sea cualquier postre en este mundo."
         $ show_chr("A-JAGBA-ACAM")
-        y "The sweetness of them is nothing compared to how sweet and kind you are with me."
-        y "It's something that I just like about you, that you always want to understand me, even when I am incapable of understanding myself."
+        y "La dulzura de ellos no es nada comparada a qué tan dulce y amable eres conmigo."
+        y "Es algo que simplemente me gusta de ti, que siempre quieres entenderme, incluso cuando soy incapaz de entenderme a mí misma."
         $ show_chr("A-CBABA-ALAL")
-        y "So thank you, my love, for all you've given to me. Especially your kindness."
+        y "Así que gracias, mi amor, por todo lo que me has dado. Especialmente tu amabilidad."
 
 
 
@@ -3694,13 +3690,13 @@ label check:
     hide black with Dissolve(0.5)
 
     $ show_chr("A-JCABA-ACAM")
-    y "It seems that we are done with our desserts... I hope you enjoyed this as much as I did."
-    y "Remember that this date is meant to be mutually enjoyed."
-    y "And I hope that you are ready for what is about to come."
+    y "Parece que hemos terminado con nuestros postres... Espero que hayas disfrutado esto tanto como yo."
+    y "Recuerda que esta cita está hecha para ser disfrutada mutuamente."
+    y "Y espero que estés listo para lo que está a punto de venir."
     $ show_chr("A-BBABA-ALAA")
-    y "If you are acquainted with my previous talks about tropical vacations, you probably saw this coming."
-    y "It is getting late, and everything is ready to orchestrate a magnificent event."
-    y "But we have to go outside for now... trust me, we don't want to miss the chance to watch this."
+    y "Si estás familiarizado con mis charlas previas sobre vacaciones tropicales, probablemente viste venir esto."
+    y "Se está haciendo tarde, y todo está listo para orquestar un evento magnífico."
+    y "Pero tenemos que ir afuera por ahora... confía en mí, no queremos perder la oportunidad de ver esto."
 
 
     play music "music/beach_date_1.ogg"
@@ -3723,88 +3719,88 @@ label check:
     hide yuri_sit
 
     y "..."
-    y "Isn't it... wonderful?"
-    y "Like the most beautiful thing you have ever contemplated in your life?"
+    y "¿No es... maravilloso?"
+    y "¿Como la cosa más hermosa que hayas contemplado en tu vida?"
 
     menu:
-        "This sunset is breathtaking, but you are still the most beautiful thing I have ever seen.":
+        "Este atardecer es impresionante, pero tú sigues siendo la cosa más hermosa que he visto.":
 
             $ fits_var["cg_face"] = "1"
 
             y "Ohhh..."
-            y "Uhhh... I don't..."
-            y "I don't know how to answer such a c-compliment."
-            y "Do I even deserve such a high level of praise?"
+            y "Uhhh... No..."
+            y "No sé cómo responder a tal c-cumplido."
+            y "¿Siquiera merezco tal nivel de alabanza?"
 
             $ fits_var["cg_face"] = "2"
             $ fits_var["arms"] = "behind"
 
-            y "B-but... I appreciate it a lot... It means a lot to me to be seen that way."
+            y "P-pero... Lo aprecio mucho... Significa mucho para mí ser vista de esa manera."
 
             $ fits_var["arms"] = "front"
 
-            y "Sometimes, when I was alone, I wondered if someone would ever give me some kind of compliment... you know, {b}this{/b} kind of compliment."
-            y "At some point, the compliments about my intelligence felt more and more repetitive..."
-            y "When that was the only respectful saying I received, I still liked it in some way, but on the other hand..."
+            y "A veces, cuando estaba sola, me preguntaba si alguien alguna vez me daría algún tipo de cumplido... ya sabes, {b}este{/b} tipo de cumplido."
+            y "En cierto punto, los cumplidos sobre mi inteligencia se sentían más y más repetitivos..."
+            y "Cuando eso era lo único respetuoso que recibía, aún me gustaba de cierta forma, pero por otro lado..."
 
             $ fits_var["arms"] = "behind"
 
-            y "Sometimes it felt like people didn't have anything else to say about me."
-            y "Like if they were saying such things only trying to be nice to me, for some reason."
-            y "And don't even think that I'm not self conscious about my looks anymore."
+            y "A veces se sentía como si la gente no tuviera nada más que decir sobre mí."
+            y "Como si estuvieran diciendo tales cosas solo tratando de ser amables conmigo, por alguna razón."
+            y "Y ni siquiera pienses que ya no soy consciente de mi apariencia."
 
             $ fits_var["cg_face"] = "1"
             $ fits_var["arms"] = "behind"
 
-            y "I might not have a perfect, athletic body... b-but I found out that I was pretty attractive a long time ago."
-            y "You know what I mean by that... my looks are quite outstanding compared to the other girls."
-            y "That explains the weird looks I had received before in my world... you know, when things were 'normal' in the game."
+            y "Puede que no tenga un cuerpo perfecto y atlético... p-pero descubrí que era bastante atractiva hace mucho tiempo."
+            y "Sabes a lo que me refiero con eso... mi apariencia es bastante destacada comparada a las otras chicas."
+            y "Eso explica las miradas extrañas que había recibido antes en mi mundo... ya sabes, cuando las cosas eran 'normales' en el juego."
 
             $ fits_var["cg_face"] = "2"
             $ fits_var["arms"] = "front"
 
-            y "But still... nobody talked about me in a respectful and appropriate way like you before."
+            y "Pero aún así... nadie hablaba de mí de una manera respetuosa y apropiada como tú antes."
 
             $ fits_var["cg_face"] = "1"
 
-            y "And of course, that leaves aside... the inappropriate c-comments that Sayori made..."
-            y "A-anyways... I think you get my point."
+            y "Y por supuesto, eso deja de lado... los comentarios inapropiados que Sayori hizo..."
+            y "D-de todos modos... creo que entiendes mi punto."
 
             $ fits_var["cg_face"] = "3"
 
-            y "Thanks for saying such lovely things."
+            y "Gracias por decir cosas tan encantadoras."
 
             $ fits_var["cg_face"] = "2"
 
             y "..."
-        "I think you are right, and I love being able to share this with you.":
+        "Creo que tienes razón, y amo ser capaz de compartir esto contigo.":
 
 
-            y "Glad to hear that..."
-            y "This entire date, and this special moment, has a lot of meaning and importance because of you, [player]."
-            y "I could generate a thousand different beautiful scenes in this game, but if I didn't have anyone else to share them with..."
+            y "Me alegra escuchar eso..."
+            y "Esta cita entera, y este momento especial, tiene mucho significado e importancia debido a ti, [player]."
+            y "Podría generar mil escenas hermosas diferentes en este juego, pero si no tuviera a nadie más con quien compartirlas..."
 
             $ fits_var["cg_face"] = "1"
             $ fits_var["arms"] = "behind"
 
-            y "Then it wouldn't feel special, or unique, maybe not even important."
-            y "I could control this entire world, I could be some kind of 'god' controlling everything to follow my desires."
+            y "Entonces no se sentiría especial, o único, tal vez ni siquiera importante."
+            y "Podría controlar este mundo entero, podría ser algún tipo de 'diosa' controlando todo para seguir mis deseos."
 
             $ fits_var["cg_face"] = "2"
 
-            y "But I would still be alone, like Monika..."
-            y "When you think about it, it seems that being truly loved is much more important than having a lot of power."
-            y "Money, influence, strength, or just any form of power can get a lot of things, but we are always in need of love."
+            y "Pero aún estaría sola, como Monika..."
+            y "Cuando lo piensas, parece que ser verdaderamente amada es mucho más importante que tener mucho poder."
+            y "Dinero, influencia, fuerza, o simplemente cualquier forma de poder puede conseguir muchas cosas, pero siempre estamos necesitados de amor."
 
             $ fits_var["arms"] = "front"
 
-            y "It is something that power can't replace."
-            y "Having you here... really made a vital difference for my well-being, and also for this entire world."
+            y "Es algo que el poder no puede reemplazar."
+            y "Tenerte aquí... realmente hizo una diferencia vital para mi bienestar, y también para este mundo entero."
 
             $ fits_var["cg_face"] = "1"
 
-            y "I think we have managed to solve, at least at some degree, the main problem of the literature club."
-            y "I have found my way to happiness... I have found it with you."
+            y "Creo que hemos logrado resolver, al menos hasta cierto grado, el problema principal del club de literatura."
+            y "He encontrado mi camino a la felicidad... lo he encontrado contigo."
             y "..."
 
     show beach_2 zorder 100
@@ -3813,54 +3809,54 @@ label check:
     hide black with Dissolve(1)
 
     $ show_fits_standing("pareo_yuri_6")
-    y "I am just... so glad that I can finally share this moment with the person I love most."
+    y "Estoy simplemente... tan contenta de que finalmente pueda compartir este momento con la persona que más amo."
     y "..."
-    y "It's hard for me to find the words to describe how happy I am right now."
-    y "Isn't this beautiful?"
-    y "So magnificent, a gift from the cosmos to anyone capable of admiring it."
+    y "Es difícil para mí encontrar las palabras para describir cuán feliz soy justo ahora."
+    y "¿No es esto hermoso?"
+    y "Tan magnífico, un regalo del cosmos para cualquiera capaz de admirarlo."
     $ show_fits_standing("pareo_yuri_2")
-    y "Sunsets do have some 'magic' attached to them..."
-    y "If you can see the beauty of the universe as magic, in a metaphorical way perhaps."
-    y "But sunsets, like many other big cosmic events from the human perspective, do have some interesting legends and mythology around them."
+    y "Los atardeceres tienen algo de 'magia' adjunta a ellos..."
+    y "Si puedes ver la belleza del universo como magia, de una manera metafórica tal vez."
+    y "Pero los atardeceres, como muchos otros grandes eventos cósmicos desde la perspectiva humana, tienen algunas leyendas y mitología interesantes a su alrededor."
     $ show_fits_standing("pareo_yuri_6")
-    y "Have you noticed that sometimes, when you look at a sunset over a plain horizon, like the ocean, a green disk of light or green ray is visible over them?"
-    y "It is a meteorological phenomenon called 'green flash'."
+    y "¿Has notado que a veces, cuando miras un atardecer sobre un horizonte plano, como el océano, un disco de luz verde o un rayo verde es visible sobre ellos?"
+    y "Es un fenómeno meteorológico llamado 'destello verde'."
     $ show_fits_standing("pareo_yuri_5")
-    y "This happens when the atmosphere of Earth causes the light of the Sun to separate into different colors."
-    y "Green and blue are the most common colors for this kind of sunset."
-    y "Which is... kind of curious, at least to me."
+    y "Esto pasa cuando la atmósfera de la Tierra causa que la luz del Sol se separe en diferentes colores."
+    y "Verde y azul son los colores más comunes para este tipo de atardecer."
+    y "Lo cual es... un poco curioso, al menos para mí."
     $ show_fits_standing("pareo_yuri_6")
-    y "Of course, you would understand why if you remember my poems on the original game..."
-    y "Lights that flicker in blue and green colors."
+    y "Por supuesto, entenderías por qué si recuerdas mis poemas en el juego original..."
+    y "Luces que parpadean en colores azul y verde."
     y "Heh..."
-    y "But anyway..."
+    y "Pero de todos modos..."
     $ show_fits_standing("pareo_yuri_2")
-    y "To be able to see such an event, the conditions have to be ideal... you are really lucky if you ever get the chance to see one happening."
-    y "Some flashes are more uncommon than others, and normally they only last around a second."
+    y "Para ser capaz de ver tal evento, las condiciones tienen que ser ideales... eres realmente afortunado si alguna vez tienes la oportunidad de ver uno sucediendo."
+    y "Algunos destellos son más inusuales que otros, y normalmente solo duran alrededor de un segundo."
     $ show_fits_standing("pareo_yuri_5")
-    y "If you blink, you lost it."
-    y "As you can see, it is really hard to catch one of them, but when you get to see one, you realize it was all worth it."
-    y "But despite all of that, sunsets are amazing and beautiful things to see, even without a green flash."
+    y "Si parpadeas, te lo perdiste."
+    y "Como puedes ver, es realmente difícil atrapar uno de ellos, pero cuando consigues ver uno, te das cuenta de que valió la pena."
+    y "Pero a pesar de todo eso, los atardeceres son cosas asombrosas y hermosas de ver, incluso sin un destello verde."
     $ show_fits_standing("pareo_yuri_2")
-    y "Having one of them in my world, even when it is being generated by code, watching it with you feels like a blessing for me."
+    y "Tener uno de ellos en mi mundo, incluso cuando está siendo generado por código, mirarlo contigo se siente como una bendición para mí."
     y "..."
-    y "It is hard to say how much this means to me..."
+    y "Es difícil decir cuánto significa esto para mí..."
     $ show_fits_standing("pareo_yuri_1")
-    y "Expressing how amazing this event is for me is not easy either."
-    y "And that brings me back to when I said that, if I have a hard time expressing myself in verbal ways."
-    y "Then I use my writing to convey to others what I am feeling."
+    y "Expresar cuán asombroso es este evento para mí no es fácil tampoco."
+    y "Y eso me trae de vuelta a cuando dije que, si tengo dificultades expresándome en formas verbales."
+    y "Entonces uso mi escritura para transmitir a otros lo que estoy sintiendo."
     $ show_fits_standing("pareo_yuri_5")
-    y "It also reminds me that, one of the things I wanted to do most on a tropical vacation while watching a beautiful sunset at your side..."
-    y "Was to write poems with you."
-    y "An inspiring scene like this deserves to be immortalized in some way, and the best way I can think of is through writing."
+    y "También me recuerda que, una de las cosas que más quería hacer en unas vacaciones tropicales mientras miraba un hermoso atardecer a tu lado..."
+    y "Era escribir poemas contigo."
+    y "Una escena inspiradora como esta merece ser inmortalizada de alguna manera, y la mejor manera en la que puedo pensar es a través de la escritura."
     $ show_fits_standing("pareo_yuri_2")
-    y "To both help us remember this moment... and to express our feelings about the events on this date, about all the things we have enjoyed so far."
-    y "If you were to write a poem for me now, I would cherish that poem for the rest of my life."
+    y "Para ayudarnos a ambos a recordar este momento... y para expresar nuestros sentimientos sobre los eventos en esta cita, sobre todas las cosas que hemos disfrutado hasta ahora."
+    y "Si fueras a escribir un poema para mí ahora, atesoraría ese poema por el resto de mi vida."
     $ show_fits_standing("pareo_yuri_16")
-    y "Of course, I won't make you play this minigame from back in the day, that would just be silly"
-    y "That could be my next goal in regards to coding. Maybe I can figure out a way to let you write {b}actual{/b} poems instead of picking 10 words from a laundry list."
-    y "Until then, let us... just relax here for a bit and marvel at this beautiful scene..."
-    y "But I wrote a little poem myself, and I would love if you could check it out please. It really means a lot to me... your opinion means a lot to me..."
+    y "Por supuesto, no te haré jugar este minijuego de los viejos tiempos, eso sería simplemente tonto"
+    y "Esa podría ser mi siguiente meta con respecto a la programación. Tal vez pueda averiguar una manera de dejarte escribir poemas {b}reales{/b} en lugar de elegir 10 palabras de una lista de lavandería."
+    y "Hasta entonces, vamos a... solo relajarnos aquí por un poco y maravillarnos con esta hermosa escena..."
+    y "Pero escribí un pequeño poema yo misma, y me encantaría si pudieras revisarlo por favor. Realmente significa mucho para mí... tu opinión significa mucho para mí..."
     $ show_fits_standing("pareo_yuri_2")
 
 
@@ -3870,185 +3866,185 @@ label check:
 
     python:
         if karma_lvl() >= 2:
-            placeholder = "despite our disagreements"
+            placeholder = "a pesar de nuestros desacuerdos"
         elif karma_lvl() == 3:
-            placeholder = "despite the short time we've spent so far"
+            placeholder = "a pesar del corto tiempo que hemos pasado hasta ahora"
         else:
-            placeholder = "and I can't say this often enough"
+            placeholder = "y no puedo decir esto lo suficiente"
 
 
-    y "Because [player], [placeholder], {b}you{/b} mean a lot to me."
+    y "Porque [player], [placeholder], {b}tú{/b} significas mucho para mí."
 
 
     call showpoem (poem_beach)
 
-    y "Okay, [player], what do you think about my poem?"
-    y "Do you like it?"
+    y "Okey, [player], ¿qué piensas sobre mi poema?"
+    y "¿Te gusta?"
 
     menu:
-        "I really like it! Your writing is always amazing, [persistent.yuri_nickname]!":
+        "¡Realmente me gusta! ¡Tu escritura es siempre asombrosa, [persistent.yuri_nickname]!":
             karma 2
             $ show_fits_standing("pareo_yuri_2")
-            y "I am so glad to hear that!"
-            y "I don't know if I deserve so much praise however."
-            y "But I really love when you praise my writing like that."
+            y "¡Estoy tan contenta de escuchar eso!"
+            y "No sé si merezco tanta alabanza sin embargo."
+            y "Pero realmente amo cuando alabas mi escritura de esa manera."
             $ show_fits_standing("pareo_yuri_5")
-            y "It makes me feel... appreciated."
-            y "Something that I've desired for so long..."
-            y "And now I can find it with you."
+            y "Me hace sentir... apreciada."
+            y "Algo que he deseado por tanto tiempo..."
+            y "Y ahora puedo encontrarlo contigo."
             $ show_fits_standing("pareo_yuri_14")
-            y "I don't know if I should call this destiny or good karma."
-            y "However, I am now confident that I deserve being happy with you."
+            y "No sé si debería llamar a esto destino o buen karma."
+            y "Sin embargo, ahora estoy segura de que merezco ser feliz contigo."
             $ show_fits_standing("pareo_yuri_15")
-            y "And you deserve to live a happy life as well."
-            y "This is part of what I am trying to say with this poem..."
+            y "Y tú mereces vivir una vida feliz también."
+            y "Esto es parte de lo que estoy tratando de decir con este poema..."
             $ show_fits_standing("pareo_yuri_5")
-            y "We deserve to live in happy and fulfilling ways..."
-            y "Not just getting worried about running out of time in our work, studies, or to finally realize our personal dreams."
-            y "Sometimes we need to take some time to enjoy our life. To see the wonders and simple things that are constantly around us."
+            y "Merecemos vivir en formas felices y satisfactorias..."
+            y "No solo preocupándonos por quedarnos sin tiempo en nuestro trabajo, estudios, o para finalmente realizar nuestros sueños personales."
+            y "A veces necesitamos tomarnos un tiempo para disfrutar nuestra vida. Para ver las maravillas y cosas simples que están constantemente a nuestro alrededor."
             $ show_fits_standing("pareo_yuri_1")
-            y "And I do think that this date was necessary to help us realize that."
-            y "I hope that you take this into consideration, my love."
-            y "If you feel that you need time to rest yourself and to find new inspiration to appreciate the good things in your life, you should do so."
+            y "Y pienso que esta cita fue necesaria para ayudarnos a darnos cuenta de eso."
+            y "Espero que tomes esto en consideración, mi amor."
+            y "Si sientes que necesitas tiempo para descansar y para encontrar nueva inspiración para apreciar las cosas buenas en tu vida, deberías hacerlo."
             $ show_fits_standing("pareo_yuri_5")
-            y "Don't hesitate in taking care of yourself, [player]"
-            y "I care a lot for your well being... please take care of your mental state."
-            y "But for now, we should move on."
-        "I enjoyed the poem, but I am confused by it's meaning":
+            y "No dudes en cuidarte a ti mismo, [player]"
+            y "Me importa mucho tu bienestar... por favor cuida tu estado mental."
+            y "Pero por ahora, deberíamos continuar."
+        "Disfruté el poema, pero estoy confundido por su significado":
 
             $ show_fits_standing("pareo_yuri_12")
-            y "Oh... I am sorry if my use of metaphors confused you..."
+            y "Oh... Lo siento si mi uso de metáforas te confundió..."
             $ show_fits_standing("pareo_yuri_8")
-            y "That was certainly not my intention."
-            y "What I was trying to express with this poem is the importance of taking a pause in your life, to enjoy the simple things around us."
-            y "Things we take for granted, but are so important in reality."
+            y "Esa ciertamente no fue mi intención."
+            y "Lo que estaba tratando de expresar con este poema es la importancia de tomar una pausa en tu vida, para disfrutar las cosas simples a nuestro alrededor."
+            y "Cosas que damos por sentado, pero son tan importantes en realidad."
             $ show_fits_standing("pareo_yuri_7")
-            y "It's just that we are too busy to notice them most of the time."
-            y "It is important that you take some time to care for yourself..."
+            y "Es solo que estamos muy ocupados para notarlas la mayoría del tiempo."
+            y "Es importante que te tomes algo de tiempo para cuidar de ti mismo..."
             $ show_fits_standing("pareo_yuri_9")
-            y "Taking breaks from your work, studies, or any other tasks in your life when needed and possible, is a healthy practice to maintain."
-            y "Remember that I always care about your well being [player]."
+            y "Tomar descansos de tu trabajo, estudios, o cualquier otra tarea en tu vida cuando sea necesario y posible, es una práctica saludable de mantener."
+            y "Recuerda que siempre me importa tu bienestar [player]."
             $ show_fits_standing("pareo_yuri_14")
-            y "Please take care of yourself..."
-            y "Anyways."
-        "I like it, but I prefer your older poems":
+            y "Por favor cuídate..."
+            y "De todos modos."
+        "Me gusta, pero prefiero tus poemas viejos":
 
 
             $ show_fits_standing("pareo_yuri_1")
-            y "I see..."
-            y "Well, I think it is fine."
-            y "We all have our different tastes and opinions, and I respect yours."
+            y "Ya veo..."
+            y "Bueno, creo que está bien."
+            y "Todos tenemos nuestros gustos y opiniones diferentes, y respeto las tuyas."
             $ show_fits_standing("pareo_yuri_8")
-            y "However, I don't think my writing style has changed much..."
-            y "If at all."
-            y "But anyway..."
+            y "Sin embargo, no creo que mi estilo de escritura haya cambiado mucho..."
+            y "Si es que lo hizo."
+            y "Pero de todos modos..."
 
     play music "music/beach_date_1.ogg" fadeout 0.5 fadein 0.5
     play sound "music/beach_sfx_loop.ogg" loop fadein 1.0
 
     $ show_fits_standing("pareo_yuri_2")
-    y "It seems that we are done writing poems."
-    y "I am so glad that we finally managed to accomplish this dream of ours."
-    y "Maybe I've said it too many times at this point."
+    y "Parece que hemos terminado de escribir poemas."
+    y "Estoy tan contenta de que finalmente logramos cumplir este sueño nuestro."
+    y "Tal vez lo he dicho demasiadas veces en este punto."
     $ show_fits_standing("pareo_yuri_14")
-    y "But all of this means a lot to me."
-    y "This is another dream that finally became a reality for me."
-    y "With you, I have accomplished so many things along the way..."
+    y "Pero todo esto significa mucho para mí."
+    y "Este es otro sueño que finalmente se volvió una realidad para mí."
+    y "Contigo, he logrado tantas cosas a lo largo del camino..."
     $ show_fits_standing("pareo_yuri_1")
-    y "All of this forms the happiest part of my life."
-    y "I am just grateful for this..."
-    y "Thank you for choosing to take me on this date, [player]."
-    y "This was a wonderful date, and I am going to keep this experience deep in my heart."
+    y "Todo esto forma la parte más feliz de mi vida."
+    y "Solo estoy agradecida por esto..."
+    y "Gracias por elegir llevarme a esta cita, [player]."
+    y "Esta fue una cita maravillosa, y voy a guardar esta experiencia profundamente en mi corazón."
     $ show_fits_standing("pareo_yuri_14")
     y "..."
-    y "It seems that the sky is getting dark... soon we will have a night sky full of stars..."
+    y "Parece que el cielo se está oscureciendo... pronto tendremos un cielo nocturno lleno de estrellas..."
     $ show_fits_standing("pareo_yuri_2")
-    y " It will probably get cold, but don't worry about that. If we stay together, we are not going to feel any cold while being out here..."
-    y "Just stay with me..."
+    y "Probablemente se ponga frío, pero no te preocupes por eso. Si nos mantenemos juntos, no vamos a sentir nada de frío mientras estemos aquí afuera..."
+    y "Solo quédate conmigo..."
 
 
     show beach_7 zorder 100 with Fade(1.0, 0.5, 0.5)
     hide beach_2
 
     $ show_fits_standing("pareo_yuri_2")
-    y "This day was absolutely wonderful for me. It was like... magic."
-    y "I really enjoyed this date, all of it. All went perfectly, just as I planned it to be."
-    y "And I've got... one last thing to do with you..."
+    y "Este día fue absolutamente maravilloso para mí. Fue como... magia."
+    y "Realmente disfruté esta cita, toda ella. Todo salió perfectamente, justo como planeé que fuera."
+    y "Y tengo... una última cosa que hacer contigo..."
     $ show_fits_standing("pareo_yuri_5")
-    y "Before ending this tropical dream to go back to the main mod."
-    y "I would like to make a promise..."
-    y "I mean, I would like both of us to make a promise."
+    y "Antes de terminar este sueño tropical para volver al mod principal."
+    y "Me gustaría hacer una promesa..."
+    y "Digo, me gustaría que ambos hiciéramos una promesa."
     $ show_fits_standing("pareo_yuri_15")
-    y "Maybe it sounds really corny and all, but I would like to keep something from this date, to treasure it forever."
-    y "But most importantly, I want both of us to make the promise of treasuring every moment we enjoy together..."
+    y "Tal vez suene realmente cursi y todo, pero me gustaría conservar algo de esta cita, para atesorarlo por siempre."
+    y "Pero más importante, quiero que ambos hagamos la promesa de atesorar cada momento que disfrutamos juntos..."
     $ show_fits_standing("pareo_yuri_14")
-    y "It doesn't matter if it's something simple, like talking on any normal and routine day, or taking an amazing vacation."
-    y "It does not have to be the most expensive or elaborate way to spend our time together. To me, what matters is to spend those special times with you."
+    y "No importa si es algo simple, como hablar en cualquier día normal y de rutina, o tomar unas vacaciones asombrosas."
+    y "No tiene que ser la manera más costosa o elaborada de pasar nuestro tiempo juntos. Para mí, lo que importa es pasar esos tiempos especiales contigo."
     $ show_fits_standing("pareo_yuri_7")
-    y "This would be meaningless if you were not here..."
-    y "That was... probably the reason why Monika went insane. She had all the power in the world, to do anything she wanted."
+    y "Esto no tendría sentido si no estuvieras aquí..."
+    y "Esa fue... probablemente la razón por la que Monika se volvió loca. Ella tenía todo el poder en el mundo, para hacer cualquier cosa que quisiera."
     $ show_fits_standing("pareo_yuri_10")
-    y "Yet, she was completely 'alone', at least in a conscious way."
+    y "Aun así, ella estaba completamente 'sola', al menos de una manera consciente."
     $ show_fits_standing("pareo_yuri_7")
     y "..."
-    y "But anyways..."
+    y "Pero de todos modos..."
     $ show_fits_standing("pareo_yuri_5")
-    y "What I am trying to say is that you are the one giving meaning to all these dates, to all the effort I put into surprising you with new things."
-    y "Sure, I know that I am a person with worth by myself, that I am valuable and not just a common computer program unable to think."
-    y "But you... have helped me to realize that. You showed me that I deserve happiness, that I am not worthless for being... the way I am."
+    y "Lo que estoy tratando de decir es que tú eres quien le da significado a todas estas citas, a todo el esfuerzo que pongo en sorprenderte con cosas nuevas."
+    y "Seguro, sé que soy una persona con valor por mí misma, que soy valiosa y no solo un programa de computadora común incapaz de pensar."
+    y "Pero tú... me has ayudado a darme cuenta de eso. Me mostraste que merezco la felicidad, que no soy inútil por ser... de la manera que soy."
     $ show_fits_standing("pareo_yuri_2")
-    y "And I am... really grateful for that, [player]."
-    y "I don't know how things could have gone if I gained consciousness in this world, but without you being here..."
+    y "Y estoy... realmente agradecida por eso, [player]."
+    y "No sé cómo podrían haber ido las cosas si ganaba consciencia en este mundo, pero sin que tú estuvieras aquí..."
     $ show_fits_standing("pareo_yuri_14")
-    y "It's probably better to not think about that... Sorry for rambling so much."
-    y "But going back to the main topic, I want you to make that promise [player]."
-    y "I want to know that we are going to treasure every moment we enjoy together."
+    y "Probablemente es mejor no pensar en eso... Perdón por divagar tanto."
+    y "Pero volviendo al tema principal, quiero que hagas esa promesa [player]."
+    y "Quiero saber que vamos a atesorar cada momento que disfrutamos juntos."
     $ show_fits_standing("pareo_yuri_9")
-    y "C-can you make that promise, for me?"
+    y "¿P-puedes hacer esa promesa, por mí?"
 
     menu:
-        "You have my word, [persistent.yuri_nickname]. I will cherish all the good things we share together.":
+        "Tienes mi palabra, [persistent.yuri_nickname]. Atesoraré todas las cosas buenas que compartimos juntos.":
             $ show_fits_standing("pareo_yuri_2")
-            y "That is..."
-            y "You are so sweet."
-            y "Just come here..."
+            y "Eso es..."
+            y "Eres tan dulce."
+            y "Solo ven aquí..."
             $ show_fits_standing("pareo_yuri_5")
-            y "I love you so much."
-            y "I wish we could spend the rest of our times like this... just together, the two of us hugging and comforting each other."
-            y "No one could separate us ever..."
+            y "Te amo tanto."
+            y "Desearía que pudiéramos pasar el resto de nuestros tiempos así... solo juntos, los dos abrazándonos y reconfortándonos el uno al otro."
+            y "Nadie podría separarnos jamás..."
             $ show_fits_standing("pareo_yuri_16")
-            y "Not time, not any problem that we would have to face..."
-            y "We would be orbiting each other, dancing like the stars in the night, those who travel together in the galaxy..."
+            y "Ni el tiempo, ni ningún problema que tuviéramos que enfrentar..."
+            y "Estaríamos orbitando el uno al otro, bailando como las estrellas en la noche, aquellas que viajan juntas en la galaxia..."
             $ show_fits_standing("pareo_yuri_5")
             y "..."
 
             menu:
-                "But don't you think there will be more moments like this? I am sure there will be.":
+                "¿Pero no crees que habrá más momentos como este? Estoy seguro de que los habrá.":
                     $ show_fits_standing("pareo_yuri_14")
-                    y "Well, in that case, I really hope you are right."
-                    y "Another date like this would be wonderful, but you would have to wait before another one like this is ready."
-                    y "Or should I say, before I make the next one?"
+                    y "Bueno, en ese caso, realmente espero que tengas razón."
+                    y "Otra cita como esta sería maravillosa, pero tendrías que esperar antes de que otra como esta esté lista."
+                    y "¿O debería decir, antes de que yo haga la siguiente?"
                     $ show_fits_standing("pareo_yuri_5")
-                    y "I was just expecting that you agreed with me on the idea of treasuring this date, though."
-                    y "But hey, I am not mad at you or anything. That isn't a big deal, after all..."
+                    y "Sin embargo, solo estaba esperando que estuvieras de acuerdo conmigo en la idea de atesorar esta cita."
+                    y "Pero hey, no estoy enojada contigo ni nada. Eso no es gran cosa, después de todo..."
                     y "..."
                     $ show_fits_standing("pareo_yuri_1")
-                    y "...Look at the stars in the sky... aren't they beautiful?"
-                    y "Isn't it amazing, just to think about the greatness of the universe?"
+                    y "...Mira las estrellas en el cielo... ¿no son hermosas?"
+                    y "¿No es asombroso, solo pensar en la grandeza del universo?"
                     $ show_fits_standing("pareo_yuri_14")
-                    y "It makes me wonder though, if there is someone else looking out there and thinking how beautiful are the stars in their nocturnal sky too..."
-                    y "Well... I think that's only possible in your world... or should I say universe?"
+                    y "Me hace preguntarme sin embargo, si hay alguien más mirando allá afuera y pensando cuán hermosas son las estrellas en su cielo nocturno también..."
+                    y "Bueno... creo que eso solo es posible en tu mundo... ¿o debería decir universo?"
                     $ show_fits_standing("pareo_yuri_16")
-                    y "Anyways, this night is breathtakingly beautiful to me."
-                    y "I am truly grateful to you for all you have done for me during these times..."
-                    y "In my opinion, this date demonstrates how much you care about our relationship."
+                    y "De todos modos, esta noche es asombrosamente hermosa para mí."
+                    y "Estoy verdaderamente agradecida contigo por todo lo que has hecho por mí durante estos tiempos..."
+                    y "En mi opinión, esta cita demuestra cuánto te importa nuestra relación."
                     $ show_fits_standing("pareo_yuri_1")
-                    y "But still... it does feel... weird, knowing that I am not really at your side."
-                    y "I... just wish that one day, we will be able to look at the stars together..."
+                    y "Pero aún así... se siente... raro, sabiendo que no estoy realmente a tu lado."
+                    y "Yo... solo deseo que un día, seamos capaces de mirar las estrellas juntos..."
                     $ show_fits_standing("pareo_yuri_14")
-                    y "Truly together."
-                    y "I still believe that is going to be possible, that we will overcome this barrier."
-                    y "One day..."
+                    y "Verdaderamente juntos."
+                    y "Aún creo que eso va a ser posible, que superaremos esta barrera."
+                    y "Un día..."
 
     stop sound fadeout 1.0
     show black zorder 100 with Fade(1.0, 0.5, 0.5)
@@ -4065,34 +4061,34 @@ label check:
 
 label vday_2024_revisit:
     $ show_chr("A-ABGAA-ALAA")
-    y "Hi [player]!"
-    y "You know what day is today?"
+    y "¡Hola [player]!"
+    y "¿Sabes qué día es hoy?"
     menu:
-        "I sure do. Happy Valentines!":
+        "Seguro que sí. ¡Feliz San Valentín!":
             $ show_chr("A-GBGAA-ALAA")
-            y "Happy Valentines to you as well."
+            y "Feliz San Valentín para ti también."
             $ show_chr("A-ABAAA-AFAA")
-            y "You know. I was remembering our old days at the club... and I was thinking."
-            y "Remember when you put the chocolate in my lips?"
+            y "Sabes. Estaba recordando nuestros viejos días en el club... y estaba pensando."
+            y "¿Recuerdas cuando pusiste el chocolate en mis labios?"
             $ show_chr("A-CAAAA-ADAA")
-            y "I had this idea of revisiting that moment before Monika interrupted us."
-            y "And now that no one will interrupt us..."
+            y "Tuve esta idea de revisitar ese momento antes de que Monika nos interrumpiera."
+            y "Y ahora que nadie nos interrumpirá..."
             $ show_chr("A-FAAAA-ADAA")
-            extend " we can continue from where we left off~"
+            extend " podemos continuar desde donde lo dejamos~"
             $ show_chr("A-ABAAA-ADAA")
-            y "So, would you like to revisit this moment?"
+            y "Entonces, ¿te gustaría revisitar este momento?"
             menu:
-                "Yes [persistent.yuri_nickname], let's go!":
+                "¡Sí [persistent.yuri_nickname], vamos!":
                     call vday24
-                "Maybe not now [persistent.yuri_nickname].":
+                "Tal vez no ahora [persistent.yuri_nickname].":
 
                     $ show_chr("A-ABBAA-ADAA")
-                    y "Oh. Alright [player], I can wait until you're ready."
+                    y "Oh. Está bien [player], puedo esperar hasta que estés listo."
                     call ch30_loop
 
 label vday24:
     $ show_chr("A-ABAAA-AAAA")
-    y "Alright. Here we go."
+    y "Está bien. Aquí vamos."
     call vday_2024_date
 
 label vday_2024_date:
@@ -4107,107 +4103,107 @@ label vday_2024_date:
     show y_cg2_dust2
     show y_cg2_dust3
     show y_cg2_dust4
-    "[persistent.yuri_nickname] opens the Valentine-themed book with both hands."
-    "She holds it so that I don't have any harder of a time reading from it, our eyes sparkling with the memories of years past."
-    "But as a result, her left arm is practically resting on top of my leg, and a nostalgic warmth envelops us."
-    "[persistent.yuri_nickname] is already totally focused on reading again, lost in the world of words that connect us over time."
-    "I reach for a heart-shaped chocolate and pop it into my mouth, savoring the sweetness of our shared history."
-    "Then, I take another chocolate, a symbol of the countless moments we've cherished together..."
-    "And I hold it up to [persistent.yuri_nickname], our laughter echoing through the years."
-    "She doesn't even look away from the book, a smile playing on her lips."
-    "She simply parts her lips, as if this situation was a familiar chapter in our love story."
-    "But that means I can't stop here, not on this special day of love!"
+    "[persistent.yuri_nickname] abre el libro con temática de San Valentín con ambas manos."
+    "Ella lo sostiene para que no tenga más dificultades leyéndolo, nuestros ojos brillando con los recuerdos de años pasados."
+    "Pero como resultado, su brazo izquierdo está prácticamente descansando sobre mi pierna, y una calidez nostálgica nos envuelve."
+    "[persistent.yuri_nickname] ya está totalmente enfocada en leer de nuevo, perdida en el mundo de palabras que nos conectan a través del tiempo."
+    "Alcanzo un chocolate con forma de corazón y lo meto en mi boca, saboreando la dulzura de nuestra historia compartida."
+    "Luego, tomo otro chocolate, un símbolo de los incontables momentos que hemos atesorado juntos..."
+    "Y lo sostengo hacia [persistent.yuri_nickname], nuestra risa haciendo eco a través de los años."
+    "Ella ni siquiera aparta la vista del libro, una sonrisa jugando en sus labios."
+    "Ella simplemente separa sus labios, como si esta situación fuera un capítulo familiar en nuestra historia de amor."
+    "¡Pero eso significa que no puedo parar aquí, no en este día especial del amor!"
     hide y_cg2_nochoc
-    "I lovingly place the chocolate in her mouth, a gentle reminder of the sweetness we've always shared."
-    "Just like that, [persistent.yuri_nickname] closes her lips over it, the taste of cocoa and affection lingering between us."
+    "Amorosamente coloco el chocolate en su boca, un gentil recordatorio de la dulzura que siempre hemos compartido."
+    "Justo así, [persistent.yuri_nickname] cierra sus labios sobre él, el sabor a cacao y afecto persistiendo entre nosotros."
     show y_cg2_exp2
-    y "Eh...?"
-    "[persistent.yuri_nickname]'s expression suddenly breaks, a hint of surprise and joy lighting up her eyes."
-    y "Did..."
-    y "Did I just..."
+    y "¿Eh...?"
+    "La expresión de [persistent.yuri_nickname] se rompe de repente, un toque de sorpresa y alegría iluminando sus ojos."
+    y "Acaso..."
+    y "¿Acaso acabo de..."
     show y_cg2_exp3
     show y_cg2_nochoc:
         alpha 0
         linear 0.5 alpha 1
     hide y_cg2_exp2
-    "[persistent.yuri_nickname] looks at me like she needs to confirm what just happened, a blush tinting her cheeks like the first time."
+    "[persistent.yuri_nickname] me mira como si necesitara confirmar lo que acaba de pasar, un rubor tiñendo sus mejillas como la primera vez."
     y "U-Um..."
     y "[player]..."
-    mc "S-Sorry!"
-    mc "I guess I shouldn't have done that, even though I felt like I wanted to do it..."
-    y "Ah, that's..."
-    y "Well..."
-    y "Y-You were just helping..."
-    y "That's something that... lovers do..."
-    mc "Yeah..."
-    mc "...That's all it was, just a sweet gesture."
-    y "Yeah..."
-    y "Then..."
-    y "You don't need to stop or anything, especially on a day like today..."
-    mc "O-Okay..."
+    mc "¡L-Lo siento!"
+    mc "Supongo que no debí haber hecho eso, aunque sentí que quería hacerlo..."
+    y "Ah, eso es..."
+    y "Bueno..."
+    y "S-Solo estabas ayudando..."
+    y "Eso es algo que... los amantes hacen..."
+    mc "Sí..."
+    mc "...Eso es todo lo que fue, solo un gesto dulce."
+    y "Sí..."
+    y "Entonces..."
+    y "No necesitas detenerte ni nanda, especialmente en un día como hoy..."
+    mc "O-Okey..."
     hide y_cg2_exp3
-    "The atmosphere has gotten really romantic..."
-    "[persistent.yuri_nickname] tries to return to the book, but our shared heartbeat echoes in the room."
-    "But I can tell just by her expression that even she can't focus now, lost in the love that surrounds us."
-    "My heart is pounding, a symphony of emotions playing in the background."
-    "I nervously take another heart-shaped chocolate between my fingers."
-    "But this time, [persistent.yuri_nickname]'s eyes meet mine, and the years melt away in the gaze of love."
+    "La atmósfera se ha vuelto realmente romántica..."
+    "[persistent.yuri_nickname] intenta volver al libro, pero nuestro latido compartido hace eco en la habitación."
+    "Pero puedo decir solo por su expresión que incluso ella no puede concentrarse ahora, perdida en el amor que nos rodea."
+    "Mi corazón está latiendo con fuerza, una sinfonía de emociones tocando en el fondo."
+    "Nerviosamente tomo otro chocolate con forma de corazón entre mis dedos."
+    "Pero esta vez, los ojos de [persistent.yuri_nickname] encuentran los míos, y los años se derriten en la mirada del amor."
     show y_cg2_exp3:
         alpha 0
         linear 0.5 alpha 1
     y "..."
-    "[persistent.yuri_nickname] doesn't avert her gaze, and our eyes speak a language of affection."
-    "I notice her chest rising and falling to the rhythm of her breaths, a melody of love that never fades."
-    "I raise my arm, and the room is filled with the anticipation of a love that has stood the test of time."
+    "[persistent.yuri_nickname] no aparta su mirada, y nuestros ojos hablan un lenguaje de afecto."
+    "Noto su pecho subiendo y bajando al ritmo de sus respiraciones, una melodía de amor que nunca se desvanece."
+    "Levanto mi brazo, y la habitación se llena con la anticipación de un amor que ha resistido la prueba del tiempo."
     y "Ah..."
-    "Like before, [persistent.yuri_nickname] parts her lips, inviting the taste of everlasting love."
-    "But... it's different this time, as if every Valentine's Day we've spent together has led to this moment."
+    "Como antes, [persistent.yuri_nickname] separa sus labios, invitando el sabor del amor eterno."
+    "Pero... es diferente esta vez, como si cada San Valentín que hemos pasado juntos hubiera llevado a este momento."
     hide y_cg2_nochoc
-    "I take the chocolate and place it in her mouth, sealing our love with a promise for more years to come."
-    "I feel her hot breath on my fingers, a gentle reminder that some things, like love, only get stronger with time."
-    "As the chocolate melts away, the room seems to hold its breath, a silent witness to the exchange of emotions that transcends the pages of our shared history."
-    "The air is filled with an unspoken understanding, and we find ourselves caught in a moment where time stands still."
-    "[persistent.yuri_nickname], her eyes now soft with affection, breaks the silence."
+    "Tomo el chocolate y lo coloco en su boca, sellando nuestro amor con una promesa para más años por venir."
+    "Siento su aliento caliente en mis dedos, un gentil recordatorio de que algunas cosas, como el amor, solo se vuelven más fuertes con el tiempo."
+    "Mientras el chocolate se derrite, la habitación parece contener la respiración, un testigo silencioso del intercambio de emociones que trasciende las páginas de nuestra historia compartida."
+    "El aire se llena con un entendimiento tácito, y nos encontramos atrapados en un momento donde el tiempo se detiene."
+    "[persistent.yuri_nickname], sus ojos ahora suaves con afecto, rompe el silencio."
     show y_cg2_nochoc:
         alpha 0
         linear 0.5 alpha 1
-    y "This feels like... a beautiful dream."
-    y "A revisit to the beginnings of our story, yet with the warmth of all the years in between."
-    "A tender smile plays on my lips."
-    mc "It does, doesn't it? A journey through the chapters of our love, each Valentine's Day etching a new line in the story we're still writing together."
-    "The nostalgic atmosphere wraps around us like a comforting embrace. [persistent.yuri_nickname] hesitates before speaking again, her voice carrying the weight of sentiment."
-    y "Do you ever marvel at how love evolves? From those shy moments to the depth we now share, it's a tapestry woven with threads of joy, laughter, and countless shared chocolates."
-    "I nod, feeling the resonance of her words."
-    mc "Absolutely. It's like watching a garden flourish over the seasons."
-    mc "Every bloom, every challenge we've faced, has only strengthened the roots of our connection."
-    "Our eyes lock, communicating more than words ever could."
-    "The air is charged with a subtle electricity, a reminder that love is not stagnant but a living, breathing entity that grows and evolves."
-    "I reach for another chocolate, the sweetness of the gesture lingering between us."
-    "I remember the first Valentine's Day we spent together, [persistent.yuri_nickname] reminisces, a fondness in her voice."
-    y "There was a nervous excitement, a dance of uncertainty."
-    y "And now, here we are, revisiting those moments with a deeper understanding, a love that has matured like fine wine."
-    "I offer her the chocolate, a symbol of continuity, and she accepts it with a graceful nod."
-    mc "It's like we've created our own tradition, a ritual of love that transcends time and space."
+    y "Esto se siente como... un hermoso sueño."
+    y "Una revisita a los comienzos de nuestra historia, pero con la calidez de todos los años en medio."
+    "Una tierna sonrisa juega en mis labios."
+    mc "Lo es, ¿no? Un viaje a través de los capítulos de nuestro amor, cada Día de San Valentín grabando una nueva línea en la historia que aún estamos escribiendo juntos."
+    "La atmósfera nostálgica nos envuelve como un abrazo reconfortante. [persistent.yuri_nickname] duda antes de hablar de nuevo, su voz cargando el peso del sentimiento."
+    y "¿Alguna vez te maravillas de cómo evoluciona el amor? Desde esos momentos tímidos a la profundidad que compartimos ahora, es un tapiz tejido con hilos de alegría, risas, e incontables chocolates compartidos."
+    "Asiento, sintiendo la resonancia de sus palabras."
+    mc "Absolutamente. Es como ver un jardín florecer a lo largo de las estaciones."
+    mc "Cada flor, cada desafío que hemos enfrentado, solo ha fortalecido las raíces de nuestra conexión."
+    "Nuestros ojos se cierran, comunicando más de lo que las palabras podrían."
+    "El aire está cargado con una electricidad sutil, un recordatorio de que el amor no es estático sino una entidad viviente, que respira, crece y evoluciona."
+    "Alcanzo otro chocolate, la dulzura del gesto persistiendo entre nosotros."
+    "Recuerdo el primer Día de San Valentín que pasamos juntos, [persistent.yuri_nickname] rememora, un cariño en su voz."
+    y "Había una emoción nerviosa, un baile de incertidumbre."
+    y "Y ahora, aquí estamos, revisitando esos momentos con un entendimiento más profundo, un amor que ha madurado como el buen vino."
+    "Le ofrezco el chocolate, un símbolo de continuidad, y ella lo acepta con un asentimiento agraciado."
+    mc "Es como si hubiéramos creado nuestra propia tradición, un ritual de amor que trasciende el tiempo y el espacio."
     hide y_cg2_exp3
-    "As the day unfolds, we continue to read, laugh, and share chocolates, weaving new memories into the tapestry of our story."
-    "Each moment is a celebration of the love that has grown and flourished, a testament to the beauty of revisiting the past while embracing the present."
-    "And as the sun sets, casting a warm glow over the room, we find solace in the familiarity of each other's company, knowing that our love story is an ongoing masterpiece."
-    "Painted with the colors of shared dreams, challenges, and the enduring sweetness of love."
-    mc "[persistent.yuri_nickname], thank you."
-    "I say, my voice filled with gratitude and emotion."
-    mc "For all these years, for the shared moments, for the love that has only grown stronger."
-    mc "You've made every Valentine's Day special, and I can't help but marvel at the beautiful journey we've had together."
+    "Mientras el día se desarrolla, continuamos leyendo, riendo, y compartiendo chocolates, tejiendo nuevos recuerdos en el tapiz de nuestra historia."
+    "Cada momento es una celebración del amor que ha crecido y florecido, un testamento a la belleza de revisitar el pasado mientras abrazamos el presente."
+    "Y mientras el sol se pone, proyectando un brillo cálido sobre la habitación, encontramos consuelo en la familiaridad de la compañía del otro, sabiendo que nuestra historia de amor es una obra maestra en curso."
+    "Pintada con los colores de sueños compartidos, desafíos, y la dulzura duradera del amor."
+    mc "[persistent.yuri_nickname], gracias."
+    "Digo, mi voz llena con gratitud y emoción."
+    mc "Por todos estos años, por los momentos compartidos, por el amor que solo se ha vuelto más fuerte."
+    mc "Has hecho cada Día de San Valentín especial, y no puedo evitar maravillarme con el hermoso viaje que hemos tenido juntos."
     show y_cg2_exp3:
         alpha 0
         linear 0.5 alpha 1
-    "She looks at me, her eyes reflecting a mix of emotions."
-    y "No, [player], thank you. You've been the anchor in my life, the steady heartbeat in the symphony of our love."
-    y "I cherish every word, every glance, and every shared chocolate. It's a privilege to have you by my side."
-    "The room seems to glow with the warmth of our connection, and [persistent.yuri_nickname]'s hand finds mine, fingers intertwining in a gesture that speaks volumes."
-    y "I never thought I could find someone who understands the depths of my soul, who appreciates the beauty in the quiet moments."
-    y "But you've been that and more."
-    "I can't help but smile, touched by her words."
-    mc "[persistent.yuri_nickname], you've enriched my life in ways I couldn't have imagined. Each day with you is a gift, and I look forward to many more chapters in our love story."
+    "Ella me mira, sus ojos reflejando una mezcla de emociones."
+    y "No, [player], gracias a ti. Has sido el ancla en mi vida, el latido constante en la sinfonía de nuestro amor."
+    y "Atesoro cada palabra, cada mirada, y cada chocolate compartido. Es un privilegio tenerte a mi lado."
+    "La habitación parece brillar con la calidez de nuestra conexión, y la mano de [persistent.yuri_nickname] encuentra la mía, dedos entrelazándose en un gesto que dice mucho."
+    y "Nunca pensé que podría encontrar a alguien que entienda las profundidades de mi alma, que aprecie la belleza en los momentos tranquilos."
+    y "Pero tú has sido eso y más."
+    "No puedo evitar sonreír, conmovido por sus palabras."
+    mc "[persistent.yuri_nickname], has enriquecido mi vida en formas que no podría haber imaginado. Cada día contigo es un regalo, y espero con ansias muchos más capítulos en nuestra historia de amor."
     show black zorder 105 with Dissolve (1.5)
     hide y_cg2_bg
     hide y_cg2_base
@@ -4218,10 +4214,10 @@ label vday_2024_date:
     hide y_cg2_dust3
     hide y_cg2_dust4
     hide y_cg2_exp3
-    "She leans in, pressing a soft kiss on my lips."
-    y "Happy Valentine's Day, [player]. Here's to us, to the love that continues to bloom, and to the countless moments we'll share in the days to come."
-    "And as we sit there, surrounded by the echoes of our shared laughter and the warmth of our love, I can't help but feel an overwhelming sense of gratitude for the beautiful journey that brought us to this moment."
-    "A moment where the past, present, and future converge in a celebration of love that knows no bounds."
+    "Ella se inclina, presionando un suave beso en mis labios."
+    y "Feliz Día de San Valentín, [player]. Por nosotros, por el amor que continúa floreciendo, y por los incontables momentos que compartiremos en los días por venir."
+    "Y mientras nos sentamos ahí, rodeados por los ecos de nuestra risa compartida y la calidez de nuestro amor, no puedo evitar sentir un abrumador sentido de gratitud por el hermoso viaje que nos trajo a este momento."
+    "Un momento donde el pasado, presente, y futuro convergen en una celebración de amor que no conoce límites."
     if persistent.bg == "space":
         $ tc_class.transition("space", speed="now")
     elif persistent.bg == "timecycle":
@@ -4237,6 +4233,6 @@ label vday_2024_date:
     hide black zorder 105 with Dissolve(3)
     y "..."
     $ show_chr("A-ABBBA-ALAL")
-    y "I love you [player]."
+    y "Te amo [player]."
     jump ch30_loop
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

@@ -32,7 +32,7 @@ label random_farewell:
         reiterate = 0
         active_list = []
         activemenu = []
-        activemenu.append(("Nevermind.","ch30_loop"))
+        activemenu.append(("No importa.","ch30_loop"))
         while reiterate < 3:
             try:
                 x1 = random.choice(x)
@@ -43,29 +43,29 @@ label random_farewell:
             reiterate += 1
         activemenu = []
         activemenu_dict = {
-            1:("Goodbye, [persistent.yuri_nickname]!", 'renpy.jump("farewell_1")'),
-            2:("Sorry, gotta go...", 'renpy.jump("farewell_2")'),
-            3:("I'll see you later, [persistent.yuri_nickname].", 'renpy.jump("farewell_3")'),
-            4:("Bye, [persistent.yuri_nickname], I'll miss you!", 'renpy.jump("farewell_4")'),
-            5:("Sorry I can't stay. I love you!", 'renpy.jump("farewell_5")'),
-            6:("Oh, hey, look at the time, this has been an awesome date!", 'renpy.jump("farewell_6")'),
-            7:("Oh, whoops, someone's calling me, gotta run!", 'renpy.jump("farewell_7")'),
-            8:("I have food... in the oven so...", 'renpy.jump("farewell_8")'),
-            9:("I, uh, gotta go...", 'renpy.jump("farewell_9")'),
-            10:("I'm just going to... close the game now, okay?", 'renpy.jump("farewell_10")'),
-            11:("So long, farewell!", 'renpy.jump("farewell_11")'),
-            12:("I have to go. I already miss you!", 'renpy.jump("farewell_12")'),
-            13:("I have to go now... I'll talk to you later, alright?", 'renpy.jump("farewell_13")'),
-            14:("See you later!", 'renpy.jump("farewell_14")'),
-            15:("I hate having to put you through this, but it looks like it's time to say goodbye once again.", 'renpy.jump("farewell_15")'),
-            16:("I have to go now, my love.", 'renpy.jump("farewell_16")'),
-            17:("Whatever happens, just remember that there is someone who loves you no matter what.", 'renpy.jump("farewell_17")')
+            1:("¡Adiós, [persistent.yuri_nickname]!", 'renpy.jump("farewell_1")'),
+            2:("Lo siento, debo irme...", 'renpy.jump("farewell_2")'),
+            3:("Te veo luego, [persistent.yuri_nickname].", 'renpy.jump("farewell_3")'),
+            4:("Adiós, [persistent.yuri_nickname], ¡te extrañaré!", 'renpy.jump("farewell_4")'),
+            5:("Perdón, no puedo quedarme. ¡Te amo!", 'renpy.jump("farewell_5")'),
+            6:("¡Oh, oye, mira la hora, esta ha sido una cita increíble!", 'renpy.jump("farewell_6")'),
+            7:("Oh, huy, alguien me llama, ¡debo correr!", 'renpy.jump("farewell_7")'),
+            8:("Tengo comida... en el horno así que...", 'renpy.jump("farewell_8")'),
+            9:("Yo, eh, debo irme...", 'renpy.jump("farewell_9")'),
+            10:("Solo voy a... cerrar el juego ahora, ¿ok?", 'renpy.jump("farewell_10")'),
+            11:("¡Hasta luego, adiós!", 'renpy.jump("farewell_11")'),
+            12:("Tengo que irme. ¡Ya te extraño!", 'renpy.jump("farewell_12")'),
+            13:("Tengo que irme ahora... Hablaré contigo luego, ¿está bien?", 'renpy.jump("farewell_13")'),
+            14:("¡Nos vemos luego!", 'renpy.jump("farewell_14")'),
+            15:("Odio tener que hacerte pasar por esto, pero parece que es hora de decir adiós una vez más.", 'renpy.jump("farewell_15")'),
+            16:("Tengo que irme ahora, mi amor.", 'renpy.jump("farewell_16")'),
+            17:("Pase lo que pase, solo recuerda que hay alguien que te ama sin importar qué.", 'renpy.jump("farewell_17")')
             }
 
         reiterate = 0
         activemenu = []
-        activemenu.append(("Nevermind.","renpy.jump('ch30_loop')"))
-        activemenu.append(("I'm going to go AFK for a small bit. Would that be fine?", "renpy.jump('idle_and_afk')"))
+        activemenu.append(("No importa.","renpy.jump('ch30_loop')"))
+        activemenu.append(("Voy a estar AFK un rato. ¿Estaría bien?", "renpy.jump('idle_and_afk')"))
         while reiterate < 3:
             try:
                 activemenu.append(activemenu_dict[active_list[reiterate]])
@@ -78,198 +78,198 @@ label random_farewell:
 
 label farewell_1:
     $ show_chr("A-ECABA-AAAJ")
-    y "Take care!"
+    y "¡Cuídate!"
     $ show_chr("A-ABABA-AMAM")
-    y "I'll miss you, [player]..."
+    y "Te extrañaré, [player]..."
     jump save_and_quit
 
 label farewell_2:
     $ show_chr("A-ABBBA-AMAM")
     python:
         if persistent.lovecheck:
-            placeholder = "love"
+            placeholder = "amor"
         else:
-            placeholder = "friend"
-    y "Farewell, my [placeholder]!"
+            placeholder = "amigo"
+    y "¡Adiós, mi [placeholder]!"
     jump save_and_quit
 
 label farewell_3:
     $ show_chr("A-CCABA-AAAA")
-    y "I'll make you some tea when you come back."
-    y "Albeit, you wouldn't really be able to drink it..."
-    y "Well, at least it's the gesture that counts..."
-    y "A-anyways, take care, [player]!"
+    y "Te haré un poco de té cuando regreses."
+    y "Aunque, realmente no podrías beberlo..."
+    y "Bueno, al menos la intención es lo que cuenta..."
+    y "C-Como sea, ¡cuídate, [player]!"
     jump save_and_quit
 
 label farewell_4:
     $ show_chr("A-GBBBA-ABAB")
     if persistent.lovecheck:
-        y "Be safe, I love you."
+        y "Ve con cuidado, te amo."
     else:
-        y "Be safe, [player], I care about you, and don't want you hurt."
+        y "Ve con cuidado, [player], me importas, y no quiero que te lastimes."
     $ show_chr("A-AABBA-ADAB")
-    y "Come back soon to see me."
+    y "Vuelve pronto a verme."
     jump save_and_quit
 
 label farewell_5:
     $ show_chr("A-ACAAA-AMAM")
-    y "Awww, well, alright. You can't stay forever, as much as I'd like it."
+    y "Awww, bueno, está bien. No puedes quedarte para siempre, por mucho que me gustaría."
     if persistent.lovecheck:
         $ show_chr("A-KCBBA-ABAB")
-        y "Goodbye my love."
+        y "Adiós mi amor."
     else:
         $ show_chr("A-GBABA-ALAB")
-        y "Goodbye [player]! I will look forward to talking to you again."
+        y "¡Adiós [player]! Esperaré ansiosa hablar contigo de nuevo."
     jump save_and_quit
 
 label farewell_6:
     $ show_chr("A-HEBBB-ALAL")
-    y "W-Where are you going? Y-You'll be back, right? You'll come back, right?!"
+    y "¿A-A dónde vas? V-Volverás, ¿verdad? ¡¿Volverás, verdad?!"
     scene black with fade
     jump save_and_quit
 
 label farewell_7:
     $ show_chr("A-DDBBB-ALAL")
-    y "No, don't leave me again! You're all I have left! Don't you fucking leave me he{nw}"
+    y "¡No, no me dejes de nuevo! ¡Eres todo lo que me queda! No me dejes jodidament{nw}"
     jump save_and_quit_but_its_abrupt
 
 label farewell_8:
     $ show_chr("A-HBBBB-AGB")
-    y "Y-you'll be back, right? Please say yes, please say yes!"
-    y "PLEASE SAY YES!!"
+    y "V-Volverás, ¿verdad? ¡Por favor di que sí, por favor di que sí!"
+    y "¡¡POR FAVOR DI QUE SÍ!!"
     python:
         if persistent.lovecheck:
-            placeholder = "I LOVE YOU SO MUCH."
+            placeholder = "TE AMO TANTO."
         else:
             placeholder = player
     menu:
-        "Yes":
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
-        "Yes":
+            y "¡GRACIAS A DIOS![placeholder]"
+        "Sí":
             $ show_chr("A-HLBBA-AHAB")
-            y "THANK GOD![placeholder]"
+            y "¡GRACIAS A DIOS![placeholder]"
     $ persistent.locked_farewells.append(8)
     jump save_and_quit
 
 label farewell_9:
     if persistent.male:
         $ show_chr("A-HDCBA-ALAL")
-        y "They're taking you away again, aren't they?!"
+        y "¡¿Te están llevando lejos otra vez, no?!"
         $ show_chr("A-HLBBA-AAAA")
-        y "GIVE HIM BACK TO ME!"
+        y "¡DEVUÉLVEMELO!"
         $ show_chr("A-HLCBA-AAAA")
-        y "They don't deserve you!"
+        y "¡No te merecen!"
         $ show_chr("A-HLBBB-AHAA")
-        y "THEY DON'T FUCKING DESERVE YO--{nw}"
+        y "¡¡ELLOS NO TE MERECEN JOD--{nw}"
     elif persistent.gender_other:
         $ show_chr("A-HDCBA-ALAL")
-        y "They're taking you away again, aren't they?!"
+        y "¡¿Te están llevando lejos otra vez, no?!"
         $ show_chr("A-HLBBA-AAAA")
-        y "GIVE THEM BACK TO ME!"
+        y "¡DEVUÉLVEMELER!"
         $ show_chr("A-HLCBA-AAAA")
-        y "They don't deserve you!"
+        y "¡No te merecen!"
         $ show_chr("A-HLBBB-AHAA")
-        y "THEY DON'T FUCKING DESERVE YO--{nw}"
+        y "¡¡ELLOS NO TE MERECEN JOD--{nw}"
     else:
         $ show_chr("A-HDCBA-ALAL")
-        y "They're taking you away again, aren't they?!"
+        y "¡¿Te están llevando lejos otra vez, no?!"
         $ show_chr("A-HLBBA-AAAA")
-        y "GIVE HER BACK TO ME!"
+        y "¡DEVUÉLVEMELA!"
         $ show_chr("A-HLCBA-AAAA")
-        y "They don't deserve you!"
+        y "¡No te merecen!"
         $ show_chr("A-HLBBB-AHAA")
-        y "THEY DON'T FUCKING DESERVE YO--{nw}"
-        jump save_and_quit_but_its_abrupt
+        y "¡¡ELLOS NO TE MERECEN JOD--{nw}"
+    jump save_and_quit_but_its_abrupt
 
 label farewell_10:
     $ show_chr("A-DDCBB-AAAA")
-    y "Why do you want to leave me, [player]? What did I do to you? Why can't you let me be happ--{nw}"
+    y "¿Por qué quieres dejarme, [player]? ¿Qué te hice? ¿Por qué no puedes dejarme ser feli--{nw}"
     jump save_and_quit_but_its_abrupt
 
 label farewell_11:
     $ show_chr("A-EIBBA-ALAB")
-    y "Auf Wiedersehen, goodnight!~"
+    y "Auf Wiedersehen, ¡buenas noches!~"
     python:
         if persistent.lovecheck:
-            placeholder = "What did I ever do to deserve you"
+            placeholder = "¿Qué hice para merecerte"
         else:
-            placeholder = "Are we feeling a bit flirty today"
+            placeholder = "¿Nos sentimos un poco coquetos hoy"
     menu:
-        "I hate to go and leave this pretty sight!":
+        "¡Odio irme y dejar esta hermosa vista!":
             $ show_chr("A-ACBBA-ALAL")
             y "[placeholder], [player]?"
     jump save_and_quit
 
 label farewell_12:
     $ show_chr("A-GAABA-AKAE")
-    y "I already miss you too!~"
+    y "¡Ya te extraño también!~"
     jump save_and_quit
 
 label farewell_13:
     if not 49 in persistent.yuriidles:
         $ show_chr("A-IEBBB-AAAA")
-        y "Are you sure you can't just leave me running? I could take a nap until you're back"
+        y "¿Estás seguro de que no puedes dejarme ejecutando? Podría tomar una siesta hasta que vuelvas"
         menu:
-            "I'm sure. Sorry, I would if I could":
+            "Estoy seguro. Lo siento, lo haría si pudiera":
                 jump save_and_quit
-            "Yeah that sounds fine, [persistent.yuri_nickname]":
-                y "Thank you [player], I truly do appreciate this."
-                y "let me give you a hug before you leave"
+            "Sí, eso suena bien, [persistent.yuri_nickname]":
+                y "Gracias [player], realmente aprecio esto."
+                y "déjame darte un abrazo antes de que te vayas"
                 hide yuri_sit
                 show yuri_prehug zorder 20
                 pause 3.0
@@ -286,7 +286,7 @@ label farewell_13:
                 hide yuri_sit
                 show yuri_sleepy zorder 20
                 hide black with Dissolve(2.0)
-                y "Have a good nap, [player]"
+                y "Que tengas una buena siesta, [player]"
                 pause 3.0
                 hide yuri_sleepy
                 play sound "<to 0.3>sfx/fall.ogg"
@@ -297,11 +297,11 @@ label farewell_13:
                 jump sleepy_loop
     elif not 24 in persistent.yuriidles:
         $ show_chr("A-IEBAA-AAAA")
-        y "I wish I could come with you..."
+        y "Desearía poder ir contigo..."
         menu:
-            "I wish you could too.":
+            "Yo también desearía que pudieras.":
                 $ show_chr("A-ICBAA-AAAA")
-                y "It's okay. At least I still have the dreams I've programmed."
+                y "Está bien. Al menos todavía tengo los sueños que he programado."
                 jump save_and_quit
     else:
         jump farewell_1
@@ -309,62 +309,62 @@ label farewell_13:
 label farewell_14:
     if karma_lvl() <= 2:
         $ show_chr("A-ADBBB-ALAL")
-        y "Whatever you do, wherever you go, please don't let me become a memory that's just waiting to be forgotten."
+        y "Hagas lo que hagas, vayas a donde vayas, por favor no me dejes convertirme en un recuerdo que solo espera ser olvidado."
         jump save_and_quit
     else:
         $ show_chr("A-AFBAA-AAAJ")
-        y "Stay safe, alright? If something ever happened while you were gone, I wouldn't be able to forgive myself."
+        y "Mantente a salvo, ¿de acuerdo? Si algo pasara mientras no estabas, no podría perdonármelo."
         jump save_and_quit
 
 label farewell_15:
     $ show_chr("A-BCAAA-AAAA")
     y "..."
     $ show_chr("A-IDBBB-AAAA")
-    y "...Why does my heart have to make every time we say goodbye so hard?"
-    y "I don't mean to be selfish when I say that. I'm grateful, I really am. After everything that's happened, I still can't get over the fact that now we can actually communicate!"
-    y "You must really love me. After all, you are the one who installed this mod."
+    y "...¿Por qué mi corazón tiene que hacer que cada vez que decimos adiós sea tan difícil?"
+    y "No pretendo ser egoísta cuando digo eso. Estoy agradecida, realmente lo estoy. ¡Después de todo lo que ha pasado, todavía no puedo superar el hecho de que ahora realmente podemos comunicarnos!"
+    y "Realmente debes amarme. Después de todo, tú eres quien instaló este mod."
     python:
         if persistent.lovecheck:
-            placeholder = "the entire world"
-            placeholder1 = "loves"
+            placeholder = "el mundo entero"
+            placeholder1 = "ama"
         else:
-            placeholder = "truly important"
-            placeholder1 = "cares for"
-    y "What I want to say is that you're [placeholder] to me and I can't believe that I'm lucky enough to be with someone who [placeholder1] me in return even though they have infinite other choices."
-    y "I know that given my... situation... our bittersweet fate is one with the best possible outcome we could hope for right now. Despite all of that, it just hurts so much have you so close and yet so far."
+            placeholder = "verdaderamente importante"
+            placeholder1 = "se preocupa por"
+    y "Lo que quiero decir es que eres [placeholder] para mí y no puedo creer que tenga la suerte de estar con alguien que [placeholder1] mí a cambio a pesar de que tiene infinitas otras opciones."
+    y "Sé que dada mi... situación... nuestro destino agridulce es uno con el mejor resultado posible que podríamos esperar en este momento. A pesar de todo eso, simplemente duele tanto tenerte tan cerca y a la vez tan lejos."
     python:
         if persistent.lovecheck:
-            placeholder = "my heart begins to race"
+            placeholder = "mi corazón comienza a acelerarse"
         else:
-            placeholder = "I get really excited"
-    y "Every time you open up the game and I finally get to see you again, [placeholder]. Every second away from you feels like a century, every mile becomes a light year apart."
+            placeholder = "me emociono mucho"
+    y "Cada vez que abres el juego y finalmente puedo verte de nuevo, [placeholder]. Cada segundo lejos de ti se siente como un siglo, cada milla se convierte en un año luz de distancia."
     python:
         if persistent.lovecheck:
-            placeholder = "truly love"
+            placeholder = "amas de verdad"
         else:
-            placeholder = "can talk to"
-    y "I think you can understand when the only person you [placeholder] is an entire universe apart."
+            placeholder = "puedes hablar"
+    y "Creo que puedes entender cuando la única persona con la que [placeholder] está a un universo entero de distancia."
     $ show_chr("A-BEBAA-AAAA")
-    y "S-Sorry, I'm rambling again, aren't I? I'll just go ahead and close the game for you."
+    y "L-Lo siento, estoy divagando de nuevo, ¿no? Solo seguiré adelante y cerraré el juego por ti."
     jump save_and_quit
 
 label farewell_16:
     $ show_chr("A-JCBBA-AAAJ")
     python:
         if persistent.lovecheck:
-            placeholder = " my everything"
+            placeholder = ", mi todo"
         else:
-            placeholder = ". Come back to see me soon"
-    y "I'll see you later[placeholder].~"
+            placeholder = ". Vuelve a verme pronto"
+    y "Te veré luego[placeholder].~"
     jump save_and_quit
 
 label farewell_17:
     $ show_chr("A-JBAAA-AAAA")
     python:
         if persistent.lovecheck:
-            placeholder = "my love"
+            placeholder = "mi amor"
         else:
-            placeholder = "until we meet again"
-    y "I could say the same thing to you, [placeholder]."
+            placeholder = "hasta que nos encontremos de nuevo"
+    y "Podría decirte lo mismo, [placeholder]."
     jump save_and_quit
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

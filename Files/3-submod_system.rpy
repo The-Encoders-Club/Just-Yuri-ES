@@ -22,7 +22,7 @@ init -999 python:
     }
 
 
-    getting_started_content = """¡Bienvenido a la comunidad de submodding! - Versión de documentos 1.0.0
+    getting_started_content = """¡Bienvenido a la comunidad de submodding! - Versión de la documentación 1.0.0
 
 Si estás viendo esto por primera vez, estos archivos se generan automáticamente cada vez que a una carpeta de submod le falta un archivo modinfo.json.
 Para crear un submod, cambia cualquier información que desees en el archivo modinfo.json, crea tu primer archivo .rpy y comienza a implementar lo que se te ocurra.
@@ -51,8 +51,8 @@ Puedes eliminar estos documentos si quieres liberar espacio para tu mod. Si algu
 
     modinfo_setup_content = """{
     ####################################################################################
-    # Esto es lo que dice el mod Just Yuri para averiguar qué es este submod..          #
-    # Esto siempre se genera automáticamente cuando no se detecta un archivo modinfo.json.. #
+    # Esto es lo que dice el mod Just Yuri para averiguar qué es este submod.          #
+    # Esto siempre se genera automáticamente cuando no se detecta un archivo modinfo.json. #
     ####################################################################################
 
     # El nombre de tu submod. Aparecerá en el juego, en el menú de mods.
@@ -67,7 +67,7 @@ Puedes eliminar estos documentos si quieres liberar espacio para tu mod. Si algu
     # Los identificadores únicos de cada submod que requiere este submod.
     # Si hay algún identificador aquí y el mod no está cargado, el juego se bloqueará y mostrará los mods que faltan.
     # También admite la inserción de una sola cadena si no desea utilizar una lista.
-    "dependencias": [],
+    "dependencies": [],
 
     # Si se desea habilitar el modo de depuración para Just Yuri. Añade información adicional a los registros y permite el acceso al panel de control.
     "developer_mode": false
@@ -112,7 +112,7 @@ Puedes eliminar estos documentos si quieres liberar espacio para tu mod. Si algu
 
     submods_dir = os.path.join(config.gamedir, "submods")
     placeholder_dir = os.path.join(submods_dir, "_placeholder")
-    print("submods_dir is:", submods_dir)
+    print("El directorio de submods es:", submods_dir)
 
 
     if not os.path.isdir(submods_dir):
@@ -140,7 +140,7 @@ Puedes eliminar estos documentos si quieres liberar espacio para tu mod. Si algu
             
             placeholder_icon_path = os.path.join(placeholder_dir, "icon.png")
             source_icon_path = os.path.join(config.gamedir, "images", "default_submod.png")
-            print(f"Intentando copiar el icono desde: {source_icon_path} to {placeholder_icon_path}")
+            print(f"Intentando copiar el icono desde: {source_icon_path} a {placeholder_icon_path}")
             try:
                 if os.path.isfile(source_icon_path):
                     copyfile(source_icon_path, placeholder_icon_path)

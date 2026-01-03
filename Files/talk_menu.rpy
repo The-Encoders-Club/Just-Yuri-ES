@@ -82,31 +82,31 @@ label prompt_menu:
 
         talk_menu = []
         if dev_access:
-            talk_menu.append((_("Control Panel."), "renpy.jump(\"control_panel\")"))
-        talk_menu.append((_("Ask a question."), "call_dialogue(\"pool\", \"actives\")"))
+            talk_menu.append((_("Panel de Control."), "renpy.jump(\"control_panel\")"))
+        talk_menu.append((_("Haz una pregunta."), "call_dialogue(\"pool\", \"actives\")"))
         if "last_compliment_time" in persistent.memory:
             if (datetime.datetime.now() - persistent.memory["last_compliment_time"]) >= datetime.timedelta(seconds = 900): 
-                talk_menu.append((_("Compliment."), "renpy.jump(\"compliment_menu\")"))
-                talk_menu.append((_("Antagonize."), "renpy.jump(\"insult_menu\")"))
+                talk_menu.append((_("Cumplido."), "renpy.jump(\"compliment_menu\")"))
+                talk_menu.append((_("Insultar."), "renpy.jump(\"insult_menu\")"))
             else:
                 print_debug(datetime.datetime.now() - persistent.memory["last_compliment_time"])
         else:
-            talk_menu.append((_("Compliment."), "renpy.jump(\"compliment_menu\")"))
-            talk_menu.append((_("Antagonize."), "renpy.jump(\"insult_menu\")"))
-        talk_menu.append((_("Sleep."), "renpy.jump('sleepy_yuri')"))
+            talk_menu.append((_("Cumplido."), "renpy.jump(\"compliment_menu\")"))
+            talk_menu.append((_("Insultar."), "renpy.jump(\"insult_menu\")"))
+        talk_menu.append((_("Dormir."), "renpy.jump('sleepy_yuri')"))
 
-        talk_menu.append((_("Goodbye."), "call_dialogue(\"pool\", \"farewells\")"))
-        talk_menu.append((_("Nevermind."),"renpy.jump('ch30_loop')"))
+        talk_menu.append((_("Adiós."), "call_dialogue(\"pool\", \"farewells\")"))
+        talk_menu.append((_("Olvídalo."),"renpy.jump('ch30_loop')"))
 
         randomnum = renpy.random.randint(0,6)
         ran_response = [
-            _("Hmm, what is it?"),
-            _("Yes, " + str(player) + "?"),
-            _("Yes, my love?"),
-            _("Hiya."),
-            _("What would you like to talk about?"),
-            _("Yes, darling?"),
-            _("Hmm?")]
+            _("Hmm, ¿qué pasa?"),
+            _("¿Sí, " + str(player) + "?"),
+            _("¿Sí, mi amor?"),
+            _("Hola."),
+            _("¿De qué te gustaría hablar?"),
+            _("¿Sí, cariño?"),
+            _("¿Hmm?")]
         renpy.say(y, ran_response[randomnum], interact=False)
         madechoice = renpy.display_menu(talk_menu)
         exec(madechoice)
@@ -120,7 +120,7 @@ screen talkbutton():
     if not persistent.HDY and hide_yuri_sit==False:
         vbox xalign 0.03 yalign 0.1:
             style_prefix "talkbutton"
-            textbutton "Dreams":
+            textbutton "Sueños":
                 action Call("talk_slow_no_dismiss", "dream_menu")
 
 
@@ -128,36 +128,36 @@ screen talkbutton():
 
             if renpy.android:
                 if persistent.lovecheck and persistent.bg != "laboratory":
-                    textbutton "Dates":
+                    textbutton "Citas":
                         action Call("talk_slow_no_dismiss", "dates_menu")
-                textbutton "Music":
+                textbutton "Música":
                     action Call("talk_slow_no_dismiss", "change_music")
             else:
                 if persistent.lovecheck and persistent.bg != "laboratory":
-                    textbutton "Dates":
+                    textbutton "Citas":
                         action Call("talk_slow_no_dismiss", "dates_menu")
-                textbutton "Music":
+                textbutton "Música":
                     action Call("talk_slow_no_dismiss", "change_music")
                 if renpy.seen_label("a_tetris"):
-                    textbutton "Games":
+                    textbutton "Juegos":
                         action Call("talk_slow_no_dismiss", "games_menu")
 
 
         vbox xalign 0.50 yalign 0.99:
             style_prefix "talkbutton"
-            textbutton "Talk":
+            textbutton "Hablar":
                 action Call("talk_slow_no_dismiss", "prompt_menu")
     elif hide_yuri_sleep==True:
         $ allow_dialogue = False
         vbox xalign 0.97 yalign 0.99:
             style_prefix "talkbutton"
-            textbutton "Wake up":
+            textbutton "Despertar":
                 action Call("yuriwakeup")
 
     else:
         vbox xalign 0.50 yalign 0.99:
 
-            textbutton "Change back to Yuri":
+            textbutton "Volver a Yuri":
                 action Call("changeoutfit")
 
 
@@ -167,17 +167,17 @@ label games_menu:
     $ Dream_type = "game"
     $ boopable = False
     $ show_chr("A-ABAAA-ALAL")
-    y "Up for a game [player]?"
+    y "¿Te apetece una partida, [player]?"
     $ show_chr("A-CCAAA-ALAL")
-    y "Please take a look at the games I have available for us currently. Do any look appealing to you?"
+    y "Por favor, echa un vistazo a los juegos que tengo disponibles para nosotros actualmente. ¿Te parece atractivo alguno?"
     menu:
         "Tetris":
             jump tetris
-        "Chess":
+        "Ajedrez":
 
 
             jump chess
-        "Nevermind":
+        "Olvídalo":
 
 
 
@@ -187,28 +187,28 @@ label games_menu:
 screen untalkbutton():
     vbox xalign 0.03 yalign 0.1:
         style_prefix "talkbutton"
-        textbutton "Dreams":
+        textbutton "Sueños":
             action NullAction()
 
 
 
 
         if persistent.lovecheck:
-            textbutton "Dates":
+            textbutton "Citas":
                 action NullAction()
-        textbutton "Music":
+        textbutton "Música":
             action NullAction()
 
     vbox xalign 0.50 yalign 0.99:
         style_prefix "talkbutton"
         if persistent.alpha_save or renpy.seen_label("a_games") or renpy.seen_label("featuregreetings"):
-            textbutton "games":
+            textbutton "juegos":
                 action NullAction()
             null height 10
 
 
 
-        textbutton "Talk":
+        textbutton "Hablar":
             action NullAction()
 
 label talk_slow_no_dismiss(jumper):

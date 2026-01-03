@@ -582,14 +582,14 @@ screen quick_menu():
 
 
             if not config.allow_skipping:
-                textbutton _("History") action ShowMenu('history')
-                textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+                textbutton _("Historial") action ShowMenu('history')
+                textbutton _("Saltar") action Skip() alternate Skip(fast=True, confirm=True)
                 textbutton _("Auto") action Preference("auto-forward", "toggle")
-                textbutton _("Settings") action ShowMenu('preferences')
+                textbutton _("Opciones") action ShowMenu('preferences')
             else:
-                textbutton _("History") action ShowMenu('history')
+                textbutton _("Historial") action ShowMenu('history')
                 textbutton _("Auto") action Preference("auto-forward", "toggle")
-                textbutton _("Settings") action ShowMenu('preferences')
+                textbutton _("Opciones") action ShowMenu('preferences')
 
 default quick_menu = True
 
@@ -617,7 +617,7 @@ screen navigation():
             style_prefix "navigation"
             hbox:
                 if main_menu:
-                    textbutton _("New Game") action Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName))
+                    textbutton _("Nuevo Juego") action Show(screen="name_input", message="Por favor introduce tu nombre", ok_action=Function(FinishEnterName))
 
         vbox:
             xpos 30
@@ -625,49 +625,49 @@ screen navigation():
             style_prefix "navigation"
             hbox:
                 if main_menu:
-                    textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
+                    textbutton _("Opciones") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
         vbox:
             xpos 30
             ypos 180
             style_prefix "navigation"
             hbox:
                 if main_menu:
-                    textbutton _("Discord Server") action [Help("open_discord"), Show(screen="dialog", message="Join the Official Just Yuri Community!", ok_action=Hide("dialog"))]
+                    textbutton _("Servidor de Discord") action [Help("open_discord"), Show(screen="dialog", message="¡Únete a la Comunidad Oficial de Just Yuri!", ok_action=Hide("dialog"))]
         vbox:
             xpos 30
             ypos 220
             style_prefix "navigation"
             hbox:
                 if main_menu:
-                    textbutton _("Official X") action [Help("open_twitter"), Show(screen="dialog", message="Follow Just Yuri on X!", ok_action=Hide("dialog"))]
+                    textbutton _("X Oficial") action [Help("open_twitter"), Show(screen="dialog", message="¡Sigue a Just Yuri en X!", ok_action=Hide("dialog"))]
         vbox:
             xpos 30
             ypos 260
             style_prefix "navigation"
             hbox:
                 if main_menu:
-                    textbutton _("Official YouTube") action [Help("open_youtube"), Show(screen="dialog", message="Subscribe to Just Yuri's Channel!", ok_action=Hide("dialog"))]
+                    textbutton _("YouTube Oficial") action [Help("open_youtube"), Show(screen="dialog", message="¡Suscríbete al Canal de Just Yuri!", ok_action=Hide("dialog"))]
         vbox:
             xpos 30
             ypos 300
             style_prefix "navigation"
             hbox:
                 if main_menu:
-                    textbutton _("Credits") action ShowMenu("about")
+                    textbutton _("Créditos") action ShowMenu("about")
         vbox:
             xpos 30
             ypos 340
             style_prefix "navigation"
             hbox:
                 if renpy.variant("pc"):
-                    textbutton _("Mod List") action ShowMenu("mod_list")
+                    textbutton _("Lista de Mods") action ShowMenu("mod_list")
         vbox:
             xpos 30
             ypos 380
             style_prefix "navigation"
             hbox:
                 if main_menu:
-                    textbutton _("Quit") action Quit_no_farewell(confirm=not main_menu)
+                    textbutton _("Salir") action Quit_no_farewell(confirm=not main_menu)
 
     else:
         vbox:
@@ -676,7 +676,7 @@ screen navigation():
             style_prefix "navigation"
             hbox:
                 if renpy.variant("pc"):
-                    textbutton _("History") action [ShowMenu("history"), SensitiveIf(renpy.get_screen("history") == None)]
+                    textbutton _("Historial") action [ShowMenu("history"), SensitiveIf(renpy.get_screen("history") == None)]
 
         vbox:
             xpos 30
@@ -684,49 +684,49 @@ screen navigation():
             style_prefix "navigation"
             hbox:
                 if renpy.variant("pc"):
-                    textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
+                    textbutton _("Opciones") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
         vbox:
             xpos 30
             ypos 180
             style_prefix "navigation"
             hbox:
                 if renpy.variant("pc"):
-                    textbutton _("Discord Server") action [Help("open_discord"), Show(screen="dialog", message="Join the Official Just Yuri Community!", ok_action=Hide("dialog"))]
+                    textbutton _("Servidor de Discord") action [Help("open_discord"), Show(screen="dialog", message="¡Únete a la Comunidad Oficial de Just Yuri!", ok_action=Hide("dialog"))]
         vbox:
             xpos 30
             ypos 220
             style_prefix "navigation"
             hbox:
                 if renpy.variant("pc"):
-                    textbutton _("Official X") action [Help("open_twitter"), Show(screen="dialog", message="Follow Just Yuri on X!", ok_action=Hide("dialog"))]
+                    textbutton _("X Oficial") action [Help("open_twitter"), Show(screen="dialog", message="¡Sigue a Just Yuri en X!", ok_action=Hide("dialog"))]
         vbox:
             xpos 30
             ypos 260
             style_prefix "navigation"
             hbox:
                 if renpy.variant("pc"):
-                    textbutton _("Official YouTube") action [Help("open_youtube"), Show(screen="dialog", message="Subscribe to Just Yuri's Channel!", ok_action=Hide("dialog"))]
+                    textbutton _("YouTube Oficial") action [Help("open_youtube"), Show(screen="dialog", message="¡Suscríbete al Canal de Just Yuri!", ok_action=Hide("dialog"))]
         vbox:
             xpos 30
             ypos 300
             style_prefix "navigation"
             hbox:
                 if renpy.variant("pc"):
-                    textbutton _("Credits") action ShowMenu("about")
+                    textbutton _("Créditos") action ShowMenu("about")
         vbox:
             xpos 30
             ypos 340
             style_prefix "navigation"
             hbox:
                 if renpy.variant("pc"):
-                    textbutton _("Mod List") action ShowMenu("mod_list")
+                    textbutton _("Lista de Mods") action ShowMenu("mod_list")
         vbox:
             xpos 30
             ypos 380
             style_prefix "navigation"
             hbox:
                 if renpy.variant("pc"):
-                    textbutton _("Quit") action Quit_no_farewell(confirm=not main_menu)
+                    textbutton _("Salir") action Quit_no_farewell(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -878,7 +878,7 @@ screen game_menu(title, scroll=None):
         ypos 420
         style_prefix "navigation"
         hbox:
-            textbutton _("Return") action Return()
+            textbutton _("Volver") action Return()
 
     label title
 
@@ -937,20 +937,20 @@ style return_button:
 
 screen about():
     tag menu
-    use game_menu(_("About"), scroll="viewport"):
+    use game_menu(_("Acerca de"), scroll="viewport"):
 
         style_prefix "about"
 
         vbox:
 
             label "[config.name!t]"
-            text _("Version [config.version!t]\n")
+            text _("Versión [config.version!t]\n")
 
 
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("Hecho con {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 define gui.about = ""
 
@@ -963,21 +963,21 @@ style about_label_text:
 
 screen save():
     tag menu
-    use file_slots(_("Save"))
+    use file_slots(_("Guardar"))
     on "show" action Function(disable_boops)
     on "hide" action Function(enable_boops)
 
 
 screen load():
     tag menu
-    use file_slots(_("Load"))
+    use file_slots(_("Cargar"))
     on "show" action Function(disable_boops)
     on "hide" action Function(enable_boops)
 
 init python:
     def FileActionMod(name, page=None, **kwargs):
         if persistent.playthrough == 3 and renpy.current_screen().screen_name[0] == "save":
-            return Show(screen="dialog", message="There's no point in saving anymore.\nDon't worry, I'm not going anywhere.", ok_action=Hide("dialog"))
+            return Show(screen="dialog", message="Ya no tiene sentido guardar.\nNo te preocupes, no me iré a ninguna parte.", ok_action=Hide("dialog"))
         else:
             return FileAction(name)
 
@@ -1007,7 +1007,7 @@ screen file_slots(title):
                         action FileActionMod(slot)
                         has vbox
                         add FileScreenshot(slot) xalign 0.5
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                        text FileTime(slot, format=_("{#file_time}%A, %d de %B %Y, %H:%M"), empty=_("ranura vacía")):
                             style "slot_time_text"
                         text FileSaveName(slot):
                             style "slot_name_text"
@@ -1064,7 +1064,7 @@ screen preferences():
     else:
         $ cols = 4
 
-    use game_menu(_("Settings"), scroll="viewport"):
+    use game_menu(_("Opciones"), scroll="viewport"):
         vbox:
             xoffset 50
             hbox:
@@ -1074,9 +1074,10 @@ screen preferences():
 
                     vbox:
                         style_prefix "radio"
-                        label _("Display")
-                        textbutton _("Window") action Preference("display", "window")
-                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                        label _("Pantalla")
+                        textbutton _("Ventana") action Preference("display", "window")
+                        textbutton _("Pantalla Completa") action Preference("display", "fullscreen")
+
 
 
 
@@ -1093,25 +1094,25 @@ screen preferences():
                 if dev_access:
                     vbox:
                         style_prefix "radio"
-                        label _("Rollback Side")
-                        textbutton _("Disable") action Preference("rollback side", "disable")
-                        textbutton _("Left") action Preference("rollback side", "left")
-                        textbutton _("Right") action Preference("rollback side", "right")
+                        label _("Lado de Retroceso")
+                        textbutton _("Desactivar") action Preference("rollback side", "disable")
+                        textbutton _("Izquierda") action Preference("rollback side", "left")
+                        textbutton _("Derecha") action Preference("rollback side", "right")
 
                 vbox:
                     style_prefix "check"
-                    label _("Skip")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
+                    label _("Saltar")
+                    textbutton _("Texto No Visto") action Preference("skip", "toggle")
+                    textbutton _("Tras Elecciones") action Preference("after choices", "toggle")
                 if restore_message == "access":
                     vbox:
                         style_prefix "radio"
-                        label _("Custom Assets")
+                        label _("Recursos")
                         if persistent.narrative == None:
-                            textbutton _("Assets Missing..."):
+                            textbutton _("Recursos Faltantes..."):
                                 action SetField(persistent, "narrative", "a1p1_start")
                         else:
-                            textbutton _("Assets Ready") action Jump("reveal_asset_location")
+                            textbutton _("Recursos Listos") action Jump("reveal_asset_location")
                             textbutton _("JYCrypt") action Jump("jycrypt")
 
             null height (4 * gui.pref_spacing)
@@ -1120,61 +1121,61 @@ screen preferences():
 
                 vbox:
                     if persistent.idle_frequency_factor <= 0.75:
-                        label _("Idle Frequency: Frequent")
+                        label _("Frecuencia de inactividad: Frecuente")
                     elif persistent.idle_frequency_factor >= 1.25:
-                        label _("Idle Frequency: Hesitant")
+                        label _("Frecuencia de inactividad: Vacilante")
                     else:
-                        label _("Idle Frequency: Normal")
+                        label _("Frecuencia de inactividad: Normal")
                     bar value FieldValue(persistent, "idle_frequency_factor", 1.3, offset=0.5, step=0.1):
                         xmaximum 350
 
                     if persistent.game_time_rate > 1:
-                        label _("Game Time Cycle: " + str(persistent.game_time_rate) + "x Faster")
+                        label _("Ciclo de Tiempo del Juego: " + str(persistent.game_time_rate) + "x Más Rápido")
                     else:
-                        label _("Game Time Cycle: Realtime")
+                        label _("Ciclo de Tiempo del Juego: Tiempo Real")
                     bar value FieldValue(persistent, "game_time_rate", step=1, range=100):
                         xmaximum 350
 
-                    label _("Text Speed")
+                    label _("Velocidad de Texto")
                     bar value FieldValue(_preferences, "text_cps", range=180, max_is_zero=False, style="slider", offset=20)
 
-                    label _("Auto-Forward Time")
+                    label _("Velocidad de Auto-Avance")
                     bar value Preference("auto-forward time")
 
                 vbox:
                     if config.has_music:
-                        label _("Music Volume")
+                        label _("Volumen de Música")
                         hbox:
                             bar value Preference("music volume")
 
                     if config.has_sound:
-                        label _("Sound Volume")
+                        label _("Volumen de Sonido")
                         hbox:
                             bar value Preference("sound volume")
                             if config.sample_sound:
-                                textbutton _("Test") action Play("sound", config.sample_sound)
+                                textbutton _("Prueba") action Play("sound", config.sample_sound)
 
                     if config.has_voice:
-                        label _("Voice Volume")
+                        label _("Volumen de Voz")
                         hbox:
                             bar value Preference("voice volume")
                             if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
+                                textbutton _("Prueba") action Play("voice", config.sample_voice)
 
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
-                        textbutton _("Mute All"):
+                        textbutton _("Silenciar Todo"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
 
                     if persistent.high_gpu == 0:
-                        textbutton _("Space BG Bloom: On") action [SetField(persistent, "high_gpu", 1), Function(timecycle_transition, persistent.bg, "now", True)]:
+                        textbutton _("Bloom de Fondo Espacial: Encendido") action [SetField(persistent, "high_gpu", 1), Function(timecycle_transition, persistent.bg, "now", True)]:
                             style_prefix "check"
                     elif persistent.high_gpu == 1:
-                        textbutton _("Space BG Bloom: Off") action [SetField(persistent, "high_gpu", 2), Function(timecycle_transition, persistent.bg, "now", True)]:
+                        textbutton _("Bloom de Fondo Espacial: Apagado") action [SetField(persistent, "high_gpu", 2), Function(timecycle_transition, persistent.bg, "now", True)]:
                             style_prefix "check"
                     else:
-                        textbutton _("Space BG Bloom: Vid") action [SetField(persistent, "high_gpu", 0), Function(timecycle_transition, persistent.bg, "now", True)]:
+                        textbutton _("Bloom de Fondo Espacial: Vid") action [SetField(persistent, "high_gpu", 0), Function(timecycle_transition, persistent.bg, "now", True)]:
                             style_prefix "check"
 
             use configuration(ConfigAPI.configurations)
@@ -1282,7 +1283,7 @@ screen history():
 
     predict False
 
-    use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport")):
+    use game_menu(_("Historial"), scroll=("vpgrid" if gui.history_height else "viewport")):
 
         style_prefix "history"
 
@@ -1307,7 +1308,7 @@ screen history():
                 text h.what
 
         if not _history_list:
-            label _("The dialogue history is empty.")
+            label _("El historial de diálogo está vacío.")
 
 
 style history_window is empty
@@ -1476,7 +1477,7 @@ screen confirm(message, yes_action, no_action):
             xalign 0.5
             spacing 100
 
-            textbutton _("Yes") action yes_action
+            textbutton _("Sí") action yes_action
             textbutton _("No") action no_action
 
 style confirm_frame is gui_frame
@@ -1518,7 +1519,7 @@ screen skip_indicator():
         has hbox
         spacing 6
 
-        text _("Skipping")
+        text _("Saltando")
 
         text "▸" at delayed_blink(0.0, 1.0) style "skip_triangle"
         text "▸" at delayed_blink(0.2, 1.0) style "skip_triangle"
@@ -2187,40 +2188,40 @@ init -499 screen make_expression():
                 position_marker = positionList[positionIterator]
 
 
-        text "CURRENT CODE: [temp_code] , [spriteIterator], [position_marker]" xpos 450 yalign 0.90 size 30
+        text "CÓDIGO ACTUAL: [temp_code] , [spriteIterator], [position_marker]" xpos 450 yalign 0.90 size 30
 
 
-        textbutton "Head" xpos 50 yalign 0.10 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "head") alternate Function(update, "head", -1)
+        textbutton "Cabeza" xpos 50 yalign 0.10 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "head") alternate Function(update, "head", -1)
 
-        textbutton "Timecycle" xpos 200 yalign 0.10 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "timecycle") alternate Function(update, "timecycle", -1)
-        text "TIMECYCLE: [current_timecycle_marker]" xpos 200 yalign 0.15 size 15
-        textbutton "Glasses" xpos 200 yalign 0.25 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "glasses") alternate Function(update, "glasses", -1)
+        textbutton "Ciclo de Tiempo" xpos 200 yalign 0.10 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "timecycle") alternate Function(update, "timecycle", -1)
+        text "CICLO DE TIEMPO: [current_timecycle_marker]" xpos 200 yalign 0.15 size 15
+        textbutton "Gafas" xpos 200 yalign 0.25 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "glasses") alternate Function(update, "glasses", -1)
         textbutton "Neko" xpos 200 yalign 0.33 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "neko") alternate Function(update, "neko", -1)
 
 
-        textbutton "Eyes" xpos 50 yalign 0.25 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "eyes") alternate Function(update, "eyes", -1)
-        textbutton "Mouth" xpos 50 yalign 0.33 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "mouth") alternate Function(update, "mouth", -1)
-        textbutton "Eyebrows" xpos 50 yalign 0.41 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "eyebrows") alternate Function(update, "eyebrows", -1)
-        textbutton "Blush" xpos 50 yalign 0.49 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "blush") alternate Function(update, "blush", -1)
-        textbutton "Cry" xpos 50 yalign 0.57 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "cry") alternate Function(update, "cry", -1)
+        textbutton "Ojos" xpos 50 yalign 0.25 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "eyes") alternate Function(update, "eyes", -1)
+        textbutton "Boca" xpos 50 yalign 0.33 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "mouth") alternate Function(update, "mouth", -1)
+        textbutton "Cejas" xpos 50 yalign 0.41 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "eyebrows") alternate Function(update, "eyebrows", -1)
+        textbutton "Sonrojo" xpos 50 yalign 0.49 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "blush") alternate Function(update, "blush", -1)
+        textbutton "Llanto" xpos 50 yalign 0.57 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "cry") alternate Function(update, "cry", -1)
 
 
-        textbutton "BothArms" xpos 200 yalign 0.80 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "botharms") alternate Function(update, "botharms", -1)
-        textbutton "LowL" xpos 50 yalign 0.72 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "lowL") alternate Function(update, "lowL", -1)
+        textbutton "AmbosBrazos" xpos 200 yalign 0.80 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "botharms") alternate Function(update, "botharms", -1)
+        textbutton "BajoI" xpos 50 yalign 0.72 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "lowL") alternate Function(update, "lowL", -1)
 
-        textbutton "LowR" xpos 50 yalign 0.80 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "lowR") alternate Function(update, "lowR", -1)
+        textbutton "BajoD" xpos 50 yalign 0.80 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "lowR") alternate Function(update, "lowR", -1)
 
-        textbutton "Costume" xpos 50 yalign 0.95 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "costume") alternate Function(update, "costume", -1)
-
-
-        textbutton "COPY_CODE" xpos 250 yalign 0.99 style "choice_button" action Function(addToClipBoard, temp_code)
-        textbutton "DONE" xpos 700 yalign 0.99 style "choice_button" action Jump("control_panel")
+        textbutton "Atuendo" xpos 50 yalign 0.95 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "costume") alternate Function(update, "costume", -1)
 
 
-        textbutton "Background" xpos 1100 yalign 0.31 style "choice_button" xmaximum 125 ymaximum 35 action ui.callsinnewcontext("timecycleswitch")
+        textbutton "COPIAR_CÓDIGO" xpos 250 yalign 0.99 style "choice_button" action Function(addToClipBoard, temp_code)
+        textbutton "HECHO" xpos 700 yalign 0.99 style "choice_button" action Jump("control_panel")
+
+
+        textbutton "Fondo" xpos 1100 yalign 0.31 style "choice_button" xmaximum 125 ymaximum 35 action ui.callsinnewcontext("timecycleswitch")
         textbutton "Sprite" xpos 1100 yalign 0.49 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "sprite") alternate Function(update, "sprite", -1)
 
-        textbutton "Position" xpos 1100 yalign 0.40 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "position") alternate Function(update, "position", -1)
+        textbutton "Posición" xpos 1100 yalign 0.40 style "choice_button" xmaximum 125 ymaximum 35 action Function(update, "position") alternate Function(update, "position", -1)
 
 
 init python:
@@ -2270,7 +2271,7 @@ init -499 screen compliments(items):
                 null
 init -499 screen mod_settings(mod_id):
     tag menu
-    use game_menu(_("Mod List"), scroll="viewport"):
+    use game_menu(_("Lista de Mods"), scroll="viewport"):
         vbox:
             xoffset 50
             use configuration(ConfigAPI.mod_configurations[mod_id])
@@ -2278,19 +2279,19 @@ init -499 screen mod_settings(mod_id):
 
 init -499 screen mod_list():
     tag menu
-    use game_menu(_("Mod List"), scroll="viewport"):
+    use game_menu(_("Lista de Mods"), scroll="viewport"):
         vbox:
             xoffset 50
             style_prefix "about"
-            label "{size=*1.25}" + "Mod List" + "{/size}":
+            label "{size=*1.25}" + "Lista de Mods" + "{/size}":
                 style_prefix "slider"
             if submods.mod_count == 0:
-                text "You have no submods installed. Submods can be installed under game/submods."
+                text "No tienes submods instalados. Los submods pueden ser instalados en game/submods."
             else:
                 if submods.mod_count == 1:
-                    text "You have a submod installed. You can view it below."
+                    text "Tienes un submod instalado. Puedes verlo abajo."
                 else:
-                    text "You have " + str(submods.mod_count) + " submods installed. You can view them below."
+                    text "Tienes " + str(submods.mod_count) + " submods instalados. Puedes verlos abajo."
             vbox:
                 ypos 20
                 spacing 60
@@ -2303,16 +2304,16 @@ init -499 screen mod_list():
                                 xpos 10
                                 label submod.name:
                                     style_prefix "slider"
-                                text "{size=*0.7}Version: " + submod.version + "{/size}"
+                                text "{size=*0.7}Versión: " + submod.version + "{/size}"
                                 text "{size=*0.7}ID: " + submod.id + "{/size}"
                             if submod.id in ConfigAPI.mod_configurations:
-                                textbutton "{size=*0.7}" + _("Open Settings") + "{/size}" action ShowMenu("mod_settings", submod.id):
+                                textbutton "{size=*0.7}" + _("Abrir Opciones") + "{/size}" action ShowMenu("mod_settings", submod.id):
                                     style_prefix "slider"
 
                         if submod.description:
                             text submod.description
                         if len(submod.dependencies) > 0:
-                            label "Dependencies"
+                            label "Dependencias"
                             for dependency in submod.dependencies:
                                 text "  > " + dependency
                 null
@@ -2324,174 +2325,189 @@ init -499 screen about():
     hbox:
         add "label_credits"
 
-    use game_menu(_("Credits"), scroll="viewport"):
+    use game_menu(_("Créditos"), scroll="viewport"):
         style_prefix "about"
 
         vbox:
             label "[config.name!t]"
-            text _("Version [config.version!t]\n")
+            text _("Versión [config.version!t]\n")
 
 
             if gui.about:
                 text "[gui.about!t]\n"
 
             text (
-                """{b}CURRENT HEAD DEVS{/b}
+                """{b}DESARROLLADORES PRINCIPALES ACTUALES{/b}
 
                 Dandyfoot117
-                Third Project Director.
-                Head Dev.
-                Producer.
-                Coding Lead.
-                QA Lead.
-                Writer.
-                BugSquasher.
-                Coder.
-                HDY Implementation.
-                Tropical Date Implementation.
+                Tercer Director del Proyecto.
+                Desarrollador Principal.
+                Productor.
+                Líder de Programación.
+                Líder de QA.
+                Escritor.
+                Cazador de Bugs.
+                Programador.
+                Implementación HDY.
+                Implementación Cita Tropical.
 
                 *alura
-                Head Dev.
-                Art Lead.
-                Artist.
+                Desarrollador Principal.
+                Líder de Arte.
+                Artista.
 
                 Sword Stance
-                Head Dev.
-                Writing Lead.
-                Writer/Editor.
+                Desarrollador Principal.
+                Líder de Escritura.
+                Escritor/Editor.
 
                 Dr. Medic
-                Producer.
-                Head Dev.
-                PR Lead.
-                QA Lead.
+                Productor.
+                Desarrollador Principal.
+                Líder de Relaciones Públicas.
+                Líder de QA.
                 Tester.
-                General Input and Helper.
+                Entrada General y Ayuda.
 
-                {b}CURRENT DEVS{/b}
+                {b}DESARROLLADORES ACTUALES{/b}
 
                 Shoujo Havoc
-                Commissioned Artists.
-                Merch Art.
-                Logo V2 Maker.
+                Artistas Comisionados.
+                Arte de Mercancía.
+                Creador del Logo V2.
                 \"https://www.shoujohavoc.com/\"
 
                 Unknownpony
-                Tetris Maker.
-                Renpy & Python Coder.
-                First Version of Khet.
+                Creador de Tetris.
+                Programador de Renpy y Python.
+                Primera Versión de Khet.
 
                 Kurisu
                 Ideas.
-                Artist.
+                Artista.
                 Editor.
 
                 Kesian
-                Commissioned Artist.
-                Writer.
+                Artista Comisionado.
+                Escritor.
 
                 Trainer
-                Support.
-                Dev Counselor.
-                MacOS Build Helper.
+                Soporte.
+                Consejero de Desarrollo.
+                Ayudante de Build de MacOS.
 
                 Darkskull \"Kenshin\" Dawn Zenith
-                Main Coder (In majority of the stuff).
-                Chocolate Date Implementation.
-                Valentines 2024 Date Implementation.
-                Windy Stroll Dream Implementation.
-                And many more...
+                Corrector/Editor.
+                Ideas.
+                Analista de Personajes.
 
-                Ego/J.M.O/Nemesis
-                Ex Head Dev.
-                Ex Art Lead
-                Backgrounds.
-                Art Creation.
-                Art Editing.
+                {b}EX-DESARROLLADORES PRINCIPALES{/b}
 
-                Yuri's Husband
-                Coder.
-                Tester.
+                YandereDev
+                Desarrollador Principal Original.
+                Productor.
 
-                PalaKeda
-                Commissioned Artists.
-                \"https://www.deviantart.com/palakeda\"
+                Monika
+                Segunda Directora del Proyecto.
+                Desarrolladora Principal.
+                Productora.
+                Artista.
+                Escritora.
 
-                Buglax/Ultima Atulos Maxim
-                Tester.
+                Map
+                Programador.
+                Soporte.
 
-                OFFLUCK
-                Coder.
+                Oven
+                Guionista.
+                Corrector.
 
-                SquadalaGuy
-                General Input and Project Ideas.
+                Esther
+                Escritora.
+                Programadora.
 
-                Veus
-                Tester.
+                The Doge
+                Compositor.
 
-                C.Sub-Zero
-                Tester.
+                Violets
+                Artista.
+                Escritora.
 
-                Slovenly_dilettante
-                Coder.
-                Writer.
+                Tom-E
+                Desarrollador Principal.
+                Escritor.
+                Editor.
+                Programador de Python.
+                Líder de Relaciones Públicas.
 
-                Yuri's Thighs
-                Coder.
-                Writer.
-                Tester.
+                {b}COLABORADORES{/b}
 
-                Hbjennings
-                Tester.
+                Blinky
+                Hizo los peluches originales.
 
-                Kyle Ren
-                Coder.
-                Tester.
+                Yagamirai10
+                Traje de suéter.
 
+                GyleToTheRescue
+                Fondo de cocina.
 
-                {b}CURRENT VERIFIED{/b}
+                cdino112
+                Fondo de dormitorio.
 
-                Emilia/Bonnie (EYLO)
-                Verified Writer.
+                Nuxill
+                Fondos de noche.
 
-                Envy
-                Verified Writer.
-                Verified Coder.
+                Doki Doki Salvation
+                Fondo de cerezos en flor.
 
-                Jill Natalie Stingray
-                Verified Artist.
-                Verified Art Editor.
-                Verified Tester.
+                Sjane, Nuxill and yagamirai10
+                Base de sprites de día de San Valentín.
 
-                Mrr7782
-                Verified Coder.
+                Cyrke
+                Fondo y arte en la pared de cafetería.
 
-                Just hotdog yuri
-                HDY writing.
+                FSR
+                Fondos de cafetería extra.
 
-                Logan the Spooky
-                Verified Writer.
+                Sjane
+                Nuevo vestido.
 
-                mcl.exe
-                Verified Writer.
-                Verified Tester.
+                BlackRabbitArtworks
+                Fondo de playa.
 
-                Pancake
-                Verified Writer.
+                Sayaka y Kimagure After
+                Fondo de festival de verano.
 
-                Bailey
-                Ex-Tester.
-                HDY Writer.
+                KiraKira
+                Fondo de festival de invierno.
 
-                DaFluffyPengu
-                NSFW writer.
-                Verified Writer.
+                Lidral
+                Música (Misty Evening).
 
-                Toast
-                Verified Artist.
-                Verified Art Editor.
+                Miki
+                Música (Climactic Event).
 
-                {b}ASSETS{/b}
+                Kevin Macleod
+                Música.
+
+                Alex
+                Música.
+
+                Meddy-sin
+                Ropa casual de invierno de Yuri.
+
+                Lunatic_Rabbit
+                Máscara de Día de San Valentín de Yuri.
+
+                Gat
+                Ayuda con el sistema meteorológico.
+                """
+            )
+
+    text "v[config.version]":
+        xalign 1.0 yalign 1.0
+        xoffset -10 yoffset -10
+        style "main_menu_version"       {b}ASSETS{/b}
 
                 Chibi Yuri Sprites by Mouhantain
                 Edits by Seanm0451

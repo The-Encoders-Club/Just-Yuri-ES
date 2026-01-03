@@ -127,12 +127,12 @@ python early:
                 karma_event = KarmaEvent(persistent.karma_points, clamp(points, -max_points, max_points), True)
                 EventAPI.call(karma_event)
                 persistent.karma_points = clamp(karma_event.resulting_karma, -max_points, max_points)
-                print_debug("Setting karma to " + str(persistent.karma_points))
+                print_debug("Estableciendo karma a " + str(persistent.karma_points))
             else:
                 karma_event = KarmaEvent(persistent.karma_points, clamp(persistent.karma_points + points, -max_points, max_points), False)
                 EventAPI.call(karma_event)
                 persistent.karma_points = clamp(karma_event.resulting_karma, -max_points, max_points)
-                print_debug("Adding " + str(points) + " karma: " + str(persistent.karma_points))
+                print_debug("Añadiendo " + str(points) + " karma: " + str(persistent.karma_points))
 
     def sanity(points : float = None, should_set : bool = False) -> float:
         """
@@ -146,37 +146,37 @@ python early:
                 sanity_event = SanityEvent(persistent.sanity_points, clamp(points, -max_points, max_points), True)
                 EventAPI.call(sanity_event)
                 persistent.sanity_points = clamp(sanity_event.resulting_sanity, -max_points, max_points)
-                print_debug("Setting sanity to " + str(persistent.sanity_points))
+                print_debug("Estableciendo cordura a " + str(persistent.sanity_points))
             else:
                 sanity_event = SanityEvent(persistent.sanity_points, clamp(persistent.sanity_points + points, -max_points, max_points), False)
                 EventAPI.call(sanity_event)
                 persistent.sanity_points = clamp(sanity_event.resulting_sanity, -max_points, max_points)
-                print_debug("Adding " + str(points) + " sanity: " + str(persistent.sanity_points))
+                print_debug("Añadiendo " + str(points) + " cordura: " + str(persistent.sanity_points))
 
     def statement_karma_parse(lexer):
-        lexer.expect_noblock("The karma statement does not expect a code block")
+        lexer.expect_noblock("La declaración de karma no espera un bloque de código")
         should_set = (lexer.keyword("set") == "set")
         number = lexer.float()
         return float(number) if number != None else None, should_set
     def statement_karma_lint(arg):
         if arg[0] == None:
-            renpy.error("The karma statement requires a float, but was not given one")
+            renpy.error("La declaración de karma requiere un flotante, pero no se dio uno")
     def statement_karma_execute(arg):
         if arg[0] == None:
-            renpy.error("The karma statement requires a float, but was not given one")
+            renpy.error("La declaración de karma requiere un flotante, pero no se dio uno")
         karma(arg[0], arg[1])
 
     def statement_sanity_parse(lexer):
-        lexer.expect_noblock("The sanity statement does not expect a code block")
+        lexer.expect_noblock("La declaración de cordura no espera un bloque de código")
         should_set = (lexer.keyword("set") == "set")
         number = lexer.float()
         return float(number) if number != None else None, should_set
     def statement_sanity_lint(arg):
         if arg[0] == None:
-            renpy.error("The sanity statement requires a float, but was not given one")
+            renpy.error("La declaración de cordura requiere un flotante, pero no se dio uno")
     def statement_sanity_execute(arg):
         if arg[0] == None:
-            renpy.error("The sanity statement requires a float, but was not given one")
+            renpy.error("La declaración de cordura requiere un flotante, pero no se dio uno")
         sanity(arg[0], arg[1])
 
     renpy.register_statement("karma", statement_karma_parse, statement_karma_lint, statement_karma_execute)
@@ -787,38 +787,38 @@ init -999 python:
             'Oleg',
             'Dandy',
             'Bitch Tits Megee',
-            '[Name Missing]',
-            'Arial size 12',
+            '[Nombre Faltante]',
+            'Arial tamaño 12',
             'Cornelius',
             'Link',
             'Morshu',
             'Rick Roll',
-            'Trump - no wait',
+            'Trump - no espera',
             'Esteban',
             'Pepe',
-            'lemur',
+            'lémur',
             'Bartholomew',
-            'what' + "'" + 's your name again',
+            'cuál' + "'" + ' es tu nombre de nuevo',
             'Timothy',
             'SANS',
-            'Another original name',
+            'Otro nombre original',
             'Times new roman 14',
             'Alecksander',
-            'NameNotFoundException',
-            'kiddo',
-            'Keyboard smash',
+            'ExcepciónNombreNoEncontrado',
+            'chico',
+            'Golpe de teclado',
             'monikammmmmmmmm',
-            '<Name>',
+            '<Nombre>',
             'Putin',
-            'Evergreen boat',
+            'Barco Evergreen',
             'Slavyori',
             'Bakuretsu',
             'Zuckerberg',
             'Shrek',
             'Trollface',
             'Impostor',
-            'ValueError: Failed to recognize str',
-            'PlayerNameValue',
+            'ValueError: Falló al reconocer str',
+            'ValorNombreJugador',
             'Dalek',
             'Cabos',
             'Sheila',
@@ -830,7 +830,7 @@ init -999 python:
             'Loopenzio',
             'Viktor',
             'Sorge',
-            'Envy',
+            'Envidia',
             'iulaerhguñlearhn',
             'Scott the Wozz',
             'Gopher',
@@ -1428,19 +1428,19 @@ label show_mask_timecycle:
 
 label timecycleswitch:
     menu:
-        "Timecycle":
+        "Ciclo de tiempo":
             $ tc_class.transition("timecycle")
-        "Classroom":
+        "Salón de clases":
             $ tc_class.transition("space")
-        "Purple Room":
+        "Habitación Morada":
             $ tc_class.transition("purple_table")
-        "Yuri's Bedroom":
+        "Habitación de Yuri":
             menu:
                 "Kotatsu 1":
                     $ tc_class.transition("yuri_kotatsu_1")
                 "Kotatsu 2":
                     $ tc_class.transition("yuri_kotatsu_2")
-                "Desk":
+                "Escritorio":
                     $ tc_class.transition("yuri_desk")
     call screen make_expression
 

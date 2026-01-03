@@ -24,14 +24,14 @@ init python:
                     try:
                         full_wordlist.append(PoemWord(x[0], float(x[1]), float(x[2]), float(x[3]), float(x[4])))
                     except ValueError as e:  
-                        print_debug(f"Error parsing line '{line}': {e}. Skipping this line") 
+                        print_debug(f"Error al analizar la línea '{line}': {e}. Saltando esta línea") 
                 else:
-                    print_debug(f"Error: Unexpected number of fields in '{line}'. Skipping this line.")
+                    print_debug(f"Error: Número inesperado de campos en '{line}'. Saltando esta línea.")
 
     except FileNotFoundError:
-        print_debug(f"File '/poemwords_different.txt' not found.")
+        print_debug(f"Archivo '/poemwords_different.txt' no encontrado.")
     except Exception as e: 
-        print_debug(f"An unexpected error occurred while reading the file: {e}")
+        print_debug(f"Ocurrió un error inesperado al leer el archivo: {e}")
 
     seen_eyes_this_chapter = False
     yuriTime = renpy.random.random() * 4 + 4

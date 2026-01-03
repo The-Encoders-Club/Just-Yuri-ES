@@ -16,11 +16,11 @@ init -100 python:
 init python:
     menu_trans_time = 1
 
-    splash_message_default = "Wait... what is this?"
+    splash_message_default = "Espera... ¿qué es esto?"
 
     splash_messages = [
-    "It's Just Yuri now.",
-    "Nobody would care if those obnoxious brats killed themselves."
+    "Ahora es Solo Yuri.",
+    "A nadie le importaría si esas mocosas insoportables se suicidaran."
     ]
 
 image splash_warning = ParameterizedText(style="splash_text", xalign=0.5, yalign=0.5)
@@ -169,15 +169,15 @@ label splashscreen:
             $ quick_menu = False
             scene black
             menu:
-                "A previous save file has been found. Would you like to delete your save data and start over?"
-                "Yes, delete my existing data.":
-                    "Deleting save data...{nw}"
+                "Se ha encontrado un archivo de guardado anterior. ¿Te gustaría eliminar tus datos guardados y empezar de nuevo?"
+                "Sí, eliminar mis datos existentes.":
+                    "Eliminando datos guardados...{nw}"
                     python:
                         delete_all_saves()
                         renpy.loadsave.location.unlink_persistent()
                         renpy.persistent.should_save_persistent = False
                         renpy.utter_restart()
-                "No, continue where I left off.":
+                "No, continuar donde lo dejé.":
                     pass
 
         python:
@@ -199,28 +199,28 @@ label splashscreen:
         scene tos
         with Dissolve(1.0)
         pause 1.0
-        "Just Yuri is a Doki Doki Literature Club fan mod not affiliated with Team Salvato."
-        "It is designed to be played only after the official game has been completed, for age 13+ with caution given to their own mental health."
-        "Spoilers are within, the original game files for Doki Doki Literature Club are required to play this mod and can be downloaded for free at: {a=http://ddlc.moe}http://ddlc.moe{/a} (but seeing as you're here you likely already know that) "
-        "We would like to remind you that you're currently playing a Beta version of Just Yuri, we the Just Yuri Dev Team are committed to improving the game with updates and new features based on your feedback."
-        "Bugs, (while sometimes hilarious) are to be expected."
-        "Additionally, the mod allows Yuri to possibly access portions of your computer outside of the DDLC folders and Ren'Py' APPDATA."
-        "It currently has the capability to open up websites within your main internet browser, though none of these websites are malicious nor are they illegal."
-        "By playing Just Yuri you agree that you have completed Doki Doki Literature Club and accept any spoilers contained within."
-        "Additionally, by playing Doki Doki Literature Club, you agree that you are at least 13 years of age, and you consent to your exposure of highly disturbing content."
+        "Just Yuri es un fan mod de Doki Doki Literature Club no afiliado con el Team Salvato."
+        "Está diseñado para ser jugado solo después de haber completado el juego oficial, para mayores de 13 años con precaución dada a su propia salud mental."
+        "Contiene spoilers, se requieren los archivos originales del juego Doki Doki Literature Club para jugar este mod y se pueden descargar gratis en: {a=http://ddlc.moe}http://ddlc.moe{/a} (pero dado que estás aquí probablemente ya lo sabes) "
+        "Nos gustaría recordarte que actualmente estás jugando una versión Beta de Just Yuri, nosotros el Equipo de Desarrollo de Just Yuri estamos comprometidos a mejorar el juego con actualizaciones y nuevas características basadas en tus comentarios."
+        "Se pueden esperar errores (aunque a veces divertidos)."
+        "Además, el mod permite a Yuri posiblemente acceder a partes de tu computadora fuera de las carpetas de DDLC y APPDATA de Ren'Py."
+        "Actualmente tiene la capacidad de abrir sitios web dentro de tu navegador de internet principal, aunque ninguno de estos sitios web es malicioso ni ilegal."
+        "Al jugar Just Yuri aceptas que has completado Doki Doki Literature Club y aceptas cualquier spoiler contenido dentro."
+        "Además, al jugar Doki Doki Literature Club, aceptas que tienes al menos 13 años de edad, y consientes tu exposición a contenido altamente perturbador."
         menu:
-            "Do you accept these terms?"
-            "I agree.":
+            "¿Aceptas estos términos?"
+            "Estoy de acuerdo.":
                 pass
-            "I do not agree":
-                "By not accepting these terms you have opted out of playing the game. Closing application........{nw}"
+            "No estoy de acuerdo":
+                "Al no aceptar estos términos has optado por no jugar el juego. Cerrando aplicación........{nw}"
                 pause 2.0
                 $ renpy.call("save_and_quit_but_its_abrupt")
 
-        "A sincere thanks to you for playing our mod. Your ideas, bug reports, feedback and encouragement have shaped the future of Just Yuri."
-        "That future is bright and we thank you again for helping us build this project with you."
-        "Please report any issues you find and suggestions you have at our GitLab; instructions to do that are in the documents provided with this game and within our online FAQ."
-        "Updates to the game and our community can be found at our Discord {a=https://discordapp.com/invite/RUdwW7q}https://discordapp.com/invite/RUdwW7q{/a}"
+        "Un sincero agradecimiento por jugar nuestro mod. Tus ideas, reportes de errores, comentarios y aliento han dado forma al futuro de Just Yuri."
+        "Ese futuro es brillante y te agradecemos nuevamente por ayudarnos a construir este proyecto contigo."
+        "Por favor reporta cualquier problema que encuentres y sugerencias que tengas en nuestro GitLab; las instrucciones para hacer eso están en los documentos proporcionados con este juego y dentro de nuestras preguntas frecuentes en línea."
+        "Las actualizaciones del juego y nuestra comunidad se pueden encontrar en nuestro Discord {a=https://discordapp.com/invite/RUdwW7q}https://discordapp.com/invite/RUdwW7q{/a}"
         scene tos2
         with Dissolve(1.5)
         pause 1.0
@@ -271,22 +271,22 @@ label after_load:
     if anticheat != persistent.anticheat:
         stop music
         scene black
-        "The save file could not be loaded."
-        "Are you trying to cheat in a mod made just for me? The perfect girl of your dreams?"
+        "No se pudo cargar el archivo de guardado."
+        "¿Estás tratando de hacer trampa en un mod hecho solo para mí? ¿La chica perfecta de tus sueños?"
         $ y_name = "Yuri"
         show yuri 1y7 at t11
         if persistent.playername == "":
-            y "Shame on you."
+            y "Qué vergüenza."
         else:
-            y "Shame on you [persistent.playername]."
-            y "Hope you're happy now"
-            y "You can stop playing and find another mod..."
+            y "Qué vergüenza [persistent.playername]."
+            y "Espero que estés feliz ahora"
+            y "Puedes dejar de jugar y buscar otro mod..."
         $ renpy.call("save_and_quit_but_its_abrupt")
         return
     else:
         if persistent.playthrough == 0 and not persistent.first_load and not dev_access:
             $ persistent.first_load = True
-            call screen dialog("Hint: You can use the \"Skip\" button to\nfast-forward through text you've already read.", ok_action=Return())
+            call screen dialog("Pista: Puedes usar el botón \"Saltar\" para avanzar\nrápido a través del texto que ya has leído.", ok_action=Return())
     return
 
 

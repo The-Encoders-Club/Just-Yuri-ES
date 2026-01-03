@@ -215,10 +215,10 @@ define n = DynamicCharacter('n_name', what_prefix='"', what_suffix='"', ctc="ctc
 define gn = DynamicCharacter('gn_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_style="windowgh", who_style='say_label_bluegreenish')
 define y = DynamicCharacter('y_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_style="yuri_txtbox", who_style='say_label_purple')
 define Y = DynamicCharacter('y_name', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_style="yuri_txtbox", who_style='say_label_purple')
-define hdy = Character('Hot Dog Yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_style="yuri_txtbox", who_style='say_label_purple')
-define ny = Character('Nat & Yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
-define sy = Character('System', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
-define jy = Character('JY Dev.', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define hdy = Character('Yuri Hot Dog', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed", window_style="yuri_txtbox", who_style='say_label_purple')
+define ny = Character('Nat y Yuri', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define sy = Character('Sistema', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define jy = Character('Desr. JY', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 
 image monika_bg = "images/bg/space_classroom/yuri_room.png"
 image monika_bg_highlight:

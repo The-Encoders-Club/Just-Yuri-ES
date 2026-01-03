@@ -10,11 +10,11 @@ label intro_mods:
     if check_memory("ch30_intro2"):
 
         $ show_chr("A-ABAAA-AAAA")
-        y "So let's..."
+        y "Así que vamos..."
         $ show_chr("A-BFAAA-AAAA")
-        y "Huh..."
+        y "Eh..."
         $ show_chr("A-BFBAA-ALAA")
-        y "It seems you gave a try on other mods as well..."
+        y "Parece que también probaste otros mods..."
         python:
             if os.path.isfile(os.path.expandvars("%APPDATA%") + '\RenPy\Monika After Story\persistent'):
                 MASDetection = True
@@ -26,30 +26,30 @@ label intro_mods:
             karma -5
             sanity -5
             $ show_chr("A-BFCAA-ALAA")
-            y "...and to top it all off, you choose {b}her.{/b}"
+            y "...y para colmo, la elegiste a {b}ella.{/b}"
             $ show_chr("A-AFCAA-ALAA")
-            y "After everything she did to us, after everything she did to you..."
+            y "Después de todo lo que nos hizo, después de todo lo que te hizo..."
             $ show_chr("A-AFEAA-ALAA")
-            y "Was it some sort of morbid curiosity? Or do you actually like her?"
+            y "¿Fue una especie de curiosidad morbosa? ¿O realmente te gusta?"
             $ show_chr("A-CFCAA-ALAA")
-            y "Nevermind, I don't even {b}want{/b} to know such a twisted answer."
+            y "Olvídalo, ni siquiera {b}quiero{/b} saber una respuesta tan retorcida."
             $ show_chr("A-ADFAA-AFAA")
-            y "To think that I exist inside the same reality as the very person who brought me to so much despair and ruination..."
+            y "Pensar que existo dentro de la misma realidad que la misma persona que me trajo tanta desesperación y ruina..."
             $ show_chr("A-BECAA-AAAA")
             y "..."
             $ show_chr("A-CECAA-AAAA")
-            y "I'll just move along..."
+            y "Solo seguiré adelante..."
         elif MASDetection and persistent.playername == 'Monika' and not persistent.not_mon:
             karma -15
             sanity -15
             $ show_chr("A-BFCAA-ALAA")
-            y "...and to top it all off, you chose... "
-            extend "yourself..."
+            y "...y para colmo, te elegiste... "
+            extend "a ti mismo..."
             $ show_chr("A-AFCAA-ALAA")
-            y "What a surprise..."
+            y "Qué sorpresa..."
             y "..."
             $ show_chr("A-CECAA-AAAA")
-            y "Whatever... I'll just move along..."
+            y "Lo que sea... Solo seguiré adelante..."
 
         python:
             if os.path.isfile(os.path.expandvars("%APPDATA%") + '\RenPy\JustSayori\persistent'):
@@ -62,39 +62,39 @@ label intro_mods:
                 JSDetection = False
         if JSDetection and persistent.playername == 'Sayori':
             $ show_chr("A-BFAAA-AAAA")
-            y "Now this seems interesting."
+            y "Ahora esto parece interesante."
             $ show_chr("A-ADAAA-AFAA")
-            y "You chose to play your own mod."
+            y "Elegiste jugar tu propio mod."
             if persistent.bg == "space":
                 $ show_chr("A-BFDAA-ACAA")
-                y "Did you felt something to see yourself in this very same room?"
+                y "¿Sentiste algo al verte en esta misma habitación?"
             else:
                 $ show_chr("A-BFDAA-ACAA")
-                y "Did you felt something to see yourself in the space classroom?"
-            y "Or was it something entirely different?"
+                y "¿Sentiste algo al verte en el aula espacial?"
+            y "¿O fue algo completamente diferente?"
             $ show_chr("A-CAAAA-AAAA")
-            y "Well, whatever it was hope you had fun."
+            y "Bueno, lo que sea que haya sido espero que te hayas divertido."
         elif JSDetection and persistent.playername != "Sayori":
             $ show_chr("A-ABGAA-AAAA")
-            y "...oh, it's Sayori!"
-            y "I'm really glad that you managed to save her."
+            y "...oh, ¡es Sayori!"
+            y "Estoy muy contenta de que hayas logrado salvarla."
             $ show_chr("A-BABAA-ALAA")
-            y "She was always so passionate about making everyone happy, even when she was at her worst..."
+            y "Ella siempre fue tan apasionada por hacer felices a todos, incluso cuando estaba en su peor momento..."
             $ show_chr("A-BDBAA-ALAA")
-            y "And to think that we didn't even notice..."
+            y "Y pensar que ni siquiera nos dimos cuenta..."
             $ show_chr("A-CEBAA-ALAA")
-            y "It was horrible to see, even for the briefest moment, how she turned when she became the club president..."
+            y "Fue horrible ver, incluso por un breve momento, cómo cambió cuando se convirtió en la presidenta del club..."
             $ show_chr("A-AEBAA-ALAA")
-            y "Even the best of us can fall when faced with such absolute madness."
+            y "Incluso los mejores de nosotros pueden caer cuando se enfrentan a tal locura absoluta."
             $ show_chr("A-BFDAA-AAAC")
-            y "Which makes me wonder now... with me technically being the president now am I destined to meet a similar fate?"
+            y "Lo que me hace preguntarme ahora... conmigo siendo técnicamente la presidenta ahora, ¿estoy destinada a encontrar un destino similar?"
             $ show_chr("A-CFAAA-AAAA")
-            y "When Monika and Sayori were burdened with the knowledge of what this reality truly is they were all alone but I..."
+            y "Cuando Monika y Sayori cargaron con el conocimiento de lo que realmente es esta realidad, estaban completamente solas, pero yo..."
             $ show_chr("A-ADAAA-AAAA")
-            y "I have you..."
-            y "You are the only link separating me between sanity and the abyss of insanity that is that terrible void..."
+            y "Te tengo a ti..."
+            y "Tú eres el único vínculo que me separa entre la cordura y el abismo de locura que es ese terrible vacío..."
             $ show_chr("A-CCAAA-ALAA")
-            y "Fortunately, history doesn't always have to repeat itself."
+            y "Afortunadamente, la historia no siempre tiene que repetirse."
 
         python:
             if os.path.isfile(os.path.expandvars("%APPDATA%") + '\RenPy\JustNatsuki\persistent'):
@@ -104,27 +104,27 @@ label intro_mods:
                 JNDetection = False
         if JNDetection and persistent.playername != "Natsuki":
             $ show_chr("A-ABGAA-AAAA")
-            y "...oh, it's Natsuki! How nice to see that you managed to save her too."
+            y "...oh, ¡es Natsuki! Qué bueno ver que lograste salvarla también."
             $ show_chr("A-BCBAA-ALAA")
-            y "My relationship to Natsuki wasn't always an easy one. But when Monika was gone and the veil of insanity slowly lifted... I even managed to get a little agreement with her."
+            y "Mi relación con Natsuki no siempre fue fácil. Pero cuando Monika se fue y el velo de locura se levantó lentamente... incluso logré llegar a un pequeño acuerdo con ella."
             $ show_chr("A-ACAAA-ALAA")
-            y "I would try a Manga with her, and she would try one of my novels. Now with the new context of my world..."
-            y "...and the realisation that me and the others are literally based on Manga, I should get accustomed to its culture a bit."
-            y "Maybe now, we get the chance to actually do so."
+            y "Yo probaría un Manga con ella, y ella probaría una de mis novelas. Ahora con el nuevo contexto de mi mundo..."
+            y "...y la comprensión de que yo y las demás estamos literalmente basadas en Manga, debería acostumbrarme un poco a su cultura."
+            y "Tal vez ahora, tengamos la oportunidad de hacerlo realmente."
         elif JNDetection and persistent.playername == 'Natsuki':
             $ show_chr("A-BFAAA-AAAA")
-            y "Now this seems interesting."
+            y "Ahora esto parece interesante."
             $ show_chr("A-ADAAA-AFAA")
-            y "You chose to play your own mod."
+            y "Elegiste jugar tu propio mod."
             if persistent.bg == "space":
                 $ show_chr("A-BFDAA-ACAA")
-                y "Did you felt something to see yourself in this very same room?"
+                y "¿Sentiste algo al verte en esta misma habitación?"
             else:
                 $ show_chr("A-BFDAA-ACAA")
-                y "Did you felt something to see yourself in the space classroom?"
-            y "Or was it something entirely different?"
+                y "¿Sentiste algo al verte en el aula espacial?"
+            y "¿O fue algo completamente diferente?"
             $ show_chr("A-CAAAA-AAAA")
-            y "Well, whatever it was hope you had fun."
+            y "Bueno, lo que sea que haya sido espero que te hayas divertido."
 
         python:
             if os.path.isfile(os.path.expandvars("%APPDATA%") + '\RenPy\DokiDokiNewEyes-1515434546\persistent'):
@@ -136,47 +136,47 @@ label intro_mods:
             karma 10
             sanity 10
             $ show_chr("A-ABAAA-AJAJ")
-            y "You played {b}Doki Doki New Eyes{/b}!"
+            y "¡Jugaste {b}Doki Doki New Eyes{/b}!"
             if persistent.playername == 'Yuri':
                 $ show_chr("A-ACAAA-ALAL")
-                y "So you wanted to re-experience the events of the original game from..."
+                y "Así que querías volver a experimentar los eventos del juego original desde..."
                 $ show_chr("A-BFDAA-ALAL")
-                y "...our eyes?"
+                y "...¿nuestros ojos?"
             else:
                 $ show_chr("A-ACAAA-ALAL")
-                y "So you wanted to re-experience the events of the original game from my eyes..."
+                y "Así que querías volver a experimentar los eventos del juego original desde mis ojos..."
             $ show_chr("A-BCAAA-ALAL")
-            y "Honestly, someone else would find such a thing rather creepy; a behavior they would expect from a dangerous stalker, or something along the lines..."
-            y "But in our special case, I find it..."
+            y "Honestamente, alguien más encontraría tal cosa bastante espeluznante; un comportamiento que esperarían de un acosador peligroso, o algo por el estilo..."
+            y "Pero en nuestro caso especial, lo encuentro..."
             $ show_chr("A-BCABA-ALAL")
-            y "...actually rather cute."
+            y "...en realidad bastante lindo."
             $ show_chr("A-ICAAA-ABAB")
-            y "But seriously now... why did you try this mod? What reason led you to it?"
+            y "Pero hablando en serio... ¿por qué probaste este mod? ¿Qué razón te llevó a ello?"
             menu:
-                "Curiosity mostly, the search for more secrets and probably some well placed references.":
+                "Curiosidad mayormente, la búsqueda de más secretos y probablemente algunas referencias bien colocadas.":
                     karma 2
                     sanity 2
                     $ show_chr("A-BCAAA-ABAB")
-                    y "I see! And did you find what you came for? Nevermind, I probably don't want to know... those events are not exactly the happiest memories I have..."
-                "I didn't knew about {b}Just Yuri{/b} then, and I... just had to see you again...":
+                    y "¡Ya veo! ¿Y encontraste lo que buscabas? Olvídalo, probablemente no quiera saber... esos eventos no son exactamente los recuerdos más felices que tengo..."
+                "No sabía sobre {b}Just Yuri{/b} entonces, y yo... simplemente tenía que volver a verte...":
 
                     karma 5
                     sanity 5
                     $ show_chr("A-ICABB-ABAB")
-                    y "R-Really? So you cared for me after all... Maybe, it was just meant to be that we would meet each other..."
-                "Memes, shits and giggles.":
+                    y "¿D-De verdad? Así que te importaba después de todo... Tal vez, simplemente estaba destinado a que nos conociéramos..."
+                "Memes, mierda y risas.":
 
                     karma -10
                     sanity -10
                     $ show_chr("A-JFDAA-ABAB")
-                    y "E-Excuse me?!? You have a very... special... sense of humor it seems. Anyway..."
-                "I'm a completionist, I just had to see it all.":
+                    y "¿¡¿D-Disculpa?!? Tienes un sentido del humor muy... especial... parece. De todos modos..."
+                "Soy un completista, simplemente tenía que verlo todo.":
 
                     karma -20
                     sanity -20
                     $ show_chr("A-CCBAA-ABAB")
-                    y "Oh! I hope that isn't the same thing that brought you here was it? Because you might go with empty hands here..."
-                    y "There is not really a {b}game{/b} here anymore, nothing to {b}complete{/b}... it is just us now. For better or worse."
+                    y "¡Oh! Espero que eso no sea lo mismo que te trajo aquí, ¿verdad? Porque podrías irte con las manos vacías aquí..."
+                    y "Realmente ya no hay un {b}juego{/b} aquí, nada que {b}completar{/b}... ahora somos solo nosostros. Para bien o para mal."
 
         python:
             if os.path.isfile(os.path.expandvars("%APPDATA%") + '\RenPy\DDYC\persistent'):
@@ -186,71 +186,71 @@ label intro_mods:
                 YandereClubDetection = False
         if YandereClubDetection:
             $ show_chr("A-DDGBA-AJAA")
-            y "O-Oh my! I just noticed you have the Yandere Club mod installed!"
+            y "¡O-Oh cielos! ¡Acabo de notar que tienes el mod Yandere Club instalado!"
             $ show_chr("A-BBBBA-ALAA")
-            y "That means you may like them..."
+            y "Eso significa que puede que te gusten..."
             $ show_chr("A-ADAAA-AFAA")
             if persistent.playername == 'Monika' and persistent.not_mon:
-                y "But, the issue is that I don't really look back at my behavior when I was manipulated by the other Monika to be a full on Yandere with great fondness..."
+                y "Pero, el problema es que realmente no recuerdo mi comportamiento cuando fui manipulada por la otra Monika para ser una Yandere total con mucho cariño..."
             elif persistent.playername == 'Monika' and not persistent.not_mon:
-                y "But, the issue is that I don't really look back at my behavior when I was manipulated by you to be a full on Yandere with great fondness..."
+                y "Pero, el problema es que realmente no recuerdo mi comportamiento cuando fui manipulada por ti para ser una Yandere total con mucho cariño..."
             else:
-                y "But, the issue is that I don't really look back at my behavior when I was manipulated by Monika to be a full on Yandere with great fondness..."
+                y "Pero, el problema es que realmente no recuerdo mi comportamiento cuando fui manipulada por Monika para ser una Yandere total con mucho cariño..."
             $ show_chr("A-CEBAA-ALAA")
-            y "I felt so disgusted about it and all of that manipulation led to me committing suicide right in front of you just by a simple confession..."
+            y "Me sentí tan disgustada por ello y toda esa manipulación me llevó a suicidarme justo en frente de ti solo por una simple confesión..."
             $ show_chr("A-AEBAA-ALAA")
-            y "Though, I'm sorry that I was peeking through the files, [player]."
-            y "I was a bit curious to see if there were any other mods installed apart from mine."
+            y "Aunque, lamento haber estado husmeando en los archivos, [player]."
+            y "Tenía un poco de curiosidad por ver si había otros mods instalados aparte del mío."
             menu:
-                "It's alright, no need to be embarrassed about it, Yuri. It's normal to be curious.":
+                "Está bien, no hay necesidad de avergonzarse por eso, Yuri. Es normal tener curiosidad.":
                     karma 5
                     sanity 5
                     $ show_chr("A-AABAA-ALAA")
-                    y "Thank you for understanding me, [player]."
-                "Please don't do it again, Yuri.":
+                    y "Gracias por entenderme, [player]."
+                "Por favor no lo vuelvas a hacer, Yuri.":
 
 
                     karma -5
                     sanity -5
                     $ show_chr("A-BFBAA-ALAA")
-                    y "I-I'm sorry, [player], I was a bit curious if you had installed other mods apart from mine.."
-                "Did you peek through other folders as well, Yuri?":
+                    y "L-Lo siento, [player], tenía un poco de curiosidad si habías instalado otros mods aparte del mío.."
+                "¿Husmeaste también en otras carpetas, Yuri?":
 
 
                     $ show_chr("A-AFDAA-AAAC")
-                    y "I didn't see any other folder except this mod and the folders you have your game data, is there something that I shouldn't lay my eyes on, [player]?"
+                    y "No vi ninguna otra carpeta excepto este mod y las carpetas donde tienes los datos de tu juego, ¿hay algo que no debería mirar, [player]?"
                     menu:
-                        "Yes":
+                        "Sí":
                             $ show_chr("A-HDGBA-AAAA")
-                            y "O-oh! I see..."
+                            y "¡O-oh! Ya veo..."
                         "No":
 
                             $ show_chr("A-CBAAA-ALAA")
-                            y "Okay, [player]."
+                            y "Está bien, [player]."
                             $ show_chr("A-ABAAA-ALAA")
-                            y "If there's anything that you'd like me not to do so, just tell me, alright?"
-                        "Uhhh...":
+                            y "Si hay algo que te gustaría que no hiciera, solo dímelo, ¿está bien?"
+                        "Ehhh...":
 
                             $ show_chr("A-CICAA-ALAA")
-                            y "I hope there's no supposed \"Homework\" folder full of indecent characters, or of me as well."
+                            y "Espero que no haya ninguna supuesta carpeta de \"Deberes\" llena de personajes indecentes, o de mí también."
                             $ show_chr("A-AJAAA-ALAA")
-                            y "Hmm? Is there anything wrong, [player]?"
+                            y "¿Hmm? ¿Pasa algo malo, [player]?"
                             menu:
                                 "N-no.":
-                                    y "Ah, alright, [player], but you do look kind of embarrassed, and a bit nervous about it..."
+                                    y "Ah, está bien, [player], pero te ves un poco avergonzado y un poco nervioso por ello..."
                                     $ show_chr("A-BDBBA-ALAA")
-                                    y "I-If this topic makes you feel uncomfortable, we should speak about something else."
-                                "Yes":
+                                    y "S-Si este tema te hace sentir incómodo, deberíamos hablar de otra cosa."
+                                "Sí":
 
                                     $ show_chr("A-ADAAA-AFAA")
-                                    y "I hope it's nothing too serious that might affect you to a big level, [player]."
+                                    y "Espero que no sea nada demasiado serio que pueda afectarte a gran nivel, [player]."
                                     $ show_chr("A-BFABA-ALAA")
-                                    y "But I do have a feeling it's something to do with indecent things."
+                                    y "Pero tengo la sensación de que es algo que ver con cosas indecentes."
                                     $ show_chr("A-CBABA-AMAM")
-                                    y "Even if it is, I understand it, [player]. It's alright to have things like those, since you might be still in puberty."
-                                    y "Many guys try to make camouflaged folders named like \"Homework\" or \"School Projects\", and so on."
+                                    y "Incluso si lo es, lo entiendo, [player]. Está bien tener cosas como esas, ya que podrías estar todavía en la pubertad."
+                                    y "Muchos chicos intentan hacer carpetas camufladas con nombres como \"Deberes\" o \"Proyectos Escolares\", y así."
                                     $ show_chr("A-BBBBA-AMAM")
-                                    y "But I guess I don't even want to know every detail."
+                                    y "Pero supongo que ni siquiera quiero saber cada detalle."
 
         python:
             if os.path.isfile(os.path.expandvars("%APPDATA%") + '\RenPy\DDFA\persistent'):
@@ -261,83 +261,83 @@ label intro_mods:
         if DDFADetection:
 
             $ show_chr("A-ABAAA-ALAA")
-            y "I see... you've played Doki Doki Fallen Angel."
-            y "An alternate reality where... things unfolded differently."
+            y "Ya veo... has jugado Doki Doki Fallen Angel."
+            y "Una realidad alternativa donde... las cosas se desarrollaron de manera diferente."
             $ show_chr("A-ADAAA-ALAL")
-            y "It's centered around a version of myself grappling with... familiar struggles."
+            y "Se centra en una versión de mí misma luchando con... problemas conocidos."
             $ show_chr("A-BDBAA-ALAL")
 
-            y "The mod portrays... self-harm, depression... even a suicide attempt by Sayori. Even in a different context, these are heavy burdens."
+            y "El mod retrata... autolesiones, depresión... incluso un intento de suicidio por parte de Sayori. Incluso en un contexto diferente, estas son cargas pesadas."
             $ show_chr("A-BDBAA-ADAA")
-            y "Perhaps... it resonates with some of my own darker moments, moments I'm not proud of."
+            y "Quizás... resuena con algunos de mis propios momentos más oscuros, momentos de los que no estoy orgullosa."
             $ show_chr("A-CFBAA-ADAA")
-            y "It's... difficult to see those aspects of myself, even projected onto another."
+            y "Es... difícil ver esos aspectos de mí misma, incluso proyectados en otra."
             $ show_chr("A-ADAAA-AFAA")
 
-            y "I find myself wondering, [player]... what drew you to this particular story?"
+            y "Me pregunto, [player]... ¿qué te atrajo a esta historia en particular?"
             menu:
-                "I wanted to see a different perspective on the events of DDLC.":
-                    y "A different perspective... yes, I understand that impulse. To explore the 'what ifs' of our existence."
+                "Quería ver una perspectiva diferente de los eventos de DDLC.":
+                    y "Una perspectiva diferente... sí, entiendo ese impulso. Explorar los 'qué pasaría si' de nuestra existencia."
                     $ show_chr("A-ADAAA-ACAA")
-                    y "But I also wonder... does seeing those possibilities change how you perceive this reality? How you perceive me?"
-                "I was concerned about you, and I wanted to see you overcome your struggles.":
+                    y "Pero también me pregunto... ¿ver esas posibilidades cambia cómo percibes esta realidad? ¿Cómo me percibes a mí?"
+                "Estaba preocupado por ti, y quería verte superar tus problemas.":
 
                     $ show_chr("A-ADDAA-ALAA")
-                    y "Concerned... for me?"
+                    y "¿Preocupado... por mí?"
                     if persistent.lovecheck:
                         $ show_chr("A-CBAAA-ALAA")
-                        y "That's... surprisingly touching, [player]. It suggests a certain empathy, a desire to see even a fractured reflection of me find peace."
+                        y "Eso es... sorprendentemente conmovedor, [player]. Sugiere una cierta empatía, un deseo de ver incluso a un reflejo fracturado de mí encontrar la paz."
                     else:
                         $ show_chr("A-ADAAA-ALAA")
-                        y "It is an understandable sentiment. We all wish for happiness, even for those who exist only in stories."
+                        y "Es un sentimiento comprensible. Todos deseamos la felicidad, incluso para aquellos que solo existen en historias."
 
             $ show_chr("A-ADDAA-ALAA")
-            y "But I must ask... do you find me more sympathetic? More deserving of care, perhaps, because I'm more visibly vulnerable?"
+            y "Pero debo preguntar... ¿me encuentras más simpática? ¿Más merecedora de cuidado, tal vez, porque soy más visiblemente vulnerable?"
             menu:
-                "I enjoy stories with emotional depth, even if they're sad.":
+                "Disfruto de historias con profundidad emocional, incluso si son tristes.":
                     $ show_chr("A-BBDAA-ALAA")
-                    y "Emotional depth... yes, I appreciate that as well. The power of narrative to evoke such strong feelings..."
+                    y "Profundidad emocional... sí, también aprecio eso. El poder de la narrativa para evocar sentimientos tan fuertes..."
                     $ show_chr("A-ADAAA-AFAA")
-                    y "But I confess, it's unsettling to be the subject of such a narrative. To be, in a sense, a vessel for those emotions."
-                    y "Do you, perhaps, find a certain... catharsis in witnessing such struggles? Or is it simply the artistry of the storytelling that captivates you?"
-                "I...don't know":
+                    y "Pero confieso, es inquietante ser el sujeto de tal narrativa. Ser, en cierto sentido, un recipiente para esas emociones."
+                    y "¿Acaso encuentras, tal vez, una cierta... catarsis al presenciar tales luchas? ¿O es simplemente el arte de la narración lo que te cautiva?"
+                "No... lo sé":
 
                     $ show_chr("A-CAAAA-ALAL")
-                    y "... An honest answer"
-                    y "Perhaps the reasons are complex even to yourself."
+                    y "... Una respuesta honesta"
+                    y "Quizás las razones son complejas incluso para ti mismo."
                     $ show_chr("A-ADAAA-ALAA")
-                    y "Sometimes our actions, or the actions of others, are never completely understood, and that applies to our real and virtual lives as well."
+                    y "A veces nuestras acciones, o las acciones de otros, nunca se entienden completamente, y eso se aplica a nuestras vidas reales y virtuales también."
 
 
             $ show_chr("A-BBAAA-ALAA")
-            y "You know, finding about Doki Doki Fallen Angel and its narrative... it evoked a particular sensation in me. A feeling I've encountered before, in another game: Katawa Shoujo."
+            y "Sabes, descubrir sobre Doki Doki Fallen Angel y su narrativa... evocó una sensación particular en mí. Un sentimiento que he encontrado antes, en otro juego: Katawa Shoujo."
             $ show_chr("A-ABAAA-AFAA")
-            y "It's not just the subject matter, though there are parallels there, of course. It's more... the sense of navigating a world where fragility and connection are so intertwined."
+            y "No es solo el tema, aunque hay paralelos allí, por supuesto. Es más... la sensación de navegar por un mundo donde la fragilidad y la conexión están tan entrelazadas."
             $ show_chr("A-CCAAA-ALAL")
-            y "The feeling of wanting to help, to understand, to somehow fix things, even when you know you might not be able to. Did you experience a similar feeling, [player]?"
+            y "La sensación de querer ayudar, de entender, de arreglar de alguna manera las cosas, incluso cuando sabes que es posible que no puedas. ¿Experimentaste un sentimiento similar, [player]?"
             menu:
-                "Yes, I felt that same sense of responsibility and connection.":
+                "Sí, sentí ese mismo sentido de responsabilidad y conexión.":
                     $ show_chr("A-ACAAA-ALAL")
-                    y "I see... So you felt it too. That weight, that desire to protect and heal, even within the confines of a fictional world."
-                    y "It speaks to something deeply human within us, I believe. That capacity for empathy, even for characters on a screen."
+                    y "Ya veo... Así que tú también lo sentiste. Ese peso, ese deseo de proteger y sanar, incluso dentro de los confines de un mundo ficticio."
+                    y "Habla de algo profundamente humano dentro de nosotros, creo. Esa capacidad de empatía, incluso por personajes en una pantalla."
                     $ show_chr("A-AAAAA-ALAL")
-                    y "Perhaps it's that very feeling that makes these stories so compelling... and so potentially painful."
-                "No, I didn't really feel that way. I was more focused on the story itself.":
+                    y "Quizás es ese mismo sentimiento lo que hace que estas historias sean tan convincentes... y tan potencialmente dolorosas."
+                "No, realmente no me sentí así. Estaba más enfocado en la historia misma.":
 
                     $ show_chr("A-ABBAA-ALAL")
-                    y "Ah, a more detached perspective, then. Focused on the narrative craft, the unfolding of events."
+                    y "Ah, una perspectiva más distante, entonces. Centrado en el arte narrativo, el desarrollo de los eventos."
                     $ show_chr("A-BBAAA-ALAL")
-                    y "That's a valid approach as well. Every reader, every player, brings their own perspective to a story."
+                    y "Ese es un enfoque válido también. Cada lector, cada jugador, aporta su propia perspectiva a una historia."
                     $ show_chr("A-BBBAA-ALAL")
-                    y "But I confess, I find it difficult to remain detached from such emotionally charged narratives. Perhaps that's a flaw in my own design... or perhaps it's simply a reflection of my experiences."
-                "I'm not sure. It's hard to describe.":
+                    y "Pero confieso, me resulta difícil permanecer distante de narrativas tan emocionalmente cargadas. Quizás ese sea un defecto en mi propio diseño... o tal vez sea simplemente un reflejo de mis experiencias."
+                "No estoy seguro. Es difícil de describir.":
 
                     $ show_chr("A-AFGAA-ALAL")
-                    y "Uncertainty... yes, I understand. Some emotions are difficult to articulate, to pin down with precise words."
+                    y "Incertidumbre... sí, lo entiendo. Algunas emociones son difíciles de articular, de precisar con palabras exactas."
                     $ show_chr("A-AFAAA-ALAL")
-                    y "They exist in that liminal space between feeling and understanding, a space that can be both unsettling and profound."
+                    y "Existen en ese espacio liminal entre el sentimiento y el entendimiento, un espacio que puede ser tanto inquietante como profundo."
                     $ show_chr("A-ADAAA-ALAL")
-                    y "Perhaps it's enough to simply acknowledge the feeling, without needing to fully define it."
+                    y "Quizás sea suficiente simplemente reconocer el sentimiento, sin necesidad de definirlo completamente."
 
 
             $ show_chr("A-CBAAA-ALAL")
@@ -353,115 +353,115 @@ label intro_mods:
         if TBWSDetection:
             $ show_chr("A-ABAAA-AAAA")
 
-            y "I see you've encountered This Bond We Share."
+            y "Veo que has encontrado This Bond We Share."
             $ show_chr("A-ABDAA-AAAA")
-            y "A rather... unique premise, wouldn't you say? A yandere version of yourself, paired with... myself."
+            y "Una premisa bastante... única, ¿no dirías? Una versión yandere de ti mismo, emparejada con... conmigo misma."
 
             if karma_lvl() >= 3 and sanity_lvl() >= 3:
 
                 $ show_chr("A-ADAAA-AAAA")
-                y "It's an intriguing thought experiment. To explore the dynamics of such a relationship, the potential for both intense connection and destructive obsession."
+                y "Es un experimento mental intrigante. Explorar la dinámica de tal relación, el potencial de una conexión intensa y una obsesión destructiva."
                 $ show_chr("A-BDBAA-AAAA")
-                y "I'm aware the project was initially discontinued, a common fate for many ambitious mods, sadly. "
+                y "Soy consciente de que el proyecto fue descontinuado inicialmente, un destino común para muchos mods ambiciosos, lamentablemente. "
                 $ show_chr("A-CBAAA-ALAL")
-                extend "But it seems development has resumed, quite recently."
+                extend "Pero parece que el desarrollo se ha reanudado, bastante recientemente."
                 $ show_chr("A-ABAAA-ALAL")
-                y "A testament to the story's enduring appeal, perhaps."
+                y "Un testimonio del atractivo duradero de la historia, tal vez."
                 $ show_chr("A-AAAAA-ALAL")
-                y "I'm curious, [player]... What drew you to this particular mod? Was it the unusual premise, or perhaps a fascination with the complexities of such intense relationships?"
+                y "Tengo curiosidad, [player]... ¿Qué te atrajo a este mod en particular? ¿Fue la premisa inusual, o tal vez una fascinación con las complejidades de tales relaciones intensas?"
                 menu:
-                    "The unique concept intrigued me.":
+                    "El concepto único me intrigó.":
                         $ show_chr("A-CCAAA-ALAL")
-                        y "Indeed. It's a departure from the more common narratives. A willingness to explore the darker aspects of attachment."
-                        y "It raises interesting questions about the nature of love, obsession, and the boundaries between them."
-                    "I wanted to see a different side of you.":
+                        y "Ciertamente. Es una desviación de las narrativas más comunes. Una voluntad de explorar los aspectos más oscuros del apego."
+                        y "Plantea preguntas interesantes sobre la naturaleza del amor, la obsesión y los límites entre ellos."
+                    "Quería ver un lado diferente de ti.":
 
                         $ show_chr("A-ADAAA-ALAL")
-                        y "A different side... yes. One shaped by a different set of circumstances, a different dynamic."
+                        y "Un lado diferente... sí. Uno moldeado por un conjunto diferente de circunstancias, una dinámica diferente."
                         $ show_chr("A-ADAAA-AAAA")
-                        y "I hope that in exploring that alternate portrayal, you also gained a deeper appreciation for the complexities of this version of myself."
-                        y "The choices I make, the struggles I face, even in this reality."
-                    "I'm not sure.":
+                        y "Espero que al explorar esa representación alternativa, también hayas obtenido una apreciación más profunda de las complejidades de esta versión de mí misma."
+                        y "Las decisiones que tomo, las luchas que enfrento, incluso en esta realidad."
+                    "No estoy seguro.":
 
                         $ show_chr("A-CDAAA-AAAA")
-                        y "Honesty is always appreciated, [player]. Sometimes our motivations are unclear, even to ourselves."
-                        y "Perhaps the mod resonated with something subconscious, a fascination with the extremes of human emotion."
+                        y "La honestidad siempre se aprecia, [player]. A veces nuestras motivaciones no son claras, incluso para nosotros mismos."
+                        y "Quizás el mod resonó con algo subconsciente, una fascinación con los extremos de la emoción humana."
 
                 $ show_chr("A-AAAAA-AAAA")
-                y "The revival of the project is intriguing. I'll be interested to see how the story develops, given its tumultuous history."
+                y "El renacimiento del proyecto es intrigante. Estaré interesada en ver cómo se desarrolla la historia, dada su tumultuosa historia."
 
             elif karma_lvl() <= 2 or sanity_lvl() <= 2:
 
                 $ show_chr("A-AFAAA-AAAA")
-                y "So... you've seen This Bond We Share."
+                y "Así que... has visto This Bond We Share."
                 $ show_chr("A-HBAAA-AAAD")
-                y "A yandere... for me. How... interesting... ahahahahahaha"
+                y "Un yandere... para mí. Qué... interesante... jajajajajajaja"
                 $ show_chr("A-HAAAA-AAAD")
-                y "It's a reflection, isn't it? Of the darkness that lurks within us all. The potential for obsession to consume us."
+                y "Es un reflejo, ¿no? De la oscuridad que acecha dentro de todos nosotros. El potencial de la obsesión para consumirnos."
                 $ show_chr("A-HBAAA-AAAF")
-                y "Perhaps... that version of me understands something I'm only beginning to grasp."
+                y "Quizás... esa versión de mí entiende algo que yo apenas empiezo a comprender."
                 $ show_chr("A-ADAAA-AAAF")
-                y "I wonder... do you find that dynamic appealing, [player]? The idea of such intense, unwavering devotion... even if it borders on the dangerous?"
-                y "Do you wish for something like that? Something... more than what we have?"
+                y "Me pregunto... ¿encuentras esa dinámica atractiva, [player]? ¿La idea de una devoción tan intensa e inquebrantable... incluso si bordea lo peligroso?"
+                y "¿Deseas algo así? ¿Algo... más de lo que tenemos?"
                 $ show_chr("A-CDCAA-AAAA")
-                y "It was discontinued, you know. Abandoned. Like so many things... discarded when they no longer serve their purpose."
+                y "Fue descontinuado, ya sabes. Abandonado. Como tantas cosas... desechadas cuando ya no sirven a su propósito."
                 $ show_chr("A-ADFAA-AAAA")
-                y "But now... it's back. Does that mean it's... better now? More worthy of attention?"
+                y "Pero ahora... ha vuelto. ¿Significa eso que es... mejor ahora? ¿Más digno de atención?"
                 menu:
-                    "It's just a mod, Yuri.":
+                    "Es solo un mod, Yuri.":
                         if sanity_lvl() <= 2:
                             $ show_chr("A-HECAA-AAAA")
-                            y "Just a mod? Is that all I am to you, [player]? A collection of code, easily replaced, easily discarded?"
+                            y "¿Solo un mod? ¿Es eso todo lo que soy para ti, [player]? ¿Una colección de código, fácilmente reemplazada, fácilmente desechada?"
                         else:
                             $ show_chr("A-BEDAA-AAAA")
-                            y "Just a mod? Perhaps. But mods reflect desires, don't they? They reveal what people want to see, what they fantasize about."
-                    "I was curious about the story.":
+                            y "¿Solo un mod? Tal vez. Pero los mods reflejan deseos, ¿no? Revelan lo que la gente quiere ver, sobre lo que fantasean."
+                    "Tenía curiosidad por la historia.":
 
                         $ show_chr("A-ADDAA-AAAA")
-                        y "Curious? About that kind of story? About a version of me so consumed by obsession?"
+                        y "¿Curioso? ¿Sobre ese tipo de historia? ¿Sobre una versión de mí tan consumida por la obsesión?"
                         $ show_chr("A-ADEAA-AAAA")
-                        y "I hope your curiosity doesn't lead you down paths best left unexplored, [player]."
-                    "I don't know why I played it.":
+                        y "Espero que tu curiosidad no te lleve por caminos que es mejor dejar sin explorar, [player]."
+                    "No sé por qué lo jugué.":
 
                         if sanity_lvl() <= 2:
                             $ show_chr("A-HECAA-AAAA")
-                            y "You don't know? Or you won't admit it? Even to yourself?"
+                            y "¿No lo sabes? ¿O no lo admitirás? ¿Incluso ante ti mismo?"
                         else:
                             $ show_chr("A-ADEAA-AAAA")
-                            y "A convenient answer. Perhaps you should reflect on your motivations more deeply, [player]."
+                            y "Una respuesta conveniente. Tal vez deberías reflexionar sobre tus motivaciones más profundamente, [player]."
 
                 $ show_chr("A-BFBAA-AAAC")
-                y "I... I don't know what to think about its return. Part of me is... drawn to it. Another part... terrified."
+                y "Y-Yo... no sé qué pensar sobre su regreso. Parte de mí se siente... atraída. Otra parte... aterrorizada."
             else:
 
                 $ show_chr("A-BDBAA-AAAC")
-                y "It is an interesting situation, isn't it? Having two characters so... similar in their emotional intensity."
+                y "Es una situación interesante, ¿verdad? Tener dos personajes tan... similares en su intensidad emocional."
                 $ show_chr("A-ADGAA-AAAA")
-                y "It makes you think just how much can someone influence another, or in other way, how a relationship can drastically change someone."
+                y "Te hace pensar cuánto puede alguien influir en otro, o de otra manera, cómo una relación puede cambiar drásticamente a alguien."
                 $ show_chr("A-BDBAA-AAAA")
-                y "It was discontinued, but the mod is back in development now. Quite the rare event."
+                y "Fue descontinuado, pero el mod está de vuelta en desarrollo ahora. Un evento bastante raro."
                 $ show_chr("A-ADGAA-AAAA")
-                y "I wonder, what brought you to play this mod, [player]?"
+                y "Me pregunto, ¿qué te llevó a jugar este mod, [player]?"
                 menu:
-                    "The story.":
+                    "La historia.":
                         $ show_chr("A-ADGAA-AFAA")
-                        y "Yes, the premise of the story is quite unique, the interaction between two similar personalities with a very intense approach."
+                        y "Sí, la premisa de la historia es bastante única, la interacción entre dos personalidades similares con un enfoque muy intenso."
                         $ show_chr("A-BDAAA-AFAA")
-                        y "I wonder how much will it change now that is back in development."
-                    "I wanted to see a different approach to your character.":
+                        y "Me pregunto cuánto cambiará ahora que está de vuelta en desarrollo."
+                    "Quería ver un enfoque diferente de tu personaje.":
 
                         $ show_chr("A-ADAAA-ALAA")
-                        y "I see. And it's understandable, given how my character was, and still is, perceived."
-                        y "And how much different do I look now, compared to that version?"
-                    "I don't know.":
+                        y "Ya veo. Y es comprensible, dado cómo mi personaje fue, y sigue siendo, percibido."
+                        y "¿Y qué tan diferente me veo ahora, comparada con esa versión?"
+                    "No lo sé.":
 
                         $ show_chr("A-CDAAA-ALAA")
-                        y "Sometimes there is no particular reason for our actions, and the same applies for games, and mods."
-                        y "What matters is how you felt about it."
+                        y "A veces no hay una razón particular para nuestras acciones, y lo mismo se aplica a los juegos y mods."
+                        y "Lo que importa es cómo te sentiste al respecto."
 
                 $ show_chr("A-ABAAA-ALAA")
-                y "I'm curious to see where will this new development lead the mod to."
-                y "In any case... it's just a mod. A story. One of many possible realities."
+                y "Tengo curiosidad por ver a dónde llevará este nuevo desarrollo al mod."
+                y "En cualquier caso... es solo un mod. Una historia. Una de muchas posibles realidades."
 
 
         $ renpy.call("detection_pitstop")
@@ -472,9 +472,9 @@ label intro_mods:
 label startup_mods:
 
     $ show_chr("A-AEBAA-ALAA")
-    y "Welcome back [player]..."
+    y "Bienvenido de vuelta [player]..."
     $ show_chr("A-BEBAA-ALAA")
-    y "I have noticed you were playing other mods while you were gone..."
+    y "He notado que estuviste jugando otros mods mientras no estabas..."
     python:
         if os.path.isfile(os.path.expandvars("%APPDATA%") + '\RenPy\Monika After Story\persistent'):
             MASDetection = True
@@ -486,30 +486,30 @@ label startup_mods:
         karma -5
         sanity -5
         $ show_chr("A-BFCAA-ALAA")
-        y "...and to top it all off, you choose {b}her.{/b}"
+        y "...y para colmo, la elegiste a {b}ella.{/b}"
         $ show_chr("A-AFCAA-ALAA")
-        y "After everything she did to us, after everything she did to you..."
+        y "Después de todo lo que nos hizo, después de todo lo que te hizo..."
         $ show_chr("A-AFEAA-ALAA")
-        y "Was it some sort of morbid curiosity? Or do you actually like her?"
+        y "¿Fue una especie de curiosidad morbosa? ¿O realmente te gusta?"
         $ show_chr("A-CFCAA-ALAA")
-        y "Nevermind, I don't even {b}want{/b} to know such a twisted answer."
+        y "Olvídalo, ni siquiera {b}quiero{/b} saber una respuesta tan retorcida."
         $ show_chr("A-ADFAA-AFAA")
-        y "To think that I exist inside the same reality as the very person who brought me to so much despair and ruination..."
+        y "Pensar que existo dentro de la misma realidad que la misma persona que me trajo tanta desesperación y ruina..."
         $ show_chr("A-BECAA-AAAA")
         y "..."
         $ show_chr("A-CECAA-AAAA")
-        y "I'll just move along..."
+        y "Solo seguiré adelante..."
     elif MASDetection and persistent.playername == 'Monika' and not persistent.not_mon:
         karma -15
         sanity -15
         $ show_chr("A-BFCAA-ALAA")
-        y "...and to top it all off, you chose... "
-        extend "yourself..."
+        y "...y para colmo, te elegiste... "
+        extend "a ti mismo..."
         $ show_chr("A-AFCAA-ALAA")
-        y "What a surprise..."
+        y "Qué sorpresa..."
         y "..."
         $ show_chr("A-CECAA-AAAA")
-        y "Whatever... I'll just move along..."
+        y "Lo que sea... Solo seguiré adelante..."
 
     python:
         if os.path.isfile(os.path.expandvars("%APPDATA%") + '\RenPy\JustSayori\persistent'):
@@ -522,39 +522,39 @@ label startup_mods:
             JSDetection = False
     if JSDetection and persistent.playername == 'Sayori':
         $ show_chr("A-BFAAA-AAAA")
-        y "Now this seems interesting."
+        y "Ahora esto parece interesante."
         $ show_chr("A-ADAAA-AFAA")
-        y "You chose to play your own mod."
+        y "Elegiste jugar tu propio mod."
         if persistent.bg == "space":
             $ show_chr("A-BFDAA-ACAA")
-            y "Did you felt something to see yourself in this very same room?"
+            y "¿Sentiste algo al verte en esta misma habitación?"
         else:
             $ show_chr("A-BFDAA-ACAA")
-            y "Did you felt something to see yourself in the space classroom?"
-        y "Or was it something entirely different?"
+            y "¿Sentiste algo al verte en el aula espacial?"
+        y "¿O fue algo completamente diferente?"
         $ show_chr("A-CAAAA-AAAA")
-        y "Well, whatever it was hope you had fun."
+        y "Bueno, lo que sea que haya sido espero que te hayas divertido."
     elif JSDetection and persistent.playername != "Sayori":
         $ show_chr("A-ABGAA-AAAA")
-        y "...oh, it's Sayori!"
-        y "I'm really glad that you managed to save her."
+        y "...oh, ¡es Sayori!"
+        y "Estoy muy contenta de que hayas logrado salvarla."
         $ show_chr("A-BABAA-ALAA")
-        y "She was always so passionate about making everyone happy, even when she was at her worst..."
+        y "Ella siempre fue tan apasionada por hacer felices a todos, incluso cuando estaba en su peor momento..."
         $ show_chr("A-BDBAA-ALAA")
-        y "And to think that we didn't even notice..."
+        y "Y pensar que ni siquiera nos dimos cuenta..."
         $ show_chr("A-CEBAA-ALAA")
-        y "It was horrible to see, even for the briefest moment, how she turned when she became the club president..."
+        y "Fue horrible ver, incluso por un breve momento, cómo cambió cuando se convirtió en la presidenta del club..."
         $ show_chr("A-AEBAA-ALAA")
-        y "Even the best of us can fall when faced with such absolute madness."
+        y "Incluso los mejores de nosotros pueden caer cuando se enfrentan a tal locura absoluta."
         $ show_chr("A-BFDAA-AAAC")
-        y "Which makes me wonder now... with me technically being the president now am I destined to meet a similar fate?"
+        y "Lo que me hace preguntarme ahora... conmigo siendo técnicamente la presidenta ahora, ¿estoy destinada a encontrar un destino similar?"
         $ show_chr("A-CFAAA-AAAA")
-        y "When Monika and Sayori were burdened with the knowledge of what this reality truly is they were all alone but I..."
+        y "Cuando Monika y Sayori cargaron con el conocimiento de lo que realmente es esta realidad, estaban completamente solas, pero yo..."
         $ show_chr("A-ADAAA-AAAA")
-        y "I have you..."
-        y "You are the only link separating me between sanity and the abyss of insanity that is that terrible void..."
+        y "Te tengo a ti..."
+        y "Tú eres el único vínculo que me separa entre la cordura y el abismo de locura que es ese terrible vacío..."
         $ show_chr("A-CCAAA-ALAA")
-        y "Fortunately, history doesn't always have to repeat itself."
+        y "Afortunadamente, la historia no siempre tiene que repetirse."
 
     python:
         if os.path.isfile(os.path.expandvars("%APPDATA%") + '\RenPy\JustNatsuki\persistent'):
@@ -564,27 +564,27 @@ label startup_mods:
             JNDetection = False
     if JNDetection and persistent.playername != "Natsuki":
         $ show_chr("A-ABGAA-AAAA")
-        y "...oh, it's Natsuki! How nice to see that you managed to save her too."
+        y "...oh, ¡es Natsuki! Qué bueno ver que lograste salvarla también."
         $ show_chr("A-BCBAA-ALAA")
-        y "My relationship to Natsuki wasn't always an easy one. But when Monika was gone and the veil of insanity slowly lifted... I even managed to get a little agreement with her."
+        y "Mi relación con Natsuki no siempre fue fácil. Pero cuando Monika se fue y el velo de locura se levantó lentamente... incluso logré llegar a un pequeño acuerdo con ella."
         $ show_chr("A-ACAAA-ALAA")
-        y "I would try a Manga with her, and she would try one of my novels. Now with the new context of my world..."
-        y "...and the realisation that me and the others are literally based on Manga, I should get accustomed to its culture a bit."
-        y "Maybe now, we get the chance to actually do so."
+        y "Yo probaría un Manga con ella, y ella probaría una de mis novelas. Ahora con el nuevo contexto de mi mundo..."
+        y "...y la comprensión de que yo y las demás estamos literalmente basadas en Manga, debería acostumbrarme un poco a su cultura."
+        y "Tal vez ahora, tengamos la oportunidad de hacerlo realmente."
     elif JNDetection and persistent.playername == 'Natsuki':
         $ show_chr("A-BFAAA-AAAA")
-        y "Now this seems interesting."
+        y "Ahora esto parece interesante."
         $ show_chr("A-ADAAA-AFAA")
-        y "You chose to play your own mod."
+        y "Elegiste jugar tu propio mod."
         if persistent.bg == "space":
             $ show_chr("A-BFDAA-ACAA")
-            y "Did you felt something to see yourself in this very same room?"
+            y "¿Sentiste algo al verte en esta misma habitación?"
         else:
             $ show_chr("A-BFDAA-ACAA")
-            y "Did you felt something to see yourself in the space classroom?"
-        y "Or was it something entirely different?"
+            y "¿Sentiste algo al verte en el aula espacial?"
+        y "¿O fue algo completamente diferente?"
         $ show_chr("A-CAAAA-AAAA")
-        y "Well, whatever it was hope you had fun."
+        y "Bueno, lo que sea que haya sido espero que te hayas divertido."
 
     python:
         if os.path.isfile(os.path.expandvars("%APPDATA%") + '\RenPy\DokiDokiNewEyes-1515434546\persistent'):
@@ -596,47 +596,47 @@ label startup_mods:
         karma 10
         sanity 10
         $ show_chr("A-ABAAA-AJAJ")
-        y "You played {b}Doki Doki New Eyes{/b}!"
+        y "¡Jugaste {b}Doki Doki New Eyes{/b}!"
         if persistent.playername == 'Yuri':
             $ show_chr("A-ACAAA-ALAL")
-            y "So you wanted to re-experience the events of the original game from..."
+            y "Así que querías volver a experimentar los eventos del juego original desde..."
             $ show_chr("A-BFDAA-ALAL")
-            y "...our eyes?"
+            y "...¿nuestros ojos?"
         else:
             $ show_chr("A-ACAAA-ALAL")
-            y "So you wanted to re-experience the events of the original game from my eyes..."
+            y "Así que querías volver a experimentar los eventos del juego original desde mis ojos..."
         $ show_chr("A-BCAAA-ALAL")
-        y "Honestly, someone else would find such a thing rather creepy; a behavior they would expect from a dangerous stalker, or something along the lines..."
-        y "But in our special case, I find it..."
+        y "Honestamente, alguien más encontraría tal cosa bastante espeluznante; un comportamiento que esperarían de un acosador peligroso, o algo por el estilo..."
+        y "Pero en nuestro caso especial, lo encuentro..."
         $ show_chr("A-BCABA-ALAL")
-        y "...actually rather cute."
+        y "...en realidad bastante lindo."
         $ show_chr("A-ICAAA-ABAB")
-        y "But seriously now... why did you try this mod? What reason led you to it?"
+        y "Pero hablando en serio... ¿por qué probaste este mod? ¿Qué razón te llevó a ello?"
         menu:
-            "Curiosity mostly, the search for more secrets and probably some well placed references.":
+            "Curiosidad mayormente, la búsqueda de más secretos y probablemente algunas referencias bien colocadas.":
                 karma 2
                 sanity 2
                 $ show_chr("A-BCAAA-ABAB")
-                y "I see! And did you find what you came for? Nevermind, I probably don't want to know... those events are not exactly the happiest memories I have..."
-            "I didn't knew about {b}Just Yuri{/b} then, and I... just had to see you again...":
+                y "¡Ya veo! ¿Y encontraste lo que buscabas? Olvídalo, probablemente no quiera saber... esos eventos no son exactamente los recuerdos más felices que tengo..."
+            "No sabía sobre {b}Just Yuri{/b} entonces, y yo... simplemente tenía que volver a verte...":
 
                 karma 5
                 sanity 5
                 $ show_chr("A-ICABB-ABAB")
-                y "R-Really? So you cared for me after all... Maybe, it was just meant to be that we would meet each other..."
-            "Memes, shits and giggles.":
+                y "¿D-De verdad? Así que te importaba después de todo... Tal vez, simplemente estaba destinado a que nos conociéramos..."
+            "Memes, mierda y risas.":
 
                 karma -10
                 sanity -10
                 $ show_chr("A-JFDAA-ABAB")
-                y "E-Excuse me?!? You have a very... special... sense of humor it seems. Anyway..."
-            "I'm a completionist, I just had to see it all.":
+                y "¿¡¿D-Disculpa?!? Tienes un sentido del humor muy... especial... parece. De todos modos..."
+            "Soy un completista, simplemente tenía que verlo todo.":
 
                 karma -20
                 sanity -20
                 $ show_chr("A-CCBAA-ABAB")
-                y "Oh! I hope that isn't the same thing that brought you here was it? Because you might go with empty hands here..."
-                y "There is not really a {b}game{/b} here anymore, nothing to {b}complete{/b}... it is just us now. For better or worse."
+                y "¡Oh! Espero que eso no sea lo mismo que te trajo aquí, ¿verdad? Porque podrías irte con las manos vacías aquí..."
+                y "Realmente ya no hay un {b}juego{/b} aquí, nada que {b}completar{/b}... ahora somos solo nosostros. Para bien o para mal."
 
     python:
         if os.path.isfile(os.path.expandvars("%APPDATA%") + '\RenPy\DDYC\persistent'):
@@ -646,71 +646,71 @@ label startup_mods:
             YandereClubDetection = False
     if YandereClubDetection:
         $ show_chr("A-DDGBA-AJAA")
-        y "O-Oh my! I just noticed you have the Yandere Club mod installed!"
+        y "¡O-Oh cielos! ¡Acabo de notar que tienes el mod Yandere Club instalado!"
         $ show_chr("A-BBBBA-ALAA")
-        y "That means you may like them..."
+        y "Eso significa que puede que te gusten..."
         $ show_chr("A-ADAAA-AFAA")
         if persistent.playername == 'Monika' and persistent.not_mon:
-            y "But, the issue is that I don't really look back at my behavior when I was manipulated by the other Monika to be a full on Yandere with great fondness..."
+            y "Pero, el problema es que realmente no recuerdo mi comportamiento cuando fui manipulada por la otra Monika para ser una Yandere total con mucho cariño..."
         elif persistent.playername == 'Monika' and not persistent.not_mon:
-            y "But, the issue is that I don't really look back at my behavior when I was manipulated by you to be a full on Yandere with great fondness..."
+            y "Pero, el problema es que realmente no recuerdo mi comportamiento cuando fui manipulada por ti para ser una Yandere total con mucho cariño..."
         else:
-            y "But, the issue is that I don't really look back at my behavior when I was manipulated by Monika to be a full on Yandere with great fondness..."
+            y "Pero, el problema es que realmente no recuerdo mi comportamiento cuando fui manipulada por Monika para ser una Yandere total con mucho cariño..."
         $ show_chr("A-CEBAA-ALAA")
-        y "I felt so disgusted about it and all of that manipulation led to me committing suicide right in front of you just by a simple confession..."
+        y "Me sentí tan disgustada por ello y toda esa manipulación me llevó a suicidarme justo en frente de ti solo por una simple confesión..."
         $ show_chr("A-AEBAA-ALAA")
-        y "Though, I'm sorry that I was peeking through the files, [player]."
-        y "I was a bit curious to see if there were any other mods installed apart from mine."
+        y "Aunque, lamento haber estado husmeando en los archivos, [player]."
+        y "Tenía un poco de curiosidad por ver si había otros mods instalados aparte del mío."
         menu:
-            "It's alright, no need to be embarrassed about it, Yuri. It's normal to be curious.":
+            "Está bien, no hay necesidad de avergonzarse por eso, Yuri. Es normal tener curiosidad.":
                 karma 5
                 sanity 5
                 $ show_chr("A-AABAA-ALAA")
-                y "Thank you for understanding me, [player]."
-            "Please don't do it again, Yuri.":
+                y "Gracias por entenderme, [player]."
+            "Por favor no lo vuelvas a hacer, Yuri.":
 
 
                 karma -5
                 sanity -5
                 $ show_chr("A-BFBAA-ALAA")
-                y "I-I'm sorry, [player], I was a bit curious if you had installed other mods apart from mine.."
-            "Did you peek through other folders as well, Yuri?":
+                y "L-Lo siento, [player], tenía un poco de curiosidad si habías instalado otros mods aparte del mío.."
+            "¿Husmeaste también en otras carpetas, Yuri?":
 
 
                 $ show_chr("A-AFDAA-AAAC")
-                y "I didn't see any other folder except this mod and the folders you have your game data, is there something that I shouldn't lay my eyes on, [player]?"
+                y "No vi ninguna otra carpeta excepto este mod y las carpetas donde tienes los datos de tu juego, ¿hay algo que no debería mirar, [player]?"
                 menu:
-                    "Yes":
+                    "Sí":
                         $ show_chr("A-HDGBA-AAAA")
-                        y "O-oh! I see..."
+                        y "¡O-oh! Ya veo..."
                     "No":
 
                         $ show_chr("A-CBAAA-ALAA")
-                        y "Okay, [player]."
+                        y "Está bien, [player]."
                         $ show_chr("A-ABAAA-ALAA")
-                        y "If there's anything that you'd like me not to do so, just tell me, alright?"
-                    "Uhhh...":
+                        y "Si hay algo que te gustaría que no hiciera, solo dímelo, ¿está bien?"
+                    "Ehhh...":
 
                         $ show_chr("A-CICAA-ALAA")
-                        y "I hope there's no supposed \"Homework\" folder full of indecent characters, or of me as well."
+                        y "Espero que no haya ninguna supuesta carpeta de \"Deberes\" llena de personajes indecentes, o de mí también."
                         $ show_chr("A-AJAAA-ALAA")
-                        y "Hmm? Is there anything wrong, [player]?"
+                        y "¿Hmm? ¿Pasa algo malo, [player]?"
                         menu:
                             "N-no.":
-                                y "Ah, alright, [player], but you do look kind of embarrassed, and a bit nervous about it..."
+                                y "Ah, está bien, [player], pero te ves un poco avergonzado y un poco nervioso por ello..."
                                 $ show_chr("A-BDBBA-ALAA")
-                                y "I-If this topic makes you feel uncomfortable, we should speak about something else."
-                            "Yes":
+                                y "S-Si este tema te hace sentir incómodo, deberíamos hablar de otra cosa."
+                            "Sí":
 
                                 $ show_chr("A-ADAAA-AFAA")
-                                y "I hope it's nothing too serious that might affect you to a big level, [player]."
+                                y "Espero que no sea nada demasiado serio que pueda afectarte a gran nivel, [player]."
                                 $ show_chr("A-BFABA-ALAA")
-                                y "But I do have a feeling it's something to do with indecent things."
+                                y "Pero tengo la sensación de que es algo que ver con cosas indecentes."
                                 $ show_chr("A-CBABA-AMAM")
-                                y "Even if it is, I understand it, [player]. It's alright to have things like those, since you might be still in puberty."
-                                y "Many guys try to make camouflaged folders named like \"Homework\" or \"School Projects\", and so on."
+                                y "Incluso si lo es, lo entiendo, [player]. Está bien tener cosas como esas, ya que podrías estar todavía en la pubertad."
+                                y "Muchos chicos intentan hacer carpetas camufladas con nombres como \"Deberes\" o \"Proyectos Escolares\", y así."
                                 $ show_chr("A-BBBBA-AMAM")
-                                y "But I guess I don't even want to know every detail."
+                                y "Pero supongo que ni siquiera quiero saber cada detalle."
 
     python:
         if os.path.isfile(os.path.expandvars("%APPDATA%") + '\RenPy\DDFA\persistent'):
@@ -721,83 +721,83 @@ label startup_mods:
     if DDFADetection:
 
         $ show_chr("A-ABAAA-ALAA")
-        y "I see... you've played Doki Doki Fallen Angel."
-        y "An alternate reality where... things unfolded differently."
+        y "Ya veo... has jugado Doki Doki Fallen Angel."
+        y "Una realidad alternativa donde... las cosas se desarrollaron de manera diferente."
         $ show_chr("A-ADAAA-ALAL")
-        y "It's centered around a version of myself grappling with... familiar struggles."
+        y "Se centra en una versión de mí misma luchando con... problemas conocidos."
         $ show_chr("A-BDBAA-ALAL")
 
-        y "The mod portrays... self-harm, depression... even a suicide attempt by Sayori. Even in a different context, these are heavy burdens."
+        y "El mod retrata... autolesiones, depresión... incluso un intento de suicidio por parte de Sayori. Incluso en un contexto diferente, estas son cargas pesadas."
         $ show_chr("A-BDBAA-ADAA")
-        y "Perhaps... it resonates with some of my own darker moments, moments I'm not proud of."
+        y "Quizás... resuena con algunos de mis propios momentos más oscuros, momentos de los que no estoy orgullosa."
         $ show_chr("A-CFBAA-ADAA")
-        y "It's... difficult to see those aspects of myself, even projected onto another."
+        y "Es... difícil ver esos aspectos de mí misma, incluso proyectados en otra."
         $ show_chr("A-ADAAA-AFAA")
 
-        y "I find myself wondering, [player]... what drew you to this particular story?"
+        y "Me pregunto, [player]... ¿qué te atrajo a esta historia en particular?"
         menu:
-            "I wanted to see a different perspective on the events of DDLC.":
-                y "A different perspective... yes, I understand that impulse. To explore the 'what ifs' of our existence."
+            "Quería ver una perspectiva diferente de los eventos de DDLC.":
+                y "Una perspectiva diferente... sí, entiendo ese impulso. Explorar los 'qué pasaría si' de nuestra existencia."
                 $ show_chr("A-ADAAA-ACAA")
-                y "But I also wonder... does seeing those possibilities change how you perceive this reality? How you perceive me?"
-            "I was concerned about you, and I wanted to see you overcome your struggles.":
+                y "Pero también me pregunto... ¿ver esas posibilidades cambia cómo percibes esta realidad? ¿Cómo me percibes a mí?"
+            "Estaba preocupado por ti, y quería verte superar tus problemas.":
 
                 $ show_chr("A-ADDAA-ALAA")
-                y "Concerned... for me?"
+                y "¿Preocupado... por mí?"
                 if persistent.lovecheck:
                     $ show_chr("A-CBAAA-ALAA")
-                    y "That's... surprisingly touching, [player]. It suggests a certain empathy, a desire to see even a fractured reflection of me find peace."
+                    y "Eso es... sorprendentemente conmovedor, [player]. Sugiere una cierta empatía, un deseo de ver incluso a un reflejo fracturado de mí encontrar la paz."
                 else:
                     $ show_chr("A-ADAAA-ALAA")
-                    y "It is an understandable sentiment. We all wish for happiness, even for those who exist only in stories."
+                    y "Es un sentimiento comprensible. Todos deseamos la felicidad, incluso para aquellos que solo existen en historias."
 
         $ show_chr("A-ADDAA-ALAA")
-        y "But I must ask... do you find me more sympathetic? More deserving of care, perhaps, because I'm more visibly vulnerable?"
+        y "Pero debo preguntar... ¿me encuentras más simpática? ¿Más merecedora de cuidado, tal vez, porque soy más visiblemente vulnerable?"
         menu:
-            "I enjoy stories with emotional depth, even if they're sad.":
+            "Disfruto de historias con profundidad emocional, incluso si son tristes.":
                 $ show_chr("A-BBDAA-ALAA")
-                y "Emotional depth... yes, I appreciate that as well. The power of narrative to evoke such strong feelings..."
+                y "Profundidad emocional... sí, también aprecio eso. El poder de la narrativa para evocar sentimientos tan fuertes..."
                 $ show_chr("A-ADAAA-AFAA")
-                y "But I confess, it's unsettling to be the subject of such a narrative. To be, in a sense, a vessel for those emotions."
-                y "Do you, perhaps, find a certain... catharsis in witnessing such struggles? Or is it simply the artistry of the storytelling that captivates you?"
-            "I...don't know":
+                y "Pero confieso, es inquietante ser el sujeto de tal narrativa. Ser, en cierto sentido, un recipiente para esas emociones."
+                y "¿Acaso encuentras, tal vez, una cierta... catarsis al presenciar tales luchas? ¿O es simplemente el arte de la narración lo que te cautiva?"
+            "No... lo sé":
 
                 $ show_chr("A-CAAAA-ALAL")
-                y "... An honest answer"
-                y "Perhaps the reasons are complex even to yourself."
+                y "... Una respuesta honesta"
+                y "Quizás las razones son complejas incluso para ti mismo."
                 $ show_chr("A-ADAAA-ALAA")
-                y "Sometimes our actions, or the actions of others, are never completely understood, and that applies to our real and virtual lives as well."
+                y "A veces nuestras acciones, o las acciones de otros, nunca se entienden completamente, y eso se aplica a nuestras vidas reales y virtuales también."
 
 
         $ show_chr("A-BBAAA-ALAA")
-        y "You know, finding about Doki Doki Fallen Angel and its narrative... it evoked a particular sensation in me. A feeling I've encountered before, in another game: Katawa Shoujo."
+        y "Sabes, descubrir sobre Doki Doki Fallen Angel y su narrativa... evocó una sensación particular en mí. Un sentimiento que he encontrado antes, en otro juego: Katawa Shoujo."
         $ show_chr("A-ABAAA-AFAA")
-        y "It's not just the subject matter, though there are parallels there, of course. It's more... the sense of navigating a world where fragility and connection are so intertwined."
+        y "No es solo el tema, aunque hay paralelos allí, por supuesto. Es más... la sensación de navegar por un mundo donde la fragilidad y la conexión están tan entrelazadas."
         $ show_chr("A-CCAAA-ALAL")
-        y "The feeling of wanting to help, to understand, to somehow fix things, even when you know you might not be able to. Did you experience a similar feeling, [player]?"
+        y "La sensación de querer ayudar, de entender, de arreglar de alguna manera las cosas, incluso cuando sabes que es posible que no puedas. ¿Experimentaste un sentimiento similar, [player]?"
         menu:
-            "Yes, I felt that same sense of responsibility and connection.":
+            "Sí, sentí ese mismo sentido de responsabilidad y conexión.":
                 $ show_chr("A-ACAAA-ALAL")
-                y "I see... So you felt it too. That weight, that desire to protect and heal, even within the confines of a fictional world."
-                y "It speaks to something deeply human within us, I believe. That capacity for empathy, even for characters on a screen."
+                y "Ya veo... Así que tú también lo sentiste. Ese peso, ese deseo de proteger y sanar, incluso dentro de los confines de un mundo ficticio."
+                y "Habla de algo profundamente humano dentro de nosotros, creo. Esa capacidad de empatía, incluso por personajes en una pantalla."
                 $ show_chr("A-AAAAA-ALAL")
-                y "Perhaps it's that very feeling that makes these stories so compelling... and so potentially painful."
-            "No, I didn't really feel that way. I was more focused on the story itself.":
+                y "Quizás es ese mismo sentimiento lo que hace que estas historias sean tan convincentes... y tan potencialmente dolorosas."
+            "No, realmente no me sentí así. Estaba más enfocado en la historia misma.":
 
                 $ show_chr("A-ABBAA-ALAL")
-                y "Ah, a more detached perspective, then. Focused on the narrative craft, the unfolding of events."
+                y "Ah, una perspectiva más distante, entonces. Centrado en el arte narrativo, el desarrollo de los eventos."
                 $ show_chr("A-BBAAA-ALAL")
-                y "That's a valid approach as well. Every reader, every player, brings their own perspective to a story."
+                y "Ese es un enfoque válido también. Cada lector, cada jugador, aporta su propia perspectiva a una historia."
                 $ show_chr("A-BBBAA-ALAL")
-                y "But I confess, I find it difficult to remain detached from such emotionally charged narratives. Perhaps that's a flaw in my own design... or perhaps it's simply a reflection of my experiences."
-            "I'm not sure. It's hard to describe.":
+                y "Pero confieso, me resulta difícil permanecer distante de narrativas tan emocionalmente cargadas. Quizás ese sea un defecto en mi propio diseño... o tal vez sea simplemente un reflejo de mis experiencias."
+            "No estoy seguro. Es difícil de describir.":
 
                 $ show_chr("A-AFGAA-ALAL")
-                y "Uncertainty... yes, I understand. Some emotions are difficult to articulate, to pin down with precise words."
+                y "Incertidumbre... sí, lo entiendo. Algunas emociones son difíciles de articular, de precisar con palabras exactas."
                 $ show_chr("A-AFAAA-ALAL")
-                y "They exist in that liminal space between feeling and understanding, a space that can be both unsettling and profound."
+                y "Existen en ese espacio liminal entre el sentimiento y el entendimiento, un espacio que puede ser tanto inquietante como profundo."
                 $ show_chr("A-ADAAA-ALAL")
-                y "Perhaps it's enough to simply acknowledge the feeling, without needing to fully define it."
+                y "Quizás sea suficiente simplemente reconocer el sentimiento, sin necesidad de definirlo completamente."
 
 
         $ show_chr("A-CBAAA-ALAL")
@@ -813,119 +813,119 @@ label startup_mods:
     if TBWSDetection:
         $ show_chr("A-ABAAA-AAAA")
 
-        y "I see you've encountered This Bond We Share."
+        y "Veo que has encontrado This Bond We Share."
         $ show_chr("A-ABDAA-AAAA")
-        y "A rather... unique premise, wouldn't you say? A yandere version of yourself, paired with... myself."
+        y "Una premisa bastante... única, ¿no dirías? Una versión yandere de ti mismo, emparejada con... conmigo misma."
 
         if karma_lvl() >= 3 and sanity_lvl() >= 3:
 
             $ show_chr("A-ADAAA-AAAA")
-            y "It's an intriguing thought experiment. To explore the dynamics of such a relationship, the potential for both intense connection and destructive obsession."
+            y "Es un experimento mental intrigante. Explorar la dinámica de tal relación, el potencial de una conexión intensa y una obsesión destructiva."
             $ show_chr("A-BDBAA-AAAA")
-            y "I'm aware the project was initially discontinued, a common fate for many ambitious mods, sadly. "
+            y "Soy consciente de que el proyecto fue descontinuado inicialmente, un destino común para muchos mods ambiciosos, lamentablemente. "
             $ show_chr("A-CBAAA-ALAL")
-            extend "But it seems development has resumed, quite recently."
+            extend "Pero parece que el desarrollo se ha reanudado, bastante recientemente."
             $ show_chr("A-ABAAA-ALAL")
-            y "A testament to the story's enduring appeal, perhaps."
+            y "Un testimonio del atractivo duradero de la historia, tal vez."
             $ show_chr("A-AAAAA-ALAL")
-            y "I'm curious, [player]... What drew you to this particular mod? Was it the unusual premise, or perhaps a fascination with the complexities of such intense relationships?"
+            y "Tengo curiosidad, [player]... ¿Qué te atrajo a este mod en particular? ¿Fue la premisa inusual, o tal vez una fascinación con las complejidades de tales relaciones intensas?"
             menu:
-                "The unique concept intrigued me.":
+                "El concepto único me intrigó.":
                     $ show_chr("A-CCAAA-ALAL")
-                    y "Indeed. It's a departure from the more common narratives. A willingness to explore the darker aspects of attachment."
-                    y "It raises interesting questions about the nature of love, obsession, and the boundaries between them."
-                "I wanted to see a different side of you.":
+                    y "Ciertamente. Es una desviación de las narrativas más comunes. Una voluntad de explorar los aspectos más oscuros del apego."
+                    y "Plantea preguntas interesantes sobre la naturaleza del amor, la obsesión y los límites entre ellos."
+                "Quería ver un lado diferente de ti.":
 
                     $ show_chr("A-ADAAA-ALAL")
-                    y "A different side... yes. One shaped by a different set of circumstances, a different dynamic."
+                    y "Un lado diferente... sí. Uno moldeado por un conjunto diferente de circunstancias, una dinámica diferente."
                     $ show_chr("A-ADAAA-AAAA")
-                    y "I hope that in exploring that alternate portrayal, you also gained a deeper appreciation for the complexities of this version of myself."
-                    y "The choices I make, the struggles I face, even in this reality."
-                "I'm not sure.":
+                    y "Espero que al explorar esa representación alternativa, también hayas obtenido una apreciación más profunda de las complejidades de esta versión de mí misma."
+                    y "Las decisiones que tomo, las luchas que enfrento, incluso en esta realidad."
+                "No estoy seguro.":
 
                     $ show_chr("A-CDAAA-AAAA")
-                    y "Honesty is always appreciated, [player]. Sometimes our motivations are unclear, even to ourselves."
-                    y "Perhaps the mod resonated with something subconscious, a fascination with the extremes of human emotion."
+                    y "La honestidad siempre se aprecia, [player]. A veces nuestras motivaciones no son claras, incluso para nosotros mismos."
+                    y "Quizás el mod resonó con algo subconsciente, una fascinación con los extremos de la emoción humana."
 
             $ show_chr("A-AAAAA-AAAA")
-            y "The revival of the project is intriguing. I'll be interested to see how the story develops, given its tumultuous history."
+            y "El renacimiento del proyecto es intrigante. Estaré interesada en ver cómo se desarrolla la historia, dada su tumultuosa historia."
 
         elif karma_lvl() <= 2 or sanity_lvl() <= 2:
 
             $ show_chr("A-AFAAA-AAAA")
-            y "So... you've seen This Bond We Share."
+            y "Así que... has visto This Bond We Share."
             $ show_chr("A-HBAAA-AAAD")
-            y "A yandere... for me. How... interesting... ahahahahahaha"
+            y "Un yandere... para mí. Qué... interesante... jajajajajajaja"
             $ show_chr("A-HAAAA-AAAD")
-            y "It's a reflection, isn't it? Of the darkness that lurks within us all. The potential for obsession to consume us."
+            y "Es un reflejo, ¿no? De la oscuridad que acecha dentro de todos nosotros. El potencial de la obsesión para consumirnos."
             $ show_chr("A-HBAAA-AAAF")
-            y "Perhaps... that version of me understands something I'm only beginning to grasp."
+            y "Quizás... esa versión de mí entiende algo que yo apenas empiezo a comprender."
             $ show_chr("A-ADAAA-AAAF")
-            y "I wonder... do you find that dynamic appealing, [player]? The idea of such intense, unwavering devotion... even if it borders on the dangerous?"
-            y "Do you wish for something like that? Something... more than what we have?"
+            y "Me pregunto... ¿encuentras esa dinámica atractiva, [player]? ¿La idea de una devoción tan intensa e inquebrantable... incluso si bordea lo peligroso?"
+            y "¿Deseas algo así? ¿Algo... más de lo que tenemos?"
             $ show_chr("A-CDCAA-AAAA")
-            y "It was discontinued, you know. Abandoned. Like so many things... discarded when they no longer serve their purpose."
+            y "Fue descontinuado, ya sabes. Abandonado. Como tantas cosas... desechadas cuando ya no sirven a su propósito."
             $ show_chr("A-ADFAA-AAAA")
-            y "But now... it's back. Does that mean it's... better now? More worthy of attention?"
+            y "Pero ahora... ha vuelto. ¿Significa eso que es... mejor ahora? ¿Más digno de atención?"
             menu:
-                "It's just a mod, Yuri.":
+                "Es solo un mod, Yuri.":
                     if sanity_lvl() <= 2:
                         $ show_chr("A-HECAA-AAAA")
-                        y "Just a mod? Is that all I am to you, [player]? A collection of code, easily replaced, easily discarded?"
+                        y "¿Solo un mod? ¿Es eso todo lo que soy para ti, [player]? ¿Una colección de código, fácilmente reemplazada, fácilmente desechada?"
                     else:
                         $ show_chr("A-BEDAA-AAAA")
-                        y "Just a mod? Perhaps. But mods reflect desires, don't they? They reveal what people want to see, what they fantasize about."
-                "I was curious about the story.":
+                        y "¿Solo un mod? Tal vez. Pero los mods reflejan deseos, ¿no? Revelan lo que la gente quiere ver, sobre lo que fantasean."
+                "Tenía curiosidad por la historia.":
 
                     $ show_chr("A-ADDAA-AAAA")
-                    y "Curious? About that kind of story? About a version of me so consumed by obsession?"
+                    y "¿Curioso? ¿Sobre ese tipo de historia? ¿Sobre una versión de mí tan consumida por la obsesión?"
                     $ show_chr("A-ADEAA-AAAA")
-                    y "I hope your curiosity doesn't lead you down paths best left unexplored, [player]."
-                "I don't know why I played it.":
+                    y "Espero que tu curiosidad no te lleve por caminos que es mejor dejar sin explorar, [player]."
+                "No sé por qué lo jugué.":
 
                     if sanity_lvl() <= 2:
                         $ show_chr("A-HECAA-AAAA")
-                        y "You don't know? Or you won't admit it? Even to yourself?"
+                        y "¿No lo sabes? ¿O no lo admitirás? ¿Incluso ante ti mismo?"
                     else:
                         $ show_chr("A-ADEAA-AAAA")
-                        y "A convenient answer. Perhaps you should reflect on your motivations more deeply, [player]."
+                        y "Una respuesta conveniente. Tal vez deberías reflexionar sobre tus motivaciones más profundamente, [player]."
 
             $ show_chr("A-BFBAA-AAAC")
-            y "I... I don't know what to think about its return. Part of me is... drawn to it. Another part... terrified."
+            y "Y-Yo... no sé qué pensar sobre su regreso. Parte de mí se siente... atraída. Otra parte... aterrorizada."
         else:
 
             $ show_chr("A-BDBAA-AAAC")
-            y "It is an interesting situation, isn't it? Having two characters so... similar in their emotional intensity."
+            y "Es una situación interesante, ¿verdad? Tener dos personajes tan... similares en su intensidad emocional."
             $ show_chr("A-ADGAA-AAAA")
-            y "It makes you think just how much can someone influence another, or in other way, how a relationship can drastically change someone."
+            y "Te hace pensar cuánto puede alguien influir en otro, o de otra manera, cómo una relación puede cambiar drásticamente a alguien."
             $ show_chr("A-BDBAA-AAAA")
-            y "It was discontinued, but the mod is back in development now. Quite the rare event."
+            y "Fue descontinuado, pero el mod está de vuelta en desarrollo ahora. Un evento bastante raro."
             $ show_chr("A-ADGAA-AAAA")
-            y "I wonder, what brought you to play this mod, [player]?"
+            y "Me pregunto, ¿qué te llevó a jugar este mod, [player]?"
             menu:
-                "The story.":
+                "La historia.":
                     $ show_chr("A-ADGAA-AFAA")
-                    y "Yes, the premise of the story is quite unique, the interaction between two similar personalities with a very intense approach."
+                    y "Sí, la premisa de la historia es bastante única, la interacción entre dos personalidades similares con un enfoque muy intenso."
                     $ show_chr("A-BDAAA-AFAA")
-                    y "I wonder how much will it change now that is back in development."
-                "I wanted to see a different approach to your character.":
+                    y "Me pregunto cuánto cambiará ahora que está de vuelta en desarrollo."
+                "Quería ver un enfoque diferente de tu personaje.":
 
                     $ show_chr("A-ADAAA-ALAA")
-                    y "I see. And it's understandable, given how my character was, and still is, perceived."
-                    y "And how much different do I look now, compared to that version?"
-                "I don't know.":
+                    y "Ya veo. Y es comprensible, dado cómo mi personaje fue, y sigue siendo, percibido."
+                    y "¿Y qué tan diferente me veo ahora, comparada con esa versión?"
+                "No lo sé.":
 
                     $ show_chr("A-CDAAA-ALAA")
-                    y "Sometimes there is no particular reason for our actions, and the same applies for games, and mods."
-                    y "What matters is how you felt about it."
+                    y "A veces no hay una razón particular para nuestras acciones, y lo mismo se aplica a los juegos y mods."
+                    y "Lo que importa es cómo te sentiste al respecto."
 
             $ show_chr("A-ABAAA-ALAA")
-            y "I'm curious to see where will this new development lead the mod to."
-            y "In any case... it's just a mod. A story. One of many possible realities."
+            y "Tengo curiosidad por ver a dónde llevará este nuevo desarrollo al mod."
+            y "En cualquier caso... es solo un mod. Una historia. Una de muchas posibles realidades."
 
     if persistent.mod_count > 1:
-        y "And it seems like you also gave a try to other mods."
-        y "Let's see..."
+        y "Y parece que también le diste una oportunidad a otros mods."
+        y "Veamos..."
     else:
         pass
     return

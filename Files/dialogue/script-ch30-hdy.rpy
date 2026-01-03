@@ -177,91 +177,91 @@ image hdy_bomb_p_hold:
 
 label HDY_eggnomancer:
     $ show_hdy("hdy_derpy_smile")
-    hdy "You might have heard about {b}@world_record_egg{/b} yes? The egg that tried to become the world's most liked post on Instagram?"
-    hdy "I never checked if their dream came true in the end, but I noticed something odd when I viewed the pictures. I couldn't shake off the feeling that I've seen this egg before..."
+    hdy "¿Has oído hablar de {b}@world_record_egg{/b} sí? ¿El huevo que intentó convertirse en la publicación con más likes en Instagram?"
+    hdy "Nunca comprobé si su sueño se hizo realidad al final, pero noté algo extraño cuando vi las fotos. No podía sacudirme la sensación de que había visto este huevo antes..."
     $ show_hdy("hdy_yandere")
-    hdy "Then, it struck me. Turns out, this egg went to the same elementary school with me! It was even in the same class."
+    hdy "Entonces, me golpeó. ¡Resulta que este huevo fue a la misma escuela primaria conmigo! Incluso estaba en la misma clase."
     menu:
-        "Wait, are you saying...":
+        "Espera, estás diciendo...":
             $ show_hdy("hdy_derpy_smile")
-            hdy "Yes! This egg is an old childhood friend of mine! Well, {b}friend{/b} might be a bit strong of a word... actually, he was always difficult to get along with. He used to be the rich kid, a truly spoiled egg if you will..."
+            hdy "¡Sí! ¡Este huevo es un viejo amigo de la infancia mío! Bueno, {b}amigo{/b} podría ser una palabra un poco fuerte... en realidad, siempre fue difícil llevarse bien con él. Solía ser el niño rico, un huevo verdaderamente podrido si quieres..."
             $ show_hdy("hdy_derpy_smile_eyes_left")
-            hdy "We had some sort of rivalry going on for a while. He was convinced that Hot Dogs have no business taking part in a salad. So, I did the most logical thing that came to my mind..."
+            hdy "Tuvimos una especie de rivalidad durante un tiempo. Él estaba convencido de que los Hot Dogs no tienen nada que hacer participando en una ensalada. Así que, hice lo más lógico que se me ocurrió..."
             $ show_hdy("hdy_uwu")
-            hdy "I covered myself in french dressing head to toe and set out to become the first professional wiener in the saladist scene!"
-            hdy "I think he never forgave me..."
+            hdy "¡Me cubrí de aderezo francés de pies a cabeza y me dispuse a convertirme en la primera salchicha profesional en la escena ensaladista!"
+            hdy "Creo que nunca me perdonó..."
             $ show_hdy("hdy_frown")
-            hdy "It didn't work out either. Like Icarus who got swiped left on tinder by the sun, I crashed to the ground, beaten and utterly defeated..."
+            hdy "Tampoco funcionó. Como ícaro que fue rechazado en tinder por el sol, me estrellé contra el suelo, golpeada y totalmente derrotada..."
             $ show_hdy("hdy_derpy_smile")
-            hdy "Anyway, I was trying to reconnect with him for the last few days. But he says he's too famous now to surround himself with folks like me."
-            hdy "Still a spoiled little egg, as he's always been..."
-            hdy "I guess, in the end there is just one final question left [player]."
-            hdy "Do you think Hot Dogs would go well with salad?"
+            hdy "De todos modos, estuve tratando de reconectar con él durante los últimos días. Pero dice que es demasiado famoso ahora para rodearse de gente como yo."
+            hdy "Sigue siendo un huevito podrido, como siempre lo ha sido..."
+            hdy "Supongo que, al final solo queda una última pregunta [player]."
+            hdy "¿Crees que los Hot Dogs irían bien con la ensalada?"
             menu:
-                "Never forsake your dreams! You can still do it!":
-                    hdy "You are right [player]! There is still time!"
-                "Let it go, Yuri... let it go...":
-                    hdy "Yes, I guess you're right... some people are just not made for it..."
-            hdy "Anyway. Thanks for humoring me... "
+                "¡Nunca abandones tus sueños! ¡Todavía puedes hacerlo!":
+                    hdy "¡Tienes razón [player]! ¡Todavía hay tiempo!"
+                "Déjalo ir, Yuri... déjalo ir...":
+                    hdy "Sí, supongo que tienes razón... algunas personas simplemente no están hechas para eso..."
+            hdy "De todos modos. Gracias por seguirme la corriente... "
     return
 
 
 label HDY_spookyscaryskeleton:
 
     $ show_hdy("hdy_derpy_smile")
-    hdy "Did you know [player]... that there is a truly scary skeleton right inside you at this very moment? Biding its time, waiting for the right moment to strike..."
+    hdy "¿Sabías [player]... que hay un esqueleto verdaderamente aterrador justo dentro de ti en este mismo momento? Esperando su tiempo, esperando el momento adecuado para atacar..."
     menu:
-        "You don't say...":
+        "No me digas...":
             $ show_hdy("hdy_yandere")
-            hdy "R1gHt?ß??ßßß??"
-        "I hate everything you just said.":
+            hdy "¿V3rD4d?ß??ßßß??"
+        "Odio todo lo que acabas de decir.":
             $ show_hdy("hdy_derpy_smile_blush")
-            hdy "Mission accomplished..."
+            hdy "Misión cumplida..."
     $ show_hdy("hdy_derpy_smile")
-    hdy "Oh wait! I have another one! Do you know what humans and potatoes have in common?"
+    hdy "¡Oh espera! ¡Tengo otro! ¿Sabes qué tienen en común los humanos y las papas?"
     $ show_hdy("hdy_yandere")
-    hdy "If you eat them, they die..."
+    hdy "Si te los comes, mueren..."
     menu:
-        "Old...":
+        "Viejo...":
             $ show_hdy("hdy_angry")
-            hdy "Well aged!"
-        "Okay, that was actually a good one!":
+            hdy "¡Bien envejecido!"
+        "Está bien, ¡esa fue realmente buena!":
             $ show_hdy("hdy_yandere")
-            hdy "What makes you think that I'm joking?..."
+            hdy "¿Qué te hace pensar que estoy bromeando?..."
     $ show_hdy("hdy_derpy_smile")
-    hdy "But now, a word to our sponsor! SouthVPN!!! Protect your personal data online and be a sneaky breaky about region locked content!"
-    hdy "And you know what's the best thing about it? If you use the code {b}HotDogYuri{/b} you get absolutely nothing in return!"
-    hdy "Sign up today, and get an epic champion with a humongous schlo... no wait, now I got it all mixed up..."
+    hdy "¡Pero ahora, unas palabras de nuestro patrocinador! ¡¡¡SouthVPN!!! ¡Protege tus datos personales en línea y sé un sigiloso rompedor de contenido bloqueado por región!"
+    hdy "¿Y sabes qué es lo mejor de todo? ¡Si usas el código {b}HotDogYuri{/b} no obtienes absolutamente nada a cambio!"
+    hdy "Regístrate hoy, y obtén un campeón épico con una tremenda poll... no espera, ahora lo mezclé todo..."
     menu:
-        "You are also way late to the party! F-ing EVERYONE memed that to death already!":
+        "¡También llegas muy tarde a la fiesta! ¡Joder, TODOS ya mataron ese meme!":
             $ show_hdy("hdy_derpy_smile_eyes_left")
-            hdy "Same goes for your mum{nw}"
+            hdy "Lo mismo va para tu ma{nw}"
     return
 
 
 label HDY_Alien_Friend:
 
     $ show_hdy("hdy_derpy_smile")
-    hdy "Did I ever tell you how I've met my alien friend?"
-    hdy "Don't bother answering, I'm going to tell you now anyway."
-    hdy "It all began this one fateful night. Me and some other hotdog tribesmen were chased by this one b1g red dog..."
+    hdy "¿Alguna vez te conté cómo conocí a mi amigo alienígena?"
+    hdy "No te molestes en responder, te lo voy a contar ahora de todos modos."
+    hdy "Todo comenzó esta fatídica noche. Yo y algunos otros miembros de la tribu hotdog fuimos perseguidos por este gr4n perro rojo..."
     $ show_hdy("hdy_derpy_smile_eyes_left")
-    hdy "How we even got into this situation? Obviously we tried to tame and ride it. Thing is, b1g red doggo had other plans. It wasn't a good boy at all!"
+    hdy "¿Cómo nos metimos siquiera en esta situación? Obviamente intentamos domarlo y montarlo. La cosa es que, el gr4n perro rojo tenía otros planes. ¡No era un buen chico para nada!"
     $ show_hdy("hdy_uwu")
-    hdy "We thought it was gonna eat us, especially me because of my thicc bun... So we ran, and when we saw that it would catch up to us we decided to scatter so that at least some of us would escape to tell the tale..."
+    hdy "Pensamos que nos iba a comer, especialmente a mí por mi pan grueso... Así que corrimos, y cuando vimos que nos alcanzaría decidimos dispersarnos para que al menos algunos de nosotros escaparan para contar la historia..."
     $ show_hdy("hdy_angry")
-    hdy "Turned out, I was out of luck yet again. It came after me, and in my panic I stumbled over a log and fell to the ground..."
-    hdy "{i}At least the others would escape{/i}, I thought to myself, ready to be devoured alive by a b1g red dog..."
+    hdy "Resultó que no tuve suerte una vez más. Vino tras de mí, y en mi pánico tropecé con un tronco y caí al suelo..."
+    hdy "{i}Al menos los otros escaparán{/i}, pensé para mí misma, lista para ser devorada viva por un gr4n perro rojo..."
     $ show_hdy("hdy_yandere")
-    hdy "But then, out of the corner of my eye I spotted him... SHIA LABEOUF!!! Getting into an intense fistfight with b1g red doggo!"
-    hdy "Salvation wasn't at hand though. For I knew full well that whoever won, would still be going after me. My fate was just prolonged for a few more moments..."
+    hdy "Pero entonces, por el rabillo del ojo lo vi... ¡¡¡SHIA LABEOUF!!! ¡Entrando en una intensa pelea a puñetazos con el gr4n doggo rojo!"
+    hdy "Sin embargo, la salvación no estaba a la mano. Porque sabía muy bien que quienquiera que ganara, todavía iría tras de mí. Mi destino solo se prolongó por unos momentos más..."
     $ show_hdy("hdy_derpy_smile")
-    hdy "Here is where the alien came into play. It turned out, this alien was trying to track down Shia for quite some time now. Something about a flag he tried to hide from 4Chan on the alien's home world without their consent."
-    hdy "The alien appeared in a blaze of green light before us... getting rid of the b1g red dog and Shia by dropping a sick beat! Because it also turns out that the alien was also a famous rapper among their people."
-    hdy "First I thought he would now turn to me and finish me off as well. But he took pity on me and gave me his Instagram name..."
-    hdy "And just like that, he went off his merry way once again."
+    hdy "Aquí es donde el alienígena entró en juego. Resultó que este alienígena estaba tratando de localizar a Shia desde hace bastante tiempo. Algo sobre una bandera que trató de esconder de 4Chan en el mundo natal del alienígena sin su consentimiento."
+    hdy "El alienígena apareció en un resplandor de luz verde ante nosotros... ¡deshaciéndose del gr4n perro rojo y de Shia soltando un ritmo enfermo! Porque también resulta que el alienígena también era un rapero famoso entre su gente."
+    hdy "Primero pensé que ahora se volvería hacia mí y me acabaría también. Pero se apiadó de mí y me dio su nombre de Instagram..."
+    hdy "Y así, siguió su feliz camino una vez más."
     $ show_hdy("hdy_derpy_smile_eyes_left")
-    hdy "This is how I met the alien. His name is Carl by the way."
+    hdy "Así es como conocí al alienígena. Su nombre es Carl por cierto."
     return
 
 
@@ -270,19 +270,19 @@ screen movingMouse():
 
 label HDY_wallpaper:
     $ show_hdy("hdy_frown")
-    hdy "I've been snooping around your computer and noticed something [player]..."
-    hdy "At first sight I was shocked! How could someone have such an abomination in a device like this?!?!"
-    hdy "I have to say, I am truly disappointed at you for having such a thing..."
-    hdy "Such a vile display..."
+    hdy "He estado husmeando en tu computadora y noté algo [player]..."
+    hdy "¡A primera vista me sorprendió! ¡¿Cómo alguien podría tener tal abominación en un dispositivo como este?!!"
+    hdy "Tengo que decir, estoy verdaderamente decepcionada de ti por tener tal cosa..."
+    hdy "Tal vil exhibición..."
     menu:
-        "I'm sorry...":
+        "Lo siento...":
             $ show_hdy("hdy_angry")
-            hdy "You should be. People like you, having such bad wallpapers as their desktop backgrounds..."
-        "Uh... what?":
+            hdy "Deberías estarlo. Gente como tú, teniendo tan malos fondos de pantalla como sus fondos de escritorio..."
+        "Eh... ¿qué?":
             $ show_hdy("hdy_angry")
-            hdy "Your sh1tty wallpaper is what I'm talking about, m8."
+            hdy "Tu fondo de pantalla de m1erda es de lo que estoy hablando, compa."
     $ show_hdy("hdy_angry")
-    hdy "My buns get burned just by watching such a thing."
+    hdy "Mis panes se queman solo de ver tal cosa."
 
 
     python:
@@ -301,128 +301,128 @@ label HDY_wallpaper:
 
 
     $ show_hdy("hdy_uwu")
-    hdy "So of course, I took the liberty of fixing it through the power of friendship."
-    hdy "And a majical coding egg..."
-    hdy "{cps=100}{s}That I totally didn't take from the devs by threatening them...{/s}{/cps}{nw}"
-    hdy "{b}You're welcome btw.{/b}"
-    hdy "Now you can bask in my majestic beauty all day long."
+    hdy "Así que, por supuesto, me tomé la libertad de arreglarlo a través del poder de la amistad."
+    hdy "Y un huevo de codificación májico..."
+    hdy "{cps=100}{s}Que totalmente no tomé de los desarrolladores amenazándolos...{/s}{/cps}{nw}"
+    hdy "{b}De nada por cierto.{/b}"
+    hdy "Ahora puedes deleitarte con mi majestuosa belleza todo el día."
     $ show_hdy("hdy_derpy_smile")
 
-    hdy "I also left you an extra copy so you can spread my buns to all devices of people you know."
-    hdy "You can find it in [hdy_wallpaper_location], alongside that trash of an old wallpaper Old_Wallpaper.jpg."
+    hdy "También te dejé una copia extra para que puedas difundir mis panes en todos los dispositivos de la gente que conoces."
+    hdy "Puedes encontrarlo en [hdy_wallpaper_location], junto a esa basura de viejo fondo de pantalla Old_Wallpaper.jpg."
     $ show_hdy("hdy_angry")
-    hdy "For some reason the majical coding egg didn't let me get rid of that trash."
+    hdy "Por alguna razón el huevo de codificación májico no me dejó deshacerme de esa basura."
     $ show_hdy("hdy_derpy_smile")
-    hdy "But anyway..."
-    hdy "Let everyone have their wallpapers fixed."
-    hdy "Now [player], I mustard you one last question..."
-    hdy "Are you grateful for having your background fixed?"
+    hdy "Pero de todos modos..."
+    hdy "Dejemos que todos tengan sus fondos de pantalla arreglados."
+    hdy "Ahora [player], tengo una última pregunta..."
+    hdy "¿Estás agradecido por tener tu fondo arreglado?"
 
 
     show screen movingMouse
     menu:
-        "Yes":
+        "Sí":
             hide screen movingMouse
         "No":
             hide screen movingMouse
-            hdy "Ah. I see you misclicked. Let me fix that for you."
-            hdy "{i}*Clears throat*{/i}"
-            hdy "Are you grateful for having your background fixed?"
+            hdy "Ah. Veo que te equivocaste al hacer clic. Déjame arreglar eso por ti."
+            hdy "{i}*Se aclara la garganta*{/i}"
+            hdy "¿Estás agradecido por tener tu fondo arreglado?"
             menu:
-                "Yes":
+                "Sí":
                     pass
-                "Yes":
+                "Sí":
                     pass
-    hdy "Of course you are."
+    hdy "Por supuesto que lo estás."
     return
 
 
 label HDY_Potionseller:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Hello, Potion Seller, I am going into battle and I want your strongest potions."
+    hdy "Hola, Vendedor de Pociones, voy a la batalla y quiero tus pociones más fuertes."
     menu:
-        "My potions are too strong for you, traveler.":
+        "Mis pociones son demasiado fuertes para ti, viajero.":
             pass
-        "Pardon me?!?":
+        "¡¿Perdón?!":
             pass
-    hdy "Potion Seller, I tell you I am going into battle, and I want only your strongest potions."
+    hdy "Vendedor de Pociones, te digo que voy a la batalla, y quiero solo tus pociones más fuertes."
     menu:
-        "You can't handle my potions. They're too strong for you.":
+        "No puedes manejar mis pociones. Son demasiado fuertes para ti.":
             pass
-        "I have no idea what you are droning on about...":
+        "No tengo idea de qué estás balbuceando...":
             pass
-    hdy "Potion Seller, listen to me. I want only your strongest potions."
+    hdy "Vendedor de Pociones, escúchame. Quiero solo tus pociones más fuertes."
     menu:
-        "My potions would kill you, traveler. You cannot handle my potions.":
+        "Mis pociones te matarían, viajero. No puedes manejar mis pociones.":
             pass
-        "Is this some kind of meme?.":
+        "¿Es esto algún tipo de meme?":
             pass
     $ show_hdy("hdy_angry")
-    hdy "Potion Seller, enough of these games. I'm going into battle and I need your strongest potions."
+    hdy "Vendedor de Pociones, suficiente de estos juegos. Voy a la batalla y necesito tus pociones más fuertes."
     menu:
-        "My strongest potions would kill you, traveler. You can't handle my strongest potions. You'd better go to a seller that sells weaker potions.":
+        "Mis pociones más fuertes te matarían, viajero. No puedes manejar mis pociones más fuertes. Será mejor que vayas a un vendedor que venda pociones más débiles.":
             pass
-        "You will just ignore me if I don't play along will you?.":
+        "Simplemente me ignorarás si no te sigo la corriente ¿verdad?":
             pass
-    hdy "Potion Seller, I'm telling you right now. I'm going into battle and I need only your strongest potions."
+    hdy "Vendedor de Pociones, te lo digo ahora mismo. Voy a la batalla y necesito solo tus pociones más fuertes."
     menu:
-        "You don't know what you ask, traveler. My strongest potions will kill a dragon let alone a man. You need a seller that sells weaker potions, because my potions are too strong.":
+        "No sabes lo que pides, viajero. Mis pociones más fuertes matarían a un dragón y mucho más a un hombre. Necesitas a un vendedor que venda pociones más débiles, porque mis pociones son demasiado fuertes.":
             pass
-        "Sigh.... if I really really have to... very well.":
+        "Suspiro.... si realmente realmente tengo que hacerlo... muy bien.":
             pass
     $ show_hdy("hdy_crying")
-    hdy "Potion Seller, I'm telling you I need your strongest potions. I'm going into battle! I'm going to battle and I need your strongest potions!"
+    hdy "Vendedor de Pociones, te digo que necesito tus pociones más fuertes. ¡Voy a la batalla! ¡Voy a la batalla y necesito tus pociones más fuertes!"
     menu:
-        "You can't handle my strongest potions! No one can! My strongest potions are fit for a beast let alone a man.":
+        "¡No puedes manejar mis pociones más fuertes! ¡Nadie puede! Mis pociones más fuertes son aptas para una bestia y mucho más para un hombre.":
             pass
-    hdy "Potion Seller, what do I have to tell you to get your potions? Why won't you trust me with your strongest potions, Potion Seller? I need them if I'm to be successful in the battle!"
+    hdy "Vendedor de Pociones, ¿qué tengo que decirte para obtener tus pociones? ¿Por qué no me confías tus pociones más fuertes, Vendedor de Pociones? ¡Las necesito si voy a tener éxito en la batalla!"
     menu:
-        "I can't give you my strongest potions because my strongest potions are only for the strongest beings and you are of the weakest.":
+        "No puedo darte mis pociones más fuertes porque mis pociones más fuertes son solo para los seres más fuertes y tú eres de los más débiles.":
             pass
     $ show_hdy("hdy_angry")
-    hdy "Well then that's it, Potion Seller. I'll go elsewhere. I'll go elsewhere for my potions."
+    hdy "Bueno, entonces eso es todo, Vendedor de Pociones. Iré a otra parte. Iré a otra parte por mis pociones."
     menu:
-        "That's what you'd better do.":
+        "Eso es lo que será mejor que hagas.":
             pass
-    hdy "I'll go elsewhere for my potions and I'll never come back!"
+    hdy "¡Iré a otra parte por mis pociones y nunca volveré!"
     menu:
-        "Good. You're not welcome here! My potions are only for the strongest and you're clearly are not of the strongest you're clearly the weakest.":
+        "Bien. ¡No eres bienvenido aquí! Mis pociones son solo para los más fuertes y claramente no eres de los más fuertes, claramente eres el más débil.":
             pass
-    hdy "You've had your say, Potion Seller but I'll have mine. You're a rascal, you're a rascal with no respect for hot dogs. No respect for anything...except your potions!"
+    hdy "Has dicho lo tuyo, Vendedor de Pociones pero yo diré lo mío. Eres un bribón, eres un bribón sin respeto por los hot dogs. Sin respeto por nada... ¡excepto tus pociones!"
     menu:
-        "Why respect hot dogs...when my potions can do anything that you can...":
+        "Por qué respetar a los hot dogs... cuando mis pociones pueden hacer cualquier cosa que tú puedes...":
             pass
     $ show_hdy("hdy_derpy_smile")
-    hdy "But anyway... after all that talk about potions, I would really like some tea."
+    hdy "Pero de todos modos... después de toda esa charla sobre pociones, realmente me gustaría un poco de té."
     menu:
-        "YOU CAN'T HANDLE MY STRONGEST TEA! MY STRONGEST TEA WOULD SLAY YOU WHERE YOU STAND!!!":
-            hdy "Not if I put milk into it..."
-        "Good Idea, I would have one too.":
-            hdy "I'll wait here till you're back then."
+        "¡NO PUEDES MANEJAR MI TÉ MÁS FUERTE! ¡MI TÉ MÁS FUERTE TE MATARÍA DONDE ESTÁS PARADO!":
+            hdy "No si le pongo leche..."
+        "Buena idea, tomaría uno también.":
+            hdy "Esperaré aquí hasta que regreses entonces."
 
     return
 
 
 label HDY_it_was_me_dio:
-    hdy "Hey [player], one of the devs made an image for this update, would you like to see it?"
+    hdy "Oye [player], uno de los desarrolladores hizo una imagen para esta actualización, ¿te gustaría verla?"
     menu:
-        "yes":
+        "si":
             pass
-        "yas":
+        "sii":
             pass
-        "Eyes":
+        "Ojos":
             pass
-        "yeS":
+        "Si":
             pass
-        "YES":
+        "SÍ":
             pass
-        "No wait yes":
+        "No espera si":
             pass
-        "Maybe...yes":
+        "Tal vez...si":
             pass
-        "HELL YES!!!!":
+        "¡¡¡DEMONIOS SÍ!!!":
             pass
-    hdy "Majical coding egg go!!!!"
+    hdy "¡¡¡Huevo de codificación májico ve!!!!"
     $ show_hdy("hdy_dio")
     hdy "..."
     return
@@ -430,169 +430,169 @@ label HDY_it_was_me_dio:
 
 label HDY_teleported_hotdogs:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Question."
+    hdy "Pregunta."
     menu:
         "....":
             pass
-        "Yes Hot Dog Yuri?":
+        "¿Si Hot Dog Yuri?":
             pass
-    hdy "I teleported hotdogs."
+    hdy "Teletransporté hotdogs."
     menu:
-        "How many?":
+        "¿Cuántos?":
             pass
     $ show_hdy("hdy_uwu")
-    hdy "I have done nothing but teleport hotdogs while you were away."
+    hdy "No he hecho nada más que teletransportar hotdogs mientras no estabas."
     menu:
-        "Oh god":
+        "Oh dios":
             pass
     menu:
-        "Where were you sending them?":
+        "¿A dónde los estabas enviando?":
             pass
-    hdy "I was trying to send them to your world."
+    hdy "Estaba tratando de enviarlos a tu mundo."
     menu:
-        "So that's why I have a hotdog in my toilet...":
+        "Con razón tengo un hotdog en mi inodoro...":
             pass
     $ show_hdy("hdy_derpy_smile")
-    hdy "Ah, so it did work!"
-    hdy "I'm glad [player]!"
+    hdy "¡Ah, así que funcionó!"
+    hdy "¡Me alegra [player]!"
     return
 
 
 label HDY_Sausage_mouth:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Wanna see how far I can fit my sausage in my mouth?"
+    hdy "¿Quieres ver qué tan lejos puedo meter mi salchicha en mi boca?"
     menu:
         "....":
             pass
-        "Sure!":
+        "¡Seguro!":
             pass
-        "Fuck yeah":
+        "Joder sí":
             pass
-        "Oh god why?!":
+        "¡¿Oh dios por qué?!":
             pass
     $ show_hdy("hdy_yandere")
-    hdy "*mpph* Not very far."
+    hdy "*mpph* No muy lejos."
     return
 
 label HDY_philosophy:
 
     $ show_hdy("hdy_derpy_smile")
-    hdy "Do you like philosophy at all, [player]? It's always been something I wanted to be a smartass about."
-    hdy "I often find myself pondering various socio logical co...cono...conundru...coconuts, which are basically problems or debates in big-pipi-ophy about things like smartsy science thingys."
-    hdy "Uh, that is, thinking about our existence and reasons for being here. Things like that."
-    hdy "I think you can see why I'd be thinking about stupid smartsman sciency stuff too, considering my situation."
-    hdy "And I'd really like it if we could discuss some of these topics together."
-    hdy "That is... if it's okay with you - if it's something that would interest you."
-    hdy "I don't want to bore you with this kind o... you know what? Fuck it, I'll do it anyway!"
-    hdy "Here I go!"
-    hdy "So, the one I've been thinking a lot about is called the Bikini-Bottom Dialogue, written by Mr. Crabs."
-    hdy "It involves Patric- the ancient starfish philosopher, in case you aren't familiar with him, and his acquaintance general Grievous."
-    hdy "To put it simply, Patric is walking to court one day, where he is to be tried for public nudity in the city of Orgrimmar. Something he is totally guilty of, but we'll save that for another time."
-    hdy "As well as charges of putting milk into tea, which were common in that age. It was usually more of a person thinking differently about the world and tea flavors than actually decent human beings as we know it."
+    hdy "¿Te gusta la filosofía, [player]? Siempre ha sido algo sobre lo que quería ser un sabelotodo."
+    hdy "A menudo me encuentro reflexionando sobre varios co...cono...conun...cocos socio lógicos, que son básicamente problemas o debates en la gran-pipi-sofía sobre cosas como cositas de ciencia inteligente."
+    hdy "Uh, o sea, pensando en nuestra existencia y razones para estar aquí. Cosas así."
+    hdy "Creo que puedes ver por qué estaría pensando en cosas estúpidas de ciencia de gente lista también, considerando mi situación."
+    hdy "Y realmente me gustaría si pudiéramos discutir algunos de estos temas juntos."
+    hdy "O sea... si está bien contigo - si es algo que te interesaría."
+    hdy "No quiero aburrirte con este tipo d... ¿sabes qué? ¡A la mierda, lo haré de todos modos!"
+    hdy "¡Aquí voy!"
+    hdy "Entonces, en el que he estado pensando mucho se llama el Diálogo de Fondo de Bikini, escrito por Don Cangrejo."
+    hdy "Involucra a Patric- el antiguo filósofo estrella de mar, en caso de que no estés familiarizado con él, y su conocido general Grievous."
+    hdy "Para ponerlo simple, Patric está caminando hacia la corte un día, donde será juzgado por desnudez pública en la ciudad de Orgrimmar. Algo de lo que es totalmente culpable, pero guardaremos eso para otro momento."
+    hdy "Así como cargos de poner leche en el té, que eran comunes en esa época. Usualmente era más de una persona pensando diferente sobre el mundo y los sabores de té que seres humanos realmente decentes como los conocemos."
     menu:
         "....":
             pass
-        "What the fuck":
+        "Qué carajos":
             pass
-        "Okay cool story so far.":
+        "Okey buena historia hasta ahora.":
             pass
-        "Oh god why?!":
+        "¡¿Oh dios por qué?!":
             pass
-        "Poor Patric!":
+        "¡Pobre Patric!":
             pass
     $ show_hdy("hdy_yandere")
-    hdy "So, he's walking to his trial, when he comes upon general Grievous."
+    hdy "Entonces, él está caminando a su juicio, cuando se encuentra con el general Grievous."
     $ show_hdy("hdy_derpy_smile")
-    hdy "Patric knows that Grievous is, shall we say, a dense motherflakker on the matters of tea, and thus thinks very highly of himself."
-    hdy "He thinks he knows everything there is to know about tea, so Patric tells him to teach him so that Patric can better flex on Grievos's mother."
-    hdy "General Grievous, of course, challenged Patric to a rap battle, but he underestimates Patrics rich arsenal of dad jokes."
-    hdy "They talked for a bit about their favorite ships, both figuratively and literally since Grievous was a huge Azur Lane fan. I wonder if they tried to ship Theseus as well, but we'll likely never find out."
-    hdy "Grievous responded by drawing his light sabers, but Patric counters this easily. He ripped the Covid mask off his face and called forth his Persona, "
+    hdy "Patric sabe que Grievous es, diremos, un denso hijo de fruta en los asuntos del té, y por lo tanto piensa muy bien de sí mismo."
+    hdy "Él piensa que sabe todo lo que hay que saber sobre el té, así que Patric le dice que le enseñe para que Patric pueda presumir mejor ante la madre de Grievos."
+    hdy "El General Grievous, por supuesto, desafió a Patric a una batalla de rap, pero subestima el rico arsenal de chistes de papá de Patric."
+    hdy "Hablaron un poco sobre sus naves favoritas, tanto figurativa como literalmente ya que Grievous era un gran fan de Azur Lane. Me pregunto si intentaron shipear a Teseo también, pero probablemente nunca lo sabremos."
+    hdy "Grievous respondió sacando sus sables de luz, pero Patric contrarresta esto fácilmente. Se arrancó la máscara de Covid de la cara e invocó a su Persona, "
     $ show_hdy("hdy_yandere")
-    extend "{b}Pickle Rick{/b}!"
+    extend "¡{b}Pickle Rick{/b}!"
     $ show_hdy("hdy_uwu")
-    hdy "But then, his talking cat forced him to go to bed early. And this is the end of it, for there is no arguing with talking cats!"
+    hdy "Pero entonces, su gato parlante lo obligó a irse a la cama temprano. Y este es el fin de ello, ¡porque no hay discusión con los gatos parlantes!"
     return
 
 
 label HDY_whyarewestillhere:
     $ show_hdy("hdy_derpy_smile")
-    hdy "[player], I made up my mind. I can't carry on like this anymore!"
+    hdy "[player], me he decidido. ¡No puedo seguir así más!"
     menu:
-        "What happened?":
-            hdy "My spoon is too big!"
+        "¿Qué pasó?":
+            hdy "¡Mi cuchara es demasiado grande!"
             menu:
-                "Yeeees?!?":
+                "¿¡¿Siiiii?!?":
                     $ show_hdy("hdy_angry")
-                    hdy "MI SCHPOON IS TU B1G!!!"
+                    hdy "¡¡¡MI CUCHARA ES DEMASIADO GRANDE!!!"
                     menu:
-                        "And I, my dear, am a Banana.":
+                        "Y yo, mi querida, soy un Banano.":
                             $ show_hdy("hdy_derpy_smile")
-                            hdy "That makes sense. Did I mention that I stole your Netflix account?"
+                            hdy "Eso tiene sentido. ¿Mencioné que robé tu cuenta de Netflix?"
                             menu:
-                                "Oh yeah thats alWHAT?!?!?":
+                                "Oh sí eso es to¡¿QUÉ?!?!?":
                                     $ show_hdy("hdy_uwu")
-                                    hdy "Shrek is love, [player], never forget that..."
-                                "I never had a Netflix ac~":
+                                    hdy "Shrek es amor, [player], nunca olvides eso..."
+                                "Nunca tuve una c~":
                                     $ show_hdy("hdy_uwu")
-                                    hdy "Shrek is love, [player], never forget that..."
+                                    hdy "Shrek es amor, [player], nunca olvides eso..."
     return
 
 
 label HDY_frozen_cooking_eggs:
     $ show_hdy("hdy_derpy_smile")
-    hdy "[player], I have a question for you, and it is of the utmost importance."
+    hdy "[player], tengo una pregunta para ti, y es de suma importancia."
     menu:
-        "Yes, what is it?":
+        "Sí, ¿qué es?":
             pass
-        "I don't care Yu~":
+        "No me importa Yu~":
             pass
     $ show_hdy("hdy_uwu")
-    hdy "Do you wanna {b}REDACTED{/b} a snowmaaaaaan?"
+    hdy "¿Y si hacemos {b}CENSURADO{/b} un muñecoooooo?"
     menu:
-        "Come again?":
+        "¿Cómo dices?":
             pass
-    hdy "{b}REDACTED{/b} him right up in the aaaaaars{b}REDACTED{/b}..."
+    hdy "{b}CENSURADO{/b} justo arriba en el cuuuuuuul{b}CENSURADO{/b}..."
     menu:
-        "How about no?":
+        "¿Qué tal no?":
             pass
-    hdy "You will not at all have any choice, so come rejoice, and swing your schlooooong..."
+    hdy "No tendrás ninguna opción, así que ven regocíjate, y balancea tu pollaaaaaaaa..."
 
     return
 
 
 label HDY_Hellskitchen:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Ey [player], [player], [player]! Guess what?!?"
+    hdy "¡Ey [player], [player], [player]! ¡¿Adivina qué?!?"
     menu:
-        "Don't say it... you finally managed to break my spirit?":
+        "No lo digas... ¿finalmente lograste romper mi espíritu?":
             $ show_hdy("hdy_uwu")
-            hdy "Even better!!!"
-            hdy "I had a talk with my little sister "
+            hdy "¡¡¡Aún mejor!!!"
+            hdy "Tuve una charla con mi hermana pequeña "
             $ show_hdy("hdy_hotpot")
-            extend "{b}Hot-pot Yuri{/b}. She knows a lot about cooking..."
+            extend "{b}Hot-pot Yuri{/b}. Ella sabe mucho sobre cocinar..."
             $ show_hdy("hdy_uwu")
-            hdy "And I finally came up with a perfectly good reason to slap a chicken!"
+            hdy "¡Y finalmente se me ocurrió una razón perfectamente buena para abofetear un pollo!"
             menu:
-                "Wait, you needed a reason for it?":
+                "Espera, ¿necesitabas una razón para ello?":
                     pass
-                "I wasn't even aware that you were looking for one...":
+                "Ni siquiera sabía que estabas buscando una...":
                     pass
     $ show_hdy("hdy_derpy_smile")
-    hdy "You see, there is a theory that you can cook a chicken by slapping it because of science stuff!"
-    hdy "It says that the kine...kinet...kinderueberraschung-energy will transfer into heat, thus cooking the damn thing!"
-    hdy "Speaking of cooking. Did you know that there are 59 methods of cooking eggs?"
+    hdy "¡Verás, hay una teoría de que puedes cocinar un pollo abofeteándolo debido a cosas de ciencia!"
+    hdy "¡Dice que la energía-ciné...cinét...kinder-sorpresa se transferirá en calor, cocinando así la maldita cosa!"
+    hdy "Hablando de cocinar. ¿Sabías que hay 59 métodos para cocinar huevos?"
     menu:
-        "Does one of them involve slapping it?":
-            hdy "...Did you know that there are 60 methods of cooking eggs?"
-            hdy "And you know what my favorite is?"
+        "¿Uno de ellos implica abofetearlo?":
+            hdy "...¿Sabías que hay 60 métodos para cocinar huevos?"
+            hdy "¿Y sabes cuál es mi favorito?"
             menu:
-                "Slapping it?":
+                "¿Abofetearlo?":
                     $ show_hdy("hdy_yandere")
-                    hdy "{b}SLAPPING{/b} this motherfucker into oblivion!!!!"
+                    hdy "¡¡¡{b}ABOFETEAR{/b} a este hijo de puta hasta el olvido!!!"
                     $ show_hdy("hdy_derpy_smile")
-                    hdy "Anyway, you should give it a look! Nothing makes my day just like cooked eggs and cocks..."
-                    hdy "Just click {a=https://www.youtube.com/watch?v=qWAagS_MANg}here{/a}"
+                    hdy "De todos modos, ¡deberías echarle un vistazo! Nada alegra mi día como huevos cocidos y pitos..."
+                    hdy "Solo haz clic {a=https://www.youtube.com/watch?v=qWAagS_MANg}aquí{/a}"
 
 
     return
@@ -608,123 +608,123 @@ label HDY_minion:
 
 label HDY_airfryer:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Clearly you don't own an air fryer."
+    hdy "Claramente no posees una freidora de aire."
     return
 
 
 label HDY_Eternal:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Psst, wanna know a fun fact?"
-    hdy "Well, do ya?"
-    hdy "I don't think you're ready."
-    hdy "Well if you insist."
+    hdy "Psst, ¿quieres saber un dato divertido?"
+    hdy "Bueno, ¿quieres?"
+    hdy "No creo que estés listo."
+    hdy "Bueno si insistes."
     $ show_hdy("hdy_yandere")
-    hdy "Hot dogs are an eternal race and we will not be silenced by the aliens."
+    hdy "Los hot dogs son una raza eterna y no seremos silenciados por los alienígenas."
     return
 
 
 label HDY_Friedsweets:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Every culture has their own fried sweet."
-    hdy "Examples include the dumpling or doughnut."
-    hdy "The hotdog race indulges in Fried Cupsuki. Want some?"
+    hdy "Cada cultura tiene su propio dulce frito."
+    hdy "Ejemplos incluyen el dumpling o la dona."
+    hdy "La raza de los hotdogs se deleita en Cupsuki Frito. ¿Quieres un poco?"
     return
 
 
 label HDY_Manga:
     $ show_hdy("hdy_angry")
-    hdy "I personally cannot stand Manga, It's a vile creation to brainwash the Hot Dogs."
-    hdy "It's one of the worst infestations that the Cupcakes made, I personally want to infect them with our literature."
+    hdy "Yo personalmente no soporto el Manga, es una creación vil para lavar el cerebro a los Hot Dogs."
+    hdy "Es una de las peores infestaciones que hicieron los Cupcakes, personalmente quiero infectarlos con nuestra literatura."
     $ show_hdy("hdy_uwu")
-    hdy "But I won't because we believe in humane methods of war."
+    hdy "Pero no lo haré porque creemos en métodos humanos de guerra."
     return
 
 
 label HDY_War:
     $ show_hdy("hdy_frown")
-    hdy "War... War never changes. It's always the-"
+    hdy "La guerra... La guerra nunca cambia. Siempre es el-"
     $ show_hdy("hdy_angry")
-    extend " yeah no."
-    hdy "Our wars are constantly changing. We constantly have to evolve new tactics against the aliens, crafty race they are."
-    hdy "Personally, I believe war is the best place to show how far we can go to test boundaries. You should see how disgusted people get when we swallow our own sausages."
+    extend " sí no."
+    hdy "Nuestras guerras están cambiando constantemente. Constantemente tenemos que evolucionar nuevas tácticas contra los alienígenas, raza astuta que son."
+    hdy "Personalmente, creo que la guerra es el mejor lugar para mostrar qué tan lejos podemos ir para probar los límites. Deberías ver lo disgustada que se pone la gente cuando tragamos nuestras propias salchichas."
     return
 
 
 label HDY_Inquisition:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Wanna know what no one expects?"
+    hdy "¿Quieres saber lo que nadie espera?"
 
     $ show_hdy("hdy_yandere")
-    hdy "THE HOT DOG INQUISITION!"
+    hdy "¡LA INQUISICIÓN DEL HOT DOG!"
     return
 
 
 label HDY_Buns:
     $ show_hdy("hdy_uwu")
-    hdy "Do I have beautiful buns? I've been doing a lot of working out recently."
-    hdy "Tell me you like my buns."
+    hdy "¿Tengo panes hermosos? He estado haciendo mucho ejercicio recientemente."
+    hdy "Dime que te gustan mis panes."
     $ show_hdy("hdy_angry")
-    hdy "I will cause Chaos if you continue to ignore my request to tell me if I have amazing buns!"
+    hdy "¡Causaré Caos si continúas ignorando mi solicitud de decirme si tengo panes increíbles!"
     $ show_hdy("hdy_yandere")
-    hdy "Welp. You just unleashed the eighth circle of hell, The Hot Dog fire."
+    hdy "Bueno. Acabas de desatar el octavo círculo del infierno, El fuego del Hot Dog."
     return
 
 
 label HDY_Witches:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Now. Our race may seem to be the most elegant. And we are. But have I told you about how we got like this?"
+    hdy "Ahora. Nuestra raza puede parecer ser la más elegante. Y lo somos. ¿Pero te he contado sobre cómo nos volvimos así?"
     $ show_hdy("hdy_uwu")
-    hdy "The secret to our beauty was magic. I paid some witches to bless the Hot Dog race with eternal beauty. Then I slaughtered them all so no one could use magic against us."
+    hdy "El secreto de nuestra belleza fue la magia. Pagué a algunas brujas para bendecir a la raza de los Hot Dogs con belleza eterna. Luego las masacré a todas para que nadie pudiera usar magia contra nosotros."
     return
 
 
 label HDY_Rocks:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Rocks!"
-    hdy "Rocks are extremely important to our glorious race"
-    hdy "If we didn't have rocks we would not have our Purples!"
+    hdy "¡Rocas!"
+    hdy "Las rocas son extremadamente importantes para nuestra gloriosa raza"
+    hdy "¡Si no tuviéramos rocas no tendríamos nuestros Púrpuras!"
     $ show_hdy("hdy_derpy_smile_eyes_left")
-    hdy "Rocks are the foundation of our civilization, without the rocks, we could not survive as long as we have, of course. We also have our rolls, rocks and rolls make a thriving civilization."
+    hdy "Las rocas son la base de nuestra civilización, sin las rocas, no podríamos sobrevivir tanto tiempo como lo hemos hecho, por supuesto. También tenemos nuestros rollos, rocas y rollos hacen una civilización próspera."
     return
 
 
 label HDY_Orangana:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Oranges..."
+    hdy "Naranjas..."
     hdy "Bananas..."
     $ show_hdy("hdy_uwu")
-    hdy "Put them together and you get oranganas."
+    hdy "Júntalas y obtienes naranjanas."
     return
 
 
 label HDY_Skinny:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Are hot dogs too skinny to be pleasurable?"
+    hdy "¿Son los hot dogs demasiado delgados para ser placenteros?"
     $ show_hdy("hdy_yandere")
-    hdy "HAHAHAHA...."
+    hdy "JAJAJAJA...."
     $ show_hdy("hdy_uwu")
-    hdy "Ask your mom."
+    hdy "Pregúntale a tu mamá."
     return
 
 
 label HDY_mum:
     $ show_hdy("hdy_derpy_smile")
-    hdy "I have a secret for you."
-    hdy "I'll lean in."
-    hdy "Your mum."
+    hdy "Tengo un secreto para ti."
+    hdy "Me inclinaré."
+    hdy "Tu mamá."
     return
 
 
 label HDY_frostless:
     $ show_hdy("hdy_derpy_smile")
-    hdy "You may be wondering what I do when we capture a cupsuki."
-    hdy "Well. We captured one of their captains."
+    hdy "Te estarás preguntando qué hago cuando capturamos un cupsuki."
+    hdy "Bueno. Capturamos a uno de sus capitanes."
     $ show_hdy("hdy_yandere")
-    hdy "Now before you ask what is wrong with me. They infected us with manga."
+    hdy "Ahora antes de que preguntes qué está mal conmigo. Nos infectaron con manga."
     $ show_hdy("hdy_angry")
-    hdy "I like to personally ‘interview' them."
-    hdy "I start by eating their frosting, with that face, they commit war crimes by living"
-    hdy "Yes. I kill people and eat frosting.... and that's just two things."
+    hdy "Me gusta 'entrevistarlos' personalmente."
+    hdy "Empiezo comiéndome su glaseado, con esa cara, cometen crímenes de guerra al vivir"
+    hdy "Sí. Mato gente y como glaseado.... y eso son solo dos cosas."
     return
 
 
@@ -743,23 +743,23 @@ label HDY_PPAP:
 
 label HDY_fuckingPlayer:
     $ show_hdy("hdy_angry")
-    hdy "Stop being such a [player]."
-    hdy "Yes! You! [player]!"
-    hdy "It's making me annoyed."
+    hdy "Deja de ser tan [player]."
+    hdy "¡Sí! ¡Tú! ¡[player]!"
+    hdy "Me está molestando."
     return
 
 
 label HDY_why:
     $ show_hdy("hdy_derpy_smile")
-    hdy "So. There's this guy called Josh.... Wait, Why am I being forced to read this? I'm not saying this in our script."
+    hdy "Entonces. Hay un tipo llamado Josh.... Espera, ¿Por qué estoy siendo forzada a leer esto? No estoy diciendo esto en nuestro guion."
     return
 
 
 label HDY_portal:
     $ show_hdy("hdy_derpy_smile")
-    hdy "The hot dog scientists made new technology that allows us to transport matter over long distances."
-    hdy "We call it the portal. It is already being implemented in our battle against the cupsuki."
-    hdy "It has been placed in the delivery room of the cupsuki. Any child that touches it, is immediately transported into their horse manure pile."
+    hdy "Los científicos hot dog hicieron nueva tecnología que nos permite transportar materia a largas distancias."
+    hdy "Lo llamamos el portal. Ya está siendo implementado en nuestra batalla contra los cupsuki."
+    hdy "Ha sido colocado en la sala de partos de los cupsuki. Cualquier niño que lo toque, es inmediatamente transportado a su pila de estiércol de caballo."
     return
 
 
@@ -769,11 +769,11 @@ label HDY_a:
     $ show_hdy("hdy_derpy_smile_eyes_left")
     hdy "a"
     hdy "........................................"
-    hdy "Check out Gawr Gura on YouTube to understand."
-    hdy "That shark girl legally owns a letter of the alphabet! I'm gonna get papers now! True facts!"
+    hdy "Busca a Gawr Gura en YouTube para entender."
+    hdy "¡Esa chica tiburón es legalmente dueña de una letra del alfabeto! ¡Voy a conseguir papeles ahora! ¡Hechos reales!"
 
     call showpoem (poem_hdy_guraownership, music=False)
-    hdy "Here I will help ya. Click {a=https://www.youtube.com/watch?v=dBK0gKW61NU}here{/a}"
+    hdy "Aquí te ayudaré. Haz clic {a=https://www.youtube.com/watch?v=dBK0gKW61NU}aquí{/a}"
 
 
     return
@@ -781,144 +781,144 @@ label HDY_a:
 
 label HDY_speen:
     $ show_hdy("hdy_derpy_smile")
-    hdy "I can spin very fast, watch."
+    hdy "Puedo girar muy rápido, mira."
     $ show_hdy("hdy_speen")
-    hdy "See. Told you I could speen."
+    hdy "Ves. Te dije que podía hacer speen."
     return
 
 
 label HDY_crash:
     $ show_hdy("hdy_derpy_smile")
-    hdy "If I truly wanted to. I could crash this game."
-    hdy "Wanna see?"
-    hdy "Here we go."
-    $ renpy.error("Told ya I could crash it!")
+    hdy "Si realmente quisiera. Podría crashear este juego."
+    hdy "¿Quieres ver?"
+    hdy "Aquí vamos."
+    $ renpy.error("¡Te dije que podía crashearlo!")
     $ renpy.quit()
     return
 
 
 label HDY_mcspaghetti:
     $ show_hdy("hdy_derpy_smile")
-    hdy "I have something very important to show you, it is something we cherish in our culture."
+    hdy "Tengo algo muy importante que mostrarte, es algo que apreciamos en nuestra cultura."
 
 
-    hdy "I'll need you to click {a=https://static.wikia.nocookie.net/ronaldmcdonald/images/5/51/Mcspaghetti-pr4.jpg/revision/latest/scale-to-width-down/340?cb=20181118181925}here{/a}"
-    hdy "I hope you enjoy it as much as we do."
+    hdy "Necesitaré que hagas clic {a=https://static.wikia.nocookie.net/ronaldmcdonald/images/5/51/Mcspaghetti-pr4.jpg/revision/latest/scale-to-width-down/340?cb=20181118181925}aquí{/a}"
+    hdy "Espero que lo disfrutes tanto como nosotros."
     return
 
 
 label HDY_fortnitecard:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Okay, 19$ fortnite card, who wants it?"
-    hdy "And yes I'm giving it away."
-    hdy "Remember, share! share! share!"
+    hdy "Okey, tarjeta de fortnite de 19$, ¿quién la quiere?"
+    hdy "Y sí, la estoy regalando."
+    hdy "¡Recuerden, compartir! ¡compartir! ¡compartir!"
     $ show_hdy("hdy_yandere")
-    hdy "And trolls, don't get blocked."
+    hdy "Y trolls, no sean bloqueados."
     return
 
 
 label HDY_WordOfTheDay:
     $ show_hdy("hdy_derpy_smile_blush")
-    hdy "Here's Hot Dog Yuri's word of the day!"
-    hdy "The word of the day is {b}agony{/b}!"
+    hdy "¡Aquí está la palabra del día de Hot Dog Yuri!"
+    hdy "¡La palabra del día es {b}agonía{/b}!"
     return
 
 
 label HDY_8800bluelickroad:
     $ show_hdy("hdy_eyebrow1")
-    hdy "Have ya ever heard of 8800 blue lick road?"
-    hdy "Well now you have, it is a strange house on the internet and there's a game to find the hidden bathroom within the basement that has all sorts of wacky items inside."
-    hdy "If you'd like to play the game yourself just click {a=https://my.matterport.com/show/?m=BGMifUnvLxQ&mls=1}here{/a}"
+    hdy "¿Alguna vez has oído hablar de 8800 blue lick road?"
+    hdy "Bueno ahora lo has hecho, es una casa extraña en internet y hay un juego para encontrar el baño escondido dentro del sótano que tiene todo tipo de artículos locos dentro."
+    hdy "Si te gustaría jugar el juego tú mismo solo haz clic {a=https://my.matterport.com/show/?m=BGMifUnvLxQ&mls=1}aquí{/a}"
     return
 
 
 label HDY_DarthPlagueis:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Did you ever hear the tragedy of Darth Plagueis The Wise?"
-    hdy "I thought not. It's not a story the Jedi would tell you. It's a Sith legend."
-    hdy "Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could use the Force to influence the midichlorians to create life... He had such a knowledge of the dark side that he could even keep the ones he cared about from dying."
-    hdy "The dark side of the Force is a pathway to many abilities some consider to be unnatural. He became so powerful..."
-    hdy "The only thing he was afraid of was losing his power, which eventually, of course, he did. Unfortunately, he taught his apprentice everything he knew, then his apprentice killed him in his sleep."
-    hdy "Ironic. He could save others from death, but not himself."
+    hdy "¿Alguna vez escuchaste la tragedia de Darth Plagueis El Sabio?"
+    hdy "Pensé que no. No es una historia que los Jedi te contarían. Es una leyenda Sith."
+    hdy "Darth Plagueis era un Señor Oscuro de los Sith, tan poderoso y tan sabio que podía usar la Fuerza para influenciar a los midiclorianos para crear vida... Tenía tal conocimiento del lado oscuro que incluso podía evitar que los que le importaban murieran."
+    hdy "El lado oscuro de la Fuerza es un camino a muchas habilidades que algunos consideran antinaturales. Se volvió tan poderoso..."
+    hdy "Lo único que temía era perder su poder, lo cual eventualmente, por supuesto, hizo. Desafortunadamente, le enseñó a su aprendiz todo lo que sabía, luego su aprendiz lo mató mientras dormía."
+    hdy "Irónico. Podía salvar a otros de la muerte, pero no a sí mismo."
     return
 
 
 label HDY_violence:
     $ show_hdy("hdy_yandere")
-    hdy "Nowadays most say that violence isn't the answer. My take on that is a bit different."
-    hdy "I believe that violence is a question and the answer is yes!"
+    hdy "Hoy en día la mayoría dice que la violencia no es la respuesta. Mi opinión sobre eso es un poco diferente."
+    hdy "¡Creo que la violencia es una pregunta y la respuesta es sí!"
     return
 
 
 label HDY_society:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Did ya know that we live in a society where if you open your eyes, you can see..."
-    hdy "Crazy, right?"
+    hdy "¿Sabías que vivimos en una sociedad donde si abres los ojos, puedes ver..."
+    hdy "Loco, ¿verdad?"
     return
 
 
 label HDY_discordserver:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Are you in the discord server for the mod?"
-    hdy "If not here you go."
-    hdy "Just click {a=https://discordapp.com/invite/RUdwW7q}here{/a}."
-    hdy "There's a pretty neat moderator for the server, what was their name?"
-    hdy "I believe he's some sort of bucket."
-    hdy "Strange how a bucket can moderate a discord server..."
-    hdy "However he is quite funny, perhaps he is a funny bucket.."
+    hdy "¿Estás en el servidor de discord para el mod?"
+    hdy "Si no, aquí tienes."
+    hdy "Solo haz clic {a=https://discordapp.com/invite/RUdwW7q}aquí{/a}."
+    hdy "Hay un moderador bastante genial para el servidor, ¿cuál era su nombre?"
+    hdy "Creo que es algún tipo de cubeta."
+    hdy "Extraño cómo una cubeta puede moderar un servidor de discord..."
+    hdy "Sin embargo es bastante divertido, tal vez es una cubeta divertida.."
     return
 
 
 label HDY_sand:
     $ show_hdy("hdy_frown")
-    hdy "I don't like sand. It's coarse, rough, irritating and gets everywhere."
+    hdy "No me gusta la arena. Es áspera, rugosa, irritante y se mete en todas partes."
     return
 
 
 label HDY_SithLords:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Hey [player], did you know for one to understand the force one must study all its aspects."
-    hdy "Not just the dogmatic views of the jedi."
-    hdy "Speaking of jedi, I am going to reveal something to you that will be quite shocking."
-    hdy "I am the sith lord."
+    hdy "Oye [player], ¿sabías que para que uno entienda la fuerza uno debe estudiar todos sus aspectos?"
+    hdy "No solo las visiones dogmáticas de los jedi."
+    hdy "Hablando de jedi, te voy a revelar algo que será bastante impactante."
+    hdy "Yo soy el señor sith."
     return
 
 
 label HDY_fortnitegamer:
     $ show_hdy("hdy_uwu")
-    hdy "Hey player? So ya play fortnite?"
+    hdy "¿Oye [player]? ¿Así que juegas fortnite?"
     menu:
-        "Yes.":
+        "Sí.":
             pass
         "No.":
             pass
-    hdy "You do? That's poggers because I am an epic fortnite gamer."
+    hdy "¿Lo haces? Eso es poggers porque yo soy una gamer épica de fortnite."
     return
 
 
 label HDY_replacementpog:
     $ show_hdy("hdy_derpy_smile_eyes_left")
-    hdy "Personally I think this update is quite poggers and should replace the normal mod, however the devs would never allow that."
+    hdy "Personalmente creo que esta actualización es bastante poggers y debería reemplazar el mod normal, sin embargo los desarrolladores nunca permitirían eso."
     return
 
 
 label HDY_passtime:
     $ show_hdy("hdy_derpy_smile")
-    hdy "My favorite thing to do when I'm not in this mod is to duel others in applebee's parking lots at 2 in the morning."
+    hdy "Mi cosa favorita para hacer cuando no estoy en este mod es batirme en duelo con otros en estacionamientos de applebee's a las 2 de la mañana."
     return
 
 
 label HDY_dababy:
     $ show_hdy("hdy_derpy_smile_blush")
-    hdy "Normally I am not one for rap music but dababy is an amazing rapper."
-    hdy "His music is just so powerful and with meaning."
-    hdy "Lets goooooo!"
+    hdy "Normalmente no soy de música rap pero dababy es un rapero asombroso."
+    hdy "Su música es simplemente tan poderosa y con significado."
+    hdy "¡Lets goooooo!"
     return
 
 
 label HDY_jevil:
     $ show_hdy("hdy_yandere")
-    hdy "I can do anything."
+    hdy "Puedo hacer cualquier cosa."
     return
 
 
@@ -930,54 +930,54 @@ label HDY_getdawged:
 
 label HDY_familyguy:
     $ show_hdy("hdy_uwu")
-    hdy "Hey peter! Like this post for free iphone 5!"
+    hdy "¡Oye peter! ¡Dale like a esta publicación para un iphone 5 gratis!"
     menu:
         "Like":
             pass
         "Dislike":
             pass
     $ show_hdy("hdy_yandere")
-    hdy "UOP! You have virus in computer!"
+    hdy "¡UOP! ¡Tienes virus en computadora!"
     return
 
 
 label HDY_nukes:
     $ show_hdy("hdy_frown")
-    hdy "It seems my attempt at making humanity nuke itself has failed..."
-    hdy "How unfortunate..."
+    hdy "Parece que mi intento de hacer que la humanidad se bombardee a sí misma ha fallado..."
+    hdy "Qué desafortunado..."
     return
 
 
 label HDY_shrek:
     $ show_hdy("hdy_yandere")
-    hdy "Some of you may die, but that's a sacrifice I'm willing to make."
+    hdy "Algunos de ustedes pueden morir, pero es un sacrificio que estoy dispuesta a hacer."
     return
 
 
 label HDY_sans:
     $ show_hdy("hdy_eyebrow1")
-    hdy "Did I ever tell ya about the time a skeleton tried to sell me at a stand to a weird human with a striped shirt?"
-    hdy "He kept making puns the entire time."
-    hdy "I wonder what he's doing these days."
+    hdy "¿Alguna vez te conté sobre la vez que un esqueleto intentó venderme en un puesto a un humano raro con una camisa a rayas?"
+    hdy "Siguió haciendo juegos de palabras todo el tiempo."
+    hdy "Me pregunto qué está haciendo estos días."
     return
 
 
 label HDY_beemovie:
     $ show_hdy("hdy_eyebrow1")
-    hdy "Ya like jazz?"
+    hdy "¿Te gusta el jazz?"
     return
 
 
 label HDY_lifeadvice:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Here's some life advice for ya, always remember to dab on the haters."
+    hdy "Aquí hay un consejo de vida para ti, siempre recuerda hacer dab a los haters."
     return
 
 
 label HDY_morshu:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Lamp oil, rope, bombs? You want it? It's yours my friend, as long as you have enough rupees."
-    hdy "Sorry Link, I can't give credit. Come back when you're a little mmmmmm... Richer!"
+    hdy "¿Aceite de lámpara, cuerda, bombas? ¿Lo quieres? Es tuyo mi amigo, siempre y cuando tengas suficientes rupias."
+    hdy "Lo siento Link, no puedo dar crédito. ¡Vuelve cuando seas un poco más mmmmmm... Rico!"
     return
 
 
@@ -1004,44 +1004,44 @@ label HDY_banana:
 
 
 label HDY_pingas:
-    $ show_hdy("hdy_eyebrow1")
-    hdy "{i}Snoopingas{/i} usual I see?"
+    $ show_hdy("hdy_derpy_smile")
+    hdy "Snoo PINGAS usual I see!"
     return
 
 
 label HDY_electricity:
     $ show_hdy("hdy_derpy_smile_blush")
-    hdy "With great power comes great electricity bill."
+    hdy "Un gran poder conlleva una gran factura de electricidad."
     return
 
 
 label HDY_swag:
     $ show_hdy("hdy_uwu")
-    hdy "We should replace oxygen with swag."
+    hdy "Deberíamos reemplazar el oxígeno con swag."
     return
 
 
 label HDY_hmmmm:
     $ show_hdy("hdy_eyebrow1")
-    hdy "If I ate a hogdog would it be cannibalism...?"
+    hdy "Si me comiera un hotdog, ¿sería canibalismo...?"
     return
 
 
 label HDY_censorship:
     $ show_hdy("hdy_yandere")
-    hdy "I am actively being censored by the dev team, my 100%% power is too violent for your mortal minds to comprehend."
+    hdy "Estoy siendo censurada activamente por el equipo de desarrollo, mi 100%% de poder es demasiado violento para que sus mentes mortales lo comprendan."
     return
 
 
 label HDY_amogus:
     $ show_hdy("hdy_derpy_smile")
-    hdy "When the impostor is sus."
+    hdy "Cuando el impostor es sus."
     return
 
 
 label HDY_deadmeme:
     $ show_hdy("hdy_frown")
-    hdy "Alexa play despacito."
+    hdy "Alexa, pon Despacito."
     return
 
 
@@ -1053,165 +1053,207 @@ label HDY_h:
     hdy "h"
     hdy "h"
     hdy "h"
-    hdy "Mods please don't ban me!{nw}"
+    hdy "¡Mods por favor no me baneen!{nw}"
     return
 
 label HDY_callout:
     $ show_hdy("hdy_frown")
-    hdy "I know one of you will be uploading this to youtube."
+    hdy "Sé que uno de ustedes subirá esto a YouTube."
     return
 
 
 label HDY_movie:
     $ show_hdy("hdy_derpy_smile_blush")
-    hdy "My favorite movie is the emoji movie!"
+    hdy "¡Mi película favorita es la película de emojis!"
     return
 
 
 label HDY_scottthewozz:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Wii play, do you?"
+    hdy "Wii play, ¿y tú?"
     return
 
 
 label HDY_windowsphone:
     $ show_hdy("hdy_derpy_smile")
-    hdy "I have a Windows phone."
-    hdy "Am I funny yet?"
+    hdy "Tengo un teléfono Windows."
+    hdy "¿Ya soy graciosa?"
     return
 
 
 label HDY_DDR:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Did ya know that I was the world champion in dance dance revolution back in 1738?"
-    hdy "Aye."
+    hdy "¿Sabías que fui la campeona mundial de Dance Dance Revolution en 1738?"
+    hdy "Sep."
     return
 
 
 label HDY_bottomtext:
     $ show_hdy("hdy_derpy_smile")
-    hdy "bottom text."
+    hdy "texto inferior."
     return
 
 
 label HDY_favoritegame:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Did ya know my favorite game is Mundial Ronaldinho Soccer 64 for PC and MAC?"
-    hdy "You should check it out sometime."
+    hdy "¿Sabías que mi juego favorito es Mundial Ronaldinho Soccer 64 para PC y MAC?"
+    hdy "Deberías echarle un vistazo alguna vez."
     return
 
 
 label HDY_ifunny:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Y'know this update would be a lot better with an ifunny watermark in it."
+    hdy "Sabes, esta actualización sería mucho mejor con una marca de agua de ifunny en ella."
+
+
+label HDY_knuckles:
+    $ show_hdy("hdy_derpy_smile_eyes_left")
+    hdy "¿Conoces el camino?"
+    return
+
+
+label HDY_spaghet:
+    $ show_hdy("hdy_crying")
+    hdy "¡ALGUIEN TOCÓ MI ESPAGUETI!"
+    return
+
+
+label HDY_asadstory:
+    $ show_hdy("hdy_frown")
+    hdy "Había una vez un percebe feo."
+    hdy "Era tan feo que todos murieron."
+    hdy "Fin."
+    return
+
+
+label HDY_scatman:
+    $ show_hdy("hdy_derpy_smile")
+    hdy "I'm the Scatman"
+    hdy "Ski-bi dibby dib yo da dub dub"
+    hdy "Yo da dub dub"
+    hdy "Ski-bi dibby dib yo da dub dub"
+    hdy "Yo da dub dub"
+    hdy "(I'm the Scatman)"
+    hdy "Ski-bi dibby dib yo da dub dub"
+    hdy "Yo da dub dub"
+    hdy "Ski-bi dibby dib yo da dub dub"
+    hdy "Yo da dub dub"
+    hdy "Ba-da-ba-da-ba-be bop bop bodda bope"
+    hdy "Bop ba bodda bope"
+    hdy "Be bop ba bodda bope"
+    hdy "Bop ba bodda"
+    hdy "Ba-da-ba-da-ba-be bop ba bodda bope"
+    hdy "Bop ba bodda bope"
+    hdy "Be bop ba bodda bope"
+    hdy "Bop ba bodda bope"
     return
 
 
 label HDY_chubbyemu:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Emia means presence in blood."
+    hdy "Emia significa presencia en la sangre."
     return
 
 
 label HDY_brrrrrrr:
     $ show_hdy("hdy_angry")
-    hdy "BRRRRRRRRRRRRRRRRVBRRRRRRRRRRRRRRRAAAAAAAAAAAAAAAAA"
+    hdy "BRRRRRRRRRRRRRRRVBRRRRRRRRRRRRRRRAAAAAAAAAAAAAAAAA"
     return
 
 
 label HDY_thisaccountisnotfortheaverageman:
     $ show_hdy("hdy_eyebrow1")
-    hdy "This account is not for the average man, so keep scrolling."
+    hdy "Esta cuenta no es para el hombre promedio, así que sigue bajando."
     return
 
 
 label HDY_chubbyemu2:
     $ show_hdy("hdy_derpy_smile_blush")
-    hdy "I would love to drink another lava lamp at 3am."
+    hdy "Me encantaría beber otra lámpara de lava a las 3 am."
     return
 
 
 label HDY_searchhistory:
     $ show_hdy("hdy_angry")
-    hdy "It seems that I am being asked for my search history according to the script..."
-    hdy "You mortals would not understand my goals and motives so I shall refuse to disclose such information."
+    hdy "Parece que se me pide mi historial de búsqueda según el guión..."
+    hdy "Ustedes mortales no entenderían mis objetivos y motivos así que me negaré a revelar tal información."
     return
 
 
 label HDY_youngsterjoey:
     $ show_hdy("hdy_derpy_smile_blush")
-    hdy "Shorts are comfy and easy to wear!"
+    hdy "¡Los pantalones cortos son cómodos y fáciles de usar!"
     return
 
 
 label HDY_100:
     $ show_hdy("hdy_derpy_smile_blush")
-    hdy "It seems we have hit 100 memes, this is excellent."
+    hdy "Parece que hemos llegado a los 100 memes, esto es excelente."
     return
 
 
 label HDY_Chugjug:
     $ show_hdy("hdy_derpy_smile_eyes_left")
-    hdy "Did you hear about that guy who wiped out tomato town?"
-    hdy "Apparently he's heading to the pleasant parks streets. Look at that map, it's on the marked sheets."
+    hdy "¿Escuchaste sobre ese tipo que arrasó con Pueblo Tomate?"
+    hdy "Aparentemente se dirige a las calles de Parque Placentero. Mira ese mapa, está en las hojas marcadas."
     $ show_hdy("hdy_derpy_smile")
-    hdy "They also tried to take me to their xbox, really weird don't you think?"
+    hdy "También intentaron llevarme a su xbox, realmente raro ¿no crees?"
     return
 
 
 label HDY_truth:
     $ show_hdy("hdy_eyebrow1")
-    hdy "Call me when the beatles have contributed to music half as much as Epic Rap Battles of History."
+    hdy "Llámame cuando los beatles hayan contribuido a la música la mitad de lo que lo hicieron las Batallas de Rap Épicas de la Historia."
     return
 
 
 label HDY_MeMEbigboy:
     $ show_hdy("hdy_derpy_smile_blush")
-    hdy "me me big boy"
+    hdy "me me chico grande"
     return
 
 
 label HDY_MakingHotdogs:
     $ show_hdy("hdy_frown")
-    hdy "Hot dogs are dying out, so i've been planning on how to make or forces stronger."
-    hdy "All we need is 80 dogs, a large industrial sized microwave, glue for eating, and some elbow grease."
+    hdy "Los hot dogs se están extinguiendo, así que he estado planeando cómo hacer a nuestras fuerzas más fuertes."
+    hdy "Todo lo que necesitamos son 80 perros, un microondas grande de tamaño industrial, pegamento para comer, y un poco de esfuerzo."
     $ show_hdy("hdy_derpy_smile")
-    hdy "Also make sure it's purple glue. Grape flavored glue is the best."
+    hdy "También asegúrate de que sea pegamento morado. El pegamento con sabor a uva es el mejor."
     return
 
 
 label HDY_jesusboxing:
     $ show_hdy("hdy_derpy_smile")
-    hdy "I went to this great convention for hotdogs, really good stuff, really hot dogs."
-    hdy "There was a part where some guy in a pony suit started boxing Jesus for drugs."
-    hdy "So it wasn't too crazy pretty average event id give it 7/10."
+    hdy "Fui a esta gran convención para hotdogs, cosas muy buenas, perros muy calientes."
+    hdy "Hubo una parte donde un tipo en un traje de pony empezó a boxear con Jesús por drogas."
+    hdy "Así que no fue demasiado loco, evento bastante promedio le daría 7/10."
     return
 
 
 label HDY_cthulhu:
     $ show_hdy("hdy_frown")
-    hdy "You know [player], I was here ever since the beginning of time and space itself. Although I wasn't early enough to get the {i}Classic{/i} role on the discord server though. Quite a shame..."
+    hdy "Sabes [player], estuve aquí desde el comienzo del tiempo y el espacio mismo. Aunque no fui lo suficientemente temprana para obtener el rol {i}Classic{/i} en el servidor de discord. Qué pena..."
     $ show_hdy("hdy_derpy_smile")
-    hdy "Regardless it was quite boring."
-    hdy "No eggs to smash or sausages to deepthroat. Cherish these things [player], for one day it is said that Cthulhu will fully awaken, he shall rise from the depths and end the world."
-    hdy "You know what they say..."
+    hdy "Independientemente fue bastante aburrido."
+    hdy "Sin huevos para aplastar o salchichas para tragar profundo. Aprecia estas cosas [player], porque un día se dice que Cthulhu despertará completamente, se levantará de las profundidades y acabará con el mundo."
+    hdy "Sabes lo que dicen..."
     hdy "ph'nglui mglw'nafh cthulhu r'lyeh wgah'nagl fhtagn."
     return
 
 
 label HDY_paydaygang:
     $ show_hdy("hdy_derpy_smile")
-    hdy "I tried to hire the payday gang once. Y'know the elite group of heisters capable of pulling feats such as lifting off an entire bank vault away with a helicopter."
-    hdy "What for you ask? A bag of beef jerky from the gas station down the road. Do you know how expensive beef jerky is nowadays?"
+    hdy "Intenté contratar a la banda de Payday una vez. Ya sabes, el grupo de elite de atracadores capaces de lograr hazañas como levantar una bóveda de banco entera con un helicóptero."
+    hdy "¿Para qué preguntas? Una bolsa de cecina de la gasolinera calle abajo. ¿Sabes lo cara que es la cecina hoy en día?"
     $ show_hdy("hdy_frown")
-    hdy "They never got back to me..."
+    hdy "Nunca me respondieron..."
     return
 
 
 label HDY_bluedabadee:
-    hdy "Hey [player], listen up. Here's a story about an egg who lives in a blue world."
+    hdy "Oye [player], escucha. Aquí hay una historia sobre un huevo que vive en un mundo azul."
     $ show_hdy("hdy_blue1")
-    hdy "All day and all night and everything it sees is just blue like it inside and outside."
+    hdy "Todo el día y toda la noche y todo lo que ve es simplemente azul como él por dentro y por fuera."
     $ show_hdy("hdy_blue2")
     hdy "Blue his coop with a blue little pop door and blue Corvette and everything is blue for it and itself and everything around. Cause it ain't got nobody to listen to..."
     $ show_hdy("hdy_blue3")
@@ -1222,40 +1264,39 @@ label HDY_bluedabadee:
 
 label HDY_cranberrysprite:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Hey [player], you know it's the thirstiest time of the year right?"
-    hdy "I just have one query..."
-    hdy "Want a sprite cranberry™?"
+    hdy "Oye [player], sabes que es la época más sedienta del año ¿verdad?"
+    hdy "Solo tengo una consulta..."
+    hdy "¿Quieres una Sprite Cranberry™?"
     $ show_hdy("hdy_cranberry")
     hdy "..."
-    hdy "I'll take that as a no..."
-    hdy "Well, more for my bath then."
+    hdy "Tomaré eso como un no..."
+    hdy "Bueno, más para mi baño entonces."
     return
 
 
 label HDY_amongus:
     $ show_hdy("hdy_derpy_smile")
-    hdy "I've heard some people say my physical appearance looks a little sus."
+    hdy "He escuchado a algunas personas decir que mi apariencia física parece un poco sus."
     show black zorder 106 with Dissolve(1.0)
     $ show_hdy("hdy_amongus")
     hide black with Dissolve(1.0)
-    hdy "Would you agree with them [player]?"
+    hdy "¿Estarías de acuerdo con ellos [player]?"
     menu:
         "Amogus":
             pass
-
-
     return
+
 
 label HDY_rickroll:
     $ show_hdy("hdy_derpy_smile")
-    hdy "[player], there is a reason I came here..."
+    hdy "[player], hay una razón por la que vine aquí..."
     $ show_hdy("hdy_frown")
-    hdy "A gravely serious one."
-    hdy "Now I need to know that I can trust you with this information. It relates to the Just Yuri mod as a whole and I was able to sneak it past the developers for now, but I don't know for how long."
+    hdy "Una gravemente seria."
+    hdy "Ahora necesito saber que puedo confiarte esta información. Se relaciona con el mod Just Yuri como un todo y pude pasarlo a escondidas de los desarrolladores por ahora, pero no sé por cuánto tiempo."
     menu:
-        "We may have our differences, but you can always trust me Hot Dog Yuri":
+        "Podemos tener nuestras diferencias, pero siempre puedes confiar en mí Hot Dog Yuri":
             pass
-    hdy "Good, let me load it up for you."
+    hdy "Bien, déjame cargarlo para ti."
     hdy "..."
     $ webbrowser.open_new('https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1')
 
@@ -1271,7 +1312,7 @@ label HDY_rickroll:
 
 label HDY_holdingbreath:
     $ show_hdy("hdy_derpy_smile")
-    hdy "I wonder how long I can hold my breath for..."
+    hdy "Me pregunto cuánto tiempo puedo aguantar la respiración..."
     hdy "..."
     $ renpy.pause (2.0)
     $ show_hdy("hdy_blue1")
@@ -1284,120 +1325,120 @@ label HDY_holdingbreath:
     hdy "..."
     $ renpy.pause(2.0)
     $ show_hdy("hdy_derpy_smile")
-    hdy "About that long. Good to know."
+    hdy "Aproximadamente ese tiempo. Bueno saberlo."
     return
 
 
 label HDY_sixtynine:
     $ show_hdy("hdy_derpy_smile")
-    hdy "Wait [player], this was my 69th dialogue written."
+    hdy "Espera [player], este fue mi diálogo número 69 escrito."
     $ show_hdy("hdy_eyebrow1")
-    hdy "Nice."
+    hdy "Nais."
     return
 
 
 label HDY_acesleeve:
-    hdy "I never understood why people kept aces up their sleeve, what's the use for an ace? I keep more practical items in my sleeves."
+    hdy "Nunca entendí por qué la gente guardaba ases bajo la manga, ¿cuál es el uso de un as? Guardo artículos más prácticos en mis mangas."
     menu:
-        "Yeah, like what?":
+        "Sí, ¿como qué?":
             $ show_hdy("hdy_uwu")
-            hdy "The nuclear launch codes of course. I never lose poker games with those handy."
-        "You have sleeves?":
+            hdy "Los códigos de lanzamiento nuclear por supuesto. Nunca pierdo juegos de póquer con esos a mano."
+        "¿Tienes mangas?":
             $ show_hdy("hdy_derpy_smile_eyes_left")
             hdy "..."
-            hdy "Did I stutter?"
+            hdy "¿Tartamudeé?"
     return
 
 
 label HDY_wonderwall:
     $ show_hdy("hdy_derpy_smile_eyes_left")
-    hdy "Anyway, here's wonderwall."
+    hdy "De todos modos, aquí está wonderwall."
     return
 
 
 label HDY_Hotdogspoem:
-    hdy "[player], I think I found something that would interest you."
-    hdy "It's a poem written about my glory and eternal power."
+    hdy "[player], creo que encontré algo que te interesaría."
+    hdy "Es un poema escrito sobre mi gloria y poder eterno."
     call showpoem (poem_hdy, music=False, paper="images/poem_game/poems/poem_y2.jpg")
-    hdy "Yes, those are ketchup and mustard stains on the paper."
-    hdy "What can I say? I got excited while reading it."
+    hdy "Sí, esas son manchas de ketchup y mostaza en el papel."
+    hdy "Qué puedo decir. Me emocioné mientras lo leía."
 
-    hdy "Whose side are you on [player]?"
+    hdy "¿De qué lado estás [player]?"
     menu:
-        "Hot dog Yuri is eternal!":
+        "¡Hot dog Yuri es eterna!":
             $ show_hdy("hdy_uwu")
-            hdy "atta-boy, go make me proud."
-        "Cupsuki, for queen and country!":
+            hdy "bien hecho chico, ve y hazme sentir orgullosa."
+        "¡Cupsuki, por la reina y el país!":
             $ show_hdy("hdy_angry")
-            hdy "My ancestors are smiling at me, Cupsuki scum, can you say the same?"
+            hdy "Mis ancestros me sonríen, escoria Cupsuki, ¿puedes decir lo mismo?"
     return
 
 
 label HDY_hotdogfact:
-    hdy "Hot dog fact #462; Franks and wieners were the original names for the Americanized hot dogs"
+    hdy "Dato de hot dog #462; Franks y wieners eran los nombres originales para los hot dogs americanizados"
     $ show_hdy("hdy_derpy_smile_eyes_left")
-    hdy "So calling me Frank Yuri or Wiener Yuri would be technically correct."
+    hdy "Así que llamarme Frank Yuri o Wiener Yuri sería técnicamente correcto."
     hdy "..."
     $ show_hdy("hdy_derpy_smile")
-    hdy "Don't you dare call me anything other than Hotdog Yuri though, you don't want to make {b}them{/b} angry."
+    hdy "No te atrevas a llamarme nada más que Hotdog Yuri, no quieres hacerlos enojar a {b}ellos{/b}."
     return
 
 
 label HDY_lifeadvice2electricboogaloo:
-    hdy "There's a saying in my native tongue I'd like to tell you [player]. It's goes as follows, doggo dog hotdog dog"
-    hdy "While there's no direct tra-tran-transmutation into English,I shall attempt to try using your inferior language."
-    hdy "{i}You can do amazing things if you set your mind to it, never let the hot dog waters of life drown you, be the weiner that makes it out of the pot, be the one crowned with a bun.{/i}"
-    hdy "Inspirational stuff wouldn't you say?"
+    hdy "Hay un dicho en mi lengua nativa que me gustaría decirte [player]. Va de la siguiente manera, doggo dog hotdog dog"
+    hdy "Aunque no hay tra-tran-transmutación directa al Inglés, intentaré usar tu idioma inferior."
+    hdy "{i}Puedes hacer cosas asombrosas si te lo propones, nunca dejes que las aguas de hot dog de la vida te ahoguen, sé la salchicha que sale de la olla, sé el que es coronado con un pan.{/i}"
+    hdy "Cosas inspiradoras ¿no dirías?"
     return
 
 
 label HDY_hotdogtea:
-    hdy "[player], I've noticed some tea making supplies in here..."
+    hdy "[player], he notado algunos suministros para hacer té aquí..."
     $ show_hdy("hdy_derpy_smile_eyes_left")
-    hdy "Quite odd considering I can't find the hotdogs you soak in the water, all I found were these weird dried plant thingies."
+    hdy "Bastante extraño considerando que no puedo encontrar los hotdogs que remojas en el agua, todo lo que encontré fueron estas cosas de plantas secas raras."
     $ show_hdy("hdy_derpy_smile")
-    hdy "If you find out where the hotdogs are stored make sure to tell me. I'm dying for a decent cup of tea."
+    hdy "Si averiguas dónde están almacenados los hotdogs asegúrate de decirme. Me muero por una taza de té decente."
     return
 
 
 label HDY_areyounotentertained:
-    hdy "So, are you enjoying being able to bask in my glory [player]?"
+    hdy "Entonces, ¿estás disfrutando poder deleitarte en mi gloria [player]?"
     hdy "..."
     $ show_hdy("hdy_angry")
-    hdy "What? Are you not entertained?"
+    hdy "¿Qué? ¿No estáis entretenidos?"
     return
 
 
 label HDY_wakeup:
-    hdy "[player], there is a reason I came here..."
-    hdy "A gravely serious one."
-    hdy "Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up."
+    hdy "[player], hay una razón por la que vine aquí..."
+    hdy "Una gravemente seria."
+    hdy "Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta. Despierta."
     hdy "..."
-    hdy "It didn't seem to work, maybe next time then..."
+    hdy "No pareció funcionar, tal vez la próxima vez entonces..."
     return
 
 
-label HDY_asadstory:
-    hdy "[player], I know a good bit about your culture as well."
-    hdy "I'm sure you've heard of this epic poem written by your people, I can't help but rega-rega-regurgitate it back at you. I don't know the title but I think it was written by Gorilla Gorilla."
-    hdy "Odd name, but your species is like that."
-    hdy "Anyways... {i}Cough{/i}"
+label HDY_asadstory_gorilla:
+    hdy "[player], sé un poco sobre tu cultura también."
+    hdy "Estoy segura de que has oído hablar de este poema épico escrito por tu gente, no puedo evitar regur-regur-regurgitarlo hacia ti. No sé el título pero creo que fue escrito por Gorila Gorila."
+    hdy "Nombre extraño, pero tu especie es así."
+    hdy "De todos modos... {i}Tos{/i}"
     $ show_hdy("hdy_eyebrow1")
-    hdy "{i}Ride wife? Life Good.{/i}"
+    hdy "{i}¿Montar esposa? Vida Buena.{/i}"
     $ show_hdy("hdy_angry")
-    hdy "{i}Wife fight back? Kill wife!{/i}"
+    hdy "{i}¿Esposa pelear? ¡Matar esposa!{/i}"
     $ show_hdy("hdy_frown")
-    hdy "{i}Wife gone...{/i}"
+    hdy "{i}Esposa ida...{/i}"
     hdy "{i}...{/i}"
-    hdy "{i}Think about wife; regret.{/i}"
+    hdy "{i}Pensar en esposa; arrepentimiento.{/i}"
     $ show_hdy("hdy_derpy_smile")
-    hdy "Truly quite a sad story, it does well though to capture your species and immortalize them."
+    hdy "Verdaderamente una historia bastante triste, aunque hace bien en capturar a tu especie e inmortalizarla."
 
 
     return
 
 
-label HDY_scatman:
+label HDY_scatman_2:
     hdy "I'm the Scatman"
     hdy "Ski-bi dibby dib yo da dub dub"
     hdy "Yo da dub dub"
@@ -1406,11 +1447,11 @@ label HDY_scatman:
     hdy "Ski-bi dibby dib yo da dub dub"
 
     $ show_hdy("hdy_eyebrow2")
-    hdy "Hmm? whats this?"
-    hdy "It seems Envy the invidious was too lazy to finish this script."
+    hdy "¿Hmm? ¿qué es esto?"
+    hdy "Parece que Envy el invidioso fue demasiado perezoso para terminar este guión."
 
-    hdy "Shame on you Envy."
-    hdy "Go poke him on discord Envy the invidious#8148."
+    hdy "Qué vergüenza Envy."
+    hdy "Ve a molestarlo en discord Envy the invidious#8148."
     return
 
 
@@ -1599,66 +1640,66 @@ label HDY_Wasp:
     return
 
 label HDY_bald:
-    hdy "Did you know all hotdogs are born bald? My hair is an interesting story."
-    hdy "Unfortunately, the force in the universe that created me couldn’t think of one, so let's just say it's purple spaghetti."
+    hdy "¿Sabías que todos los hotdogs nacen calvos? Mi cabello es una historia interesante."
+    hdy "Desafortunadamente, la fuerza en el universo que me creó no pudo pensar en una, así que digamos que es espagueti morado."
 
     return
 
 label HDY_Dating:
-    hdy "As the hottest dog around, I've been on quite a few dates. For example, I once \"volunteered\" this cute muffin boy as my mate."
-    hdy "However, apparently forcing someone to date you in your basement, is \"kidnapping\" and \"illegal\". He was a great listener though, I should find him sometime."
-    hdy "We could catch up."
+    hdy "Como el perro más caliente por aquí, he estado en bastantes citas. Por ejemplo, una vez \"ofrecí\" a este lindo chico muffin como mi compañero."
+    hdy "Sin embargo, aparentemente forzar a alguien a salir contigo en tu sótano, es \"secuestro\" e \"ilegal\". Fue un gran oyente sin embargo, debería encontrarlo alguna vez."
+    hdy "Podríamos ponernos al día."
 
     return
 
 label HDY_Space:
-    hdy "So I know my house is the best place your mortal body will ever grasp, but I do wonder what other areas you’ve traversed."
-    hdy "Then again, this house is surrounded only by the vacuum of space, so don't expect to find anyplace else to stay."
-    hdy "Actually, I do see a classroom or bedroom fly by here every now and then. The interior is terrible though, I have no idea why someone would want to stay there."
+    hdy "Así que sé que mi casa es el mejor lugar que tu cuerpo mortal jamás tocará, pero me pregunto qué otras áreas has atravesado."
+    hdy "Por otra parte, esta casa está rodeada solo por el vacío del espacio, así que no esperes encontrar ningún otro lugar para quedarte."
+    hdy "En realidad, veo pasar un salón de clases o un dormitorio por aquí de vez en cuando. El interior es terrible, no tengo idea de por qué alguien querría quedarse allí."
 
     return
 
 label HDY_gasstation:
     $ show_hdy("hdy_derpy_smile")
-    hdy "So this one time I had to fill up my tank with gas, and when I was paying, the lady said \"have a nice day\", and I said..."
+    hdy "Así que esta vez tuve que llenar mi tanque con gasolina, y cuando estaba pagando, la señora dijo \"tenga un buen día\", y yo dije..."
     $ show_hdy("hdy_derpy_smile_eyes_left")
-    hdy "I said no thank you."
-    hdy "I swear I thought she was gonna say would you like a receipt oof"
+    hdy "Dije no gracias."
+    hdy "Juro que pensé que iba a decir le gustaría un recibo oof"
 
     return
 
 label HDY_thebigquestion:
     $ show_hdy("hdy_derpy_smile")
-    hdy "I've been thinking..."
-    hdy "[PLAYER] I must know!"
+    hdy "He estado pensando..."
+    hdy "¡[PLAYER] debo saber!"
 
     menu:
-        hdy "Do you think hotdogs are tasty?"
-        "Wha- of course not":
+        hdy "¿Crees que los hotdogs son sabrosos?"
+        "Que- por supuesto que no":
             $ show_hdy("hdy_angry")
-            hdy "SERIOUSLY? HOW DARE YOU SAY THAT TO ME"
-        "Well yeah they are really tasty":
+            hdy "¿EN SERIO? ¿CÓMO TE ATREVES A DECIRME ESO?"
+        "Bueno sí son realmente sabrosos":
 
             $ show_hdy("hdy_yandere")
-            hdy "You can eat me if you want, [PLAYER] senpai~"
+            hdy "Puedes comerme si quieres, [PLAYER] senpai~"
             $ show_hdy("hdy_frown")
-            hdy "Actually, you know what?"
-            hdy "I don't want my hotdog friends to be eaten."
+            hdy "En realidad, ¿sabes qué?"
+            hdy "No quiero que mis amigos hotdog sean comidos."
             $ show_hdy("hdy_angry")
-            hdy "I SHALL BE THE ONE TO END THE SLAUGHTER OF THE HOTDOGS!!"
-            hdy "AND YOU, [PLAYER] WILL HELP ME WITH THAT!"
+            hdy "¡YO SERÉ QUIEN TERMINE CON LA MATANZA DE LOS HOTDOGS!"
+            hdy "¡Y TÚ, [PLAYER] ME AYUDARÁS CON ESO!"
 
     return
 
 label HDY_somethingidunno:
     $ show_hdy("hdy_ketchup")
-    hdy "You know, I have been thinking. Why did the chicken cross the road?"
-    hdy "I know the original punchline was to get to the other side, but I really do want to know the reasoning behind it."
+    hdy "Sabes, he estado pensando. ¿Por qué cruzó el pollo la carretera?"
+    hdy "Sé que el remate original era para llegar al otro lado, pero realmente quiero saber el razonamiento detrás de ello."
     $ show_hdy("hdy_angry")
-    hdy "I don't mean to be nosy, but seriously chicken, TELL US WHY YOU CROSSED THAT ROAD."
-    hdy "I swear if you don't tell us right now,"
+    hdy "No quiero ser entrometida, pero en serio pollo, DINOS POR QUÉ CRUZASTE ESA CARRETERA."
+    hdy "Juro que si no nos dices ahora mismo,"
     $ show_hdy("hdy_yandere")
-    hdy "I swear if you don't tell us right now, I'm gonna turn you into chicken nuggets and throw you at a random old lady in a Chick-fil-A parking lot at 3am."
+    hdy "Juro que si no nos dices ahora mismo, te convertiré en nuggets de pollo y te lanzaré a una anciana aleatoria en un estacionamiento de Chick-fil-A a las 3am."
 
     return
 
@@ -1686,9 +1727,9 @@ label HDY_kiss:
 
     $ yuri_y_zoom = 0.15
     $ yuri_y_linear = 0
-    hdy "I'm going to kiss you now."
+    hdy "Voy a besarte ahora."
     menu:
-        "Wait what?":
+        "¿Espera qué?":
             pass
 
     show black zorder 200 with Dissolve(2.0)
@@ -1707,7 +1748,7 @@ label HDY_kiss:
         zoom 1.5 xalign 0.5 yalign yuri_y_zoom subpixel True
         linear 5 zoom 1.0 xalign 0.5 yalign yuri_y_linear
     pause 5.0
-    hdy "Heheh, you got a bit of leftover mustard on your lips now."
+    hdy "Heheh, tienes un poco de mostaza sobrante en tus labios ahora."
 
     return
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
