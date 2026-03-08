@@ -2501,13 +2501,8 @@ init -499 screen about():
 
                 Gat
                 Ayuda con el sistema meteorológico.
-                """
-            )
 
-    text "v[config.version]":
-        xalign 1.0 yalign 1.0
-        xoffset -10 yoffset -10
-        style "main_menu_version"       {b}ASSETS{/b}
+                {b}ASSETS{/b}
 
                 Chibi Yuri Sprites by Mouhantain
                 Edits by Seanm0451
@@ -2947,4 +2942,10 @@ init -499 screen about():
                 KJ
                 Large Investor/Donator."""
                 )
+
+    text "v[config.version]":
+        xalign 1.0 yalign 1.0
+        xoffset -10 yoffset -10
+        style "main_menu_version"
+
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

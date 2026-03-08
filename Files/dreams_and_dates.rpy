@@ -372,14 +372,14 @@ label rain_dream:
     $ renpy.music.stop(fadeout=1.5)
     python:
         if persistent.male:
-            pronounA = "him"
-            pronounB = "he"
+            pronounA = "él"
+            pronounB = "él"
         elif persistent.gender_other:
             pronounA = "them"
             pronounB = "they"
         else:
-            pronounA = "her"
-            pronounB = "she"
+            pronounA = "ella"
+            pronounB = "ella"
         persistent.eyecolor = persistent.eyecolor.lower()
     show black zorder 105 with Dissolve (2.5)
     show rain_dream_blush zorder 100
@@ -409,7 +409,7 @@ label rain_dream:
     "A veces... {w=0.4}creo que podría morir por la forma en que [pronounB] me hace sentir. En el pasado, me encontré atada por la manipulación de Monika... {w=0.4}forzada a sentir una pasión tan intensa y ardiente que me llevó a cometer... {w=0.5}actos indescriptibles."
     "Sin embargo, aquí estoy, sin la influencia de Monika y me encuentro sintiendo casi lo mismo... {w=0.4}Oh... {w=0.4}cómo deseo simplemente disfrutar de su presencia... {w=0.4}sintiendo su calidez mientras ambos dejamos que nuestras dignidades resbalen lentamente y nos complacemos con ocultos... {w=0.4}más... {w=0.4}deseos carnales..."
     "..."
-    "... {w=0.4}s{w=0.3}-suficiente de eso..."
+    "... {w=0.4}S-{w=0.3}Suficiente de eso..."
     "En lugar de pasar la noche perdiéndome en fantasías salvajes de placeres secretos, redirigí mi atención de vuelta a la lluvia, tratando de calmar este intenso sentimiento de anticipación en mi sistema."
     "Uno probablemente podría comparar la caída de las gotas de lluvia con las trivialidades de la vida cotidiana, cada gota representativa de los diferentes caminos que podemos tomar."
     "Principalmente liderando un camino solitario pero teniendo esos raros pocos momentos donde sus caminos se entrelazan...{w=0.4} algunos separándose y otros permaneciendo enredados para siempre. Se sentía casi romántico de una manera bastante sombría."
@@ -794,23 +794,23 @@ label highway_dream:
         highway_dream_path = random.randint(1, 4)
         highway_dream_path_2 = random.randint(1, 2)
         if persistent.male:
-            pronounA = "him"
-            pronounB = "he"
-            pronounBC = "He"
-            pronounC = "his"
-            pronounD = "boyfriend"
+            pronounA = "él"
+            pronounB = "él"
+            pronounBC = "Él"
+            pronounC = "su"
+            pronounD = "novio"
         elif persistent.gender_other:
-            pronounA = "them"
-            pronounB = "they"
-            pronounBC = "They"
-            pronounC = "their"
-            pronounD = "lover"
+            pronounA = "ellos"
+            pronounB = "ellos"
+            pronounBC = "Ellos"
+            pronounC = "su"
+            pronounD = "amor"
         else:
-            pronounA = "her"
-            pronounB = "she"
-            pronounBC = "She"
-            pronounC = "her"
-            pronounD = "girlfriend"
+            pronounA = "su"
+            pronounB = "ella"
+            pronounBC = "ella"
+            pronounC = "su"
+            pronounD = "novia"
     if persistent.highway_dream_complete:
         y "Ah. ¡He tenido este sueño antes! ¡Tengo la oportunidad de tener un sueño lúcido!"
         menu:
@@ -1266,7 +1266,7 @@ label dream_kill:
     $ renpy.music.stop(channel="music",fadeout=0)
     hide killglitch
     "..."
-    y "...Jajajaja."
+    y "... Jajajaja."
     y "¡Jajajajajajaja!"
     $ style.say_dialogue = style.normal
     y "¡Jajajajajajajajajaja!"
@@ -3022,7 +3022,7 @@ label tropical_date:
             y "Eres libre de elegir si la tomas o no. Y como dije antes, no hay problema con eso."
 
     $ show_fits_standing("pareo_yuri_1")
-    y "Now let's rest a little bit longer... I want to show you some other things I prepared."
+    y "Ahora descansemos un poquito más... quiero mostrarte algunas otras cosas que preparé."
 
 
 
